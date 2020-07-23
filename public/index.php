@@ -1,6 +1,5 @@
 <?php
     $page_title = "home page";
-
 ?>
 
 <!DOCTYPE html>
@@ -24,25 +23,57 @@
         <div class="body-wrap">
             <div class="body-header">
                 <div class="hamberger" id="hamberger">
-
-                </div>
-                <header>
                     
+                </div>
+                <!-- end hamberger -->
+                <header>
+                    <div class="header-brand">
+                        <a href="index.php">faculty4you</a>
+                    </div>
+                    <!-- end header brand -->
+                    <nav class="header__nav">
+                        <ul>
+                            <li class="nav__list"><a href="" class="nav__link">become teacher</a></li>
+                            <li class="nav__list"><a href="" class="nav__link">log in</a></li>
+                            <li class="nav__list"><a href="" class="nav__link">sign up</a></li>
+                        </ul>
+                    </nav>
+                    <!-- end header nav -->
                 </header>
             </div>
             <!-- end body header -->
 
             <div class="body-banner">
-                
+
+                <div class="banner-wrap">
+                    <div class="banner-content">
+
+                    </div>
+                    <!-- end banner content -->
+                    <div class="banner-image">
+
+                    </div>
+                    <!-- end banner imager -->
+                </div>
+                <!-- end banner wrap -->
             </div>
             <!-- end body banner -->
 
-            <div class="body-container"></div>
+            <div class="body-container">
+                <main class="page-home">
+                    <section class="section-student">
+                        
+                    </section>
+                    <section class="section-teacher"></section>
+                    <section class="section-testimonial"></section>
+                    <section class="section-partner"></section>
+                </main>
+                <!-- end page home -->
+            </div>
             <!-- end body container -->
 
             <div class="body-footer"></div>
             <!-- end body footer -->
-
         </div>
             <!-- end body wrap -->
 
