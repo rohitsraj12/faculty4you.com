@@ -13,7 +13,14 @@
         <title><?= $page_title;?> | faculty4you.com</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <!-- stylesheet -->
+        <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -26,16 +33,18 @@
                     
                 </div>
                 <!-- end hamberger -->
-                <header>
+                <header class="wrap-container">
                     <div class="header-brand">
-                        <a href="index.php">faculty4you</a>
+                        <a href="index.php">
+                            <img src="img/brand/header-logo.png" alt="">
+                        </a>
                     </div>
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
                             <li class="nav__list"><a href="" class="nav__link">become teacher</a></li>
                             <li class="nav__list"><a href="" class="nav__link">log in</a></li>
-                            <li class="nav__list"><a href="" class="nav__link">sign up</a></li>
+                            <li class="nav__list"><a href="" class="nav__link button-primary">sign up</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
@@ -46,12 +55,25 @@
             <div class="body-banner">
 
                 <div class="banner-wrap">
-                    <div class="banner-content">
-
-                    </div>
+                    <section class="banner-content">
+                        <article>
+                            <header class="banner-content__header">
+                                <h2 class="text-primary">Faculty4you take learning  to new heights</h2>
+                                <h5 class="text-secondary">
+                                    we provide top <strong>teachers</strong> for <strong class="highlight-primary">online</strong> and <strong class="highlight-primary">home tution</strong> all over india    
+                                </h5>
+                            </header>
+                            <div class="banner-content-body">
+                                <form action="student/login.php" class="banner__form">
+                                    <input type="search" placeholder="search top teachers city / subject / category" class="banner-search" name="search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+                        </article>
+                    </section>
                     <!-- end banner content -->
                     <div class="banner-image">
-
+                        <img src="img/banner/teacher.svg" class="banner__image" alt="">
                     </div>
                     <!-- end banner imager -->
                 </div>
