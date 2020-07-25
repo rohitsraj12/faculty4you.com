@@ -91,50 +91,135 @@
                     <section class="section-student">
                         <div class="section-header u-center-text">
                             <heeader class="text-primary"> 
-                                how <strong>faculty4you</strong> works for student
+                                how <strong>faculty4you</strong> works for students
                             </header>
+                            <div class="sub-heading wrap-container">
+                                <h6 class="text-sub-primary">
+                                    Join <strong>faculty4you.com</strong> and connect with top <strong>teachers</strong> on the platform. Create your profile post your requirements and learn <strong>online</strong>  or <strong>home tuition</strong>.
+                                </h6>
+                            </div>
                         </div>
                         <section class="section-body wrap-container">
-                            <article class="">
+                            <article class="article-block">
                                 <figure class="studnet-section__figure">
+                                    <span>step 1</span>
                                     <img src="img/member/register.svg" alt="">
+
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4>register</h4>
+                                    <h4 class="text-secondary">register</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit suscipit tempora natus facere ipsum distinctio, est ad ipsa expedita?
+                                        It will take you less than 1 minute to start you adventure with BuddySchool
                                     </p>
                                 </div>
-                            </article><article class="">
+                            </article>
+                            <article class="article-block">
                                 <figure class="studnet-section__figure">
-                                    <img src="img/member/register.svg" alt="">
+                                    <span>step 2</span>
+                                    <img src="img/member/post-requirement.svg" alt="">
+
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4>register</h4>
+                                    <h4 class="text-secondary">Post your requirements</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit suscipit tempora natus facere ipsum distinctio, est ad ipsa expedita?
+                                        Post your requiriment of subject, teacher will contact you.
                                     </p>
                                 </div>
-                            </article><article class="">
+                            </article>
+                            <article class="article-block">
                                 <figure class="studnet-section__figure">
-                                    <img src="img/member/register.svg" alt="">
+                                <span>step 3</span>
+                                    <img src="img/member/schedule.svg" alt="">
+
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4>register</h4>
+                                    <h4 class="text-secondary">Schedule lesson</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit suscipit tempora natus facere ipsum distinctio, est ad ipsa expedita?
+                                    confirem with teacher and start your learning with out teacher
                                     </p>
                                 </div>
                             </article>
                         </section>
                     </section>
-                    <section class="section-teacher"></section>
+                    <section class="section-teacher">
+                        
+                    <div class="section-header u-center-text">
+                            <heeader class="text-primary"> 
+                                Looking to become a <strong>trainer</strong>
+                            </header>
+                            <div class="sub-heading wrap-container">
+                                <h6 class="text-sub-primary">
+                                    Join <strong>faculty4you.com</strong> and connect with <strong>students</strong> on the platform. Create a strong profile and grow your network.
+                                </h6>
+                            </div>
+                        </div>
+                        <section class="section-body wrap-container">
+                            <article class="article-block">
+                                <figure class="studnet-section__figure">
+                                    <img src="img/member/register.svg" alt="">
+                                    <span>step 1</span>
+                                </figure>
+                                <header class="article-header student-section__header">
+                                    <h4 class="text-secondary">register</h4>
+                                </header>
+                                <div class="article-body student-body">
+                                    <p>
+                                    It will take you less than 1 minute to start you adventure with faculty4you
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="article-block">
+                                <figure class="studnet-section__figure">
+                                    <img src="img/member/member.svg" alt="">
+                                    
+                                    <span>step 2</span>
+                                </figure>
+                                <header class="article-header student-section__header">
+                                    <h4 class="text-secondary">activate membership</h4>
+                                </header>
+                                <div class="article-body student-body">
+                                    <p>
+                                    You need to become prime memebt to see student requirement post
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="article-block">
+                                <figure class="studnet-section__figure">
+                                    <img src="img/member/find-student.svg" alt="">
+                                    <span>step 3</span>
+                                </figure>
+                                <header class="article-header student-section__header">
+                                    <h4 class="text-secondary">Find students</h4>
+                                </header>
+                                <div class="article-body student-body">
+                                    <p>
+                                    Once you become prime member search student and student’s post then conatc student
+                                    </p>
+                                </div>
+                            </article>
+                            <article class="article-block">
+                                <figure class="studnet-section__figure">
+                                    <img src="img/member/schedule.svg" alt="">
+                                    <span>step 4</span>
+
+                                </figure>
+                                <header class="article-header student-section__header">
+                                    <h4 class="text-secondary">Schedule lesson</h4>
+                                </header>
+                                <div class="article-body student-body">
+                                    <p>
+                                    scedule your time and start your lesson
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
+                    </section>
                     <section class="section-testimonial"></section>
                     <section class="section-partner"></section>
                 </main>
