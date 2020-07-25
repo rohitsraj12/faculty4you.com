@@ -29,8 +29,10 @@
         
         <div class="body-wrap">
             <div class="body-header">
-                <div class="hamberger" id="hamberger">
-                    
+                <div id="hamberger" class="hamberger">
+                    <span class="hamberger__line"></span>
+                    <span class="hamberger__line"></span>
+                    <span class="hamberger__line"></span>
                 </div>
                 <!-- end hamberger -->
                 <header class="wrap-container">
@@ -66,8 +68,11 @@
                             <div class="banner-content-body">
                                 <form action="student/login.php" class="banner__form">
                                     <input type="search" placeholder="search top teachers city / subject / category" class="banner-search" name="search">
-                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    <button class="banner__button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
+                                <p>
+                                    <span class="highlight-secondary">Current  trending courses:</span> <strong class="note-primary">IIT-JEE</strong>, <strong class="note-primary">NEET</strong>, <strong class="note-primary">Dance</strong>, <strong class="note-primary">Yoga</strong>
+                                </p>
                             </div>
                         </article>
                     </section>
@@ -84,7 +89,50 @@
             <div class="body-container">
                 <main class="page-home">
                     <section class="section-student">
-                        
+                        <div class="section-header u-center-text">
+                            <heeader class="text-primary"> 
+                                how <strong>faculty4you</strong> works for student
+                            </header>
+                        </div>
+                        <section class="section-body wrap-container">
+                            <article class="">
+                                <figure class="studnet-section__figure">
+                                    <img src="img/member/register.svg" alt="">
+                                </figure>
+                                <header class="article-header student-section__header">
+                                    <h4>register</h4>
+                                </header>
+                                <div class="article-body student-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit suscipit tempora natus facere ipsum distinctio, est ad ipsa expedita?
+                                    </p>
+                                </div>
+                            </article><article class="">
+                                <figure class="studnet-section__figure">
+                                    <img src="img/member/register.svg" alt="">
+                                </figure>
+                                <header class="article-header student-section__header">
+                                    <h4>register</h4>
+                                </header>
+                                <div class="article-body student-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit suscipit tempora natus facere ipsum distinctio, est ad ipsa expedita?
+                                    </p>
+                                </div>
+                            </article><article class="">
+                                <figure class="studnet-section__figure">
+                                    <img src="img/member/register.svg" alt="">
+                                </figure>
+                                <header class="article-header student-section__header">
+                                    <h4>register</h4>
+                                </header>
+                                <div class="article-body student-body">
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente odit suscipit tempora natus facere ipsum distinctio, est ad ipsa expedita?
+                                    </p>
+                                </div>
+                            </article>
+                        </section>
                     </section>
                     <section class="section-teacher"></section>
                     <section class="section-testimonial"></section>
