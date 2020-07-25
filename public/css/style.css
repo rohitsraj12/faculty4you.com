@@ -452,6 +452,19 @@ p {
     left: 46%;
     z-index: -2; } }
 
+@media (max-width: 582px) {
+  .section-body figure::after {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 0.3rem solid #5388fe;
+    background-color: #ffffff;
+    position: absolute;
+    top: -5.1rem;
+    left: 46%;
+    z-index: -2; } }
+
 .section-body img {
   width: 100%; }
   @media (min-width: 582px) {
