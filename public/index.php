@@ -20,6 +20,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous"
         />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -28,7 +29,7 @@
         <![endif]-->
         
         <div class="body-wrap">
-            <div class="body-header">
+            <div class="body-header" data-aos="fade-down" data-aos-duration="2000">
                 <div id="hamberger" class="hamberger">
                     <span class="hamberger__line"></span>
                     <span class="hamberger__line"></span>
@@ -54,7 +55,7 @@
             </div>
             <!-- end body header -->
 
-            <div class="body-banner">
+            <div class="body-banner" data-aos="fade-up" data-aos-duration="2000">
 
                 <div class="banner-wrap">
                     <section class="banner-content">
@@ -89,7 +90,7 @@
             <div class="body-container">
                 <main class="page-home">
                     <section class="section-student">
-                        <div class="section-header u-center-text">
+                        <div class="section-header u-center-text"  data-aos="fade-down" data-aos-duration="2000">
                             <heeader class="text-primary"> 
                                 how <strong>faculty4you</strong> works for students
                             </header>
@@ -100,7 +101,7 @@
                             </div>
                         </div>
                         <section class="section-body wrap-container">
-                            <article class="article-block">
+                            <article class="article-block" data-aos="fade-down" data-aos-duration="2000">
                                 <figure class="studnet-section__figure">
                                     <span>step 1</span>
                                     <img src="img/member/register.svg" alt="">
@@ -115,7 +116,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block">
+                            <article class="article-block" data-aos="fade-up" data-aos-duration="2000">
                                 <figure class="studnet-section__figure">
                                     <span>step 2</span>
                                     <img src="img/member/post-requirement.svg" alt="">
@@ -130,7 +131,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block">
+                            <article class="article-block" data-aos="fade-left" data-aos-duration="2000">
                                 <figure class="studnet-section__figure">
                                 <span>step 3</span>
                                     <img src="img/member/schedule.svg" alt="">
@@ -149,7 +150,7 @@
                     </section>
                     <section class="section-teacher">
                         
-                    <div class="section-header u-center-text">
+                        <div class="section-header u-center-text"  data-aos="fade-down" data-aos-duration="2000">
                             <heeader class="text-primary"> 
                                 Looking to become a <strong>trainer</strong>
                             </header>
@@ -160,7 +161,7 @@
                             </div>
                         </div>
                         <section class="section-body wrap-container">
-                            <article class="article-block">
+                            <article class="article-block" data-aos="fade-up" data-aos-duration="2000">
                                 <figure class="studnet-section__figure">
                                     <img src="img/member/register.svg" alt="">
                                     <span>step 1</span>
@@ -174,7 +175,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block">
+                            <article class="article-block" data-aos="fade-down" data-aos-duration="2000">
                                 <figure class="studnet-section__figure">
                                     <img src="img/member/member.svg" alt="">
                                     
@@ -189,7 +190,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block">
+                            <article class="article-block" data-aos="fade-up" data-aos-duration="2000">
                                 <figure class="studnet-section__figure">
                                     <img src="img/member/find-student.svg" alt="">
                                     <span>step 3</span>
@@ -203,7 +204,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block">
+                            <article class="article-block" data-aos="fade-down" data-aos-duration="2000">
                                 <figure class="studnet-section__figure">
                                     <img src="img/member/schedule.svg" alt="">
                                     <span>step 4</span>
@@ -230,9 +231,12 @@
             <div class="body-footer"></div>
             <!-- end body footer -->
         </div>
-            <!-- end body wrap -->
+        <!-- end body wrap -->
 
-            <!-- script -->
-        <script src="" async defer></script>
+        <!-- script -->
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+              </script>
     </body>
 </html>
