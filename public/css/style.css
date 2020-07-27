@@ -523,7 +523,7 @@ p {
     height: 100vh;
     padding-top: 10rem;
     background-color: #454b69;
-    clip-path: polygon(100% 0, 100% 83%, 27% 100%, 0 65%, 0 0);
+    clip-path: circle(75.3% at 65% 24%);
     text-align: center;
     position: fixed;
     top: 0;
