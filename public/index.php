@@ -1,5 +1,7 @@
 <?php
     $page_title = "home page";
+
+    include_once("../private/config/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -40,8 +42,8 @@
                 <!-- end hamberger -->
                 <header class="wrap-container">
                     <div class="header-brand">
-                        <a href="index.php">
-                            <img src="img/brand/header-logo.png" alt="">
+                        <a href="<?php base_url();?>index.php">
+                            <img src="img/brand/header-logo.png" alt="faculty 4 you">
                         </a>
                     </div>
                     <!-- end header brand -->
