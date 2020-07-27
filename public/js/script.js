@@ -3,8 +3,8 @@ $(document).ready(function () {
     $(this).toggleClass("is__active");
     $(".header__nav ul").slideToggle(400);
   });
-  // testimonial-slider
 
+  // testimonial-slider
   $(".section-testimonial .owl-carousel").owlCarousel({
     loop: true,
     margin: 10,
