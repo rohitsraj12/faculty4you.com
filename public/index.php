@@ -21,6 +21,8 @@
         crossorigin="anonymous"
         />
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/owl.theme.default.css">
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -221,8 +223,106 @@
                             </article>
                         </section>
                     </section>
-                    <section class="section-testimonial"></section>
-                    <section class="section-partner"></section>
+                    <section class="section-testimonial">
+                         
+                    <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <heeader class="text-primary"> 
+                                Student comumnity feed back
+                            </header>
+                        </div>
+                        <blockquote class="section-body wrap-container owl-carousel owl-theme" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="article-block">
+                                <div class="testimonial-client-detail">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam repellat rem aut fugiat aspernatur. Quia ipsa vel porro cum.
+                                    </p>
+                                </div>        
+                                <footer class="article-footer">
+                                    <figure>
+                                        <img  class="testimonial-client-img" src="" alt="">
+                                    </figure>
+                                    <ul>
+                                        <li class="testimonial-client-name"><cite>name</cite></li>
+                                        <li class="testimonial-client-place">mumbai</li>
+                                    </ul>
+                                </footer>
+                            </article>
+                            <article class="article-block">
+                                <div class="testimonial-client-detail">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam repellat rem aut fugiat aspernatur. Quia ipsa vel porro cum.
+                                    </p>
+                                </div>        
+                                <footer class="article-footer">
+                                    <figure>
+                                        <img  class="testimonial-client-img" src="" alt="">
+                                    </figure>
+                                    <ul>
+                                        <li class="testimonial-client-name"><cite>name</cite></li>
+                                        <li class="testimonial-client-place">mumbai</li>
+                                    </ul>
+                                </footer>
+                            </article>
+                            <article class="article-block">
+                                <div class="testimonial-client-detail">
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam repellat rem aut fugiat aspernatur. Quia ipsa vel porro cum.
+                                    </p>
+                                </div>        
+                                <footer class="article-footer">
+                                    <figure>
+                                        <img  class="testimonial-client-img" src="" alt="">
+                                    </figure>
+                                    <ul>
+                                        <li class="testimonial-client-name"><cite>name</cite></li>
+                                        <li class="testimonial-client-place">mumbai</li>
+                                    </ul>
+                                </footer>
+                            </article>
+                        </blockquote>
+                        
+                        <!-- <div class="svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                <path fill="#0099ff" fill-opacity="1" d="M0,64L48,74.7C96,85,192,107,288,106.7C384,107,480,85,576,96C672,107,768,149,864,186.7C960,224,1056,256,1152,229.3C1248,203,1344,117,1392,74.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                            </svg>
+                        </div> -->
+                    </section>
+                    <section class="section-partner">
+                        
+                        
+                    <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <heeader class="text-primary"> 
+                                Our pratners
+                            </header>
+                        </div>
+                        
+                        <section class="section-body wrap-container">
+                            <article class="article-block" data-aos="zoom-out-right" data-aos-duration="1000"> 
+                                <figure class="article-block__figure">
+                                    
+                                    <img src="img/member/register.svg" alt="">
+
+                                </figure>
+                               
+                            </article>
+                            <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
+                                <figure class="article-block__figure">
+                                    
+                                    <img src="img/member/post-requirement.svg" alt="">
+
+                                </figure>
+                                
+                            </article>
+                            <article class="article-block" data-aos="zoom-out-left" data-aos-duration="1000">
+                                <figure class="article-block__figure">
+                              
+                                    <img src="img/member/schedule.svg" alt="">
+
+                                </figure>
+                               
+                            </article>
+                        </section>
+                    </section>
                 </main>
                 <!-- end page home -->
             </div>
@@ -234,7 +334,11 @@
         <!-- end body wrap -->
 
         <!-- script -->
+            <script src="js/jquery-3.5.1.js"></script>
+            <script src="js/owl.carousel.js"></script>
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="js/script.js"></script>
+            
             <script>
                 AOS.init();
               </script>
