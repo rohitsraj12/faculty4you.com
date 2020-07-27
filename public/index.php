@@ -43,15 +43,15 @@
                 <header class="wrap-container">
                     <div class="header-brand">
                         <a href="<?php base_url();?>index.php">
-                            <img src="img/brand/header-logo.png" alt="faculty 4 you">
+                            <img src="<?php base_url()?>img/brand/header-logo.png" alt="faculty 4 you">
                         </a>
                     </div>
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
-                            <li class="nav__list"><a href="" class="nav__link">become teacher</a></li>
-                            <li class="nav__list"><a href="" class="nav__link">log in</a></li>
-                            <li class="nav__list"><a href="" class="nav__link button-primary">sign up</a></li>
+                            <li class="nav__list"><a href="<?php base_url()?>" class="nav__link">become teacher</a></li>
+                            <li class="nav__list"><a href="<?php base_url()?>" class="nav__link">log in</a></li>
+                            <li class="nav__list"><a href="<?php base_url()?>" class="nav__link button-primary">sign up</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
@@ -71,7 +71,7 @@
                                 </h5>
                             </header>
                             <div class="banner-content-body">
-                                <form action="student/login.php" class="banner__form">
+                                <form action="<?php base_url()?>student/login.php" class="banner__form">
                                     <input type="search" placeholder="search top teachers city / subject / category" class="banner-search" name="search">
                                     <button class="banner__button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
@@ -83,7 +83,7 @@
                     </section>
                     <!-- end banner content -->
                     <div class="banner-image">
-                        <img src="img/banner/teacher.svg" class="banner__image" alt="">
+                        <img src="<?php base_url()?>img/banner/teacher.svg" class="banner__image" alt="">
                     </div>
                     <!-- end banner imager -->
                 </div>
@@ -336,10 +336,10 @@
         <!-- end body wrap -->
 
         <!-- script -->
-            <script src="js/jquery-3.5.1.js"></script>
-            <script src="js/owl.carousel.js"></script>
+            <script src="<?php base_url()?>js/jquery-3.5.1.js"></script>
+            <script src="<?php base_url()?>js/owl.carousel.js"></script>
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script src="js/script.js"></script>
+            <script src="<?php base_url()?>js/script.js"></script>
             
             <script>
                 AOS.init();
