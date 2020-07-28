@@ -1,0 +1,121 @@
+.body {
+  &-banner {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+
+    @media (max-width: 582px) {
+      height: 100vh;
+    }
+
+    &::after {
+      @media (min-width: 583px) {
+        content: "";
+        width: 55rem;
+        height: 70rem;
+        //   background-color: red;
+        background-image: url("../img/bg/bg-1.png");
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -4;
+        background-position: top left;
+        background-repeat: no-repeat;
+        background-size: 550px 90vh;
+      }
+    }
+  }
+}
+
+.banner {
+  &-content {
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      background-color: $color-yellow-dark-1;
+      position: absolute;
+      left: -5%;
+      top: 17%;
+      z-index: -4;
+
+      @media (max-width: 582px) {
+        left: 27%;
+        top: 35%;
+      }
+    }
+
+    &__header {
+      padding-bottom: 3rem;
+      @media (max-width: 582px) {
+        text-align: center;
+        position: absolute;
+        top: 20%;
+      }
+      h2 {
+        @media (max-width: 582px) {
+          display: none;
+        }
+      }
+    }
+
+    .text-primary {
+      padding-bottom: 2rem;
+      @media (max-width: 582px) {
+        padding-bottom: 4rem;
+      }
+    }
+
+    &-body {
+      @media (max-width: 582px) {
+        position: absolute;
+        bottom: 10%;
+      }
+    }
+  }
+  &-wrap {
+    // position: relative;
+  }
+
+  &-image {
+    position: absolute;
+    z-index: -2;
+    @media (min-width: 583px) {
+      width: 45%;
+      right: 5%;
+      bottom: 10%;
+    }
+    @media (max-width: 582px) {
+      width: 70%;
+      left: 15%;
+      bottom: 40%;
+    }
+  }
+  &__image {
+    width: 100%;
+  }
+}
+
+// student section
+.section {
+  &-header {
+  }
+
+  &-body {
+  }
+
+  &-footer {
+    padding-top: 5rem;
+  }
+}
