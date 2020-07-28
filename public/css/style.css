@@ -65,13 +65,13 @@ p {
   line-height: 2.4rem;
   color: #606060; }
 
-.text-primary {
+.text-primary, .article-info ul li {
   font-family: "open sans";
   font-size: 3.5rem;
   font-weight: 600;
   color: #454b69; }
 
-.text-secondary {
+.text-secondary, .section-body .article__header {
   font-family: "open sans";
   font-size: 2.4rem;
   font-weight: 400;
@@ -114,6 +114,10 @@ p {
   font-size: 1.2rem;
   font-weight: 500;
   color: #646464; }
+
+.article-info ul li {
+  font-size: 1.8rem;
+  font-weight: 400; }
 
 .u-center-text {
   text-align: center !important; }
@@ -521,6 +525,41 @@ p {
     width: 100%;
     height: 10rem; }
 
+@media (min-width: 583px) {
+  .section-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; } }
+
+.section-body .article-profile {
+  background-color: #e7e7e7;
+  padding: 2rem 2rem;
+  margin-bottom: 1.5rem; }
+
+.section-body .article__header {
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ffffff; }
+
+@media (min-width: 583px) {
+  .section-body .article-info ul li {
+    display: flex;
+    flex-direction: row; } }
+
+@media (min-width: 583px) {
+  .section-body .article-info ul li:first-child {
+    width: 10rem; } }
+
+.section-short-info {
+  background-color: #e7e7e7; }
+  @media (min-width: 583px) {
+    .section-short-info {
+      width: 30%; } }
+
+@media (min-width: 583px) {
+  .section-detail-info {
+    width: 65%; } }
+
 .body-header {
   padding-top: 2rem;
   width: 100%;
@@ -678,10 +717,10 @@ p {
     @media (max-width: 582px) {
       .banner-content__header h2 {
         display: none; } }
-  .banner-content .text-primary {
+  .banner-content .text-primary, .banner-content .article-info ul li, .article-info ul .banner-content li {
     padding-bottom: 2rem; }
     @media (max-width: 582px) {
-      .banner-content .text-primary {
+      .banner-content .text-primary, .banner-content .article-info ul li, .article-info ul .banner-content li {
         padding-bottom: 4rem; } }
   @media (max-width: 582px) {
     .banner-content-body {
