@@ -1,4 +1,9 @@
+<?php 
 
+    $teacher_name = $_SESSION['user_name'];
+    $sql = "SELECT * FROM teachers WHERE teacher_user_name = '$teacher_name'";
+    $result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -46,7 +51,7 @@
                         <ul>
                             <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link">home</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">profile</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/logout.php" class="nav__link">log out</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">log out</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
