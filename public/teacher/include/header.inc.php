@@ -44,9 +44,9 @@
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">home</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">profile</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">contact</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link">home</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">profile</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/logout.php" class="nav__link">log out</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
