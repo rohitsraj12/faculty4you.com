@@ -6,6 +6,8 @@
         header('location: login.php');
     } 
 
+
+
     $page_title = "profile";
     include_once("../../private/config/config.php");
 ?>
