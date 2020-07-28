@@ -1,6 +1,12 @@
 <?php
-    $page_title = "profile";
 
+    session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: login.php');
+    } 
+
+    $page_title = "profile";
     include_once("../../private/config/config.php");
 ?>
 
@@ -102,3 +108,7 @@
               </script>
     </body>
 </html>
+
+<?php 
+    
+?>
