@@ -1,0 +1,11 @@
+.button {
+  &-primary {
+    padding: 1rem 4rem;
+    background-color: $color-btn-1;
+    color: $color-white;
+    border-radius: 1rem;
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+}
