@@ -1,0 +1,45 @@
+/*
+    banner search form
+*/
+
+.banner {
+  &__form {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    @media (min-width: 583px) {
+      width: 70%;
+    }
+
+    @media (max-width: 582px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &-search {
+    width: 100%;
+    padding: 1rem 3.5rem 1rem 1rem;
+    border-radius: 0.4rem;
+    border: 0.2rem solid $color-primary;
+    font: {
+      size: 1.7rem;
+      weight: 400;
+    }
+    color: $color-primary;
+    letter-spacing: 1px;
+  }
+
+  &__button {
+    position: absolute;
+    right: 1.4rem;
+    bottom: 2.9rem;
+    background-color: transparent;
+    border: none;
+    font: {
+      size: 2rem;
+    }
+    color: $color-btn-1;
+  }
+}
