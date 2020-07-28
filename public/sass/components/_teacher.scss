@@ -1,0 +1,190 @@
+.section {
+  &-teacher {
+    // background-color: #f8f8f8;
+    // background-image: url("../img/banner/teacher.svg");
+    // background-size: 300px 300px;
+    // background-repeat: no-repeat;
+    // background-position: left center;
+
+    @media (min-width: 583px) {
+      //   min-height: 500px;
+      padding: 10rem 0;
+    }
+
+    @media (max-width: 582px) {
+      padding: 5rem 0;
+    }
+
+    .section {
+      &-body {
+        @media (min-width: 583px) {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        article {
+          &:first-child {
+            figure {
+              &::before {
+                @media (min-width: 583px) {
+                  content: "";
+                  width: 100%;
+                  height: 2px;
+                  // border-radius: 50%;
+                  background-color: $color-gray-light-1;
+
+                  position: absolute;
+                  bottom: -4.25rem;
+                  left: 48%;
+                  z-index: -3;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            figure {
+              &::before {
+                @media (min-width: 583px) {
+                  content: "";
+                  width: 50%;
+                  height: 2px;
+                  // border-radius: 50%;
+                  background-color: $color-gray-light-1;
+
+                  position: absolute;
+                  bottom: -4.25rem;
+                  left: 0;
+                  z-index: -3;
+                }
+              }
+            }
+          }
+
+          &:not(first-child),
+          &:not(last-child) {
+            figure {
+              &::before {
+                @media (min-width: 583px) {
+                  content: "";
+                  width: 100%;
+                  height: 2px;
+                  // border-radius: 50%;
+                  background-color: $color-gray-light-1;
+
+                  position: absolute;
+                  bottom: -4.25rem;
+                  left: 0;
+                  z-index: -3;
+                }
+              }
+            }
+          }
+        }
+
+        figure {
+          @media (min-width: 583px) {
+            max-width: 100%;
+            margin: 0 auto 4rem;
+            // padding-bottom: 20rem;
+            position: relative;
+          }
+
+          span {
+            font: {
+              family: $font-primary;
+              size: 1.5rem;
+              weight: 500;
+            }
+            color: $color-link-1;
+            @media (min-width: 583px) {
+              position: absolute;
+              bottom: -8rem;
+              left: 43%;
+              // background-image: url("../img/member/find-student.svg");
+              // background-repeat: no-repeat;
+              // background-size: 100px 40px;
+              // background-position: center;
+            }
+            @media (max-width: 582px) {
+              display: block;
+              text-align: center;
+            }
+          }
+
+          &::after {
+            @media (min-width: 583px) {
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              border: 0.3rem solid $color-btn-1;
+              background-color: $color-white;
+              position: absolute;
+              bottom: -5.1rem;
+              left: 46%;
+              z-index: -2;
+            }
+
+            @media (max-width: 582px) {
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              border-radius: 50%;
+              border: 0.3rem solid $color-btn-1;
+              background-color: $color-white;
+              position: absolute;
+              top: 0rem;
+              left: 46%;
+              z-index: -2;
+            }
+          }
+        }
+
+        img {
+          width: 100%;
+
+          @media (min-width: 582px) {
+            height: 10rem;
+          }
+
+          @media (max-width: 582px) {
+            height: 20rem;
+            padding: 2rem 0;
+          }
+        }
+      }
+    }
+
+    .article {
+      &-block {
+        // width: 32%;
+        @media (min-width: 583px) {
+        }
+
+        @media (max-width: 582px) {
+          &:not(last-child) {
+            padding: 4rem 0;
+            margin-bottom: 2rem;
+            background-color: #f9f9f9;
+            border-top: 3px solid $color-link-1;
+          }
+        }
+      }
+
+      &-header {
+        padding-bottom: 2rem;
+        text-align: center;
+
+        @media (min-width: 583px) {
+          padding-top: 6rem;
+        }
+      }
+
+      &-body {
+        text-align: center;
+        padding: 0 2rem;
+      }
+    }
+  }
+}
