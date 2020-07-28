@@ -1,7 +1,7 @@
 <?php
     $page_title = "home page";
-
-    include_once("../private/config/config.php");
+    require_once("../private/config/db_connect.php")
+    required("../private/config/config.php");
 ?>
 
 <!DOCTYPE html>
@@ -43,15 +43,15 @@
                 <header class="wrap-container">
                     <div class="header-brand">
                         <a href="<?php base_url();?>index.php">
-                            <img src="<?php base_url()?>img/brand/header-logo.png" alt="faculty 4 you">
+                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
                         </a>
                     </div>
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
-                            <li class="nav__list"><a href="<?php base_url()?>" class="nav__link">become teacher</a></li>
-                            <li class="nav__list"><a href="<?php base_url()?>" class="nav__link">log in</a></li>
-                            <li class="nav__list"><a href="<?php base_url()?>" class="nav__link button-primary">sign up</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">become teacher</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">log in</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link button-primary">sign up</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
@@ -71,7 +71,7 @@
                                 </h5>
                             </header>
                             <div class="banner-content-body">
-                                <form action="<?php base_url()?>student/login.php" class="banner__form">
+                                <form action="<?php base_url();?>student/login.php" class="banner__form">
                                     <input type="search" placeholder="search top teachers city / subject / category" class="banner-search" name="search">
                                     <button class="banner__button" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                                 </form>
@@ -83,7 +83,7 @@
                     </section>
                     <!-- end banner content -->
                     <div class="banner-image">
-                        <img src="<?php base_url()?>img/banner/teacher.svg" class="banner__image" alt="">
+                        <img src="<?php base_url();?>img/banner/teacher.svg" class="banner__image" alt="">
                     </div>
                     <!-- end banner imager -->
                 </div>
@@ -108,7 +108,7 @@
                             <article class="article-block" data-aos="zoom-out-right" data-aos-duration="1000">
                                 <figure class="studnet-section__figure">
                                     <span>step 1</span>
-                                    <img src="img/member/register.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/register.svg" alt="">
 
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -123,7 +123,7 @@
                             <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
                                 <figure class="studnet-section__figure">
                                     <span>step 2</span>
-                                    <img src="img/member/post-requirement.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/post-requirement.svg" alt="">
 
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -138,7 +138,7 @@
                             <article class="article-block" data-aos="zoom-out-left" data-aos-duration="1000">
                                 <figure class="studnet-section__figure">
                                 <span>step 3</span>
-                                    <img src="img/member/schedule.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/schedule.svg" alt="">
 
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -167,7 +167,7 @@
                         <section class="section-body wrap-container">
                             <article class="article-block" data-aos="zoom-out-right" data-aos-duration="1000">
                                 <figure class="studnet-section__figure">
-                                    <img src="img/member/register.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/register.svg" alt="">
                                     <span>step 1</span>
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -181,7 +181,7 @@
                             </article>
                             <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
                                 <figure class="studnet-section__figure">
-                                    <img src="img/member/member.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/member.svg" alt="">
                                     
                                     <span>step 2</span>
                                 </figure>
@@ -196,7 +196,7 @@
                             </article>
                             <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
                                 <figure class="studnet-section__figure">
-                                    <img src="img/member/find-student.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/find-student.svg" alt="">
                                     <span>step 3</span>
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -210,7 +210,7 @@
                             </article>
                             <article class="article-block" data-aos="zoom-out-left" data-aos-duration="1000">
                                 <figure class="studnet-section__figure">
-                                    <img src="img/member/schedule.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/schedule.svg" alt="">
                                     <span>step 4</span>
 
                                 </figure>
@@ -241,7 +241,7 @@
                                 </div>        
                                 <footer class="article-footer">
                                     <figure>
-                                        <img  class="testimonial-client-img" src="" alt="">
+                                        <img  class="testimonial-client-img" src="<?php base_url();?>" alt="">
                                     </figure>
                                     <ul>
                                         <li class="testimonial-client-name"><cite>name</cite></li>
@@ -257,7 +257,7 @@
                                 </div>        
                                 <footer class="article-footer">
                                     <figure>
-                                        <img  class="testimonial-client-img" src="" alt="">
+                                        <img  class="testimonial-client-img" src="<?php base_url();?>" alt="">
                                     </figure>
                                     <ul>
                                         <li class="testimonial-client-name"><cite>name</cite></li>
@@ -273,7 +273,7 @@
                                 </div>        
                                 <footer class="article-footer">
                                     <figure>
-                                        <img  class="testimonial-client-img" src="" alt="">
+                                        <img  class="testimonial-client-img" src="<?php base_url();?>" alt="">
                                     </figure>
                                     <ul>
                                         <li class="testimonial-client-name"><cite>name</cite></li>
@@ -302,7 +302,7 @@
                             <article class="article-block" data-aos="zoom-out-right" data-aos-duration="1000"> 
                                 <figure class="article-block__figure">
                                     
-                                    <img src="img/member/register.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/register.svg" alt="">
 
                                 </figure>
                                
@@ -310,7 +310,7 @@
                             <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
                                 <figure class="article-block__figure">
                                     
-                                    <img src="img/member/post-requirement.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/post-requirement.svg" alt="">
 
                                 </figure>
                                 
@@ -318,7 +318,7 @@
                             <article class="article-block" data-aos="zoom-out-left" data-aos-duration="1000">
                                 <figure class="article-block__figure">
                               
-                                    <img src="img/member/schedule.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/schedule.svg" alt="">
 
                                 </figure>
                                
@@ -336,10 +336,10 @@
         <!-- end body wrap -->
 
         <!-- script -->
-            <script src="<?php base_url()?>js/jquery-3.5.1.js"></script>
-            <script src="<?php base_url()?>js/owl.carousel.js"></script>
+            <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
+            <script src="<?php base_url();?>js/owl.carousel.js"></script>
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-            <script src="<?php base_url()?>js/script.js"></script>
+            <script src="<?php base_url();?>js/script.js"></script>
             
             <script>
                 AOS.init();
