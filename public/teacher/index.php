@@ -1,5 +1,5 @@
 <?php
-    $page_title = "home page";
+    $page_title = "profile";
 
     include_once("../../private/config/config.php");
 ?>
@@ -49,9 +49,9 @@
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">become teacher</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">log in</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">sign up</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">home</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">profile</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">contact</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
