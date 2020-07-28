@@ -1,0 +1,7 @@
+.body {
+  &-footer {
+    padding: 10rem 0;
+    clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: $color-btn-1;
+  }
+}
