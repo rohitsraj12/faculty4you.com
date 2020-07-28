@@ -16,7 +16,7 @@
         teacher Log in 
     </h1>
 
-    <form action="include/login.query.php" method="post">
+    <form action="include/login.teacher.inc.php" method="post">
         <table>
             <tr>
                 <td><label for="user_name">email/user name</label></td>
