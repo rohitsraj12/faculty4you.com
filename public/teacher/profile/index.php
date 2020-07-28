@@ -10,9 +10,19 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
+    
+    while($row = mysqli_fetch_assoc($result)){
 ?>
 
 <div class="body-container">
+                
+    <div class="header__profile u-right-text text-sub-primary">
+        <i class="fa fa-user" aria-hidden="true"></i>                        
+        <?php 
+            echo $row['teacher_user_name'];
+        ?>
+    </div>
+
     <main class="wrap-container profile">
         <section class="section-profile">
             <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
@@ -28,15 +38,25 @@
                             <img src="" alt="">
                         </figure>
                         <header class="u-center-text">
-                            <h1 class="text-secondary">firstname lastname</h1>
+                            <h1 class="text-secondary">
+                            <?php 
+                                echo $row['teacher_first_name'];
+                            ?>
+                            </h1>
                         </header>
                         <footer>
                             <ul>
                                 <li>
-                                email
+                                
+                            <?php 
+                                echo $row['teacher_email'];
+                            ?>
                                 </li>
                                 <li>
-                                phone
+                                
+                            <?php 
+                                echo $row['teacher_phone'];
+                            ?>
                                 </li>
                             </ul>
                         </footer>
@@ -61,7 +81,11 @@
                             <div class="article-info">
                                 <ul>
                                     <li>name</li>
-                                    <li></li>
+                                    <li>
+                                        <?php 
+                                            echo $row['teacher_first_name'] . " " . $row['teacher_last_name'];
+                                        ?>
+                                    </li>
                                 </ul>
                             </div>
                             
@@ -75,7 +99,13 @@
                             <div class="article-info">
                                 <ul>
                                     <li>email</li>
-                                    <li></li>
+                                    <li>
+                                        
+                                
+                            <?php 
+                                echo $row['teacher_email'];
+                            ?>
+                                    </li>
                                 </ul>
                             </div>
                             <div class="article-info">
@@ -125,5 +155,6 @@
     </main>
 </div>
 <?php
+}
     require("../include/footer.inc.php");
 ?>
