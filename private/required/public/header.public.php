@@ -45,7 +45,7 @@
                     <nav class="header__nav">
                         <ul>
                             <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">become teacher</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">log in</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">log in</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>" class="nav__link button-primary">sign up</a></li>
                         </ul>
                     </nav>
