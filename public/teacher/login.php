@@ -1,6 +1,7 @@
 <?php
     include_once("../../private/config/config.php");
     require_once('../../private/config/db_connect.php');
+
 ?>
 
 <!DOCTYPE html>
@@ -15,7 +16,7 @@
         teacher Log in 
     </h1>
 
-    <form action="<?php base_url();?>teacher/index.php" method="post">
+    <form action="include/login.query.php" method="post">
         <table>
             <tr>
                 <td><label for="user_name">email/user name</label></td>
