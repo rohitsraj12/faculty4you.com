@@ -1,4 +1,10 @@
 <?php
+    session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: ../login.php');
+    } 
+
     $page_title = "profile view";
 
     require_once("../../../private/config/db_connect.php");
