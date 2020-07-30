@@ -98,14 +98,21 @@ p {
 
 // profile
 
-.article-info{
-  ul{
-    li:first-child{
+.article-info {
+  ul {
+    li:first-child {
       @extend .text-primary;
       font: {
         size: 1.8rem;
         weight: 400;
       }
     }
+  }
+}
+
+label {
+  font: {
+    family: $font-primary;
+    size: 1.6rem;
   }
 }
