@@ -119,6 +119,10 @@ p {
   font-size: 1.8rem;
   font-weight: 400; }
 
+label {
+  font-family: "open sans";
+  font-size: 1.6rem; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -223,6 +227,19 @@ p {
   border: none;
   font-size: 2rem;
   color: #5388fe; }
+
+.section__form input {
+  padding: 1.7rem 1rem; }
+  .section__form input::placeholder {
+    font-size: 1.7rem; }
+
+.form-check-label {
+  line-height: 1.7rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem; }
+
+.label {
+  font-size: 1.7rem; }
 
 @media (min-width: 583px) {
   .section-student {
@@ -820,7 +837,7 @@ p {
       @media (max-width: 582px) {
         .body-banner-search .banner-content-body {
           position: absolute;
-          bottom: 10%; } }
+          bottom: 0%; } }
   .body-banner-search .banner-image {
     position: absolute;
     z-index: -2; }
