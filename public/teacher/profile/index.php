@@ -10,7 +10,6 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
-    require("../include/banner.inc.php");
     
     while($row = mysqli_fetch_assoc($result)){
 ?>
@@ -21,8 +20,6 @@
         <i class="fa fa-user" aria-hidden="true"></i>                        
         <?php 
             echo $row['teacher_user_name'];
-            
-}
         ?>
     </div>
 
@@ -158,5 +155,6 @@
     </main>
 </div>
 <?php
+}
     require("../include/footer.inc.php");
 ?>
