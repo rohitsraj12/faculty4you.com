@@ -1,0 +1,31 @@
+/**********             project detaials              **********
+*
+*   Project name    : 
+*   Author name     :
+*   Author email    :
+*   date            :
+*
+*****************************************************************/
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
+
+@import "components/buttons";
+@import "components/form";
+@import "components/student";
+@import "components/teacher";
+@import "components/testimonial";
+@import "components/partner";
+@import "components/searchresult";
+@import "components/banner";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/footer";
+
+@import "pages/home";
