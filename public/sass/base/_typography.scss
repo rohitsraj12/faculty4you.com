@@ -95,3 +95,17 @@ p {
     }
   }
 }
+
+// profile
+
+.article-info{
+  ul{
+    li:first-child{
+      @extend .text-primary;
+      font: {
+        size: 1.8rem;
+        weight: 400;
+      }
+    }
+  }
+}
