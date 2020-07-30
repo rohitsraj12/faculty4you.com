@@ -37,7 +37,7 @@
 
             <div class="section-body">
                 <section class="section-detail-info">
-                    <form>
+                    <form action="" method="" class="section__form section__form-update">
                         <article>
                             <header class="article__header bg-light pl-3">
                                 personal information
@@ -106,30 +106,31 @@
                                 </div>
                                 <fieldset class="form-group">
                                     <div class="row">
-                                    <legend class="col-form-label col-sm-2 pt-0">teaching type</legend>
-                                    <div class="col-sm-10">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                        <label class="label col-form-label col-sm-2 pt-0">teaching type</label>
                                         
-                                        <label class="form-check-label" for="gridRadios1">
-                                            one to one online
-                                        </label>
+                                        <div class="col-sm-10">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="single">
+                                            
+                                                <label class="form-check-label" for="single">
+                                                    online one to one tuition
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="group">
+                                            
+                                                <label class="form-check-label" for="group">
+                                                    online group tuition
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="home">
+                                            
+                                                <label class="form-check-label" for="home">
+                                                    home tuition
+                                                </label>
+                                            </div>
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        
-                                        <label class="form-check-label" for="gridRadios1">
-                                            one to one online
-                                        </label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                        
-                                        <label class="form-check-label" for="gridRadios1">
-                                            one to one online
-                                        </label>
-                                        </div>
-                                    </div>
                                     </div>
                                 </fieldset>
                                 <div class="form-group">
