@@ -10,6 +10,7 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
+    require("../include/banner.inc.php");
     
     while($row = mysqli_fetch_assoc($result)){
 ?>
