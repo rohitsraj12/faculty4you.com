@@ -21,6 +21,8 @@
         <i class="fa fa-user" aria-hidden="true"></i>                        
         <?php 
             echo $row['teacher_user_name'];
+            
+}
         ?>
     </div>
 
@@ -156,6 +158,5 @@
     </main>
 </div>
 <?php
-}
     require("../include/footer.inc.php");
 ?>
