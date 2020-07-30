@@ -41,6 +41,7 @@
                         <ul>
                             <li class="nav__list"><a href="<?php base_url();?>student/index.php" class="nav__link">home</a></li>
                             <li class="nav__list"><a href="" class="nav__link">post</a></li>
+                            <li class="nav__list"><a href="" class="nav__link">profile</a></li>
                             <li class="nav__list"><a href="" class="nav__link">log out</a></li>
                         </ul>
                     </nav>
