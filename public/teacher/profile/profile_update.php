@@ -36,7 +36,7 @@
             </div>
 
             <div class="section-body">
-                <section class="section-detail-info">
+                <section class="section-update-form">
                     <form action="" method="" class="section__form section__form-update">
                         <article>
                             <header class="article__header bg-light pl-3">
