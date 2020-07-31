@@ -5,7 +5,10 @@
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
      
-    // while($row = mysqli_fetch_assoc($result)){
+    // $sql = "SELECT * FROM std";
+
+    // $result = mysqli_query($conn, $sql);
+    while($row = mysqli_fetch_assoc($result)){
 ?>
 
 
@@ -151,6 +154,6 @@
     </main>
 </div>
 <?php
-
+    }
     require("../include/footer.inc.php");
 ?>
