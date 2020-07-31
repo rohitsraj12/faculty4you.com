@@ -10,6 +10,7 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
+    require("../include/banner.inc.php");
     
     while($row = mysqli_fetch_assoc($result)){
 ?>
@@ -26,66 +27,67 @@
     <main class="wrap-container profile">
         <section class="section-profile">
             <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                <heeader class="text-primary"> 
+                <heeader class="text-primary h1"> 
                     my profile
                 </header>
                 
             </div>
-            <div class="section-body">
-                <section class="section-short-info">
-                    <article class="article-profile" data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="section-body row">
+                <section class="col-md-4">
+                    <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
                         <figure class="text-center">
                             <img src="<?php base_url()?>img/teacher/profile_pic/rohit.jpg" alt="">
                         </figure>
-                        <header class="u-center-text">
-                            <h1 class="text-secondary">
+                        <header class=" u-center-text">
+                            <h1 class="text-dark py-5">
                             <?php 
                                 echo $row['teacher_first_name'];
                             ?>
                             </h1>
                         </header>
-                        <footer>
+                        <footer class="px-5">
                             <ul>
-                                <li>
+                                <li class="text-dark h4 py-1 font-weight-normal">
+                                <i class="h2 fa fa-mobile pr-3" aria-hidden="true"></i>
                                 
                             <?php 
                                 echo $row['teacher_email'];
                             ?>
                                 </li>
-                                <li>
-                                
+                                <li  class="text-dark h4 pb-4 font-weight-normal">
+                                <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i>
                             <?php 
-                                echo $row['teacher_phone'];
-                            ?>
+                                echo $row['teacher_phone']; 
+                            ?>9999999999
                                 </li>
 
-                                <li>
-                                    <a href="<?php base_url()?>teacher/profile/profile_update.php" class="btn btn-primary">edit my profile</a>
+                                <li class="text-center">
+                                    <a href="<?php base_url()?>teacher/profile/profile_update.php" class="w-100 h4 button-primary">edit profile</a>
                                 </li>
                             </ul>
                         </footer>
                     </article>
                 </section>
-                <section class="section-detail-info">
-                    <article class="article-profile" data-aos="zoom-out-up" data-aos-duration="1000">
-                        <header class="article__header">
-                            about me
+                <section class="col-md-8">
+                    <article class="article-profil " data-aos="zoom-out-up" data-aos-duration="1000">
+                        <header class="p-4 h3 bg-dark text-light m-0">
+                            About me
                         </header>
-                        <div class="article-body">
+                        <div class="article-body p-4 text-dark  border">
                         <p>
                             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ipsa!
                         </p>
                         </div>
                     </article>
-                    <article class="article-profile" data-aos="zoom-out-up" data-aos-duration="1000">
-                        <header class="article__header">
-                            personal detail
+                    <article class="article-profil py-5" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <header class="p-4 h3 bg-dark text-light  m-0">
+                            Personal detail
                         </header>
-                        <div class="article-body">
+                        <div class="article-body p-4 bg-light border">
                             <div class="article-info">
-                                <ul>
-                                    <li>name</li>
-                                    <li>
+                                <ul class="row">
+                                    <li class="col-sm-2">name</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">
                                         <?php 
                                             echo $row['teacher_first_name'] . " " . $row['teacher_last_name'];
                                         ?>
@@ -101,20 +103,18 @@
                             </div>
                             
                             <div class="article-info">
-                                <ul>
-                                    <li>email</li>
-                                    <li>
-                                        
-                                
-                            <?php 
-                                echo $row['teacher_email'];
-                            ?>
+                                <ul class="row">
+                                    <li class="col-sm-2">email</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">
+                                        <?php 
+                                            echo $row['teacher_email'];
+                                        ?>
                                     </li>
                                 </ul>
                             </div>
                             <div class="article-info">
-                                <ul>
-                                    <li>address</li>
+                                <ul class="row">
+                                    <li class="col-sm-2">address</li>
                                     <li></li>
                                     <li></li>
                                     <li></li>
@@ -123,22 +123,22 @@
                             </div>
                         </div>
                     </article>
-                    <article class="article-profile" data-aos="zoom-out-up" data-aos-duration="1000">
-                        <header class="article__header">
-                            professional detail
+                    <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <header class="p-4 h3 bg-dark text-light  m-0">
+                            Professional detail
                         </header>
-                        <div class="article-body">
+                        <div class="article-body p-4 border">
                         
-                        <div class="article-info">
-                                <ul>
-                                    <li>experience</li>
+                            <div class="article-info">
+                                <ul class="row">
+                                    <li class="col-sm-4">experience</li>
                                     <li></li>
                                 </ul>
                             </div>
                             
                             <div class="article-info">
-                                <ul>
-                                    <li>tuition type</li>
+                                <ul class="row">
+                                    <li class="col-sm-4">tuition type</li>
                                     <li></li>
                                     <li></li>
                                     <li></li>
