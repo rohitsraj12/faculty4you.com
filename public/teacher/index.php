@@ -31,13 +31,18 @@
             <div class="body-container">
                 <main>
                     <section class="wrap-container">
-                    
+                        <header class="text-primary text-center">
+                            students Post
+                        </header>
                     <?php 
                         include('include/teacher.query.inc.php');
                         while($row = mysqli_fetch_assoc($result)){
                     ?>
 
                     <h1><?php echo $row["teacher_user_name"]?></h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate placeat saepe doloremque omnis aspernatur iure consequuntur minima odit libero tenetur, ullam nam at accusantium, dignissimos voluptatibus, inventore quisquam magni quo.
+                    </p>
                     <?php 
                         }
                     ?>
