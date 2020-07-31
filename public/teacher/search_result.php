@@ -6,6 +6,7 @@
         header('location: login.php');
     }
     $page_title = "home page";
+    $banner_image_url = "search";
     require_once("../../private/config/db_connect.php");
     include("../../private/config/config.php");
 
