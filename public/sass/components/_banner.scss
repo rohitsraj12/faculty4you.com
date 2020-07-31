@@ -2,6 +2,8 @@
   &-banner {
     width: 100%;
     position: relative;
+    // background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23d6d6d6' fill-opacity='0.38'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 
     @media only screen and (orientation: portrait) {
       height: 100vh;
@@ -68,17 +70,13 @@
             position: absolute;
             top: 20%;
           }
-          h2 {
-            @media (max-width: 582px) {
-              display: none;
-            }
-          }
         }
 
-        .text-primary {
+        .text-primary-h {
           padding-bottom: 2rem;
           @media (max-width: 582px) {
             padding-bottom: 4rem;
+            display: none;
           }
         }
 
