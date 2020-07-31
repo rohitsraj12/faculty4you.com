@@ -59,7 +59,7 @@ a {
 button {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
-	background-color: #FF4B2B;
+	/* background-color: #FF4B2B; */
 	color: #FFFFFF;
 	font-size: 12px;
 	font-weight: bold;
@@ -80,6 +80,29 @@ button:focus {
 button.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
+}
+
+.form-container button {
+    background: #8aafff;
+  background: -moz-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, #8aafff),
+    color-stop(41%, #8aafff),
+    color-stop(100%, #5388fe)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #8aafff 0%,
+    #8aafff 41%,
+    #5388fe 100%
+  );
+  background: -o-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: -ms-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: linear-gradient(to right, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8aafff', endColorstr='#5388fe', GradientType=1 );
+  border-color: #5388fe;
 }
 
 form {
@@ -172,11 +195,31 @@ input {
 }
 
 .overlay {
-	background: #FF416C;
+	/* background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
 	background-repeat: no-repeat;
-	background-size: cover;
+    background-size: cover; */
+    
+    background: #8aafff;
+  background: -moz-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, #8aafff),
+    color-stop(41%, #8aafff),
+    color-stop(100%, #5388fe)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #8aafff 0%,
+    #8aafff 41%,
+    #5388fe 100%
+  );
+  background: -o-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: -ms-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: linear-gradient(to right, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8aafff', endColorstr='#5388fe', GradientType=1 );
 	background-position: 0 0;
 	color: #FFFFFF;
 	position: relative;
@@ -265,9 +308,7 @@ footer a {
     </style>
 </head>
 <body>
-    <h1>
-        teacher Log in 
-    </h1>
+    
 <!-- 
     <form action="include/login.teacher.inc.php" method="post">
         <table>
@@ -293,11 +334,11 @@ footer a {
             <form action="#">
                 <h1>Create Account</h1>
                 <div class="social-container">
-                    <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                    <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                 </div>
-                <span>or use your email for registration</span>
+                <!-- <span>or use your email for registration</span> -->
                 <input type="text" placeholder="Name" />
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
@@ -316,7 +357,7 @@ footer a {
                 <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
                 <input type="password" placeholder="Password"  name="password"/>
                 <a href="#">Forgot your password?</a>
-                <button  name="login-submit">Sign In</button>
+                <button name="login-submit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
