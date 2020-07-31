@@ -11,7 +11,7 @@
                 <main class="page-home">
                     <section class="section-student">
                         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                            <heeader class="text-primary"> 
+                            <heeader class="text-primary-h"> 
                                 how <strong>faculty4you</strong> works for students
                             </header>
                             <div class="sub-heading wrap-container">
@@ -71,7 +71,7 @@
                     <section class="section-teacher">
                         
                         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                            <heeader class="text-primary"> 
+                            <heeader class="text-primary-h"> 
                                 Looking to become a <strong>trainer</strong>
                             </header>
                             <div class="sub-heading wrap-container">
@@ -144,7 +144,7 @@
                     <section class="section-testimonial">
                          
                     <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
-                            <heeader class="text-primary"> 
+                            <heeader class="text-primary-h"> 
                                 Student comumnity feed back
                             </header>
                         </div>
@@ -209,7 +209,7 @@
                         
                         
                     <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
-                            <heeader class="text-primary"> 
+                            <heeader class="text-primary-h"> 
                                 Our pratners
                             </header>
                         </div>
