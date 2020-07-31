@@ -22,7 +22,7 @@
     <main class="wrap-container profile">
         <section class="section-profile">
             <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                <heeader class="text-primary"> 
+                <heeader class="text-primary-h"> 
                     my profile
                 </header>
                 
