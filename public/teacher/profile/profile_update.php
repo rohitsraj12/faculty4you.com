@@ -138,7 +138,10 @@
                                     <textarea class="form-control" id="validationTextarea" placeholder="Required example textarea"></textarea>
                                     
                                 </div>
+
                             </div>
+
+                            <a class="w-100 button-primary text-center" href="<?php base_url()?>teacher/profile/">update</a>
                         </article>
                     </form>
                 </section>
