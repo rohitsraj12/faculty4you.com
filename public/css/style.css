@@ -65,13 +65,13 @@ p {
   line-height: 2.4rem;
   color: #606060; }
 
-.text-primary, .article-info ul li:first-child {
+.text-primary-h {
   font-family: "open sans";
   font-size: 3.5rem;
   font-weight: 600;
   color: #454b69; }
 
-.text-secondary, .section-body .article__header {
+.text-secondary-h {
   font-family: "open sans";
   font-size: 2.4rem;
   font-weight: 400;
@@ -525,7 +525,6 @@ label {
 
 .section-body .article__header {
   padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
   border-bottom: 1px solid #ffffff; }
 
 @media (min-width: 583px) {
