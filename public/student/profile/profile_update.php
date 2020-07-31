@@ -10,7 +10,7 @@
     require("../../../private/config/config.php");
 
 
-    require("../include/header.php");
+    require("../include/header.inc.php");
 
    // while($row = mysqli_fetch_assoc($result)){
 
@@ -237,5 +237,5 @@
 
 
 <?php 
-    require("../include/footer.php");
+    require("../include/footer.inc.php");
 ?>
