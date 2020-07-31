@@ -21,6 +21,7 @@
         <i class="fa fa-user" aria-hidden="true"></i>                        
         <?php 
             echo $row['teacher_user_name'];
+    
         ?>
     </div>
 
