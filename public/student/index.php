@@ -13,8 +13,8 @@
                     <section class="banner-content">
                         <article>
                             <header class="banner-content__header">
-                                <h2 class="text-primary">Faculty4you take learning  to new heights</h2>
-                                <h5 class="text-secondary">
+                                <h2 class="text-primary-h">Faculty4you take learning  to new heights</h2>
+                                <h5 class="text-secondary-h">
                                     we provide top <strong>teachers</strong> for <strong class="highlight-primary">online</strong> and <strong class="highlight-primary">home tution</strong> all over india    
                                 </h5>
                             </header>
