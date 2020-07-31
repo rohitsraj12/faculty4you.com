@@ -33,7 +33,7 @@
     <main class="wrap-container profile">
         <section class="section-profile-update">
             <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                <heeader class="text-primary h1 text-secondary"> 
+                <heeader class="text-primary-h text-secondary"> 
                     Update profile
                 </header>
                 
