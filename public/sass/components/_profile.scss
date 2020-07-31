@@ -1,64 +1,59 @@
-.section{
-    &-profile{
-
-    }
-    &-body{
-        @media(min-width: 583px){
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-
-        .article{
-            &-profile{
-                background-color: $color-gray-light-1;
-                padding: 2rem 2rem;
-                margin-bottom: 1.5rem;
-                
-            }
-
-            &__header{
-                @extend .text-secondary;
-                padding-bottom: 1.5rem;
-                margin-bottom: 2rem;
-                border-bottom: 1px solid $color-white;
-            }
-        
-            &-info{
-                ul{
-                    li{
-                        @media(min-width: 583px){
-                            display: flex;
-                            flex-direction: row;
-        
-                        }
-                        &:first-child{
-        
-                            @media(min-width: 583px){
-                                width: 10rem;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    &-short{
-        &-info{
-            background-color: $color-gray-light-1;
-
-            @media(min-width: 583px){
-                width: 30%;
-            }
-        }
+.section {
+  &-profile {
+  }
+  &-body {
+    @media (min-width: 583px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
     }
 
-    &-detail{
-        &-info{
-            @media(min-width: 583px){
-                width: 65%;
+    .article {
+      &-profile {
+        background-color: $color-gray-light-1;
+        padding: 2rem 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &__header {
+        // @extend .text-secondary;
+        padding-bottom: 1.5rem;
+        // margin-bottom: 2rem;
+        border-bottom: 1px solid $color-white;
+      }
+
+      &-info {
+        ul {
+          li {
+            @media (min-width: 583px) {
+              display: flex;
+              flex-direction: row;
             }
+            &:first-child {
+              @media (min-width: 583px) {
+                width: 10rem;
+              }
+            }
+          }
         }
+      }
     }
+  }
+  &-short {
+    &-info {
+      background-color: $color-gray-light-1;
+
+      @media (min-width: 583px) {
+        width: 30%;
+      }
+    }
+  }
+
+  &-detail {
+    &-info {
+      @media (min-width: 583px) {
+        width: 65%;
+      }
+    }
+  }
 }
-
