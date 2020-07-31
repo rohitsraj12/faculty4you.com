@@ -34,8 +34,8 @@
             <div class="section-body">
                 <section class="section-short-info">
                     <article class="article-profile" data-aos="zoom-out-up" data-aos-duration="1000">
-                        <figure>
-                            <img src="" alt="">
+                        <figure class="text-center">
+                            <img src="<?php base_url()?>img/teacher/profile_pic/rohit.jpg" alt="">
                         </figure>
                         <header class="u-center-text">
                             <h1 class="text-secondary">
@@ -57,6 +57,10 @@
                             <?php 
                                 echo $row['teacher_phone'];
                             ?>
+                                </li>
+
+                                <li>
+                                    <a href="<?php base_url()?>teacher/profile/profile_update.php" class="btn btn-primary">edit my profile</a>
                                 </li>
                             </ul>
                         </footer>
