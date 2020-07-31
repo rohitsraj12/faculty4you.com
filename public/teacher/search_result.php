@@ -30,7 +30,7 @@ if(isset($_POST["submit-search"])){
     ?>
         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
             <heeader class="text-primary"> 
-                search result of techer account
+                search result of student 
             </header>
         </div>
         <div class="search-result-num" data-aos="zoom-out-up" data-aos-duration="1000">
