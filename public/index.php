@@ -28,7 +28,7 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary">register</h4>
+                                    <h4 class="text-secondary-h">register</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -43,7 +43,7 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary">Post your requirements</h4>
+                                    <h4 class="text-secondary-h">Post your requirements</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -58,7 +58,7 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary">Schedule lesson</h4>
+                                    <h4 class="text-secondary-h">Schedule lesson</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -87,7 +87,7 @@
                                     <span>step 1</span>
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary">register</h4>
+                                    <h4 class="text-secondary-h">register</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -102,7 +102,7 @@
                                     <span>step 2</span>
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary">activate membership</h4>
+                                    <h4 class="text-secondary-h">activate membership</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -116,7 +116,7 @@
                                     <span>step 3</span>
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary">Find students</h4>
+                                    <h4 class="text-secondary-h">Find students</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -131,7 +131,7 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary">Schedule lesson</h4>
+                                    <h4 class="text-secondary-h">Schedule lesson</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
