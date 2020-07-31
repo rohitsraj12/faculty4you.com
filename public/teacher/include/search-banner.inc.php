@@ -21,7 +21,7 @@
     </section>
     <!-- end banner content -->
     <div class="banner-image">
-        <img src="<?php base_url();?>img/search.svg" class="banner__image" alt="">
+        <img src="<?php base_url();?>img/<?php echo $banner_image_url;?>.svg" class="banner__image" alt="">
     </div>
     <!-- end banner imager -->
 </div>
