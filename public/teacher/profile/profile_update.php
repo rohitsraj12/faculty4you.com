@@ -10,10 +10,23 @@
     require("../../../private/config/config.php");
 
     require("../include/header.inc.php");
+    require("../include/banner.inc.php");
 
     
     while($row = mysqli_fetch_assoc($result)){
 ?>
+    <!-- <div class="profile-banner">
+        <section class="profile-container wrap-container">
+            <article class="row">
+                <header class="h1 col-sm-7 text-center">
+                    Update Profile
+                </header>
+                <figure class=" col-sm-5">
+                    <img src="<?php base_url()?>img/search.svg" alt="">
+                </figure>
+            </article>
+        </section>
+    </div> -->
 
 <div class="body-container">
                 
@@ -26,11 +39,13 @@
         ?>
     </div>
 
+    
+
     <main class="wrap-container profile">
         <section class="section-profile-update">
             <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                <heeader class="text-primary"> 
-                    update profile
+                <heeader class="text-primary h1 text-secondary"> 
+                    Update profile
                 </header>
                 
             </div>
@@ -38,13 +53,13 @@
             <div class="section-body">
                 <section class="section-update-form">
                     <form action="" method="" class="section__form section__form-update">
-                        <article>
-                            <header class="article__header bg-light pl-3">
+                        <article class="mb-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <header class="p-4 h3 bg-dark text-light m-0">
                                 personal information
                             </header>
-                            <div class="article-body">
+                            <div class="py-4 px-5 text-dark bg-light border">
                         
-                                <div class="form-row">
+                                <div class="form-row pt-3">
                                     <div class="form-group col-md-6">
                                     <label for="inputEmail4">first name</label>
                                     <input type="email" class="form-control" id="inputEmail4">
@@ -89,12 +104,12 @@
                                                   
                             </div>
                         </article>
-                        <article>
-                            <header class="article__header bg-light pl-3">
+                        <article  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <header class="p-4 h3 bg-dark text-light m-0">
                                 professional information
                             </header>
-                            <div class="article-body">
-                                <div class="form-row">
+                            <div class="py-4 px-5 text-dark bg-light border mb-5">
+                                <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
                                         <label for="inputEmail4">teaching experience</label>
                                         <input type="email" class="form-control" id="inputEmail4">
