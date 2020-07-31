@@ -3,9 +3,9 @@
 
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
-    require("../include/header.php");
+    require("../include/header.inc.php");
      
-    while($row = mysqli_fetch_assoc($result)){
+    // while($row = mysqli_fetch_assoc($result)){
 ?>
 
 
@@ -15,7 +15,7 @@
     <div class="header__profile u-right-text text-sub-primary">
         <i class="fa fa-user" aria-hidden="true"></i>                        
         <?php 
-            echo $row['student_user_name'];
+            // echo $row['student_user_name'];
         ?>
     </div>
 
@@ -151,6 +151,6 @@
     </main>
 </div>
 <?php
-}
+
     require("../include/footer.inc.php");
 ?>
