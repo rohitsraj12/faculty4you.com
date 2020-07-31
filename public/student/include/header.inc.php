@@ -1,3 +1,12 @@
+<?php 
+
+    // $student_name = $_SESSION['user_name'];
+    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+    $sql = "SELECT * FROM std";
+
+    $result = mysqli_query($conn, $sql);
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
