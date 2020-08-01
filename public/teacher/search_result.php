@@ -11,9 +11,23 @@
     include("../../private/config/config.php");
 
     include("include/header.inc.php");
-    include("include/search-banner.inc.php");
 ?>
 
+
+                
+<div class="header__profile u-right-text text-sub-primary">
+        <i class="fa fa-user" aria-hidden="true"></i>                        
+        <?php 
+        
+        $sql = "SELECT *  FROM teachers WHERE teacher_user_name = '$teacher_name'";
+        $result = mysqli_query($conn, $sql);
+            echo $row['teacher_user_name'];
+        ?>
+    </div>
+<?php 
+        include_once'include/search-banner.inc.php';
+
+?>
 <div class="body-container">
 
     <main>
@@ -30,7 +44,7 @@ if(isset($_POST["submit-search"])){
 
     ?>
         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-            <heeader class="text-primary"> 
+            <heeader class="text-primary-h"> 
                 search result of student 
             </header>
         </div>
