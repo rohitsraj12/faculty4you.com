@@ -10,41 +10,31 @@
     require("../../../private/config/config.php");
 
     require("../include/header.inc.php");
-    require("../include/banner.inc.php");
 
     
-    while($row = mysqli_fetch_assoc($result)){
 ?>
-    <!-- <div class="profile-banner">
-        <section class="profile-container wrap-container">
-            <article class="row">
-                <header class="h1 col-sm-7 text-center">
-                    Update Profile
-                </header>
-                <figure class=" col-sm-5">
-                    <img src="<?php base_url()?>img/search.svg" alt="">
-                </figure>
-            </article>
-        </section>
-    </div> -->
 
-<div class="body-container">
+
                 
-    <div class="header__profile u-right-text text-sub-primary">
+<div class="header__profile u-right-text text-sub-primary">
         <i class="fa fa-user" aria-hidden="true"></i>                        
         <?php 
+        
+        $sql = "SELECT *  FROM teachers WHERE teacher_user_name = '$teacher_name'";
+        $result = mysqli_query($conn, $sql);
             echo $row['teacher_user_name'];
-            
-        }
         ?>
     </div>
+<?php 
+        include_once'../include/banner.inc.php';
 
-    
+?>
+<div class="body-container">
 
     <main class="wrap-container profile">
         <section class="section-profile-update">
             <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                <heeader class="text-primary h1 text-secondary"> 
+                <heeader class="text-primary-h"> 
                     Update profile
                 </header>
                 
@@ -62,7 +52,7 @@
                                 <div class="form-row pt-3">
                                     <div class="form-group col-md-6">
                                     <label for="first_name">first name</label>
-                                    <input type="text" name="first_name" class="form-control" id="first_name" placeholder="first name">
+                                    <input type="text" name="first_name" class="form-control" id="first_name" placeholder="<?php echo $row['teacher_user_name']; ?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">last name</label>
