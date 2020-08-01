@@ -31,27 +31,27 @@ if(isset($_POST['submit-register'])){
     // if empty field condition
     if(empty($user_name) || empty($email) || empty($password) || empty($re_password)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=emptyfields&user_name=".$user_name."&mail".$email);
+        header("location: ../login.php?error=emptyfields&user_name=".$user_name."&mail".$email);
         //stop scripting
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $user_name)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=invalidmailuser_name");
+        header("location: ../login.php?error=invalidmailuser_name");
         //stop scripting
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=invalidmail&user_name=".$user_name);
+        header("location: ../login.php?error=invalidmail&user_name=".$user_name);
         //stop scripting
         exit();
     } else if (!preg_match("/^[a-zA-Z0-9]*$/", $user_name)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=invalidmail&mail=".$email);
+        header("location: ../login.php?error=invalidmail&mail=".$email);
         //stop scripting
         exit();
     } else if ($password !== $re_password){
         // redirect to register and empty field
-        header("location: ../registration.php?error=passwordcheck&user_name=".$user_name."&mail".$email);
+        header("location: ../login.php?error=passwordcheck&user_name=".$user_name."&mail".$email);
         //stop scripting
         exit();
     } else {
@@ -64,7 +64,7 @@ if(isset($_POST['submit-register'])){
         if(!mysqli_stmt_prepare($stmt, $sql)){
             
             // redirect to register and empty field
-            header("location: ../registration.php?error=sqlerror");
+            header("location: ../login.php?error=sqlerror");
             //stop scripting
             exit();
         } else {
@@ -78,7 +78,7 @@ if(isset($_POST['submit-register'])){
             if($resultcheck > 0 ){
                 
                 // redirect to register and empty field
-                header("Location: ../registration.php?error=usertaken$mail=".$email);
+                header("Location: ../login.php?error=usertaken$mail=".$email);
                 //stop scripting
                 exit();
             } else {
@@ -89,7 +89,7 @@ if(isset($_POST['submit-register'])){
 
                 if(!mysqli_stmt_prepare($stmt, $sql)){
                     // redirect to register and empty field
-                    header("Location: ../registration.php?error=sqlerror");
+                    header("Location: ../login.php?error=sqlerror");
                     //stop scripting
                     exit();
                 } else {
@@ -99,7 +99,7 @@ if(isset($_POST['submit-register'])){
                     mysqli_stmt_bind_param($stmt, "sssssssiissisiiiii", $first_name, $last_name, $user_name, $email, $hashed_password, $phone, $address, $city, $state, $image, $membership, $teaching_exp, $about, $online_one, $online_group, $home_tution, $sub_id, $category_id);
                     mysqli_stmt_execute($stmt);
                     
-                    header("Location: ../registration.php?register=success");
+                    header("Location: ../login.php?register=success");
                     exit();
                 }
             }
