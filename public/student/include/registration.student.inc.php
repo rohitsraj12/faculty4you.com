@@ -26,32 +26,32 @@ if(isset($_POST['submit-register'])){
     // if empty field condition
     if(empty($user_name) || empty($email) || empty($password) || empty($re_password)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=emptyfields&user_name=".$user_name."&mail".$email);
+        header("location: ../login.php?error=emptyfields&user_name=".$user_name."&mail".$email);
         //stop scripting
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $user_name)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=invalidmailuser_name");
+        header("location: ../login.php?error=invalidmailuser_name");
         //stop scripting
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=invalidmail&user_name=".$user_name);
+        header("location: ../login.php?error=invalidmail&user_name=".$user_name);
         //stop scripting
         exit();
     } else if (!preg_match("/^[a-zA-Z0-9]*$/", $user_name)){
         // redirect to register and empty field
-        header("location: ../registration.php?error=invalidmail&mail=".$email);
+        header("location: ../login.php?error=invalidmail&mail=".$email);
         //stop scripting
         exit();
     } else if ($password !== $re_password){
         // redirect to register and empty field
-        header("location: ../registration.php?error=passwordcheck&user_name=".$user_name."&mail".$email);
+        header("location: ../login.php?error=passwordcheck&user_name=".$user_name."&mail".$email);
         //stop scripting
         exit();
     } else {
         // prepared statement (? placeholder for safty)
-        $sql = "SELECT student_user_name FROM students WHERE student_user_name=?";
+        $sql = "SELECT student_user_name FROM std WHERE student_user_name=?";
         // 
         $stmt = mysqli_stmt_init($conn);
 
@@ -59,7 +59,7 @@ if(isset($_POST['submit-register'])){
         if(!mysqli_stmt_prepare($stmt, $sql)){
             
             // redirect to register and empty field
-            header("location: ../registration.php?error=sqlerror");
+            header("location: ../login.php?error=sqlerror");
             //stop scripting
             exit();
         } else {
@@ -73,18 +73,18 @@ if(isset($_POST['submit-register'])){
             if($resultcheck > 0 ){
                 
                 // redirect to register and empty field
-                header("Location: ../registration.php?error=usertaken$mail=".$email);
+                header("Location: ../login.php?error=usertaken$mail=".$email);
                 //stop scripting
                 exit();
             } else {
                 $first_name = "";
-                $sql = "INSERT INTO students (student_first_name, student_last_name, student_user_name, student_email, student_password, student_phone, student_address, city_id, state_id, student_city_pincode, student_photo, student_date_of_birth, student_parent_name, student_parent_phone, student_post_id) 
+                $sql = "INSERT INTO std (student_first_name, student_last_name, student_user_name, student_email, student_password, student_phone, student_address, city_id, state_id, student_city_pincode, student_photo, student_date_of_birth, student_parent_name, student_parent_phone, student_post_id) 
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
 
                 if(!mysqli_stmt_prepare($stmt, $sql)){
                     // redirect to register and empty field
-                    header("Location: ../registration.php?error=sqlerror");
+                    header("Location: ../login.php?error=sqlerror");
                     //stop scripting
                     exit();
                 } else {
@@ -94,7 +94,7 @@ if(isset($_POST['submit-register'])){
                     mysqli_stmt_bind_param($stmt, "sssssssiiissssi", $first_name, $last_name, $user_name, $email, $hashed_password, $phone, $address, $city, $state, $pincode, $image, $dob, $parent_name, $parent_phone, $post_id);
                     mysqli_stmt_execute($stmt);
                     
-                    header("Location: ../registration.php?register=success");
+                    header("Location: ../login.php?register=success");
                     exit();
                 }
             }
@@ -105,7 +105,7 @@ if(isset($_POST['submit-register'])){
 
 } else {
      // redirect to register and empty field
-     header("location: ../registration.php");
+     header("location: ../login.php");
      //stop scripting
      exit();
 }
