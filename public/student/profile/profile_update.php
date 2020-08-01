@@ -1,32 +1,33 @@
 <?php 
-    //  session_start();
-    // //back function false
-    // if(!isset($_SESSION['user_name'])){
-    //     header('location: ../login.php');
-    // } 
+     session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: ../login.php');
+    } 
     $page_title = "profile update";
     
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
-
-
     require("../include/header.inc.php");
 
-   // while($row = mysqli_fetch_assoc($result)){
+?>
+
+    
+                    
+<div class="header__profile u-right-text text-sub-primary">
+    <i class="fa fa-user" aria-hidden="true"></i>                        
+    <?php 
+       echo $row['student_user_name'];
+        
+    ?>
+</div>
+<?php 
+require("../include/banner.inc.php");
 
 ?>
 
 
 <div class="body-container">
-                
-    <div class="header__profile u-right-text text-sub-primary">
-        <i class="fa fa-user" aria-hidden="true"></i>                        
-        <?php 
-           // echo $row['teacher_user_name'];
-            
-        //}
-        ?>
-    </div>
 
     
 
@@ -41,7 +42,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update">
+                    <form action="../include/update_student.inc.php" method="post" class="section__form section__form-update">
                         <article class="mb-5"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 Primary information
@@ -207,7 +208,7 @@
 
                             </div>
 
-                            <a class="w-100 button-primary text-center" name="submit_update" href="<?php base_url();?>teacher/profile/">update</a>
+                            <input type="submit" name="student_update" value="update" class="w-100 btn-primary text-center h4" name="submit_update" href="<?php base_url();?>teacher/profile/">
                         </article>
                     </form>
                 </section>
