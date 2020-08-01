@@ -1,10 +1,9 @@
 <?php 
 
-    // $student_name = $_SESSION['user_name'];
-    $sql = "SELECT * FROM std WHERE student_user_name = 'rohit'";
-    // $sql = "SELECT * FROM std";
-
+    $student_name = $_SESSION['user_name'];
+    $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
     $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -50,12 +49,18 @@
                     <nav class="header__nav">
                         <ul>
                             <li class="nav__list"><a href="<?php base_url();?>student/index.php" class="nav__link">home</a></li>
-                            <li class="nav__list"><a href="" class="nav__link">post</a></li>
-                            <li class="nav__list"><a href="" class="nav__link">profile</a></li>
-                            <li class="nav__list"><a href="" class="nav__link">log out</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/post/index.php" class="nav__link">post</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/profile/index.php" class="nav__link">profile</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>index.php" class="nav__link">log out</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
                 </header>
             </div>
             <!-- end body header -->
+
+            <!-- 
+                
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sit aliquid consectetur tempora praesentium at vitae recusandae quidem mollitia, quod hic rerum explicabo facere, magnam non. Molestias maiores beatae, ullam esse expedita soluta vel voluptates eveniet unde at iusto nulla. 
+            
+            -->
