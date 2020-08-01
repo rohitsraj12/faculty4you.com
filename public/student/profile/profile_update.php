@@ -208,7 +208,7 @@ require("../include/banner.inc.php");
 
                             </div>
 
-                            <input type="submit" name="student_update" value="update" class="w-100 btn-primary text-center h4" name="submit_update" href="<?php base_url();?>teacher/profile/">
+                            <input type="submit" name="student_update" value="update" class="w-100 btn btn-primary text-center h4" name="submit_update" href="<?php base_url();?>teacher/profile/">
                         </article>
                     </form>
                 </section>
