@@ -1,26 +1,30 @@
 <?php
+    session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: ../login.php');
+    } 
     $page_title = "profile";
 
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
      
-    // $sql = "SELECT * FROM std";
-
-    // $result = mysqli_query($conn, $sql);
-    while($row = mysqli_fetch_assoc($result)){
+    
 ?>
+                    
+<div class="header__profile u-right-text text-sub-primary">
+    <i class="fa fa-user" aria-hidden="true"></i>                        
+    <?php 
+       echo $row['student_user_name'];
+        
+    ?>
+</div>
+<?php 
+require("../include/banner.inc.php");
 
-
-
+?>
 <div class="body-container">
-                
-    <div class="header__profile u-right-text text-sub-primary">
-        <i class="fa fa-user" aria-hidden="true"></i>                        
-        <?php 
-            // echo $row['student_user_name'];
-        ?>
-    </div>
 
     <main class="wrap-container profile">
         <section class="section-profile">
@@ -193,6 +197,5 @@
     </main>
 </div>
 <?php
-    }
     require("../include/footer.inc.php");
 ?>
