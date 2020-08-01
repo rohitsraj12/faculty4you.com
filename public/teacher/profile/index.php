@@ -10,25 +10,37 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
-    require("../include/banner.inc.php");
     
-    while($row = mysqli_fetch_assoc($result)){
 ?>
 
+
+                
+<div class="header__profile u-right-text text-sub-primary">
+        <i class="fa fa-user" aria-hidden="true"></i>                        
+        <?php 
+        
+        $sql = "SELECT *  FROM teachers WHERE teacher_user_name = '$teacher_name'";
+        $result = mysqli_query($conn, $sql);
+            echo $row['teacher_user_name'];
+        ?>
+    </div>
+<?php 
+        include_once'../include/banner.inc.php';
+
+?>
 <div class="body-container">
                 
     <div class="header__profile u-right-text text-sub-primary">
         <i class="fa fa-user" aria-hidden="true"></i>                        
         <?php 
             echo $row['teacher_user_name'];
-    
         ?>
     </div>
 
     <main class="wrap-container profile">
         <section class="section-profile">
             <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-                <heeader class="text-primary h1"> 
+                <heeader class="text-primary-h"> 
                     my profile
                 </header>
                 
@@ -116,10 +128,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">address</li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['city_name'];?>, <?php echo $row['state_name'];?></li>
                                 </ul>
                             </div>
                         </div>
@@ -155,11 +164,13 @@
                         </div>
                     </article>
                 </section>
+            <?php 
+                
+            ?>
             </div>
         </section>
     </main>
 </div>
 <?php
-}
     require("../include/footer.inc.php");
 ?>
