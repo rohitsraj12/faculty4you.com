@@ -1,14 +1,28 @@
 <?php 
+    session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: ../login.php');
+    } 
     
     $page_title = "home page";
     require_once("../../private/config/db_connect.php");
     include("../../private/config/config.php");
 
     include("include/header.php");
-?>
+ 
+ ?>
+ 
+ 
+                 
+     <div class="header__profile u-right-text text-sub-primary">
+         <i class="fa fa-user" aria-hidden="true"></i>                        
+         <?php 
+            echo $row['student_user_name'];
+         ?>
+     </div>
 
-<div class="body-container">
-
+ <div class="body-container">
     <main>
         <section class="section-result wrap-container">
 
@@ -39,9 +53,7 @@ if(isset($_POST["submit-search"])){
     if($query_results > 0){
         while($row = mysqli_fetch_assoc($result)){
 
-            ?>      
-            
-            
+    ?>      
           <article>
             <div class="left__block">
                 <figure>
@@ -54,6 +66,7 @@ if(isset($_POST["submit-search"])){
                         <?php echo $row['teacher_user_name'];?>
                     </h1>
                 </header>
+
                 <div class="body">
                     <p>
                         <?php echo $row['teacher_about_me'];?>
@@ -69,15 +82,12 @@ if(isset($_POST["submit-search"])){
                 </div>
                 
                 <footer>
-                <a href="detail.php?name=<?php echo $row['teacher_user_name']?>&batch=<?php echo $row['teacher_email']?>">more details</a>
+                    <a href="detail.php?name=<?php echo $row['teacher_user_name']?>&batch=<?php echo $row['teacher_email']?>">more details</a>
                 </footer>
             </div>
           </article>
             
-            
-            
-            <?php
-
+    <?php
         }
     } else {
         echo "there are no result";
