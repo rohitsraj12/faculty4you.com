@@ -3,5 +3,15 @@
 require_once '../../private/config/db_connect.php';
 
 
-    $sql = "SELECT * FROM teachers";
+    $sql = "SELECT posts.*, cities.city_name, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+    FROM posts
+        JOIN cities
+            ON cities.city_id = posts.city_id
+        JOIN states
+            ON states.state_id = posts.state_id
+        JOIN study_types
+            ON study_types.study_type_id = posts.study_type_id
+        JOIN study_categories
+            ON study_categories.study_cat_id = posts.study_cat_id
+        ORDER BY post_id DESC ";
     $result = mysqli_query($conn, $sql);
