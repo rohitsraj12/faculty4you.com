@@ -11,7 +11,7 @@ if(isset($_POST['login-submit'])){
         header("Location: ../login.php?error=emptyfields");
         exit();
     } else {
-        $sql = "SELECT * FROM students WHERE student_user_name=? OR student_email=?";
+        $sql = "SELECT * FROM std WHERE student_user_name=? OR student_email=?";
         $stmt = mysqli_stmt_init($conn);
 
         if(!mysqli_stmt_prepare($stmt, $sql)){
