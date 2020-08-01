@@ -1,8 +1,11 @@
 <?php 
 
     $teacher_name = $_SESSION['user_name'];
-    $sql = "SELECT * FROM teachers WHERE teacher_user_name = '$teacher_name'";
+    
+    $sql = "SELECT teachers.*, cities.*, states.*  FROM teachers, cities, states WHERE teacher_user_name = '$teacher_name'";
+                
     $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
