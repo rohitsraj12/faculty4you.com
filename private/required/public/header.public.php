@@ -17,6 +17,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous"
         />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="css/owl.carousel.css">
         <link rel="stylesheet" href="css/owl.theme.default.css">
