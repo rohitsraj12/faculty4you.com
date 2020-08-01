@@ -29,7 +29,7 @@ require("../include/banner.inc.php");
 <main class="wrap-container">
 
 <form action="../include/post.inc.php" method="post">
-        <table>
+        <!-- <table>
             <tr>
                 <td><label for="user_name">title</label></td>
                 <td><input name="post_title" type="text" id="user_name" placeholder="user name"></td>
@@ -97,7 +97,96 @@ require("../include/banner.inc.php");
                 </td>
             </tr>
            
-        </table>
+        </table> -->
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
+        </div>
+        
+        <div class="form-group">
+            <label for="about">about me</label>
+            <textarea name="post_detail" class="form-control" id="about" placeholder="Briefly explain about yourself"></textarea>
+            
+        </div>
+        <fieldset class="form-group">
+            <div class="row">
+                <label class="label col-form-label col-sm-1 pt-0">Study type</label>
+                <div class="col-sm-8 row">
+                    <div class="form-check col-sm-12">
+                        <input class="form-check-input" name="study_type" type="radio" value="1" id="single">
+                    
+                        <label class="form-check-label" for="single">
+                            online one to one
+                        </label>
+                    </div>
+                    <div class="form-check col-sm-12">
+                        <input class="form-check-input" name="study_type" type="radio" value="2" id="group">
+                    
+                        <label class="form-check-label" for="group">
+                            online group
+                        </label>
+                    </div>
+                    <div class="form-check col-sm-12">
+                        <input class="form-check-input" name="study_type" type="radio" value="3" id="home">
+                    
+                        <label class="form-check-label" for="home">
+                            home
+                        </label>
+                    </div>
+                    
+                </div>
+            </div>
+        </fieldset>
+        
+        <fieldset class="form-group">
+            <div class="row">
+                <label class="label col-form-label col-sm-1 pt-0">Study category</label>
+                <div class="col-sm-8 row">
+                    <div class="form-check col-sm-12">
+                        <input class="form-check-input" name="study_category" type="radio" value="1" id="academic">
+                    
+                        <label class="form-check-label" for="academic">
+                            academic
+                        </label>
+                    </div>
+
+                    <div class="form-check col-sm-12">
+                        <input class="form-check-input" name="study_category" type="radio" value="2" id="non-academic">
+                    
+                        <label class="form-check-label" for="non-academic">
+                            non-academic
+                        </label>
+                    </div>
+                
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="city">City</label>
+                <input type="text" class="form-control" name="city" id="city" placeholder="city">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="state">State</label>
+                <select id="state" class="form-control" name="state">
+                    <option selected>Choose...</option>
+                    <option value="1">maharashtra</option>                   
+                     <option value="2">odisha</option>
+
+                </select>
+            </div>
+        </div>
+
+         <div class="form-group">
+            <label for="date">date</label>
+            <input name="post_date" class="w-25 form-control" type="date" id="date" placeholder="user name">
+        </div>
+        <div class="form-row row">
+        <input type="submit" class="col-3 w-100 btn-primary text-center h4" name="submit-post" value="submit">
+        <input type="reset" class="col-3 w-100 btn-light text-center h4" name="submit-post" value="submit">
+
+        </div>
         
     </form>
 </main>
