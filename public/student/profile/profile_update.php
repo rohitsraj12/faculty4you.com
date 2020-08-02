@@ -108,20 +108,39 @@
                                 </div>
                                 
                                 <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                    <label for="city">City</label>
-                                    <input type="text" class="form-control" id="city" placeholder="city">
+                                    
+                                    
+                                <div class="form-group col-md-6">
+                                        <label for="city">City</label>
+                                        <select id="state" name="city" class="form-control">
+                                            <option selected>Choose city</option>
+                                            <?php 
+                                                $city_query = "SELECT * FROM cities ORDER BY city_name ASC";
+                                                $city_result = mysqli_query($conn, $city_query);
+
+                                                while($row = mysqli_fetch_assoc($city_result)){
+                                            ?>
+                                            <option value="<?php echo $row["city_id"];?>"><?php echo $row["city_name"];?></option>
+                                            <?php }?>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-4">
-                                    <label for="state">State</label>
-                                    <select id="state" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <option>...</option>
-                                    </select>
+                                        <label for="state">State</label>
+                                        <select id="state" name="state" class="form-control">
+                                            <option selected>Choose state</option>
+                                            <?php 
+                                                $state_query = "SELECT * FROM states ORDER BY state_name ASC";
+                                                $state_result = mysqli_query($conn, $state_query);
+
+                                                while($row = mysqli_fetch_assoc($state_result)){
+                                            ?>
+                                            <option value="<?php echo $row["state_id"];?>"><?php echo $row["state_name"];?></option>
+                                            <?php }?>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-2">
-                                    <label for="pincode">pincode</label>
-                                    <input type="text" class="form-control" id="pincode">
+                                        <label for="pincode">pincode</label>
+                                        <input type="text" name="pincode" class="form-control" id="pincode">
                                     </div>
                                 </div>
                                 <fieldset class="form-group">
