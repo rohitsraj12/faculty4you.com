@@ -3,8 +3,10 @@
 require_once '../../private/config/db_connect.php';
 
 
-    $sql = "SELECT posts.*, cities.city_name, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+    $sql = "SELECT posts.*, std.*, cities.city_name, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
     FROM posts
+        JOIN std
+            ON std.student_id = posts.student_id
         JOIN cities
             ON cities.city_id = posts.city_id
         JOIN states
