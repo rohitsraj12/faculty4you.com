@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in - teacher</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -72,12 +74,12 @@
                     <div class="overlay">
                         <div class="overlay-panel overlay-left">
                             <h1>Welcome Back!</h1>
-                            <p>To keep connected with us please login with your personal info</p>
+                            <p class="text-light">To keep connected with us please login with your personal info</p>
                             <button class="ghost" id="signIn">Sign In</button>
                         </div>
                         <div class="overlay-panel overlay-right">
                             <h1>Hello, Teachers!</h1>
-                            <p>Enter your personal details and start journey with us</p>
+                            <p  class="text-light">Enter your personal details and start journey with us</p>
                             <button class="ghost" id="signUp">Sign Up</button>
                         </div>
                     </div>
