@@ -22,7 +22,7 @@
 
     <main class="wrap-container profile">
         <section class="section-profile-update">
-            <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="section-header mb-5 u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
                 <heeader class="text-primary-h text-secondary"> 
                     Update profile
                 </header>
@@ -55,7 +55,7 @@
                                 </div>
                                 <fieldset class="form-group">
                                     <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0">gender</label>
+                                        <label class="label col-form-label col-sm-2 pt-0 ">gender</label>
                                         <div class="col-sm-8 row">
                                             <div class="form-check col-sm-2">
                                                 <input class="form-check-input" name="gender" type="radio" value="1" id="male">
