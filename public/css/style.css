@@ -985,6 +985,31 @@ label {
   .body-banner-search .banner__image {
     width: 60%; }
 
+.body-banner-member {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  text-align: center;
+  background: #8aafff;
+  background: -moz-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #8aafff), color-stop(41%, #8aafff), color-stop(100%, #5388fe));
+  background: -webkit-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: -o-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: -ms-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  background: linear-gradient(to right, #8aafff 0%, #8aafff 41%, #5388fe 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8aafff', endColorstr='#5388fe', GradientType=1 ); }
+  @media only screen and (orientation: portrait) {
+    .body-banner-member {
+      height: 100vh; } }
+  @media only screen and (orientation: landscape) {
+    .body-banner-member {
+      height: 450px; } }
+  .body-banner-member .banner-image img {
+    height: 50vh; }
+
 /*
     banner search form
 */
