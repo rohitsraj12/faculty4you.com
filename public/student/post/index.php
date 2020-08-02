@@ -69,7 +69,7 @@
                         </p>
                         </div>
                         <footer class="pb-3">
-                            <buttom style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Edit post</buttom>
+                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>" style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Edit post</a>
                         </footer>
                     </article>
                     
