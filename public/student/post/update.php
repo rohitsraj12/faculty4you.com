@@ -5,30 +5,23 @@ session_start();
         header('location: ../login.php');
     } 
     $page_title = "Update my Post";
+    
+    $banner_image = "post.svg";
+    
     require_once("../../../private/config/db_connect.php");
 
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
 
-?>
-    
-                    
-<div class="header__profile u-right-text text-sub-primary">
-    <i class="fa fa-user" aria-hidden="true"></i>                        
-    <?php 
-       echo $row['student_user_name'];
-        
-    ?>
-</div>
-<?php 
-require("../include/banner.inc.php");
+ 
+    require("../include/banner.inc.php");
 
 ?>
 
 <div class="body-container">
 <main class="wrap-container">
     <header class="text-primary-h text-center">
-                                students Post
+       Update post
     </header>
 <form action="../include/post.inc.php" method="post">
        
@@ -97,8 +90,8 @@ require("../include/banner.inc.php");
             </fieldset>
         </div>
         <div class="form-row row">
-        <input type="submit" class="col-3 w-100 btn-primary text-center h4" name="submit-post" value="submit">
-        <input type="reset" class="col-3 w-100 btn-light text-center h4" name="submit-post" value="reset">
+        <input type="submit" class="col-3 btn btn-primary text-center h4" name="submit-post" value="submit">
+        <input type="reset" class="col-3 btn btn-light text-center h4" name="submit-post" value="reset">
 
         </div>
           </form>
