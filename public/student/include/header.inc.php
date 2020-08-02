@@ -40,7 +40,17 @@
                     <span class="hamberger__line"></span>
                 </div>
                 <!-- end hamberger -->
+                <div class="top-header mt-0">
+                    <div class="wrap-container h-5 u-right-text text-sub-primary">
+                        <i class="fa fa-user" aria-hidden="true"></i>                        
+                        <?php 
+                        echo $row['student_user_name'];
+                            
+                        ?>
+                    </div>
+                </div>
                 <header class="wrap-container">
+                
                     <div class="header-brand">
                         <a href="<?php base_url();?>student/index.php">
                             <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty4you">
@@ -57,6 +67,7 @@
                     </nav>
                     <!-- end header nav -->
                 </header>
+                
             </div>
             <!-- end body header -->
 
