@@ -68,6 +68,7 @@
                             </article>
                         </section>
                     </section>
+
                     <section class="section-teacher">
                         
                         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
@@ -141,9 +142,51 @@
                             </article>
                         </section>
                     </section>
+
+                    <section class="section-data py-5 bg-danger text-light">
+                        <div class="wrap-container row text-center py-5">
+                            <article class="col-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                                <p class="h2 text-white pb-5" style = "font-size : 3.2rem">Registered students</p>
+                                <p class="h1 text-white" style="font-size: 4.8rem">
+                                    <?php
+                                        $query = "SELECT * FROM std";
+                                        $result = mysqli_query($conn, $query);
+                                        $row = mysqli_num_rows($result);
+
+                                        echo $row;
+                                    ?>
+                                </p>
+                            </article>
+                            <article class="col-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <p class="h2 text-white pb-5" style = "font-size : 3.2rem">Registered teachers</p>
+                            <p class="h1 text-white" style="font-size: 4.8rem">
+
+                                        <?php
+                                            $query = "SELECT * FROM teachers";
+                                            $result = mysqli_query($conn, $query);
+                                            $row = mysqli_num_rows($result);
+                                            echo $row;
+                                        ?>
+                                </p>
+                            </article>
+                            <article class="col-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <p class="h2 text-white pb-5" style = "font-size : 3.2rem">Student's post</p>
+                            <p class="h1 text-white" style="font-size: 4.8rem">
+
+                                        <?php
+                                            $query = "SELECT * FROM posts";
+                                            $result = mysqli_query($conn, $query);
+                                            $row = mysqli_num_rows($result);
+                                            echo $row;
+                                        ?>
+                                </p>
+                            </article>
+                        </div>
+                    </section>
+
                     <section class="section-testimonial">
                          
-                    <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
                             <heeader class="text-primary-h"> 
                                 Student comumnity feed back
                             </header>
@@ -205,10 +248,10 @@
                             </svg>
                         </div> -->
                     </section>
+
                     <section class="section-partner">
                         
-                        
-                    <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
                             <heeader class="text-primary-h"> 
                                 Our pratners
                             </header>
