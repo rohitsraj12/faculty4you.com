@@ -27,79 +27,81 @@ require("../include/banner.inc.php");
 
 <div class="body-container">
 <main class="wrap-container">
-
+    <header class="text-primary-h text-center">
+                                students Post
+    </header>
 <form action="../include/post.inc.php" method="post">
-        <table>
-            <tr>
-                <td><label for="user_name">title</label></td>
-                <td><input name="post_title" type="text" id="user_name" placeholder="user name"></td>
-            </tr>
-            <tr>
-                <td><label for="email">detail</label></td>
-                <td>
-                    <textarea name="post_detail" id="" cols="30" rows="10"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <td><label for="email">study type</label></td>
-
-                </td>
-                <td>
-                    <td>
-                        <input name="study_type" type="number" id="email" placeholder="email"></td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <td><label for="email">study category</label></td>
-
-                </td>
-                <td>
-                    <td>
-                        <input name="study_category" type="number" id="email" placeholder="email"></td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <td><label for="email">city</label></td>
-
-                </td>
-                <td>
-                    <td>
-                        <input name="city" type="number" id="email" placeholder="email"></td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <td><label for="email">state</label></td>
-
-                </td>
-                <td>
-                    <td>
-                        <input name="state" type="number" id="email" placeholder="email"></td>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <td><label for="email">stating date</label></td>
-
-                </td>
-                <td>
-                    <td>
-                        <input name="post_date" type="date" id="email" placeholder="email"></td>
-                </td>
-            </tr>
-            
-            <tr>
-                <td>
-                    <input type="submit" name="submit-post" value="submit">
-                </td>
-            </tr>
-           
-        </table>
+       
+<div class="form-group">
+            <label for="title">Title</label>
+            <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
+        </div>
         
-    </form>
+        <div class="form-group">
+            <label for="about">About me</label>
+            <textarea name="post_detail" class="form-control" rows="10" id="about" placeholder="Briefly explain about yourself"></textarea>
+            
+        </div>
+        <div class="row">
+            <fieldset class="form-group col-sm-4">
+                <div class="row">
+                    <label class="label col-form-label col-sm-4 pt-0">Study type</label>
+                    <div class="col-sm-6 row">
+                        <div class="form-check col-sm-12">
+                            <input class="form-check-input" name="study_type" type="radio" value="1" id="single">
+                        
+                            <label class="form-check-label" for="single">
+                                Online one to one
+                            </label>
+                        </div>
+                        <div class="form-check col-sm-12">
+                            <input class="form-check-input" name="study_type" type="radio" value="2" id="group">
+                        
+                            <label class="form-check-label" for="group">
+                                Online group
+                            </label>
+                        </div>
+                        <div class="form-check col-sm-12">
+                            <input class="form-check-input" name="study_type" type="radio" value="3" id="home">
+                        
+                            <label class="form-check-label" for="home">
+                                Home
+                            </label>
+                        </div>
+                        
+                    </div>
+                </div>
+            </fieldset> 
+            <fieldset class="form-group col-sm-6">
+                <div class="row">
+                    <label class="label col-form-label col-sm-3 pt-0">Study category</label>
+                    <div class="col-sm-6 row">
+                        <div class="form-check col-sm-12">
+                            <input class="form-check-input" name="study_category" type="radio" value="1" id="academic">
+                        
+                            <label class="form-check-label" for="academic">
+                                Academic
+                            </label>
+                        </div>
+
+                        <div class="form-check col-sm-12">
+                            <input class="form-check-input" name="study_category" type="radio" value="2" id="non-academic">
+                        
+                            <label class="form-check-label" for="non-academic">
+                                Non-academic
+                            </label>
+                        </div>
+                    
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+        <div class="form-row row">
+        <input type="submit" class="col-3 w-100 btn-primary text-center h4" name="submit-post" value="submit">
+        <input type="reset" class="col-3 w-100 btn-light text-center h4" name="submit-post" value="reset">
+
+        </div>
+          </form>
 </main>
     </div>
 
