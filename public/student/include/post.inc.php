@@ -25,9 +25,9 @@ if(isset($_POST['submit-post'])){
     $post_detail = $_POST['post_detail'];
     $study_type = $_POST['study_type'];
     $study_category = $_POST['study_category'];
-    $city = $_POST['city'];
-    $state = $_POST['state'];
-    $post_date = $_POST['post_date'];
+    $city = $row['city_id'];
+    $state = $row['state_id'];
+    $post_date = date("Y/m/d");
     $post_state = 1;
 
     // echo $student_id . " - " .$post_title;
