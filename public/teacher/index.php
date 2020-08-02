@@ -27,19 +27,26 @@
         include_once'include/banner.inc.php';
 
 ?>
-
             <div class="body-container">
                 <main>
                     <section class="wrap-container">
                         <header class="text-primary-h text-center">
                             students Post
                         </header>
+
+                        
+
+<?php
+    if($row['teacher_membership_status'] == "actve"){
+        echo "hisdasdasdadsadsaadd";
+    }
+?>
                     <?php 
                         include('include/teacher.query.inc.php');
                         while($row = mysqli_fetch_assoc($result)){
                     ?>
 
-                        <article class="mt-5 px-5 py-3 border bg-light">
+                        <article class="mt-5 px-5 py-3 border bg-light"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <header class="border-bottom">
                                 <h1 class="h1 py-3 text-dark font-weight-normal">
                                     <?php echo $row["post_title"];?>
@@ -59,6 +66,13 @@
                             <footer class="pb-3">
                                 <buttom style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Contact details</buttom>
                             </footer>
+
+                            <section>
+                           
+                                <article>
+                                    Name: <?php echo $row["student_first_name"];?>
+                                </article>
+                            </section>
                         </article>
                         
                     <?php 
