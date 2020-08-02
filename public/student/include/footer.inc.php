@@ -13,7 +13,6 @@
                 <section class="col-sm-6">
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
-                            
                             Quick links
                         </header>
                         <div class="row">
