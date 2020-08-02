@@ -29,7 +29,7 @@ if(isset($_POST["submit-search"])){
 
     ?>
         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
-            <heeader class="text-primary"> 
+            <heeader class="text-primary-h"> 
                 search result
             </header>
         </div>
