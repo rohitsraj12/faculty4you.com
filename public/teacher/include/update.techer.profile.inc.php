@@ -12,7 +12,7 @@ if(isset($_POST['submit-register'])){
 
     // fill empty data
     $first_name = $_POST['first_name'];
-    $last_name = $_POST['last_name'];
+    $last_name = $_POST['last_name'];?
 //     $phone = $_POST['phone'];
 //     $email = $_POST['email'];
 //     $address = $_POST['address'];
