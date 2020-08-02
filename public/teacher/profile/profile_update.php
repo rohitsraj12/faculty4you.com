@@ -98,33 +98,33 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="email">
+                                    <input type="email" name="email" class="form-control" id="email" placeholder="email">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">telephone</label>
-                                    <input type="tel" class="form-control" id="phone" placeholder="telephone">
+                                    <input type="tel" name="phone" class="form-control" id="phone" placeholder="telephone">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <input type="text" class="form-control" id="address" placeholder="1234 Main St">
+                                    <input type="text" name="address" class="form-control" id="address" placeholder="1234 Main St">
                                 </div>
                                 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                     <label for="city">City</label>
-                                    <input type="text" class="form-control" id="city" placeholder="city">
+                                    <input type="text" name="city" class="form-control" id="city" placeholder="city">
                                     </div>
                                     <div class="form-group col-md-4">
                                     <label for="state">State</label>
-                                    <select id="state" class="form-control">
+                                    <select id="state" class="form-control" name="state">
                                         <option selected>Choose...</option>
                                         <option>...</option>
                                     </select>
                                     </div>
                                     <div class="form-group col-md-2">
                                     <label for="pincode">pincode</label>
-                                    <input type="text" class="form-control" id="pincode">
+                                    <input type="text" name="pincode" class="form-control" id="pincode">
                                     </div>
                                 </div>
                                                   
