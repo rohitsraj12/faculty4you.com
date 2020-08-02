@@ -233,8 +233,8 @@
 // @media only screen and (orientation: landscape) {
 // }
 
-.body{
-  &-banner-member{
+.body {
+  &-banner-member {
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -242,27 +242,22 @@
     text-align: center;
     position: relative;
     text-align: center;
-    @include bannergradient;
-    
-    
+    // @include bannergradient;
+
     @media only screen and (orientation: portrait) {
       height: 100vh;
     }
-  
+
     @media only screen and (orientation: landscape) {
       height: 450px;
     }
 
-    .banner{
-      &-image{
-        img{
-
-         height: 50vh;
+    .banner {
+      &-image {
+        img {
+          // height: 50vh;
         }
-        
       }
     }
-  
   }
 }
-
