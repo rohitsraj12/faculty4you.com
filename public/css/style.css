@@ -368,7 +368,7 @@ label {
     transition: transform 0.6s ease-in-out; }
     .section-member .overlay-panel h1 {
       position: relative;
-      padding-bottom: 20rem; }
+      padding: 0 3rem 20rem; }
       .section-member .overlay-panel h1::after {
         content: "";
         margin: 0 auto;
@@ -378,7 +378,7 @@ label {
         bottom: 0;
         left: 0;
         background-image: url("../img/login/login.svg");
-        background-position: left center;
+        background-position: 3rem center;
         background-repeat: no-repeat;
         background-size: 150px 150px; }
   .section-member .overlay-left {
@@ -1131,8 +1131,13 @@ label {
   margin-bottom: 0.5rem;
   padding-left: 1rem; }
 
-.label {
+label, .label {
   font-size: 1.5rem; }
+
+input, .form-control {
+  font-size: 1.5rem;
+  font-weight: normal;
+  line-height: 2.5rem; }
 
 .body-header {
   padding-top: 2rem;
