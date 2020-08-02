@@ -12,7 +12,7 @@
   height: 70vh;
   margin: -20px 0 50px;
   position: relative;
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     top: -50px;
@@ -318,9 +318,9 @@
   }
 }
 
-.member-body-header{ 
+.member-body-header {
   @include shadow;
-  header{
+  header {
     height: 100px;
 
     display: flex;
@@ -328,8 +328,10 @@
     justify-content: space-between;
     align-items: center;
 
-    .brand{
-      height: 80px;
+    .brand {
+      img {
+        height: 80px;
+      }
     }
   }
 }
