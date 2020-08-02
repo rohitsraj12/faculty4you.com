@@ -20,12 +20,12 @@ session_start();
 
 <div class="body-container">
 <main class="wrap-container">
-    <header class="text-primary-h text-center">
+    <header class="text-primary-h pb-5 text-center">
        Update post
     </header>
-<form action="../include/post.inc.php" method="post">
+    <form action="../include/post.inc.php" method="post">
        
-<div class="form-group">
+        <div class="form-group">
             <label for="title">Title</label>
             <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
         </div>
@@ -40,6 +40,9 @@ session_start();
                 <div class="row">
                     <label class="label col-form-label col-sm-4 pt-0">Study type</label>
                     <div class="col-sm-6 row">
+
+                
+                
                         <div class="form-check col-sm-12">
                             <input class="form-check-input" name="study_type" type="radio" value="1" id="single">
                         
@@ -90,11 +93,18 @@ session_start();
             </fieldset>
         </div>
         <div class="form-row row">
-        <input type="submit" class="col-3 btn btn-primary text-center h4" name="submit-post" value="submit">
-        <input type="reset" class="col-3 btn btn-light text-center h4" name="submit-post" value="reset">
+            <div class="col-3">
+                <input type="submit" class="w-100 btn btn-primary text-center" name="submit-post" value="submit">
+
+            </div>
+            <div class="col-3">
+                <input type="reset" class="w-100 btn btn-light text-center" name="submit-post" value="reset">
+
+            </div>
+
 
         </div>
-          </form>
+     </form>
 </main>
     </div>
 
