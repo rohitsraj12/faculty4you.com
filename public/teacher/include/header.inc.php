@@ -3,7 +3,7 @@
     $teacher_name = $_SESSION['user_name'];
     
     $sql = "SELECT teachers.*, cities.*, states.*  FROM teachers, cities, states WHERE teacher_user_name = '$teacher_name'";
-                
+    
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 ?>
