@@ -42,7 +42,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update">
+                    <form action="../include/update.techer.profile.inc.php" method="post" class="section__form section__form-update">
                         <article class="mb-5"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 personal information
