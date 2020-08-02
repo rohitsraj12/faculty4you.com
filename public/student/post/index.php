@@ -7,18 +7,13 @@
     } 
 
     $page_title = "post";
+    
+    $banner_image = "post.svg";
+    
     require("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
-?>
-                    
-<div class="header__profile u-right-text text-sub-primary">
-            <i class="fa fa-user" aria-hidden="true"></i>                        
-            <?php 
-               echo $row['student_user_name'];
-            ?>
-        </div>
-    <?php 
+    
         require("../include/banner.inc.php");
 
     ?>
