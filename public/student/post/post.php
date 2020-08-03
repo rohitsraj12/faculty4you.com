@@ -90,7 +90,7 @@ session_start();
                 </div>
                 <div class="form-row row">
                 <input type="submit" class="btn col-3 btn-primary text-center h4" name="submit-post" value="submit">
-                <input type="reset" class="btn col-3 btn-light text-center h4" name="submit-post" value="reset">
+                <input type="reset" class="btn col-3 btn-light text-center h4" value="reset">
 
                 </div>
                 
