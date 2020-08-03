@@ -23,7 +23,7 @@ session_start();
     <header class="text-primary-h pb-5 text-center">
        Update post
     </header>
-    <form action="../include/post.inc.php" method="post">
+    <form action="../include/post.update.inc.php" method="post">
        
         <div class="form-group">
             <label for="title">Title</label>
@@ -94,11 +94,11 @@ session_start();
         </div>
         <div class="form-row row">
             <div class="col-3">
-                <input type="submit" class="w-100 btn btn-primary text-center" name="submit-post" value="submit">
+                <input type="submit" class="w-100 btn btn-primary text-center" name="update_post" value="submit">
 
             </div>
             <div class="col-3">
-                <input type="reset" class="w-100 btn btn-light text-center" name="submit-post" value="reset">
+                <input type="reset" class="w-100 btn btn-light text-center" value="reset">
 
             </div>
 
