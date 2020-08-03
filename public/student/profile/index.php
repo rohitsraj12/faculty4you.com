@@ -54,7 +54,7 @@
                                 </li>
 
                                 <li class="text-center">
-                                    <a href="<?php base_url()?>student/profile/profile_update.php" class="w-100 h4 button-primary">edit profile</a>
+                                    <a href="<?php base_url()?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" class="w-100 h4 button-primary">edit profile</a>
                                 </li>
                             </ul>
                         </footer>
@@ -67,6 +67,17 @@
                             Personal detail
                         </header>
                         <div class="article-body p-4 bg-light border">
+                        
+                        <div class="article-info">
+                                <ul class="row">
+                                    <li class="col-sm-2">user name</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">
+                                        <?php 
+                                            echo $row['student_user_name'];
+                                        ?>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">name</li>
@@ -155,10 +166,10 @@
                                             echo $row['student_address'];
                                         ?>, 
                                         <?php 
-                                            echo $row['city_id'];
+                                            echo $row['city_name'];
                                         ?>, 
                                         <?php 
-                                            echo $row['state_id'];
+                                            echo $row['state_name'];
                                         ?>, 
                                         <?php 
                                             echo $row['student_city_pincode'];
