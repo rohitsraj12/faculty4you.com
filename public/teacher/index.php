@@ -11,19 +11,7 @@
     $page_title = "profile";
     include_once("../../private/config/config.php");
         include_once('include/header.inc.php');
-?>
-
-                
-    <div class="header__profile u-right-text text-sub-primary">
-        <i class="fa fa-user" aria-hidden="true"></i>                        
-        <?php 
         
-        $sql = "SELECT *  FROM teachers WHERE teacher_user_name = '$teacher_name'";
-        $result = mysqli_query($conn, $sql);
-            echo $row['teacher_user_name'];
-        ?>
-    </div>
-<?php 
         include_once'include/banner.inc.php';
 
 ?>
@@ -44,7 +32,9 @@
                     <?php 
                         include('include/teacher.query.inc.php');
                         while($row = mysqli_fetch_assoc($result)){
+                           
                     ?>
+
 
                         <article class="mt-5 px-5 py-3 border bg-light"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <header class="border-bottom">
