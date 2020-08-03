@@ -1063,6 +1063,8 @@ label {
   @media only screen and (orientation: landscape) {
     .body-banner-member {
       height: 450px; } }
+  .body-banner-member .banner-image img {
+    height: 30rem; }
 
 /*
     banner search form
@@ -1144,6 +1146,7 @@ input, .form-control {
   width: 100%;
   position: absolute;
   top: 0;
+  background-color: white;
   z-index: 2; }
   @media (min-width: 582px) {
     .body-header > .wrap-container {
@@ -1334,3 +1337,6 @@ input, .form-control {
 
 .section-footer {
   padding-top: 5rem; }
+
+.section-data {
+  background-color: #454b69; }
