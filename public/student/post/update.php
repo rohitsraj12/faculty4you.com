@@ -9,13 +9,16 @@ session_start();
     $banner_image = "post.svg";
     
     require_once("../../../private/config/db_connect.php");
-
     require("../../../private/config/config.php");
+    require("../include/post.update.inc.php");
     require("../include/header.inc.php");
-
- 
     require("../include/banner.inc.php");
 
+    
+    $id =  $_GET['id'];
+    $query = "SELECT * FROM posts WHERE post_id = $id";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
 ?>
 
 <div class="body-container">
@@ -23,16 +26,16 @@ session_start();
     <header class="text-primary-h pb-5 text-center">
        Update post
     </header>
-    <form action="../include/post.update.inc.php" method="post">
+    <form action="" method="post">
        
         <div class="form-group">
             <label for="title">Title</label>
-            <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
+            <input name="title" class="form-control" type="text" id="title" value="<?php echo $row['post_title'];?>" placeholder="<?php echo $row['post_title'];?>">
         </div>
         
         <div class="form-group">
             <label for="about">About me</label>
-            <textarea name="post_detail" class="form-control" rows="10" id="about" placeholder="Briefly explain about yourself"></textarea>
+            <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control" rows="10" id="about" placeholder="Briefly describe"></textarea>
             
         </div>
         <div class="row">
@@ -44,21 +47,21 @@ session_start();
                 
                 
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="study_type" type="radio" value="1" id="single">
+                            <input class="form-check-input" name="std" type="radio" value="1" id="single">
                         
                             <label class="form-check-label" for="single">
                                 Online one to one
                             </label>
                         </div>
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="study_type" type="radio" value="2" id="group">
+                            <input class="form-check-input" name="std" type="radio" value="2" id="group">
                         
                             <label class="form-check-label" for="group">
                                 Online group
                             </label>
                         </div>
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="study_type" type="radio" value="3" id="home">
+                            <input class="form-check-input" name="std" type="radio" value="3" id="home">
                         
                             <label class="form-check-label" for="home">
                                 Home
@@ -73,7 +76,7 @@ session_start();
                     <label class="label col-form-label col-sm-3 pt-0">Study category</label>
                     <div class="col-sm-6 row">
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="study_category" type="radio" value="1" id="academic">
+                            <input class="form-check-input" name="cat" type="radio" value="1" id="academic">
                         
                             <label class="form-check-label" for="academic">
                                 Academic
@@ -81,7 +84,7 @@ session_start();
                         </div>
 
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="study_category" type="radio" value="2" id="non-academic">
+                            <input class="form-check-input" name="cat" type="radio" value="2" id="non-academic">
                         
                             <label class="form-check-label" for="non-academic">
                                 Non-academic
@@ -94,7 +97,7 @@ session_start();
         </div>
         <div class="form-row row">
             <div class="col-3">
-                <input type="submit" class="w-100 btn btn-primary text-center" name="update_post" value="submit">
+                <input type="submit" class="w-100 btn btn-primary text-center" name="post_update" value="submit">
 
             </div>
             <div class="col-3">
