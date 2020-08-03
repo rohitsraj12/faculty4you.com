@@ -5,14 +5,12 @@
         header('location: ../login.php');
     } 
     $page_title = "profile";
-    $banner_image = "post.svg";
+    $banner_image = "profile.svg";
 
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
-     
-    
-require("../include/banner.inc.php");
+    require("../include/banner.inc.php");
 
 ?>
 <div class="body-container">
