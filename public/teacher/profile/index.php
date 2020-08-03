@@ -10,22 +10,7 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
-    
-?>
-
-
-                
-<div class="header__profile u-right-text text-sub-primary">
-        <i class="fa fa-user" aria-hidden="true"></i>                        
-        <?php 
-        
-        $sql = "SELECT *  FROM teachers WHERE teacher_user_name = '$teacher_name'";
-        $result = mysqli_query($conn, $sql);
-            echo $row['teacher_user_name'];
-        ?>
-    </div>
-<?php 
-        include_once'../include/banner.inc.php';
+    include_once'../include/banner.inc.php';
 
 ?>
 <div class="body-container">
@@ -61,7 +46,7 @@
                         <footer class="px-5">
                             <ul>
                                 <li class="text-dark h4 py-1 font-weight-normal">
-                                <i class="h2 fa fa-mobile pr-3" aria-hidden="true"></i>
+                                <i class="h2 fa fa-mail pr-3" aria-hidden="true"></i>
                                 
                             <?php 
                                 echo $row['teacher_email'];
@@ -71,7 +56,7 @@
                                 <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i>
                             <?php 
                                 echo $row['teacher_phone']; 
-                            ?>9999999999
+                            ?>
                                 </li>
 
                                 <li class="text-center">
@@ -88,7 +73,9 @@
                         </header>
                         <div class="article-body p-4 text-dark  border">
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, ipsa!
+                        <?php
+                            echo $row['teacher_about_me']; 
+                        ?>
                         </p>
                         </div>
                     </article>
@@ -109,9 +96,13 @@
                             </div>
                             
                             <div class="article-info">
-                                <ul>
-                                    <li>phone</li>
-                                    <li></li>
+                                <ul class="row">
+                                    <li  class="col-sm-2">phone</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">
+                                        <?php 
+                                            echo $row['teacher_phone'];
+                                        ?>
+                                    </li>
                                 </ul>
                             </div>
                             
@@ -128,7 +119,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">address</li>
-                                    <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['city_name'];?>, <?php echo $row['state_name'];?></li>
+                                    <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['teacher_address'];?>,</br> </br><?php echo $row['city_name'];?>, </br></br> <?php echo $row['state_name'];?></li>
                                 </ul>
                             </div>
                         </div>
@@ -141,26 +132,29 @@
                         
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-4">experience</li>
-                                    <li></li>
+                                    <li class="col-sm-2">experience</li>
+                                    <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['teacher_experience']?> years of experince</li>
                                 </ul>
                             </div>
                             
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-4">tuition type</li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
+                                    <li class="col-sm-2">tuition type</li>
+                                    <ul class="col-sm-10">   
+                                        <li class="w-100 h4 font-weight-normal"><?php if($row['teacher_online_one_to_one'] == 1 ){ echo "online one to one";}?></li>
+                                        <li class="w-100 h4 font-weight-normal"><?php if($row['teacher_online_group'] == 1){ echo "online group";}?></li>
+                                        <li class="w-100 h4 font-weight-normal"><?php if($row['teacher_home_tuition'] == 1){ echo "home tuition";}?></li>
+                                    </ul>
+                                   
                                 </ul>
                             </div>
                             
-                            <div class="article-info">
+                            <!-- <div class="article-info">
                                 <ul>
                                     <li>subject</li>
                                     <li></li>
                                 </ul>
-                            </div>
+                            </div> -->
                         </div>
                     </article>
                 </section>
