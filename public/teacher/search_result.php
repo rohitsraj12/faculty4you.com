@@ -11,20 +11,7 @@
     include("../../private/config/config.php");
 
     include("include/header.inc.php");
-?>
-
-
-                
-<div class="header__profile u-right-text text-sub-primary">
-        <i class="fa fa-user" aria-hidden="true"></i>                        
-        <?php 
-        
-        $sql = "SELECT *  FROM teachers WHERE teacher_user_name = '$teacher_name'";
-        $result = mysqli_query($conn, $sql);
-            echo $row['teacher_user_name'];
-        ?>
-    </div>
-<?php 
+    
         include_once'include/search-banner.inc.php';
 
 ?>
