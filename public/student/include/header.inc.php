@@ -1,7 +1,7 @@
 <?php 
 
     $student_name = $_SESSION['user_name'];
-    $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+    $sql = "SELECT std.*, cities.*, states.*  FROM std, cities, states WHERE student_user_name = '$student_name'";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 ?>
