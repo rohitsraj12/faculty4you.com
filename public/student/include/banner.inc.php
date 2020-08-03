@@ -23,7 +23,7 @@
     </section>
     <!-- end banner content -->
     <div class="banner-image">
-        <img src="<?php base_url();?>img/teacher/<?php echo $banner_image;?>" class="banner__image" alt="<?php echo $page_title;?>">
+        <img src="<?php base_url();?>img/banner/<?php echo $banner_image;?>" class="banner__image" alt="<?php echo $page_title;?>">
     </div>
     <!-- end banner imager -->
 </div>
