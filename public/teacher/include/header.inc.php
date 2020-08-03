@@ -2,7 +2,7 @@
 
     $teacher_name = $_SESSION['user_name'];
     
-    $sql = "SELECT teachers.*, cities.*, states.*  FROM teachers, cities, states WHERE teacher_user_name = '$teacher_name'";
+    $sql = "SELECT teachers.*, cities.*, states.*, subjects.* FROM teachers, cities, states, subjects WHERE teacher_user_name = '$teacher_name'";
     
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -45,6 +45,14 @@
                     <span class="hamberger__line"></span>
                 </div>
                 <!-- end hamberger -->
+                <div class="top-header mt-0">
+                    <div class="wrap-container h-5 u-right-text text-sub-primary">
+                        <i class="fa fa-user" aria-hidden="true"></i>                        
+                        <?php 
+                            echo $row['teacher_user_name'];
+                        ?>
+                    </div>
+                </div>
                 <header class="wrap-container">
                     <div class="header-brand">
                         <a href="<?php base_url();?>index.php">
