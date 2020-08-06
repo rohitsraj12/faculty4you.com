@@ -24,7 +24,6 @@
                             <ul class="col-sm-4">
                                 <li class="pb-2"><a class="text-light h4" href="">student registration</a></li>
                                 <li class="pb-2"><a class="text-light h4" href="">student login</a></li>
-                                <li class="pb-2"><a class="text-light h4" href="">profile</a></li>
                             </ul>
                             <ul class="col-sm-4">
                                 <li class="pb-2"><a class="text-light h4" href="">teacher registration</a></li>
