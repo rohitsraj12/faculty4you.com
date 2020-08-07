@@ -38,7 +38,6 @@
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             Follow                        
                         </header>
-                        <p class="text-light h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quidem.</p>
                     </article>
                 </section>
 
