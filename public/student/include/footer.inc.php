@@ -17,19 +17,18 @@
                         </header>
                         <div class="row">
                             <ul class="col-sm-4">
-                                <li class="pb-2"><a class="text-light h4" href=""> home</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> faq</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> site map</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> logout</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/index.php"> home</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>faq.php"> faq</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>site_map.php"> site map</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>logout.php"> logout</a></li>
                             </ul>
                             <ul class="col-sm-4">
-                                <li class="pb-2"><a class="text-light h4" href=""> view my post</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> add new post</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> profile</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/post/index.php"> view my post</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/post/post.php"> add new post</a></li>
                             </ul>
                             <ul class="col-sm-4">
-                                <li class="pb-2"><a class="text-light h4" href=""> view my profile</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> update profile</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/profile/index.php"> view my profile</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/profile/profile_update.php"> update profile</a></li>
                             </ul>
                         </div>
                      
