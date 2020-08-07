@@ -4,8 +4,8 @@
 <div class="banner-wrap">
     <section class="banner-content">
         <article>
-            <header class="banner-content__header">
-                <h2 class="text-primary-h">Faculty4you take learning  to new heights</h2>
+            <header class="banner-content__header text-left">
+                <h2 class="text-primary-h pb-4 pt-4">Faculty4you take learning  to new heights</h2>
                 <h5 class="text-secondary-h">
                     we provide top <strong>teachers</strong> for <strong class="highlight-primary">online</strong> and <strong class="highlight-primary">home tution</strong> all over india    
                 </h5>
@@ -15,7 +15,7 @@
                     <input type="text" name="search" placeholder="search top teachers city / subject / category"  class="banner-search" >
                     <button type="submit" name="submit-search" class="banner__button" ><i class="fa fa-search"aria-hidden="true"></i></button>
                 </form>
-                <p>
+                <p class="text-left">
                     <span class="highlight-secondary">Current  trending courses:</span> <strong class="note-primary">IIT-JEE</strong>, <strong class="note-primary">NEET</strong>, <strong class="note-primary">Dance</strong>, <strong class="note-primary">Yoga</strong>
                 </p>
             </div>
