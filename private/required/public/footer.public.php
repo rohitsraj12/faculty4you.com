@@ -46,8 +46,9 @@
     </footer>
     <div class="footer-base bg-primary p-3">
         <ul class="wrap-container">
-            <li class="copyright h4">copyright2014-2020 | <a class="text-light" href="<?php echo base_url();?>">facultyforyou.com</a> | <a href="#">terms and conditions</a></li>
-            <li class="developer h4">Developed by <a href="#"></a></li>
+            <li class="footer-base__list">copyright 2014-2020 <a class="footer-base__link" href="<?php echo base_url();?>">facultyforyou.com</a> </li>
+            <li class="footer-base__list"><a class="footer-base__link" href="#">terms and conditions</a></li>
+            <li class="footer-base__list">Developed by <a class="footer-base__link" href="#"></a></li>
         </ul>
     </div>
 </div>
