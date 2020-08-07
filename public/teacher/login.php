@@ -27,7 +27,7 @@
                 <nav class="header__nav">
                         <ul>
                             <!-- <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li> -->
-                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">log in</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link"> Student login</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
