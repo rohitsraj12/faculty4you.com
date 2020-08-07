@@ -28,7 +28,7 @@
                 <section class="col-md-4">
                     <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
                         <figure class="text-center">
-                            <img src="<?php base_url()?>img/teacher/profile_pic/rohit.jpg" alt="<?php echo $row['student_first_name'];?>">
+                            <img src="<?php echo base_url() . $row['student_photo'];?>" alt="<?php echo $row['student_first_name'];?>">
                         </figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
