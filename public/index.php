@@ -67,7 +67,11 @@
                                 </div>
                             </article>
                         </section>
+                        <footer class="section-footer u-center-text mb-4" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <a href="<?php echo base_url();?>student/registration.php" class="button-primary">registration</a>
+                        </footer>
                     </section>
+                   
 
                     <section class="section-teacher">
                         
@@ -141,7 +145,11 @@
                                 </div>
                             </article>
                         </section>
+                        <footer class="section-footer u-center-text mb-4" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <a href="<?php echo base_url();?>teacher/registration.php" class="button-primary">registration</a>
+                        </footer>
                     </section>
+                   
 
                     <section class="section-data py-5 text-light">
                         <div class="wrap-container row text-center py-5">
