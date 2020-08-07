@@ -18,8 +18,8 @@
                         <div class="row">
                             <ul class="col-sm-4">
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>index.php"> home</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> faq</a></li>
-                                <li class="pb-2"><a class="text-light h4" href=""> site map</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>faq.php"> faq</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>site_map.php"> site map</a></li>
                             </ul>
                             <ul class="col-sm-4">
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/registration.php">student registration</a></li>
@@ -44,10 +44,10 @@
 
         </div>
     </footer>
-    <div class="footer-base bg-primary">
+    <div class="footer-base bg-primary p-3">
         <ul class="wrap-container">
-            <li class="copyright">copyright2014-2020 | <a href="<?php echo base_url();?>">facultyforyou.com</a> | <a href="#">terms and conditions</a></li>
-            <li class="developer">Developed by <a href="#"></a></li>
+            <li class="copyright h4">copyright2014-2020 | <a class="text-light" href="<?php echo base_url();?>">facultyforyou.com</a> | <a href="#">terms and conditions</a></li>
+            <li class="developer h4">Developed by <a href="#"></a></li>
         </ul>
     </div>
 </div>
