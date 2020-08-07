@@ -33,7 +33,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data">
                         <article class="mb-5"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 Primary information
@@ -115,7 +115,6 @@
                                     <div class="form-group col-md-6">
                                         <label for="city">City</label>
                                         <select id="state" name="city" class="form-control">
-                                            <option selected>Choose city</option>
                                             <?php 
                                                 $city_query = "SELECT * FROM cities ORDER BY city_name ASC";
                                                 $city_result = mysqli_query($conn, $city_query);
@@ -129,7 +128,6 @@
                                     <div class="form-group col-md-4">
                                         <label for="state">State</label>
                                         <select id="state" name="state" class="form-control">
-                                            <option selected>Choose state</option>
                                             <?php 
                                                 $state_query = "SELECT * FROM states ORDER BY state_name ASC";
                                                 $state_result = mysqli_query($conn, $state_query);
