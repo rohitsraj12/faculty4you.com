@@ -17,14 +17,14 @@
     <div class="body-container">
         <main>
             <section>
-                <div class="section-header"  data-aos="zoom-out-up" data-aos-duration="1000">
-                    <heeader class="text-primary-h u-center-text"> 
+                <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+                    <heeader class="text-primary-h"> 
                         Teacher detail
                     </header>
                     <section class="section-search-result wrap-container">
                         
 <?php
-    $sql = "SELECT * FROM teachers";
+    $sql = "SELECT * FROM teachers  WHERE teacher_id = 10";
     $result = mysqli_query($conn, $sql);
     $query_results = mysqli_num_rows($result);
 
