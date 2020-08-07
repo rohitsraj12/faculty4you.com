@@ -5,6 +5,8 @@
     background-color: $color-btn-1;
 
     .footer-base{
+      margin-top: 5rem;
+
       .wrap-container{
         @media(min-width: 583px){
           display: flex;
@@ -15,11 +17,20 @@
           text-align: center;
         }
 
-        li{
-          @media(min-width: 583px){
-            width: 40%;
-          }
+      }
+      
+      &__list{
+        font-size: 1.6rem;
+        color: $color-white;
+        font-family: $font-primary;
+        @media(min-width: 583px){
         }
+        
+      }
+      &__link{
+        color: $color-white;
+        display: inline-block;
+        
       }
     }
     //   // background-color: #ffffff;
