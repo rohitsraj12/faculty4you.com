@@ -70,8 +70,8 @@
                         
                         <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">user name</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-3">user name</li>
+                                    <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_user_name'];
                                         ?>
@@ -80,8 +80,8 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">name</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-3">name</li>
+                                    <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_first_name'] . " " . $row['student_last_name'];
                                         ?>
@@ -90,8 +90,8 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">date of birth</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-3">date of birth</li>
+                                    <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_date_of_birth'];
                                         ?>
@@ -100,8 +100,8 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">gender</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-3">gender</li>
+                                    <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             // echo $row['student_first_name'];
                                             echo "female";
@@ -119,8 +119,8 @@
                         <div class="article-body p-4 border">
                         <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">phone</li>
-                                    <li class="col-sm-10  h4 font-weight-normal">
+                                    <li class="col-sm-3">phone</li>
+                                    <li class="col-sm-9  h4 font-weight-normal">
                                     <?php echo $row['student_phone']?>
                                     </li>
                                 </ul>
@@ -128,8 +128,8 @@
                             
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">email</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-3">email</li>
+                                    <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_email'];
                                         ?>
@@ -138,8 +138,8 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">parent name</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-3">parent name</li>
+                                    <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_parent_name'];
                                         ?>
@@ -148,8 +148,8 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">parent phone</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-3">parent phone</li>
+                                    <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_parent_phone'];
                                         ?>
@@ -159,15 +159,16 @@
 
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">address</li>
+                                    <li class="col-sm-3">address</li>
                                     
-                                    <li class="col-sm-10  h4 font-weight-normal">
+                                    <li class="col-sm-9  h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_address'];
-                                        ?>, 
+                                        ?>, </br></br>
                                         <?php 
+                                        
                                             echo $row['city_name'];
-                                        ?>, 
+                                        ?>, </br></br>
                                         <?php 
                                             echo $row['state_name'];
                                         ?>, 
