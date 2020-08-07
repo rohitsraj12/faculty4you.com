@@ -17,17 +17,17 @@
                         </header>
                         <div class="row">
                             <ul class="col-sm-4">
-                                <li class="pb-2"><a class="text-light h4" href=""> home</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>index.php"> home</a></li>
                                 <li class="pb-2"><a class="text-light h4" href=""> faq</a></li>
                                 <li class="pb-2"><a class="text-light h4" href=""> site map</a></li>
                             </ul>
                             <ul class="col-sm-4">
-                                <li class="pb-2"><a class="text-light h4" href="">student registration</a></li>
-                                <li class="pb-2"><a class="text-light h4" href="">student login</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/registration.php">student registration</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/login.php">student login</a></li>
                             </ul>
                             <ul class="col-sm-4">
-                                <li class="pb-2"><a class="text-light h4" href="">teacher registration</a></li>
-                                <li class="pb-2"><a class="text-light h4" href="">teacher login</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/registration.php">teacher registration</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/login.php">teacher login</a></li>
                             </ul>
                         </div>
                      
@@ -43,7 +43,14 @@
                 </section>
 
         </div>
-    </footer></div>
+    </footer>
+    <div class="footer-base bg-primary">
+        <ul class="wrap-container">
+            <li class="copyright">copyright2014-2020 | <a href="<?php echo base_url();?>">facultyforyou.com</a> | <a href="#">terms and conditions</a></li>
+            <li class="developer">Developed by <a href="#"></a></li>
+        </ul>
+    </div>
+</div>
             <!-- end body footer -->
         </div>
         <!-- end body wrap -->
