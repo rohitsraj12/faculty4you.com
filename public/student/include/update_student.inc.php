@@ -43,7 +43,7 @@ if(isset($_POST['update'])){
         if(in_array($file_check,$file_ext_store)){
             //destination folder
             $destination_file = '../../img/student/profile_pic/' . $file_name;
-            $profile_image_url = 'img/student/profile_pic/' . $file_name;
+            $url = 'img/student/profile_pic/' . $file_name;
             //moving from tem to destination
             move_uploaded_file($filetemp, $destination_file);
    
@@ -56,7 +56,7 @@ if(isset($_POST['update'])){
             city_id = '$city', 
             state_id = '$state', 
             student_city_pincode = '$pincode', 
-            student_photo = '$profile_image_url' WHERE student_id=$id"; 
+            student_photo = '$url' WHERE student_id=$id"; 
 
             $_result = mysqli_query($conn, $query);
 
