@@ -30,10 +30,7 @@
       border: 1px solid $color-gray-light-2;
       margin: 0 1rem 6rem;
       padding: 1rem;
-      // padding-bottom: 20rem;
-      // &:not(last-child) {
-      //   padding-bottom: 20rem;
-      // }
+      
 
       @media (min-width: 1025px) {
         width: 47%;
@@ -75,6 +72,8 @@
           }
         }
         &-right {
+          text-align: left;
+
           @media (min-width: 1025px) {
             width: 65%;
           }
@@ -96,6 +95,8 @@
       }
 
       img {
+        height: 10rem;
+        width: 10rem;
         max-height: 20rem;
       }
     }
