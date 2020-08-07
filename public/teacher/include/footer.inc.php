@@ -1,6 +1,8 @@
 <div class="body-footer">
-<footer class="wrap-container text-light pt-5">
-        <div class="row">
+
+
+    <footer class="wrap-container text-light pt-5">
+            <div class="row">
                 <section class="col-sm-3">
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
@@ -46,6 +48,12 @@
 
         </div>
     </footer>
+    <div class="footer-base bg-primary">
+        <ul class="wrap-container">
+            <li class="copyright">copyright2014-2020 | <a href="<?php echo base_url();?>">facultyforyou.com</a> | <a href="#">terms and conditions</a></li>
+            <li class="developer">Developed by <a href="#"></a></li>
+        </ul>
+    </div>
 </div>
             <!-- end body footer -->
         </div>
