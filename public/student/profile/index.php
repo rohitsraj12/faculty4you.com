@@ -38,16 +38,16 @@
                             </h1>
                         </header>
                         <footer class="px-5">
-                            <ul>
+                            <ul class="pl-3">
                                 <li class="text-dark h4 py-1 font-weight-normal">
-                                <i class="h2 fa fa-mobile pr-3" aria-hidden="true"></i>
+                                <i class="h5 fa fa-envelope-o pr-3" aria-hidden="true"></i>
                                 
                             <?php 
                                 echo $row['student_email'];
                             ?>
                                 </li>
                                 <li  class="text-dark h4 pb-4 font-weight-normal">
-                                <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i>
+                                <i class="h2 fa fa-mobile  pr-4" aria-hidden="true"></i>
                             <?php 
                                 echo $row['student_phone']; 
                             ?>
@@ -136,7 +136,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="article-info">
+                            <!-- <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">parent name</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
@@ -155,7 +155,7 @@
                                         ?>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
 
                             <div class="article-info">
                                 <ul class="row">
@@ -180,14 +180,14 @@
                             </div>
   
                           
-                            <div class="article-info">
+                            <!-- <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-4">tuition type</li>
                                     <li></li>
                                     <li></li>
                                     <li></li>
                                 </ul>
-                            </div>
+                            </div> -->
                             
                            
                         </div>
