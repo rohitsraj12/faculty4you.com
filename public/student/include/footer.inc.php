@@ -46,6 +46,12 @@
 
         </div>
     </footer>
+    <div class="footer-base bg-primary">
+        <ul class="wrap-container">
+            <li class="copyright">copyright2014-2020 | <a href="<?php echo base_url();?>">facultyforyou.com</a> | <a href="#">terms and conditions</a></li>
+            <li class="developer">Developed by <a href="#"></a></li>
+        </ul>
+    </div>
 </div>
             <!-- end body footer -->
         </div>
