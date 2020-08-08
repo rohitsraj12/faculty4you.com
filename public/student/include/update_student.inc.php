@@ -10,6 +10,8 @@ if(isset($_POST['update'])){
     $id = $_GET['id'];
     $first_name = $_POST['fname'];
     $last_name = $_POST['lname'];
+    $gender = $_POST['gender'];
+    $dob = $_POST['date'];
     $email =  $_POST['email'];
     $phone =  $_POST['phone'];
     $address =  $_POST['address'];
@@ -49,7 +51,9 @@ if(isset($_POST['update'])){
    
 
             $query = "UPDATE std SET student_first_name = '$first_name',
-            student_last_name = '$last_name', 
+            student_last_name = '$last_name',
+            gender_id = $gender, 
+            student_date_of_birth = '$dob',
             student_email = '$email', 
             student_phone = '$phone', 
             student_address = '$address', 
