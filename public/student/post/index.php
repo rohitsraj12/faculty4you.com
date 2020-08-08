@@ -21,9 +21,25 @@
     <div class="body-container">
                 <main>
                     <section class="wrap-container">
-                        <header class="text-primary-h text-center">
+                        <header class="text-primary-h text-center pb-5">
                             students Post
                         </header>
+
+                        <section class="row pt-5">
+                            <div class="col-sm-3">
+                                <ul>
+                                    <li class=" mb-1">
+                                        <a class="w-100 btn btn-primary">
+                                            view all posts
+                                        </a>
+                                    </li>
+                                    <li class="w-100 bg-primary text-center">
+                                        <a class="btn btn-primary">
+                                            add new post
+                                        </a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-9">
         <?php 
 
         $student_id = $row['student_id'];
@@ -46,7 +62,7 @@
             while($row = mysqli_fetch_assoc($result)){
             ?>
                 
-          <article class="mt-5 px-5 py-3 border bg-light">
+          <article class="mb-5 px-5 py-3 border bg-light">
                         <header class="border-bottom">
                             <h1 class="h1 py-3 text-dark font-weight-normal">
                                 <?php echo $row["post_title"];?>
@@ -71,6 +87,10 @@
           <?php
             }
         ?>
+        
+                            
+        </div>
+                        </section>
         </section>
 
         </main>
