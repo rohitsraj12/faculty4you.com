@@ -28,7 +28,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data">
                         <article class="mb-5"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 personal information
@@ -48,7 +48,7 @@
 
                                 <div class="form-group">
                                     <label for="photo">upload image</label>
-                                    <input type="file" name="file" class="form-control-file" id="photo">
+                                    <input type="file" name="file" class="form-control-file" id="photo"  value="<?php echo $row['teacher_photo'];?>" placeholder="<?php echo $row['teacher_photo'];?>">
                                 </div>
                                 <fieldset class="form-group">
                                     <div class="row">
@@ -127,10 +127,10 @@
                                             <?php }?>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-2">
+                                    <!-- <div class="form-group col-md-2">
                                         <label for="pincode">pincode</label>
                                         <input type="text" name="pincode" class="form-control" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
-                                    </div>
+                                    </div> -->
                                 </div>
                                                   
                             </div>
@@ -168,7 +168,7 @@
                                 <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
                                         <label for="teaching_exp">teaching experience</label>
-                                        <input type="text" class="form-control" id="teaching_exp" value="<?php echo $row['teacher_experience']?>" placeholder="<?php echo $row['teacher_experience']?> Years of experience">
+                                        <input type="text" name="exp" class="form-control" id="teaching_exp" value="<?php echo $row['teacher_experience']?>" placeholder="<?php echo $row['teacher_experience']?> Years of experience">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="sub_id">Academic subjects</label>
@@ -185,7 +185,7 @@
                                         </select>
                                     </div>
                                 </div>
-                                <fieldset class="form-group">
+                                <!-- <fieldset class="form-group">
                                     <div class="row">
                                         <label class="label col-form-label col-sm-2 pt-0">teaching type</label>
                                         
@@ -213,7 +213,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </fieldset>
+                                </fieldset> -->
                                 <div class="form-group">
                                     <label for="about">About me</label>
                                     <textarea name="about_me" class="form-control" id="about" value="<?php echo $row["teacher_about_me"];?>" placeholder="<?php echo $row["teacher_about_me"];?>"></textarea>
