@@ -21,16 +21,23 @@
                         <header class="text-primary-h text-center">
                             students Post
                         </header>
-
-                        
-
-<?php
-    if($row['teacher_membership_status'] == "actve"){
-        echo "hisdasdasdadsadsaadd";
-    }
-?>
                     <?php 
-                        include('include/teacher.query.inc.php');
+                        $city = $row['city_id'];
+                        
+                        $sql = "SELECT posts.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+                        FROM posts
+                            JOIN std
+                                ON std.student_id = posts.student_id
+                            JOIN cities
+                                ON cities.city_id = posts.city_id
+                            JOIN states
+                                ON states.state_id = posts.state_id
+                            JOIN study_types
+                                ON study_types.study_type_id = posts.study_type_id
+                            JOIN study_categories
+                                ON study_categories.study_cat_id = posts.study_cat_id
+                            ORDER BY post_id DESC ";
+                        $result = mysqli_query($conn, $sql);
                         while($row = mysqli_fetch_assoc($result)){
                            
                     ?>
