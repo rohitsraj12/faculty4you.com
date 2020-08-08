@@ -51,10 +51,19 @@
                                     </div>
                                 </div>
 
+                                <div class="form-row pb-3">
+                                    <div class="col-sm-6">
+                                        <label for="dob">upload image</label>
+                                        <input type="date" name="date" class="form-control" id="dob"  value="<?php echo $row['student_date_of_birth'];?>" placeholder="<?php echo $row['student_date_of_birth'];?>">
+                                    
+                                    </div>    
+                                </div>
+
                                 <div class="form-group">
                                     <label for="photo">upload image</label>
-                                    <input type="file" name="file" class="form-control-file" id="photo">
+                                    <input type="file" name="file" class="form-control-file" id="photo"  value="<?php echo $row['student_photo'];?>" placeholder="<?php echo $row['student_photo'];?>">
                                 </div>
+
                                 <fieldset class="form-group">
                                     <div class="row">
                                         <label class="label col-form-label col-sm-2 pt-0 ">gender</label>
