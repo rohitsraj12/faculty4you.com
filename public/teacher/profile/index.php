@@ -14,13 +14,6 @@
 
 ?>
 <div class="body-container">
-                
-    <div class="header__profile u-right-text text-sub-primary">
-        <i class="fa fa-user" aria-hidden="true"></i>                        
-        <?php 
-            echo $row['teacher_user_name'];
-        ?>
-    </div>
 
     <main class="wrap-container profile">
         <section class="section-profile">
@@ -28,13 +21,29 @@
                 <heeader class="text-primary-h"> 
                     my profile
                 </header>
-                
+                <?php
+                    $member = $rows['teacher_user_name'];
+
+                    $sql = "SELECT teachers.*, cities.*, states.*, gender.*, subjects.* FROM teachers
+                    JOIN cities
+                        ON cities.city_id = teachers.city_id
+                    JOIN states
+                        ON states.state_id = teachers.state_id
+                    JOIN gender
+                        ON gender.gender_id = teachers.gender_id
+                    JOIN subjects
+                        ON subjects.subject_id = teachers.subject_id
+                    WHERE teacher_user_name = '$member'";
+    
+                    $results = mysqli_query($conn, $sql);
+                    $row = mysqli_fetch_assoc($results);
+                ?>
             </div>
             <div class="section-body row">
                 <section class="col-md-4">
                     <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
                         <figure class="text-center">
-                            <img src="<?php base_url()?>img/teacher/profile_pic/rohit.jpg" alt="">
+                            <img class="img-thumbnail img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
                         </figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
@@ -94,6 +103,16 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="article-info">
+                                <ul class="row">
+                                    <li class="col-sm-2">Gender</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">
+                                        <?php 
+                                            echo $row['gender_type'];
+                                        ?>
+                                    </li>
+                                </ul>
+                            </div>
                             
                             <div class="article-info">
                                 <ul class="row">
@@ -136,18 +155,25 @@
                                     <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['teacher_experience']?> years of experince</li>
                                 </ul>
                             </div>
-                            
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">tuition type</li>
-                                    <ul class="col-sm-10">   
-                                        <li class="w-100 h4 font-weight-normal"><?php if($row['teacher_online_one_to_one'] == 1 ){ echo "online one to one";}?></li>
-                                        <li class="w-100 h4 font-weight-normal"><?php if($row['teacher_online_group'] == 1){ echo "online group";}?></li>
-                                        <li class="w-100 h4 font-weight-normal"><?php if($row['teacher_home_tuition'] == 1){ echo "home tuition";}?></li>
-                                    </ul>
+                                    <li class="col-sm-2">Subject</li>
+                                        <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['sub_name']?></li>
                                    
                                 </ul>
                             </div>
+                            
+                            <!-- <div class="article-info">
+                                <ul class="row">
+                                    <li class="col-sm-2">tuition type</li>
+                                    <ul class="col-sm-10">   
+                                        <li class="w-100 h4 font-weight-normal"><?php //if($row['teacher_online_one_to_one'] == 1 ){ echo "online one to one";}?></li>
+                                        <li class="w-100 h4 font-weight-normal"><?php //if($row['teacher_online_group'] == 1){ echo "online group";}?></li>
+                                        <li class="w-100 h4 font-weight-normal"><?php //if($row['teacher_home_tuition'] == 1){ echo "home tuition";}?></li>
+                                    </ul>
+                                   
+                                </ul>
+                            </div> -->
                             
                             <!-- <div class="article-info">
                                 <ul>
