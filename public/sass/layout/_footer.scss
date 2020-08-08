@@ -16,14 +16,21 @@
         @media(max-width: 582px){
           text-align: center;
         }
+        .row{
+          ul{
+            padding: 2rem;
+          }
+        }
 
       }
+      
       
       &__list{
         font-size: 1.6rem;
         color: $color-white;
         font-family: $font-primary;
-        @media(min-width: 583px){
+        @media(max-width: 583px){
+          padding-bottom: 1rem;
         }
         
       }
