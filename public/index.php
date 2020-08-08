@@ -153,7 +153,7 @@
 
                     <section class="section-data py-5 text-light">
                         <div class="wrap-container row text-center py-5">
-                            <article class="col-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="col-sm-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
                                 <p class="text-white pb-3" style = "font-size : 2rem">Registered students</p>
                                 <p class="h1 text-white" style="font-size: 4.8rem">
                                     <?php
@@ -165,7 +165,7 @@
                                     ?>
                                 </p>
                             </article>
-                            <article class="col-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="col-sm-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <p class="h2 text-white pb-3" style = "font-size : 2rem">Registered teachers</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
@@ -177,7 +177,7 @@
                                         ?>
                                 </p>
                             </article>
-                            <article class="col-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="col-sm-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's post</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
