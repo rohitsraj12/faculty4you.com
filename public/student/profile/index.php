@@ -27,8 +27,8 @@
             <div class="section-body row">
                 <section class="col-md-4">
                     <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
-                        <figure class="text-center">
-                            <img class="img-thumbnail img-fluid" src="<?php echo base_url() . $row['student_photo'];?>" alt="<?php echo $row['student_first_name'];?>">
+                        <figure class="w-75 m-auto text-center">
+                            <img class="img-thumbnail img-fluid img-rounded " src="<?php echo base_url() . $row['student_photo'];?>" alt="<?php echo $row['student_first_name'];?>">
                         </figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
@@ -49,7 +49,7 @@
                                 <li  class="text-dark h4 pb-4 font-weight-normal">
                                 <i class="h2 fa fa-mobile  pr-4" aria-hidden="true"></i>
                             <?php 
-                                echo $row['student_phone']; 
+                                echo "+91 " . $row['student_phone']; 
                             ?>
                                 </li>
 
@@ -103,8 +103,7 @@
                                     <li class="col-sm-3">gender</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
-                                            // echo $row['student_first_name'];
-                                            echo "female";
+                                            echo $row['gender_type'];
                                         ?>
                                     </li>
                                 </ul>
@@ -121,7 +120,7 @@
                                 <ul class="row">
                                     <li class="col-sm-3">phone</li>
                                     <li class="col-sm-9  h4 font-weight-normal">
-                                    <?php echo $row['student_phone']?>
+                                    <?php echo '+91 ' .  $row['student_phone']?>
                                     </li>
                                 </ul>
                             </div>
