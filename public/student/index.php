@@ -24,7 +24,8 @@
                     <section class="section-search-result wrap-container">
                         
 <?php
-    $sql = "SELECT * FROM teachers  WHERE teacher_id = 10";
+    $city_id = $row['city_id'];
+    $sql = "SELECT * FROM teachers WHERE city_id = '$city_id'";
     $result = mysqli_query($conn, $sql);
     $query_results = mysqli_num_rows($result);
 
@@ -49,7 +50,7 @@
             <article class="article-search-result" data-aos="zoom-out-up" data-aos-duration="1000">
                     <div class="block-left">
                         <figure class="article-search__figure">
-                            <img src="<?php base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                            <img src="<?php //echo base_url() . $row['teacher_photo']?>" alt="<?php echo $row['teacher_photo']?>">
                         </figure>
                     </div>
                     <div class="block-right">
@@ -60,12 +61,12 @@
                         </header>
                         <div class="article-search-body">
                                 <ul>
-                                    <li>qualification: <strong></strong></li>
-                                    <li>Experience: <strong></strong></li>
-                                    <li>City:<strong></strong></li>
+                                    <li>qualification: <strong><?php echo $row['city_id']?></strong></li>
+                                    <li>Experience: <strong><?php echo $row['teacher_experience']?></strong></li>
+                                    <li>City:<strong><?php echo $row['city_id']?></strong></li>
                                     <li>available for : 
-                                        <strong><?php if($row["teacher_online_one_to_one"] == 1){echo "Online one to one";} ?></strong>
-                                        <strong> <?php if($row["teacher_online_group"] == 1){echo "Online group";}?></strong>
+                                        <strong><?php if($row["teacher_online_one_to_one"] == 1){echo "Online one to one";} ?></strong><br/>
+                                        <strong> <?php if($row["teacher_online_group"] == 1){echo "Online group";}?></strong><br/>
                                         <strong> <?php if($row["teacher_home_tuition"] == 1){echo "home tuition";}?> </strong>
                                     
                                     </li>
