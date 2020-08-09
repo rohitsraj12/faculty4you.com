@@ -1,12 +1,18 @@
 .button {
   &-primary {
-    padding: 1rem 4rem;
+    padding: 0.8rem 4rem;
     background-color: $color-btn-1;
     color: $color-white;
-    border-radius: 1rem;
+    border-radius: 0.6rem;
     display: inline-block;
-    font-size: 1.8rem;
-    font-weight: 500;
+    font-family: $font-primary;
+    font-size: 1.7rem;
+    font-weight: 400;
+
+    &:hover {
+      color: $color-white;
+      background-color: rgba($color-btn-1, 0.9);
+    }
   }
 
   &-secondary {
@@ -17,6 +23,59 @@
     display: inline-block;
     font-size: 1.5rem;
     font-weight: 500;
+  }
+
+  &-special {
+    border-radius: 20px;
+    color: #ffffff;
+    font-size: 12px;
+    font-family: $font-primary;
+    font-weight: 500;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 300ms ease-in;
+
+    background: #8aafff;
+    background: -moz-linear-gradient(
+      left,
+      #5388fe 0%,
+      #8aafff 41%,
+      #5388fe 100%
+    );
+    background: -webkit-gradient(
+      left top,
+      right top,
+      color-stop(0%, #5388fe),
+      color-stop(41%, #8aafff),
+      color-stop(100%, #5388fe)
+    );
+    background: -webkit-linear-gradient(
+      left,
+      #5388fe 0%,
+      #8aafff 41%,
+      #5388fe 100%
+    );
+    background: -o-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
+    background: -ms-linear-gradient(
+      left,
+      #5388fe 0%,
+      #8aafff 41%,
+      #5388fe 100%
+    );
+    background: linear-gradient(
+      to right,
+      #5388fe 0%,
+      #8aafff 41%,
+      #5388fe 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5388fe', endColorstr='#5388fe', GradientType=1 );
+    border-color: #5388fe;
+
+    &:hover {
+      color: $color-white;
+      background: #8aafff;
+    }
   }
 
   &-text-1 {
