@@ -13,6 +13,17 @@
      
         require("include/banner.inc.php");
 
+    // $student_name = $_SESSION['user_name'];
+
+        
+    $sql = "SELECT * FROM std 
+     WHERE student_user_name = '$student_name'";
+    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+
+
     ?>
     <div class="body-container">
         <main>
@@ -24,19 +35,19 @@
                     <section class="section-search-result wrap-container">
                         
 <?php
-    $city_id = $rows['city_id'];
+    // $city_id = $row['city_id'];
 
-    $sql = "SELECT *  FROM teachers 
-        WHERE city_id = '$city_id'";
+    // $sql = "SELECT * FROM teachers 
+    //         WHERE city_id = '$city_id'";
 
-    $result = mysqli_query($conn, $sql);
-    $query_results = mysqli_num_rows($result);
+    // $result = mysqli_query($conn, $sql);
+    // $query_results = mysqli_num_rows($result);
 
     ?>
         
         <div class="search-result-num" data-aos="zoom-out-up" data-aos-duration="1000">
             <p>
-                    <?php echo $query_results; ?> results are matching
+                    <!-- <?php echo $query_results; ?> results are matching -->
             </p>
         </div>
         <section class="section-body"> 
@@ -44,13 +55,13 @@
 
    
 
-    if($query_results > 0){
-        while($row = mysqli_fetch_assoc($result)){
+    // if($query_results > 0){
+    //     while($row = mysqli_fetch_assoc($result)){
 
             ?>      
             
             
-            <article class="article-search-result" data-aos="zoom-out-up" data-aos-duration="1000">
+            <!-- <article class="article-search-result" data-aos="zoom-out-up" data-aos-duration="1000">
                     <div class="block-left">
                         <figure class="article-search__figure">
                             <img src="<?php echo base_url() . $row['teacher_photo']?>" alt="">
@@ -82,13 +93,13 @@
                         </footer>
                     </div>
                 </article>
-            
+             -->
             
             
             <?php
 
-        }
-    } else {
+    //    }
+    //} else {
         //echo "there are no result";
         
         ?> 
@@ -100,7 +111,7 @@
         </div>
 
         <?php
-    }
+    // }
  
 ?> 
                     </section>
