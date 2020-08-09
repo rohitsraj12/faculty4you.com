@@ -691,23 +691,20 @@ label {
     height: 100%;
     z-index: -2; }
   .section-testimonial blockquote::after {
-    content: "";
-    position: absolute;
-    top: -80%;
-    left: -5%;
-    width: 100%;
-    height: 300px; }
-    @media (min-width: 583px) {
+    content: ""; }
+    @media (min-width: 1024px) {
       .section-testimonial blockquote::after {
         background-image: url("../img/member/feedback.svg");
         background-repeat: no-repeat;
         background-position: left top;
         background-size: 500px 300px;
-        opacity: 1;
-        z-index: -1; } }
-    @media (min-width: 583px) and (max-width: 960px) {
-      .section-testimonial blockquote::after {
-        top: 0; } }
+        opacity: 0.5;
+        z-index: -10;
+        top: -40%;
+        left: -1%;
+        width: 100%;
+        height: 300px;
+        position: absolute; } }
   .section-testimonial blockquote::before {
     content: "";
     width: 15rem;
@@ -1148,7 +1145,7 @@ input, .form-control {
   line-height: 2.5rem; }
 
 .body-header {
-  padding-top: 2rem;
+  padding-top: 1rem;
   width: 100%;
   position: absolute;
   top: 0;
@@ -1229,7 +1226,7 @@ input, .form-control {
       border-radius: 50%;
       padding-top: 1.2rem;
       position: absolute;
-      top: 2rem;
+      top: 4rem;
       right: 4%;
       z-index: 999; } }
   @media (min-width: 582px) {
@@ -1253,6 +1250,14 @@ input, .form-control {
   -ms-transform: translateY(-13px) rotate(-45deg);
   -o-transform: translateY(-13px) rotate(-45deg);
   transform: translateY(-13px) rotate(-45deg); }
+
+.top-header > .wrap-container ul {
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: end; }
+  .top-header > .wrap-container ul li {
+    margin-right: 1rem; }
 
 .body-footer {
   padding-top: 15rem;
