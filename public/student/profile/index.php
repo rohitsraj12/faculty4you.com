@@ -111,7 +111,9 @@
                                     <li class="col-sm-3">date of birth</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
-                                            echo $row['student_date_of_birth'];
+                                            $date = date_create($row['student_date_of_birth']);
+                                        
+                                            echo date_format($date, 'd-M-Y');
                                         ?>
                                     </li>
                                 </ul>
