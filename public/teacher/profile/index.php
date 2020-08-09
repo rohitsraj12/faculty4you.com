@@ -12,21 +12,26 @@
     require("../include/header.inc.php");
     include_once'../include/banner.inc.php';
 
+    $teacher_name = $_SESSION['user_name'];
     
-    $sql = "SELECT teachers.*, cities.*, states.*, subjects.*, gender.* FROM teachers 
-    JOIN cities
+    $sql = "SELECT teachers.*, cities.*, states.*, gender.*, subjects.* FROM teachers 
+    LEFT JOIN cities
         ON cities.city_id = teachers.city_id
-    JOIN states
+    LEFT JOIN states
         ON states.state_id = teachers.state_id
-    JOIN subjects
-        ON subjects.subject_id = teachers.subject_id
-    JOIN gender
+    LEFT JOIN gender
         ON gender.gender_id = teachers.gender_id
-     WHERE teacher_user_name = '$teacher_name'";
-    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+    LEFT JOIN subjects
+        ON subjects.subject_id = teachers.subject_id
+    WHERE teacher_user_name = '$teacher_name'";
+    // $sql = "SELECT * FROM teachers WHERE teacher_user_name = '$teacher_name'";
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+
+    // echo $teacher_name;
+    echo $row['teacher_email'];
+
 
 ?>
 <div class="body-container">
@@ -40,7 +45,7 @@
             </div>
             <div class="section-body row">
                 <section class="col-md-4">
-                    <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="img-thumbnail bg-light article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
                         <figure class="text-center">
                         <?php 
 
@@ -50,7 +55,7 @@
                         <?php
                             } else {
                         ?>
-                                <img class="img-thumbnail img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                                <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
                         <?php
                             }
                         ?>
@@ -64,8 +69,8 @@
                         </header>
                         <footer class="px-5">
                             <ul>
-                                <li class="text-dark h4 py-1 font-weight-normal">
-                                <i class="h2 fa fa-mail pr-3" aria-hidden="true"></i>
+                                <li class="text-dark h3 py-1 font-weight-normal">
+                                <i class="h5 fa fa-envelope-o pr-3" aria-hidden="true"></i>
                                 
                             <?php 
                                 echo $row['teacher_email'];
@@ -118,11 +123,12 @@
                                     <li class="col-sm-2">Gender</li>
                                     <li class="col-sm-10 h4 font-weight-normal">
                                         <?php 
+                                           echo $row['gender_type'];
 
                                         if($row['gender_id'] == 0){
-                                            echo "no data";
+                                           // echo "no data";
                                         } else {
-                                            echo $row['gender_type'];
+                                           //echo $row['gender_type'];
                                         }
                                         ?>
                                     </li>
