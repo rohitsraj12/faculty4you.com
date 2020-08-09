@@ -76,6 +76,6 @@ if(isset($_POST['update'])){
     // header("location: ../registration.php");
     // echo "000stop scripting";
     //  exit();
-    $id = $_GET['id'];
-    echo 'updating ID is ' . $id;
+    // $id = $_GET['id'];
+    // echo 'updating ID is ' . $id;
 }
