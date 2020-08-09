@@ -8,6 +8,11 @@
   list-style: none;
 }
 
+a:hover {
+  text-decoration: none;
+  color: rgba($color-primary, 0.8);
+}
+
 html {
   font-size: 62.5%;
 }
