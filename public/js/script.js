@@ -21,4 +21,16 @@ $(document).ready(function () {
       },
     },
   });
+
+  // tab
+  $(".tab button").click(function (event) {
+    event.preventDefault();
+    var selectAtt = $(this).attr("data-post");
+
+    $(".tab button").removeClass("active");
+    $(this).addClass("active");
+
+    $(".post__cat").hide();
+    $("." + selectAtt).fadeIn();
+  });
 });
