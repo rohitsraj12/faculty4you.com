@@ -69,11 +69,13 @@ if(isset($_POST['update'])){
            }
     // 
     
-//    header('location:'.$base_url.'index.php');
+   header('location: index.php');
 
 } else {
      // redirect to register and empty field
     // header("location: ../registration.php");
     // echo "000stop scripting";
     //  exit();
+    $id = $_GET['id'];
+    echo 'updating ID is ' . $id;
 }
