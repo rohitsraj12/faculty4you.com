@@ -1,0 +1,69 @@
+.section__post {
+  position: relative;
+}
+
+.tab {
+  //   border: 1px solid #ccc;
+  //   background-color: #f1f1f1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 2rem;
+  @media (max-width: 582px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 0 4rem;
+  }
+}
+
+.tab button {
+  display: block;
+  background: $color-gray-light-1;
+  color: $color-btn-1;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 18px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @media (min-width: 583px) {
+    text-align: left;
+  }
+
+  @media (max-width: 582px) {
+    text-align: center;
+  }
+}
+
+.tab button:hover {
+  color: rgba($color-btn-1, 1);
+
+  @media (min-width: 583px) {
+    border-left: 2px solid $color-btn-1;
+  }
+
+  @media (max-width: 582px) {
+    border-bottom: 2px solid $color-btn-1;
+  }
+}
+
+.compose__post {
+  display: none;
+}
+
+.tab button.active {
+  color: rgba($color-btn-1, 1);
+  background: $color-gray-light-2;
+  font-weight: 500;
+
+  @media (min-width: 583px) {
+    border-left: 2px solid $color-btn-1;
+  }
+
+  @media (max-width: 582px) {
+    border-bottom: 2px solid $color-btn-1;
+  }
+}
