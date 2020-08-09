@@ -12,7 +12,7 @@
                     <section class="section-student">
                         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <heeader class="text-primary-h"> 
-                                how <strong>faculty4you</strong> works for students
+                                How <strong>Faculty4you</strong> Works for Students
                             </header>
                             <div class="sub-heading wrap-container">
                                 <h6 class="text-sub-primary">
@@ -28,7 +28,7 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">register</h4>
+                                    <h4 class="text-secondary-h">Register</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -68,7 +68,7 @@
                             </article>
                         </section>
                         <footer class="section-footer u-center-text mb-4" data-aos="zoom-out-up" data-aos-duration="1000">
-                            <a href="<?php echo base_url();?>student/registration.php" class="button-primary">registration</a>
+                            <a href="<?php echo base_url();?>student/registration.php" class="button-primary">Registration </a>
                         </footer>
                     </section>
                    
@@ -77,7 +77,7 @@
                         
                         <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
                             <heeader class="text-primary-h"> 
-                                Looking to become a <strong>trainer</strong>
+                                Looking to Become a <strong>Trainer</strong>
                             </header>
                             <div class="sub-heading wrap-container">
                                 <h6 class="text-sub-primary">
@@ -92,7 +92,7 @@
                                     <span>step 1</span>
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">register</h4>
+                                    <h4 class="text-secondary-h">Register</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -107,7 +107,7 @@
                                     <span>step 2</span>
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">activate membership</h4>
+                                    <h4 class="text-secondary-h">Activate membership</h4>
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
@@ -146,7 +146,7 @@
                             </article>
                         </section>
                         <footer class="section-footer u-center-text mb-4" data-aos="zoom-out-up" data-aos-duration="1000">
-                            <a href="<?php echo base_url();?>teacher/registration.php" class="button-primary">registration</a>
+                            <a href="<?php echo base_url();?>teacher/registration.php" class="button-primary">Registration</a>
                         </footer>
                     </section>
                    
