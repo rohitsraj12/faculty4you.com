@@ -51,11 +51,19 @@
                 <!-- end hamberger -->
                 <div class="top-header mt-0">
                     <div class="wrap-container h-5 u-right-text text-sub-primary">
-                        <i class="fa fa-user" aria-hidden="true"></i>                        
-                        <?php 
-                        echo $row['student_user_name'];
-                            
-                        ?>
+                        <ul>
+                            <li>
+                                <i class="fa fa-user" aria-hidden="true"></i>                        
+
+                            </li>
+                            <li>
+                                <?php 
+
+                                // echo $row['teacher_user_name'];
+                                echo $teacher_name;
+                                ?>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <header class="wrap-container">
