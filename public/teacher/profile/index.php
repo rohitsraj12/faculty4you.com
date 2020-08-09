@@ -12,6 +12,22 @@
     require("../include/header.inc.php");
     include_once'../include/banner.inc.php';
 
+    
+    $sql = "SELECT teachers.*, cities.*, states.*, subjects.*, gender.* FROM teachers 
+    JOIN cities
+        ON cities.city_id = teachers.city_id
+    JOIN states
+        ON states.state_id = teachers.state_id
+    JOIN subjects
+        ON subjects.subject_id = teachers.subject_id
+    JOIN gender
+        ON gender.gender_id = teachers.gender_id
+     WHERE teacher_user_name = '$teacher_name'";
+    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+
 ?>
 <div class="body-container">
 
@@ -21,29 +37,23 @@
                 <heeader class="text-primary-h"> 
                     my profile
                 </header>
-                <?php
-                    $member = $rows['teacher_user_name'];
-
-                    $sql = "SELECT teachers.*, cities.*, states.*, gender.*, subjects.* FROM teachers
-                    JOIN cities
-                        ON cities.city_id = teachers.city_id
-                    JOIN states
-                        ON states.state_id = teachers.state_id
-                    JOIN gender
-                        ON gender.gender_id = teachers.gender_id
-                    JOIN subjects
-                        ON subjects.subject_id = teachers.subject_id
-                    WHERE teacher_user_name = '$member'";
-    
-                    $results = mysqli_query($conn, $sql);
-                    $row = mysqli_fetch_assoc($results);
-                ?>
             </div>
             <div class="section-body row">
                 <section class="col-md-4">
                     <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
                         <figure class="text-center">
-                            <img class="img-thumbnail img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                        <?php 
+
+                            if($row['teacher_photo'] == ""){
+                        ?>
+                                <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                        <?php
+                            } else {
+                        ?>
+                                <img class="img-thumbnail img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                        <?php
+                            }
+                        ?>
                         </figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
@@ -108,7 +118,12 @@
                                     <li class="col-sm-2">Gender</li>
                                     <li class="col-sm-10 h4 font-weight-normal">
                                         <?php 
+
+                                        if($row['gender_id'] == 0){
+                                            echo "no data";
+                                        } else {
                                             echo $row['gender_type'];
+                                        }
                                         ?>
                                     </li>
                                 </ul>
