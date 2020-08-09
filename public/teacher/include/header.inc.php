@@ -2,11 +2,7 @@
 
     $teacher_name = $_SESSION['user_name'];
     
-    $sql = "SELECT * FROM teachers
-        WHERE teacher_user_name = '$teacher_name'";
     
-    $result = mysqli_query($conn, $sql);
-    $rows = mysqli_fetch_assoc($result);
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -50,7 +46,9 @@
                     <div class="wrap-container h-5 u-right-text text-sub-primary">
                         <i class="fa fa-user" aria-hidden="true"></i>                        
                         <?php 
-                            echo $rows['teacher_user_name'];
+
+                            // echo $row['teacher_user_name'];
+                            echo $teacher_name;
                         ?>
                     </div>
                 </div>
