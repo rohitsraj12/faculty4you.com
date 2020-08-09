@@ -18,29 +18,28 @@ if(isset($_POST['update'])){
     $city =  $_POST['city'];    
     $state =  $_POST['state'];
     $pincode =  $_POST['pincode'];
-  
 
-        //uploading imgage
-        $files = $_FILES['file'];
-        
-        //testing 
-        //    echo  $product_name;
-        //    echo "</br>";
-        //    print_r($files);
+    //uploading imgage
+    $files = $_FILES['file'];
+    
+    //testing 
+    //    echo  $product_name;
+    //    echo "</br>";
+    //    print_r($files);
 
-        //  accesing file details
-            $file_name = $files['name'];
-            $file_error = $files['error'];
-            $filetemp = $files['tmp_name'];
+    //  accesing file details
+        $file_name = $files['name'];
+        $file_error = $files['error'];
+        $filetemp = $files['tmp_name'];
 
-        // breakdown file name and extention
-            // after . will store in var
-            $file_ext = explode('.', $file_name);
-            // make it lowercase
-            $file_check = strtolower(end($file_ext));
-        
-            //file ext store in array which are png, jpeg n jpg
-            $file_ext_store = array('png', 'jpeg', 'jpg');
+    // breakdown file name and extention
+        // after . will store in var
+        $file_ext = explode('.', $file_name);
+        // make it lowercase
+        $file_check = strtolower(end($file_ext));
+    
+        //file ext store in array which are png, jpeg n jpg
+        $file_ext_store = array('png', 'jpeg', 'jpg');
 
         if(in_array($file_check,$file_ext_store)){
             //destination folder
