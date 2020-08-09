@@ -13,6 +13,21 @@
     include_once'../include/banner.inc.php';
     include("../include/update.techer.profile.inc.php");
 
+        
+    $sql = "SELECT teachers.*, cities.*, states.*, subjects.*, gender.* FROM teachers 
+    JOIN cities
+        ON cities.city_id = teachers.city_id
+    JOIN states
+        ON states.state_id = teachers.state_id
+    JOIN subjects
+        ON subjects.subject_id = teachers.subject_id
+    JOIN gender
+        ON gender.gender_id = teachers.gender_id
+     WHERE teacher_user_name = '$teacher_name'";
+    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
 
 ?>
 <div class="body-container">
@@ -38,17 +53,17 @@
                                 <div class="form-row pt-3">
                                     <div class="form-group col-md-6">
                                     <label for="first_name">first name</label>
-                                    <input type="text" name="first_name" class="form-control" id="first_name" value="<?php echo $row['teacher_first_name']; ?>" placeholder="<?php echo $row['teacher_first_name']; ?>">
+                                    <input type="text" name="first_name" class="form-control" id="first_name" value="<?php //echo $row['teacher_first_name']; ?>" placeholder="<?php //echo $row['teacher_first_name']; ?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">last name</label>
-                                    <input type="text" name="last_name" class="form-control" id="last_name" value="<?php echo $row['teacher_last_name']; ?>" placeholder="<?php echo $row['teacher_last_name']; ?>">
+                                    <input type="text" name="last_name" class="form-control" id="last_name" value="<?php //echo $row['teacher_last_name']; ?>" placeholder="<?php //echo $row['teacher_last_name']; ?>">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="photo">upload image</label>
-                                    <input type="file" name="file" class="form-control-file" id="photo"  value="<?php echo $row['teacher_photo'];?>" placeholder="<?php echo $row['teacher_photo'];?>">
+                                    <input type="file" name="file" class="form-control-file" id="photo"  value="<?php //echo $row['teacher_photo'];?>" placeholder="<?php //echo $row['teacher_photo'];?>">
                                 </div>
                                 <fieldset class="form-group">
                                     <div class="row">
@@ -84,16 +99,16 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email" value="<?php echo $row['teacher_email']; ?>" placeholder="<?php echo $row['teacher_email']; ?>">
+                                    <input type="email" name="email" class="form-control" id="email" value="<?php //echo $row['teacher_email']; ?>" placeholder="<?php //echo $row['teacher_email']; ?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">telephone</label>
-                                    <input type="text" name="phone" class="form-control" id="phone" value="<?php echo $row['teacher_phone']; ?>" placeholder="<?php echo $row['teacher_phone']; ?>">
+                                    <input type="text" name="phone" class="form-control" id="phone" value="<?php //echo $row['teacher_phone']; ?>" placeholder="<?php //echo $row['teacher_phone']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="address">Address</label>
-                                    <input type="text" name="address" class="form-control" id="address" value="<?php echo $row['teacher_address']; ?>" placeholder="<?php echo $row['teacher_address']; ?>">
+                                    <input type="text" name="address" class="form-control" id="address" value="<?php //echo $row['teacher_address']; ?>" placeholder="<?php //echo $row['teacher_address']; ?>">
                                 </div>
                                 
                                 <div class="form-row">
@@ -168,7 +183,7 @@
                                 <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
                                         <label for="teaching_exp">teaching experience</label>
-                                        <input type="text" name="exp" class="form-control" id="teaching_exp" value="<?php echo $row['teacher_experience']?>" placeholder="<?php echo $row['teacher_experience']?> Years of experience">
+                                        <input type="text" name="exp" class="form-control" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="sub_id">Academic subjects</label>
@@ -216,7 +231,7 @@
                                 </fieldset> -->
                                 <div class="form-group">
                                     <label for="about">About me</label>
-                                    <textarea name="about_me" class="form-control" id="about" value="<?php echo $row["teacher_about_me"];?>" placeholder="<?php echo $row["teacher_about_me"];?>"></textarea>
+                                    <textarea name="about_me" class="form-control" id="about" value="<?php //echo $row["teacher_about_me"];?>" placeholder="<?php //echo $row["teacher_about_me"];?>"></textarea>
                                     
                                 </div>
 
