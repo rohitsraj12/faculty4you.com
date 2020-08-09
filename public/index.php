@@ -261,7 +261,7 @@
                         
                         <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
                             <heeader class="text-primary-h"> 
-                                Our pratners
+                                Our partners
                             </header>
                         </div>
                         
