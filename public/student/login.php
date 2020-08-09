@@ -31,7 +31,7 @@
                 <nav class="header__nav">
                         <ul>
                             <!-- <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li> -->
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">teacher login</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">teacher login</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
@@ -93,6 +93,14 @@
     </div>
     
 
+    
+    <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="<?php base_url();?>js/script.js"></script>
+    
+    <script>
+        AOS.init();
+        </script>
     <script>
     const signUpButton = document.getElementById('signUp');
     const signInButton = document.getElementById('signIn');
