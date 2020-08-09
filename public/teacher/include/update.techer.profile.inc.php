@@ -66,10 +66,12 @@ if(isset($_POST['update'])){
                 teacher_photo = '$url'  WHERE teacher_id=$id"; 
     
                 $result = mysqli_query($conn, $query);
+                
+//    header("location: index.php");
+//    exit();
            }
     // 
     
-   header('location: index.php');
 
 } else {
      // redirect to register and empty field
