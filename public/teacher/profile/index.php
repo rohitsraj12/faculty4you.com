@@ -30,7 +30,7 @@
     $row = mysqli_fetch_assoc($result);
 
     // echo $teacher_name;
-    echo $row['teacher_email'];
+    // echo $row['teacher_email'];
 
 
 ?>
@@ -78,8 +78,9 @@
                                 </li>
                                 <li  class="text-dark h4 pb-4 font-weight-normal">
                                 <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i>
+                                +91 
                             <?php 
-                                echo $row['teacher_phone']; 
+                                 echo $row['teacher_phone']; 
                             ?>
                                 </li>
 
