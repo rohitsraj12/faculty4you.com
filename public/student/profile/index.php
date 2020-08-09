@@ -12,13 +12,15 @@
     require("../include/header.inc.php");
     require("../include/banner.inc.php");
 
+    $student_name = $_SESSION['user_name'];
+
     
     $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
-    JOIN cities
+    LEFT JOIN cities
         ON cities.city_id = std.city_id
-    JOIN states
+    LEFT JOIN states
         ON states.state_id = std.state_id
-    JOIN gender
+    LEFT JOIN gender
         ON gender.gender_id = std.gender_id
      WHERE student_user_name = '$student_name'";
     // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
@@ -26,7 +28,7 @@
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
-    echo $row['student_email'];
+    // echo $row['student_email'];
 
 ?>
 <div class="body-container">
