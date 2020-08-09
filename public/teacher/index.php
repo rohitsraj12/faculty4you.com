@@ -22,7 +22,7 @@
                             students Post
                         </header>
                     <?php 
-                        $city = $rows['city_id'];
+                        // $city = $rows['city_id'];
                         
                         $sql = "SELECT posts.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
                         FROM posts
