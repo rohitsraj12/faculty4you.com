@@ -68,6 +68,10 @@ p {
     font-weight: 500;
     color: $color-primary;
     text-transform: capitalize;
+
+    &:hover {
+      // color: rgba($font-primary, 0.8);
+    }
   }
 }
 
