@@ -44,7 +44,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 99;
+        z-index: 101;
       }
     }
   }
@@ -103,6 +103,7 @@
   }
 
   @media (max-width: 581px) {
+    @include shadow;
     background-color: $color-btn-1;
     width: 5rem;
     height: 5rem;
@@ -149,18 +150,15 @@
     }
   }
 }
-.top-header{
-  & > .wrap-container{
-    ul{
-      font-size: 1.5rem;
-      display: flex;
-      flex-direction: row;
-      justify-content: end;
+.top-header {
+  ul {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
-      li{
-        margin-right: 1rem;
-      }
+    li {
+      margin-right: 1rem;
     }
-
   }
 }
