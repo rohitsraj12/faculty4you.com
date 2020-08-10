@@ -36,9 +36,9 @@
                         <ul>
                             <li> 
                                 <label for="search">
-                                <i class="fa fa-search" aria-hidden="true"></i>
+                                <i class="fa fa-search pr-3" aria-hidden="true"></i>
                                 </label>
-                                <input type="search">
+                                <input type="search" placeholder="search">
                             </li>
                             <li class="nav__list"> <a href="#" class="nav__link">notification</a>
                                 <sub class="sub__nav" >
