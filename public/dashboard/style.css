@@ -9,8 +9,6 @@ a{
 
 .wrap-container{
     flex-wrap: wrap;
-    border-bottom: 1px solid blue;
-
 }
 .header-brand{
     width: 20%;
@@ -19,7 +17,6 @@ a{
 .header__nav{
     width: 80%;
     flex-wrap: wrap;
-    box-shadow: blueviolet;
 }
 .header__nav ul{
     display: flex;
