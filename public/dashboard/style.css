@@ -31,7 +31,7 @@ a{
 }
 .header__nav ul{
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     justify-content: space-around;
 }
 ul li:first-child{
