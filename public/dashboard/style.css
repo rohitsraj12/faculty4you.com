@@ -1,4 +1,6 @@
 *, ::after, ::before{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
 }
@@ -6,13 +8,22 @@ a{
     list-style: none;
 
 }
+.body-header{
+    padding: 0;
+}
 
 .wrap-container{
     flex-wrap: wrap;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+    text-align: center;
+
 }
 .header-brand{
     width: 20%;
+    padding-bottom: 20px;
     font-size: 1.5rem;
+    padding-top: 1rem;
+    
 }
 .header__nav{
     width: 80%;
@@ -22,9 +33,6 @@ a{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
-.header__nav ul > li{
-    border-right: 1px solid blue;
 }
 ul li:first-child{
     width: 70%;
@@ -36,4 +44,7 @@ input{
 }
 sub{
     display: none;
+}
+.body-container-left{
+    width: 20%;
 }
