@@ -108,6 +108,9 @@ p {
   color: #454b69;
   text-transform: capitalize; }
 
+.banner-content__header h5 {
+  line-height: 3.5rem; }
+
 .testimonial-client-name cite {
   font-family: "open sans";
   font-size: 1.8rem;
@@ -946,15 +949,25 @@ label {
       background-repeat: no-repeat;
       background-size: 550px 90vh; } }
   .body-banner .banner-content {
-    width: 90%;
+    width: 60%;
     height: 100vh;
-    margin: 0 auto;
+    margin: 0 0 0 5%;
     padding-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     position: relative; }
+    @media (min-width: 769px) {
+      .body-banner .banner-content {
+        width: 60%;
+        height: 100vh;
+        margin: 0 0 0 5%; } }
+    @media (max-width: 768px) {
+      .body-banner .banner-content {
+        width: 90%;
+        height: 100vh;
+        margin: 0 auto; } }
     .body-banner .banner-content::before {
       content: "";
       width: 15rem;
@@ -982,10 +995,17 @@ label {
         .body-banner .banner-content .text-primary-h {
           padding-bottom: 4rem;
           display: none; } }
+    @media (min-width: 768px) {
+      .body-banner .banner-content-body {
+        padding-top: 2rem;
+        width: 90%; } }
     @media (max-width: 582px) {
       .body-banner .banner-content-body {
         position: absolute;
         bottom: 10%; } }
+    .body-banner .banner-content-body .body-top {
+      border-bottom: 1px solid rgba(100, 100, 100, 0.5);
+      margin-bottom: 2rem; }
   .body-banner .banner-image {
     position: absolute;
     z-index: -2; }
@@ -1233,20 +1253,28 @@ input, .form-control {
 
 .section-faq-body header {
   position: relative;
-  padding: 2rem;
+  padding: 1rem 2rem;
   font-family: "open sans";
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #646464; }
 
 .section-faq-body .toggle__btn {
   position: absolute;
-  top: 2.2rem;
-  right: 3rem; }
+  top: 1rem;
+  right: 1.5rem; }
   .section-faq-body .toggle__btn i {
     font-size: 2.5rem; }
+  .section-faq-body .toggle__btn::before {
+    content: "";
+    height: 40px;
+    width: 1px;
+    background-color: #e7e7e7;
+    position: absolute;
+    right: 30px;
+    top: -8px; }
 
 .section-faq-body footer {
-  padding: 2rem;
+  padding: 2rem 2rem 0.5rem 2rem;
   display: none; }
 
 .body-header {
@@ -1418,7 +1446,7 @@ input, .form-control {
       background-size: 550px 90vh; } }
 
 .banner-content {
-  width: 90%;
+  width: 60%;
   height: 100vh;
   margin: 0 auto;
   padding-top: 2rem;
