@@ -1,28 +1,38 @@
-.section{
-    &-faq-body{
-        header{
-            position: relative;
-            padding: 2rem ;
-            font:{
-                family:$font-primary;
-                size: 2rem;
-            }
-            color: $color-gray-dark-1;
-        }
-
-        .toggle__btn{
-            position: absolute;
-            top: 2.2rem;
-            right: 3rem;
-            i{
-                font:{
-                    size: 2.5rem;
-                }
-            }
-        }
-        footer{
-            padding: 2rem;
-            display: none;
-        }
+.section {
+  &-faq-body {
+    header {
+      position: relative;
+      padding: 1rem 2rem;
+      font: {
+        family: $font-primary;
+        size: 1.7rem;
+      }
+      color: $color-gray-dark-1;
     }
+
+    .toggle__btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      i {
+        font: {
+          size: 2.5rem;
+        }
+      }
+
+      &::before {
+        content: "";
+        height: 40px;
+        width: 1px;
+        background-color: $color-gray-light-2;
+        position: absolute;
+        right: 30px;
+        top: -8px;
+      }
+    }
+    footer {
+      padding: 2rem 2rem 0.5rem 2rem;
+      display: none;
+    }
+  }
 }
