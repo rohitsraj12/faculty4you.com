@@ -34,6 +34,21 @@ $(document).ready(function () {
     $("." + selectAtt).fadeIn();
   });
 
+  $(".teacher").hide();
+  $(".student").hide();
+
+  // tab
+  $(".tab button").click(function (event) {
+    event.preventDefault();
+    var selectAtt = $(this).attr("data-faq");
+
+    $(".tab button").removeClass("active");
+    $(this).addClass("active");
+
+    $(".section-faq").hide();
+    $("." + selectAtt).fadeIn();
+  });
+
   // FAQ
   $(".faq__header").click(function () {
     $(this).find("i").toggleClass("fa-angle-down");
