@@ -1231,6 +1231,24 @@ input, .form-control {
     .tab button.active {
       border-bottom: 2px solid #5388fe; } }
 
+.section-faq-body header {
+  position: relative;
+  padding: 2rem;
+  font-family: "open sans";
+  font-size: 2rem;
+  color: #646464; }
+
+.section-faq-body .toggle__btn {
+  position: absolute;
+  top: 2.2rem;
+  right: 3rem; }
+  .section-faq-body .toggle__btn i {
+    font-size: 2.5rem; }
+
+.section-faq-body footer {
+  padding: 2rem;
+  display: none; }
+
 .body-header {
   padding-top: 1rem;
   width: 100%;
