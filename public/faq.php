@@ -17,16 +17,16 @@
                     </div>
         <div class="row">
             <div class="col-sm-3">
-                <div class="tab" data-aos="zoom-out-up" data-aos-duration="1000">
-                    <button class="tablinks active" data-post="general">General FAQs</button>
-                    <button class="tablinks" data-post="student">Students FAQs</button>
-                    <button class="tablinks" data-post="teacher">Teachers FAQs</button>
+                <div class="tab faq__tab" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <button class="tablinks active" data-faq="general">General FAQs</button>
+                    <button class="tablinks" data-faq="student">Students FAQs</button>
+                    <button class="tablinks" data-faq="teacher">Teachers FAQs</button>
                 </div>
             </div>
             
             <div class="col-sm-9">
-                <section class="section-faq ">
-                    <div class="section-faq-body wrap-container"> 
+                <section class="general section-faq">
+                <div class="section-faq-body wrap-container"> 
                         <article class="mb-4 border">
                             <header class="bg-light text-dark border-bottom faq__header">
                                 some question
@@ -59,9 +59,28 @@
                         </article>
                     </div>
                 </section>
-                <section class="section-faq">
-                    <div class="section-faq-body wrap-container"> 
+                <section class="student section-faq">
+                <div class="section-faq-body wrap-container"> 
                         <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article> <article class="mb-4 border">
                             <header class="bg-light text-dark border-bottom faq__header">
                                 some question
                                 <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -93,8 +112,18 @@
                         </article>
                     </div>
                 </section>
-                <section class="section-faq">
+                <section class="teacher section-faq">
                     <div class="section-faq-body wrap-container"> 
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
                         <article class="mb-4 border">
                             <header class="bg-light text-dark border-bottom faq__header">
                                 some question
