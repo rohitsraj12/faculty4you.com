@@ -13,7 +13,7 @@
      
         require("include/banner.inc.php");
 
-    // $student_name = $_SESSION['user_name'];
+    $student_name = $_SESSION['user_name'];
 
         
     $sql = "SELECT * FROM std 
@@ -35,19 +35,19 @@
                     <section class="section-search-result wrap-container">
                         
 <?php
-    // $city_id = $row['city_id'];
+    $city_id = $row['city_id'];
 
-    // $sql = "SELECT * FROM teachers 
-    //         WHERE city_id = '$city_id'";
+    $sql = "SELECT * FROM teachers 
+            WHERE city_id = '$city_id'";
 
-    // $result = mysqli_query($conn, $sql);
-    // $query_results = mysqli_num_rows($result);
+    $result = mysqli_query($conn, $sql);
+    $query_results = mysqli_num_rows($result);
 
     ?>
         
         <div class="search-result-num" data-aos="zoom-out-up" data-aos-duration="1000">
             <p>
-                    <!-- <?php echo $query_results; ?> results are matching -->
+                    <?php echo $query_results; ?> results are matching
             </p>
         </div>
         <section class="section-body"> 
@@ -55,13 +55,13 @@
 
    
 
-    // if($query_results > 0){
-    //     while($row = mysqli_fetch_assoc($result)){
+     if($query_results > 0){
+         while($row = mysqli_fetch_assoc($result)){
 
             ?>      
             
             
-            <!-- <article class="article-search-result" data-aos="zoom-out-up" data-aos-duration="1000">
+            <article class="article-search-result" data-aos="zoom-out-up" data-aos-duration="1000">
                     <div class="block-left">
                         <figure class="article-search__figure">
                             <img src="<?php echo base_url() . $row['teacher_photo']?>" alt="">
@@ -77,7 +77,7 @@
                                 <ul>
                                     <li>qualification: <strong><?php echo $row['city_id']?></strong></li>
                                     <li>Experience: <strong><?php echo $row['teacher_experience']?></strong></li>
-                                    <li>City:<strong><?php echo $row['city_name']?></strong></li>
+                                    <li>City:<strong><?php echo $row['city_id']?></strong></li>
                                     <li>available for : 
                                         <strong><?php if($row["teacher_online_one_to_one"] == 1){echo "Online one to one";} ?></strong><br/>
                                         <strong> <?php if($row["teacher_online_group"] == 1){echo "Online group";}?></strong><br/>
@@ -93,14 +93,14 @@
                         </footer>
                     </div>
                 </article>
-             -->
+            
             
             
             <?php
 
-    //    }
-    //} else {
-        //echo "there are no result";
+       }
+    } else {
+        echo "there are no result";
         
         ?> 
         
@@ -111,7 +111,7 @@
         </div>
 
         <?php
-    // }
+    }
  
 ?> 
                     </section>
