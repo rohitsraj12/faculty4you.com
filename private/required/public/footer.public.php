@@ -1,16 +1,16 @@
 <div class="body-footer" >    
     <footer class="wrap-container text-light pt-5">
         <div class="row">
-                <section class="col-sm-3">
+                <section class="col-sm-4">
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             
                             faculty4you
                         </header>
-                        <p class="text-light h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quidem.</p>
+                        <p class="text-light h4">we provide top <strong>trainers</strong> for <strong>academic/non-academic</strong> and <strong>online/offline</strong> activities. <strong>Faculty for you</strong>  is the best platform which helps you in reaching your destination.</p>
                     </article>
                 </section>
-                <section class="col-sm-6">
+                <section class="col-sm-5">
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             Quick links
