@@ -35,18 +35,9 @@ $(document).ready(function () {
   });
 
   // FAQ
-  $(".faq__header").click(function(){
-    $(this).parent().find('footer').slideToggle(1000);
-
-  })
-
-// bahoth practice kiya hai..
-// sorry sir
-hehehehe onkeydownsitemap ka chaloo karle chat delet karke
-hehe ok 
-
-
-
-
-
+  $(".faq__header").click(function () {
+    $(this).find("i").toggleClass("fa-angle-down");
+    $(this).find("i").toggleClass("fa-angle-up");
+    $(this).parent().find("footer").slideToggle(600);
+  });
 });
