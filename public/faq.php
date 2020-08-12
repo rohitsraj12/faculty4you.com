@@ -15,6 +15,41 @@
                     FAQ
                 </header>
             </div>
+            <div class="section-faq-body wrap-container"> 
+                <article class="mb-4 border">
+                    <header class="bg-light text-dark border-bottom faq__header">
+                        some question
+                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </header>
+                    <footer class="py-4 h3 text-dark">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                    </footer>
+                </article>
+                <article class="mb-4 border">
+                    <header class="bg-light text-dark border-bottom faq__header">
+                        some question
+                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </header>
+                    <footer class="py-4 h3 text-dark">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                    </footer>
+                </article>
+                <article class="mb-4 border">
+                    <header class="bg-light text-dark border-bottom faq__header">
+                        some question
+                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </span>
+                    </header>
+                    <footer class="py-4 h3 text-dark">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                    </footer>
+                </article>
+
+                
+            </div>
+           
         </section>
     </main>
 </div>
