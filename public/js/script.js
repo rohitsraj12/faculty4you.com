@@ -33,4 +33,20 @@ $(document).ready(function () {
     $(".post__cat").hide();
     $("." + selectAtt).fadeIn();
   });
+
+  // FAQ
+  $(".faq__header").click(function(){
+    $(this).parent().find('footer').slideToggle(1000);
+
+  })
+
+// bahoth practice kiya hai..
+// sorry sir
+hehehehe onkeydownsitemap ka chaloo karle chat delet karke
+hehe ok 
+
+
+
+
+
 });
