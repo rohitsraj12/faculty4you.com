@@ -35,10 +35,11 @@
                     <nav class="header__nav">
                         <ul>
                             <li> 
-                                <label for="search">
+                                <form action="POST" class="header-search">
                                 <i class="fa fa-search pr-3" aria-hidden="true"></i>
-                                </label>
                                 <input type="search" placeholder="search">
+                                </form>
+                                
                             </li>
                             <li class="nav__list"> <a href="#" class="nav__link">notification</a>
                                 <sub class="sub__nav" >
