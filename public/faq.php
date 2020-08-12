@@ -8,49 +8,128 @@
 ?>
 
 <div class="body-container">
-    <main>
-        <section class="section-faq">
-            <div class="section-header u-center-text">
-                <heeader class="text-primary-h"> 
-                    FAQ
-                </header>
+    <main class="wrap-container">
+        
+    <div class="section-header u-center-text">
+                        <heeader class="text-primary-h"> 
+                            FAQ
+                        </header>
+                    </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <div class="tab" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <button class="tablinks active" data-post="general">General FAQs</button>
+                    <button class="tablinks" data-post="student">Students FAQs</button>
+                    <button class="tablinks" data-post="teacher">Teachers FAQs</button>
+                </div>
             </div>
-            <div class="section-faq-body wrap-container"> 
-                <article class="mb-4 border">
-                    <header class="bg-light text-dark border-bottom faq__header">
-                        some question
-                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </header>
-                    <footer class="py-4 h3 text-dark">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                    </footer>
-                </article>
-                <article class="mb-4 border">
-                    <header class="bg-light text-dark border-bottom faq__header">
-                        some question
-                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </header>
-                    <footer class="py-4 h3 text-dark">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                    </footer>
-                </article>
-                <article class="mb-4 border">
-                    <header class="bg-light text-dark border-bottom faq__header">
-                        some question
-                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                        </span>
-                    </header>
-                    <footer class="py-4 h3 text-dark">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                    </footer>
-                </article>
-
-                
+            
+            <div class="col-sm-9">
+                <section class="section-faq">
+                    <div class="section-faq-body wrap-container"> 
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
+                <section class="section-faq">
+                    <div class="section-faq-body wrap-container"> 
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
+                <section class="section-faq">
+                    <div class="section-faq-body wrap-container"> 
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                        <article class="mb-4 border">
+                            <header class="bg-light text-dark border-bottom faq__header">
+                                some question
+                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </header>
+                            <footer class="faq__footer h3 text-dark">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            </footer>
+                        </article>
+                    </div>
+                </section>
             </div>
-           
-        </section>
+        </div>
+        
     </main>
 </div>
 
