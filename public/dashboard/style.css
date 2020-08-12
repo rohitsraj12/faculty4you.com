@@ -15,7 +15,6 @@ a{
 .wrap-container{
     flex-wrap: wrap;
     box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-    text-align: center;
 
 }
 .header-brand{
@@ -24,6 +23,9 @@ a{
     font-size: 1.5rem;
     padding-top: 1rem;
     
+}
+.header-search{
+    display: inline;
 }
 .header__nav{
     width: 80%;
