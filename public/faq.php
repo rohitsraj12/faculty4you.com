@@ -25,7 +25,7 @@
             </div>
             
             <div class="col-sm-9">
-                <section class="section-faq">
+                <section class="section-faq ">
                     <div class="section-faq-body wrap-container"> 
                         <article class="mb-4 border">
                             <header class="bg-light text-dark border-bottom faq__header">
