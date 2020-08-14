@@ -1,0 +1,44 @@
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+a{
+    list-style: none;
+
+}
+.body-header{
+    padding: 0;
+}
+
+.wrap-container{
+    box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+
+}
+.header-brand{
+    width: 250px;
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    padding-top: 1rem;
+    
+}
+.header-search{
+    
+}
+.header__nav{
+  }
+.header__nav ul{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+}
+input{
+    border: none;
+}
+sub{
+    display: none;
+}
+.body-container-left{
+    width: 250px;
+}
