@@ -16,8 +16,9 @@ $active = "teacher";
             </div>
             <section class="section-record">
                 <div class="container">
-                    <table class="bg-light table table-sm">
-                        <thead class="thead-dark">
+                    <div class="wrap-table">
+                    <table class="bg-light table">
+                        <thead class="thead-light">
                             <tr>
                             <th scope="col">id</th>
                             <th scope="col">Name</th>
@@ -45,15 +46,16 @@ $active = "teacher";
                                 <th scope="row"><?php echo $row['teacher_id'];?></th>
                                 <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                 <td><?php echo $row['teacher_email'];?></td>
-                                <td><?php echo $row['teacher_phone'];?></td>
+                                <td>+91 <?php echo $row['teacher_phone'];?></td>
                                 <td><?php echo $row['city_name'] . " ," . $row['state_name'] ;?></td>
-                                <td><a class="btn btn-primary" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
+                                <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
                             </tr>
                             <?php 
                             }
                             ?>
                         </tbody>
-                    </table>           
+                    </table>
+                    </div>          
                 </div>
 
 
