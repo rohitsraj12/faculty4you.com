@@ -4,7 +4,7 @@ if(isset($_POST['reset_password_submit'])){
     $selector = $_POST['selector'];
     $validator = $_POST['validator'];
     $pwd = $_POST['pwd'];
-    $pwd_repeat = $_POST['pwd_repeat'];
+    $pwd_repeat = $_POST['pwd-repeat'];
 
     if(empty($pwd) || empty($pwd_repeat)){
         header('Location: ../create-new-password.php?newpwd=emplty');
@@ -19,20 +19,20 @@ if(isset($_POST['reset_password_submit'])){
     require_once '../../../private/config/db_connect.php';
 
 
-    $sql = "SELECT * FROM pwd_rest WHERE pwd_reset_selector = ? AND pwd_reset_expires >= ?";
+    $sql = "SELECT * FROM pwd_reset WHERE pwd_reset_selector = ? AND pwd_reset_expires >= ?";
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
         echo "there was a error!";
         exit();
     } else {
-        mysqli_stmt_bind_param($stmt, "ss", $current_date $selector);
+        mysqli_stmt_bind_param($stmt, "ss", $selector, $current_date);
         mysqli_stmt_execute($stmt);
 
         $result = mysqli_stmt_get_result($stmt);
 
         if(!$row = mysqli_fetch_assoc($result)){
-            echo "re need to resubmit your reset request.";
+            echo "you need to resubmit your reset request.";
             exit();
         } else {
             $token_bin = hex2bin($validator);
