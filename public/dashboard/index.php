@@ -1,12 +1,16 @@
 <?php 
+$active = "home";
+
+    require("../../private/config/config.php");
+    require("../../private/config/db_connect.php");
     include("include/header.inc.php");
 
 ?>
     <div class="body-container-right"> 
-
+        <div class="wrap-container">
         <div class="page-header">
             <div class="container">
-                <header class="py-3">
+                <header class="header-text-1" class="py-3">
                     DASHBOARD
                 </header>
             </div>
@@ -43,7 +47,7 @@
         </section>
         <section class="section-middle"></section>
         <section class="section-bottom"></section>
-
+        </div>
     </div>
 
 <?php
