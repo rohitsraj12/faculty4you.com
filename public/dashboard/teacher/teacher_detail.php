@@ -34,7 +34,7 @@
             <div class="page-header">
                 <div class="container">
                     <header class="header-text-1" class="py-3">
-                           Teacher profile
+                          <a href=""></a> Teacher Records
                     </header>
                     <span class="header-text-2">
                         <?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?>
@@ -46,81 +46,131 @@
                     
                     <div class="row">
                         <div class="col-md-3">
-                            <img class="w-100" src="<?php echo base_url() . $row['teacher_photo'];?>" class="card-img" alt="...">
+                            <article class="member-left">
+                                <figure>
+                                    <?php 
+
+                                        if($row['teacher_photo'] == ""){
+                                    ?>
+                                            <img class="member__img" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                    <?php
+                                        } else {
+                                    ?>
+                                            <img class="member__img" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                                    <?php
+                                        }
+                                    ?>
+                                </figure>
+                                <header class="member__header header-text-2">
+                                    <?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?>
+                                </header>
+                                <p class="sub-header-text-1 pt-2">
+                                    <?php echo $row['sub_name'];?> teacher
+                                </p>
+
+                                <?php
+                                    
+                                    $member = $row['teacher_membership_status'];
+                                    if(!$member == "active"){
+                                        echo "<a href='#' class='member-nonactive'>Member</a>";
+                                    } else {
+                                        echo "<span class='member-active'>Member</span>";
+                                    }
+                                ?>
+                                <p class="">
+                                    <?php echo $row['teacher_email'];?>
+                                </p>
+                            </article>
                         </div>
                         <div class="col-md-9">
-                            <h5 class="text-center py-5 mb-5 h3 bg-danger text-light"><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></h5>
-                            <span>
-                            </span>
-                            <ul>
+                            <article class="member-right">
+                                    <header class="header-text-3">
+                                        profile detail
+                                    </header>
+                                <span>
+                                </span>
+                                <ul>
+                                
+                                    <li class="row">
+                                        
+                                        <div class="col-3">
+                                            Username
+                                        </div>
+                                        <div class="col-9">
+                                            <?php echo $row['teacher_user_name'];?>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        
+                                        <div class="col-3">
+                                            Email
+                                        </div>
+                                        <div class="col-9">
+                                            <?php echo $row['teacher_email'];?>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        
+                                        <div class="col-3">
+                                            phone number
+                                        </div>
+                                        <div class="col-9">
+                                            +91 <?php echo $row['teacher_phone'];?>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="row">
+                                        <div class="col-3">
+                                            Experience
+                                        </div>
+                                        <div class="col-9">
+                                            <?php echo $row['teacher_experience'];?> Years of experience.
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                        
+                                        <div class="col-3">
+                                        Teaching Subject
+                                        </div>
+                                        <div class="col-9">
+                                            <?php echo $row['sub_name'];?>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                    
+                                        <div class="col-3">
+                                            Gender
+                                        </div>
+                                        <div class="col-9">
+                                            <?php echo $row['gender_type'];?>
+                                        </div>
+                                    </li>
+                                    <li class="row">
+                                    
+                                    <div class="col-2">
+                                        
+                                        </div>
+                                        <div class="col-8"></div>
+                                    </li>
+                                    <li class="row">
+                                    
+                                    <div class="col-2 bg-light">
+                                        
+                                        </div>
+                                        <div class="col-8"></div>
+                                    </li>
+
+                                    <li class="row border-top pt-4">
+                                        <div class="col-3">
+                                            About me
+                                        </div>
+                                        <div class="col-9">
+                                        <?php echo $row['teacher_about_me'];?>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </article>
                             
-                                <li class="row mb-2">
-                                    
-                                    <div class="col-3">
-                                        Username
-                                    </div>
-                                    <div class="col-9">
-                                        <?php echo $row['teacher_user_name'];?>
-                                    </div>
-                                </li>
-                                <li class="row">
-                                    
-                                    <div class="col-3">
-                                        Email
-                                    </div>
-                                    <div class="col-9">
-                                        <?php echo $row['teacher_email'];?>
-                                    </div>
-                                </li>
-                                <li class="row my-3">
-                                    <div class="col-3">
-                                        About me
-                                    </div>
-                                    <div class="col-9">
-                                    <?php echo $row['teacher_about_me'];?>
-                                    </div>
-                                </li>
-                                <li class="row mb-2">
-                                    <div class="col-3">
-                                        Experience
-                                    </div>
-                                    <div class="col-9">
-                                        <?php echo $row['teacher_experience'];?>
-                                    </div>
-                                </li>
-                                <li class="row  mb-2">
-                                    
-                                    <div class="col-3">
-                                    Teaching Subject
-                                    </div>
-                                    <div class="col-9">
-                                        <?php echo $row['sub_name'];?>
-                                    </div>
-                                </li>
-                                <li class="row">
-                                
-                                    <div class="col-3">
-                                        Gender
-                                    </div>
-                                    <div class="col-9">
-                                        <?php echo $row['gender_type'];?>
-                                    </div>
-                                </li>
-                                <li class="row">
-                                
-                                <div class="col-2">
-                                    
-                                    </div>
-                                    <div class="col-8"></div>
-                                </li>
-                                <li class="row">
-                                
-                                <div class="col-2 bg-light">
-                                    
-                                    </div>
-                                    <div class="col-8"></div>
-                                </li>
-                            </ul>
                         </div>
                     </div>
 
