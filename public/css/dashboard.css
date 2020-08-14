@@ -182,8 +182,9 @@ a:hover {
   border-bottom: 1px solid #e1e5eb;
 }
 
-.side-nav__link {
-  padding: 15px 0 10px 40px;
+.side-nav__link,
+.side-sub-nav__link {
+  padding: 15px 0 10px 20px;
   /* color: #007bff; */
   color: #3d5170;
   border-left: 4px solid #fbfbfb;
@@ -198,17 +199,38 @@ a:hover {
   min-width: 100%;
   max-width: 100%;
   transition: transform 400ms ease-in-out;
+  position: relative;
 }
 
-.side-nav__link:hover {
+.side-nav__list i {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  font-size: 24px;
+}
+
+.side-sub-nav {
+  display: none;
+}
+
+.side-nav__link:hover,
+.side-sub-nav__link:hover {
   border-left: 4px solid #c4183c;
   color: #c4183c;
   /* transition: box-shadow 0.2s ease, color 0.2s ease, background-color 0.2s ease; */
 }
 
+.side-sub-nav__link {
+  padding-left: 40px;
+}
+
 .active {
   /* border-left: 2px solid #007bff; */
   border-left: 4px solid #c4183c;
+  color: #c4183c;
+}
+
+.sub_active {
   color: #c4183c;
 }
 
@@ -346,4 +368,44 @@ a:hover {
     0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
   text-align: center;
   padding: 30px 10px;
+}
+
+/* *********************
+
+    section faq
+
+************************ */
+.section-faq header {
+  position: relative;
+  padding: 10px 2rem;
+  font-size: 17px;
+  color: #686464;
+}
+
+.section-faq .toggle__btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.section-faq .fa {
+  font-size: 20px;
+  color: red;
+}
+
+.section-faq i::before {
+  content: "";
+  height: 30px;
+  width: 1px;
+  background-color: #dadada;
+  position: absolute;
+  right: 30px;
+  top: -8px;
+}
+
+.section-faq footer {
+  padding: 20px 20px 10px;
+  display: none;
+  background-color: #fff;
+  font-size: 16px;
 }
