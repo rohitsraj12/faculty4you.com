@@ -17,7 +17,7 @@
         crossorigin="anonymous"
      />
      <link rel="stylesheet" href="<?php base_url();?>css/style.css">
-     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="css/dashboard.css">
 
       
 </head>
