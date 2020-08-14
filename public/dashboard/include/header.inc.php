@@ -1,6 +1,5 @@
 <?php 
-    require("../../private/config/config.php");
-    require("../../private/config/db_connect.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,11 +23,11 @@
 <body>
         <div class="body-wrap">
             <div class="body-header" data-aos="zoom-out-down" data-aos-duration="1000">
-              <header class="wrap-container">
+              <header class="wrap-header">
                     <div class="header-brand">
                         <a href="<?php base_url();?>index.php">
                             <!-- <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you"> -->
-                            facultyforyou admin
+                            faculty for you
                         </a>
                     </div>
                     <!-- end header brand -->
@@ -83,15 +82,17 @@
                     <div class="body-container-left">
                         <nav class="side-main__nav">
                             <ul>
-                                <li class="side-nav__list"><a class="side-nav__link" href=""> dashboard </a></li>
-                                <li class="side-nav__list"><a class="side-nav__link" href=""> page content </a></li>
-                                <li class="side-nav__list"><a class="side-nav__link" href=""> teachers </a></li>
-                                <li class="side-nav__list"><a class="side-nav__link" href=""> students </a></li>
-                                <li class="side-nav__list"><a class="side-nav__link" href=""> testimonial </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "home"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> dashboard </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "page content"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> page content </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> teachers </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> students </a></li>
                             </ul>
-                            <ul>
-                                <li class="side-nav__list"><a class="side-nav__link" href=""> place </a></li>
-                                <li class="side-nav__list"><a class="side-nav__link" href=""> study </a></li>
+                            <ul> 
+                                <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> FAQs </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> testimonial </a></li>
+                            
+                                <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> place </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> study </a></li>
                             </ul>
                         </nav>
                     </div>
