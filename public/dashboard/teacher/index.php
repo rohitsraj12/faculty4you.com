@@ -35,7 +35,7 @@ $active = "teacher";
                                     ON cities.city_id = teachers.city_id
                                 LEFT JOIN states
                                     ON states.state_id = teachers.state_id
-                                ORDER BY teacher_id ASC";
+                                ORDER BY teacher_id DESC";
                             
                                 $result = mysqli_query($conn, $sql);
                                 $row = mysqli_fetch_assoc($result);
