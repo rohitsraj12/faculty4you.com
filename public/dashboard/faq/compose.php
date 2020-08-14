@@ -7,27 +7,90 @@ $sub = "faq_compose";
     include("../include/header.inc.php");
 
 ?>
+    
     <div class="body-container-right"> 
+        
+
+    <?php
+         if(isset($_REQUEST['submit_faq'])){
+            //checking  for empty field
+            if(($_REQUEST['question'] == "") || ($_REQUEST['category'] == "") || ($_REQUEST['answer'] == "")){
+    ?>
+        <div class="alert alert-danger" role="alert">
+            <?php  echo "Fill all fields..";?>
+        </div>
+    <?php 
+            } else {
+                $q = $_REQUEST['question'];
+                $cat = $_REQUEST['category'];
+                $ans = $_REQUEST['answer'];
+                $status = "1";
+    
+                $query = "INSERT INTO faqs (faq_question, faq_answer, faq_category, faq_status)
+                          VALUES('$q', '$ans', '$cat', $status)";
+                          
+                $result = mysqli_query($conn, $query); 
+                // test if there was a query error
+                if($result) {
+
+            ?>
+                <div class="alert alert-primary" role="alert">
+                    <?php  echo "successfully Inserted.!";?>
+                </div>
+            <?php 
+                }else{
+                    die("Database query failed " . mysqli_connect_error($conn));
+                }
+            }
+        }            
+    ?>
         <div class="wrap-container">
         <div class="page-header">
             <div class="container">
                 <header class="header-text-1" class="py-3">
-                    Faq
+                    compose new Faq
                 </header>
             </div>
         </div>
         <section class="section-faq">
-            
-            <article class="mb-4 border">
-                <header class="bg-light text-dark border-bottom faq__header">
-                    some question
-                    <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                    </span>
-                </header>
-                <footer class="faq__footer h3 text-dark">
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                </footer>
-            </article>
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="q">Question</label>
+                    <input type="text" class="form-control" name="question" id="q">
+                    <small id="emailHelp" class="form-text text-muted">enter FAQ question here.</small>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        Select category
+                    </div>
+                    <div class="col-9">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="category" id="general" value="general">
+                            <label class="form-check-label" for="general">
+                                General category question
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="category" id="student" value="student">
+                            <label class="form-check-label" for="student">
+                                Student category question
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="category" id="teacher" value="teacher">
+                            <label class="form-check-label" for="teacher">
+                                Teacher category question
+                            </label>
+                        </div>
+                    </div>
+                    
+                </div> 
+                <div class="form-group">
+                    <label for="answer">Example textarea</label>
+                    <textarea class="form-control" id="answer" name="answer" rows="3"></textarea>
+                </div>   
+                <input class="btn btn-primary" type="submit" name="submit_faq" value="Submit new FAQ">
+            </form>
         </section>
         <section class="section-bottom"></section>
         </div>
