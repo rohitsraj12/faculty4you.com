@@ -101,10 +101,29 @@
                                 </li>
                                 <li class="side-nav__list"><a class="side-nav__link <?php if($active == "testimonial"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/"> testimonial </a></li>
                             
-                                <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> place </a></li>
+                                <li class="side-nav__list">
+                                    <a class="side-nav__link  side-nav-toggle " href="<?php base_url();?>dashboard/testimonial/">Add records <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="side-sub-nav">
+                                        <li>
+                                            <a class="side-sub-nav__link <?php if($active == "faq" && $sub == "faq_view"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/faq/">Add new city</a> 
+                                        </li>
+                                        <li>
+                                        <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">Add new state</a> 
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> study </a></li>
                             </ul>
                         </nav>
                     </div>
                     <!-- end  left -->
-                    
+                    <!-- 
+                        -   subjects
+                        -   category
+                        -   
+
+                        -   city
+                        -   state
+                        -   
+
+                     -->
