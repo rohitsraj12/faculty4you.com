@@ -47,15 +47,16 @@ $active = "student";
         </section> -->
         <section class="section-record">
             <div class="container">
-                <table class="bg-light table table-sm">
-                    <thead class="thead-dark">
+                <div class="wrap-table">
+                <table class="bg-light table">
+                    <thead class="thead-light">
                         <tr>
                         <th scope="col">id</th>
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Phone</th>
                         <th scope="col">Location</th>
-                        <th scope="col">photo</th>
+                        <!-- <th scope="col">photo</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -76,15 +77,15 @@ $active = "student";
                             <th scope="row"><?php echo $row['student_id'];?></th>
                             <td><?php echo $row['student_first_name'] . " " . $row['student_last_name'] ;?></td>
                             <td><?php echo $row['student_email'];?></td>
-                            <td><?php echo $row['student_phone'];?></td>
-                            <td><?php echo $row['city_name'] . " ," . $row['state_name'] ;?></td>
+                            <td>+91 <?php echo $row['student_phone'];?></td>
                             <td><?php echo $row['city_name'] . " ," . $row['state_name'] ;?></td>
                         </tr>
                         <?php 
                         }
                         ?>
                     </tbody>
-                </table>           
+                </table>    
+                </div>       
             </div>
 
 
