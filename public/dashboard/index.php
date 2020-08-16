@@ -1,5 +1,11 @@
 <?php 
-$active = "home";
+    session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: ../index.php');
+    }
+
+    $active = "Dashboard";
 
     require("../../private/config/config.php");
     require("../../private/config/db_connect.php");
