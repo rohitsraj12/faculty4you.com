@@ -22,8 +22,16 @@ $active = "home";
                         <h2 class="text-center primary-text">
                             registered students
                         </h2>
+
                         <p>
-                            3123213
+                            <?php
+
+                                    $query = "SELECT * FROM std";
+                                    $result = mysqli_query($conn, $query);
+                                    $row = mysqli_num_rows($result);
+
+                                 echo $row;
+                            ?>
                         </p>
                     </article>
                     <article class="border bg-light">
@@ -31,7 +39,12 @@ $active = "home";
                             registered teachers
                         </h2>
                         <p>
-                            12321
+                        <?php
+                            $query = "SELECT * FROM teachers";
+                            $result = mysqli_query($conn, $query);
+                            $row = mysqli_num_rows($result);
+                            echo $row;
+                        ?>
                         </p>
                     </article>
                     <article class="border bg-light">
@@ -39,7 +52,12 @@ $active = "home";
                             student's post
                         </h2>
                         <p>
-                            12312
+                        <?php
+                            $query = "SELECT * FROM posts";
+                            $result = mysqli_query($conn, $query);
+                            $row = mysqli_num_rows($result);
+                            echo $row;
+                        ?>
                         </p>
                     </article>
                 </div>
