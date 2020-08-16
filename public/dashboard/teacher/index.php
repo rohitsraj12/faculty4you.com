@@ -45,7 +45,11 @@ $active = "teacher";
                                 ORDER BY teacher_id DESC";
                             
                                 $result = mysqli_query($conn, $sql);
-                                $row = mysqli_fetch_assoc($result);
+                                
+
+                        // $query_results = mysqli_num_rows($result);
+
+                        // echo $query_results;
 
                                 while($row = mysqli_fetch_assoc($result)){
                             ?>
@@ -62,6 +66,8 @@ $active = "teacher";
                             ?>
                         </tbody>
                     </table>
+                    <?php 
+                    ?>
                     </div>          
                 </div>
 
