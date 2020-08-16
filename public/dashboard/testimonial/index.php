@@ -28,15 +28,14 @@
                     $sql = "SELECT testimonials.*, std.* FROM testimonials 
                     LEFT JOIN std
                         ON std.student_id = testimonials.student_id
-                        
                     ORDER BY testimonial_id DESC";
                 
                     $result = mysqli_query($conn, $sql);
-                    $query_results = mysqli_num_rows($result);
+                    // $query_results = mysqli_num_rows($result);
 
                     // echo $query_results;
                     // $row = mysqli_fetch_assoc($result);
-                    if($query_results > 0){
+                    // if($query_results > 0){
 
                         while($row = mysqli_fetch_assoc($result)){
                 ?>
@@ -79,9 +78,9 @@
                     </div>
                 <?php 
                 } 
-            }else {
-                    // echo "there are no result";
-                }
+            // }else {
+            //         // echo "there are no result";
+            //     }
                 ?>
                 </div>
             </div>
