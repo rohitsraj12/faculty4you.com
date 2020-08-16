@@ -33,7 +33,7 @@
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
-                            <li> 
+                            <li class="nav__list"> 
                                 <form action="POST" class="header-search">
                                     <div class="">
                                         
@@ -49,25 +49,36 @@
                                  <a href="#" class="nav__link">
                                     <i class="fa fa-bell nav__link-i" aria-hidden="true"></i>
                                 </a>
-                                <sub class="sub__nav" >
-                                    <ul>
+                                    <!-- <ul  class="sub__nav">
                                         <li class="sub__nav-list">sdcxc</li>
                                         <li class="sub__nav-list">werftgy</li>
-                                    </ul>
-                                </sub>
+                                    </ul> -->
                             </li>
                            
                             <li class="nav__list">
                                 <a href="#" class="nav__link">
-                                   <img src="" class="profile__image" alt="">
+                                    <?php 
+
+                                        $admin = 0;
+
+                                        if( $admin == 0){
+                                        ?>
+                                            <img class="profile__image" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <img class="profile__image" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                                        <?php
+                                        }
+                                    ?>
+                                    admin name  <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </a>
-                                <sub class="sub__nav">
-                                    <ul>
+                                <ul class="sub__nav">
                                         <li class="sub__nav-list"> <a class="sub__nav-link" href="">profile</a></li>
                                         <li class="sub__nav-list"> <a class="sub__nav-link" href="">update</a></li>
                                         <li class="sub__nav-list"> <a class="sub__nav-link" href="">logout</a></li>
-                                    </ul>
-                                </sub>
+                                    
+                                </ul>
                             </li>
 
                         </ul>
@@ -88,6 +99,8 @@
                                 <li class="side-nav__list"><a class="side-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> students </a></li>
                             </ul>
                             <ul> 
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "testimonial"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/"> testimonial </a></li>
+
                                 <li class="side-nav__list">
                                     <a class="side-nav__link side-nav-toggle <?php if($active == "faq"){ echo "active";}?>" href="#" > FAQs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="side-sub-nav">
@@ -99,20 +112,19 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "testimonial"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/"> testimonial </a></li>
                             
                                 <li class="side-nav__list">
-                                    <a class="side-nav__link  side-nav-toggle " href="<?php base_url();?>dashboard/testimonial/">Add records <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <a class="side-nav__link side-nav-toggle <?php if($active == "add record"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/">Add records <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="side-sub-nav">
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "faq" && $sub == "faq_view"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/faq/">Add new city</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "add record" && $sub == "add location"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_location.php">Add locations</a> 
                                         </li>
                                         <li>
-                                        <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">Add new state</a> 
+                                        <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add new subjects</a> 
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> study </a></li>
+                                <!-- <li class="side-nav__list"><a class="side-nav__link" href="<?php base_url();?>dashboard/testimonial/"> study </a></li> -->
                             </ul>
                         </nav>
                     </div>
