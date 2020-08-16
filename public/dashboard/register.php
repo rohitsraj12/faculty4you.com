@@ -1,5 +1,5 @@
 <?php 
-$active = "home";
+$active = "dashboard registration";
 
     require("../../private/config/config.php");
     require("../../private/config/db_connect.php");
