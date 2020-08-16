@@ -1,4 +1,9 @@
 <?php 
+    session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: ../index.php');
+    }
 
     $active = "teacher";
     require("../../../private/config/config.php");
