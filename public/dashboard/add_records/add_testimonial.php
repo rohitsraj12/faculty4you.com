@@ -1,5 +1,11 @@
 <?php 
-$active = "student";
+    session_start();
+    //back function false
+    if(!isset($_SESSION['user_name'])){
+        header('location: ../index.php');
+    }
+
+    $active = "student";
 
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");
