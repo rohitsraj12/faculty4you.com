@@ -76,8 +76,6 @@ $active = "student";
                             ORDER BY student_id ASC";
                         
                             $result = mysqli_query($conn, $sql);
-                            $row = mysqli_fetch_assoc($result);
-
                             while($row = mysqli_fetch_assoc($result)){
                         ?>
                         <tr>
