@@ -1,5 +1,5 @@
 <?php 
-
+$user_name = $_SESSION['user_name']
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,12 +71,12 @@
                                         <?php
                                         }
                                     ?>
-                                    admin name  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <?php echo $user_name; ?>  <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </a>
                                 <ul class="sub__nav">
                                         <li class="sub__nav-list"> <a class="sub__nav-link" href="">profile</a></li>
                                         <li class="sub__nav-list"> <a class="sub__nav-link" href="">update</a></li>
-                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="">logout</a></li>
+                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="<?php base_url();?>logout.php">logout</a></li>
                                     
                                 </ul>
                             </li>
@@ -108,7 +108,7 @@
                                             <a class="side-sub-nav__link <?php if($active == "faq" && $sub == "faq_view"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/faq/">view faqs</a> 
                                         </li>
                                         <li>
-                                        <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">compose new faq</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">compose new faq</a> 
                                         </li>
                                     </ul>
                                 </li>
@@ -120,7 +120,7 @@
                                             <a class="side-sub-nav__link <?php if($active == "add record" && $sub == "add location"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_location.php">Add locations</a> 
                                         </li>
                                         <li>
-                                        <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add new subjects</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add new subjects</a> 
                                         </li>
                                     </ul>
                                 </li>
