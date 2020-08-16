@@ -26,6 +26,17 @@ a:hover {
   margin: 0 auto;
 }
 
+.wrap-section {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 3 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+    0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+    0 0.25rem 0.53125rem rgb(90 95 105 / 12%),
+    0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
+  padding: 30px;
+}
+
 .body-header {
   padding: 0;
   box-shadow: 0 0.125rem 0.625rem rgba(90, 97, 105, 0.12);
@@ -62,58 +73,85 @@ a:hover {
   align-items: center;
   border-bottom: 1px solid #f7f7f7;
 }
-.header__nav > ul > li:first-child {
+.nav__list:first-child {
   width: 80%;
 }
 
-.header__nav > ul > li:last-child {
+.nav__list:last-child {
+  margin-top: 18px;
   margin-right: 2rem;
 }
+
+.nav__list > .nav__link {
+  font-size: 14px;
+  color: #c4183c;
+}
+
+.nav__list {
+  margin-top: 20px;
+  position: relative;
+}
+
 .header-search {
   position: relative;
 }
 .search__input {
-  height: 50px;
+  height: 36px;
   width: 100%;
   font-size: 18px;
   padding-left: 45px;
   line-height: 22px;
   border: none;
+  color: #858585;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.6px;
 }
 .header-search-btn {
   position: absolute;
   left: 12px;
-  top: 22px;
+  top: 5px;
   font-size: 18px;
-  color: #686464;
+  color: #dadada;
+}
+
+.header-search-btn:hover {
+  color: #dadada;
 }
 
 .sub__nav {
-  position: relative;
   display: none;
-}
-.sub__nav ul {
-  display: flex;
-  flex-direction: column;
   position: absolute;
   right: 0;
-  top: 50px;
+  top: 40px;
+  width: 100%;
+  text-align: right;
+  box-shadow: 0 0 15px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 3 0.46875rem 2.1875rem rgba(90, 97, 105, 0.1),
+    0 0.9375rem 1.40625rem rgba(90, 97, 105, 0.1),
+    0 0.25rem 0.53125rem rgb(90 95 105 / 12%),
+    0 0.125rem 0.1875rem rgba(90, 97, 105, 0.1);
 }
 .sub__nav-list {
-  padding: 0 20px 12px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid gray;
+  padding: 5px 20px;
+  margin-bottom: 1px;
+  background-color: #fff;
+}
+
+.sub__nav-link {
+  font-size: 13px;
 }
 .nav__link-i {
   font-size: 18px;
-  color: #c4183c;
+  /* color: #c4183c; */
+  color: #dadada;
 }
 
 .profile__image {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
+  margin-right: 5px;
   border-radius: 50%;
-  background-color: rgb(216, 184, 103);
 }
 
 /* ******************************************************
