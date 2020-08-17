@@ -34,18 +34,18 @@ session_start();
         </div>
         
         <div class="form-group">
-            <label for="about">About me</label>
+            <label for="about">Post details</label>
             <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control" rows="10" id="about" placeholder="Briefly describe"></textarea>
             
         </div>
         <div class="row">
             <fieldset class="form-group col-sm-4">
+                <!-- 
+                    #task fetch from database
+                 -->
                 <div class="row">
                     <label class="label col-form-label col-sm-4 pt-0">Study type</label>
                     <div class="col-sm-6 row">
-
-                
-                
                         <div class="form-check col-sm-12">
                             <input class="form-check-input" name="std" type="radio" value="1" id="single">
                         
