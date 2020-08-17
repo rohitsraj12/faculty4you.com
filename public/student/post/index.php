@@ -38,7 +38,7 @@
 
                 <section class="row section__post">
                     <div class="col-sm-3">
-                        <div class="tab" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <div class="tab" >
                             <button class="tablinks active" data-post="view__post">View My Post</button>
                             <button class="tablinks" data-post="compose__post">Compose New Post</button>
                         </div>
@@ -46,7 +46,7 @@
                     <div class="col-sm-9">
                         <section  class="view__post post__cat" id="viewPost">
                             
-                            <header class="text-primary-h text-center pb-5 mb-5" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <header class="text-primary-h text-center pb-5 mb-5" >
                                 View my past posts
                             </header>
                             <?php 
@@ -71,7 +71,7 @@
                                 while($row = mysqli_fetch_assoc($result)){
 
                             ?>
-                                    <article class="mb-5 px-5 py-3 border bg-light" data-aos="zoom-out-up" data-aos-duration="1000">
+                                    <article class="mb-5 px-5 py-3 border bg-light" >
                                         <header class="border-bottom">
                                             <h1 class="h1 py-3 text-dark font-weight-normal">
                                                 <?php echo $row["post_title"];?>
@@ -99,10 +99,10 @@
                         </section>
                         <section  class="compose__post post__cat" id="composePost">
                             <div class="section-profile-update">
-                                <header class="text-primary-h text-center pb-5 mb-5" data-aos="zoom-out-up" data-aos-duration="1000">
+                                <header class="text-primary-h text-center pb-5 mb-5" >
                                     Compose new post
                                 </header>
-                                <form action="../include/post.inc.php" method="post" class=" bg-light border py-5 px-5" data-aos="zoom-out-up" data-aos-duration="1000">
+                                <form action="../include/post.inc.php" method="post" class=" bg-light border py-5 px-5" >
                                     <div class="form-group">
                                         <label for="title">Title</label>
                                         <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
