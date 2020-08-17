@@ -30,12 +30,12 @@ if(isset($_POST["submit-search"])){
     $query_results = mysqli_num_rows($result);
 
     ?>
-        <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+        <div class="section-header u-center-text"  >
             <heeader class="text-primary-h"> 
-                search result of student 
+                Search result of student 
             </header>
         </div>
-        <div class="search-result-num" data-aos="zoom-out-up" data-aos-duration="1000">
+        <div class="search-result-num" >
             <p>
                     <?php echo $query_results; ?> results are matching
             </p>
@@ -51,7 +51,7 @@ if(isset($_POST["submit-search"])){
             ?>      
             
             
-            <article class="article-search-result" data-aos="zoom-out-up" data-aos-duration="1000">
+            <article class="article-search-result" >
                     <div class="block-left">
                         <figure class="article-search__figure">
                             <img src="<?php base_url()?>img/teacher/profile_pic/rohit.jpg" alt="">
@@ -65,10 +65,10 @@ if(isset($_POST["submit-search"])){
                         </header>
                         <div class="article-search-body">
                                 <ul>
-                                    <li>qualification: <strong></strong></li>
+                                    <li>Qualification: <strong></strong></li>
                                     <li>Experience: <strong></strong></li>
                                     <li>City:<strong></strong></li>
-                                    <li>available for : 
+                                    <li>Available for : 
                                         <strong><?php if($row["teacher_online_one_to_one"] == 1){echo "Online one to one";} ?></strong>
                                         <strong> <?php if($row["teacher_online_group"] == 1){echo "Online group";}?></strong>
                                         <strong> <?php if($row["teacher_home_tuition"] == 1){echo "home tuition";}?> </strong>
@@ -94,7 +94,7 @@ if(isset($_POST["submit-search"])){
         
         ?> 
         
-        <div class="search-result-num" data-aos="zoom-out-up" data-aos-duration="1000">
+        <div class="search-result-num" >
             <p>
                 there are no result
             </p>
