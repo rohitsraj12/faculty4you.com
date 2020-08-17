@@ -63,7 +63,7 @@
                 </div>
                 <div class="form-container sign-in-container">
                     <form action="include/login.teacher.inc.php" method="post" >
-                        <h1>Teacher Sign In</h1>
+                        <h1>Trainer Login</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -84,7 +84,7 @@
                             <button class="ghost" id="signIn">Sign In</button>
                         </div>
                         <div class="overlay-panel overlay-right">
-                            <h1>Hello, Teachers!</h1>
+                            <h1>Hello, Trainers!</h1>
                             <p  class="text-light">Enter your personal details and start journey with us</p>
                             <button class="ghost" id="signUp">Sign Up</button>
                         </div>
