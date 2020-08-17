@@ -28,9 +28,9 @@
     <div class="body-container">
         <main>
             <section>
-                <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+                <div class="section-header u-center-text" >
                     <heeader class="text-primary-h"> 
-                        Teacher detail
+                        Trainer detail
                     </header>
                     <section class="section-search-result wrap-container">
                         
@@ -45,7 +45,7 @@
 
     ?>
         
-        <div class="search-result-num" data-aos="zoom-out-up" data-aos-duration="1000">
+        <div class="search-result-num">
             <p>
                     <?php echo $query_results; ?> results are matching
             </p>
@@ -61,7 +61,7 @@
             ?>      
             
             
-            <article class="article-search-result" data-aos="zoom-out-up" data-aos-duration="1000">
+            <article class="article-search-result">
                     <div class="block-left">
                         <figure class="article-search__figure">
                             <img src="<?php echo base_url() . $row['teacher_photo']?>" alt="">
@@ -75,10 +75,10 @@
                         </header>
                         <div class="article-search-body">
                                 <ul>
-                                    <li>qualification: <strong><?php echo $row['city_id']?></strong></li>
+                                    <li>Qualification: <strong><?php echo $row['city_id']?></strong></li>
                                     <li>Experience: <strong><?php echo $row['teacher_experience']?></strong></li>
                                     <li>City:<strong><?php echo $row['city_id']?></strong></li>
-                                    <li>available for : 
+                                    <li>Available for : 
                                         <strong><?php if($row["teacher_online_one_to_one"] == 1){echo "Online one to one";} ?></strong><br/>
                                         <strong> <?php if($row["teacher_online_group"] == 1){echo "Online group";}?></strong><br/>
                                         <strong> <?php if($row["teacher_home_tuition"] == 1){echo "home tuition";}?> </strong>
@@ -104,7 +104,7 @@
         
         ?> 
         
-        <div class="search-result-num" data-aos="zoom-out-up" data-aos-duration="1000">
+        <div class="search-result-num">
             <p>
                 there are no result
             </p>
