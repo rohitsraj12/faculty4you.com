@@ -19,7 +19,7 @@
                 <main>
                     <section class="wrap-container">
                         <header class="text-primary-h text-center">
-                            students Post
+                            Students Post
                         </header>
                     <?php 
                         // $city = $rows['city_id'];
@@ -43,7 +43,7 @@
                     ?>
 
 
-                        <article class="mt-5 px-5 py-3 border bg-light"  data-aos="zoom-out-up" data-aos-duration="1000">
+                        <article class="mt-5 px-5 py-3 border bg-light" >
                             <header class="border-bottom">
                                 <h1 class="h1 py-3 text-dark font-weight-normal">
                                     <?php echo $row["post_title"];?>
