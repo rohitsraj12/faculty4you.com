@@ -10,7 +10,7 @@
             <div class="body-container">
                 <main class="page-home">
                     <section class="section-student">
-                        <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+                        <div class="section-header u-center-text">
                             <heeader class="text-primary-h"> 
                                 How <strong>Faculty4you</strong> Works for Students
                             </header>
@@ -36,7 +36,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="article-block" >
                                 <figure class="studnet-section__figure">
                                     <span>step 2</span>
                                     <img src="<?php base_url();?>img/member/post-requirement.svg" alt="">
@@ -67,7 +67,7 @@
                                 </div>
                             </article>
                         </section>
-                        <footer class="section-footer u-center-text mb-4" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <footer class="section-footer u-center-text mb-4" >
                             <a href="<?php echo base_url();?>student/registration.php" class="button-primary">Registration </a>
                         </footer>
                     </section>
@@ -75,7 +75,7 @@
 
                     <section class="section-teacher">
                         
-                        <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+                        <div class="section-header u-center-text"  >
                             <heeader class="text-primary-h"> 
                                 Looking to Become a <strong>Trainer</strong>
                             </header>
@@ -100,7 +100,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="article-block" >
                                 <figure class="studnet-section__figure">
                                     <img src="<?php base_url();?>img/member/member.svg" alt="">
                                     
@@ -115,7 +115,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="article-block" >
                                 <figure class="studnet-section__figure">
                                     <img src="<?php base_url();?>img/member/find-student.svg" alt="">
                                     <span>step 3</span>
@@ -145,7 +145,7 @@
                                 </div>
                             </article>
                         </section>
-                        <footer class="section-footer u-center-text mb-4" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <footer class="section-footer u-center-text mb-4" >
                             <a href="<?php echo base_url();?>teacher/registration.php" class="button-primary">Registration</a>
                         </footer>
                     </section>
@@ -153,7 +153,7 @@
 
                     <section class="section-data py-5 text-light">
                         <div class="wrap-container row text-center py-5">
-                            <article class="col-sm-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="col-sm-4 py-5"  >
                                 <p class="text-white pb-3" style = "font-size : 2rem">Registered students</p>
                                 <p class="h1 text-white" style="font-size: 4.8rem">
                                     <?php
@@ -165,7 +165,7 @@
                                     ?>
                                 </p>
                             </article>
-                            <article class="col-sm-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="col-sm-4 py-5"  >
                             <p class="h2 text-white pb-3" style = "font-size : 2rem">Registered teachers</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
@@ -177,7 +177,7 @@
                                         ?>
                                 </p>
                             </article>
-                            <article class="col-sm-4 py-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="col-sm-4 py-5"  >
                             <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's post</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
@@ -194,12 +194,12 @@
 
                     <section class="section-testimonial">
                          
-                        <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <div class="section-header u-center-text" >
                             <heeader class="text-primary-h"> 
                                 Student comumnity feed back
                             </header>
                         </div>
-                        <blockquote class="section-body wrap-container owl-carousel owl-theme" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <blockquote class="section-body wrap-container owl-carousel owl-theme" >
                             <article class="article-block">
                                 <div class="testimonial-client-detail">
                                     <p>
@@ -259,7 +259,7 @@
 
                     <section class="section-partner">
                         
-                        <div class="section-header u-center-text" data-aos="zoom-out-up" data-aos-duration="1000">
+                        <div class="section-header u-center-text" >
                             <heeader class="text-primary-h"> 
                                 Our partners
                             </header>
@@ -274,7 +274,7 @@
                                 </figure>
                                
                             </article>
-                            <article class="article-block" data-aos="zoom-out-up" data-aos-duration="1000">
+                            <article class="article-block" >
                                 <figure class="article-block__figure">
                                     
                                     <img src="<?php base_url();?>img/member/post-requirement.svg" alt="">
