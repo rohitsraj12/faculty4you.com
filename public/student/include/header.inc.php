@@ -29,7 +29,7 @@
     </head>
 <body>
 <div class="body-wrap">
-            <div class="body-header" data-aos="zoom-out-down" data-aos-duration="1000">
+            <div class="body-header">
                 <div id="hamberger" class="hamberger">
                     <span class="hamberger__line"></span>
                     <span class="hamberger__line"></span>
@@ -63,10 +63,10 @@
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>student/index.php" class="nav__link">home</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>student/post/index.php" class="nav__link">post</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>student/profile/index.php" class="nav__link">profile</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">log out</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/index.php" class="nav__link">Home</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/post/index.php" class="nav__link">Post</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/profile/index.php" class="nav__link">Profile</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
