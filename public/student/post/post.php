@@ -21,7 +21,7 @@ session_start();
     <main class="wrap-container">
         <section class="section-profile-update">
             <header class="text-primary-h text-center pb-5">
-                students Post
+            Trainee's Post
             </header>
             <form action="../include/post.inc.php" method="post" class="section-body">
                 <div class="form-group">
