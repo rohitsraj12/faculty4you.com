@@ -31,7 +31,7 @@
                 <nav class="header__nav">
                         <ul>
                             <!-- <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li> -->
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">teacher login</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">trainer login</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
@@ -60,7 +60,7 @@
                 </div>
                 <div class="form-container sign-in-container">
                     <form action="include/login.student.inc.php" method="post" >
-                        <h1>Sign in</h1>
+                        <h1>Login</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -70,7 +70,7 @@
                         <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
                         <input type="password" placeholder="Password"  name="password"/>
                         <a href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
-                        <button name="login-submit">Sign In</button>
+                        <button name="login-submit">Login</button>
                     </form>
                 </div>
                 <div class="overlay-container">
@@ -78,10 +78,10 @@
                         <div class="overlay-panel overlay-left">
                             <h1>Welcome Back!</h1>
                             <p>To keep connected with us please login with your personal info</p>
-                            <button class="ghost" id="signIn">Sign In</button>
+                            <button class="ghost" id="signIn">Login</button>
                         </div>
                         <div class="overlay-panel overlay-right">
-                            <h1>Hello, Students!</h1>
+                            <h1>Hello, trainees!</h1>
                             <p>Enter your personal details and start journey with us</p>
                             <button class="ghost" id="signUp">Sign Up</button>
                         </div>
