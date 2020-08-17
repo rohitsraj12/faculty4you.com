@@ -2,36 +2,36 @@
   &-primary {
     padding: 0.8rem 4rem;
     background-color: $color-btn-1;
-    color: $color-white;
     border-radius: 0.6rem;
     display: inline-block;
+    color: $color-white;
     font-family: $font-primary;
     font-size: 1.7rem;
     font-weight: 400;
 
     &:hover {
-      color: $color-white;
       background-color: rgba($color-btn-1, 0.9);
+      color: $color-white;
     }
   }
 
   &-secondary {
+    border-radius: 1rem;
     padding: 1rem 2rem;
     background-color: $color-btn-1;
-    color: $color-white;
-    border-radius: 1rem;
     display: inline-block;
+    color: $color-white;
     font-size: 1.5rem;
     font-weight: 500;
   }
 
   &-special {
+    padding: 12px 45px;
     border-radius: 20px;
     color: #ffffff;
     font-size: 12px;
     font-family: $font-primary;
     font-weight: 500;
-    padding: 12px 45px;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 300ms ease-in;
@@ -80,10 +80,10 @@
 
   &-text-1 {
     padding: 0 3px;
+    border-bottom: 1px solid $color-btn-1;
     color: $color-btn-1;
     display: inline-block;
     font-size: 1.7rem;
     font-weight: 500;
-    border-bottom: 1px solid $color-btn-1;
   }
 }
