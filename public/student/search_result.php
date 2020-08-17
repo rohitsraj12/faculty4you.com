@@ -36,9 +36,9 @@ if(isset($_POST["submit-search"])){
     $query_results = mysqli_num_rows($result);
 
     ?>
-        <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+        <div class="section-header u-center-text" >
             <heeader class="text-primary-h"> 
-                search result
+                Search result
             </header>
             <p class="u-padding-top-big u-left-text">
                 <?php 
@@ -72,7 +72,7 @@ if(isset($_POST["submit-search"])){
                         <?php echo $row['teacher_about_me'];?>
                     </p>
                     <ul>
-                        <li>qualification: </li>
+                        <li>Qualification: </li>
                         <li>Experience: </li>
                         <li>City:</li>
                         <li><?php if($row["teacher_online_one_to_one"] == 1){echo "Online one to one";} ?> / <?php if($row["teacher_online_group"] == 1){echo "Online group";}?>/ <?php if($row["teacher_home_tuition"] == 1){echo "home tuition";}?> </li>
@@ -82,7 +82,7 @@ if(isset($_POST["submit-search"])){
                 </div>
                 
                 <footer>
-                    <a href="detail.php?name=<?php echo $row['teacher_user_name']?>&batch=<?php echo $row['teacher_email']?>">more details</a>
+                    <a href="detail.php?name=<?php echo $row['teacher_user_name']?>&batch=<?php echo $row['teacher_email']?>">More details</a>
                 </footer>
             </div>
           </article>
