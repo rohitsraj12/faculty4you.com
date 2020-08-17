@@ -9,7 +9,7 @@ $active = "dashboard Login";
 
     <div class="body-container">
         <div class="wrap-container">
-            <form action="../../private/required/dashboard/log_in.inc.php" method="post">
+            <form action="include/log_in.inc.php" method="post">
                 <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
                 <input type="password" placeholder="Password"  name="password"/>
                 <button name="submit_login">login</button>
