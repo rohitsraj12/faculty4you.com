@@ -24,13 +24,9 @@
     LEFT JOIN subjects
         ON subjects.subject_id = teachers.subject_id
     WHERE teacher_user_name = '$teacher_name'";
-    // $sql = "SELECT * FROM teachers WHERE teacher_user_name = '$teacher_name'";
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-
-    // echo $teacher_name;
-    // echo $row['teacher_email'];
 
 
 ?>
@@ -38,14 +34,14 @@
 
     <main class="wrap-container profile">
         <section class="section-profile">
-            <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="section-header u-center-text">
                 <heeader class="text-primary-h"> 
                     my profile
                 </header>
             </div>
             <div class="section-body row">
                 <section class="col-md-4">
-                    <article class="img-thumbnail bg-light article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="img-thumbnail bg-light article-profil">
                         <figure class="text-center">
                         <?php 
 
@@ -92,7 +88,7 @@
                     </article>
                 </section>
                 <section class="col-md-8">
-                    <article class="article-profil " data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="article-profil ">
                         <header class="p-4 h3 bg-dark text-light m-0">
                             About me
                         </header>
@@ -104,7 +100,7 @@
                         </p>
                         </div>
                     </article>
-                    <article class="article-profil py-5" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="article-profil py-5">
                         <header class="p-4 h3 bg-dark text-light  m-0">
                             Personal detail
                         </header>
@@ -138,7 +134,7 @@
                             
                             <div class="article-info">
                                 <ul class="row">
-                                    <li  class="col-sm-2">phone</li>
+                                    <li  class="col-sm-2">Phone</li>
                                     <li class="col-sm-10 h4 font-weight-normal">
                                         <?php 
                                             echo $row['teacher_phone'];
@@ -149,7 +145,7 @@
                             
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">email</li>
+                                    <li class="col-sm-2">Email</li>
                                     <li class="col-sm-10 h4 font-weight-normal">
                                         <?php 
                                             echo $row['teacher_email'];
@@ -159,13 +155,13 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">address</li>
+                                    <li class="col-sm-2">Address</li>
                                     <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['teacher_address'];?>,</br> </br><?php echo $row['city_name'];?>, </br></br> <?php echo $row['state_name'];?></li>
                                 </ul>
                             </div>
                         </div>
                     </article>
-                    <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="article-profil">
                         <header class="p-4 h3 bg-dark text-light  m-0">
                             Professional detail
                         </header>
@@ -173,7 +169,7 @@
                         
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">experience</li>
+                                    <li class="col-sm-2">Experience</li>
                                     <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['teacher_experience']?> years of experince</li>
                                 </ul>
                             </div>
