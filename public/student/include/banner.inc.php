@@ -1,5 +1,5 @@
 
-            <div class="body-banner-member" data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="body-banner-member" >
 
 <div class="banner-wrap">
     <section class="banner-content">
@@ -7,7 +7,7 @@
             <header class="banner-content__header text-left">
                 <h2 class="text-primary-h pb-4 pt-4">Faculty4you take learning  to new heights</h2>
                 <h5 class="text-secondary-h">
-                    we provide top <strong>teachers</strong> for <strong class="highlight-primary">online</strong> and <strong class="highlight-primary">home tution</strong> all over india    
+                    We provide top <strong>teachers</strong> for <strong class="highlight-primary">online</strong> and <strong class="highlight-primary">home tution</strong> all over india    
                 </h5>
             </header>
             <div class="banner-content-body">
