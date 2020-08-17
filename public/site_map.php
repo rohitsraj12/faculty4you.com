@@ -10,9 +10,9 @@
 <div class="body-container">
     <main>
         <section class="section-sitemap">
-            <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="section-header u-center-text">
                 <heeader class="text-primary-h"> 
-                    site map
+                    Site map
                 </header>
             </div>
         </section>
