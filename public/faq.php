@@ -17,7 +17,7 @@
                     </div>
         <div class="row">
             <div class="col-sm-3">
-                <div class="tab faq__tab" data-aos="zoom-out-up" data-aos-duration="1000">
+                <div class="tab faq__tab">
                     <button class="tablinks active" data-faq="general">General FAQs</button>
                     <button class="tablinks" data-faq="student">Students FAQs</button>
                     <button class="tablinks" data-faq="teacher">Teachers FAQs</button>
