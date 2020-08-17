@@ -35,16 +35,16 @@
 
     <main class="wrap-container profile">
         <section class="section-profile">
-            <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="section-header u-center-text"  >
                 <heeader class="text-primary-h"> 
-                    my profile
+                    My profile
                 </header>
                 
             </div>
         
             <div class="section-body row">
                 <section class="col-md-4">
-                    <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="article-profil" >
                         <figure class="w-75 m-auto text-center">
                             <img class="img-thumbnail img-fluid img-rounded " src="<?php echo base_url() . $row['student_photo'];?>" alt="<?php echo $row['student_first_name'];?>">
                         </figure>
@@ -72,7 +72,7 @@
                                 </li>
 
                                 <li class="text-center">
-                                    <a href="<?php base_url()?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" class="w-100 h4 button-primary">edit profile</a>
+                                    <a href="<?php base_url()?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" class="w-100 h4 button-primary">Edit profile</a>
                                 </li>
                             </ul>
                         </footer>
@@ -80,7 +80,7 @@
                 </section>
                 <section class="col-md-8">
                     
-                    <article class="article-profil py-5" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="article-profil py-5" >
                         <header class="p-4 h3 bg-dark text-light  m-0">
                             Personal detail
                         </header>
@@ -88,7 +88,7 @@
                         
                         <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-3">user name</li>
+                                    <li class="col-sm-3">User name</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_user_name'];
@@ -98,7 +98,7 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-3">name</li>
+                                    <li class="col-sm-3">Name</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_first_name'] . " " . $row['student_last_name'];
@@ -108,7 +108,7 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-3">date of birth</li>
+                                    <li class="col-sm-3">Date of birth</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             $date = date_create($row['student_date_of_birth']);
@@ -120,7 +120,7 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-3">gender</li>
+                                    <li class="col-sm-3">Gender</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['gender_type'];
@@ -131,14 +131,14 @@
                             
                                      </div>
                     </article>
-                    <article class="article-profil" data-aos="zoom-out-up" data-aos-duration="1000">
+                    <article class="article-profil" >
                         <header class="p-4 h3 bg-dark text-light  m-0">
-                            contact detail
+                            Contact detail
                         </header>
                         <div class="article-body p-4 border">
                         <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-3">phone</li>
+                                    <li class="col-sm-3">Phone</li>
                                     <li class="col-sm-9  h4 font-weight-normal">
                                     <?php echo '+91 ' .  $row['student_phone']?>
                                     </li>
@@ -147,7 +147,7 @@
                             
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-3">email</li>
+                                    <li class="col-sm-3">Email</li>
                                     <li class="col-sm-9 h4 font-weight-normal">
                                         <?php 
                                             echo $row['student_email'];
@@ -178,7 +178,7 @@
 
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-3">address</li>
+                                    <li class="col-sm-3">Address</li>
                                     
                                     <li class="col-sm-9  h4 font-weight-normal">
                                         <?php 
