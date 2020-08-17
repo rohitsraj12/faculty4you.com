@@ -5,7 +5,7 @@
             <header class="banner-content__header">
                 <!-- <h2 class="text-primary">search top teachers </h2> -->
                 <h5 class="text-secondary-h">
-                    we provide top <strong>teachers</strong> for <strong class="highlight-primary">online</strong> and <strong class="highlight-primary">home tution</strong> all over india    
+                    we provide top <strong>trainers</strong> for <strong class="highlight-primary">online</strong> and <strong class="highlight-primary">home tution</strong> all over india    
                 </h5>
             </header>
             <div class="banner-content-body">
