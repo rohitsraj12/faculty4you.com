@@ -1,5 +1,6 @@
 <?php 
-$user_name = $_SESSION['user_name']
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -71,7 +72,11 @@ $user_name = $_SESSION['user_name']
                                         <?php
                                         }
                                     ?>
-                                    <?php echo $user_name; ?>  <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                    <?php
+                                    $user_name = $_SESSION['user_name'];
+
+                                    if($user_name == true){echo $user_name; }
+                    ?>  <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </a>
                                 <ul class="sub__nav">
                                         <li class="sub__nav-list"> <a class="sub__nav-link" href="">profile</a></li>
