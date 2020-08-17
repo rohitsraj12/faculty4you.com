@@ -9,7 +9,7 @@ $active = "dashboard registration";
 
     <div class="body-container">
         <div class="wrap-container">
-            <form action="../../private/required/dashboard/register.inc.php" method="post">
+            <form action="include/register.inc.php" method="post">
                 <input type="text" name="user_name" id="user_name" placeholder="user name" />
                 <input name="email" type="email" id="email" placeholder="email" />
                 <input name="password" type="password" id="password" placeholder="password" />
