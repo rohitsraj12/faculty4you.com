@@ -36,7 +36,7 @@
 
     <main class="wrap-container profile">
         <section class="section-profile-update">
-            <div class="section-header u-center-text"  data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="section-header u-center-text" >
                 <heeader class="text-primary-h text-secondary"> 
                     Update profile
                 </header>
@@ -46,7 +46,7 @@
             <div class="section-body">
                 <section class="section-update-form">
                     <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data">
-                        <article class="mb-5"  data-aos="zoom-out-up" data-aos-duration="1000">
+                        <article class="mb-5" >
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 Primary information
                             </header>
@@ -54,54 +54,51 @@
                         
                                 <div class="form-row pt-3">
                                     <div class="form-group col-md-6">
-                                    <label for="first_name">first name</label>
+                                    <label for="first_name">First name</label>
                                     <input type="text" name="fname" class="form-control" id="first_name" vlaue="<?php echo $row['student_first_name'];?>" placeholder="<?php echo $row['student_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
-                                    <label for="last_name">last name</label>
+                                    <label for="last_name">Last name</label>
                                     <input type="text" name="lname" class="form-control" id="last_name" value="<?php echo $row['student_last_name'];?>" placeholder="<?php echo $row['student_last_name'];?>">
                                     </div>
                                 </div>
 
                                 <div class="form-row pb-3">
                                     <div class="col-sm-6">
-                                        <label for="dob">upload image</label>
+                                        <label for="dob">Date of birth</label>
                                         <input type="date" name="date" class="form-control" id="dob"  value="<?php echo $row['student_date_of_birth'];?>" placeholder="<?php echo $row['student_date_of_birth'];?>">
                                     
                                     </div>    
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="photo">upload image</label>
+                                    <label for="photo">Upload image</label>
                                     <input type="file" name="file" class="form-control-file" id="photo"  value="<?php echo $row['student_photo'];?>" placeholder="<?php echo $row['student_photo'];?>">
                                 </div>
 
                                 <fieldset class="form-group">
                                     <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0 ">gender</label>
+                                        <label class="label col-form-label col-sm-2 pt-0 ">Gender</label>
                                         <div class="col-sm-8 row">
-                                            <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="gender" type="radio" value="1" id="male">
                                             
-                                                <label class="form-check-label" for="male">
-                                                    male
-                                                </label>
-                                            </div>
 
-                                            <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="gender" type="radio" value="2" id="female">
-                                            
-                                                <label class="form-check-label" for="female">
-                                                    female
-                                                </label>
-                                            </div>
-                                            <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="gender" type="radio" value="3" id="other">
-                                            
-                                                <label class="form-check-label" for="other">
-                                                    other
-                                                </label>
-                                            </div>
+                                            <?php
+                                                $gender_query = "SELECT * FROM gender ORDER BY gender_id ASC";
+                                                $gender_result = mysqli_query($conn, $gender_query);
+
+                                                while($row = mysqli_fetch_assoc($gender_result)){
+                                            ?>
+                                                <div class="form-check col-sm-2">
+                                                    <input class="form-check-input" name="gender" type="radio" value="<?php echo $row['gender_id'];?>" id="<?php echo $row['gender_type'];?>">
+                                                
+                                                    <label class="form-check-label" for="<?php echo $row['gender_type'];?>">
+                                                        <?php echo $row['gender_type'];?>
+                                                    </label>
+                                                </div>        
+                                            <?php
+                                                }
+
+                                            ?>
                                           
                                         </div>
                                     </div>
@@ -109,9 +106,9 @@
                                                   
                             </div>
                         </article>
-                        <article  data-aos="zoom-out-up" data-aos-duration="1000">
+                        <article >
                             <header class="p-4 h3 bg-dark text-light m-0">
-                                contact details
+                                Contact details
                             </header>
                             <div class="py-4 px-5 text-dark bg-light border mb-5">
                                 <!-- contact info -->
@@ -121,7 +118,7 @@
                                     <input type="email" name="email" class="form-control" id="email" value="<?php echo $row['student_email'];?>" placeholder="<?php echo $row['student_email'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
-                                    <label for="phone">telephone</label>
+                                    <label for="phone">Telephone</label>
                                     <input type="tel" name="phone" class="form-control" id="phone" value="<?php echo $row['student_phone'];?>" placeholder="<?php echo $row['student_phone'];?>">
                                     </div>
                                 </div>
@@ -136,6 +133,7 @@
                                     <div class="form-group col-md-6">
                                         <label for="city">City</label>
                                         <select id="state" name="city" class="form-control">
+                                            <option>Select city</option>
                                             <?php 
                                                 $city_query = "SELECT * FROM cities ORDER BY city_name ASC";
                                                 $city_result = mysqli_query($conn, $city_query);
@@ -149,6 +147,7 @@
                                     <div class="form-group col-md-4">
                                         <label for="state">State</label>
                                         <select id="state" name="state" class="form-control">
+                                            <option>Select state</option>
                                             <?php 
                                                 $state_query = "SELECT * FROM states ORDER BY state_name ASC";
                                                 $state_result = mysqli_query($conn, $state_query);
@@ -160,84 +159,12 @@
                                         </select>
                                     </div>
                                     <div class="form-group col-md-2">
-                                        <label for="pincode">pincode</label>
+                                        <label for="pincode">Pincode</label>
                                         <input type="text" name="pincode" class="form-control" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
                                     </div>
                                 </div>
-                                <!-- <fieldset class="form-group">
-                                    <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0">teaching type</label>
-                                        
-                                        <div class="col-sm-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="1" id="online_one" name="online_one">
-                                            
-                                                <label class="form-check-label" for="online_one">
-                                                    online one to one tuition
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="2" id="online_group" name="online_group">
-                                            
-                                                <label class="form-check-label" for="online_group">
-                                                    online group tuition
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="3" id="home_tution" name="home_tuition">
-                                            
-                                                <label class="form-check-label" for="home_tution">
-                                                    home tuition
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset> -->
-                                <!-- <fieldset class="form-group">
-                                    <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0">category</label>
-                                        <div class="col-sm-8 row">
-                                            <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="category" type="radio" value="1" id="academic">
-                                            
-                                                <label class="form-check-label" for="academic">
-                                                    academic
-                                                </label>
-                                            </div>
-
-                                            <div class="form-check col-sm-4">
-                                                <input class="form-check-input" name="category" type="radio" value="2" id="non-academic">
-                                            
-                                                <label class="form-check-label" for="non-academic">
-                                                    non-academic
-                                                </label>
-                                            </div>
-                                           
-                                          
-                                        </div>
-                                    </div>
-                                </fieldset>
-                        
-                                <div class="form-row pt-3 mb-3">
-                                    <div class="form-group col-md-6">
-                                        <label for="teaching_exp">teaching experience</label>
-                                        <input type="number" class="form-control" id="teaching_exp" placeholder="0">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="sub_id">subject</label>
-                                        <input type="text" class="form-control" id="sub_id" placeholder="IIT-JEE / physics / yoga">
-                                    </div>
-                                </div> -->
-                             
-                                <!-- <div class="form-group">
-                                    <label for="about">about me</label>
-                                    <textarea class="form-control" id="about" placeholder="Briefly explain about yourself"></textarea>
-                                    
-                                </div> -->
-
                             </div>
-
-                            <input type="submit" value="update" class="w-100 btn btn-primary text-center h4" name="update">
+                            <input type="submit" value="Submit" class="w-100 btn btn-primary text-center" style="font-size:1.7rem" name="update">
                         </article>
                     </form>
                 </section>
@@ -245,26 +172,6 @@
         </section>
     </main>
 </div>
-<!-- 
- first name
- last name
- telephone
- email
- address
- pincode
- experience
- subject
- 
- 
- city
- state
-
-
- type of tuition -->
-
-
-
-
 
 <?php 
     require("../include/footer.inc.php");
