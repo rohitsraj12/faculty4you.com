@@ -17,7 +17,7 @@ $active = "teacher";
             <div class="page-header">
                 <div class="container">
                     <header class="header-text-1" class="py-3">
-                        TEACHER RECORDS
+                        TRAINER RECORDS
                     </header>
                 </div>
             </div>
@@ -27,7 +27,7 @@ $active = "teacher";
                     <table class="bg-light table">
                         <thead class="thead-light">
                             <tr>
-                            <th scope="col">id</th>
+                            <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
