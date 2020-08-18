@@ -71,7 +71,7 @@ $sub = "add subject";
                         <div class="form-group">
                             <label for="q">Add subjects</label>
                             <input type="text" class="form-control" name="subject" id="q">
-                            <small id="emailHelp" class="form-text text-muted">add new subject name here.</small>
+                            <small id="emailHelp" class="form-text text-muted">Add new subject name here.</small>
                         </div>
                         <div class="form-group">
                             <label for="q">Select subject category</label>
