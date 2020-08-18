@@ -55,4 +55,9 @@ $(document).ready(function () {
     $(this).find("i").toggleClass("fa-angle-up");
     $(this).parent().find("footer").slideToggle(600);
   });
+
+  $(".student-details").hide();
+  $(".active-member-btn").click(function(){
+    $(this).closest(".student-post").find(".student-details").slideToggle();
+  })
 });
