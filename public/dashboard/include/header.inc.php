@@ -23,7 +23,7 @@
 </head>
 <body>
         <div class="body-wrap">
-            <div class="body-header" data-aos="zoom-out-down" data-aos-duration="1000">
+            <div class="body-header">
               <header class="wrap-header">
                     <div class="header-brand">
                         <a href="<?php base_url();?>index.php">
@@ -79,9 +79,9 @@
                     ?>  <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </a>
                                 <ul class="sub__nav">
-                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="">profile</a></li>
-                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="">update</a></li>
-                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="<?php base_url();?>logout.php">logout</a></li>
+                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="">Profile</a></li>
+                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="">Update</a></li>
+                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="<?php base_url();?>logout.php">Logout</a></li>
                                     
                                 </ul>
                             </li>
@@ -98,22 +98,22 @@
                     <div class="body-container-left">
                         <nav class="side-main__nav">
                             <ul>
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "home"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> dashboard </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "home"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> Dashboard </a></li>
                                 <!-- <li class="side-nav__list"><a class="side-nav__link <?php if($active == "page content"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> page content </a></li> -->
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> teachers </a></li>
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> students </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> Trainers </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> Trainees </a></li>
                             </ul>
                             <ul> 
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "testimonial"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/"> testimonial </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "testimonial"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/"> Testimonial </a></li>
 
                                 <li class="side-nav__list">
                                     <a class="side-nav__link side-nav-toggle <?php if($active == "faq"){ echo "active";}?>" href="#" > FAQs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="side-sub-nav">
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "faq" && $sub == "faq_view"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/faq/">view faqs</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "faq" && $sub == "faq_view"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/faq/">View faqs</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">compose new faq</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">Compose new faq</a> 
                                         </li>
                                     </ul>
                                 </li>
@@ -134,13 +134,4 @@
                         </nav>
                     </div>
                     <!-- end  left -->
-                    <!-- 
-                        -   subjects
-                        -   category
-                        -   
-
-                        -   city
-                        -   state
-                        -   
-
-                     -->
+                  
