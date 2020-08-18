@@ -70,13 +70,23 @@
                 $row = mysqli_fetch_assoc($result);
             ?>
                     
-                    <!-- <header class="text-center border-bottom mb-5">
+               <form action="" method="POST">
+                
+                <div class="form-group">
+                    <label for="answer">Testimonial</label>
+                    <textarea class="form-control" id="answer" name="testimonial" rows="3"></textarea>
+                </div>   
+                <input class="btn btn-primary" type="submit" name="submit_testimonial" value="Submit new Testimonial">
+            </form>
+        </section>
+        <section class="section-bottom">
+            <header class="text-center border-bottom mb-5">
                         Testimonial by
-                    </header>
+            </header>
                     <ul>
                         <li class="row mb-2">     
                             <div class="col-2">
-                                Name of student
+                                Name of trainee
                             </div>
                             <div class="col-9">
                             <?php echo $row['student_first_name']. " " . $row['student_last_name']; ?>
@@ -93,24 +103,16 @@
                         <li class="row mb-2">
                             
                             <div class="col-2">
-                                phone number
+                                Phone number
                             </div>
                             <div class="col-9">
                                 +91 <?php echo $row['student_phone'];?>
                             </div>
                         </li>
 
-                    </ul> -->
-            <form action="" method="POST">
-                
-                <div class="form-group">
-                    <label for="answer">testimonial</label>
-                    <textarea class="form-control" id="answer" name="testimonial" rows="3"></textarea>
-                </div>   
-                <input class="btn btn-primary" type="submit" name="submit_testimonial" value="Submit new Testimonial">
-            </form>
+                    </ul>
+           
         </section>
-        <section class="section-bottom"></section>
         </div>
     </div>
 
