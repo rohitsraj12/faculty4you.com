@@ -12,7 +12,7 @@ $active = "dashboard Login";
             <form action="include/log_in.inc.php" method="post">
                 <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
                 <input type="password" placeholder="Password"  name="password"/>
-                <button name="submit_login">login</button>
+                <button name="submit_login">Login</button>
             </form>
         </div>
     </div>
