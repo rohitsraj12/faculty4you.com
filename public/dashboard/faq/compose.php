@@ -20,7 +20,6 @@ $sub = "faq_compose";
 
     <?php
          if(isset($_REQUEST['submit_faq'])){
-            //checking  for empty field
             if(($_REQUEST['question'] == "") || ($_REQUEST['category'] == "") || ($_REQUEST['answer'] == "")){
     ?>
         <div class="alert alert-danger" role="alert">
@@ -37,7 +36,6 @@ $sub = "faq_compose";
                           VALUES('$q', '$ans', '$cat', $status)";
                           
                 $result = mysqli_query($conn, $query); 
-                // test if there was a query error
                 if($result) {
 
             ?>
@@ -55,7 +53,7 @@ $sub = "faq_compose";
         <div class="page-header">
             <div class="container">
                 <header class="header-text-1" class="py-3">
-                    compose new Faq
+                    Compose new Faq
                 </header>
             </div>
         </div>
@@ -64,7 +62,7 @@ $sub = "faq_compose";
                 <div class="form-group">
                     <label for="q">Question</label>
                     <input type="text" class="form-control" name="question" id="q">
-                    <small id="emailHelp" class="form-text text-muted">enter FAQ question here.</small>
+                    <small id="emailHelp" class="form-text text-muted">Enter FAQ question here.</small>
                 </div>
                 <div class="form-group row">
                     <div class="col-2">
@@ -80,13 +78,13 @@ $sub = "faq_compose";
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="category" id="student" value="student">
                             <label class="form-check-label" for="student">
-                                Student category question
+                                Trainee category question
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="category" id="teacher" value="teacher">
                             <label class="form-check-label" for="teacher">
-                                Teacher category question
+                                Trainer category question
                             </label>
                         </div>
                     </div>
