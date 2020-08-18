@@ -17,7 +17,7 @@
         <div class="page-header">
             <div class="container">
                 <header class="header-text-1" class="py-3">
-                    testimonials List
+                    Testimonials List
                 </header>
             </div>
         </div>
