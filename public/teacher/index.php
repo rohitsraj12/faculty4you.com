@@ -8,6 +8,11 @@
         header('location: login.php');
     }
 
+    $user_name = $_SESSION['user_name'];
+    $user_query = "SELECT * FROM teachers WHERE teacher_user_name = '$user_name'";
+    $user_result = mysqli_query($conn, $user_query);
+    $user_row = mysqli_fetch_assoc($user_result);
+
     $page_title = "profile";
     include_once("../../private/config/config.php");
         include_once('include/header.inc.php');
@@ -22,10 +27,6 @@
                             Students Post
                         </header>
                     <?php 
-                        $user_name = $_SESSION['user_name'];
-                        $user_query = "SELECT * FROM teachers WHERE teacher_user_name = '$user_name'";
-                        $user_result = mysqli_query($conn, $user_query);
-                        $user_row = mysqli_fetch_assoc($user_result);
 
                         $city = $user_row['city_id'];
                         $member = $user_row['teacher_membership_status'];
