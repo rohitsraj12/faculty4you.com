@@ -70,7 +70,7 @@
                                     <?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?>
                                 </header>
                                 <p class="sub-header-text-1 pt-2">
-                                    <?php echo $row['sub_name'];?> teacher
+                                    <?php echo $row['sub_name'];?> Trainer
                                 </p>
 
                                 <?php
@@ -90,7 +90,7 @@
                         <div class="col-md-9">
                             <article class="member-right">
                                     <header class="header-text-3">
-                                        profile detail
+                                        Profile detail
                                     </header>
                                 <span>
                                 </span>
@@ -117,7 +117,7 @@
                                     <li class="row">
                                         
                                         <div class="col-3">
-                                            phone number
+                                            Phone number
                                         </div>
                                         <div class="col-9">
                                             +91 <?php echo $row['teacher_phone'];?>
