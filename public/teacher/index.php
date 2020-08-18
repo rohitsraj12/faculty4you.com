@@ -77,7 +77,7 @@
                                     }else{
                                         // echo "become a member";
                                         ?>
-                                        <button class="active-member-btn btn btn-lg btn-primary" type="button" disabled>Contact details</button> </br>
+                                        <button class="active-member-btn btn btn-lg btn-primary" type="button">Contact details</button> </br>
                                         <!-- <small>you need to become a member to see the details</small> -->
                                         <?php
                                     }
