@@ -5,7 +5,7 @@
         header('location: ../index.php');
     }
 
-    $active = "Dashboard";
+    $active = "home";
 
     require("../../private/config/config.php");
     require("../../private/config/db_connect.php");
@@ -26,10 +26,10 @@
                 <div class="dashboard-top">
                     <article class="border bg-light">
                         <h2 class="text-center primary-text">
-                            registered students
+                            Registered trainees
                         </h2>
 
-                        <p>
+                        <p> 
                             <?php
 
                                     $query = "SELECT * FROM std";
@@ -42,7 +42,7 @@
                     </article>
                     <article class="border bg-light">
                         <h2 class="text-center primary-text">
-                            registered teachers
+                            Registered trainers
                         </h2>
                         <p>
                         <?php
@@ -55,7 +55,7 @@
                     </article>
                     <article class="border bg-light">
                         <h2 class="text-center primary-text">
-                            student's post
+                            trainee's post
                         </h2>
                         <p>
                         <?php
