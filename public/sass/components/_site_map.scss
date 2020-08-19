@@ -1,0 +1,23 @@
+.section{
+    &-sitemap{
+        &-body {
+       }
+       &-main{
+           > li{
+               margin-bottom: 2rem;
+               a{
+                   font:{
+                       size:1.7rem;
+                   }
+                   color: $color-primary;
+               }
+               ul{
+                   margin-left: 20px;
+                   li{
+                       margin-top: 5px;
+                   }
+               }
+           }
+       }
+    }
+}
