@@ -3,28 +3,26 @@
 }
 
 .tab {
-  //   border: 1px solid #ccc;
-  //   background-color: #f1f1f1;
   position: -webkit-sticky;
   position: sticky;
   top: 2rem;
   @media (max-width: 582px) {
+    padding: 5rem 0 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 5rem 0 4rem;
   }
 }
 
 .tab button {
+  padding: 18px 16px;
+  width: 100%;
+  border: none;
   display: block;
   background: $color-gray-light-1;
   color: $color-btn-1;
   font-size: 1.6rem;
   font-weight: 400;
-  padding: 18px 16px;
-  width: 100%;
-  border: none;
   outline: none;
   cursor: pointer;
   transition: 0.3s;
@@ -55,8 +53,8 @@
 }
 
 .tab button.active {
-  color: rgba($color-btn-1, 1);
   background: $color-gray-light-2;
+  color: rgba($color-btn-1, 1);
   font-weight: 500;
 
   @media (min-width: 583px) {
