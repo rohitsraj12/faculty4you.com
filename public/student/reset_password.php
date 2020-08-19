@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in - teacher</title>
+    <title>Reset password</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -21,7 +21,7 @@
                     <span class="hamberger__line"></span>
                     <span class="hamberger__line"></span>
                     <span class="hamberger__line"></span>
-                </div>
+     </div>
                 <!-- end hamberger -->
             <header class="wrap-container">
                 <div class="brand">
@@ -48,7 +48,7 @@
                         if(isset($_GET['reset'])){
                             if($_GET['reset'] == "success"){
                             ?>
-                            <div  class="alert alert-primary" role="alert">
+                            <div  class="success_message" role="alert">
                             <p>please check your email....</p>
                             </div>
                             <?php
@@ -61,16 +61,13 @@
                         <div class="social-container">
                             
                             <p>
-                            Enter the email address you used when you joined and we’ll send you instructions to reset your password.
-                            </p>
-                            <p>
-                            For security reasons, we do NOT store your password. So rest assured that we will never send your password via email.
+                            Enter the email address you used when you joined and we’ll send you instructions to reset your password. For security reasons, we do NOT store your password. So rest assured that we will never send your password via email.
                             </p>
                         </div>
                         <!-- <span>or use your account</span> -->
 
                         <input type="text" id="user_name"  placeholder="Email"  name="email" />
-                        <button name="reset-request-submit">Login</button>
+                        <button name="reset-request-submit">Send reset instructions</button>
                     </form>
                 </div>
                 <!-- <div class="overlay-container">
