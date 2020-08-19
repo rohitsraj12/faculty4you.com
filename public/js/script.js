@@ -22,6 +22,12 @@ $(document).ready(function () {
     },
   });
 
+  /*******************************
+
+      tabs
+  
+  *********************************/
+
   // tab
   $(".tab button").click(function (event) {
     event.preventDefault();
@@ -47,6 +53,19 @@ $(document).ready(function () {
 
     $(".section-faq").hide();
     $("." + selectAtt).fadeIn();
+  });
+
+  $(".study-type").click(function (event) {
+    event.preventDefault();
+    var selectAtt = $(this).attr("data-study-type");
+
+    $(".study-type").find("a").removeClass("text-danger");
+    $(this).find("a").addClass("text-danger");
+
+    $(".wrap-study-type").hide();
+    $("." + selectAtt).fadeIn();
+
+    console.log(selectAtt);
   });
 
   // FAQ
