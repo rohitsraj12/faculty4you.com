@@ -21,7 +21,7 @@
                             </div>
                         </div>
                         <section class="section-body wrap-container">
-                            <article class="article-block" data-aos="zoom-out-right" data-aos-duration="1000">
+                            <article class="article-block">
                                 <figure class="studnet-section__figure">
                                     <span>step 1</span>
                                     <img src="<?php base_url();?>img/member/register.svg" alt="">
@@ -51,7 +51,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block" data-aos="zoom-out-left" data-aos-duration="1000">
+                            <article class="article-block">
                                 <figure class="studnet-section__figure">
                                 <span>step 3</span>
                                     <img src="<?php base_url();?>img/member/schedule.svg" alt="">
@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <section class="section-body wrap-container">
-                            <article class="article-block" data-aos="zoom-out-right" data-aos-duration="1000">
+                            <article class="article-block">
                                 <figure class="studnet-section__figure">
                                     <img src="<?php base_url();?>img/member/register.svg" alt="">
                                     <span>step 1</span>
@@ -275,7 +275,7 @@
                         </div>
                         
                         <section class="section-body wrap-container">
-                            <article class="article-block" data-aos="zoom-out-right" data-aos-duration="1000"> 
+                            <article class="article-block"> 
                                 <figure class="article-block__figure">
                                     
                                     <img src="<?php base_url();?>img/member/register.svg" alt="">
