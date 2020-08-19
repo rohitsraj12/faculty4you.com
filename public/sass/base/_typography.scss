@@ -62,6 +62,12 @@ p {
 }
 
 .nav {
+  &__list {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
   &__link {
     font-family: $font-primary;
     font-size: 1.6rem;
