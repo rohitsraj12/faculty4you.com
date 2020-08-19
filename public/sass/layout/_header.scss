@@ -40,7 +40,6 @@
         // clip-path: ellipse(58% 74% at 62% 25%);
         clip-path: circle(75.3% at 65% 24%);
         text-align: center;
-
         position: fixed;
         top: 0;
         left: 0;
@@ -50,14 +49,13 @@
   }
 
   &__profile {
+    font-size: 1.4rem;
     position: absolute;
     top: 0.5rem;
     right: 5%;
-    font-size: 1.4rem;
-
     i {
-      color: $color-gray-dark-1;
       padding-right: 0.5rem;
+      color: $color-gray-dark-1;
     }
   }
 }
