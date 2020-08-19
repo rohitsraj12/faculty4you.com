@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in - teacher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
@@ -33,7 +34,7 @@
                 <nav class="header__nav">
                         <ul>
                             <!-- <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li> -->
-                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link button-primary"> Student login</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link button-primary"> Trainee login</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
