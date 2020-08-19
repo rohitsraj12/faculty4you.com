@@ -32,93 +32,44 @@
                     <heeader class="text-primary-h"> 
                         Trainer detail
                     </header>
-                    <section class="section-search-result wrap-container">
-                        
-<?php
-    $city_id = $row['city_id'];
-
-    $sql = "SELECT * FROM teachers 
-            WHERE city_id = '$city_id'";
-
-    $result = mysqli_query($conn, $sql);
-    $query_results = mysqli_num_rows($result);
-
-    ?>
-        
-        <div class="search-result-num">
-            <p>
-                    <?php echo $query_results; ?> results are matching
-            </p>
-        </div>
-        <section class="section-body"> 
-    <?php 
-
-   
-
-     if($query_results > 0){
-         while($row = mysqli_fetch_assoc($result)){
-
-            ?>      
-            
-            
-            <article class="article-search-result">
-                    <div class="block-left">
-                        <figure class="article-search__figure">
-                            <img src="<?php echo base_url() . $row['teacher_photo']?>" alt="">
-                        </figure>
+                </div>    
+                <section class="row">
+                    <div class="col-sm-3 mt-5">
+                        <ul class=" border py-5 px-4">
+                            <li class="study-type mb-4 pb-4 pl-2 border-bottom" data-study-type="study-type-1"><a href="#" class="text-danger text-primary h2">Academic</a></li>
+                            <li class="study-type  pl-2" data-study-type="study-type-2"><a href="#"  class=" text-primary h2">Non-academic</a></li>
+                        </ul>
                     </div>
-                    <div class="block-right">
-                        <header class="article-search__header">
-                            <h1 class="text-secondary">
-                                <?php echo $row['teacher_user_name'];?>
-                            </h1>
-                        </header>
-                        <div class="article-search-body">
-                                <ul>
-                                    <li>Qualification: <strong><?php echo $row['city_id']?></strong></li>
-                                    <li>Experience: <strong><?php echo $row['teacher_experience']?></strong></li>
-                                    <li>City:<strong><?php echo $row['city_id']?></strong></li>
-                                    <li>Available for : 
-                                        <strong><?php if($row["teacher_online_one_to_one"] == 1){echo "Online one to one";} ?></strong><br/>
-                                        <strong> <?php if($row["teacher_online_group"] == 1){echo "Online group";}?></strong><br/>
-                                        <strong> <?php if($row["teacher_home_tuition"] == 1){echo "home tuition";}?> </strong>
-                                    
-                                    </li>
-                                    
-                                </ul>
-                        </div>
-                        
-                        <footer class="article-search-footer">
-                            <a class="button-text-1" href="detail.php?name=<?php echo $row['teacher_user_name']?>&batch=<?php echo $row['teacher_email']?>">more details</a>
-                        </footer>
+                    <div class="col-sm-9">
+                        <section class="wrap-study-type study-type-1">
+
+                            <?php
+                             $category_query = "SELECT * FROM teachers
+                             WHERE category_id = 1";
+                             $category_result = mysqli_query($conn, $category_query);
+                             while($row = mysqli_fetch_assoc($category_result)){
+                                 echo $row["teacher_first_name"]. '</br>';
+                             }
+                             
+                            ?>
+
+                        </section>
+                        <section class="wrap-study-type study-type-2">
+                            <?php
+                                $category_query = "SELECT * FROM teachers
+                                WHERE category_id = 2";
+                                $category_result = mysqli_query($conn, $category_query);
+                                while($row = mysqli_fetch_assoc($category_result)){
+                                    echo $row["teacher_first_name"]. '</br>';
+                                }
+                                
+                            ?>
+                        </section>
                     </div>
-                </article>
-            
-            
-            
-            <?php
-
-       }
-    } else {
-        echo "there are no result";
-        
-        ?> 
-        
-        <div class="search-result-num">
-            <p>
-                there are no result
-            </p>
-        </div>
-
-        <?php
-    }
- 
-?> 
-                    </section>
-                </div>
+                </section>
             </section>
         </main>
-            </div>
+    </div>
             <!-- end body container -->
 
 
