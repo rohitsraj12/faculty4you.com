@@ -10,6 +10,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset password</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -31,8 +32,7 @@
                 </div>
                 <nav class="header__nav">
                         <ul>
-                            <!-- <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li> -->
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">trainer login</a></li>
+                        <li class="nav__list">Not a member? <a class="nav__link" href="<?php base_url();?>student/registration.php">Sign up now</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
