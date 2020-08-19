@@ -277,8 +277,8 @@
                             </div>
                         </div> 
 
-                </section>
-            </main>
+                    </section>
+                </main>
             </div>
 
 <?php 
