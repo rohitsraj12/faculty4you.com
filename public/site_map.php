@@ -9,34 +9,36 @@
 <div class="body-container">
     <main>
         <section class="section-sitemap">
-            <div class="section-header u-center-text">
-                <heeader class="text-primary-h"> 
-                    Site map
-                </header>
-            </div>
-            <div class="section-body">
-                <article>
-                    <ul>
-                        <li>
-                            <a href="">home</a>
-                        </li>
-                        <li> <a href="">trainer</a>
-                            <ul>
-                                <li> <a href="">login</a></li>
-                                <li> <a href="">register</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="">trainee</a>
-                            <ul>
-                                <li> <a href="">login</a></li>
-                                <li> <a href="">register</a></li>
-                            </ul>
-                        </li>
-                        <li> <a href="">faq</a></li>
-                        <li> <a href="">testimonial</a></li>
-                        
-                    </ul>
-                </article>
+            <div class="wrap-container">
+                <div class="section-header u-center-text">
+                    <heeader class="text-primary-h"> 
+                        Site map
+                    </header>
+                </div>
+                <div class="section-sitemap-body">
+                    <article>
+                        <ul class="section-sitemap-main">
+                            <li>
+                                <a href="">home</a>
+                            </li>
+                            <li> <a href="">trainer</a>
+                                <ul>
+                                    <li> <a href="">login</a></li>
+                                    <li> <a href="">register</a></li>
+                                </ul>
+                            </li>
+                            <li> <a href="">trainee</a>
+                                <ul>
+                                    <li> <a href="">login</a></li>
+                                    <li> <a href="">register</a></li>
+                                </ul>
+                            </li>
+                            <li> <a href="">faq</a></li>
+                            <li> <a href="">testimonial</a></li>
+                            <li> <a href="">post</a></li>
+                        </ul>
+                    </article>
+                </div>
             </div>
         </section>
     </main>
