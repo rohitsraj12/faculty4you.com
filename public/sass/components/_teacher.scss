@@ -181,3 +181,14 @@
     }
   }
 }
+
+.student {
+  &-post {
+    .student-detail {
+      font: {
+        family: $font-primary;
+        size: 2rem;
+      }
+    }
+  }
+}
