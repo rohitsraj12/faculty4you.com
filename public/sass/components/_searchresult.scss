@@ -26,10 +26,10 @@
 .article {
   &-search {
     &-result {
-      background-color: $color-gray-light-1;
-      border: 1px solid $color-gray-light-2;
       margin: 0 1rem 6rem;
       padding: 1rem;
+      background-color: $color-gray-light-1;
+      border: 1px solid $color-gray-light-2;
       
 
       @media (min-width: 1025px) {
@@ -41,10 +41,6 @@
         flex-direction: row;
         justify-content: flex-start;
       }
-
-      // @media (min-width: 769px) and(max-width: 1124px) {
-      //   width: 45%;
-      // }
 
       @media (min-width: 582px) and (max-width: 768px) {
         width: 100%;
@@ -121,7 +117,6 @@
           strong {
             color: $color-gray-dark-1;
             font-weight: 400;
-            // border-bottom: 1px solid $color-link-1;
             &::after {
               content: "/";
               margin-left: 0.5rem;
