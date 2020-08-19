@@ -1,21 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>student reset password</title>
-</head>
-<body>
-    
-    <form action="include/reset-request.inc.php" method="post">
-        <label for="">Reset password</label>
-        <input type="text" name="email">
-        <button type="submit" name="reset-request-submit" >Receive new password by mail</button>
-
-    </form>
-   
-</body>
-</html>
 
 <?php
     include_once("../../private/config/config.php");
@@ -58,18 +40,22 @@
         </div>
 
         <div class="body-container">
-        <div class="section-member wrap-container">
+        <div class="section-forgotpwd wrap-container">
 
             <div class="container" id="container">
-                <div class="form-container sign-in-container">
-                <?php
-                    if(isset($_GET['reset'])){
-                        if($_GET['reset'] == "success"){
-                            echo "<p>please check your email..</p>";
+                <div class="form-container password-container">
+                    <?php
+                        if(isset($_GET['reset'])){
+                            if($_GET['reset'] == "success"){
+                            ?>
+                            <div  class="alert alert-primary" role="alert">
+                            <p>please check your email....</p>
+                            </div>
+                            <?php
+                            }
                         }
-                    }
-                
-                ?>
+                    
+                    ?>
                     <form action="include/reset-request.inc.php" method="post" >
                         <h1>Forgot password</h1>
                         <div class="social-container">
