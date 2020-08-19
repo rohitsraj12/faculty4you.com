@@ -101,6 +101,12 @@ p {
 .note-primary {
   color: #646464; }
 
+.nav__list {
+  font-family: "open sans";
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: capitalize; }
+
 .nav__link {
   font-family: "open sans";
   font-size: 1.6rem;
