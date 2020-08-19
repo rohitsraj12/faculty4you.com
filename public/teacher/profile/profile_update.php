@@ -168,7 +168,7 @@
                                                 <input class="form-check-input" name="category" type="radio" value="1" id="academic">
                                             <!-- 
                                                     #task fetch from database
-
+ 
                                              -->
                                                 <label class="form-check-label" for="academic">
                                                     Academic
