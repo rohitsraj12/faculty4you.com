@@ -229,7 +229,7 @@ label {
   font-size: 1.7rem;
   font-weight: 500; }
 
-.section-member {
+.section-member, .section-forgotpwd {
   width: 100%;
   height: 70vh;
   margin: -20px 0 50px;
@@ -238,7 +238,7 @@ label {
   justify-content: center;
   align-items: center;
   position: relative; }
-  .section-member::after {
+  .section-member::after, .section-forgotpwd::after {
     content: "";
     width: 100%;
     height: 70vh;
@@ -250,29 +250,29 @@ label {
     position: absolute;
     top: -50px;
     left: 5%; }
-  .section-member h1 {
+  .section-member h1, .section-forgotpwd h1 {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: bold; }
-  .section-member h2 {
+  .section-member h2, .section-forgotpwd h2 {
     text-align: center;
     font-family: "Montserrat", sans-serif; }
-  .section-member .section-member p {
+  .section-member .section-member p, .section-forgotpwd .section-member p {
     margin: 20px 0 30px;
     font-family: "Montserrat", sans-serif;
     font-size: 14px;
     font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px; }
-  .section-member span {
+  .section-member span, .section-forgotpwd span {
     font-size: 12px; }
-  .section-member a {
+  .section-member a, .section-forgotpwd a {
     margin: 15px 0;
     color: #333;
     font-size: 14px;
     text-decoration: none;
     font-family: "Montserrat", sans-serif; }
-  .section-member button {
+  .section-member button, .section-forgotpwd button {
     padding: 12px 45px;
     border-radius: 20px;
     border: 1px solid #ff4b2b;
@@ -282,14 +282,14 @@ label {
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 80ms ease-in; }
-  .section-member button:active {
+  .section-member button:active, .section-forgotpwd button:active {
     transform: scale(0.95); }
-  .section-member button:focus {
+  .section-member button:focus, .section-forgotpwd button:focus {
     outline: none; }
-  .section-member button.ghost {
+  .section-member button.ghost, .section-forgotpwd button.ghost {
     border-color: #ffffff;
     background-color: transparent; }
-  .section-member .form-container button {
+  .section-member .form-container button, .section-forgotpwd .form-container button {
     background: #8aafff;
     background: -moz-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, #5388fe), color-stop(41%, #8aafff), color-stop(100%, #5388fe));
@@ -299,7 +299,7 @@ label {
     background: linear-gradient(to right, #5388fe 0%, #8aafff 41%, #5388fe 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5388fe', endColorstr='#5388fe', GradientType=1 );
     border-color: #5388fe; }
-  .section-member form {
+  .section-member form, .section-forgotpwd form {
     padding: 0 50px;
     height: 100%;
     background-color: #ffffff;
@@ -308,13 +308,13 @@ label {
     justify-content: center;
     text-align: center;
     align-items: center; }
-  .section-member input {
+  .section-member input, .section-forgotpwd input {
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
     border: none;
     background-color: #eee; }
-  .section-member .container {
+  .section-member .container, .section-forgotpwd .container {
     width: 768px;
     max-width: 100%;
     min-height: 480px;
@@ -323,23 +323,23 @@ label {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden; }
-  .section-member .form-container {
+  .section-member .form-container, .section-forgotpwd .form-container {
     transition: all 0.6s ease-in-out;
     position: absolute;
     top: 0;
     height: 100%; }
-  .section-member .sign-in-container {
+  .section-member .sign-in-container, .section-forgotpwd .sign-in-container {
     left: 0;
     width: 50%;
     z-index: 2; }
-  .section-member .container.right-panel-active .sign-in-container {
+  .section-member .container.right-panel-active .sign-in-container, .section-forgotpwd .container.right-panel-active .sign-in-container {
     transform: translateX(100%); }
-  .section-member .sign-up-container {
+  .section-member .sign-up-container, .section-forgotpwd .sign-up-container {
     width: 50%;
     opacity: 0;
     z-index: 1;
     left: 0; }
-  .section-member .container.right-panel-active .sign-up-container {
+  .section-member .container.right-panel-active .sign-up-container, .section-forgotpwd .container.right-panel-active .sign-up-container {
     transform: translateX(100%);
     opacity: 1;
     z-index: 5;
@@ -354,7 +354,7 @@ label {
   100% {
     opacity: 1;
     z-index: 5; } }
-  .section-member .overlay-container {
+  .section-member .overlay-container, .section-forgotpwd .overlay-container {
     position: absolute;
     top: 0;
     left: 50%;
@@ -363,9 +363,9 @@ label {
     overflow: hidden;
     transition: transform 0.6s ease-in-out;
     z-index: 100; }
-  .section-member .container.right-panel-active .overlay-container {
+  .section-member .container.right-panel-active .overlay-container, .section-forgotpwd .container.right-panel-active .overlay-container {
     transform: translateX(-100%); }
-  .section-member .overlay {
+  .section-member .overlay, .section-forgotpwd .overlay {
     /* background: #FF416C;
 	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
@@ -387,9 +387,9 @@ label {
     width: 200%;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out; }
-  .section-member .container.right-panel-active .overlay {
+  .section-member .container.right-panel-active .overlay, .section-forgotpwd .container.right-panel-active .overlay {
     transform: translateX(50%); }
-  .section-member .overlay-panel {
+  .section-member .overlay-panel, .section-forgotpwd .overlay-panel {
     height: 100%;
     width: 50%;
     padding: 0 40px;
@@ -402,10 +402,10 @@ label {
     top: 0;
     transform: translateX(0);
     transition: transform 0.6s ease-in-out; }
-    .section-member .overlay-panel h1 {
+    .section-member .overlay-panel h1, .section-forgotpwd .overlay-panel h1 {
       position: relative;
       padding: 0 3rem 20rem; }
-      .section-member .overlay-panel h1::after {
+      .section-member .overlay-panel h1::after, .section-forgotpwd .overlay-panel h1::after {
         content: "";
         margin: 0 auto;
         width: 100%;
@@ -417,18 +417,18 @@ label {
         position: absolute;
         bottom: 0;
         left: 0; }
-  .section-member .overlay-left {
+  .section-member .overlay-left, .section-forgotpwd .overlay-left {
     transform: translateX(-20%); }
-  .section-member .container.right-panel-active .overlay-left {
+  .section-member .container.right-panel-active .overlay-left, .section-forgotpwd .container.right-panel-active .overlay-left {
     transform: translateX(0); }
-  .section-member .overlay-right {
+  .section-member .overlay-right, .section-forgotpwd .overlay-right {
     right: 0;
     transform: translateX(0); }
-  .section-member .container.right-panel-active .overlay-right {
+  .section-member .container.right-panel-active .overlay-right, .section-forgotpwd .container.right-panel-active .overlay-right {
     transform: translateX(20%); }
-  .section-member .social-container {
+  .section-member .social-container, .section-forgotpwd .social-container {
     margin: 20px 0; }
-  .section-member .social-container a {
+  .section-member .social-container a, .section-forgotpwd .social-container a {
     margin: 0 5px;
     height: 40px;
     width: 40px;
@@ -450,6 +450,20 @@ label {
     align-items: center; }
     .member-body-header header .brand img {
       height: 80px; }
+
+.section-forgotpwd .container {
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  z-index: 90; }
+
+.section-forgotpwd .password-container {
+  width: 100%;
+  z-index: 9; }
 
 @media (min-width: 583px) {
   .section-student {
