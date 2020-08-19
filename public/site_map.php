@@ -1,5 +1,5 @@
 <?php
-    $page_title = "faq";
+    $page_title = "sitemap";
     require("../private/config/config.php");
     require_once("../private/config/db_connect.php");
     include_once("../private/required/public/header.public.php");
@@ -19,23 +19,23 @@
                     <article>
                         <ul class="section-sitemap-main">
                             <li>
-                                <a href="">home</a>
+                                <a href="<?php base_url();?>index.php">Home</a>
                             </li>
-                            <li> <a href="">trainer</a>
+                            <li> <a href="<?php base_url();?>teacher/index.php">Trainer</a>
                                 <ul>
-                                    <li> <a href="">login</a></li>
-                                    <li> <a href="">register</a></li>
+                                    <li> <a href="<?php base_url();?>teacher/login.php">Login</a></li>
+                                    <li> <a href="<?php base_url();?>teacher/registration.php">Register</a></li>
                                 </ul>
                             </li>
-                            <li> <a href="">trainee</a>
+                            <li> <a href="<?php base_url();?>student/index.php">Trainee</a>
                                 <ul>
-                                    <li> <a href="">login</a></li>
-                                    <li> <a href="">register</a></li>
+                                    <li> <a href="<?php base_url();?>student/login.php">Login</a></li>
+                                    <li> <a href="<?php base_url();?>student/registration.php">Register</a></li>
                                 </ul>
                             </li>
-                            <li> <a href="">faq</a></li>
-                            <li> <a href="">testimonial</a></li>
-                            <li> <a href="">post</a></li>
+                            <li> <a href="<?php base_url();?>faq.php">Faq</a></li>
+                            <li> <a href="<?php base_url();?>">Testimonial</a></li>
+                            <li> <a href="<?php base_url();?>student/post/post.php">Post</a></li>
                         </ul>
                     </article>
                 </div>
