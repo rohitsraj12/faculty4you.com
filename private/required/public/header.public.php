@@ -30,7 +30,7 @@
         <![endif]-->
         
         <div class="body-wrap">
-            <div class="body-header" data-aos="zoom-out-down" data-aos-duration="1000">
+            <div class="body-header">
                 <div id="hamberger" class="hamberger">
                     <span class="hamberger__line"></span>
                     <span class="hamberger__line"></span>
