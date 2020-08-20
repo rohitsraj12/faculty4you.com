@@ -70,11 +70,11 @@
                 $row = mysqli_fetch_assoc($result);
             ?>
                     
-               <form action="" method="POST">
+               <form action="" method="POST" onsubmit="return validation()">
                 
                 <div class="form-group">
                     <label for="answer">Testimonial</label>
-                    <textarea class="form-control" id="answer" name="testimonial" rows="3"></textarea>
+                    <textarea class="form-control testimonial__textarea" id="answer" name="testimonial" rows="3"></textarea>
                 </div>   
                 <input class="btn btn-primary" type="submit" name="submit_testimonial" value="Submit new Testimonial">
             </form>
