@@ -55,7 +55,7 @@
                         <!-- <span>or use your account</span> -->
                         <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
                         <input type="password" placeholder="Password"  name="password"/>
-                        <a href="#">Forgot your password?</a>
+                        <a href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
                         <button name="login-submit">Login</button>
                     </form>
                 </div>
