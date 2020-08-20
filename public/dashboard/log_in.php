@@ -9,9 +9,9 @@ $active = "dashboard Login";
 
     <div class="body-container">
         <div class="wrap-container">
-            <form action="include/log_in.inc.php" method="post">
+            <form action="include/log_in.inc.php" method="post" onsubmit="return validation()">
                 <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
-                <input type="password" placeholder="Password"  name="password"/>
+                <input type="password" id="password" placeholder="Password"  name="password"/>
                 <button name="submit_login">Login</button>
             </form>
         </div>
