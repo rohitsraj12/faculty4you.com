@@ -58,10 +58,10 @@ $sub = "faq_compose";
             </div>
         </div>
         <section class="section-faq">
-            <form action="" method="POST">
+            <form action="" method="POST" onsubmit="return faqValidation()">
                 <div class="form-group">
-                    <label for="q">Question</label>
-                    <input type="text" class="form-control" name="question" id="q">
+                    <label for="question">Question</label>
+                    <input type="text" class="form-control" name="question" id="question">
                     <small id="emailHelp" class="form-text text-muted">Enter FAQ question here.</small>
                 </div>
                 <div class="form-group row">
@@ -70,19 +70,19 @@ $sub = "faq_compose";
                     </div>
                     <div class="col-9">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="general" value="general">
+                            <input class="form-check-input category" type="radio" name="category" id="general" value="general">
                             <label class="form-check-label" for="general">
                                 General category question
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="student" value="student">
+                            <input class="form-check-input category" type="radio" name="category" id="student" value="student">
                             <label class="form-check-label" for="student">
                                 Trainee category question
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="category" id="teacher" value="teacher">
+                            <input class="form-check-input category" type="radio" name="category" id="teacher" value="teacher">
                             <label class="form-check-label" for="teacher">
                                 Trainer category question
                             </label>
