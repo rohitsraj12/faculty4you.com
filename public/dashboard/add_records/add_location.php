@@ -96,16 +96,16 @@
                     <header class="text-center border-bottom mb-5">
                         <h5>Add new city to data-base</h5>
                     </header>
-                    <form action="" method="POST">
+                    <form action="" method="POST" onsubmit="return cityValidation()">
                         <div class="form-group">
                             <label for="q">Add new city</label>
-                            <input type="text" class="form-control" name="city" id="q">
+                            <input type="text" class="form-control city__input" name="city" id="q">
                             <small id="emailHelp" class="form-text text-muted">add new city name here.</small>
                         </div>
                         <div class="form-group">
                             <label for="q">Select state</label>
-                            <select name="state" class="form-control">
-                                <option>Select state</option>
+                            <select name="state" class="form-control select-state">
+                                <option value="nooption">Select state</option>
                                 <?php 
                                     $query = "SELECT * FROM states ORDER BY state_name ASC";
                                     $result = mysqli_query($conn, $query);
@@ -131,10 +131,10 @@
                     <header class="text-center border-bottom mb-5">
                         <h5>Add new state to data-base</h5>
                     </header>
-                    <form action="" method="POST">
+                    <form action="" method="POST" onsubmit="return stateValidation()">
                         <div class="form-group">
                             <label for="q">Add new state</label>
-                            <input type="text" class="form-control" name="state" id="q">
+                            <input type="text" class="form-control new-state" name="state" id="q">
                             <small id="emailHelp" class="form-text text-muted">add new state name here.</small>
                         </div>
                         <div class="form-group text-right">
