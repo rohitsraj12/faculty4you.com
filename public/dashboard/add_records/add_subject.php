@@ -67,16 +67,16 @@ $sub = "add subject";
                     <header class="text-center border-bottom mb-5">
                         <h5>Add subjects</h5>
                     </header>
-                    <form action="" method="POST">
+                    <form action="" method="POST" onsubmit="return subject_validation()">
                         <div class="form-group">
                             <label for="q">Add subjects</label>
-                            <input type="text" class="form-control" name="subject" id="q">
+                            <input type="text" class="form-control subject" name="subject" id="q">
                             <small id="emailHelp" class="form-text text-muted">Add new subject name here.</small>
                         </div>
                         <div class="form-group">
                             <label for="q">Select subject category</label>
-                            <select name="sub-cat" class="form-control">
-                                <option>Select subject category</option>
+                            <select name="sub-cat" class="form-control sub-cat">
+                                <option value="nooption">Select subject category</option>
                                 <?php 
                                     $query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
                                     $result = mysqli_query($conn, $query);
@@ -93,7 +93,7 @@ $sub = "add subject";
                         </div> 
                         
                         <div class="form-group text-right">
-                            <input class="btn btn-primary" type="submit" name="submit_subject" value="Submit new city">
+                            <input class="btn btn-primary" type="submit" name="submit_subject" value="Submit subject">
                         </div>
                     </form>
                 </section>
