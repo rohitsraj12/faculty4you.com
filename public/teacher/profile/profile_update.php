@@ -43,7 +43,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return updateProfile()">
                         <article class="mb-5" >
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 Personal information
