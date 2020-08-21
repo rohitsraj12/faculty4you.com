@@ -43,7 +43,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return updateProfile()">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return validation()">
                         <article class="mb-5" >
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 Personal information
@@ -53,11 +53,11 @@
                                 <div class="form-row pt-3">
                                     <div class="form-group col-md-6">
                                     <label for="first_name">First name</label>
-                                    <input type="text" name="first_name" class="form-control" id="first_name" value="<?php //echo $row['teacher_first_name']; ?>" placeholder="<?php //echo $row['teacher_first_name']; ?>">
+                                    <input type="text" name="first_name" class="form-control" id="first_name" value="<?php echo $row['teacher_first_name']; ?>" placeholder="<?php echo $row['teacher_first_name']; ?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
-                                    <input type="text" name="last_name" class="form-control" id="last_name" value="<?php //echo $row['teacher_last_name']; ?>" placeholder="<?php //echo $row['teacher_last_name']; ?>">
+                                    <input type="text" name="last_name" class="form-control" id="last_name" value="<?php echo $row['teacher_last_name']; ?>" placeholder="<?php echo $row['teacher_last_name']; ?>">
                                     </div>
                                 </div>
 
