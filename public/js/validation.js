@@ -47,8 +47,10 @@ function validation(){
     if(phone[0].value == ""){
         alert("enter phone number");
         return false;
-    }
-    else {
+    }else if(!telExp.test(phone[0].value)){
+        alert("enter valid phone number.");
+        return false;
+    }else {
         return true;
     }
 
@@ -60,4 +62,3 @@ function validation(){
 
 
 }
-alert("hiii");
