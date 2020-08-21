@@ -32,8 +32,6 @@
 
 <div class="body-container">
 
-    
-
     <main class="wrap-container profile">
         <section class="section-profile-update">
             <div class="section-header u-center-text" >
@@ -45,7 +43,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return updateProfile()">
                         <article class="mb-5" >
                             <header class="p-4 h3 bg-dark text-light m-0">
                                 Primary information
@@ -55,30 +53,30 @@
                                 <div class="form-row pt-3">
                                     <div class="form-group col-md-6">
                                     <label for="first_name">First name</label>
-                                    <input type="text" name="fname" class="form-control" id="first_name" vlaue="<?php echo $row['student_first_name'];?>" placeholder="<?php echo $row['student_first_name'];?>">
+                                    <input type="text" name="fname" class="form-control name" id="first_name" placeholder="<?php// echo $row['student_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
-                                    <input type="text" name="lname" class="form-control" id="last_name" value="<?php echo $row['student_last_name'];?>" placeholder="<?php echo $row['student_last_name'];?>">
+                                    <input type="text" name="lname" class="form-control name" id="last_name" placeholder="<?php// echo $row['student_last_name'];?>">
                                     </div>
                                 </div>
 
                                 <div class="form-row pb-3">
                                     <div class="col-sm-6">
                                         <label for="dob">Date of birth</label>
-                                        <input type="date" name="date" class="form-control" id="dob"  value="<?php echo $row['student_date_of_birth'];?>" placeholder="<?php echo $row['student_date_of_birth'];?>">
+                                        <input type="date" name="date" class="form-control dob" id="dob"  value="<?php echo $row['student_date_of_birth'];?>" placeholder="<?php echo $row['student_date_of_birth'];?>">
                                     
                                     </div>    
                                 </div>
 
                                 <div class="form-group">
                                     <label for="photo">Upload image</label>
-                                    <input type="file" name="file" class="form-control-file" id="photo"  value="<?php echo $row['student_photo'];?>" placeholder="<?php echo $row['student_photo'];?>">
+                                    <input type="file" name="file" class="form-control-file image" id="photo"  value="<?php echo $row['student_photo'];?>" placeholder="<?php echo $row['student_photo'];?>">
                                 </div>
 
                                 <fieldset class="form-group">
                                     <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0 ">Gender</label>
+                                        <label class="label col-form-label col-sm-2 pt-0">Gender</label>
                                         <div class="col-sm-8 row">
                                             
 
@@ -89,7 +87,7 @@
                                                 while($row = mysqli_fetch_assoc($gender_result)){
                                             ?>
                                                 <div class="form-check col-sm-2">
-                                                    <input class="form-check-input" name="gender" type="radio" value="<?php echo $row['gender_id'];?>" id="<?php echo $row['gender_type'];?>">
+                                                    <input class="form-check-input gender" name="gender" type="radio" value="<?php echo $row['gender_id'];?>" id="<?php echo $row['gender_type'];?>">
                                                 
                                                     <label class="form-check-label" for="<?php echo $row['gender_type'];?>">
                                                         <?php echo $row['gender_type'];?>
@@ -115,11 +113,11 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email" value="<?php echo $row['student_email'];?>" placeholder="<?php echo $row['student_email'];?>">
+                                    <input type="email" name="email" class="form-control email" id="email" value="<?php echo $row['student_email'];?>" placeholder="<?php echo $row['student_email'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">Telephone</label>
-                                    <input type="tel" name="phone" class="form-control" id="phone" value="<?php echo $row['student_phone'];?>" placeholder="<?php echo $row['student_phone'];?>">
+                                    <input type="tel" name="phone" class="form-control phone" id="phone" value="<?php echo $row['student_phone'];?>" placeholder="<?php echo $row['student_phone'];?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
