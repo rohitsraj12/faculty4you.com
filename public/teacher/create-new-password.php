@@ -86,15 +86,15 @@
                 <div class="form-container password-container">
                 <?php
 
-$selector = $_GET['selector'];
-$validator = $_GET['validator'];
+                    $selector = $_GET['selector'];
+                    $validator = $_GET['validator'];
 
-// security
-if(empty($selector) || empty($validator)){
-   echo "could not validate your requiest";
-} else {
-    if(ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false ){
-    ?>
+                    // security
+                    if(empty($selector) || empty($validator)){
+                    echo "could not validate your requiest";
+                    } else {
+                        if(ctype_xdigit($selector) !== false && ctype_xdigit($validator) !== false ){
+                        ?>
 
                     <form action="include/reset-password.inc.php" method="post">
                         <h1>Create new password</h1>
