@@ -34,11 +34,12 @@
                         </header>
                     </div>
 
-                    <div class="search__form">
-                        <form action="">
+                    <div class="search__form mb-5 bg-light border p-5">
+                        <form action="" method="post">
                         <div class="row">
                             <div class="col-sm-6">
                                 <input type="search" class="form-control" id="inputAddress" placeholder="">
+                                <small>Enter your subject / pincode / study type</small>
                             </div>
                             <div class="col-sm-3">
                                 <select id="inputState" class="form-control">
@@ -47,7 +48,7 @@
                                 </select>   
                             </div>
                             <div class="col-sm-3">
-                            <input class="button-primary" type="submit" value="search">
+                                <input class="btn btn-primary w-100 py-2" style="font-size: 1.4rem" name="search" type="submit" value="search">
                             
                             </div>
                         </div>
