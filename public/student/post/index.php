@@ -102,15 +102,15 @@
                                 <header class="text-primary-h text-center pb-5 mb-5" >
                                     Compose new post
                                 </header>
-                                <form action="../include/post.inc.php" method="post" class="bg-light border py-5 px-5" >
+                                <form action="../include/post.inc.php" method="post" class="bg-light border py-5 px-5" onsubmit="return studentPost()">
                                     <div class="form-group">
                                         <label for="title">Title</label>
-                                        <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
+                                        <input name="post_title" class="form-control title" type="text" id="title" placeholder="user name">
                                     </div>
                                     
                                     <div class="form-group">
-                                        <label for="about">About me</label>
-                                        <textarea name="post_detail" class="form-control" rows="10" id="about" placeholder="Briefly explain about yourself"></textarea>
+                                        <label for="about">Detail requirements</label>
+                                        <textarea name="post_detail" class="form-control detail" rows="10" id="about" placeholder="Briefly explain about yourself"></textarea>
                                         
                                     </div>
                                     <div class="row">
