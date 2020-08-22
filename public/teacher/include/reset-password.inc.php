@@ -1,4 +1,13 @@
 <?php
+// $selector = $_POST['selector'];
+// $validator = $_POST['validator'];
+// $pwd = $_POST['pwd'];
+// $pwd_repeat = $_POST['pwd-repeat'];
+
+// echo $selector . "<br/>";
+// echo $validator . "<br/>";
+// echo $pwd . "<br/>";
+// echo $pwd_repeat . "<br/>";
 
 if(isset($_POST['reset_password_submit'])){
     $selector = $_POST['selector'];
@@ -23,7 +32,7 @@ if(isset($_POST['reset_password_submit'])){
     $stmt = mysqli_stmt_init($conn);
 
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        echo "there was a error!";
+        echo "there was a error1!";
         exit();
     } else {
         mysqli_stmt_bind_param($stmt, "ss", $selector, $current_date);
@@ -44,11 +53,11 @@ if(isset($_POST['reset_password_submit'])){
             } else if ($token_check === true) {
                 $token_email = $row["pws_reset_email"];
 
-                $sql = "SELECT * FROM teacher WHERE teacher_email = ?"; 
+                $sql = "SELECT * FROM teachers WHERE teacher_email = ?"; 
                 $stmt = mysqli_stmt_init($conn);
 
                 if(!mysqli_stmt_prepare($stmt, $sql)){
-                    echo "there was a error!";
+                    echo "there was a error2!";
                     exit();
                 } else {
                     mysqli_stmt_bind_param($stmt, "s", $token_email);
@@ -56,14 +65,14 @@ if(isset($_POST['reset_password_submit'])){
 
                     $result = mysqli_stmt_get_result($stmt);
                     if(!$row = mysqli_fetch_assoc($result)){
-                        echo "there was an error.";
+                        echo "there was an error.3";
                         exit();
                     } else {
-                        $sql = "UPDATE teacher SET teacher_password =? WHERE teacher_email = ?";
+                        $sql = "UPDATE teachers SET teacher_password =? WHERE teacher_email = ?";
                         $stmt = mysqli_stmt_init($conn);
 
                         if(!mysqli_stmt_prepare($stmt, $sql)){
-                            echo "there was a error!";
+                            echo "there was a error4!";
                             exit();
                         } else {
                             $new_pwd_hash = password_hash($pwd, PASSWORD_DEFAULT);
@@ -75,7 +84,7 @@ if(isset($_POST['reset_password_submit'])){
                             $stmt = mysqli_stmt_init($conn);
 
                             if(!mysqli_stmt_prepare($stmt, $sql)){
-                                echo "there was a error!";
+                                echo "there was a error5!";
                                 exit();
                             } else {
                                 mysqli_stmt_bind_param($stmt, "s", $user_email);
