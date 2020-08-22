@@ -16,7 +16,6 @@ $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
 
-
 if(isset($_POST['submit-post'])){
 
     // fill empty data
@@ -36,26 +35,10 @@ if(isset($_POST['submit-post'])){
     // // echo $post_title;
     $sql = "INSERT INTO `posts` (`student_id`, `post_title`, `post_detail`, `study_type_id`, `study_cat_id`, `city_id`, `state_id`, `post_date`, `post_state`) 
      VALUES ('$student_id', '$post_title', '$post_detail', '$study_type', '$study_category', '$city', '$state', '$post_date', '$post_state')";
-    // $stmt = mysqli_stmt_init($conn);
+
     $result = mysqli_query($conn, $sql);
 
-    // if(!mysqli_stmt_prepare($stmt, $sql)){
-    //     // redirect to register and empty field
-    //     header("Location: ../post/post.php?error=sqlerror");
-    //     //stop scripting
-    //     exit();
-    // } else {
-    //     mysqli_stmt_bind_param($stmt, "issiiiisi", $student_id, $post_title, $post_detail, $study_type, $study_category, $city, $state, $date, $state);
-    //     mysqli_stmt_execute($stmt);
-        
-    //     header("Location: ../post/index.php?register=success");
-    //     exit();
-    // // }
-    //     mysqli_stmt_close($stmt);
-    //     mysqli_close($conn);
-
-        
-        header("Location: ../post/index.php?register=success");
+    header("Location: ../post/index.php?register=success");
 
 
 //         // exit();
@@ -64,9 +47,9 @@ if(isset($_POST['submit-post'])){
 //             die("failed query". mysqli_error($conn));
 //         }
 
-// } else {
-//      // redirect to register and empty field
-//      header("location: ../post/post.php");
-//      //stop scripting
-//      exit();
+} else {
+     // redirect to register and empty field
+     header("location: ../post/post.php");
+     //stop scripting
+     exit();
 }
