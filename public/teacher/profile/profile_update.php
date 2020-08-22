@@ -53,11 +53,11 @@
                                 <div class="form-row pt-3">
                                     <div class="form-group col-md-6">
                                     <label for="first_name">First name</label>
-                                    <input type="text" name="first_name" class="form-control" id="first_name" value="<?php echo $row['teacher_first_name']; ?>" placeholder="<?php echo $row['teacher_first_name']; ?>">
+                                    <input type="text" name="first_name" class="form-control name" id="first_name" >
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
-                                    <input type="text" name="last_name" class="form-control" id="last_name" value="<?php echo $row['teacher_last_name']; ?>" placeholder="<?php echo $row['teacher_last_name']; ?>">
+                                    <input type="text" name="last_name" class="form-control name" id="last_name" >
                                     </div>
                                 </div>
 
@@ -75,7 +75,7 @@
                                             #task fetch from database
                                          -->
                                             <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="gender" type="radio" value="1" id="male">
+                                                <input class="form-check-input gender" name="gender" type="radio" value="1" id="male">
                                             
                                                 <label class="form-check-label" for="male">
                                                     male
@@ -83,14 +83,14 @@
                                             </div>
 
                                             <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="gender" type="radio" value="2" id="female">
+                                                <input class="form-check-input gender" name="gender" type="radio" value="2" id="female">
                                             
                                                 <label class="form-check-label" for="female">
                                                     female
                                                 </label>
                                             </div>
                                             <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="gender" type="radio" value="3" id="other">
+                                                <input class="form-check-input gender" name="gender" type="radio" value="3" id="other">
                                             
                                                 <label class="form-check-label" for="other">
                                                     other
@@ -104,11 +104,11 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
-                                    <input type="email" name="email" class="form-control" id="email" value="<?php //echo $row['teacher_email']; ?>" placeholder="<?php //echo $row['teacher_email']; ?>">
+                                    <input type="email" name="email" class="form-control email" id="email" value="<?php //echo $row['teacher_email']; ?>" placeholder="<?php //echo $row['teacher_email']; ?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">Telephone</label>
-                                    <input type="text" name="phone" class="form-control" id="phone" value="<?php //echo $row['teacher_phone']; ?>" placeholder="<?php //echo $row['teacher_phone']; ?>">
+                                    <input type="text" name="phone" class="form-control phone" id="phone" value="<?php //echo $row['teacher_phone']; ?>" placeholder="<?php //echo $row['teacher_phone']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -121,8 +121,8 @@
                                     
                                     <div class="form-group col-md-6">
                                         <label for="city">City</label>
-                                        <select id="state" name="city" class="form-control">
-                                            <option selected>Choose city</option>
+                                        <select id="state" name="city" class="form-control city">
+                                            <option selected value="nooption">Choose city</option>
                                             <?php 
                                                 $city_query = "SELECT * FROM cities ORDER BY city_name ASC";
                                                 $city_result = mysqli_query($conn, $city_query);
@@ -135,8 +135,8 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="state">State</label>
-                                        <select id="state" name="state" class="form-control">
-                                            <option selected>Choose state</option>
+                                        <select id="state" name="state" class="form-control state">
+                                            <option value="nooption" selected>Choose state</option>
                                             <?php 
                                                 $state_query = "SELECT * FROM states ORDER BY state_name ASC";
                                                 $state_result = mysqli_query($conn, $state_query);
@@ -165,7 +165,7 @@
                                         <label class="label col-form-label col-sm-2 pt-0">Category</label>
                                         <div class="col-sm-8 row">
                                             <div class="form-check col-sm-2">
-                                                <input class="form-check-input" name="category" type="radio" value="1" id="academic">
+                                                <input class="form-check-input type" name="category" type="radio" value="1" id="academic">
                                             <!-- 
                                                     #task fetch from database
  
@@ -176,7 +176,7 @@
                                             </div>
 
                                             <div class="form-check col-sm-4">
-                                                <input class="form-check-input" name="category" type="radio" value="2" id="non-academic">
+                                                <input class="form-check-input type" name="category" type="radio" value="2" id="non-academic">
                                             
                                                 <label class="form-check-label" for="non-academic">
                                                     Non-academic
@@ -191,12 +191,12 @@
                                 <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
                                         <label for="teaching_exp">Teaching experience</label>
-                                        <input type="text" name="exp" class="form-control" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
+                                        <input type="text" name="exp" class="form-control experience" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="sub_id">Academic subjects</label>
-                                        <select id="state" name="subject" class="form-control">
-                                            <option selected>Choose your subject</option>
+                                        <select id="state" name="subject" class="form-control subject">
+                                            <option selected value="nooption">Choose your subject</option>
                                             <?php 
                                                 $city_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
                                                 $city_result = mysqli_query($conn, $city_query);
@@ -239,7 +239,7 @@
                                 </fieldset> -->
                                 <div class="form-group">
                                     <label for="about">About me</label>
-                                    <textarea name="about_me" class="form-control" id="about" value="<?php //echo $row["teacher_about_me"];?>" placeholder="<?php //echo $row["teacher_about_me"];?>"></textarea>
+                                    <textarea name="about_me" class="form-control about" id="about" value="<?php //echo $row["teacher_about_me"];?>" placeholder="<?php //echo $row["teacher_about_me"];?>"></textarea>
                                     
                                 </div>
 
