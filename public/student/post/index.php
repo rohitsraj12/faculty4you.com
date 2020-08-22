@@ -102,7 +102,7 @@
                                 <header class="text-primary-h text-center pb-5 mb-5" >
                                     Compose new post
                                 </header>
-                                <form action="../include/post.inc.php" method="post" class=" bg-light border py-5 px-5" >
+                                <form action="../include/post.inc.php" method="post" class="bg-light border py-5 px-5" >
                                     <div class="form-group">
                                         <label for="title">Title</label>
                                         <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
