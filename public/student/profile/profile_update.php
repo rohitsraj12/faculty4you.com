@@ -130,8 +130,8 @@
                                     
                                     <div class="form-group col-md-6">
                                         <label for="city">City</label>
-                                        <select id="state" name="city" class="form-control">
-                                            <option>Select city</option>
+                                        <select id="state" name="city" class="form-control city">
+                                            <option value="nooption">Select city</option>
                                             <?php 
                                                 $city_query = "SELECT * FROM cities ORDER BY city_name ASC";
                                                 $city_result = mysqli_query($conn, $city_query);
@@ -144,8 +144,8 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="state">State</label>
-                                        <select id="state" name="state" class="form-control">
-                                            <option>Select state</option>
+                                        <select id="state" name="state" class="form-control state">
+                                            <option value="nooption">Select state</option>
                                             <?php 
                                                 $state_query = "SELECT * FROM states ORDER BY state_name ASC";
                                                 $state_result = mysqli_query($conn, $state_query);
@@ -158,7 +158,7 @@
                                     </div>
                                     <div class="form-group col-md-2">
                                         <label for="pincode">Pincode</label>
-                                        <input type="text" name="pincode" class="form-control" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
+                                        <input type="text" name="pincode" class="form-control pincode" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
                                     </div>
                                 </div>
                             </div>
