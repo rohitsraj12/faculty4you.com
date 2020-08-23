@@ -46,7 +46,7 @@
         <div class="section-member wrap-container">
 
             <div class="container" id="container">
-                <div class="form-container sign-up-container">
+                <div class="form-container sign-up-container sign-up-input">
                     <form  action="include/registration.teacher.inc.php" method="post" onsubmit="return registration()">
                         <h1>Create Account</h1>
                         <div class="social-container">
@@ -63,7 +63,7 @@
                         <button  name="submit-register" >Sign Up</button>
                     </form>
                 </div>
-                <div class="form-container sign-in-container">
+                <div class="form-container sign-in-container sign-in-input">
                     <form action="include/login.teacher.inc.php" method="post" onsubmit="return login()">
                         <h1>Trainer Login</h1>
                         <div class="social-container">
