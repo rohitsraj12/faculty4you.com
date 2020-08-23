@@ -37,7 +37,7 @@
     position: absolute;
     right: 1.4rem;
     bottom: 2.9rem;
-    
+
     font: {
       size: 2rem;
     }
@@ -88,17 +88,28 @@
     }
   }
 }
+
 .form-check-label {
   margin-bottom: 0.5rem;
   padding-left: 1rem;
   line-height: 1.7rem;
 }
 
-label, .label{
+label,
+.label {
   font-size: 1.5rem;
 }
-input, .form-control{
+
+input,
+.form-control {
   font-size: 1.5rem;
   font-weight: normal;
   line-height: 2.5rem;
+}
+
+.msg {
+  display: block;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: $color-gray-dark-1;
 }
