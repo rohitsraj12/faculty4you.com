@@ -112,8 +112,8 @@
                     <div class="col-sm-3">
                         <div class="tab" >
                             <button class="tablinks active" data-post="view__post">Search result</button>
-                            <button class="tablinks" data-post="compose__post">city</button>
-                            <button class="tablinks" data-post="compose__post">city</button>
+                            <!-- <button class="tablinks" data-post="compose__post">city</button>
+                            <button class="tablinks" data-post="compose__post">city</button> -->
                         </div>
                     </div>
                     <div class="col-sm-9">
