@@ -23,26 +23,43 @@
                         </header>
                     </div>
 
+                    <?php
+                if(isset($_POST["submit-search"])){
+                    // security
+                    $search = mysqli_real_escape_string($conn, $_POST["search"]);
+
+                    $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%' ";
+                    $result = mysqli_query($conn, $sql);
+                    $query_results = mysqli_num_rows($result);
+
+                ?>
                     <div class="search__form mb-5 bg-light border p-5">
                         <form action="" method="post">
                         <div class="row">
                             <div class="col-sm-6">
-                                <input type="search" class="form-control" id="inputAddress" placeholder="">
+                                <input type="search" class="form-control" name="search" id="inputAddress" placeholder="">
                                 <small class="msg">Enter your subject / pincode / study type</small>
                             </div>
                             <div class="col-sm-3">
-                                <select id="inputState" class="form-control">
+                                <select id="inputState" name="city" class="form-control">
                                     <option selected>Choose...</option>
                                     <?php 
                                         // #task city data fetch
+                                        $city_query = "SELECT * FROM cities";
+                                        $result = mysqli_query($conn, $city_query);
+                                        while( $row = mysqli_fetch_assoc($result)){
+                                        
                                     ?>
-                                    <option>...</option>
+                                    <option value="<?php echo $row['city_id'];?>"><?php echo $row['city_name'];?></option>
+                                    <?php
+                                    }
+                                    ?>
                                 </select>  
                                 <small class="msg">Select city name</small>
 
                             </div>
                             <div class="col-sm-3">
-                                <input class="btn btn-primary w-100 py-2" style="font-size: 1.4rem" name="search" type="submit" value="search">
+                                <input class="btn btn-primary w-100 py-2" style="font-size: 1.4rem" name="submit-search" type="submit" value="search">
                             
                             </div>
                         </div>
@@ -53,57 +70,44 @@
                             
                         </form>
                     </div>
-
                     
-
-            <?php
-                if(isset($_POST["submit-search"])){
-                    // security
-                    $search = mysqli_real_escape_string($conn, $_POST["search"]);
-
-                    $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%'";
-                    $result = mysqli_query($conn, $sql);
-                    $query_results = mysqli_num_rows($result);
-
-                ?>
-                    
-                    <div class="search-result-num" >
+                    <!-- <div class="search-result-num" >
                         <p>
                                 <?php echo $query_results; ?> results are matching
                         </p>
 
-                    </div>
+                    </div> -->
                     <section class="section-body"> 
 
                     
-                    <?php 
+                        <?php 
 
-                        if($query_results > 0){
-                            while($row = mysqli_fetch_assoc($result)){
+                            if($query_results > 0){
+                                while($row = mysqli_fetch_assoc($result)){
 
-                    ?>      
-                            
-                        <?php
-
-                            }
-                        } else {
-                            // echo "there are no result";
-                            ?> 
-                            
-                            <div class="search-result-num" >
-                                <p>
-                                    there are no result
-                                </p>
-                            </div>
-
+                        ?>      
+                                
                             <?php
-                        }
-                    
-                ?>
-                </section>      
+
+                                }
+                            } else {
+                                // echo "there are no result";
+                                ?> 
+                                
+                                <div class="search-result-num" >
+                                    <p>
+                                        there are no result
+                                    </p>
+                                </div>
+
+                                <?php
+                            }
+                        
+                        ?>
+                    </section>      
         </section> 
 
-            <div class="container">
+            <div class="wrap-container">
                 <section class="row section__post">
                     <div class="col-sm-3">
                         <div class="tab" >
@@ -125,6 +129,7 @@
                     </div>
                             <?php 
                                 $search = mysqli_real_escape_string($conn, $_POST["search"]);
+                                // $city = mysqli_real_escape_string($conn, $_POST["city"]);
 
                                 $sql = "SELECT posts.*, study_types.study_type_name, study_categories.study_cat_type 
                                 FROM posts
