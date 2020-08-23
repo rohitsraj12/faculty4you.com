@@ -18,6 +18,7 @@ function validation(){
     var teachingExp = document.getElementsByClassName("experience"); //193
     var subject = document.getElementsByClassName("subject"); //198
     var about = document.getElementsByClassName("about");//242
+    //
 
     //first name
     if(name[0].value == ""){
@@ -151,6 +152,56 @@ if(postDetail[0].value == ""){
 }
 
     else{
+        return true;
+    }
+}
+
+// registration validation
+
+function registration(){
+    var name = document.getElementById("user_name");
+    var email = document.getElementById("email");
+    var tel = document.getElementById("telephone");
+    var password = document.getElementById("password");
+    var repass = document.getElementById("re-password");
+
+    if(name.value == "" || email.value == "" || tel.value == "" || password == "" || repass.value == ""){
+        alert("please fill all fields");
+        return false;
+    }else if(!emailExp.test(email.value)){
+        alert("please enter valid mail id");
+        return false;
+    }else if(!telExp.test(tel.value)){
+        alert("please enter valid phone number");
+        return false;
+    }
+    //password
+
+    if(password.value.length <= 6){
+        alert("password should be atleast 6 letters");
+        return false;
+
+    }else if(password.value.length >= 15){
+        alert("password should be less than 15 characters");
+        return false;
+    }else if(password.value !== repass.value){
+        alert("password is not matching");
+        return false;
+    }else{
+        return true;
+    }
+}
+
+//login validation
+
+function login(){
+    var name = document.getElementById("user_name");
+    var password = document.getElementById("password");
+
+    if(name.value == "" || password.value == ""){
+        alert("please enter your login user name and password");
+        return false;
+    }else{
         return true;
     }
 }
