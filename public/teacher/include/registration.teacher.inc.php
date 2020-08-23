@@ -9,12 +9,13 @@ if(isset($_POST['submit-register'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
     $re_password = $_POST['re_password'];
+    $phone = $_POST['telephone'];
+
 
     // fill empty data
     $first_name = "";
     $last_name = "";
     $gender = "";
-    $phone = "";
     $address = "";
     $city = "";
     $state = "";
@@ -30,7 +31,7 @@ if(isset($_POST['submit-register'])){
     $category_id = "";
     
     // if empty field condition
-    if(empty($user_name) || empty($email) || empty($password) || empty($re_password)){
+    if(empty($user_name) || empty($email) || empty($password) || empty($re_password) || empty($phone)){
         // redirect to register and empty field
         header("location: ../login.php?error=emptyfields&user_name=".$user_name."&mail".$email);
         //stop scripting
