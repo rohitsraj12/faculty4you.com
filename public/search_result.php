@@ -17,17 +17,6 @@
 
     <main>
         <section class="section-search-result wrap-container">
-
-            <?php
-                if(isset($_POST["submit-search"])){
-                    // security
-                    $search = mysqli_real_escape_string($conn, $_POST["search"]);
-
-                    $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%'";
-                    $result = mysqli_query($conn, $sql);
-                    $query_results = mysqli_num_rows($result);
-
-                ?>
                     <div class="section-header u-center-text">
                         <heeader class="text-primary-h"> 
                             Search result
@@ -39,13 +28,18 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <input type="search" class="form-control" id="inputAddress" placeholder="">
-                                <small>Enter your subject / pincode / study type</small>
+                                <small class="msg">Enter your subject / pincode / study type</small>
                             </div>
                             <div class="col-sm-3">
                                 <select id="inputState" class="form-control">
                                     <option selected>Choose...</option>
+                                    <?php 
+                                        // #task city data fetch
+                                    ?>
                                     <option>...</option>
-                                </select>   
+                                </select>  
+                                <small class="msg">Select city name</small>
+
                             </div>
                             <div class="col-sm-3">
                                 <input class="btn btn-primary w-100 py-2" style="font-size: 1.4rem" name="search" type="submit" value="search">
@@ -59,6 +53,19 @@
                             
                         </form>
                     </div>
+
+                    
+
+            <?php
+                if(isset($_POST["submit-search"])){
+                    // security
+                    $search = mysqli_real_escape_string($conn, $_POST["search"]);
+
+                    $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%'";
+                    $result = mysqli_query($conn, $sql);
+                    $query_results = mysqli_num_rows($result);
+
+                ?>
                     
                     <div class="search-result-num" >
                         <p>
@@ -110,12 +117,12 @@
                             <header class="text-primary-h text-center pb-5 mb-5" >
                                 search posts
                             </header>
-                            
-                        <div class="search-result-num" >
+                             -->
+                        <div class="search-result-nu" >
                         <p>
                                 <?php echo $query_results; ?> results are matching
                         </p>
-                    </div> -->
+                    </div>
                             <?php 
                                 $search = mysqli_real_escape_string($conn, $_POST["search"]);
 
