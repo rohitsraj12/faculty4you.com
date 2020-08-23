@@ -137,6 +137,10 @@ label {
   font-family: "open sans";
   font-size: 1.6rem; }
 
+.social__link {
+  font-size: 1.9rem;
+  color: white; }
+
 .u-center-text {
   text-align: center !important; }
 
@@ -493,6 +497,9 @@ label {
 .section-setpwd h1 {
   padding: 4rem; }
 
+.sign-up-input input, .sign-in-input input {
+  font-size: 1.5rem !important; }
+
 @media (min-width: 583px) {
   .section-student {
     padding: 10rem 0; } }
@@ -516,7 +523,7 @@ label {
     position: absolute;
     bottom: -4.25rem;
     left: 48%;
-    z-index: -3; } }
+    z-index: 3; } }
 
 @media (min-width: 583px) {
   .section-student .section-body article:last-child figure::before {
@@ -527,7 +534,7 @@ label {
     position: absolute;
     bottom: -4.25rem;
     left: 0;
-    z-index: -3; } }
+    z-index: 3; } }
 
 @media (min-width: 583px) {
   .section-student .section-body article:not(first-child) figure::before, .section-student .section-body article:not(last-child) figure::before {
@@ -538,7 +545,7 @@ label {
     position: absolute;
     bottom: -4.25rem;
     left: 0;
-    z-index: -3; } }
+    z-index: 3; } }
 
 @media (min-width: 583px) {
   .section-student .section-body figure {
@@ -572,7 +579,7 @@ label {
     position: absolute;
     bottom: -5.1rem;
     left: 46%;
-    z-index: -2; } }
+    z-index: 2; } }
 
 @media (max-width: 582px) {
   .section-student .section-body figure::after {
@@ -585,7 +592,7 @@ label {
     position: absolute;
     top: 0rem;
     left: 46%;
-    z-index: -2; } }
+    z-index: 2; } }
 
 .section-student .section-body img {
   width: 100%; }
@@ -638,7 +645,7 @@ label {
       position: absolute;
       bottom: -4.25rem;
       left: 48%;
-      z-index: -3; } }
+      z-index: 3; } }
   @media (min-width: 583px) {
     .section-teacher .section-body article:last-child figure::before {
       content: "";
@@ -648,7 +655,7 @@ label {
       position: absolute;
       bottom: -4.25rem;
       left: 0;
-      z-index: -3; } }
+      z-index: 3; } }
   @media (min-width: 583px) {
     .section-teacher .section-body article:not(first-child) figure::before, .section-teacher .section-body article:not(last-child) figure::before {
       content: "";
@@ -658,7 +665,7 @@ label {
       position: absolute;
       bottom: -4.25rem;
       left: 0;
-      z-index: -3; } }
+      z-index: 3; } }
   @media (min-width: 583px) {
     .section-teacher .section-body figure {
       max-width: 100%;
@@ -689,7 +696,7 @@ label {
       position: absolute;
       bottom: -5.1rem;
       left: 46%;
-      z-index: -2; } }
+      z-index: 4; } }
   @media (max-width: 582px) {
     .section-teacher .section-body figure::after {
       content: "";
@@ -1486,6 +1493,10 @@ input,
       color: #f7f7f7;
       display: inline-block;
       border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+
+.social-media ul li {
+  margin-right: 2rem;
+  display: inline; }
 
 .body-banner {
   width: 100%;
