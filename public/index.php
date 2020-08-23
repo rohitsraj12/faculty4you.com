@@ -129,7 +129,7 @@
                                     </p>
                                 </div>
                             </article>
-                            <article class="article-block" data-aos="zoom-out-left" data-aos-duration="1000">
+                            <article class="article-block">
                                 <figure class="studnet-section__figure">
                                     <img src="<?php base_url();?>img/member/schedule.svg" alt="">
                                     <span>step 4</span>
@@ -291,7 +291,7 @@
                                 </figure>
                                 
                             </article>
-                            <article class="article-block" data-aos="zoom-out-left" data-aos-duration="1000">
+                            <article class="article-block">
                                 <figure class="article-block__figure">
                               
                                     <img src="<?php base_url();?>img/member/schedule.svg" alt="">

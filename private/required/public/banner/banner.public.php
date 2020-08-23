@@ -1,5 +1,5 @@
 
-            <div class="body-banner" data-aos="zoom-out-up" data-aos-duration="1000">
+            <div class="body-banner">
 
 <div class="banner-wrap">
     <section class="banner-content">
