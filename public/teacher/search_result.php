@@ -21,7 +21,7 @@
     <section class="section-search-result wrap-container">
                     <div class="section-header u-center-text">
                         <heeader class="text-primary-h"> 
-                            Search posts
+                            Search result
                         </header>
                     </div>
 
@@ -108,13 +108,14 @@
                         ?>
                     </section>      
         </section> 
-        <div class="wrap-container">
+
+            <div class="wrap-container">
                 <section class="row section__post">
                     <div class="col-sm-3">
                         <div class="tab" >
                             <button class="tablinks active" data-post="view__post">Search result</button>
-                            <button class="tablinks" data-post="compose__post">city</button>
-                            <button class="tablinks" data-post="compose__post">city</button>
+                            <!-- <button class="tablinks" data-post="compose__post">city</button>
+                            <button class="tablinks" data-post="compose__post">city</button> -->
                         </div>
                     </div>
                     <div class="col-sm-9">
@@ -130,18 +131,14 @@
                     </div>
                             <?php 
                                 $search = mysqli_real_escape_string($conn, $_POST["search"]);
-                                // $city = mysqli_real_escape_string($conn, $_POST["city"]);  
-                                $city = $user_row['city_id'];
-                                $member = $user_row['teacher_membership_status'];
+                                $city = mysqli_real_escape_string($conn, $_POST["city"]);
 
-                                $sql = "SELECT posts.*, study_types.study_type_name, study_categories.study_cat_type, std.* 
+                                $sql = "SELECT posts.*, study_types.study_type_name, study_categories.study_cat_type 
                                 FROM posts
                                 JOIN study_types
                                     ON study_types.study_type_id = posts.study_type_id
                                 JOIN study_categories
                                     ON study_categories.study_cat_id = posts.study_cat_id
-                                JOIN std
-                                    ON stud.student_id = posts.student_id
                                 WHERE post_title LIKE '%$search%'
                                 ORDER BY post_date DESC";
                                 $result = mysqli_query($conn, $sql);
@@ -168,72 +165,9 @@
                                 </p>
                                 </div>
                                 <footer class="pb-3">
-                                            <?php 
-                                                // echo $member;
-                                                if($member == "active"){
-                                            ?>
-                                                    <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
-                                            <?php
-                                                }else{
-                                                    // echo "become a member";
-                                                    ?>
-                                                    <button class="active-member-btn btn-link">Contact details</button> </br>
-                                                    <!-- <small>you need to become a member to see the details</small> -->
-                                                    <?php
-                                                }
-                                            ?>
-                                        </footer>
-
-                                        <section class="student-details">
-
-                                            <?php
-                                                if($member == "active"){
-                                            ?>
-                                                <article>
-                                                    <header>
-
-                                                    </header>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Name:
-                                                        </div>
-                                                        <div class="col-10">
-                                                            <?php echo $row["student_first_name"];?>    
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Phone:
-                                                        </div>
-                                                        <div class="col-10">
-                                                            <?php echo $row["student_phone"];?>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Email:
-                                                        </div>
-                                                        <div class="col-10">
-                                                        <?php echo $row["student_email"];?>
-
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </article>
-                                            <?php
-                                                }else{
-                                            ?>
-                                                <article class="">
-                                                    <?php
-                                                        echo "you need to become a member to see the details";
-                                                    
-                                                    ?>
-                                                </article>
-                                            <?php    
-                                                }
-                                            ?>
-                                        </section>
-                                   
+                                    <a href="<?php base_url();?>teacher/registration.php" style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Sign up</a>
+                                    <!-- <a href="<?php base_url();?>teacher/login.php">log in</a> -->
+                                </footer>
                             </article>
                                 
                             <?php
@@ -245,77 +179,6 @@
                                 <header class="text-primary-h text-center pb-5 mb-5" >
                                     Compose new post
                                 </header>
-                                <form action="../include/post.inc.php" method="post" class="bg-light border py-5 px-5" >
-                                    <div class="form-group">
-                                        <label for="title">Title</label>
-                                        <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="about">About me</label>
-                                        <textarea name="post_detail" class="form-control" rows="10" id="about" placeholder="Briefly explain about yourself"></textarea>
-                                        
-                                    </div>
-                                    <div class="row">
-                                        <fieldset class="form-group col-sm-12">
-                                            <div class="row">
-                                                <label class="label col-form-label col-sm-3 pt-0">Study type</label>
-                                                <div class="col-sm-9 row">
-                                                    <div class="form-check col-sm-4">
-                                                        <input class="form-check-input" name="study_type" type="radio" value="1" id="single">
-                                                    
-                                                        <label class="form-check-label" for="single">
-                                                            Online one to one
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check col-sm-4">
-                                                        <input class="form-check-input" name="study_type" type="radio" value="2" id="group">
-                                                    
-                                                        <label class="form-check-label" for="group">
-                                                            Online group
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check col-sm-4">
-                                                        <input class="form-check-input" name="study_type" type="radio" value="3" id="home">
-                                                    
-                                                        <label class="form-check-label" for="home">
-                                                            Home
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </fieldset> 
-                                        <fieldset class="form-group col-sm-12">
-                                            <div class="row">
-                                                <label class="label col-form-label col-sm-3 pt-0">Study category</label>
-                                                <div class="col-sm-9 row">
-                                                    <div class="form-check col-sm-4">
-                                                        <input class="form-check-input" name="study_category" type="radio" value="1" id="academic">
-                                                    
-                                                        <label class="form-check-label" for="academic">
-                                                            Academic
-                                                        </label>
-                                                    </div>
-
-                                                    <div class="form-check col-sm-4">
-                                                        <input class="form-check-input" name="study_category" type="radio" value="2" id="non-academic">
-                                                    
-                                                        <label class="form-check-label" for="non-academic">
-                                                            Non-academic
-                                                        </label>
-                                                    </div>
-                                                
-                                                </div>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-                                    <div class="">
-                                        <input type="submit" style="font-size: 1.6rem;" class="py-2 px-4 btn-lg btn btn-primary" name="submit-post" value="submit">
-                                        <input type="reset"  style="font-size: 1.6rem;" class="btn btn-lg  btn btn-outline-secondary" value="reset">
-
-                                    </div>
-                                    
-                                </form>
                             </div>
                         </section>             
                     </div>
