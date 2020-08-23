@@ -22,7 +22,7 @@
                         </div>
                         <section class="section-body wrap-container">
                             <article class="article-block">
-                                <figure class="studnet-section__figure">
+                                <figure class="student-section__figure">
                                     <span>step 1</span>
                                     <img src="<?php base_url();?>img/member/register.svg" alt="">
 
@@ -37,7 +37,7 @@
                                 </div>
                             </article>
                             <article class="article-block" >
-                                <figure class="studnet-section__figure">
+                                <figure class="student-section__figure">
                                     <span>step 2</span>
                                     <img src="<?php base_url();?>img/member/post-requirement.svg" alt="">
 
@@ -52,7 +52,7 @@
                                 </div>
                             </article>
                             <article class="article-block">
-                                <figure class="studnet-section__figure">
+                                <figure class="student-section__figure">
                                 <span>step 3</span>
                                     <img src="<?php base_url();?>img/member/schedule.svg" alt="">
 
@@ -87,9 +87,9 @@
                         </div>
                         <section class="section-body wrap-container">
                             <article class="article-block">
-                                <figure class="studnet-section__figure">
+                                <figure class="student-section__figure">
+                                <span>step 1</span>
                                     <img src="<?php base_url();?>img/member/register.svg" alt="">
-                                    <span>step 1</span>
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <h4 class="text-secondary-h">Register</h4>
@@ -101,10 +101,9 @@
                                 </div>
                             </article>
                             <article class="article-block" >
-                                <figure class="studnet-section__figure">
+                                <figure class="student-section__figure">
+                                <span>step 2</span>
                                     <img src="<?php base_url();?>img/member/member.svg" alt="">
-                                    
-                                    <span>step 2</span>
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <h4 class="text-secondary-h">Activate membership</h4>
@@ -116,9 +115,9 @@
                                 </div>
                             </article>
                             <article class="article-block" >
-                                <figure class="studnet-section__figure">
+                                <figure class="student-section__figure">
+                                <span>step 3</span>
                                     <img src="<?php base_url();?>img/member/find-student.svg" alt="">
-                                    <span>step 3</span>
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <h4 class="text-secondary-h">Find students</h4>
@@ -130,10 +129,9 @@
                                 </div>
                             </article>
                             <article class="article-block">
-                                <figure class="studnet-section__figure">
+                                <figure class="student-section__figure">
+                                <span>step 4</span>
                                     <img src="<?php base_url();?>img/member/schedule.svg" alt="">
-                                    <span>step 4</span>
-
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <h4 class="text-secondary-h">Schedule lesson</h4>
