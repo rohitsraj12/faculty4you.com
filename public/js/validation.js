@@ -194,14 +194,14 @@ function registration(){
 
 //login validation
 
-function login(){
-    var name = document.getElementById("user_name");
-    var password = document.getElementById("password");
+// function login(){
+//     var name = document.getElementById("user_name");
+//     var password = document.getElementById("password");
 
-    if(name.value == "" || password.value == ""){
-        alert("please enter your login user name and password");
-        return false;
-    }else{
-        return true;
-    }
-}
+//     if(name.value == "" || password.value == ""){
+//         alert("please enter your login user name and password");
+//         return false;
+//     }else{
+//         return true;
+//     }
+// }
