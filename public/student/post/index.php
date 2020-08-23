@@ -52,11 +52,6 @@
                             <?php 
 
                                 $student_id = $row['student_id'];
-                                    
-                                // $query = "SELECT  posts.*, cities.*, states.* FROM posts, cities, states WHERE student_id = $student_id";
-                                // $query = "SELECT posts.*, cities.city_name, states.state_name FROM posts LEFT JOIN cities ON posts.city_id = cities.city_id AND RIGHT JOIN states ON posts.state_id = states.state_id WHERE student_id = $student_id";
-                                // $query = "SELECT posts.*, cities.city_name FROM posts LEFT JOIN cities ON posts.city_id = cities.city_id WHERE student_id = $student_id";
-                                
                                 $query = "SELECT posts.*, study_types.study_type_name, study_categories.study_cat_type 
                                             FROM posts
                                             JOIN study_types
@@ -102,6 +97,7 @@
                                 <header class="text-primary-h text-center pb-5 mb-5" >
                                     Compose new post
                                 </header>
+                                
                                 <form action="../include/post.inc.php" method="post" class="bg-light border py-5 px-5" onsubmit="return studentPost()">
                                     <div class="form-group">
                                         <label for="title">Title</label>
