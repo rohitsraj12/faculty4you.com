@@ -44,7 +44,7 @@
 
             <div class="container" id="container">
                 <div class="form-container sign-up-container">
-                    <form  action="include/registration.student.inc.php" method="post">
+                    <form  action="include/registration.student.inc.php" method="post" onsubmit="return registration()">
                         <h1>Create Account</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -60,7 +60,7 @@
                     </form>
                 </div>
                 <div class="form-container sign-in-container">
-                    <form action="include/login.student.inc.php" method="post" >
+                    <form action="include/login.student.inc.php" method="post"  onsubmit="return login()">
                         <h1>Login</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -69,7 +69,7 @@
                         </div>
                         <!-- <span>or use your account</span> -->
                         <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
-                        <input type="password" placeholder="Password"  name="password"/>
+                        <input type="password" id="password" placeholder="Password"  name="password"/>
                         <a href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
                         <button name="login-submit">Login</button>
                     </form>
@@ -98,6 +98,7 @@
     <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="<?php base_url();?>js/script.js"></script>
+    <script src="<?php base_url();?>js/validation.js"></script>
     
     <script>
         AOS.init();
