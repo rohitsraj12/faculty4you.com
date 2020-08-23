@@ -45,7 +45,7 @@
 
             <div class="container" id="container">
                 <div class="form-container sign-up-container">
-                <form action="include/login.teacher.inc.php" method="post" >
+                <form action="include/login.teacher.inc.php" method="post"  onsubmit="return login()">
                         <h1>Trainer Login</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -54,13 +54,13 @@
                         </div>
                         <!-- <span>or use your account</span> -->
                         <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
-                        <input type="password" placeholder="Password"  name="password"/>
+                        <input type="password" id="password" placeholder="Password"  name="password"/>
                         <a href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
                         <button name="login-submit">Login</button>
                     </form>
                 </div>
                 <div class="form-container sign-in-container">
-                    <form  action="include/registration.teacher.inc.php" method="post">
+                    <form  action="include/registration.teacher.inc.php" method="post"onsubmit="return registration()">
                         <h1>Create Account</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -70,9 +70,10 @@
                         <!-- <span>or use your email for registration</span> -->
                         <input type="text" name="user_name" id="user_name" placeholder="user name" />
                         <input name="email" type="email" id="email" placeholder="email" />
+                        <input type="tel" name="telephone" id="telephone" placeholder="phone number"> 
                         <input name="password" type="password" id="password" placeholder="password" />
                         <input name="re_password" type="password" id="re-password" placeholder="repeat password">
-                        <button  name="submit-register" >Sign Up</button>
+                        <button name="submit-register" >Sign Up</button>
                     </form>
                 </div>
                 <div class="overlay-container">
@@ -101,6 +102,7 @@
     <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="<?php base_url();?>js/script.js"></script>
+    <script src="<?php base_url();?>js/validation.js"></script>
     
     <script>
         AOS.init();
