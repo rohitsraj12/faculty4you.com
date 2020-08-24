@@ -11,7 +11,7 @@
                 </h5>
             </header>
             <div class="banner-content-body">
-                <form action="<?php base_url();?>teacher/search_result.php" method="POST" class="banner__form">
+                <form action="<?php base_url();?>student/search_result.php" method="POST" class="banner__form">
                     <input type="text" name="search" placeholder="search top teachers city / subject / category"  class="banner-search" >
                     <button type="submit" name="submit-search" class="banner__button" ><i class="fa fa-search"aria-hidden="true"></i></button>
                 </form>
