@@ -52,7 +52,7 @@
                 </div>
                 <header class="wrap-container">
                     <div class="header-brand">
-                        <a href="<?php base_url();?>index.php">
+                        <a href="<?php base_url();?>teacher/index.php">
                             <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
                         </a>
                     </div>
