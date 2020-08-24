@@ -38,7 +38,7 @@
 
                 <section class="row section__post">
                     <div class="col-sm-3">
-                        <div class="tab" >
+                        <div class="tab post-tab" >
                             <button class="tablinks active" data-post="view__post">View My Post</button>
                             <button class="tablinks" data-post="compose__post">Compose New Post</button>
                         </div>
@@ -57,7 +57,7 @@
                                             JOIN study_types
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
-                                                ON study_categories.study_cat_id = posts.study_cat_id
+                                                ON study_categories.category_id = posts.study_cat_id
                                             WHERE student_id = $student_id
                                             ORDER BY post_id DESC";
 
