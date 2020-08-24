@@ -58,7 +58,9 @@
                                             WHERE posts.study_type_id = 1
                                             ORDER BY post_id DESC ";
                                         $home_result = mysqli_query($conn, $home_sql);
+                                        $query_results = mysqli_num_rows($home_result);
 
+                                        if($query_results > 0){
                                         while($row = mysqli_fetch_assoc($home_result)){
                                             $study_type = $row['study_type_name'];
                                         
@@ -157,6 +159,15 @@
 
                                     <?php 
                                     }
+                                } else{
+                                    ?>
+                                     <div class="search-result-num" >
+                                        <p>
+                                            there are no result
+                                        </p>
+                                    </div>
+                                    <?php
+                                }
                                     ?>
                                 </section>
                                 <section class="wrap-study-type study-type-2">
@@ -177,10 +188,12 @@
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
                                                 ON study_categories.category_id = posts.study_cat_id
-                                            WHERE posts.city_id = $city AND study_types.study_type_id = 2
+                                            WHERE (posts.city_id = $city) AND (study_types.study_type_id = 2)
                                             ORDER BY post_id DESC ";
                                         $home_result = mysqli_query($conn, $home_sql);
+                                        $query_results = mysqli_num_rows($home_result);
 
+                                        if($query_results > 0){
                                         while($row = mysqli_fetch_assoc($home_result)){
                                             $study_type = $row['study_type_name'];
                                         
@@ -212,7 +225,7 @@
                                                 }else{
                                                     // echo "become a member";
                                                     ?>
-                                                    <button class="active-member-btn btn-link">Contact details</button> </br>
+                                                    <button class="active-member-btn btn btn-link">Contact details</button> </br>
                                                     <!-- <small>you need to become a member to see the details</small> -->
                                                     <?php
                                                 }
@@ -280,6 +293,19 @@
 
                                     <?php 
                                     }
+                                } else {
+                                    // echo "there are no result";
+                                    ?> 
+                                    
+                                    <div class="search-result-num" >
+                                        <p>
+                                            there are no result
+                                        </p>
+                                    </div>
+    
+                                    <?php
+                                }
+                            
                                     ?>
                                 </section>
                             </div>
