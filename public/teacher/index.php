@@ -92,7 +92,7 @@
                                                 }else{
                                                     // echo "become a member";
                                                     ?>
-                                                    <button class="active-member-btn btn-link">Contact details</button> </br>
+                                                    <button class="active-member-btn btn btn-link">Contact details</button> </br>
                                                     <!-- <small>you need to become a member to see the details</small> -->
                                                     <?php
                                                 }
