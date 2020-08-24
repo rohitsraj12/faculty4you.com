@@ -29,9 +29,10 @@
 
                         <div class="row">
                             <div class="col-sm-3 mt-5">
-                                <ul class=" border py-5 px-4">
-                                    <li class="study-type mb-4 pb-4 pl-2 border-bottom" data-study-type="study-type-1"><a href="#" class="text-danger text-primary h2">Online learning</a></li>
-                                    <li class="study-type  pl-2" data-study-type="study-type-2"><a href="#"  class=" text-primary h2">Home learning</a></li>
+                                <ul class="px-4 tab row">
+                                
+                                    <li class="study-type pl-2 col-6 col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">online tuition</button></li>
+                                    <li class="study-type  col-6 col-sm-12  pl-2" data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition</button></li>
                                 </ul>
                             </div>
                             <div class="col-sm-7">
@@ -95,7 +96,7 @@
                                             ?>
                                         </footer>
 
-                                        <section class="student-details">
+                                        <section class="student-details py-3">
 
                                             <?php
                                                 if($member == "active"){
@@ -104,31 +105,38 @@
                                                     <header>
 
                                                     </header>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Name:
-                                                        </div>
-                                                        <div class="col-10">
-                                                            <?php echo $row["student_first_name"];?>    
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Phone:
-                                                        </div>
-                                                        <div class="col-10">
-                                                            <?php echo $row["student_phone"];?>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Email:
-                                                        </div>
-                                                        <div class="col-10">
-                                                        <?php echo $row["student_email"];?>
 
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <figure>
+                                                                <?php
+                                                                     if($row['student_photo'] == ""){
+                                                                ?>
+                                                                        <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                                                <?php
+                                                                    } else {
+                                                                ?>
+                                                                        <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
+                                                                <?php
+                                                                    }
+                                                                    ?>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <ul class="student-info">
+                                                                <li>
+                                                                    <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
+                                                                </li>
+                                                                <li>
+                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_phone"];?></a>                                                                    
+                                                                </li>
+                                                                <li>
+                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_email"];?></a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
+                                                                                                    
                                                     
                                                 </article>
                                             <?php
@@ -210,7 +218,7 @@
                                             ?>
                                         </footer>
 
-                                        <section class="student-details">
+                                        <section class="student-details py-3">
 
                                             <?php
                                                 if($member == "active"){
@@ -219,31 +227,38 @@
                                                     <header>
 
                                                     </header>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Name:
-                                                        </div>
-                                                        <div class="col-10">
-                                                            <?php echo $row["student_first_name"];?>    
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Phone:
-                                                        </div>
-                                                        <div class="col-10">
-                                                            <?php echo $row["student_phone"];?>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-2">
-                                                            Email:
-                                                        </div>
-                                                        <div class="col-10">
-                                                        <?php echo $row["student_email"];?>
 
+                                                    <div class="row">
+                                                        <div class="col-sm-3">
+                                                            <figure>
+                                                                <?php
+                                                                     if($row['student_photo'] == ""){
+                                                                ?>
+                                                                        <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                                                <?php
+                                                                    } else {
+                                                                ?>
+                                                                        <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
+                                                                <?php
+                                                                    }
+                                                                    ?>
+                                                            </figure>
+                                                        </div>
+                                                        <div class="col-sm-9">
+                                                            <ul class="student-info">
+                                                                <li>
+                                                                    <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
+                                                                </li>
+                                                                <li>
+                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_phone"];?></a>                                                                    
+                                                                </li>
+                                                                <li>
+                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_email"];?></a>
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                     </div>
+                                                                                                    
                                                     
                                                 </article>
                                             <?php
@@ -259,6 +274,7 @@
                                                 }
                                             ?>
                                         </section>
+                                    
                                     </article>
 
                                     <?php 
