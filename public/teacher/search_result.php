@@ -30,7 +30,7 @@
                     // security
                     $search = mysqli_real_escape_string($conn, $_POST["search"]);
 
-                    $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%' ";
+                    $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%'";
                     $result = mysqli_query($conn, $sql);
                     $query_results = mysqli_num_rows($result);
 
@@ -144,6 +144,8 @@
                                 $result = mysqli_query($conn, $sql);
                                 $query_results = mysqli_num_rows($result);
 
+
+                                
                                 while($row = mysqli_fetch_assoc($result)){
 
                             ?>
