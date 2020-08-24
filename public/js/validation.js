@@ -41,10 +41,10 @@ function validation(){
 
     //gender
 
-    // if(gender[0].checked == false || gender[1].checked == false || gender[2].checked == false){
-    //     alert("please select any one");
-    //     return false;
-    // }
+    if(gender[0].checked == false && gender[1].checked == false && gender[2].checked == false){
+        alert("please select any one");
+        return false;
+    }
 
     //email
     if(email[0].value == ""){
