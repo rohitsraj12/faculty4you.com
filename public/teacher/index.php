@@ -92,7 +92,7 @@
                                                 }else{
                                                     // echo "become a member";
                                                     ?>
-                                                    <button class="active-member-btn btn btn-link">Contact details</button> </br>
+                                                    <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
                                                     <!-- <small>you need to become a member to see the details</small> -->
                                                     <?php
                                                 }
@@ -159,15 +159,15 @@
 
                                     <?php 
                                     }
-                                } else{
-                                    ?>
-                                     <div class="search-result-num" >
-                                        <p>
-                                            there are no result
-                                        </p>
-                                    </div>
-                                    <?php
-                                }
+                                    } else{
+                                        ?>
+                                        <div class="search-result-num" >
+                                            <p>
+                                                there are no result
+                                            </p>
+                                        </div>
+                                        <?php
+                                    }
                                     ?>
                                 </section>
                                 <section class="wrap-study-type study-type-2">
@@ -225,7 +225,7 @@
                                                 }else{
                                                     // echo "become a member";
                                                     ?>
-                                                    <button class="active-member-btn btn btn-link">Contact details</button> </br>
+                                                    <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
                                                     <!-- <small>you need to become a member to see the details</small> -->
                                                     <?php
                                                 }
@@ -278,7 +278,7 @@
                                             <?php
                                                 }else{
                                             ?>
-                                                <article class="">
+                                                <article class="h4">
                                                     <?php
                                                         echo "you need to become a member to see the details";
                                                     
@@ -293,18 +293,18 @@
 
                                     <?php 
                                     }
-                                } else {
-                                    // echo "there are no result";
-                                    ?> 
-                                    
-                                    <div class="search-result-num" >
-                                        <p>
-                                            there are no result
-                                        </p>
-                                    </div>
-    
-                                    <?php
-                                }
+                                    } else {
+                                        // echo "there are no result";
+                                        ?> 
+                                        
+                                        <div class="search-result-num" >
+                                            <p>
+                                                there are no result
+                                            </p>
+                                        </div>
+        
+                                        <?php
+                                    }
                             
                                     ?>
                                 </section>
