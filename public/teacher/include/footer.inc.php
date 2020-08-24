@@ -1,3 +1,11 @@
+<?php
+$social_media = [
+    "<i class='fa fa-facebook-official' aria-hidden='true'></i>" => "www.facebook.com",
+    "<i class='fa fa-instagram' aria-hidden='true'></i>" => "www.instagram.com",
+    "<i class='fa fa-twitter-square' aria-hidden='true'></i>" => "www.twitter.com"
+];
+?>
+
 <div class="body-footer">
 
 
@@ -37,6 +45,17 @@
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             Follow                        
                         </header>
+                        <div class="social-media">
+                            <ul class="">
+                                <?php
+                                foreach($social_media as $name => $url){
+                                ?>
+                                <li class="social__list"><a class="social__link" href="<?php echo $url ;?>" target="_blank"><?php echo $name;?></a></li>
+                                <?php
+                                }
+                                ?>
+                            </ul>
+                        </div>
                     </article>
                 </section>
 
