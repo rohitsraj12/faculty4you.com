@@ -123,25 +123,32 @@
                             </header>
                              -->
                         <div class="search-result-nu" >
+                        <?php 
+                            $search = mysqli_real_escape_string($conn, $_POST["search"]);
+
+                            $city = mysqli_real_escape_string($conn, $_POST["city"]);
+                            
+                            $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, cities.* 
+                            FROM posts
+                            JOIN std
+                                ON std.student_id = posts.student_id
+                                JOIN cities
+                                ON cities.city_id = std.city_id
+                            JOIN study_types
+                                ON study_types.study_type_id = posts.study_type_id
+                            JOIN study_categories
+                                ON study_categories.category_id = posts.study_cat_id
+                            WHERE (posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') AND (posts.post_title LIKE '%$search%') AND (std.city_id LIKE '%$city%')
+                            ORDER BY post_date DESC";
+                            $result = mysqli_query($conn, $sql);
+                            $query_results = mysqli_num_rows($result);
+                        ?>
                         <p>
                                 <?php echo $query_results; ?> results are matching
                         </p>
                     </div>
                             <?php 
-                                $search = mysqli_real_escape_string($conn, $_POST["search"]);
-                                // $city = mysqli_real_escape_string($conn, $_POST["city"]);
-
-                                $sql = "SELECT posts.*, study_types.study_type_name, study_categories.study_cat_type 
-                                FROM posts
-                                JOIN study_types
-                                    ON study_types.study_type_id = posts.study_type_id
-                                JOIN study_categories
-                                    ON study_categories.study_cat_id = posts.study_cat_id
-                                WHERE post_title LIKE '%$search%'
-                                ORDER BY post_date DESC";
-                                $result = mysqli_query($conn, $sql);
-                                $query_results = mysqli_num_rows($result);
-
+                                 
                                 while($row = mysqli_fetch_assoc($result)){
 
                             ?>
@@ -156,7 +163,7 @@
                                         <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                         <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
                                         <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
-                                        <!-- <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php// echo $row["city_name"];?></li> -->
+                                        <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
                                     </ul>
                                 <p class="text-dark">
                                     <?php echo $row["post_detail"];?>
