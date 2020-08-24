@@ -3,7 +3,7 @@ var emailExp = /^([a-zA-Z0-9\.-]+)([@])([a-zA-z0-9-]+.)([a-z]{2,8})(.[a-z]{2,8})
 var telExp = /^([0-9]{10})$/;
 var textOnlyExp = /^([a-zA-Z]+)$/;
 var pincode = /^([0-9]{6})$/;
-var numExp = /^([0-9]{2})$/;
+// var numExp = /^([0-9]{2})$/;
 
 function validation(){
     var name = document.getElementsByClassName("name"); //13
@@ -17,9 +17,9 @@ function validation(){
     var pin = document.getElementsByClassName("pincode"); //160
     var teachingExp = document.getElementsByClassName("experience"); //193
     var subject = document.getElementsByClassName("subject"); //198
-    var about = document.getElementsByClassName("about");//242
-    //
-
+    var about = document.getElementsByClassName("about");//242 
+    var type = document.getElementsByClassName("type");
+    
     //first name
     if(name[0].value == ""){
         alert("input first name");
@@ -59,7 +59,9 @@ function validation(){
     if(phone[0].value == ""){
         alert("enter phone number");
         return false;
-    }else if(!telExp.test(phone[0].value)){
+    }
+    
+    if(!telExp.test(phone[0].value)){
         alert("enter valid phone number.");
         return false;
     }
@@ -78,6 +80,11 @@ function validation(){
 
 
     //study category
+    if(type[0].checked == false && type[1].checked == false){
+        alert("please select a category type");
+        return false;
+    }
+
     
     //teaching experience
 
@@ -86,10 +93,10 @@ function validation(){
         return false;
     }
     
-    if(!numExp.test(teachingExp[0].value)){
-        alert("please enter valid number");
-        return false;
-    }
+    // if(!numExp.test(teachingExp[0].value)){
+    //     alert("please enter valid number");
+    //     return false;
+    // }
 
     //academic subject
 
