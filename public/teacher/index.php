@@ -177,7 +177,7 @@
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
                                                 ON study_categories.study_cat_id = posts.study_cat_id
-                                            WHERE posts.city_id = $city
+                                            WHERE posts.city_id = $city AND study_types.study_type_id = 2
                                             ORDER BY post_id DESC ";
                                         $home_result = mysqli_query($conn, $home_sql);
 
