@@ -9,7 +9,11 @@
     }
 
     $user_name = $_SESSION['user_name'];
-    $user_query = "SELECT * FROM teachers WHERE teacher_user_name = '$user_name'";
+    $user_query = "SELECT teachers.*, cities.* 
+        FROM teachers 
+        JOIN cities
+            ON cities.city_id = teachers.city_id
+        WHERE teacher_user_name = '$user_name'";
     $user_result = mysqli_query($conn, $user_query);
     $user_row = mysqli_fetch_assoc($user_result);
 
@@ -30,16 +34,13 @@
                         <div class="row">
                             <div class="col-sm-3 mt-5">
                                 <ul class="px-4 tab row">
-                                
                                     <li class="study-type pl-2 col-6 col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">online tuition</button></li>
-                                    <li class="study-type  col-6 col-sm-12  pl-2" data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition</button></li>
+                                    <li class="study-type  col-6 col-sm-12  pl-2" data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition - <?php echo $user_row['city_name'];?></button></li>
                                 </ul>
                             </div>
                             <div class="col-sm-7">
                                 <section class="wrap-study-type study-type-1">
                                     <?php 
-
-                                        $city = $user_row['city_id'];
                                         $member = $user_row['teacher_membership_status'];
 
                                         $home_sql = "SELECT posts.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
