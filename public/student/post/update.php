@@ -26,7 +26,7 @@ session_start();
     <header class="text-primary-h pb-5 text-center">
        Update post
     </header>
-    <form action="" method="post">
+    <form action="" method="post" onsubmit="return validation()">
        
         <div class="form-group">
             <label for="title">Title</label>
@@ -35,7 +35,7 @@ session_start();
         
         <div class="form-group">
             <label for="about">Post details</label>
-            <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control" rows="10" id="about" placeholder="Briefly describe"></textarea>
+            <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control about" rows="10" id="about" placeholder="Briefly describe"></textarea>
             
         </div>
         <div class="row">
@@ -47,24 +47,18 @@ session_start();
                     <label class="label col-form-label col-sm-4 pt-0">Study type</label>
                     <div class="col-sm-6 row">
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="std" type="radio" value="1" id="single">
+                            <input class="form-check-input type" name="std" type="radio" value="1" id="single">
                         
                             <label class="form-check-label" for="single">
                                 Online one to one
                             </label>
                         </div>
+                       
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="std" type="radio" value="2" id="group">
-                        
-                            <label class="form-check-label" for="group">
-                                Online group
-                            </label>
-                        </div>
-                        <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="std" type="radio" value="3" id="home">
+                            <input class="form-check-input type" name="std" type="radio" value="3" id="home">
                         
                             <label class="form-check-label" for="home">
-                                Home
+                                Home tuition
                             </label>
                         </div>
                         
@@ -76,7 +70,7 @@ session_start();
                     <label class="label col-form-label col-sm-3 pt-0">Study category</label>
                     <div class="col-sm-6 row">
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="cat" type="radio" value="1" id="academic">
+                            <input class="form-check-input category" name="cat" type="radio" value="1" id="academic">
                         
                             <label class="form-check-label" for="academic">
                                 Academic
@@ -84,7 +78,7 @@ session_start();
                         </div>
 
                         <div class="form-check col-sm-12">
-                            <input class="form-check-input" name="cat" type="radio" value="2" id="non-academic">
+                            <input class="form-check-input category" name="cat" type="radio" value="2" id="non-academic">
                         
                             <label class="form-check-label" for="non-academic">
                                 Non-academic
@@ -110,7 +104,6 @@ session_start();
      </form>
 </main>
     </div>
-
 
 <?php 
     require("../include/footer.inc.php");
