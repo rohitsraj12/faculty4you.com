@@ -523,7 +523,7 @@ label {
     position: absolute;
     bottom: -4.25rem;
     left: 48%;
-    z-index: 3; } }
+    z-index: 1; } }
 
 @media (min-width: 583px) {
   .section-student .section-body article:last-child figure::before {
@@ -534,7 +534,7 @@ label {
     position: absolute;
     bottom: -4.25rem;
     left: 0;
-    z-index: 3; } }
+    z-index: 1; } }
 
 @media (min-width: 583px) {
   .section-student .section-body article:not(first-child) figure::before, .section-student .section-body article:not(last-child) figure::before {
@@ -545,7 +545,7 @@ label {
     position: absolute;
     bottom: -4.25rem;
     left: 0;
-    z-index: 3; } }
+    z-index: 1; } }
 
 @media (min-width: 583px) {
   .section-student .section-body figure {
@@ -740,6 +740,7 @@ label {
     padding: 0 2rem; }
 
 .student-post .student-detail {
+  display: none;
   font-family: "open sans";
   font-size: 2rem; }
 
