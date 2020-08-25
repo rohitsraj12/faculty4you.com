@@ -185,6 +185,7 @@
 .student {
   &-post {
     .student-detail {
+      display: none;
       font: {
         family: $font-primary;
         size: 2rem;
