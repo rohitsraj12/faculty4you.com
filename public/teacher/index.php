@@ -131,10 +131,10 @@
                                                                     <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
                                                                 </li>
                                                                 <li>
-                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_phone"];?></a>                                                                    
+                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="tel:+91<?php echo $row['student_phone'];?>" target="_blank"><?php echo $row['student_phone'];?></a>                                                                   
                                                                 </li>
                                                                 <li>
-                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_email"];?></a>
+                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="mailto:<?php echo $row['student_email'];?>"><?php echo $row["student_email"];?></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
@@ -264,10 +264,10 @@
                                                                     <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
                                                                 </li>
                                                                 <li>
-                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_phone"];?></a>                                                                    
+                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="tel:+91<?php echo $row['student_phone'];?>" target="_blank"><?php echo $row['student_phone'];?></a>                                                                   
                                                                 </li>
                                                                 <li>
-                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="#"><?php echo $row["student_email"];?></a>
+                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="mailto:<?php echo $row['student_email'];?>"><?php echo $row["student_email"];?></a>
                                                                 </li>
                                                             </ul>
                                                         </div>
