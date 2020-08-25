@@ -165,7 +165,7 @@
                                         <label class="label col-form-label col-sm-2 pt-0">Category</label>
                                         <div class="col-sm-8 row">
                                             <div class="form-check col-sm-2">
-                                                <input class="form-check-input type" name="category" type="radio" value="1" id="academic">
+                                                <input class="form-check-input category" name="category" type="radio" value="1" id="academic">
                                             <!-- 
                                                     #task fetch from database
  
@@ -176,7 +176,7 @@
                                             </div>
 
                                             <div class="form-check col-sm-4">
-                                                <input class="form-check-input type" name="category" type="radio" value="2" id="non-academic">
+                                                <input class="form-check-input category" name="category" type="radio" value="2" id="non-academic">
                                             
                                                 <label class="form-check-label" for="non-academic">
                                                     Non-academic
