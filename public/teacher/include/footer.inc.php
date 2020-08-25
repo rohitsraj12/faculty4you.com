@@ -17,7 +17,7 @@ $social_media = [
                             
                             faculty4you
                         </header>
-                        <p class="text-light h4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, quidem.</p>
+                        <p class="text-light h4">we provide top trainers for academic/non-academic and online/offline activities. Faculty for you is the best platform which helps you in reaching your destination.</p>
                     </article>
                 </section>
                 <section class="col-sm-6">
