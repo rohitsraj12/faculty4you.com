@@ -289,7 +289,7 @@
                                     FROM posts
                                     JOIN std
                                         ON std.student_id = posts.student_id
-                                        JOIN cities
+                                    JOIN cities
                                         ON cities.city_id = std.city_id
                                     JOIN study_types
                                         ON study_types.study_type_id = posts.study_type_id
