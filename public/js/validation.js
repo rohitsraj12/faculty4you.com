@@ -19,10 +19,12 @@ function validation(){
     var subject = document.getElementsByClassName("subject"); //198
     var about = document.getElementsByClassName("about");//242 
     var type = document.getElementsByClassName("type");
+    var err =document.getElementsByClassName("error-msg");
     
     //first name
     if(name[0].value == ""){
-        alert("input first name");
+        // err[0].style("color" "red");
+        alert("enter name");
         return false;
     }else if(!textOnlyExp.test(name[0].value)){
         alert("enter only text");
@@ -32,7 +34,7 @@ function validation(){
     //lastname
 
     if(name[1].value == ""){
-        alert("input first name");
+        alert("input last name");
         return false;
     }else if(!textOnlyExp.test(name[1].value)){
         alert("enter only text");
