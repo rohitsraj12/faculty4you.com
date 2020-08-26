@@ -51,10 +51,10 @@
                             <div class="py-4 px-5 text-dark bg-light border">
                         
                                 <div class="form-row pt-3">
-                                    <div class="form-group col-md-6">
-                                    <label for="first_name">First name</label>
-                                    <input type="text" name="first_name" class="form-control name" id="first_name" >
-                                    <p class="error-msg">please enter first name</p>
+                                    <div class="form-group wrap-form col-md-6">
+                                        <label for="first_name">First name</label> 
+                                        <span class="error-msg"></span>
+                                        <input type="text" name="first_name" class="form-control name" id="first_name" >
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
