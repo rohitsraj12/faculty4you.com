@@ -1261,6 +1261,18 @@ input,
   font-size: 1.5rem;
   color: #646464; }
 
+.wrap-form {
+  position: relative; }
+  .wrap-form label {
+    padding-left: 0.5rem; }
+
+.error-msg {
+  color: #ff7575;
+  font-size: 1.6rem;
+  position: absolute;
+  right: 1rem;
+  top: 0; }
+
 .section__post {
   position: relative; }
 
