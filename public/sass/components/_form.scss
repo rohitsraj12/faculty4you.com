@@ -113,3 +113,19 @@ input,
   font-size: 1.5rem;
   color: $color-gray-dark-1;
 }
+
+.wrap-form{
+  position: relative;
+  label{
+    padding-left: 0.5rem;
+  }
+}
+
+.error-msg{
+  // display: none;
+  color: #ff7575;
+  font-size: 1.6rem;
+  position: absolute;
+  right: 1rem;
+  top: 0;
+}
