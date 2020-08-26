@@ -20,14 +20,21 @@ function validation(){
     var about = document.getElementsByClassName("about");//242 
     var type = document.getElementsByClassName("type");
     var err =document.getElementsByClassName("error-msg");
+
+    // function for error message
+    function errMsg(input, msgIndex, errorMsg){
+
+        err[msgIndex].innerText= "Please fill " + errorMsg;
+        input.style.borderColor = "#ff7575";
+
+    }
     
     //first name
     if(name[0].value == ""){
-        // err[0].style("color" "red");
-        alert("enter name");
+            errMsg(name[0], 0, "first name");
         return false;
     }else if(!textOnlyExp.test(name[0].value)){
-        alert("enter only text");
+        errMsg(name[0], 0, "only text");
         return false;
     }
 
