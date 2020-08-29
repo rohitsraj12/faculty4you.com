@@ -30,6 +30,9 @@
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
+
+    include('../include/compose_post.inc.php');
+                               
     ?>
        
     <div class="body-container">
@@ -98,7 +101,7 @@
                                     Compose new post
                                 </header>
                                 
-                                <form action="../include/post.inc.php" method="post" class="bg-light border py-5 px-5" onsubmit="return studentPost()">
+                                <form action="" method="post" class="bg-light border py-5 px-5" onsubmit="return studentPost()">
                                     <div class="form-group">
                                         <label for="title">Title</label>
                                         <input name="post_title" class="form-control title" type="text" id="title" placeholder="user name">
