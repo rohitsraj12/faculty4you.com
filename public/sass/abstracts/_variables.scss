@@ -1,6 +1,9 @@
 // $color-primary: #454b69;
 $color-primary: #aa0000;
 $color-primary-1: #bebebe;
+$color-primary-2: #333;
+
+//border
 
 $color-white: #ffffff;
 // $color-dark: ;
@@ -14,7 +17,23 @@ $color-gray-dark-1: rgb(100, 100, 100);
 $color-gray-light-1: rgb(247, 247, 247);
 $color-gray-light-2: rgb(231, 231, 231);
 
+//button
+$color-primary-button:  linear-gradient(#aa0000, #660000);
+$color-primary-button-hover: linear-gradient(#660000, #aa0000);
+$color-primary-button-border: #550000;
+
+$color-primary-link: #550000;
+$color-primary-link-hover: #aa0000;
+
+//text color
+$color-primary-header: #222222;
+$color-primary-text: #333333;
+
 // font variable
 $font-primary: "Lato", sans-serif;
 $font-header-1: "Lato", sans-serif;
 $font-header-2: "Lato", sans-serif; ;
+
+//background color
+$color-primary-bg-1: #cecdcd;
+$color-primary-bg-2: #f8f8f8;
