@@ -18,7 +18,7 @@
 
 a:hover {
   text-decoration: none;
-  color: rgba(69, 75, 105, 0.8); }
+  color: rgba(170, 0, 0, 0.8); }
 
 html {
   font-size: 62.5%; }
@@ -64,34 +64,39 @@ strong {
       width: 95%; } }
 
 p {
-  font-family: "open sans";
-  font-size: 1.4rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.7rem;
   font-weight: 400;
   line-height: 2.4rem;
-  color: #606060; }
+  color: #333333; }
 
 .text-primary-h {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 3.5rem;
   font-weight: 600;
-  color: #454b69; }
+  color: #aa0000; }
 
 .text-secondary-h {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 2.4rem;
   font-weight: 400;
-  color: #454b69; }
+  color: #aa0000; }
+
+.text-primary-h-3 {
+  font-family: "Lato", sans-serif;
+  font-size: 3.4rem;
+  font-weight: 700;
+  color: #222; }
 
 .text-sub-primary {
-  font-family: "open sans";
-  font-size: 1.8rem;
+  font-family: "Lato", sans-serif;
+  font-size: 1.7rem;
   font-weight: 400;
-  color: #646464;
   line-height: 2.8rem; }
 
 .highlight-primary {
   font-weight: 700;
-  color: #ff736d;
+  color: #aa0000;
   border-bottom: 0.2rem solid #ff736d; }
 
 .highlight-secondary {
@@ -102,29 +107,48 @@ p {
   color: #646464; }
 
 .nav__list {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
   text-transform: capitalize; }
 
 .nav__link {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #454b69;
+  color: #aa0000;
   text-transform: capitalize; }
 
 .banner-content__header h5 {
-  line-height: 3.5rem; }
+  line-height: 3.5rem;
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400; }
+
+.banner-content__header .extra-b {
+  font-weight: 700;
+  font-size: 3.8rem; }
+
+.banner-content__header .text-primary-h-1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #aa0000; }
+
+.banner-content__header .text-secondary-h-2 {
+  color: #333;
+  font-family: "Lato", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 400; }
 
 .testimonial-client-name cite {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
-  color: #454b69; }
+  color: #aa0000; }
 
 .testimonial-client-place {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.2rem;
   font-weight: 500;
   color: #646464; }
@@ -134,12 +158,18 @@ p {
   font-weight: 400; }
 
 label {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.6rem; }
 
 .social__link {
   font-size: 1.9rem;
   color: white; }
+
+.f-link {
+  color: #aa0000; }
+
+.note-1 {
+  color: #333; }
 
 .u-center-text {
   text-align: center !important; }
@@ -188,16 +218,18 @@ label {
 
 .button-primary {
   padding: 0.8rem 4rem;
-  background-color: #5388fe;
   border-radius: 0.6rem;
   display: inline-block;
   color: #ffffff;
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.7rem;
-  font-weight: 400; }
+  font-weight: 400;
+  border: 1px solid #550000;
+  font-size: 18px;
+  background: linear-gradient(#aa0000, #660000); }
   .button-primary:hover {
-    background-color: rgba(83, 136, 254, 0.9);
-    color: #ffffff; }
+    color: #ffffff;
+    background: linear-gradient(#660000, #aa0000); }
 
 .button-secondary {
   border-radius: 1rem;
@@ -213,7 +245,7 @@ label {
   border-radius: 20px;
   color: #ffffff;
   font-size: 12px;
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -479,7 +511,7 @@ label {
   position: absolute;
   top: 0; }
   .section-forgotpwd .success_message p {
-    font-family: "open sans";
+    font-family: "Lato", sans-serif;
     font-size: 1.6rem;
     color: #ffffff; }
 
@@ -554,7 +586,7 @@ label {
     position: relative; } }
 
 .section-student .section-body figure span {
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   color: #ff736d; }
@@ -677,7 +709,7 @@ label {
       margin: 0 auto 4rem;
       position: relative; } }
   .section-teacher .section-body figure span {
-    font-family: "open sans";
+    font-family: "Lato", sans-serif;
     font-size: 1.5rem;
     font-weight: 500;
     color: #ff736d; }
@@ -741,7 +773,7 @@ label {
 
 .student-post .student-detail {
   display: none;
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 2rem; }
 
 .section-testimonial {
@@ -957,13 +989,13 @@ label {
 .article-search__header {
   padding: 0 1rem 0.6rem 0.4rem;
   margin-bottom: 1.4rem;
-  border-bottom: 1px solid #454b69; }
+  border-bottom: 1px solid #aa0000; }
 
 .article-search-body ul li {
   padding-bottom: 0.6rem;
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.3rem;
-  color: #454b69;
+  color: #aa0000;
   text-transform: uppercase; }
   .article-search-body ul li strong {
     color: #646464;
@@ -1197,10 +1229,10 @@ label {
   width: 100%;
   padding: 1rem 3.5rem 1rem 1rem;
   border-radius: 0.4rem;
-  border: 0.2rem solid #454b69;
+  border: 0.2rem solid #aa0000;
   font-size: 1.7rem;
   font-weight: 400;
-  color: #454b69;
+  color: #aa0000;
   letter-spacing: 1px; }
 
 .banner__button {
@@ -1332,7 +1364,7 @@ input,
 .section-faq-body header {
   position: relative;
   padding: 1rem 2rem;
-  font-family: "open sans";
+  font-family: "Lato", sans-serif;
   font-size: 1.7rem;
   color: #646464; }
 
@@ -1359,7 +1391,7 @@ input,
   margin-bottom: 2rem; }
   .section-sitemap-main > li a {
     font-size: 1.7rem;
-    color: #454b69; }
+    color: #aa0000; }
   .section-sitemap-main > li ul {
     margin-left: 20px; }
     .section-sitemap-main > li ul li {
@@ -1394,7 +1426,7 @@ input,
     width: 100%;
     height: 100vh;
     padding-top: 10rem;
-    background-color: #454b69;
+    background-color: #aa0000;
     clip-path: circle(75.3% at 65% 24%);
     text-align: center;
     position: fixed;
@@ -1502,12 +1534,12 @@ input,
     .body-footer .footer-base__list {
       font-size: 1.4rem;
       color: #ffffff;
-      font-family: "open sans"; }
+      font-family: "Lato", sans-serif; }
       @media (max-width: 583px) {
         .body-footer .footer-base__list {
           padding-bottom: 1rem; } }
     .body-footer .footer-base__link {
-      font-family: "open sans";
+      font-family: "Lato", sans-serif;
       color: #f7f7f7;
       display: inline-block;
       border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
@@ -1604,4 +1636,4 @@ input,
   padding-top: 5rem; }
 
 .section-data {
-  background-color: #454b69; }
+  background-color: #aa0000; }
