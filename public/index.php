@@ -11,14 +11,18 @@
                 <main class="page-home">
                     <section class="section-student">
                         <div class="section-header u-center-text">
-                            <heeader class="text-primary-h"> 
-                                How <strong>Faculty4you</strong> Works for Students
+                            <heeader class="text-primary-h-3"> 
+                                How <strong class="highlight-primary">Faculty for you</strong> works for students
                             </header>
                             <div class="sub-heading wrap-container">
                                 <h6 class="text-sub-primary">
-                                    Join <strong>faculty4you.com</strong> and connect with top <strong>teachers</strong> on the platform. Create your profile post your requirements and learn <strong>online</strong>  or <strong>home tuition</strong>.
+                                    Register <strong class="f-link">facultyforyou.com</strong> and connect with top <strong>academic</strong> / <strong>non-academic trainers</strong> on the platform.
                                 </h6>
                             </div>
+                            
+                            <p class="note-1">
+                                    Follow the three steps given below
+                                </p>
                         </div>
                         <section class="section-body wrap-container">
                             <article class="article-block">
@@ -28,11 +32,11 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">Register</h4>
+                                    <!-- <h4 class="text-secondary-h">Register</h4> -->
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                        It will take you less than 1 minute to start you adventure with BuddySchool
+                                       Create your account
                                     </p>
                                 </div>
                             </article>
@@ -43,11 +47,11 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">Post your requirements</h4>
+                                    <!-- <h4 class="text-secondary-h">Post your requirements</h4> -->
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                        Post your requiriment of subject, teacher will contact you.
+                                        Sign in; create your profile and post ypur requirement/s.
                                     </p>
                                 </div>
                             </article>
@@ -58,11 +62,11 @@
 
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">Schedule lesson</h4>
+                                    <!-- <h4 class="text-secondary-h">Schedule lesson</h4> -->
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                    confirem with teacher and start your learning with out teacher
+                                        You can choose the top trainers of your requirement/s from <strong class="f-link">Faculty for you</strong>.
                                     </p>
                                 </div>
                             </article>
@@ -76,14 +80,19 @@
                     <section class="section-teacher">
                         
                         <div class="section-header u-center-text"  >
-                            <heeader class="text-primary-h"> 
-                                Looking to Become a <strong>Trainer</strong>
+                            <heeader class="text-primary-h-3"> 
+                            How <strong class="highlight-primary">Faculty for you</strong> works for <strong class="highlight-primary">Trainer</strong>
                             </header>
                             <div class="sub-heading wrap-container">
                                 <h6 class="text-sub-primary">
-                                    Join <strong>faculty4you.com</strong> and connect with <strong>students</strong> on the platform. Create a strong profile and grow your network.
+                                    Join <strong class="f-link">facultyforyou.com</strong> and connect with number of <strong>students</strong> on the platform.
                                 </h6>
+                            <p class="note-1">
+                                    Follow the four steps given below
+                                </p>
                             </div>
+                            
+                            
                         </div>
                         <section class="section-body wrap-container">
                             <article class="article-block">
@@ -92,11 +101,11 @@
                                     <img src="<?php base_url();?>img/member/register.svg" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">Register</h4>
+                                    <!-- <h4 class="text-secondary-h">Register</h4> -->
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                    It will take you less than 1 minute to start you adventure with faculty4you
+                                        Create your account to register <strong class="f-link">Faculty for you</strong>.
                                     </p>
                                 </div>
                             </article>
@@ -106,11 +115,11 @@
                                     <img src="<?php base_url();?>img/member/member.svg" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">Activate membership</h4>
+                                    <!-- <h4 class="text-secondary-h">Activate membership</h4> -->
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                    You need to become prime memebt to see student requirement post
+                                        Sign in to get <strong class="f-link">student</strong> details.
                                     </p>
                                 </div>
                             </article>
@@ -120,11 +129,11 @@
                                     <img src="<?php base_url();?>img/member/find-student.svg" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">Find students</h4>
+                                    <!-- <h4 class="text-secondary-h">Find students</h4> -->
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                    Once you become prime member search student and student’s post then conatc student
+                                        Activate your membership to recive contact details of <strong class="f-link">students</strong> on your expert knowledge.
                                     </p>
                                 </div>
                             </article>
@@ -134,11 +143,11 @@
                                     <img src="<?php base_url();?>img/member/schedule.svg" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
-                                    <h4 class="text-secondary-h">Schedule lesson</h4>
+                                    <!-- <h4 class="text-secondary-h">Schedule lesson</h4> -->
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                    scedule your time and start your lesson
+                                        Choose the <strong class="f-link">studnets</strong> from the list and contact them
                                     </p>
                                 </div>
                             </article>
@@ -164,7 +173,7 @@
                                 </p>
                             </article>
                             <article class="col-sm-4 py-5"  >
-                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Registered teachers</p>
+                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Registered trainers</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
                                         <?php
@@ -176,7 +185,7 @@
                                 </p>
                             </article>
                             <article class="col-sm-4 py-5"  >
-                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's post</p>
+                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's posts</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
                                         <?php
@@ -193,7 +202,7 @@
                     <section class="section-testimonial">
                          
                         <div class="section-header u-center-text" >
-                            <heeader class="text-primary-h"> 
+                            <heeader class="text-primary-h-3"> 
                                 Student comumnity feed back
                             </header>
                         </div>
@@ -267,7 +276,7 @@
                     <section class="section-partner">
                         
                         <div class="section-header u-center-text" >
-                            <heeader class="text-primary-h"> 
+                            <heeader class="text-primary-h-3"> 
                                 Our partners
                             </header>
                         </div>
