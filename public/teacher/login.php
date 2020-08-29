@@ -48,7 +48,7 @@
             <div class="container" id="container">
                 <div class="form-container sign-up-container sign-up-input">
                     <form  action="include/registration.teacher.inc.php" method="post" onsubmit="return registration()">
-                        <h1>Create Account</h1>
+                        <h1>Create your account</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="form-container sign-in-container sign-in-input">
                     <form action="include/login.teacher.inc.php" method="post" onsubmit="return login()">
-                        <h1>Trainer Login</h1>
+                        <h1>Welcome back</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                             <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
@@ -81,13 +81,13 @@
                 <div class="overlay-container">
                     <div class="overlay">
                         <div class="overlay-panel overlay-left">
-                            <h1>Welcome Back!</h1>
-                            <p class="text-light">To keep connected with us please login with your personal info</p>
+                            <h1>Hello, Trainers</h1>
+                            <p class="text-light">If you are already a member..</p>
                             <button class="ghost" id="signIn">Sign In</button>
                         </div>
                         <div class="overlay-panel overlay-right">
                             <h1>Hello, Trainers!</h1>
-                            <p  class="text-light">Enter your personal details and start journey with us</p>
+                            <p  class="text-light">If you are new to <strong>Faculty for you</strong>.</p>
                             <button class="ghost" id="signUp">Sign Up</button>
                         </div>
                     </div>
