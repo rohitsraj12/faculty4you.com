@@ -10,7 +10,7 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
-    include_once'../include/banner.inc.php';
+    // include_once'../include/banner.inc.php';
 
     $teacher_name = $_SESSION['user_name'];
     
@@ -36,7 +36,7 @@
         <section class="section-profile">
             <div class="section-header u-center-text">
                 <heeader class="text-primary-h"> 
-                    my profile
+                    My profile
                 </header>
             </div>
             <div class="section-body row">
@@ -107,8 +107,8 @@
                         <div class="article-body p-4 bg-light border">
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">name</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-2">Name</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['teacher_first_name'] . " " . $row['teacher_last_name'];
                                         ?>
@@ -117,7 +117,7 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">Gender</li>
+                                    <li class="col-sm-2">Gender</li>:
                                     <li class="col-sm-10 h4 font-weight-normal">
                                         <?php 
                                            echo $row['gender_type'];
@@ -135,7 +135,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li  class="col-sm-2">Phone</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-10 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['teacher_phone'];
                                         ?>
@@ -146,7 +146,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Email</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-10 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['teacher_email'];
                                         ?>
@@ -156,7 +156,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Address</li>
-                                    <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['teacher_address'];?>,</br> </br><?php echo $row['city_name'];?>, </br></br> <?php echo $row['state_name'];?></li>
+                                    <li class="col-sm-10 h4 font-weight-normal">:<?php echo $row['teacher_address'];?>,</br> </br><?php echo $row['city_name'];?>, </br></br> <?php echo $row['state_name'];?></li>
                                 </ul>
                             </div>
                         </div>
