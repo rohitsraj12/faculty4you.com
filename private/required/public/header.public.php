@@ -17,6 +17,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
         crossorigin="anonymous"
         />
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -46,9 +47,10 @@
                     <!-- end header brand -->
                     <nav class="header__nav">
                         <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">become teacher</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">log in</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link button-primary">sign in</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Trainer registration</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Trainer log in</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student log in</a></li>
                         </ul>
                     </nav>
                     <!-- end header nav -->
