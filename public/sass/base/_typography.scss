@@ -2,6 +2,14 @@
 //   font-family: $font-primary;
 // }
 
+.txt-primary {
+  color: $color-primary;
+}
+
+.txt-secondary {
+  color: $color-primary-1;
+}
+
 p {
   font: {
     family: $font-primary;
@@ -9,7 +17,7 @@ p {
     weight: 400;
   }
   line-height: 2.4rem;
-  color: #333333;
+  color: $color-primary-text;
 }
 
 .text-primary-h {
@@ -35,12 +43,11 @@ p {
     size: 3.4rem;
     weight: 700;
   }
-  color: #222;
+  color: $color-primary-header;
 }
 
 .text-sub-primary {
   font-family: $font-header-2;
-
   font-size: 1.7rem;
   font-weight: 400;
   line-height: 2.8rem;
@@ -90,7 +97,7 @@ p {
 .banner-content__header {
   h5 {
     line-height: 3.5rem;
-    color: #333;
+    color: $color-primary-text;
     font: {
       family: $font-header-2;
       size: 2.4rem;
@@ -171,7 +178,7 @@ label {
   font: {
     size: 1.9rem;
   }
-  color: white;
+  color: $color-white;
 }
 
 // randome
@@ -179,6 +186,6 @@ label {
   color: $color-primary;
 }
 .note-1 {
-  color: #333;
+  color: $color-primary-text;
   // line-height: 30px;
 }
