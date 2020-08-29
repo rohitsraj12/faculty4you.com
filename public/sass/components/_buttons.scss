@@ -8,15 +8,16 @@
     font-family: $font-primary;
     font-size: 1.7rem;
     font-weight: 400;
-    border: 1px solid #550000;
+    border: 1px solid $color-primary-button-border;
     font-size: 18px;
-    background: linear-gradient(#aa0000, #660000);
+    background: $color-primary-button;
 
     &:hover {
       // background-color: rgba($color-btn-1, 0.9);
       color: $color-white;
 
-      background: linear-gradient(#660000, #aa0000);
+      background: $color-primary-button-hover;
+
     }
   }
 
