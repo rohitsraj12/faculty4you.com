@@ -5,11 +5,11 @@
 p {
   font: {
     family: $font-primary;
-    size: 1.4rem;
+    size: 1.7rem;
     weight: 400;
   }
   line-height: 2.4rem;
-  color: $color-primary-1;
+  color: #333333;
 }
 
 .text-primary-h {
@@ -29,14 +29,20 @@ p {
   }
   color: $color-primary;
 }
-
-.text-sub-primary {
+.text-primary-h-3 {
   font: {
     family: $font-header-2;
-    size: 1.8rem;
-    weight: 400;
+    size: 3.4rem;
+    weight: 700;
   }
-  color: $color-gray-dark-1;
+  color: #222;
+}
+
+.text-sub-primary {
+  font-family: $font-header-2;
+
+  font-size: 1.7rem;
+  font-weight: 400;
   line-height: 2.8rem;
 }
 
@@ -45,7 +51,7 @@ p {
     font: {
       weight: 700;
     }
-    color: $color-link-1;
+    color: $color-primary;
     border-bottom: 0.2rem solid $color-link-1;
   }
 
@@ -84,6 +90,33 @@ p {
 .banner-content__header {
   h5 {
     line-height: 3.5rem;
+    color: #333;
+    font: {
+      family: $font-header-2;
+      size: 2.4rem;
+      weight: 400;
+    }
+  }
+
+  .extra-b {
+    font-weight: 700;
+    font-size: 3.8rem;
+  }
+
+  .text-primary-h-1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+
+    color: $color-primary;
+  }
+
+  .text-secondary-h-2 {
+    color: #333;
+    font: {
+      family: $font-header-2;
+      size: 2.4rem;
+      weight: 400;
+    }
   }
 }
 
@@ -134,9 +167,18 @@ label {
 }
 
 //footer
-.social__link{
-  font:{
+.social__link {
+  font: {
     size: 1.9rem;
   }
   color: white;
+}
+
+// randome
+.f-link {
+  color: $color-primary;
+}
+.note-1 {
+  color: #333;
+  // line-height: 30px;
 }
