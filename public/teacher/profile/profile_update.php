@@ -10,7 +10,7 @@
     require("../../../private/config/config.php");
 
     require("../include/header.inc.php");
-    include_once'../include/banner.inc.php';
+    // include_once'../include/banner.inc.php';
     include("../include/update.techer.profile.inc.php");
 
         
