@@ -2,10 +2,11 @@
   &-footer {
     padding-top: 15rem;
     clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
-    background-color: $color-btn-1;
+    background-color: $color-primary-bg-3;
 
     .footer-base {
       margin-top: 5rem;
+      background-color: $color-primary-bg-4;
 
       .wrap-container {
         @media (min-width: 583px) {
