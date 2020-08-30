@@ -27,7 +27,7 @@
             <div class="body-container">
                 <main>
                     <section class="wrap-container">
-                        <header class="text-primary-h text-center">
+                        <header class="text-primary-h-3 text-center">
                             Students Post
                         </header>
 
@@ -199,9 +199,9 @@
                                         
                                     ?>
                                     <article class="student-post mt-5 px-5 py-3 border bg-light">
-                                        <header class="border-bottom">
-                                            <h1 class="h1 py-3 text-dark font-weight-normal">
-                                                <?php echo $row["post_title"];?>
+                                        <header class="border-bottom article-profile__header">
+                                            <h1 class="h1 py-3 text-light font-weight-normal">
+                                                <?php echo $row["post_title"];?>cfyuygfc
                                             </h1>
                                         </header>
                                         <div class="body mb-4">
