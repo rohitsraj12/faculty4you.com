@@ -61,7 +61,7 @@ $social_media = [
 
         </div>
     </footer>
-    <div class="footer-base bg-primary p-3">
+    <div class="footer-base p-3">
         <ul class="wrap-container">
             <li class="footer-base__list">copyright 2014-2020 <a class="footer-base__link" href="<?php echo base_url();?>teacher/index.php">facultyforyou.com</a> </li>
             <li class="footer-base__list"><a class="footer-base__link" href="#">terms and conditions</a></li>
