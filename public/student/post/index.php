@@ -49,7 +49,7 @@
                     <div class="col-sm-9">
                         <section  class="view__post post__cat" id="viewPost">
                             
-                            <header class="text-primary-h text-center pb-5 mb-5" >
+                            <header class="text-primary-h-3 text-center pb-5 mb-5" >
                                 View my past posts
                             </header>
                             <?php 
