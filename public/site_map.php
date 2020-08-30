@@ -11,7 +11,7 @@
         <section class="section-sitemap">
             <div class="wrap-container">
                 <div class="section-header u-center-text">
-                    <heeader class="text-primary-h"> 
+                    <heeader class="text-primary-h-3"> 
                         Site map
                     </header>
                 </div>
