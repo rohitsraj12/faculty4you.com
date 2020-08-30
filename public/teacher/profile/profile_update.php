@@ -35,7 +35,7 @@
     <main class="wrap-container profile">
         <section class="section-profile-update">
             <div class="section-header u-center-text" >
-                <heeader class="text-primary-h"> 
+                <heeader class="text-primary-h-3"> 
                     Update profile
                 </header>
                 
@@ -45,7 +45,7 @@
                 <section class="section-update-form">
                     <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return validation()">
                         <article class="mb-5" >
-                            <header class="p-4 h3 bg-dark text-light m-0">
+                            <header class="p-4 h3 article-profile__header text-light m-0">
                                 Personal information
                             </header>
                             <div class="py-4 px-5 text-dark bg-light border">
@@ -157,7 +157,7 @@
                             </div>
                         </article>
                         <article >
-                            <header class="p-4 h3 bg-dark text-light m-0">
+                            <header class="p-4 h3 article-profile__header text-light m-0">
                                 Professional information
                             </header>
                             <div class="py-4 px-5 text-dark bg-light border mb-5">
