@@ -20,7 +20,7 @@ session_start();
 <div class="body-container">
     <main class="wrap-container">
         <section class="section-profile-update">
-            <header class="text-primary-h text-center pb-5">
+            <header class="text-primary-h-3 text-center pb-5">
             Trainee's Post
             </header>
             <form action="../include/post.inc.php" method="post" class="section-body">
