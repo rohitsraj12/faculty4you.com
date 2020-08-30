@@ -69,8 +69,8 @@ strong {
   text-align: center; }
 
 .container-header, .article-profile__header {
-  background-color: #5b6467;
-  background-image: linear-gradient(30deg, #5b6467 0%, #8b939a 50%, #5b6467 100%);
+  background-color: #cc0808;
+  background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid #5b6467;
@@ -1505,6 +1505,10 @@ input,
   justify-content: flex-end; }
   .top-header ul li {
     margin-right: 1rem; }
+
+.nav-section {
+  background-color: #cc0808;
+  background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%); }
 
 .body-footer {
   padding-top: 15rem;
