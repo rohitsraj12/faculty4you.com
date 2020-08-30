@@ -36,7 +36,7 @@
     <main class="wrap-container profile">
         <section class="section-profile">
             <div class="section-header u-center-text"  >
-                <heeader class="text-primary-h"> 
+                <heeader class="text-primary-3"> 
                     My profile
                 </header>
                 
