@@ -24,7 +24,7 @@
                         <section class="section-body wrap-container">
                             <div class="section-body-header">
                                 <p class="note-1">
-                                        Follow the four steps given below
+                                        Follow the Three steps given below
                                 </p>
                             </div>
                             <article class="article-block">
