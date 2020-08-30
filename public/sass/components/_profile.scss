@@ -1,5 +1,6 @@
 .section {
   &-profile {
+    
   }
   &-body {
     @media (min-width: 583px) {
@@ -9,10 +10,11 @@
     }
 
     .article {
-      &-profile {
-        padding: 2rem 2rem;
+      &-profil {
         margin-bottom: 1.5rem;
+        border-radius: 1rem;
         background-color: $color-gray-light-1;
+        @include shadow;
       
       }
 
