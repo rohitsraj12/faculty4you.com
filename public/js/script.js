@@ -12,8 +12,11 @@ $(document).ready(function () {
     autoplay: true,
     autoplayHoverPause: true,
     responsive: {
-      582: {
+      1200: {
         items: 3,
+      },
+      582: {
+        items: 2,
       },
 
       0: {
