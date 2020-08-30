@@ -21,7 +21,7 @@
     include_once("../../private/config/config.php");
         include_once('include/header.inc.php');
         
-        include_once'include/banner.inc.php';
+        // include_once'include/banner.inc.php';
 
 ?>
             <div class="body-container">
