@@ -201,7 +201,7 @@
                                     <article class="student-post mt-5 px-5 py-3 border bg-light">
                                         <header class="border-bottom article-profile__header">
                                             <h1 class="h1 py-3 text-light font-weight-normal">
-                                                <?php echo $row["post_title"];?>cfyuygfc
+                                                <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
                                         <div class="body mb-4">
