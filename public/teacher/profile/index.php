@@ -35,7 +35,7 @@
     <main class="wrap-container profile">
         <section class="section-profile">
             <div class="section-header u-center-text">
-                <heeader class="text-primary-h"> 
+                <heeader class="text-primary-h-3"> 
                     My profile
                 </header>
             </div>
@@ -89,7 +89,7 @@
                 </section>
                 <section class="col-md-8">
                     <article class="article-profil ">
-                        <header class="p-4 h3 bg-dark text-light m-0">
+                        <header class="p-4 h3 article-profile__header text-light m-0">
                             About me
                         </header>
                         <div class="article-body p-4 text-dark  border">
@@ -101,7 +101,7 @@
                         </div>
                     </article>
                     <article class="article-profil py-5">
-                        <header class="p-4 h3 bg-dark text-light  m-0">
+                        <header class="p-4 h3 article-profile__header text-light  m-0">
                             Personal detail
                         </header>
                         <div class="article-body p-4 bg-light border">
@@ -162,7 +162,7 @@
                         </div>
                     </article>
                     <article class="article-profil">
-                        <header class="p-4 h3 bg-dark text-light  m-0">
+                        <header class="p-4 h3 article-profile__header text-light  m-0">
                             Professional detail
                         </header>
                         <div class="article-body p-4 border">
