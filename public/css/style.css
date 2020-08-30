@@ -888,10 +888,13 @@ label {
     flex-direction: row;
     justify-content: space-between; } }
 
-.section-body .article-profile {
-  padding: 2rem 2rem;
+.section-body .article-profil {
   margin-bottom: 1.5rem;
-  background-color: #f7f7f7; }
+  border-radius: 1rem;
+  background-color: #f7f7f7;
+  -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2); }
 
 .section-body .article__header {
   padding-bottom: 1.5rem;
