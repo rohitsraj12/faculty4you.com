@@ -162,32 +162,25 @@
                             </header>
                             <div class="py-4 px-5 text-dark bg-light border mb-5">
                             <fieldset class="form-group">
-                                    <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0">Category</label>
-                                        <div class="col-sm-8 row">
-                                            <div class="form-check col-sm-2">
-                                                <input class="form-check-input category" name="category" type="radio" value="1" id="academic">
-                                            <!-- 
-                                                    #task fetch from database
- 
-                                             -->
-                                                <label class="form-check-label" for="academic">
-                                                    Academic
-                                                </label>
-                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-3"> 
+                                                    <label class="label col-form-label col-sm-3 pt-0">Category</label>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <select id="state" name="category" class="form-control city">
+                                                        <option value="nooption">Select category</option>
+                                                        <?php 
+                                                            $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
+                                                            $cat_result = mysqli_query($conn, $cat_query);
 
-                                            <div class="form-check col-sm-4">
-                                                <input class="form-check-input category" name="category" type="radio" value="2" id="non-academic">
-                                            
-                                                <label class="form-check-label" for="non-academic">
-                                                    Non-academic
-                                                </label>
+                                                            while($row = mysqli_fetch_assoc($cat_result)){
+                                                        ?>
+                                                        <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
+                                                        <?php }?>
+                                                    </select>
+                                                </div>
                                             </div>
-                                           
-                                          
-                                        </div>
-                                    </div>
-                                </fieldset>
+                            </fieldset>
                         
                                 <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
