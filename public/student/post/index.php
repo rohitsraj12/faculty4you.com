@@ -14,7 +14,7 @@
     require("../../../private/config/config.php");
     require("../include/header.inc.php");
     
-        require("../include/banner.inc.php");
+        // require("../include/banner.inc.php");
         
 
     $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
@@ -69,9 +69,9 @@
                                 while($row = mysqli_fetch_assoc($result)){
 
                             ?>
-                                    <article class="mb-5 px-5 py-3 border bg-light" >
-                                        <header class="border-bottom">
-                                            <h1 class="h1 py-3 text-dark font-weight-normal">
+                                    <article class="post-sections" >
+                                        <header class="post-header">
+                                            <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
@@ -87,7 +87,7 @@
                                         </p>
                                         </div>
                                         <footer class="pb-3">
-                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>" style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Edit post</a>
+                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="button-primary">Edit post</a>
                                         </footer>
                                     </article>
                                         
@@ -97,7 +97,7 @@
                         </section>
                         <section  class="compose__post post__cat" id="composePost">
                             <div class="section-profile-update">
-                                <header class="text-primary-h text-center pb-5 mb-5" >
+                                <header class="text-primary-h-3 text-center pb-5 mb-5" >
                                     Compose new post
                                 </header>
                                 
@@ -143,30 +143,27 @@
                                         </fieldset> 
                                         <fieldset class="form-group col-sm-12">
                                             <div class="row">
-                                                <label class="label col-form-label col-sm-3 pt-0">Study category</label>
-                                                <div class="col-sm-9 row">
-                                                    <div class="form-check col-sm-4">
-                                                        <input class="form-check-input" name="study_category" type="radio" value="1" id="academic">
-                                                    
-                                                        <label class="form-check-label" for="academic">
-                                                            Academic
-                                                        </label>
-                                                    </div>
+                                                <div class="col-sm-3"> 
+                                                    <label class="label col-form-label col-sm-3 pt-0">Category</label>
+                                                </div>
+                                                <div class="col-sm-5">
+                                                    <select id="state" name="study_category" class="form-control city">
+                                                        <option value="nooption">Select category</option>
+                                                        <?php 
+                                                            $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
+                                                            $cat_result = mysqli_query($conn, $cat_query);
 
-                                                    <div class="form-check col-sm-4">
-                                                        <input class="form-check-input" name="study_category" type="radio" value="2" id="non-academic">
-                                                    
-                                                        <label class="form-check-label" for="non-academic">
-                                                            Non-academic
-                                                        </label>
-                                                    </div>
-                                                
+                                                            while($row = mysqli_fetch_assoc($cat_result)){
+                                                        ?>
+                                                        <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
+                                                        <?php }?>
+                                                    </select>
                                                 </div>
                                             </div>
                                         </fieldset>
                                     </div>
                                     <div class="">
-                                        <input type="submit" style="font-size: 1.6rem;" class="py-2 px-4 btn-lg btn btn-primary" name="submit-post" value="submit">
+                                        <input type="submit" class="button-primary" name="submit-post" value="submit">
                                         <input type="reset"  style="font-size: 1.6rem;" class="btn btn-lg  btn btn-outline-secondary" value="reset">
 
                                     </div>
