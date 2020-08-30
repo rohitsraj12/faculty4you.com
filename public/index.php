@@ -20,11 +20,13 @@
                                 </h6>
                             </div>
                             
-                            <p class="note-1">
-                                    Follow the three steps given below
-                                </p>
                         </div>
                         <section class="section-body wrap-container">
+                            <div class="section-body-header">
+                                <p class="note-1">
+                                        Follow the four steps given below
+                                </p>
+                            </div>
                             <article class="article-block">
                                 <figure class="student-section__figure">
                                     <span>step 1</span>
@@ -81,20 +83,22 @@
                         
                         <div class="section-header u-center-text"  >
                             <heeader class="text-primary-h-3"> 
-                            How <strong class="highlight-primary">Faculty for you</strong> works for <strong class="highlight-primary">Trainer</strong>
+                                How <strong class="highlight-primary">Faculty for you</strong> works for <strong class="highlight-primary">Trainer</strong>
                             </header>
                             <div class="sub-heading wrap-container">
                                 <h6 class="text-sub-primary">
                                     Join <strong class="f-link">facultyforyou.com</strong> and connect with number of <strong>students</strong> on the platform.
                                 </h6>
-                            <p class="note-1">
-                                    Follow the four steps given below
-                                </p>
                             </div>
                             
-                            
                         </div>
+                        
                         <section class="section-body wrap-container">
+                            <div class="section-body-header">
+                                <p class="note-1">
+                                        Follow the four steps given below
+                                </p>
+                            </div>
                             <article class="article-block">
                                 <figure class="student-section__figure">
                                 <span>step 1</span>
