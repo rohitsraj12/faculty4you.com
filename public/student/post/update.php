@@ -67,35 +67,30 @@ session_start();
             </fieldset> 
             <fieldset class="form-group col-sm-6">
                 <div class="row">
-                    <label class="label col-form-label col-sm-3 pt-0">Study category</label>
+                    <label class="label col-form-label col-sm-3 pt-0">Category</label>
                     <div class="col-sm-6 row">
-                        <div class="form-check col-sm-12">
-                            <input class="form-check-input category" name="cat" type="radio" value="1" id="academic">
-                        
-                            <label class="form-check-label" for="academic">
-                                Academic
-                            </label>
-                        </div>
+                    <select id="state" name="cat" class="form-control city">
+                        <option value="nooption">Select category</option>
+                        <?php 
+                            $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
+                            $cat_result = mysqli_query($conn, $cat_query);
 
-                        <div class="form-check col-sm-12">
-                            <input class="form-check-input category" name="cat" type="radio" value="2" id="non-academic">
-                        
-                            <label class="form-check-label" for="non-academic">
-                                Non-academic
-                            </label>
-                        </div>
-                    
+                            while($row = mysqli_fetch_assoc($cat_result)){
+                        ?>
+                        <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
+                        <?php }?>
+                    </select>
                     </div>
                 </div>
             </fieldset>
         </div>
-        <div class="form-row row">
-            <div class="col-3">
-                <input type="submit" class="w-100 btn btn-primary text-center" name="post_update" value="submit">
+        <div class="form-row">
+            <div class="">
+                <input type="submit" class="button-primary" name="post_update" value="submit">
 
             </div>
-            <div class="col-3">
-                <input type="reset" class="w-100 btn btn-light text-center" value="reset">
+            <div class="">
+                <input type="reset" class="button-secondary" value="reset">
 
             </div>
 
