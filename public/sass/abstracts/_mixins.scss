@@ -32,7 +32,6 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8aafff', endColorstr='#5388fe', GradientType=1 );
 }
 
-
 @mixin bannergradient {
   background: #8aafff;
   background: -moz-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
@@ -58,20 +57,75 @@
 // background
 @mixin bg-1 {
   background: #fcfcfc;
-  background: -moz-radial-gradient(center, ellipse cover, #fcfcfc 0%, #f6f6f6 47%, #ededed 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fcfcfc), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
-  background: -webkit-radial-gradient(center, ellipse cover, #fcfcfc 0%, #f6f6f6 47%, #ededed 100%);
-  background: -o-radial-gradient(center, ellipse cover, #fcfcfc 0%, #f6f6f6 47%, #ededed 100%);
-  background: -ms-radial-gradient(center, ellipse cover, #fcfcfc 0%, #f6f6f6 47%, #ededed 100%);
-  background: radial-gradient(ellipse at center, #fcfcfc 0%, #f6f6f6 47%, #ededed 100%);
+  background: -moz-radial-gradient(
+    center,
+    ellipse cover,
+    #fcfcfc 0%,
+    #f6f6f6 47%,
+    #ededed 100%
+  );
+  background: -webkit-gradient(
+    radial,
+    center center,
+    0px,
+    center center,
+    100%,
+    color-stop(0%, #fcfcfc),
+    color-stop(47%, #f6f6f6),
+    color-stop(100%, #ededed)
+  );
+  background: -webkit-radial-gradient(
+    center,
+    ellipse cover,
+    #fcfcfc 0%,
+    #f6f6f6 47%,
+    #ededed 100%
+  );
+  background: -o-radial-gradient(
+    center,
+    ellipse cover,
+    #fcfcfc 0%,
+    #f6f6f6 47%,
+    #ededed 100%
+  );
+  background: -ms-radial-gradient(
+    center,
+    ellipse cover,
+    #fcfcfc 0%,
+    #f6f6f6 47%,
+    #ededed 100%
+  );
+  background: radial-gradient(
+    ellipse at center,
+    #fcfcfc 0%,
+    #f6f6f6 47%,
+    #ededed 100%
+  );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed', GradientType=1 );
 }
 
-@mixin post-head {
+@mixin post-head-1 {
   background-color: #5b6467;
-  background-image: linear-gradient(30deg, #5b6467 0%, #8b939a 50%,  #5b6467 100%);
+  background-image: linear-gradient(
+    30deg,
+    #5b6467 0%,
+    #8b939a 50%,
+    #5b6467 100%
+  );
 }
+
 @mixin post-border {
   border: 1px solid #5b6467;
-  border-image: linear-gradient(30deg, #5b6467 0%, #8b939a 50%,  #5b6467 100%);
+  border-image: linear-gradient(30deg, #5b6467 0%, #8b939a 50%, #5b6467 100%);
+}
+
+@mixin post-head {
+  background-color: #cc0808;
+
+  background-image: linear-gradient(
+    0deg,
+    #cc0808 0%,
+    #970000 50%,
+    #ca0909 100%
+  );
 }
