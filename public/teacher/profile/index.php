@@ -88,7 +88,7 @@
                     </article>
                 </section>
                 <section class="col-md-8">
-                    <article class="article-profil ">
+                    <article class="article-profil">
                         <header class="p-4 h3 article-profile__header text-light m-0">
                             About me
                         </header>
@@ -100,7 +100,7 @@
                         </p>
                         </div>
                     </article>
-                    <article class="article-profil py-5">
+                    <article class="article-profil">
                         <header class="p-4 h3 article-profile__header text-light  m-0">
                             Personal detail
                         </header>
@@ -117,8 +117,8 @@
                             </div>
                             <div class="article-info">
                                 <ul class="row">
-                                    <li class="col-sm-2">Gender</li>:
-                                    <li class="col-sm-10 h4 font-weight-normal">
+                                    <li class="col-sm-2">Gender</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">:
                                         <?php 
                                            echo $row['gender_type'];
 
@@ -156,16 +156,30 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Address</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">:<?php echo $row['teacher_address'];?>,</br> </br><?php echo $row['city_name'];?>, </br></br> <?php echo $row['state_name'];?></li>
+                                    <li class="col-sm-10 h4 font-weight-normal">:
+                                        <address>
+                                            <ul>
+                                                <li>
+                                                    <?php echo $row['teacher_address'];?>,
+                                                </li>
+                                                <li>
+                                                    <?php echo $row['city_name'];?>,
+                                                </li>
+                                                <li>
+                                                    <?php echo $row['state_name'];?>
+                                                </li>
+                                            </ul>
+                                        </address>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </article>
                     <article class="article-profil">
-                        <header class="p-4 h3 article-profile__header text-light  m-0">
+                        <header class="h3 p-4 article-profile__header text-light  m-0">
                             Professional detail
                         </header>
-                        <div class="article-body p-4 border">
+                        <div class="article-body p-4">
                         
                             <div class="article-info">
                                 <ul class="row">
