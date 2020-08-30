@@ -35,7 +35,7 @@
     <main class="wrap-container profile">
         <section class="section-profile-update">
             <div class="section-header u-center-text" >
-                <heeader class="text-primary-h text-secondary"> 
+                <heeader class="text-primary-h-3 text-secondary"> 
                     Update profile
                 </header>
                 
