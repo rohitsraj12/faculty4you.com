@@ -68,6 +68,10 @@ strong {
   padding-bottom: 3rem;
   text-align: center; }
 
+.container-header, .article-profile__header {
+  background-color: #5b6467;
+  background-image: linear-gradient(30deg, #5b6467 0%, #8b939a 60%); }
+
 .txt-primary {
   color: #aa0000; }
 
