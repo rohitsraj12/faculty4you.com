@@ -80,4 +80,7 @@ strong {
 }
 .container-header{
   @include post-head;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  @include post-border;
 }
