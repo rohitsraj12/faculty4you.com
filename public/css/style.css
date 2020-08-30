@@ -68,7 +68,7 @@ strong {
   padding-bottom: 3rem;
   text-align: center; }
 
-.container-header, .article-profile__header {
+.container-header, .article-profile__header, .post-header {
   background-color: #cc0808;
   background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%);
   border-top-left-radius: 10px;
@@ -555,6 +555,8 @@ label {
   font-size: 1.5rem !important; }
 
 .section-student {
+  border-top: 2px solid #e3e3e3;
+  border-bottom: 2px solid #e3e3e3;
   background: #fcfcfc;
   background: -moz-radial-gradient(center, ellipse cover, #fcfcfc 0%, #f6f6f6 47%, #ededed 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fcfcfc), color-stop(47%, #f6f6f6), color-stop(100%, #ededed));
@@ -1388,13 +1390,19 @@ input,
     .section-sitemap-main > li ul li {
       margin-top: 5px; }
 
+.post-sections {
+  margin-bottom: 3rem;
+  border-radius: 10px 10px 5px 5px; }
+
+.post-header {
+  padding: 1rem 2rem; }
+  .post-header h1 {
+    color: #ffffff; }
+
 .body-header {
   padding-top: 1rem;
   width: 100%;
-  position: absolute;
-  top: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  z-index: 2; }
+  background-color: rgba(255, 255, 255, 0.8); }
   @media (min-width: 582px) {
     .body-header > .wrap-container {
       display: flex;
