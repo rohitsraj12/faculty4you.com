@@ -56,10 +56,10 @@ p {
 .highlight {
   &-primary {
     font: {
+      family: $font-primary;
       weight: 700;
     }
     color: $color-primary;
-    border-bottom: 0.2rem solid $color-link-1;
   }
 
   &-secondary {
