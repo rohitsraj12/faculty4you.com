@@ -23,7 +23,7 @@ session_start();
 
 <div class="body-container">
 <main class="wrap-container">
-    <header class="text-primary-h pb-5 text-center">
+    <header class="text-primary-h-3 pb-5 text-center">
        Update post
     </header>
     <form action="" method="post" onsubmit="return validation()">
