@@ -78,3 +78,6 @@ strong {
   padding-bottom: 3rem;
   text-align: center;
 }
+.container-header{
+  @include post-head;
+}
