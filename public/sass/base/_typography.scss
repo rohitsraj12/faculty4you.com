@@ -48,7 +48,7 @@ p {
 
 .text-sub-primary {
   font-family: $font-header-2;
-  font-size: 1.7rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 2.8rem;
 }
@@ -127,6 +127,9 @@ p {
   }
 }
 
+// span heading
+.text
+
 // testimonial
 
 .testimonial {
@@ -186,6 +189,12 @@ label {
   color: $color-primary;
 }
 .note-1 {
+
   color: $color-primary-text;
+  font:{
+    family: $font-primary;
+    weight: 500;
+    size: 2rem;
+  }
   // line-height: 30px;
 }
