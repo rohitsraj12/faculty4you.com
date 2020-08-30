@@ -55,5 +55,10 @@
                     </nav>
                     <!-- end header nav -->
                 </header>
+                <nav class="py-2 nav-section">
+                    <ul>
+                        <li><a href="">home</a></li>
+                    </ul>
+                </nav>
             </div>
             <!-- end body header -->
