@@ -38,27 +38,32 @@
                     <span class="hamberger__line"></span>
                 </div>
                 <!-- end hamberger -->
-                <header class="wrap-container">
-                    <div class="header-brand">
-                        <a href="<?php base_url();?>index.php">
-                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
-                        </a>
+                <header class="header-main">
+                    <div class="header-brand-section">
+                        <div class="wrap-container">
+                            <div class="header-brand">
+                                <a href="<?php base_url();?>index.php">
+                                    <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
+                                </a>
+                            </div>
+                            <!-- end header brand -->
+                        </div>
                     </div>
-                    <!-- end header brand -->
-                    <nav class="header__nav">
+                   
+                    <div  class="header__nav">
+                     <nav class="wrap-container">
                         <ul>
+                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Trainer registration</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Trainer log in</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Trainer login</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student log in</a></li>
+                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
                         </ul>
                     </nav>
+                    </div>
+                   
                     <!-- end header nav -->
                 </header>
-                <nav class="py-2 nav-section">
-                    <ul>
-                        <li><a href="">home</a></li>
-                    </ul>
-                </nav>
+                
             </div>
             <!-- end body header -->
