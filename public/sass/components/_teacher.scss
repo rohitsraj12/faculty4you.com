@@ -153,11 +153,13 @@
 
     .article {
       &-block {
-        width:25%;
-        @media (min-width: 583px) {
+       
+        @media (min-width: 583px) { 
+          width:25%;
         }
 
         @media (max-width: 582px) {
+          width: 100%;
           &:not(last-child) {
             padding: 4rem 0;
             margin-bottom: 2rem;
