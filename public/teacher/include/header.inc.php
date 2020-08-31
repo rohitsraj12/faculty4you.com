@@ -40,36 +40,41 @@
                     <span class="hamberger__line"></span>
                 </div>
                 <!-- end hamberger -->
-                <div class="top-header mt-0">
-                    <div class="wrap-container h-5 u-right-text text-sub-primary">
-                        <i class="fa fa-user" aria-hidden="true"></i>                        
-                        <?php 
-
-                            // echo $row['teacher_user_name'];
-                            echo $teacher_name;
-                        ?>
+               
+                <header>
+                    <div class="header-brand-section">
+                        <div class="wrap-container">
+                            <div class="header-brand">
+                                <a href="<?php base_url();?>teacher/index.php">
+                                    <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
+                                </a>
+                            </div>
+                            <!-- end header brand -->
+                            <div class="header-brand-section-right">
+                                <ul>
+                                    <li>
+                                    <i class="fa fa-user" aria-hidden="true"></i>                        
+                                    <?php 
+                                        echo $teacher_name;
+                                    ?>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <header class="wrap-container">
-                    <div class="header-brand">
-                        <a href="<?php base_url();?>teacher/index.php">
-                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
-                        </a>
+                  
+                    <div class="header__nav">
+                        <nav class="wrap-container">
+                            <ul>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link nav-active">Home</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">Profile</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <!-- end header brand -->
-                    <nav class="header__nav">
-                        <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link">home</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">profile</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">log out</a></li>
-                        </ul>
-                    </nav>
+                   
                     <!-- end header nav -->
                 </header>
-                <nav class="py-2 nav-section">
-                    <ul>
-                        <li><a href="">home</a></li>
-                    </ul>
-                </nav>
+              
             </div>
             <!-- end body header -->
