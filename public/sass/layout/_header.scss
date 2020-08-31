@@ -21,16 +21,16 @@
     img {
       height: 7rem;
     }
-    &-section{
+    &-section {
       padding: 1rem 0;
 
-      & > .wrap-container{
+      & > .wrap-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
       }
-      ul{
-        li{
+      ul {
+        li {
           font-size: 1.5rem;
         }
       }
@@ -41,10 +41,11 @@
 
     ul {
       @media (min-width: 581px) {
-        padding: 0.2rem 0;
+        padding: 0.2rem 0 0.1rem;
         display: flex;
         flex-direction: row;
         align-items: center;
+        margin: 0;
       }
 
       @media (max-width: 582px) {
@@ -79,24 +80,28 @@
 
 .nav {
   &__link {
-  @include post-head;
-   display: inline-block;
-   padding: 1rem 2rem;
-   &:hover{
-     @include post-head-hover;
-   }
-   @media (max-width: 582px){
-     display: block;
-     width: 95%;
-     margin: 0 auto;
-   }
+    @include post-head;
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    @include shadow-text(0, 0, 2px, 0.5);
+    @include hover-transition(500ms);
+
+    &:hover {
+      @include post-head-hover;
+      @include hover-transition(500ms);
+    }
+
+    @media (max-width: 582px) {
+      display: block;
+      width: 95%;
+      margin: 0 auto;
+    }
   }
 
   &__list {
     @media (max-width: 582px) {
       padding: 0.5rem 0;
     }
-    
 
     & + li {
       @media (min-width: 583px) {
@@ -106,9 +111,8 @@
   }
 }
 
-.nav-active{
+.nav-active {
   @include post-head-hover;
-
 }
 .hamberger {
   animation-duration: 1.8s;
@@ -192,5 +196,4 @@
 }
 
 .nav-section {
-  
 }
