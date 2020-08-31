@@ -36,53 +36,42 @@
                     <span class="hamberger__line"></span>
                 </div>
                 <!-- end hamberger -->
-                <div class="top-header mt-0">
-                    <div class="wrap-container h-5 u-right-text text-sub-primary">
-                        <ul>
-                            <li>
-                                <i class="fa fa-user" aria-hidden="true"></i>                        
-
-                            </li>
-                            <li>
-                                <?php 
-
-                                // echo $row['teacher_user_name'];
-                                echo $student_name;
-                                ?>
-                            </li>
-                        </ul>
+               
+                <header>
+                    <div class="header-brand-section">
+                        <div class="wrap-container">
+                            <div class="header-brand">
+                                <a href="<?php base_url();?>student/index.php">
+                                    <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty4you">
+                                </a>
+                            </div>
+                            <!-- end header brand -->
+                            <div class="header-brand-section-right">
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-user" aria-hidden="true"></i>                        
+                                        <?php 
+                                        echo $student_name;
+                                        ?>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <header class="wrap-container">
-                
-                    <div class="header-brand">
-                        <a href="<?php base_url();?>student/index.php">
-                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty4you">
-                        </a>
-                    </div>
-                    <!-- end header brand -->
-                    <nav class="header__nav">
+                    <div class="header__nav">
+                        <nav class="wrap-container">
                         <ul>
                             <li class="nav__list"><a href="<?php base_url();?>student/index.php" class="nav__link">Home</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>student/post/index.php" class="nav__link">Post</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>student/profile/index.php" class="nav__link">Profile</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                         </ul>
-                    </nav>
+                        </nav>
+                    </div>
                     <!-- end header nav -->
+                       
                 </header>
-                
-                <nav class="py-2 nav-section">
-                    <ul>
-                        <li><a href="">home</a></li>
-                    </ul>
-                </nav>
-                
             </div>
             <!-- end body header -->
 
-            <!-- 
-                
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi sit aliquid consectetur tempora praesentium at vitae recusandae quidem mollitia, quod hic rerum explicabo facere, magnam non. Molestias maiores beatae, ullam esse expedita soluta vel voluptates eveniet unde at iusto nulla. 
-            
-            -->
+          
