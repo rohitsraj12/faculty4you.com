@@ -83,13 +83,13 @@ p {
   }
   &__link {
     font-family: $font-primary;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 500;
-    color: $color-primary;
+    color: $color-white;
     text-transform: capitalize;
 
     &:hover {
-      // color: rgba($font-primary, 0.8);
+      color: $color-white;
     }
   }
 }
