@@ -1,3 +1,4 @@
+// shadow box
 @mixin insetShadow {
   -webkit-box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
@@ -8,6 +9,13 @@
   -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+// shadow box
+@mixin shadow-text($x, $y, $b, $alpha) {
+  -webkit-text-shadow: $x $y $b rgba(0, 0, 0, $alpha);
+  -moz-text-shadow: $x $y $b rgba(0, 0, 0, $alpha);
+  text-shadow: $x $y $b rgba(0, 0, 0, $alpha);
 }
 
 @mixin gradient {
@@ -119,7 +127,7 @@
   border-image: linear-gradient(30deg, #5b6467 0%, #8b939a 50%, #5b6467 100%);
 }
 
-@mixin post-head {
+@mixin post-head-hover {
   background-color: #cc0808;
 
   background-image: linear-gradient(
@@ -130,7 +138,7 @@
   );
 }
 
-@mixin post-head-hover {
+@mixin post-head {
   background-color: #970000;
 
   background-image: linear-gradient(
@@ -139,4 +147,26 @@
     #cc0808 50%,
     #970000 100%
   );
+}
+
+// hover effect
+@mixin hover-transition($ms) {
+  -webkit-transition: all $ms ease-in;
+  -moz-transition: all $ms ease-in;
+  -ms-transition: all $ms ease-in;
+  -o-transition: all $ms ease-in;
+  transition: all $ms ease-in;
+}
+
+// border radius
+@mixin radius-all($all) {
+  -webkit-border-radius: $all;
+  -moz-border-radius: $all;
+  border-radius: $all;
+}
+
+@mixin radius-direction($top-left, $top-right, $bottom-right, $bottom-left) {
+  -webkit-border-radius: $top-left, $top-right, $bottom-right, $bottom-left;
+  -moz-border-radius: $top-left, $top-right, $bottom-right, $bottom-left;
+  border-radius: $top-left, $top-right, $bottom-right, $bottom-left;
 }
