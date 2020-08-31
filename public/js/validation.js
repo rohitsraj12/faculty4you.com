@@ -5,7 +5,135 @@ var textOnlyExp = /^([a-zA-Z]+)$/;
 var pincode = /^([0-9]{6})$/;
 // var numExp = /^([0-9]{2})$/;
 
-function validation(){
+//trainer form validation
+  // function for error message
+  function errMsg(input, errorMsg){
+    input.previousElementSibling.innerText= "Please fill " + errorMsg;
+    input.style.borderColor = "#ff7575";
+}
+
+function trainerValidation(){
+    var name = document.getElementsByClassName("name"); //13
+    var dob = document.getElementsByClassName("dob"); // 66
+    var image = document.getElementsByClassName("image");
+    var gender = document.getElementsByClassName("gender"); //79
+    var email = document.getElementsByClassName("email"); //115
+    var phone = document.getElementsByClassName("phone"); //119
+    var city = document.getElementsByClassName("city");//133
+    var state = document.getElementsByClassName("state"); //147
+    var pin = document.getElementsByClassName("pincode"); //160
+    var teachingExp = document.getElementsByClassName("experience"); //193
+    var subject = document.getElementsByClassName("subject"); //198
+    var about = document.getElementsByClassName("about");//242 
+    var type = document.getElementsByClassName("type");
+    // var err =document.getElementsByClassName("error-msg");
+
+  
+    
+    //first name
+    if(name[0].value == ""){
+            errMsg(name[0], "first name");
+        return false;
+    }else if(!textOnlyExp.test(name[0].value)){
+        errMsg(name[0], "only text");
+        return false;
+    }
+
+    //lastname
+
+    if(name[1].value == ""){
+      errMsg(name[1], "last name");
+        return false;
+    }else if(!textOnlyExp.test(name[1].value)){
+        errMsg(name[1], "only text");
+        return false;
+    }
+
+    //image
+// if(image[0].value == ""){
+//     errMsg(image[0], "image");
+//     return false;
+// }
+
+    //gender
+
+    if(gender[0].checked == false && gender[1].checked == false && gender[2].checked == false){
+        alert("please select any one");
+        return false;
+    }
+
+    //email
+    if(email[0].value == ""){
+        errMsg(email[0], "email id");
+        return false;
+    }else if(!emailExp.test(email[0].value)){
+        errMsg(email[0], "valid email id");
+        return false;
+    }
+
+    //phone
+    if(phone[0].value == ""){
+        errMsg(phone[0], "telephone number");
+        return false;
+    }else if(!telExp.test(phone[0].value)){
+        errMsg(phone[0], "valid phone number.");
+        return false;
+    }
+    
+    //city
+    if(city[0].value == "nooption"){
+       errMsg(city[0], "city");
+        return false;
+    }
+
+    //state
+    if(state[0].value == "nooption"){
+        errMsg(state[0], "state");
+        return false;
+    }
+
+
+    //study category
+    if(type[0].checked == false && type[1].checked == false){
+        alert("please select a category type");
+        return false;
+    }
+
+    
+    //teaching experience
+
+    if(teachingExp[0].value == ""){
+       errMsg(teachingExp[0], "teaching experience");
+        return false;
+    }
+    
+    // if(!numExp.test(teachingExp[0].value)){
+    //     alert("please enter valid number");
+    //     return false;
+    // }
+
+    //academic subject
+
+    if(subject[0].value == "nooption"){
+        errMsg(subject[0], "subject");
+        return false;
+    }
+
+    //about me
+
+    if(about[0].value == ""){
+        errMsg(about[0], "something about you");
+        return false;   
+    }
+
+else{
+    return true;
+}
+}
+
+//student form validation
+
+function studentValidation(){
     var name = document.getElementsByClassName("name"); //13
     var dob = document.getElementsByClassName("dob"); // 66
     var image = document.getElementsByClassName("image");
