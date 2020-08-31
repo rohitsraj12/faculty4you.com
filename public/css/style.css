@@ -69,12 +69,15 @@ strong {
   text-align: center; }
 
 .container-header, .article-profile__header, .post-header {
-  background-color: #cc0808;
-  background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%);
+  background-color: #970000;
+  background-image: linear-gradient(0deg, #970000 0%, #cc0808 50%, #970000 100%);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   border: 1px solid #5b6467;
-  border-image: linear-gradient(30deg, #5b6467 0%, #8b939a 50%, #5b6467 100%); }
+  border-image: linear-gradient(30deg, #5b6467 0%, #8b939a 50%, #5b6467 100%);
+  -webkit-text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  -moz-text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6); }
 
 .txt-primary {
   color: #aa0000; }
@@ -1026,7 +1029,8 @@ label {
 
 .body-banner {
   width: 100%;
-  position: relative; }
+  position: relative;
+  background-color: #e9ecef; }
   @media only screen and (orientation: portrait) {
     .body-banner {
       height: 100vh; } }
@@ -1431,10 +1435,11 @@ input,
   background: linear-gradient(#aa0000, #660000); }
   @media (min-width: 581px) {
     .header__nav ul {
-      padding: 0.2rem 0;
+      padding: 0.2rem 0 0.1rem;
       display: flex;
       flex-direction: row;
-      align-items: center; } }
+      align-items: center;
+      margin: 0; } }
   @media (max-width: 582px) {
     .header__nav ul {
       display: none;
@@ -1459,13 +1464,26 @@ input,
     color: #646464; }
 
 .nav__link {
-  background-color: #cc0808;
-  background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%);
+  background-color: #970000;
+  background-image: linear-gradient(0deg, #970000 0%, #cc0808 50%, #970000 100%);
   display: inline-block;
-  padding: 1rem 2rem; }
+  padding: 0.8rem 2rem;
+  -webkit-text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 500ms ease-in;
+  -moz-transition: all 500ms ease-in;
+  -ms-transition: all 500ms ease-in;
+  -o-transition: all 500ms ease-in;
+  transition: all 500ms ease-in; }
   .nav__link:hover {
-    background-color: #970000;
-    background-image: linear-gradient(0deg, #970000 0%, #cc0808 50%, #970000 100%); }
+    background-color: #cc0808;
+    background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%);
+    -webkit-transition: all 500ms ease-in;
+    -moz-transition: all 500ms ease-in;
+    -ms-transition: all 500ms ease-in;
+    -o-transition: all 500ms ease-in;
+    transition: all 500ms ease-in; }
   @media (max-width: 582px) {
     .nav__link {
       display: block;
@@ -1481,8 +1499,8 @@ input,
     margin-left: 0.1rem; } }
 
 .nav-active {
-  background-color: #970000;
-  background-image: linear-gradient(0deg, #970000 0%, #cc0808 50%, #970000 100%); }
+  background-color: #cc0808;
+  background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%); }
 
 .hamberger {
   animation-duration: 1.8s;
