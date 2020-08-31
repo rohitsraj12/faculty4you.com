@@ -25,7 +25,7 @@
         <img src="<?php base_url();?>img/banner/<?php echo $banner_image;?>" class="banner__image" alt="<?php echo $page_title;?>">
     </div> -->
     <!-- end banner imager -->
-</div> -->
+</div>
 <!-- end banner wrap -->
 
 <div class="banner-content-body wrap-container">
