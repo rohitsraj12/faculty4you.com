@@ -133,6 +133,9 @@
   @media only screen and (orientation: landscape) {
     height: 450px;
   }
+  @media (max-width: 583px){
+    height: 40vh;
+  }
 
   &::after {
     @media (min-width: 583px) {
@@ -250,6 +253,9 @@
 
     @media only screen and (orientation: landscape) {
       height: 450px;
+    }
+    @media (max-width: 583px){
+      height: 40vh;
     }
 
     .banner {
