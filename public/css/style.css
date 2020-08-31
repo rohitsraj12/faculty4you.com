@@ -133,10 +133,12 @@ p {
 
 .nav__link {
   font-family: "Lato", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   font-weight: 500;
-  color: #aa0000;
+  color: #ffffff;
   text-transform: capitalize; }
+  .nav__link:hover {
+    color: #ffffff; }
 
 .banner-content__header h5 {
   line-height: 3.5rem;
@@ -757,9 +759,12 @@ label {
       .section-teacher .section-body img {
         height: 20rem;
         padding: 2rem 0; } }
-  .section-teacher .article-block {
-    width: 25%; }
-    @media (max-width: 582px) {
+  @media (min-width: 583px) {
+    .section-teacher .article-block {
+      width: 25%; } }
+  @media (max-width: 582px) {
+    .section-teacher .article-block {
+      width: 100%; }
       .section-teacher .article-block:not(last-child) {
         padding: 4rem 0;
         margin-bottom: 2rem;
@@ -1116,6 +1121,9 @@ label {
   @media only screen and (orientation: landscape) {
     .body-banner-search {
       height: 450px; } }
+  @media (max-width: 583px) {
+    .body-banner-search {
+      height: 40vh; } }
   @media (min-width: 583px) {
     .body-banner-search::after {
       content: "";
@@ -1200,6 +1208,9 @@ label {
   @media only screen and (orientation: landscape) {
     .body-banner-member {
       height: 450px; } }
+  @media (max-width: 583px) {
+    .body-banner-member {
+      height: 40vh; } }
   .body-banner-member .banner-image img {
     height: 28rem; }
 
@@ -1403,35 +1414,40 @@ input,
   padding-top: 1rem;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.8); }
-  @media (min-width: 582px) {
-    .body-header > .wrap-container {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center; } }
 
 .header-brand img {
   height: 7rem; }
 
-@media (min-width: 581px) {
-  .header__nav ul {
+.header-brand-section {
+  padding: 1rem 0; }
+  .header-brand-section > .wrap-container {
     display: flex;
     flex-direction: row;
-    align-items: center; } }
+    justify-content: space-between; }
+  .header-brand-section ul li {
+    font-size: 1.5rem; }
 
-@media (max-width: 582px) {
-  .header__nav ul {
-    display: none;
-    width: 100%;
-    height: 100vh;
-    padding-top: 10rem;
-    background-color: #aa0000;
-    clip-path: circle(75.3% at 65% 24%);
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 101; } }
+.header__nav {
+  background: linear-gradient(#aa0000, #660000); }
+  @media (min-width: 581px) {
+    .header__nav ul {
+      padding: 0.2rem 0;
+      display: flex;
+      flex-direction: row;
+      align-items: center; } }
+  @media (max-width: 582px) {
+    .header__nav ul {
+      display: none;
+      width: 100%;
+      height: 100vh;
+      padding-top: 10rem;
+      background-color: #aa0000;
+      clip-path: circle(75.3% at 65% 24%);
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 101; } }
 
 .header__profile {
   font-size: 1.4rem;
@@ -1442,17 +1458,31 @@ input,
     padding-right: 0.5rem;
     color: #646464; }
 
-@media (max-width: 582px) {
-  .nav__link {
-    color: #ffffff; } }
+.nav__link {
+  background-color: #cc0808;
+  background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%);
+  display: inline-block;
+  padding: 1rem 2rem; }
+  .nav__link:hover {
+    background-color: #970000;
+    background-image: linear-gradient(0deg, #970000 0%, #cc0808 50%, #970000 100%); }
+  @media (max-width: 582px) {
+    .nav__link {
+      display: block;
+      width: 95%;
+      margin: 0 auto; } }
 
 @media (max-width: 582px) {
   .nav__list {
-    padding: 1rem 0; } }
+    padding: 0.5rem 0; } }
 
 @media (min-width: 583px) {
   .nav__list + li {
-    margin-left: 3rem; } }
+    margin-left: 0.1rem; } }
+
+.nav-active {
+  background-color: #970000;
+  background-image: linear-gradient(0deg, #970000 0%, #cc0808 50%, #970000 100%); }
 
 .hamberger {
   animation-duration: 1.8s;
@@ -1513,10 +1543,6 @@ input,
   justify-content: flex-end; }
   .top-header ul li {
     margin-right: 1rem; }
-
-.nav-section {
-  background-color: #cc0808;
-  background-image: linear-gradient(0deg, #cc0808 0%, #970000 50%, #ca0909 100%); }
 
 .body-footer {
   padding-top: 15rem;
