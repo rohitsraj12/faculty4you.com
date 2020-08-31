@@ -8,10 +8,10 @@
 
   & > .wrap-container {
     @media (min-width: 582px) {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
+      // display: flex;
+      // flex-direction: row;
+      // justify-content: space-between;
+      // align-items: center;
     }
   }
 }
@@ -21,10 +21,27 @@
     img {
       height: 7rem;
     }
+    &-section{
+      padding: 1rem 0;
+
+      & > .wrap-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      ul{
+        li{
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
   &__nav {
+    background: $color-primary-button;
+
     ul {
       @media (min-width: 581px) {
+        padding: 0.2rem 0;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -62,24 +79,37 @@
 
 .nav {
   &__link {
-    @media (max-width: 582px) {
-      color: $color-white;
-    }
+  @include post-head;
+   display: inline-block;
+   padding: 1rem 2rem;
+   &:hover{
+     @include post-head-hover;
+   }
+   @media (max-width: 582px){
+     display: block;
+     width: 95%;
+     margin: 0 auto;
+   }
   }
 
   &__list {
     @media (max-width: 582px) {
-      padding: 1rem 0;
+      padding: 0.5rem 0;
     }
+    
 
     & + li {
       @media (min-width: 583px) {
-        margin-left: 3rem;
+        margin-left: 0.1rem;
       }
     }
   }
 }
 
+.nav-active{
+  @include post-head-hover;
+
+}
 .hamberger {
   animation-duration: 1.8s;
   animation-name: moveInRight;
@@ -162,5 +192,5 @@
 }
 
 .nav-section {
-  @include post-head;
+  
 }
