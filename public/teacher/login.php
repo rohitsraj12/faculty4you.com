@@ -10,6 +10,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log in - teacher</title>
+    <link
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+        crossorigin="anonymous"
+        />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -55,10 +61,25 @@
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                         </div>
                         <!-- <span>or use your email for registration</span> -->
+                          <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
                         <input type="text" name="user_name" id="user_name" placeholder="user name" />
+                          <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
                         <input name="email" type="email" id="email" placeholder="email" />
+                          <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
                         <input type="tel" name="telephone" id="telephone" placeholder="phone number">
+                          <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
                         <input name="password" type="password" id="password" placeholder="password" />
+                          <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
                         <input name="re_password" type="password" id="re-password" placeholder="repeat password">
                         <button  name="submit-register" >Sign Up</button>
                     </form>
