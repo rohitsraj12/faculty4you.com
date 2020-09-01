@@ -1,5 +1,20 @@
 .section {
   &-profile {
+    figure {
+      padding-top: 3rem;
+      @include shadow-text(0, 0, 4px, 1);
+      text-align: center;
+      background-color: red;
+      height: 100px;
+      width: 100%;
+    }
+
+    img {
+      max-height: 150px;
+      min-width: 150px;
+      border-radius: 50%;
+      border: 5px solid #fff;
+    }
   }
 
   &-body {
@@ -37,12 +52,6 @@
           }
         }
       }
-    }
-
-    img {
-      max-height: 150px;
-      min-width: 150px;
-      border-radius: 50%;
     }
   }
 
