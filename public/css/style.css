@@ -899,12 +899,13 @@ label {
 
 .section-profile figure {
   padding-top: 3rem;
+  margin-bottom: 6rem;
   -webkit-text-shadow: 0 0 4px black;
   -moz-text-shadow: 0 0 4px black;
   text-shadow: 0 0 4px black;
   text-align: center;
-  background-color: red;
-  height: 100px;
+  background-color: #d29900;
+  height: 120px;
   width: 100%; }
 
 .section-profile img {
