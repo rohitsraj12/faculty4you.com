@@ -143,11 +143,10 @@
                                         </fieldset> 
                                         <fieldset class="form-group col-sm-12">
                                             <div class="row">
-                                                <div class="col-sm-3"> 
+                                                <div class="col-sm-6"> 
                                                     <label class="label col-form-label col-sm-3 pt-0">Category</label>
-                                                </div>
-                                                <div class="col-sm-5">
-                                                    <select id="state" name="study_category" class="form-control city">
+                                                
+                                                    <select id="state" name="study_category" class="form-control category">
                                                         <option value="nooption">Select category</option>
                                                         <?php 
                                                             $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
@@ -159,6 +158,22 @@
                                                         <?php }?>
                                                     </select>
                                                 </div>
+                                                <div class="form-group col-sm-6">
+                                                <label for="sub_id">Academic subjects</label>
+                                                <span class="error-msg"></span>
+                                                <select id="state" name="subject" class="form-control subject">
+                                                    <option selected value="nooption">Choose your subject</option>
+                                                    <?php 
+                                                        $city_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
+                                                        $city_result = mysqli_query($conn, $city_query);
+
+                                                        while($row = mysqli_fetch_assoc($city_result)){
+                                                    ?>
+                                                    <option value="<?php echo $row["subject_id"];?>"><?php echo $row["sub_name"];?></option>
+                                                    <?php }?>
+                                                </select>
+                                            </div>
+
                                             </div>
                                         </fieldset>
                                     </div>
