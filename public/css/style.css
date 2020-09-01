@@ -919,6 +919,11 @@ label {
   .section-body .article-info ul li:first-child {
     width: 10rem; } }
 
+.section-body img {
+  max-height: 150px;
+  min-width: 150px;
+  border-radius: 50%; }
+
 .section-short-info {
   background-color: #f7f7f7; }
   @media (min-width: 583px) {
