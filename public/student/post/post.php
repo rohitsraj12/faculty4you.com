@@ -21,12 +21,12 @@ session_start();
     <main class="wrap-container">
         <section class="section-profile-update">
             <header class="text-primary-h-3 text-center pb-5">
-            Trainee's Post
+            Student's Post
             </header>
             <form action="../include/post.inc.php" method="post" class="section-body">
                 <div class="form-group">
                     <label for="title">Title</label>
-                    <input name="post_title" class="form-control" type="text" id="title" placeholder="user name">
+                    <input name="post_title" class="form-control title" type="text" id="title" placeholder="user name">
                 </div>
                 
                 <div class="form-group">
@@ -46,13 +46,7 @@ session_start();
                                         Online one to one
                                     </label>
                                 </div>
-                                <div class="form-check col-sm-12">
-                                    <input class="form-check-input" name="study_type" type="radio" value="2" id="group">
-                                
-                                    <label class="form-check-label" for="group">
-                                        Online group
-                                    </label>
-                                </div>
+                               
                                 <div class="form-check col-sm-12">
                                     <input class="form-check-input" name="study_type" type="radio" value="3" id="home">
                                 
@@ -69,7 +63,7 @@ session_start();
                             <label class="label col-form-label col-sm-3 pt-0">Study category</label>
                             <div class="col-sm-6 row">
                                 <div class="form-check col-sm-12">
-                                    <input class="form-check-input" name="study_category" type="radio" value="1" id="academic">
+                                    <input class="form-check-input category" name="study_category" type="radio" value="1" id="academic">
                                 
                                     <label class="form-check-label" for="academic">
                                         Academic
@@ -77,7 +71,7 @@ session_start();
                                 </div>
 
                                 <div class="form-check col-sm-12">
-                                    <input class="form-check-input" name="study_category" type="radio" value="2" id="non-academic">
+                                    <input class="form-check-input category" name="study_category" type="radio" value="2" id="non-academic">
                                 
                                     <label class="form-check-label" for="non-academic">
                                         Non-academic
@@ -86,7 +80,27 @@ session_start();
                             
                             </div>
                         </div>
+                        <div class="form-group col-md-6">
+                            <label for="sub_id">Academic subjects</label>
+                            <span class="error-msg"></span>
+                            <select id="state" name="subject" class="form-control subject">
+                                <option selected value="nooption">Choose your subject</option>
+                                <?php 
+                                    $city_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
+                                    $city_result = mysqli_query($conn, $city_query);
+
+                                    while($row = mysqli_fetch_assoc($city_result)){
+                                ?>
+                                <option value="<?php echo $row["subject_id"];?>"><?php echo $row["sub_name"];?></option>
+                                <?php }?>
+                            </select>
+                        </div>
+
+                    
+                    
                     </fieldset>
+                    
+
                 </div>
                 <div class="form-row row">
                 <input type="submit" class="btn col-3 btn-primary text-center h4" name="submit-post" value="submit">
