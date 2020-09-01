@@ -30,12 +30,12 @@ session_start();
        
         <div class="form-group">
             <label for="title">Title</label>
-            <input name="title" class="form-control" type="text" id="title" value="<?php echo $row['post_title'];?>" placeholder="<?php echo $row['post_title'];?>">
+            <input name="title" class="form-control title" type="text" id="title" value="<?php echo $row['post_title'];?>" placeholder="<?php echo $row['post_title'];?>">
         </div>
         
         <div class="form-group">
             <label for="about">Post details</label>
-            <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control about" rows="10" id="about" placeholder="Briefly describe"></textarea>
+            <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control detail" rows="10" id="about" placeholder="Briefly describe"></textarea>
             
         </div>
         <div class="row">
@@ -69,7 +69,7 @@ session_start();
                 <div class="row">
                     <label class="label col-form-label col-sm-3 pt-0">Category</label>
                     <div class="col-sm-6 row">
-                    <select id="state" name="cat" class="form-control city">
+                    <select id="state" name="cat" class="form-control category">
                         <option value="nooption">Select category</option>
                         <?php 
                             $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";

@@ -36,7 +36,7 @@
     <main class="wrap-container profile">
         <section class="section-profile">
             <div class="section-header u-center-text"  >
-                <heeader class="text-primary-3"> 
+                <heeader class="text-primary-h-3"> 
                     My profile
                 </header>
                 
@@ -45,9 +45,19 @@
             <div class="section-body row">
                 <section class="col-md-4">
                     <article class="article-profil" >
-                        <figure class="w-75 m-auto text-center">
-                            <img class="img-thumbnail img-fluid img-rounded " src="<?php echo base_url() . $row['student_photo'];?>" alt="<?php echo $row['student_first_name'];?>">
-                        </figure>
+                        <figure class="text-center"> <?php 
+
+if($row['student_photo'] == ""){
+?>
+    <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+<?php
+} else {
+?>
+    <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
+<?php
+}
+?>
+</figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
                             <?php 
@@ -80,8 +90,8 @@
                 </section>
                 <section class="col-md-8">
                     
-                    <article class="article-profil py-5" >
-                        <header class="p-4 h3 bg-dark text-light  m-0">
+                    <article class="article-profil" >
+                        <header class="article-profile__header p-4 h3 bg-dark text-light  m-0">
                             Personal detail
                         </header>
                         <div class="article-body p-4 bg-light border">
@@ -132,7 +142,7 @@
                                      </div>
                     </article>
                     <article class="article-profil" >
-                        <header class="p-4 h3 bg-dark text-light  m-0">
+                        <header class="article-profile__header p-4 h3 bg-dark text-light  m-0">
                             Contact detail
                         </header>
                         <div class="article-body p-4 border">

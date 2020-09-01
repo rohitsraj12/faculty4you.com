@@ -173,7 +173,7 @@
                                         <label class="label col-form-label col-sm-3 pt-0">Category</label>
                                     </div>
                                     <div class="col-sm-5">
-                                        <select id="state" name="category" class="form-control city">
+                                        <select id="state" name="category" class="form-control category">
                                             <option value="nooption">Select category</option>
                                             <?php 
                                                 $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";

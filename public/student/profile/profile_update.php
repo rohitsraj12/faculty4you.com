@@ -43,40 +43,45 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return validation()">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return studentValidation()">
                         <article class="mb-5" >
-                            <header class="p-4 h3 bg-dark text-light m-0">
+                            <header class="article-profile__header p-4 h3 bg-dark text-light m-0">
                                 Primary information
                             </header>
                             <div class="py-4 px-5 text-dark bg-light border">
                         
-                                <div class="form-row pt-3">
+                                <div class="form-row mb-4 mt-4">
                                     <div class="form-group col-md-6">
                                     <label for="first_name">First name</label>
-                                    <input type="text" name="fname" class="form-control name" id="first_name" placeholder="<?php echo $row['student_first_name'];?>">
+                                    <span class="error-msg"></span>
+                                    <input type="text" name="fname" class="form-control name" id="first_name" placeholder="<?php //echo $row['student_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
-                                    <input type="text" name="lname" class="form-control name" id="last_name" placeholder="<?php echo $row['student_last_name'];?>">
+                                    <span class="error-msg"></span>
+                                    <input type="text" name="lname" class="form-control name" id="last_name" placeholder="<?php //echo $row['student_last_name'];?>">
                                     </div>
                                 </div>
 
-                                <div class="form-row pb-3">
+                                <div class="form-row mb-4">
                                     <div class="col-sm-6">
                                         <label for="dob">Date of birth</label>
+                                        <span class="error-msg"></span>
                                         <input type="date" name="date" class="form-control dob" id="dob"  value="<?php echo $row['student_date_of_birth'];?>" placeholder="<?php echo $row['student_date_of_birth'];?>">
                                     
                                     </div>    
                                 </div>
 
-                                <div class="form-group">
+                                <div class="form-group mb-4">
                                     <label for="photo">Upload image</label>
-                                    <input type="file" name="file" class="form-control-file image" id="photo"  value="<?php echo $row['student_photo'];?>" placeholder="<?php echo $row['student_photo'];?>">
+                                    <span class="error-msg"></span>
+                                    <input type="file" name="file" class="form-control-file image pt-0" id="photo"  value="<?php echo $row['student_photo'];?>" placeholder="<?php echo $row['student_photo'];?>">
                                 </div>
 
-                                <fieldset class="form-group">
+                                <fieldset class="form-group mb-4">
                                     <div class="row">
                                         <label class="label col-form-label col-sm-2 pt-0">Gender</label>
+                                        <span class="error-msg"></span>
                                         <div class="col-sm-8 row">
                                             
 
@@ -105,31 +110,34 @@
                             </div>
                         </article>
                         <article >
-                            <header class="p-4 h3 bg-dark text-light m-0">
+                            <header class="article-profile__header p-4 h3 bg-dark text-light m-0">
                                 Contact details
                             </header>
                             <div class="py-4 px-5 text-dark bg-light border mb-5">
                                 <!-- contact info -->
-                                <div class="form-row">
+                                <div class="form-row mb-4">
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
+                                    <span class="error-msg"></span>
                                     <input type="email" name="email" class="form-control email" id="email" value="<?php echo $row['student_email'];?>" placeholder="<?php echo $row['student_email'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">Telephone</label>
+                                    <span class="error-msg"></span>
                                     <input type="tel" name="phone" class="form-control phone" id="phone" value="<?php echo $row['student_phone'];?>" placeholder="<?php echo $row['student_phone'];?>">
                                     </div>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group mb-4">
                                     <label for="address">Address</label>
                                     <input type="text" name="address" class="form-control" value="<?php echo $row['student_address'];?>" id="address" placeholder="<?php echo $row['student_address'];?>">
                                 </div>
                                 
-                                <div class="form-row">
+                                <div class="form-row mb-4">
                                     
                                     
-                                    <div class="form-group col-md-6">
+                                    <div class="form-group mb-4 col-md-6">
                                         <label for="city">City</label>
+                                        <span class="error-msg"></span>
                                         <select id="state" name="city" class="form-control city">
                                             <option value="nooption">Select city</option>
                                             <?php 
@@ -142,8 +150,9 @@
                                             <?php }?>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-4">
+                                    <div class="form-group mb-4 col-md-4">
                                         <label for="state">State</label>
+                                        <span class="error-msg"></span>
                                         <select id="state" name="state" class="form-control state">
                                             <option value="nooption">Select state</option>
                                             <?php 
@@ -156,13 +165,14 @@
                                             <?php }?>
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-2">
+                                    <div class="form-group mb-4 col-md-2">
                                         <label for="pincode">Pincode</label>
+                                        <span class="error-msg"></span>
                                         <input type="text" name="pincode" class="form-control pincode" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
                                     </div>
                                 </div>
                             </div>
-                            <input type="submit" value="Submit" class="w-100 btn btn-primary text-center" style="font-size:1.7rem" name="update">
+                            <input type="submit" value="Submit" class="w-100 button-primary text-center" style="font-size:1.7rem" name="update">
                         </article>
                     </form>
                 </section>
