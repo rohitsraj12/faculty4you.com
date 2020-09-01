@@ -42,16 +42,16 @@
             <div class="section-body row">
                 <section class="col-md-4">
                     <article class="img-thumbnail bg-light article-profil">
-                        <figure class="text-center">
+                        <figure>
                         <?php 
 
                             if($row['teacher_photo'] == ""){
                         ?>
-                                <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                <img class="img-fluid" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
                         <?php
                             } else {
                         ?>
-                                <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                                <img class="img-fluid" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
                         <?php
                             }
                         ?>
