@@ -2,10 +2,11 @@
   &-profile {
     figure {
       padding-top: 3rem;
+      margin-bottom: 6rem;
       @include shadow-text(0, 0, 4px, 1);
       text-align: center;
-      background-color: red;
-      height: 100px;
+      background-color: #d29900;
+      height: 120px;
       width: 100%;
     }
 
