@@ -22,10 +22,20 @@ var type = document.getElementsByClassName("type");
 var title = document.getElementsByClassName("title");
 var postDetail = document.getElementsByClassName("detail");
 
+var errorIcon = '<i class="fa fa-info-circle" aria-hidden="true"></i>';
+
 // function for error message
 function errMsg(input, errorMsg){
     input.previousElementSibling.innerText= "Please fill " + errorMsg;
     input.style.borderColor = "#ff7575";
+}
+
+
+// function for login registration error message
+function errIcon(i){
+    i.previousElementSibling.style.display = "block";
+    // console.log(i);
+    i.style.borderColor = "#ff7575";
 }
 
 //trainer form validation
@@ -256,26 +266,30 @@ function registration(){
     var repass = document.getElementById("re-password");
 
     if(name.value == "" || email.value == "" || tel.value == "" || password == "" || repass.value == ""){
-        alert("please fill all fields");
+        errIcon(name);
+        errIcon(email);
+        errIcon(tel);
+        errIcon(password);
+        errIcon(repass);
         return false;
     }else if(!emailExp.test(email.value)){
-        alert("please enter valid mail id");
+        errIcon(email);
         return false;
     }else if(!telExp.test(tel.value)){
-        alert("please enter valid phone number");
+        errIcon(tel);
         return false;
     }
     //password
 
     if(password.value.length <= 6){
-        alert("password should be atleast 6 letters");
+        errIcon(password);
         return false;
 
     }else if(password.value.length >= 15){
-        alert("password should be less than 15 characters");
+        errIcon(password);
         return false;
     }else if(password.value !== repass.value){
-        alert("password is not matching");
+        errIcon(repass);
         return false;
     }else{
         return true;
