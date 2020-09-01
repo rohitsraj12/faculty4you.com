@@ -1,7 +1,7 @@
 .section {
   &-profile {
-    
   }
+
   &-body {
     @media (min-width: 583px) {
       display: flex;
@@ -15,7 +15,6 @@
         border-radius: 1rem;
         background-color: $color-gray-light-1;
         @include shadow;
-      
       }
 
       &__header {
@@ -39,7 +38,14 @@
         }
       }
     }
+
+    img {
+      max-height: 150px;
+      min-width: 150px;
+      border-radius: 50%;
+    }
   }
+
   &-short {
     &-info {
       background-color: $color-gray-light-1;
@@ -58,6 +64,7 @@
     }
   }
 }
-.article-profile__header{
+
+.article-profile__header {
   @extend .container-header;
 }
