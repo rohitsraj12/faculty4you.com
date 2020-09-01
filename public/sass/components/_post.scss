@@ -1,15 +1,14 @@
-.post{
-    &-sections{
-        margin-bottom: 3rem;
-        border-radius: 10px 10px 5px 5px;
-    }
-    &-header{
-        @extend .container-header;
-        padding: 1rem 2rem ;
+.post {
+  &-sections {
+    margin-bottom: 3rem;
+    border-radius: 10px 10px 5px 5px;
+  }
+  &-header {
+    @extend .container-header;
+    padding: 1rem 2rem;
 
-        h1 {
-            color: $color-white;
-        }
+    h1 {
+      color: $color-white;
     }
-
+  }
 }
