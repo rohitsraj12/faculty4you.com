@@ -39,24 +39,20 @@ session_start();
                     <fieldset class="form-group col-sm-4">
                         <div class="row">
                             <label class="label col-form-label col-sm-4 pt-0">Study type</label>
-                            <div class="col-sm-6 row">
-                                <div class="form-check col-sm-12">
-                                    <input class="form-check-input" name="study_type" type="radio" value="1" id="single">
-                                
-                                    <label class="form-check-label" for="single">
-                                        Online one to one
-                                    </label>
-                                </div>
-                               
-                                <div class="form-check col-sm-12">
-                                    <input class="form-check-input" name="study_type" type="radio" value="3" id="home">
-                                
-                                    <label class="form-check-label" for="home">
-                                        Home
-                                    </label>
-                                </div>
-                                
-                            </div>
+                            <span class="error-msg"></span>
+                <select name="study_type" id="study_type" class="form-control type">
+                    <option value="nooption">Select study type</option>
+                    <?php 
+                        $study_type = "SELECT * FROM study_types" ;
+                        $result = mysqli_query($conn, $study_type);
+                        
+                        while($row = mysqli_fetch_assoc($result)){
+                            ?>
+                            <option value="<?php echo $row['study_type_id']; ?>"><?php echo $row['study_type_name']; ?></option>
+                            <?php
+                        }
+                    ?>
+                </select>
                         </div>
                     </fieldset> 
                     <fieldset class="form-group col-sm-6">
