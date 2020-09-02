@@ -9,6 +9,7 @@
 
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
+    include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
     require("../include/banner.inc.php");
 
@@ -47,17 +48,17 @@
                     <article class="article-profil" >
                         <figure class="text-center"> <?php 
 
-if($row['student_photo'] == ""){
-?>
-    <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
-<?php
-} else {
-?>
-    <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
-<?php
-}
-?>
-</figure>
+                            if($row['student_photo'] == ""){
+                            ?>
+                                <img class="" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                            <?php
+                            } else {
+                            ?>
+                                <img class="" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
+                            <?php
+                            }
+                            ?>
+                        </figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
                             <?php 
