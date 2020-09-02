@@ -386,7 +386,7 @@ label {
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
-    border: none;
+    border: transparent;
     background-color: #eee; }
   .section-member .container, .section-forgotpwd .container {
     width: 768px;
