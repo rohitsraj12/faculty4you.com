@@ -7,6 +7,8 @@
     
     $page_title = "home page";
     require_once("../../private/config/db_connect.php");
+    include("../../private/required/public/components/social_media.php");
+
     include("../../private/config/config.php");
 
     include("include/header.php");
