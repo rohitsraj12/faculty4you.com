@@ -9,6 +9,7 @@
 
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
+    include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
     // include_once'../include/banner.inc.php';
 
