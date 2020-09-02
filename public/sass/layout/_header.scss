@@ -1,5 +1,4 @@
 .body-header {
-  padding-top: 1rem;
   width: 100%;
   // position: absolute;
   // top: 0;
@@ -18,11 +17,12 @@
 
 .header {
   &-brand {
+    padding: 1rem 0;
     img {
       height: 7rem;
     }
     &-section {
-      padding: 1rem 0;
+      padding: 0;
 
       & > .wrap-container {
         display: flex;
@@ -36,6 +36,62 @@
       }
     }
   }
+
+  &-profile {
+    width: 100px;
+    padding-top: 0.5rem;
+    text-align: right;
+  }
+
+  &-top {
+    background-color: #e7e7e7;
+    ul {
+      @media (min-width: 583px) {
+        padding: 0.4rem 0;
+        // width: 200px;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row;
+        // flex-wrap: wrap;
+      }
+    }
+
+    .social {
+      &__list {
+        margin-left: 1.5rem;
+        padding-top: 0.2rem;
+      }
+
+      &__link {
+        color: $color-primary;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &-right {
+    ul {
+      @media (min-width: 583px) {
+        // width: 200px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        // flex-wrap: wrap;
+      }
+    }
+
+    .social {
+      &__list {
+        margin-left: 1.5rem;
+      }
+
+      &__link {
+        color: $color-primary;
+        font-size: 2.2rem;
+      }
+    }
+  }
+
   &__nav {
     background: $color-primary-button;
 
