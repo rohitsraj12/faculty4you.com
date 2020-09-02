@@ -2,10 +2,28 @@
   &-sections {
     margin-bottom: 3rem;
     border-radius: 10px 10px 5px 5px;
-    border-right: 1px solid $color-gray-dark-1;
-    border-bottom: 1px solid $color-gray-dark-1;
-    border-left: 1px solid $color-gray-dark-1;
+    border-right: 1px solid #cacaca;
+    border-bottom: 1px solid #cacaca;
+    border-left: 1px solid #cacaca;
     @include bg-1;
+
+    .student-details {
+      border-top: 1px solid #cacaca;
+      padding: 2rem;
+      // @include bg-1;
+
+      img {
+        // width: 100px;
+        // height: 100px;
+        // border-radius: 50%;
+        // @include shadow;
+      }
+
+      i {
+        color: #666;
+        margin-right: 1rem;
+      }
+    }
   }
   &-header {
     @extend .container-header;
@@ -27,11 +45,20 @@
     // border-left: 1px solid $color-gray-light-2;
 
     ul {
-      // border-bottom: 1px solid $color-gray-light-2;
+      padding-bottom: 1rem;
+      border-bottom: 1px dotted $color-primary;
+      margin-bottom: 2rem;
+      color: #222;
+
+      i {
+        color: #888;
+      }
     }
   }
 
   &-footer {
+    padding: 1rem 1rem 2rem;
+
     // border-right: 1px solid $color-gray-light-2;
     // border-left: 1px solid $color-gray-light-2;
   }
