@@ -46,9 +46,16 @@
                                 </a>
                             </div>
                             <!-- end header brand -->
-                            <div class="header-brand-section-right">
+                            <div class="header-right">
                                 <ul>
-                                    <li>
+                                    <?php
+                                        foreach($social_media as $name => $url){
+                                            ?>
+                                            <li class="social__list"><a class="social__link" href="<?php echo $url ;?>" target="_blank"><?php echo $name;?></a></li>
+                                            <?php
+                                        }
+                                    ?>  
+                                    <li class="header-profile">
                                         <i class="fa fa-user" aria-hidden="true"></i>                        
                                         <?php 
                                         echo $student_name;
