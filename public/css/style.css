@@ -1456,9 +1456,9 @@ input,
 .post-sections {
   margin-bottom: 3rem;
   border-radius: 10px 10px 5px 5px;
-  border-right: 1px solid #646464;
-  border-bottom: 1px solid #646464;
-  border-left: 1px solid #646464;
+  border-right: 1px solid #cacaca;
+  border-bottom: 1px solid #cacaca;
+  border-left: 1px solid #cacaca;
   background: #fcfcfc;
   background: -moz-radial-gradient(center, ellipse cover, #fcfcfc 0%, #f6f6f6 47%, #cacaca 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #fcfcfc), color-stop(47%, #f6f6f6), color-stop(100%, #cacaca));
@@ -1467,6 +1467,12 @@ input,
   background: -ms-radial-gradient(center, ellipse cover, #fcfcfc 0%, #f6f6f6 47%, #cacaca 100%);
   background: radial-gradient(ellipse at center, #fcfcfc 0%, #f6f6f6 47%, #cacaca 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cacaca', GradientType=1 ); }
+  .post-sections .student-details {
+    border-top: 1px solid #cacaca;
+    padding: 2rem; }
+    .post-sections .student-details i {
+      color: #666;
+      margin-right: 1rem; }
 
 .post-header {
   padding: 1rem 2rem; }
@@ -1479,6 +1485,16 @@ input,
 
 .post-body {
   padding: 0 2rem; }
+  .post-body ul {
+    padding-bottom: 1rem;
+    border-bottom: 1px dotted #aa0000;
+    margin-bottom: 2rem;
+    color: #222; }
+    .post-body ul i {
+      color: #888; }
+
+.post-footer {
+  padding: 1rem 1rem 2rem; }
 
 .body-header {
   width: 100%;
