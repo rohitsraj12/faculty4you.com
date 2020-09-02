@@ -77,15 +77,15 @@
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
-                        <input type="text" name="user_name" id="user_name" placeholder="user name" />
-                          <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input name="email" type="email" id="email" placeholder="email" />
+                        <input type="text" name="user_name" id="user" placeholder="user name" />
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
                         <input type="tel" name="telephone" id="telephone" placeholder="phone number"> 
+                          <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
+                        <input name="email" type="email" id="email" placeholder="email" />
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
