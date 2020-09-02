@@ -53,7 +53,7 @@
                                 <?php
                                 foreach($social_media as $name => $url){
                                 ?>
-                                <li class="social__list"><a class="social__link" href="<?php echo $url ;?>" target="_blank"><?php echo $name;?></a></li>
+                                <li class="social__list"><a class="social__link" href="<?php echo $url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $name ;?>" alt="<?php echo $name ?>"></a></li>
                                 <?php
                                 }
                                 ?>
