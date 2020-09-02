@@ -43,6 +43,23 @@
                
                 <header>
                     <div class="header-brand-section">
+                        <div class="header-top">
+                        <ul class="wrap-container">
+                                <?php
+                                    foreach($social_media as $name => $url){
+                                ?>
+                                <li class="social__list"><a class="social__link" href="<?php echo $url ;?>" target="_blank"><?php echo $name;?></a></li>
+                                <?php
+                                }
+                                ?>  
+                                    <li class="header-profile">
+                                    <i class="fa fa-user" aria-hidden="true"></i>                        
+                                    <?php 
+                                        echo $teacher_name;
+                                    ?>
+                                    </li>
+                                </ul>
+                        </div>
                         <div class="wrap-container">
                             <div class="header-brand">
                                 <a href="<?php base_url();?>teacher/index.php">
@@ -50,15 +67,8 @@
                                 </a>
                             </div>
                             <!-- end header brand -->
-                            <div class="header-brand-section-right">
-                                <ul>
-                                    <li>
-                                    <i class="fa fa-user" aria-hidden="true"></i>                        
-                                    <?php 
-                                        echo $teacher_name;
-                                    ?>
-                                    </li>
-                                </ul>
+                            <div class="header-right">
+                                
                             </div>
                         </div>
                     </div>
