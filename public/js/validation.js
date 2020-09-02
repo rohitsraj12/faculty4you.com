@@ -308,14 +308,14 @@ function registration(){
 
 //login validation
 
-function login(){
-    var loginName = document.getElementById("user_name");
-    var loginPassword = document.getElementById("password");
+// function login(){
+//     var loginName = document.getElementById("user_name");
+//     var loginPassword = document.getElementById("password");
 
-    if(loginName.value == "" || loginPassword.value == ""){
-        alert("please enter your login user name and password");
-        return false;
-    }else{
-        return true;
-    }
-}
+//     if(loginName.value == "" || loginPassword.value == ""){
+//         alert("please enter your login user name and password");
+//         return false;
+//     }else{
+//         return true;
+//     }
+// }
