@@ -31,12 +31,6 @@ function errMsg(input, errorMsg){
 }
 
 
-// function for login registration error message
-function errIcon(i){
-    i.previousElementSibling.style.display = "block";
-    // console.log(i);
-    i.style.borderColor = "#ff7575";
-}
 
 //trainer form validation
 function trainerValidation(){
@@ -256,56 +250,72 @@ if(category[0].value == "nooption"){
     }
 }
 
+
+// function for login registration error message
+function errIcon(input){
+    // input.previousElementSibling.style.display = "block";
+    // console.log(i);
+    input.style.border = "1px solid #ff7575";
+}
 // registration validation
-
 function registration(){
-    var name = document.getElementById("user_name");
-    var email = document.getElementById("email");
+    var regName = document.getElementById("user");
+    var regEmail = document.getElementById("email");
     var tel = document.getElementById("telephone");
-    var password = document.getElementById("password");
+    var regPassword = document.getElementById("password");
     var repass = document.getElementById("re-password");
+    var input = document.getElementsByTagName("input");
 
-    if(name.value == "" || email.value == "" || tel.value == "" || password == "" || repass.value == ""){
-        errIcon(name);
-        errIcon(email);
-        errIcon(tel);
-        errIcon(password);
-        errIcon(repass);
-        return false;
-    }else if(!emailExp.test(email.value)){
-        errIcon(email);
-        return false;
-    }else if(!telExp.test(tel.value)){
-        errIcon(tel);
+    if(input[0].value == "" || input[1].value == "" || input[2].value == "" || input[3].value == "" || input[4].value == ""){
+        errIcon(input[0]);
+        errIcon(input[1]);
+        errIcon(input[2]);
+        errIcon(input[3]);
+        errIcon(input[4]);
         return false;
     }
+    
+    if(!telExp.test(input[1].value)){
+        errIcon(input[1]);
+        return false;
+    }
+    
+    if(!emailExp.test(input[2].value)){
+        errIcon(input[2]);
+        return false;
+    }
+    
+
     //password
 
-    if(password.value.length <= 6){
-        errIcon(password);
-        return false;
+    // if(regPassword.value.length <= 6){
+    //     errIcon(regPassword);
+    //     return false;
 
-    }else if(password.value.length >= 15){
-        errIcon(password);
-        return false;
-    }else if(password.value !== repass.value){
-        errIcon(repass);
-        return false;
-    }else{
-        return true;
+    // }else if(regPassword.value.length >= 15){
+    //     errIcon(regPassword);
+    //     return false;
+    // }else if(regPassword.value !== repass.value){
+    //     errIcon(repass);
+    //     return false;
+    // }else{
+    //     return true;
+    // }
+    else {
+       return true;
     }
 }
 
 //login validation
 
-// function login(){
-//     var name = document.getElementById("user_name");
-//     var password = document.getElementById("password");
+function login(){
+    var loginName = document.getElementById("user_name");
+    var loginPassword = document.getElementById("password");
 
-//     if(name.value == "" || password.value == ""){
-//         alert("please enter your login user name and password");
-//         return false;
-//     }else{
-//         return true;
-//     }
-// }
+    if(loginName.value == "" || loginPassword.value == ""){
+        alert("please enter your login user name and password");
+        return false;
+    }else{
+        return true;
+    }
+}
