@@ -42,7 +42,7 @@
             </div>
             <div class="section-body row">
                 <section class="col-md-4">
-                    <article class="img-thumbnail bg-light article-profil">
+                    <article class="bg-light article-profil">
                         <figure>
                         <?php 
 
