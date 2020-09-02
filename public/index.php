@@ -3,6 +3,7 @@
     require_once("../private/config/db_connect.php");
     require("../private/config/config.php");
 
+    include("../private/required/public/components/social_media.php");
     include("../private/required/public/header.public.php");
     include("../private/required/public/banner/banner.public.php");
 ?>
