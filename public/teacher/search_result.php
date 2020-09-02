@@ -14,6 +14,7 @@
     require_once("../../private/config/db_connect.php");
     include("../../private/config/config.php");
 
+    include("../../private/required/public/components/social_media.php");
     include("include/header.inc.php");
     
        // include_once'include/search-banner.inc.php';
