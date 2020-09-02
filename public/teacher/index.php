@@ -73,7 +73,7 @@
                                                     </h1>
                                                 </header>
                                                 <div class="post-body">
-                                                    <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
+                                                    <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal">
                                                         <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                         <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
                                                         <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
