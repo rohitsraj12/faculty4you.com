@@ -65,102 +65,102 @@
                                         while($row = mysqli_fetch_assoc($home_result)){
                                             $study_type = $row['study_type_name'];
                                         
-                                    ?>
-                                    <article class="student-post mt-5 post-sections">
-                                        <header class="post-header">
-                                            <h1 class="">
-                                                <?php echo $row["post_title"];?>
-                                            </h1>
-                                        </header>
-                                        <div class="post-body">
-                                            <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
-                                                <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
-                                                <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
-                                                <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
-                                                <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
-                                            </ul>
-                                            <p class="text-dark">
-                                                <?php echo $row["post_detail"];?>
-                                            </p>
-                                        </div>
-                                        <footer class=" post-footer">
+                                            ?>
+                                            <article class="student-post mt-5 post-sections">
+                                                <header class="post-header">
+                                                    <h1 class="">
+                                                        <?php echo $row["post_title"];?>
+                                                    </h1>
+                                                </header>
+                                                <div class="post-body">
+                                                    <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
+                                                        <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
+                                                    </ul>
+                                                    <p class="text-dark">
+                                                        <?php echo $row["post_detail"];?>
+                                                    </p>
+                                                </div>
+                                                <footer class=" post-footer">
+                                                    <?php 
+                                                        // echo $member;
+                                                        if($member == "active"){
+                                                    ?>
+                                                            <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
+                                                    <?php
+                                                        }else{
+                                                            // echo "become a member";
+                                                            ?>
+                                                            <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
+                                                            <!-- <small>you need to become a member to see the details</small> -->
+                                                            <?php
+                                                        }
+                                                    ?>
+                                                </footer>
+
+                                                <section class="student-details">
+
+                                                    <?php
+                                                        if($member == "active"){
+                                                    ?>
+                                                        <article>
+                                                            <header>
+
+                                                            </header>
+
+                                                            <div class="row">
+                                                                <div class="col-sm-3">
+                                                                    <figure>
+                                                                        <?php
+                                                                            if($row['student_photo'] == ""){
+                                                                        ?>
+                                                                                <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                                                        <?php
+                                                                            } else {
+                                                                        ?>
+                                                                                <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
+                                                                        <?php
+                                                                            }
+                                                                            ?>
+                                                                    </figure>
+                                                                </div>
+                                                                <div class="col-sm-9">
+                                                                    <ul class="student-info">
+                                                                        <li>
+                                                                            <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="tel:+91<?php echo $row['student_phone'];?>" target="_blank"><?php echo $row['student_phone'];?></a>                                                                   
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="mailto:<?php echo $row['student_email'];?>"><?php echo $row["student_email"];?></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                                                                            
+                                                            
+                                                        </article>
+                                                    <?php
+                                                        }else{
+                                                    ?>
+                                                        <article class="">
+                                                            <?php
+                                                                echo "you need to become a member to see the details";
+                                                            
+                                                            ?>
+                                                        </article>
+                                                    <?php    
+                                                        }
+                                                    ?>
+                                                </section>
+                                            </article>
+
                                             <?php 
-                                                // echo $member;
-                                                if($member == "active"){
-                                            ?>
-                                                    <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
-                                            <?php
-                                                }else{
-                                                    // echo "become a member";
-                                                    ?>
-                                                    <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
-                                                    <!-- <small>you need to become a member to see the details</small> -->
-                                                    <?php
-                                                }
-                                            ?>
-                                        </footer>
-
-                                        <section class="student-details">
-
-                                            <?php
-                                                if($member == "active"){
-                                            ?>
-                                                <article>
-                                                    <header>
-
-                                                    </header>
-
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            <figure>
-                                                                <?php
-                                                                     if($row['student_photo'] == ""){
-                                                                ?>
-                                                                        <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
-                                                                <?php
-                                                                    } else {
-                                                                ?>
-                                                                        <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
-                                                                <?php
-                                                                    }
-                                                                    ?>
-                                                            </figure>
-                                                        </div>
-                                                        <div class="col-sm-9">
-                                                            <ul class="student-info">
-                                                                <li>
-                                                                    <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
-                                                                </li>
-                                                                <li>
-                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="tel:+91<?php echo $row['student_phone'];?>" target="_blank"><?php echo $row['student_phone'];?></a>                                                                   
-                                                                </li>
-                                                                <li>
-                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="mailto:<?php echo $row['student_email'];?>"><?php echo $row["student_email"];?></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                                                                    
-                                                    
-                                                </article>
-                                            <?php
-                                                }else{
-                                            ?>
-                                                <article class="">
-                                                    <?php
-                                                        echo "you need to become a member to see the details";
-                                                    
-                                                    ?>
-                                                </article>
-                                            <?php    
-                                                }
-                                            ?>
-                                        </section>
-                                    </article>
-
-                                    <?php 
-                                    }
-                                    } else{
+                                        }
+                                        } else{
                                         ?>
                                         <div class="search-result-num" >
                                             <p>
@@ -199,98 +199,97 @@
                                             $study_type = $row['study_type_name'];
                                         
                                     ?>
-                                    <article class="student-post mt-5 px-5 py-3 border bg-light">
-                                        <header class="border-bottom article-profile__header">
-                                            <h1 class="h1 py-3 text-light font-weight-normal">
-                                                <?php echo $row["post_title"];?>
-                                            </h1>
-                                        </header>
-                                        <div class="body mb-4">
-                                            <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
-                                                <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
-                                                <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
-                                                <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
-                                                <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
-                                            </ul>
-                                        <p class="text-dark">
-                                            <?php echo $row["post_detail"];?>
-                                        </p>
-                                        </div>
-                                        <footer class="pb-3">
-                                            <?php 
-                                                // echo $member;
-                                                if($member == "active"){
-                                            ?>
-                                                    <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
-                                            <?php
-                                                }else{
-                                                    // echo "become a member";
+                                    <article class="student-post mt-5 post-sections">
+                                                <header class="post-header">
+                                                    <h1 class="">
+                                                        <?php echo $row["post_title"];?>
+                                                    </h1>
+                                                </header>
+                                                <div class="post-body">
+                                                    <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
+                                                        <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
+                                                    </ul>
+                                                    <p class="text-dark">
+                                                        <?php echo $row["post_detail"];?>
+                                                    </p>
+                                                </div>
+                                                <footer class=" post-footer">
+                                                    <?php 
+                                                        // echo $member;
+                                                        if($member == "active"){
                                                     ?>
-                                                    <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
-                                                    <!-- <small>you need to become a member to see the details</small> -->
+                                                            <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
                                                     <?php
-                                                }
-                                            ?>
-                                        </footer>
-
-                                        <section class="student-details py-3">
-
-                                            <?php
-                                                if($member == "active"){
-                                            ?>
-                                                <article>
-                                                    <header>
-
-                                                    </header>
-
-                                                    <div class="row">
-                                                        <div class="col-sm-3">
-                                                            <figure>
-                                                                <?php
-                                                                     if($row['student_photo'] == ""){
-                                                                ?>
-                                                                        <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
-                                                                <?php
-                                                                    } else {
-                                                                ?>
-                                                                        <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
-                                                                <?php
-                                                                    }
-                                                                    ?>
-                                                            </figure>
-                                                        </div>
-                                                        <div class="col-sm-9">
-                                                            <ul class="student-info">
-                                                                <li>
-                                                                    <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
-                                                                </li>
-                                                                <li>
-                                                                    <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="tel:+91<?php echo $row['student_phone'];?>" target="_blank"><?php echo $row['student_phone'];?></a>                                                                   
-                                                                </li>
-                                                                <li>
-                                                                    <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="mailto:<?php echo $row['student_email'];?>"><?php echo $row["student_email"];?></a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                                                                    
-                                                    
-                                                </article>
-                                            <?php
-                                                }else{
-                                            ?>
-                                                <article class="h4">
-                                                    <?php
-                                                        echo "you need to become a member to see the details";
-                                                    
+                                                        }else{
+                                                            // echo "become a member";
+                                                            ?>
+                                                            <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
+                                                            <!-- <small>you need to become a member to see the details</small> -->
+                                                            <?php
+                                                        }
                                                     ?>
-                                                </article>
-                                            <?php    
-                                                }
-                                            ?>
-                                        </section>
-                                    
-                                    </article>
+                                                </footer>
+
+                                                <section class="student-details">
+
+                                                    <?php
+                                                        if($member == "active"){
+                                                    ?>
+                                                        <article>
+                                                            <header>
+
+                                                            </header>
+
+                                                            <div class="row">
+                                                                <div class="col-sm-3">
+                                                                    <figure>
+                                                                        <?php
+                                                                            if($row['student_photo'] == ""){
+                                                                        ?>
+                                                                                <img class="img-fluid img-rounded" style="max-height: 200px" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                                                        <?php
+                                                                            } else {
+                                                                        ?>
+                                                                                <img class="img-fluid img-rounded" style="max-height: 300px" src="<?php echo base_url() . $row['student_photo'];?>" alt="">
+                                                                        <?php
+                                                                            }
+                                                                            ?>
+                                                                    </figure>
+                                                                </div>
+                                                                <div class="col-sm-9">
+                                                                    <ul class="student-info">
+                                                                        <li>
+                                                                            <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-phone pr-2" aria-hidden="true"></i><a href="tel:+91<?php echo $row['student_phone'];?>" target="_blank"><?php echo $row['student_phone'];?></a>                                                                   
+                                                                        </li>
+                                                                        <li>
+                                                                            <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="mailto:<?php echo $row['student_email'];?>"><?php echo $row["student_email"];?></a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                                                                            
+                                                            
+                                                        </article>
+                                                    <?php
+                                                        }else{
+                                                    ?>
+                                                        <article class="">
+                                                            <?php
+                                                                echo "you need to become a member to see the details";
+                                                            
+                                                            ?>
+                                                        </article>
+                                                    <?php    
+                                                        }
+                                                    ?>
+                                                </section>
+                                            </article>
 
                                     <?php 
                                     }
