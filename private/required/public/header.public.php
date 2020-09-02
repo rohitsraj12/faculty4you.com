@@ -47,6 +47,18 @@
                                 </a>
                             </div>
                             <!-- end header brand -->
+
+                            <div class="header-right">
+                                <ul>
+                                <?php
+                                foreach($social_media as $name => $url){
+                                ?>
+                                <li class="social__list"><a class="social__link" href="<?php echo $url ;?>" target="_blank"><?php echo $name;?></a></li>
+                                <?php
+                                }
+                                ?>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                    
