@@ -1,8 +1,9 @@
 .body-header {
+  @include bgheader;
   width: 100%;
   // position: absolute;
   // top: 0;
-  background-color: rgba($color-white, 0.8);
+  // background-color: rgba($color-white, 0.8);
   // z-index: 2;
 
   & > .wrap-container {
@@ -63,9 +64,13 @@
       }
 
       &__link {
-        color: $color-primary;
         font-size: 1.8rem;
+        img{
+          height: 2rem;
+          width: 2rem;
+        }
       }
+      
     }
   }
 
@@ -86,8 +91,11 @@
       }
 
       &__link {
-        color: $color-primary;
         font-size: 2.2rem;
+        img{
+          height: 2rem;
+          width: 2rem;
+        }
       }
     }
   }
