@@ -70,7 +70,7 @@
     ellipse cover,
     #fcfcfc 0%,
     #f6f6f6 47%,
-    #ededed 100%
+    #cacaca 100%
   );
   background: -webkit-gradient(
     radial,
@@ -80,36 +80,36 @@
     100%,
     color-stop(0%, #fcfcfc),
     color-stop(47%, #f6f6f6),
-    color-stop(100%, #ededed)
+    color-stop(100%, #cacaca)
   );
   background: -webkit-radial-gradient(
     center,
     ellipse cover,
     #fcfcfc 0%,
     #f6f6f6 47%,
-    #ededed 100%
+    #cacaca 100%
   );
   background: -o-radial-gradient(
     center,
     ellipse cover,
     #fcfcfc 0%,
     #f6f6f6 47%,
-    #ededed 100%
+    #cacaca 100%
   );
   background: -ms-radial-gradient(
     center,
     ellipse cover,
     #fcfcfc 0%,
     #f6f6f6 47%,
-    #ededed 100%
+    #cacaca 100%
   );
   background: radial-gradient(
     ellipse at center,
     #fcfcfc 0%,
     #f6f6f6 47%,
-    #ededed 100%
+    #cacaca 100%
   );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed', GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cacaca', GradientType=1 );
 }
 
 @mixin post-head-1 {
