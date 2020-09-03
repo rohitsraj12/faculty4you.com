@@ -23,7 +23,7 @@ if(isset($_POST['submit-post'])){
     $post_title = $_POST['post_title'];
     $post_detail = $_POST['post_detail'];
     $study_type = $_POST['study_type'];
-    $study_category = $_POST['study_category'];
+    $study_category = $_POST['category'];
     $subject = $_POST['subject'];
     $city = $row['city_id'];
     $state = $row['state_id'];
@@ -34,7 +34,7 @@ if(isset($_POST['submit-post'])){
     // if empty field condition
     
     // // echo $post_title;
-    $sql = "INSERT INTO `posts` (`student_id`, `post_title`, `post_detail`, `study_type_id`, `study_cat_id`, `subject_id`, `city_id`, `state_id`, `post_date`, `post_state`) 
+    $sql = "INSERT INTO `posts` (`student_id`, `post_title`, `post_detail`, `study_type_id`, `category_id`, `subject_id`, `city_id`, `state_id`, `post_date`, `post_state`) 
      VALUES ('$student_id', '$post_title', '$post_detail', '$study_type', '$study_category', '$subject', '$city', '$state', '$post_date', '$post_state')";
 
     $result = mysqli_query($conn, $sql);
