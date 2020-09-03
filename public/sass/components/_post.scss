@@ -70,6 +70,10 @@
     @extend .container-header-2;
   }
 
+  &-header-6{
+    @include post-head-6;
+    @extend .container-header-2;
+  }
   h1 {
     @extend .post-header-typo;
     @include shadow-text(0, 0, 4px, 0.6);
@@ -97,7 +101,7 @@
   }
 
   &-footer {
-    padding: 1rem 1rem 2rem;
+    padding: 1rem 2rem 2rem;
     // border-right: 1px solid $color-gray-light-2;
     // border-left: 1px solid $color-gray-light-2;
   }
