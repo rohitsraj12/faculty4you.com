@@ -12,9 +12,8 @@
 
     include("../../private/required/public/components/social_media.php");
     require("include/header.inc.php");
-     
-        require("include/banner.inc.php");
-
+    include("../../private/required/public/components/search.php");
+    
     $student_name = $_SESSION['user_name'];
 
         
