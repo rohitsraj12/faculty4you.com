@@ -10,7 +10,7 @@
         $query = "UPDATE posts SET post_title = '$title',
         post_detail = '$detail',
         study_type_id = $stype,
-        study_cat_id = $cat WHERE post_id = $id"; 
+        category_id = $cat WHERE post_id = $id"; 
         $result = mysqli_query($conn, $query);
 
         
