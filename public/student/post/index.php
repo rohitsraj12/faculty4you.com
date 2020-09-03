@@ -71,7 +71,7 @@
 
                             ?>
                                     <article class="post-sections" >
-                                        <header class="post-header">
+                                        <header class="post-header-3">
                                             <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
@@ -88,7 +88,7 @@
                                         </p>
                                         </div>
                                         <footer class="pb-3">
-                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="button-primary">Edit post</a>
+                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="text-primary">Edit post</a>
                                         </footer>
                                     </article>
                                         
@@ -131,10 +131,10 @@
                                             <select id="sub_id" name="subject" class="form-control subject">
                                                 <option selected value="nooption">Choose your subject</option>
                                                 <?php 
-                                                    $city_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
-                                                    $city_result = mysqli_query($conn, $city_query);
+                                                    $subject_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
+                                                    $subject_result = mysqli_query($conn, $city_query);
 
-                                                    while($row = mysqli_fetch_assoc($city_result)){
+                                                    while($row = mysqli_fetch_assoc($subject_result)){
                                                 ?>
                                                 <option value="<?php echo $row["subject_id"];?>"><?php echo $row["sub_name"];?></option>
                                                 <?php }?>
