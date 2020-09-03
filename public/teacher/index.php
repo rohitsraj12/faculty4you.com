@@ -21,8 +21,8 @@
     include_once("../../private/config/config.php");
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
+    include("../../private/required/public/components/search.php");
         
-        // include_once'include/banner.inc.php';
 
 ?>
             <div class="body-container">
@@ -39,12 +39,13 @@
                                     <li class="study-type  col-6 col-sm-12  pl-2" data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition - <?php echo $user_row['city_name'];?></button></li>
                                 </ul>
                             </div>
-                            <div class="col-sm-7">
+                            <div class="col-sm-9">
                                 <section class="wrap-study-type study-type-1">
                                     <?php 
                                         $member = $user_row['teacher_membership_status'];
+                                        $subject = $user_row['subject_id'];
 
-                                        $home_sql = "SELECT posts.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+                                        $home_sql = "SELECT posts.*, subjects.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
                                         FROM posts
                                             JOIN std
                                                 ON std.student_id = posts.student_id
@@ -55,8 +56,10 @@
                                             JOIN study_types
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
-                                                ON study_categories.category_id = posts.study_cat_id
-                                            WHERE posts.study_type_id = 1
+                                                ON study_categories.category_id = posts.category_id
+                                            JOIN subjects
+                                                ON subjects.subject_id = posts.subject_id
+                                            WHERE (posts.study_type_id = 1) AND (posts.subject_id = $subject)
                                             ORDER BY post_id DESC ";
                                         $home_result = mysqli_query($conn, $home_sql);
                                         $query_results = mysqli_num_rows($home_result);
@@ -78,6 +81,7 @@
                                                         <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
                                                         <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
                                                         <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-certificate mr-2" aria-hidden="true"></i><?php echo $row["sub_name"];?></li>
                                                     </ul>
                                                     <p class="text-dark">
                                                         <?php echo $row["post_detail"];?>
@@ -175,9 +179,8 @@
                                     <?php 
 
                                         $city = $user_row['city_id'];
-                                        $member = $user_row['teacher_membership_status'];
-
-                                        $home_sql = "SELECT posts.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+                                    
+                                        $home_sql = "SELECT posts.*, subjects.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
                                         FROM posts
                                             JOIN std
                                                 ON std.student_id = posts.student_id
@@ -188,8 +191,11 @@
                                             JOIN study_types
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
-                                                ON study_categories.category_id = posts.study_cat_id
-                                            WHERE (posts.city_id = $city) AND (study_types.study_type_id = 2)
+                                                ON study_categories.category_id = posts.category_id
+                                            JOIN subjects
+                                                ON subjects.subject_id = posts.subject_id
+                                            WHERE (posts.city_id = $city) AND (study_types.study_type_id = 2) AND (posts.subject_id = $subject)
+
                                             ORDER BY post_id DESC ";
                                         $home_result = mysqli_query($conn, $home_sql);
                                         $query_results = mysqli_num_rows($home_result);
@@ -211,6 +217,7 @@
                                                         <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
                                                         <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
                                                         <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
+                                                        <li class="mr-5"><i class="fa fa-certificate mr-2" aria-hidden="true"></i><?php echo $row["sub_name"];?></li>
                                                     </ul>
                                                     <p class="text-dark">
                                                         <?php echo $row["post_detail"];?>
