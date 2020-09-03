@@ -5,13 +5,13 @@
     border-right: 1px solid #cacaca;
     border-bottom: 1px solid #cacaca;
     border-left: 1px solid #cacaca;
-    @include bg-1;
+    @include shadow;
 
     .student-details {
       border-top: 1px solid #cacaca;
       padding: 2rem;
       // @include bg-1;
-
+      
       img {
         // width: 100px;
         // height: 100px;
@@ -29,13 +29,53 @@
     @extend .container-header;
     padding: 1rem 2rem;
 
-    h1 {
-      @extend .post-header-typo;
-      @include shadow-text(0, 0, 4px, 0.6);
+  h1 {
+    @extend .post-header-typo;
+    @include shadow-text(0, 0, 4px, 0.6);
 
-      &:first-letter {
-        text-transform: uppercase;
-      }
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+   
+  }
+
+  &-header-set{
+    
+  }
+
+  &-header-1 {
+    @include post-head-1;
+    @extend .container-header-2;
+  }
+  
+
+  &-header-2 {
+    @include post-head-2;
+    @extend .container-header-2;
+  }
+
+  &-header-3 {
+    @include post-head-3;
+    @extend .container-header-2;
+  }
+
+  &-header-4 {
+    @include post-head-4;
+    @extend .container-header-2;
+  }
+
+  &-header-5 {
+    @include post-head-5;
+    @extend .container-header-2;
+  }
+
+  h1 {
+    @extend .post-header-typo;
+    @include shadow-text(0, 0, 4px, 0.6);
+
+    &:first-letter {
+      text-transform: uppercase;
     }
   }
 
@@ -58,8 +98,10 @@
 
   &-footer {
     padding: 1rem 1rem 2rem;
-
     // border-right: 1px solid $color-gray-light-2;
     // border-left: 1px solid $color-gray-light-2;
   }
+}
+.container-bg{
+  @include bg-1;
 }

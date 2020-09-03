@@ -67,7 +67,7 @@
                                         
                                             ?>
                                             <article class="student-post mt-5 post-sections">
-                                                <header class="post-header">
+                                                <header class="post-header-5">
                                                     <h1 class="">
                                                         <?php echo $row["post_title"];?>
                                                     </h1>
@@ -200,7 +200,7 @@
                                         
                                     ?>
                                     <article class="student-post mt-5 post-sections">
-                                                <header class="post-header">
+                                                <header class="post-header-4">
                                                     <h1 class="">
                                                         <?php echo $row["post_title"];?>
                                                     </h1>

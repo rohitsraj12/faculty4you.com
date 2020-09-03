@@ -47,8 +47,10 @@ strong {
 }
 
 .body-container {
+  @include bg-1;
   @media (min-width: 583px) {
     padding: 10rem 0;
+
   }
   @media (max-width: 582px) {
     // padding: 5rem 0;
@@ -85,4 +87,27 @@ strong {
   border-top-right-radius: 10px;
   @include post-border;
   @include shadow-text(0, 0, 2px, 0.6);
+
+}
+
+.container-header-1{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  @include post-border;
+  @include shadow-text(0, 0, 2px, 0.6);
+}
+
+.container-header-2 {
+  padding: 1rem 2rem;
+    // @include post-head-2;
+    @extend .container-header-1;
+    
+  h1 {
+    @extend .post-header-typo;
+    @include shadow-text(0, 0, 4px, 0.6);
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
 }
