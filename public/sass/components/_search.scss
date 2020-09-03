@@ -1,0 +1,22 @@
+.search{
+    &-section{
+        padding: 2rem 0;
+        @include post-head-5;
+    }
+    &__form{
+        input{
+            width: 85%;
+            font-size: 1.5rem;
+            padding-left: 1rem ;
+            line-height: 4rem;
+        }
+    }
+    &__button {
+        @extend .button-primary;
+        // width: 10%;
+        i{
+            padding-right: 1.5rem;
+        }
+    }
+    
+}
