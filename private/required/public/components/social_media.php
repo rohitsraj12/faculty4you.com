@@ -1,7 +1,8 @@
 <?php
 $social_media = [
-    "<i class='fa fa-facebook-official' aria-hidden='true'></i>" => "www.facebook.com",
-    "<i class='fa fa-instagram' aria-hidden='true'></i>" => "www.instagram.com",
-    "<i class='fa fa-twitter-square' aria-hidden='true'></i>" => "www.twitter.com"
+    "facebook.svg" => "www.facebook.com",
+    "instagram.svg" => "www.instagram.com",
+    "twitter.svg" => "www.twitter.com"
 ];
 ?>
+

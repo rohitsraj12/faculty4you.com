@@ -34,6 +34,56 @@ session_start();
             <span class="error-msg"></span>
             <input name="title" class="form-control title" type="text" id="title" placeholder="<?php //echo $row['post_title'];?>">
         </div>
+
+        <div class="form-group row mb-5">
+            <div class="col-sm-4">
+                <label for="category" class="label col-form-label col-sm-3 pt-0">Category</label>
+                <span class="error-msg"></span>
+                <select id="category" name="cat" class="form-control category">
+                    <option value="nooption">Select category</option>
+                    <?php 
+                        $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
+                        $cat_result = mysqli_query($conn, $cat_query);
+
+                        while($row = mysqli_fetch_assoc($cat_result)){
+                    ?>
+                    <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
+                    <?php }?>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <label for="sub">Academic subjects</label>
+                <span class="error-msg"></span>
+                <select id="sub" name="subject" class="form-control subject">
+                    <option selected value="nooption">Choose your subject</option>
+                    <?php 
+                        $city_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
+                        $city_result = mysqli_query($conn, $city_query);
+
+                        while($row = mysqli_fetch_assoc($city_result)){
+                    ?>
+                    <option value="<?php echo $row["subject_id"];?>"><?php echo $row["sub_name"];?></option>
+                    <?php }?>
+                </select>
+            </div>
+            <div class="col-sm-4">
+                <label for="study_type">Study type</label>
+                <span class="error-msg"></span>
+                <select name="std" id="study_type" class="form-control type">
+                    <option value="nooption">Select study type</option>
+                    <?php 
+                        $study_type = "SELECT * FROM study_types" ;
+                        $result = mysqli_query($conn, $study_type);
+                        
+                        while($row = mysqli_fetch_assoc($result)){
+                            ?>
+                            <option value="<?php echo $row['study_type_id']; ?>"><?php echo $row['study_type_name']; ?></option>
+                            <?php
+                        }
+                    ?>
+                </select>
+            </div>
+        </div>
         
         <div class="form-group wrap-form mb-5">
             <label for="about">Post details</label>
@@ -41,54 +91,7 @@ session_start();
             <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control detail" rows="10" id="about" placeholder="Briefly describe"></textarea>
             
         </div>
-        <div class="row">
-            <fieldset class="form-group wrap-form mb-5 col-sm-4">
-                <!-- 
-                    #task fetch from database
-                 -->
-                <div class="row">
-                    <label class="label col-form-label col-sm-4 pt-0">Study type</label>
-                    <span class="error-msg"></span>
-                    <div class="col-sm-6 row">
-                        <div class="form-check col-sm-12">
-                            <input class="form-check-input type" name="std" type="radio" value="1" id="single">
-                        
-                            <label class="form-check-label" for="single">
-                                Online one to one
-                            </label>
-                        </div>
-                       
-                        <div class="form-check col-sm-12">
-                            <input class="form-check-input type" name="std" type="radio" value="3" id="home">
-                        
-                            <label class="form-check-label" for="home">
-                                Home tuition
-                            </label>
-                        </div>
-                        
-                    </div>
-                </div>
-            </fieldset> 
-            <fieldset class="form-group wrap-form mb-5 col-sm-6">
-                <div class="row">
-                    <label class="label col-form-label col-sm-3 pt-0">Category</label>
-                    <span class="error-msg"></span>
-                    <div class="col-sm-6 row">
-                    <select id="state" name="cat" class="form-control category">
-                        <option value="nooption">Select category</option>
-                        <?php 
-                            $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
-                            $cat_result = mysqli_query($conn, $cat_query);
-
-                            while($row = mysqli_fetch_assoc($cat_result)){
-                        ?>
-                        <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
-                        <?php }?>
-                    </select>
-                    </div>
-                </div>
-            </fieldset>
-        </div>
+       
         <div class="form-row">
             <div class="">
                 <input type="submit" class="button-primary" name="post_update" value="submit">

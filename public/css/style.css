@@ -1497,8 +1497,9 @@ input,
   padding: 1rem 1rem 2rem; }
 
 .body-header {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8); }
+  background-color: #bebebe;
+  background: linear-gradient(#dadada, #aeaeae);
+  width: 100%; }
 
 .header-brand {
   padding: 1rem 0; }
@@ -1530,8 +1531,10 @@ input,
     margin-left: 1.5rem;
     padding-top: 0.2rem; }
   .header-top .social__link {
-    color: #aa0000;
     font-size: 1.8rem; }
+    .header-top .social__link img {
+      height: 2rem;
+      width: 2rem; }
 
 @media (min-width: 583px) {
   .header-right ul {
@@ -1543,8 +1546,10 @@ input,
   margin-left: 1.5rem; }
 
 .header-right .social__link {
-  color: #aa0000;
   font-size: 2.2rem; }
+  .header-right .social__link img {
+    height: 2rem;
+    width: 2rem; }
 
 .header__nav {
   background: linear-gradient(#aa0000, #660000); }
@@ -1710,6 +1715,9 @@ input,
 .social-media ul li {
   margin-right: 2rem;
   display: inline; }
+  .social-media ul li img {
+    height: 2rem;
+    width: 2rem; }
 
 .body-banner {
   width: 100%;

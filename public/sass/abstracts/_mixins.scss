@@ -112,6 +112,11 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cacaca', GradientType=1 );
 }
 
+@mixin bgheader{
+  background-color: #bebebe;
+  background: linear-gradient(#dadada, #aeaeae);
+}
+
 @mixin post-head-1 {
   background-color: #5b6467;
   background-image: linear-gradient(
