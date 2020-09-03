@@ -61,7 +61,7 @@
                                             JOIN study_types
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
-                                                ON study_categories.category_id = posts.study_cat_id
+                                                ON study_categories.category_id = posts.category_id
                                             WHERE student_id = $student_id
                                             ORDER BY post_id DESC";
 
@@ -71,12 +71,12 @@
 
                             ?>
                                     <article class="post-sections" >
-                                        <header class="post-header-3">
+                                        <header class="post-header-6">
                                             <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
-                                        <div class="body mb-4">
+                                        <div class="post-body mb-4">
                                             <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                 <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                 <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
@@ -87,8 +87,8 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="pb-3">
-                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="text-primary">Edit post</a>
+                                        <footer class="post-footer pb-3">
+                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary">Edit post</a>
                                         </footer>
                                     </article>
                                         
@@ -106,14 +106,14 @@
                                     <div class="form-group wrap-form">
                                         <label for="title">Title</label>
                                         <span class="error-msg"></span>
-                                        <input name="post_title" class="form-control title" type="text" id="title" placeholder="user name">
+                                        <input name="post_title" class="form-control title" type="text" id="title" placeholder="title">
                                     </div>
 
                                     <div class="form-group row">
                                         <div class="col-sm-6 wrap-form"> 
                                             <label for="study_category" >Category</label>
                                             <span class="error-msg"></span>
-                                            <select id="study_category" name="study_category" class="form-control category">
+                                            <select id="study_category" name="category" class="form-control category">
                                                 <option value="nooption">Select category</option>
                                                 <?php 
                                                     $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
@@ -132,7 +132,7 @@
                                                 <option selected value="nooption">Choose your subject</option>
                                                 <?php 
                                                     $subject_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
-                                                    $subject_result = mysqli_query($conn, $city_query);
+                                                    $subject_result = mysqli_query($conn, $subject_query);
 
                                                     while($row = mysqli_fetch_assoc($subject_result)){
                                                 ?>
