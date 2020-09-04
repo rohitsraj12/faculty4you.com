@@ -1647,6 +1647,63 @@ input,
 .search__button i {
   padding-right: 1.5rem; }
 
+.section-membership {
+  padding: 4rem 0; }
+
+.member-block {
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid #e4e4e4;
+  text-align: center;
+  -webkit-border-radius: 10px 10px 5px 5px;
+  -moz-border-radius: 10px 10px 5px 5px;
+  border-radius: 10px 10px 5px 5px;
+  -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2); }
+
+.member__header {
+  background: #e18f13;
+  background: -moz-linear-gradient(top, #e18f13 0%, #d8bb14 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #e18f13), color-stop(100%, #d8bb14));
+  background: -webkit-linear-gradient(top, #e18f13 0%, #d8bb14 100%);
+  background: -o-linear-gradient(top, #e18f13 0%, #d8bb14 100%);
+  background: -ms-linear-gradient(top, #e18f13 0%, #d8bb14 100%);
+  background: linear-gradient(to bottom, #e18f13 0%, #d8bb14 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e18f13', endColorstr='#d8bb14', GradientType=0 );
+  padding: 5rem 0;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
+  border-radius: 10px 10px 0 0;
+  color: #ffffff;
+  -webkit-text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  -moz-text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+  .member__header h1 {
+    font-size: 1.3rem;
+    font-weight: 300; }
+  .member__header strong {
+    display: inline-block;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    padding: 2rem; }
+  .member__header span {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 300; }
+
+.member-body {
+  padding: 3rem 0;
+  border-bottom: 1px solid #e6e6e6; }
+  .member-body ul li {
+    line-height: 4rem;
+    font-family: "Lato", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500; }
+
+.member__footer {
+  padding: 1rem 0; }
+
 .body-header {
   background-color: #bebebe;
   background: linear-gradient(#dadada, #aeaeae);
