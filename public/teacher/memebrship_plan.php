@@ -55,6 +55,7 @@
                             <div class="member-body">
 
                                 <ul>
+                                <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>500</li>
                                     <li>5 students</li>
                                     <li>30 days validity</li>
                                 </ul>
@@ -73,7 +74,8 @@
                                 <span>Membership</span>
                                 </header>
                             <div class="member-body">
-                            <ul>
+                                <ul>
+                                    <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1000</li>
                                     <li>12 students</li>
                                     <li>60 days validity</li>
                                 </ul>
@@ -92,7 +94,8 @@
                                 <span>Membership</span>
                                 </header>
                             <div class="member-body">
-                            <ul>
+                                <ul>
+                                    <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1500</li>                                  
                                     <li>20 students</li>
                                     <li>90 days validity</li>
                                 </ul>
