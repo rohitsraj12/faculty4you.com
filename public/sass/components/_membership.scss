@@ -1,0 +1,63 @@
+.section {
+  &-membership {
+    padding: 4rem 0;
+  }
+}
+
+.member {
+  &-block {
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #e4e4e4;
+    text-align: center;
+    @include radius-direction(10px, 10px, 5px, 5px);
+    @include shadow;
+  }
+
+  &__header {
+    @include post-head-6;
+    padding: 5rem 0;
+    @include radius-direction(10px, 10px, 0, 0);
+    color: $color-white;
+
+    @include shadow-text(0, 0, 6px, 0.5);
+
+    h1 {
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+
+    strong {
+      display: inline-block;
+      font-size: 4rem;
+      line-height: 4.5rem;
+      padding: 2rem;
+    }
+
+    span {
+      display: block;
+      font-size: 1.3rem;
+      font-weight: 300;
+    }
+  }
+
+  &-body {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e6e6e6;
+
+    ul {
+      li {
+        line-height: 4rem;
+        font: {
+          family: $font-primary;
+          size: 1.8rem;
+          weight: 500;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    padding: 1rem 0;
+  }
+}
