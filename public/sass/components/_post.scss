@@ -24,7 +24,28 @@
         margin-right: 1rem;
       }
     }
+    &-1{
+    
+    }
+    &-2{
+
+    }
+    &-3{
+
+    }
+    &-4{
+      @include post-body-4;
+    }
+    &-5{
+      @include post-body-5;
+    }
+    &-6{
+      @include post-body-6;
+    }
+
+  
   }
+  
   &-header {
     @extend .container-header;
     padding: 1rem 2rem;
