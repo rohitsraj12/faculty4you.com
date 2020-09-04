@@ -23,7 +23,7 @@
     @include shadow-text(0, 0, 6px, 0.5);
 
     h1 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 300;
     }
 
@@ -31,12 +31,12 @@
       display: inline-block;
       font-size: 4rem;
       line-height: 4.5rem;
-      padding: 2rem;
+      padding: 1.6rem;
     }
 
     span {
       display: block;
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: 300;
     }
   }
@@ -44,7 +44,12 @@
   &-body {
     padding: 3rem 0;
     border-bottom: 1px solid #e6e6e6;
-
+    &__list{
+      color: $color-primary;
+      i{
+        padding-right: 0.5rem;
+      }
+    }
     ul {
       li {
         line-height: 4rem;
