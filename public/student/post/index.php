@@ -70,7 +70,7 @@
                                 while($row = mysqli_fetch_assoc($result)){
 
                             ?>
-                                    <article class="post-sections" >
+                                    <article class="post-sections post-sections-6" >
                                         <header class="post-header-6">
                                             <h1 class="">
                                                 <?php echo $row["post_title"];?>
