@@ -1506,6 +1506,33 @@ input,
     .post-sections .student-details i {
       color: #666;
       margin-right: 1rem; }
+  .post-sections-4 {
+    background: #c0ecfa;
+    background: -moz-linear-gradient(top, #c0ecfa 0%, #ebfaff 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #c0ecfa), color-stop(100%, #ebfaff));
+    background: -webkit-linear-gradient(top, #c0ecfa 0%, #ebfaff 100%);
+    background: -o-linear-gradient(top, #c0ecfa 0%, #ebfaff 100%);
+    background: -ms-linear-gradient(top, #c0ecfa 0%, #ebfaff 100%);
+    background: linear-gradient(to bottom, #c0ecfa 0%, #ebfaff 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c0ecfa', endColorstr='#ebfaff', GradientType=0 ); }
+  .post-sections-5 {
+    background: #a8a8a8;
+    background: -moz-linear-gradient(top, #eaccf0 0%, #f2e8f5 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #eaccf0), color-stop(100%, #f2e8f5));
+    background: -webkit-linear-gradient(top, #eaccf0 0%, #f2e8f5 100%);
+    background: -o-linear-gradient(top, #eaccf0 0%, #f2e8f5 100%);
+    background: -ms-linear-gradient(top, #eaccf0 0%, #f2e8f5 100%);
+    background: linear-gradient(to bottom, #eaccf0 0%, #f2e8f5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a8a8a8', endColorstr='#dbdbdb', GradientType=0 ); }
+  .post-sections-6 {
+    background: #ffe6a8;
+    background: -moz-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffe6a8), color-stop(100%, #fdf6e7));
+    background: -webkit-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+    background: -o-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+    background: -ms-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+    background: linear-gradient(to bottom, #ffe6a8 0%, #fdf6e7 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe6a8', endColorstr='#fdf6e7', GradientType=0 ); }
 
 .post-header {
   padding: 1rem 2rem; }
@@ -1677,7 +1704,9 @@ input,
     width: 2rem; }
 
 .header__nav {
-  background: linear-gradient(#aa0000, #660000); }
+  background: linear-gradient(#aa0000, #660000);
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222; }
   @media (min-width: 581px) {
     .header__nav ul {
       padding: 0.2rem 0 0.1rem;
