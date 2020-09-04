@@ -69,8 +69,8 @@
                                             $study_type = $row['study_type_name'];
                                         
                                             ?>
-                                            <article class="student-post mt-5 post-sections post-sections-5">
-                                                <header class="post-header-5">
+                                            <article class="student-post mt-5 post-sections">
+                                                <header class="post-header">
                                                     <h1 class="">
                                                         <?php echo $row["post_title"];?>
                                                     </h1>
@@ -205,8 +205,8 @@
                                             $study_type = $row['study_type_name'];
                                         
                                     ?>
-                                    <article class="student-post mt-5 post-sections post-sections-4">
-                                                <header class="post-header-4">
+                                    <article class="student-post mt-5 post-sections post-sections-3">
+                                                <header class="post-header-3">
                                                     <h1 class="">
                                                         <?php echo $row["post_title"];?>
                                                     </h1>
