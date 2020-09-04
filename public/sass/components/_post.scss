@@ -1,4 +1,4 @@
-.post {
+ .post {
   &-sections {
     margin-bottom: 3rem;
     border-radius: 10px 10px 5px 5px;
@@ -6,6 +6,7 @@
     border-bottom: 1px solid #cacaca;
     border-left: 1px solid #cacaca;
     @include shadow;
+    @include post-body-4;
 
     .student-details {
       border-top: 1px solid #cacaca;
@@ -31,7 +32,7 @@
 
     }
     &-3{
-
+      
     }
     &-4{
       @include post-body-4;
@@ -47,6 +48,7 @@
   }
   
   &-header {
+    @include post-head-4;
     @extend .container-header;
     padding: 1rem 2rem;
 
