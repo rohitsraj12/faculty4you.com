@@ -151,10 +151,7 @@
                                                         }else{
                                                     ?>
                                                         <article class="">
-                                                            <?php
-                                                                echo "you need to become a member to see the details";
-                                                            
-                                                            ?>
+                                                        <p>You need to become a member to see the details of students. To become a member please <a href="<?php echo base_url();?>teacher/membership_plan.php">Click here</a></p>
                                                         </article>
                                                     <?php    
                                                         }
@@ -205,8 +202,8 @@
                                             $study_type = $row['study_type_name'];
                                         
                                     ?>
-                                    <article class="student-post mt-5 post-sections post-sections-3">
-                                                <header class="post-header-3">
+                                    <article class="student-post mt-5 post-sections">
+                                                <header class="post-header">
                                                     <h1 class="">
                                                         <?php echo $row["post_title"];?>
                                                     </h1>
@@ -241,7 +238,6 @@
                                                 </footer>
 
                                                 <section class="student-details">
-
                                                     <?php
                                                         if($member == "active"){
                                                     ?>
@@ -287,10 +283,7 @@
                                                         }else{
                                                     ?>
                                                         <article class="">
-                                                            <?php
-                                                                echo "you need to become a member to see the details";
-                                                            
-                                                            ?>
+                                                           <p>You need to become a member to see the details of students. To become a member please <a href="<?php echo base_url();?>teacher/membership_plan.php">Click here</a></p>
                                                         </article>
                                                     <?php    
                                                         }
