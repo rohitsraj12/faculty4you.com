@@ -48,7 +48,7 @@
   }
   
   &-header {
-    @include post-head-4;
+    @include post-head-3;
     @extend .container-header;
     padding: 1rem 2rem;
 
@@ -94,7 +94,7 @@
   }
 
   &-header-6{
-    @include post-head-6;
+   
     @extend .container-header-2;
   }
   h1 {
