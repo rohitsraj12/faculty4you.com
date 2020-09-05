@@ -30,7 +30,6 @@
 
     .article {
       &-profil {
-        @include post-body-4;
         margin-bottom: 1.5rem;
         padding-bottom: 2rem;
         @include radius-all(1rem);
@@ -82,6 +81,6 @@
 }
 
 .article-profile__header {
-  @include post-head-4;
+  @include post-head-3;
   @extend .container-header;
 }
