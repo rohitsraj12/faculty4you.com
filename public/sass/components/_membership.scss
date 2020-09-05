@@ -13,13 +13,11 @@
     @include radius-direction(10px, 10px, 5px, 5px);
     @include shadow;
   }
-
   &__header {
-    @include post-head-6;
+    @include insetShadow;
     padding: 5rem 0;
     @include radius-direction(10px, 10px, 0, 0);
     color: $color-white;
-
     @include shadow-text(0, 0, 6px, 0.5);
 
     h1 {
@@ -40,9 +38,25 @@
       font-weight: 300;
     }
   }
+  
+  &-silver{
+    .member__header{
+      @include silver;      
+    }
+  }
+  &-gold{
+    .member__header{
+      @include gold;
+    }
+  }
+  &-platinum{
+    @include platinum;
+  }
+
 
   &-body {
     padding: 3rem 0;
+    background-color: $color-white;
     border-bottom: 1px solid #e6e6e6;
     &__list{
       color: $color-primary;
