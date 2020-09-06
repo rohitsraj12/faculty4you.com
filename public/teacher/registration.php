@@ -22,6 +22,9 @@
 <body>
 
     <div class="body-wrap">
+       
+        <div class="body-container">
+
         <div class="member-body-header">
                 <div id="hamberger" class="hamberger">
                     <span class="hamberger__line"></span>
@@ -44,9 +47,6 @@
                     <!-- end header nav -->
             </header>
         </div>
-        <div class="body-container">
-
-
         <div class="section-member wrap-container">
 
             <div class="container" id="container">
@@ -101,13 +101,13 @@
                     <div class="overlay">
                         <div class="overlay-panel overlay-right">
                         <h1>Hello trainer!</h1>
-                            <p class="text-light">If you are already a member..</p>
+                            <p class="">If you are already a member..</p>
                             <button class="ghost" id="signIn">Login</button>
                             
                         </div>
                         <div class="overlay-panel overlay-left">
                         <h1>Hello, Trainers!</h1>
-                            <p class="text-light">If you are new to <strong>Faculty for you</strong>.</p>
+                            <p class="">If you are new to <strong>Faculty for you</strong>.</p>
                             <button class="ghost" id="signUp">Sign Up</button>
                         
                         </div>
