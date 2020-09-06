@@ -17,7 +17,7 @@
     @include insetShadow;
     padding: 5rem 0;
     @include radius-direction(10px, 10px, 0, 0);
-    color: $color-white;
+    color: $color-black;
     @include shadow-text(0, 0, 6px, 0.5);
 
     h1 {
