@@ -9,6 +9,7 @@
     require_once("../private/config/db_connect.php");
     include("../private/config/config.php");
 
+    include("../private/required/public/components/social_media.php");
     include("../private/required/public/header.public.php");
     // include("../private/required/public/banner/banner.public.php");
 ?>
@@ -18,7 +19,7 @@
     <main>
         <section class="section-search-result wrap-container">
                     <div class="section-header u-center-text">
-                        <heeader class="text-primary-h"> 
+                        <heeader class="text-primary-h-3"> 
                             Search result
                         </header>
                     </div>
@@ -148,7 +149,7 @@
                                     JOIN study_types
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
-                                        ON study_categories.category_id = posts.study_cat_id
+                                        ON study_categories.category_id = posts.category_id
                                     WHERE (posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') AND (posts.post_title LIKE '%$search%') AND (std.city_id LIKE '%$city%')
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
@@ -210,7 +211,7 @@
                                     JOIN study_types
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
-                                        ON study_categories.category_id = posts.study_cat_id
+                                        ON study_categories.category_id = posts.category_id
                                     WHERE posts.study_type_id = 1 AND (posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') AND (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%')
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
@@ -272,7 +273,7 @@
                                     JOIN study_types
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
-                                        ON study_categories.category_id = posts.study_cat_id
+                                        ON study_categories.category_id = posts.category_id
                                     WHERE (posts.study_type_id = 2) AND (posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') AND (posts.post_title LIKE '%$search%') AND (std.city_id LIKE '%$city%')
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
