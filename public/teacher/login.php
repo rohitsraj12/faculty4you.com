@@ -24,31 +24,31 @@
 <body>
 
     <div class="body-wrap">
-        <div class="member-body-header">
-        <div id="hamberger" class="hamberger">
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-                </div>
-                <!-- end hamberger -->
-            <header class="wrap-container">
-                <div class="brand">
-                    <a href="<?php base_url();?>index.php">
-                        <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
-                    </a>
-                </div>
-                <!-- <nav class="header__nav">
-                        <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link button-primary"> Trainee login</a></li>
-                        </ul>
-                    </nav> -->
-                    <!-- end header nav -->
-            </header>
-        </div>
+       
         <div class="body-container">
 
-
+        <div class="member-body-header">
+            <div id="hamberger" class="hamberger">
+                        <span class="hamberger__line"></span>
+                        <span class="hamberger__line"></span>
+                        <span class="hamberger__line"></span>
+                    </div>
+                    <!-- end hamberger -->
+                <header class="wrap-container">
+                    <div class="brand">
+                        <a href="<?php base_url();?>index.php">
+                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
+                        </a>
+                    </div>
+                    <!-- <nav class="header__nav">
+                            <ul>
+                                <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link button-primary"> Trainee login</a></li>
+                            </ul>
+                        </nav> -->
+                        <!-- end header nav -->
+                </header>
+        </div>
         <div class="section-member wrap-container">
 
             <div class="container" id="container">
