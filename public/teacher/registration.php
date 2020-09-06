@@ -23,7 +23,7 @@
 
     <div class="body-wrap">
         <div class="member-body-header">
-        <div id="hamberger" class="hamberger">
+                <div id="hamberger" class="hamberger">
                     <span class="hamberger__line"></span>
                     <span class="hamberger__line"></span>
                     <span class="hamberger__line"></span>
@@ -35,12 +35,12 @@
                         <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
                     </a>
                 </div>
-                <nav class="header__nav">
+                <!-- <nav class="header__nav">
                         <ul>
-                            <!-- <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li> -->
+                            <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link button-primary">Trainee registration</a></li>
                         </ul>
-                    </nav>
+                    </nav> -->
                     <!-- end header nav -->
             </header>
         </div>
