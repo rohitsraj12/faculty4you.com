@@ -357,7 +357,7 @@ label {
     background-size: 500px 300px;
     opacity: 0.6;
     position: absolute;
-    top: -50px;
+    top: 100px;
     left: 5%; }
   .section-member h1, .section-forgotpwd h1 {
     margin: 0;
@@ -399,14 +399,14 @@ label {
     border-color: #ffffff;
     background-color: transparent; }
   .section-member .form-container button, .section-forgotpwd .form-container button {
-    background: #8aafff;
-    background: -moz-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #5388fe), color-stop(41%, #8aafff), color-stop(100%, #5388fe));
-    background: -webkit-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-    background: -o-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-    background: -ms-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-    background: linear-gradient(to right, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5388fe', endColorstr='#5388fe', GradientType=1 );
+    background: #aa0000;
+    background: -moz-radial-gradient(center, ellipse cover, #aa0000 0%, #660000 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #aa0000), color-stop(100%, #660000));
+    background: -webkit-radial-gradient(center, ellipse cover, #aa0000 0%, #660000 100%);
+    background: -o-radial-gradient(center, ellipse cover, #aa0000 0%, #660000 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #aa0000 0%, #660000 100%);
+    background: radial-gradient(ellipse at center, #aa0000 0%, #660000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa0000', endColorstr='#660000', GradientType=1 );
     border-color: #5388fe; }
   .section-member form, .section-forgotpwd form {
     padding: 0 50px;
@@ -431,7 +431,8 @@ label {
     border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
-    overflow: hidden; }
+    overflow: hidden;
+    top: 100px; }
   .section-member .form-container, .section-forgotpwd .form-container {
     transition: all 0.6s ease-in-out;
     position: absolute;
@@ -480,14 +481,14 @@ label {
 	background: linear-gradient(to right, #FF4B2B, #FF416C);
 	background-repeat: no-repeat;
     background-size: cover; */
-    background: #8aafff;
-    background: -moz-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, #8aafff), color-stop(41%, #8aafff), color-stop(100%, #5388fe));
-    background: -webkit-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
-    background: -o-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
-    background: -ms-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
-    background: linear-gradient(to right, #8aafff 0%, #8aafff 41%, #5388fe 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8aafff', endColorstr='#5388fe', GradientType=1 );
+    background: #660000;
+    background: -moz-linear-gradient(top, #660000 0%, #aa0000 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #660000), color-stop(100%, #aa0000));
+    background: -webkit-linear-gradient(top, #660000 0%, #aa0000 100%);
+    background: -o-linear-gradient(top, #660000 0%, #aa0000 100%);
+    background: -ms-linear-gradient(top, #660000 0%, #aa0000 100%);
+    background: linear-gradient(to bottom, #660000 0%, #aa0000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660000', endColorstr='#aa0000', GradientType=0 );
     background-position: 0 0;
     color: #ffffff;
     position: relative;
@@ -526,6 +527,8 @@ label {
         position: absolute;
         bottom: 0;
         left: 0; }
+    .section-member .overlay-panel p, .section-forgotpwd .overlay-panel p {
+      color: #ffffff; }
   .section-member .overlay-left, .section-forgotpwd .overlay-left {
     transform: translateX(-20%); }
   .section-member .container.right-panel-active .overlay-left, .section-forgotpwd .container.right-panel-active .overlay-left {
@@ -1938,6 +1941,11 @@ input,
   justify-content: flex-end; }
   .top-header ul li {
     margin-right: 1rem; }
+
+.member-body-header {
+  width: 100%;
+  position: absolute;
+  top: 0; }
 
 .member-body-header header {
   justify-content: center; }
