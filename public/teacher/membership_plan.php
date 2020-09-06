@@ -37,7 +37,7 @@
         <section class="section-membership">
             <div class="wrap-container">
                 <div class="section-header u-center-text">
-                    <heeader class="text-primary-h"> 
+                    <heeader class="text-primary-h-3"> 
                         Membership Plans
                     </header>
                 </div>
