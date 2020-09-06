@@ -22,13 +22,15 @@
 
     <div class="body-wrap">
         
-    <div class="member-body-header">
-    <div id="hamberger" class="hamberger">
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-                </div>
-                <!-- end hamberger -->
+      
+        <div class="body-container">
+        <div class="member-body-header">
+            <div id="hamberger" class="hamberger">
+                <span class="hamberger__line"></span>
+                <span class="hamberger__line"></span>
+                <span class="hamberger__line"></span>
+            </div>
+            <!-- end hamberger -->
             <header class="wrap-container">
                 <div class="brand">
                     <a href="<?php base_url();?>index.php">
@@ -45,7 +47,6 @@
             </header>
         </div>
 
-        <div class="body-container">
         <div class="section-member wrap-container">
 
             <div class="container" id="container">
