@@ -262,6 +262,13 @@
       margin-right: 1rem;
     }
   }
-}.member-body-header header{
+}
+
+.member-body-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.member-body-header header{
   justify-content: center;
 }
