@@ -1686,7 +1686,7 @@ input,
   -webkit-border-radius: 10px 10px 0 0;
   -moz-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
-  color: #ffffff;
+  color: #222222;
   -webkit-text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   -moz-text-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
@@ -1938,6 +1938,9 @@ input,
   justify-content: flex-end; }
   .top-header ul li {
     margin-right: 1rem; }
+
+.member-body-header header {
+  justify-content: center; }
 
 .body-footer {
   padding-top: 15rem;
