@@ -71,6 +71,21 @@ $(document).ready(function () {
     console.log(selectAtt);
   });
 
+  //tab search
+  // console.log("hi");
+
+  $(".form-tab").click(function () {
+    console.log("hi");
+    var selectAtt = $(this).attr("data-form");
+
+    $(".form-tab").addClass("not-active");
+    $(this).removeClass("not-active");
+
+    // $(".search-form").removeClass(".hide");
+    $(".search-form").hide();
+    $("." + selectAtt).fadeIn();
+  });
+
   // FAQ
   $(".faq__header").click(function () {
     $(this).find("i").toggleClass("fa-angle-down");
@@ -78,7 +93,7 @@ $(document).ready(function () {
     $(this).parent().find("footer").slideToggle(600);
   });
 
-  $(".student-details").hide();
+  // $(".student-details").hide();
   $(".active-member-btn").click(function () {
     $(".student-details").slideUp();
     $(this).closest(".student-post").find(".student-details").slideToggle();
