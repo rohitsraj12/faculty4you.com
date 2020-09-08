@@ -76,6 +76,7 @@
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
+                        <input type="text">
                         <input name="password" type="password" id="password" placeholder="password" />
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
