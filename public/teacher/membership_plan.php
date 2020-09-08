@@ -38,7 +38,7 @@
             <div class="wrap-container">
                 <div class="section-header u-center-text">
                     <heeader class="text-primary-h-3"> 
-    `                    Membership Plans
+                       Membership Plans
                     </header>
                 </div>
             </div>
@@ -49,8 +49,8 @@
                         <article class="member-block member-silver">
                             <header class="member__header">
                                 <h1>Faculty for you</h1>
-                                <strong>Silver</strong>
-                                <span>Membership</span>
+                                <strong>Silver Membership</strong>
+                                
                                 <p>Rs <em>500</em></p>
                             </header>
                             <div class="member-body">
@@ -70,8 +70,8 @@
                         <article class="member-block member-gold">
                             <header class="member__header">
                             <h1>Faculty for you</h1>
-                                <strong>Gold</strong>
-                                <span>Membership</span>
+                                <strong>Gold Membership</strong>
+                                
                                 <p>Rs <em>100</em></p>
                                 </header>
                             <div class="member-body">
@@ -91,8 +91,8 @@
                             <header class="member__header">
                             
                             <h1>Faculty for you</h1>
-                                <strong>Platinum</strong>
-                                <span>Membership</span>
+                                <strong>Platinum Membership</strong>
+                               
                                 <p>Rs <em>1500</em></p>
                                 </header>
                             <div class="member-body">
