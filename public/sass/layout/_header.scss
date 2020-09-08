@@ -271,9 +271,18 @@
   position: absolute;
   top: 0;
 }
-.member-body-header header {
-  justify-content: center;
-}
 .nav-social-media {
   @extend .social-media;
+  ul{
+  & :first-child{
+    font-size: 1.5rem;
+   
+  }
+  .log{
+    line-height: 4rem;
+    font-size: 2rem;
+    color: $color-black;
+  }
+
+}
 }
