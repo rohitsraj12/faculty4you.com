@@ -44,9 +44,9 @@
                         <div class="social-media">
                             <ul class="">
                                 <?php
-                                foreach($social_media as $name => $url){
+                                foreach($social_media_follow as $follow_name => $follow_url){
                                 ?>
-                                <li class="social__list"><a class="social__link" href="<?php echo $url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $name ;?>" alt="<?php echo $name ?>"></a></li>
+                                <li class="social__list"><a class="social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
                                 <?php
                                 }
                                 ?>
