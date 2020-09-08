@@ -249,8 +249,9 @@
 
                             </div>
 
-                            <input type="submit" class="w-100 button-primary text-center" name="update" >
+                           
                         </article>
+                        <button  type="submit" class="button-primary" name="update" >Submit</button>
                     </form>
                 </section>
             </div>
