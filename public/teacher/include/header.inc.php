@@ -44,7 +44,7 @@
                 <header>
                     <div class="header-brand-section">
                         <div class="header-top">
-                        <ul class="wrap-container">
+                            <ul class="wrap-container">
                                 <?php
                                     foreach($social_media as $name => $url){
                                 ?>
@@ -58,7 +58,7 @@
                                         echo $teacher_name;
                                     ?>
                                     </li>
-                                </ul>
+                            </ul>
                         </div>
                         <div class="wrap-container">
                             <div class="header-brand">
@@ -67,9 +67,7 @@
                                 </a>
                             </div>
                             <!-- end header brand -->
-                            <div class="header-right">
-                                
-                            </div>
+                          
                         </div>
                     </div>
                   
