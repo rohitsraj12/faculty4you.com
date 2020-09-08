@@ -102,6 +102,11 @@
     background: $color-primary-button;
     border-top: 1px solid $color-black;
     border-bottom: 1px solid $color-black;
+    & > .wrap-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
 
     ul {
       @media (min-width: 581px) {
@@ -268,4 +273,7 @@
 }
 .member-body-header header {
   justify-content: center;
+}
+.nav-social-media {
+  @extend .social-media;
 }
