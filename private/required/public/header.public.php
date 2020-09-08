@@ -39,17 +39,10 @@
                 </div>
                 <!-- end hamberger -->
                 <header class="header-main">
+                
                     <div class="header-brand-section">
-                        <div class="wrap-container">
-                            <div class="header-brand">
-                                <a href="<?php base_url();?>index.php">
-                                    <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
-                                </a>
-                            </div>
-                            <!-- end header brand -->
-
-                            <div class="header-right">
-                                <ul>
+                    <div class="header-top">
+                        <ul class="wrap-container">
                                 <?php
                                 foreach($social_media as $name => $url){
                                 ?>
@@ -57,21 +50,30 @@
                                 <?php
                                 }
                                 ?>
-                                </ul>
-                            </div>
+                        </ul>
+                    </div>
+                    <div class="wrap-container">
+                        <div class="header-brand">
+                            <a href="<?php base_url();?>index.php">
+                                <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
+                            </a>
+                        </div>
+                        <!-- end header brand -->
+                        <div class="header-right">
+                            
                         </div>
                     </div>
-                   
+                    </div>                 
                     <div  class="header__nav">
-                     <nav class="wrap-container">
-                        <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Trainer registration</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Trainer login</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
-                        </ul>
-                    </nav>
+                        <nav class="wrap-container">
+                            <ul>
+                                <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Trainer registration</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Trainer login</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
+                            </ul>
+                        </nav>
                     </div>
                    
                     <!-- end header nav -->
