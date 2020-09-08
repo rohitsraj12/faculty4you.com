@@ -1962,8 +1962,13 @@ input,
   position: absolute;
   top: 0; }
 
-.member-body-header header {
-  justify-content: center; }
+.nav-social-media ul :first-child {
+  font-size: 1.5rem; }
+
+.nav-social-media ul .log {
+  line-height: 4rem;
+  font-size: 2rem;
+  color: #222222; }
 
 .body-footer {
   padding-top: 15rem;
@@ -1997,8 +2002,7 @@ input,
 
 .social-media ul li, .nav-social-media ul li {
   margin-right: 2rem;
-  display: inline;
-  font-size: 1.5rem; }
+  display: inline; }
   .social-media ul li img, .nav-social-media ul li img {
     height: 2rem;
     width: 2rem; }
