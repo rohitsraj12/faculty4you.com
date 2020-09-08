@@ -83,7 +83,7 @@
                                 </li>
 
                                 <li class="text-center">
-                                    <a href="<?php base_url()?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" class="w-100 h4 button-primary">Edit profile</a>
+                                    <a href="<?php base_url()?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" class="h4 button-primary">Edit profile</a>
                                 </li>
                             </ul>
                         </footer>
