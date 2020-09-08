@@ -25,34 +25,34 @@
         
       
         <div class="body-container">
-        <div class="member-body-header">
-            <header class="wrap-container">
-                <div class="brand">
-                    <a href="<?php base_url();?>index.php">
-                        <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
-                    </a>
-                </div>
-                <div class="nav-social-media">
-                    <ul>
-                            <li class="nav-social__list log">Follow us : </li>
-                        <?php
-                        foreach($social_media_follow as $follow_name => $follow_url){
-                        ?>
-                        <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
-                        <?php
-                        }
-                        ?>
-                    </ul>
-                </div>
-                <!-- <nav class="header__nav">
+            <div class="member-body-header">
+                <header class="wrap-container">
+                    <div class="brand">
+                        <a href="<?php base_url();?>index.php">
+                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="nav-social-media">
                         <ul>
-                            <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
-                            <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">trainer login</a></li>
+                                <li class="nav-social__list log">Follow us : </li>
+                            <?php
+                            foreach($social_media_follow as $follow_name => $follow_url){
+                            ?>
+                            <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                            <?php
+                            }
+                            ?>
                         </ul>
-                    </nav> -->
-                    <!-- end header nav -->
-            </header>
-        </div>
+                    </div>
+                    <!-- <nav class="header__nav">
+                            <ul>
+                                <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">trainer login</a></li>
+                            </ul>
+                        </nav> -->
+                        <!-- end header nav -->
+                </header>
+            </div>
 
         <div class="section-member wrap-container">
 
