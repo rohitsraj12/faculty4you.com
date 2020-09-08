@@ -38,7 +38,7 @@
             <div class="wrap-container">
                 <div class="section-header u-center-text">
                     <heeader class="text-primary-h-3"> 
-                        Membership Plans
+    `                    Membership Plans
                     </header>
                 </div>
             </div>
@@ -51,11 +51,12 @@
                                 <h1>Faculty for you</h1>
                                 <strong>Silver</strong>
                                 <span>Membership</span>
+                                <p>Rs <em>500</em></p>
                             </header>
                             <div class="member-body">
 
                                 <ul>
-                                <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>500</li>
+                                <!-- <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>500</li> -->
                                     <li>5 students</li>
                                     <li>30 days validity</li>
                                 </ul>
@@ -71,10 +72,11 @@
                             <h1>Faculty for you</h1>
                                 <strong>Gold</strong>
                                 <span>Membership</span>
+                                <p>Rs <em>100</em></p>
                                 </header>
                             <div class="member-body">
                                 <ul>
-                                    <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1000</li>
+                                    <!-- <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1000</li> -->
                                     <li>12 students</li>
                                     <li>60 days validity</li>
                                 </ul>
@@ -91,10 +93,11 @@
                             <h1>Faculty for you</h1>
                                 <strong>Platinum</strong>
                                 <span>Membership</span>
+                                <p>Rs <em>1500</em></p>
                                 </header>
                             <div class="member-body">
                                 <ul>
-                                    <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1500</li>                                  
+                                    <!-- <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1500</li>                                   -->
                                     <li>20 students</li>
                                     <li>90 days validity</li>
                                 </ul>
