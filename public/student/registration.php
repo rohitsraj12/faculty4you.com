@@ -1,6 +1,7 @@
 <?php
     include_once("../../private/config/config.php");
     require_once('../../private/config/db_connect.php');
+    include("../../private/required/public/components/social_media.php");
 ?>
 
 <!DOCTYPE html>
@@ -20,46 +21,35 @@
 </head>
 <body>
 
-    <div class="body-wrap">
-        
-    <!-- <div class="member-body-header">
-        <div id="hamberger" class="hamberger">
-            <span class="hamberger__line"></span>
-            <span class="hamberger__line"></span>
-            <span class="hamberger__line"></span>
-        </div>
-        <!-- end hamberger -->
-        <!-- <header class="wrap-container">
-            <div class="brand">
-                <a href="<?php base_url();?>index.php">
-                    <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
-                </a>
-            </div> --> 
-            <!-- <nav class="header__nav">
-                    <ul>
-                        <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
-                        <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link button-primary">trainer registration</a></li>
-                    </ul>
-                </nav> -->
-                <!-- end header nav -->
-        <!-- </header>
-        </div> -->
-
-            <div class="body-container">
+    <div class="body-wrap">  
+    <div class="body-container">
             <div class="member-body-header">
-                <div id="hamberger" class="hamberger">
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-                </div>
-                <!-- end hamberger -->
-                    <header class="wrap-container">
-                        <div class="brand">
-                            <a href="<?php base_url();?>index.php">
-                                <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
-                            </a>
-                        </div>
-                    </header>
+                <header class="wrap-container">
+                    <div class="brand">
+                        <a href="<?php base_url();?>index.php">
+                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="nav-social-media">
+                        <ul>
+                                <li class="nav-social__list log">Follow us : </li>
+                            <?php
+                            foreach($social_media_follow as $follow_name => $follow_url){
+                            ?>
+                            <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                    <!-- <nav class="header__nav">
+                            <ul>
+                                <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">trainer login</a></li>
+                            </ul>
+                        </nav> -->
+                        <!-- end header nav -->
+                </header>
             </div>
 
             <div class="section-member wrap-container">
