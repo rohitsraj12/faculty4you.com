@@ -70,8 +70,8 @@
                                 while($row = mysqli_fetch_assoc($result)){
 
                             ?>
-                                    <article class="post-sections post-sections-6" >
-                                        <header class="post-header-6">
+                                    <article class="post-sections" >
+                                        <header class="post-header">
                                             <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
@@ -170,8 +170,8 @@
                                     </div>
                                  
                                     <div class="">
-                                        <input type="submit" class="button-primary" name="submit-post" value="submit">
-                                        <input type="reset"  style="font-size: 1.6rem;" class="btn btn-lg  btn btn-outline-secondary" value="reset">
+                                        <input type="submit" class="button-primary" name="submit-post" value="Submit">
+                                        <input type="reset"  style="font-size: 1.6rem;" class="btn btn-lg  btn btn-outline-secondary" value="Reset">
 
                                     </div>
                                     
