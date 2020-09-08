@@ -93,7 +93,6 @@ $(document).ready(function () {
     $(this).parent().find("footer").slideToggle(600);
   });
 
-  // $(".student-details").hide();
   $(".active-member-btn").click(function () {
     $(".student-details").slideUp();
     $(this).closest(".student-post").find(".student-details").slideToggle();
