@@ -1526,6 +1526,7 @@ input,
   background: linear-gradient(to bottom, #dafcb4 0%, #f2ffc2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8ffab', endColorstr='#f2ffc2', GradientType=0 ); }
   .post-sections .student-details {
+    display: none;
     border-top: 1px solid #cacaca;
     padding: 2rem; }
     .post-sections .student-details i {
@@ -1709,6 +1710,12 @@ input,
     display: block;
     font-size: 1.5rem;
     font-weight: 300; }
+  .member__header p {
+    padding-top: 3rem; }
+  .member__header em {
+    font-style: normal;
+    font-size: 4rem;
+    font-weight: 700; }
 
 .member-silver .member__header {
   background: #cccccc;
