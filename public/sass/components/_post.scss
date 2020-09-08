@@ -9,6 +9,7 @@
     @include post-body-4;
 
     .student-details {
+      display: none;
       border-top: 1px solid #cacaca;
       padding: 2rem;
       // @include bg-1;
