@@ -145,3 +145,7 @@ input,
 .submit__input {
   padding: 0.8rem 4rem;
 }
+
+.section__form-update article{
+  @include shadow;
+}
