@@ -406,8 +406,7 @@ label {
     background: -o-radial-gradient(center, ellipse cover, #aa0000 0%, #660000 100%);
     background: -ms-radial-gradient(center, ellipse cover, #aa0000 0%, #660000 100%);
     background: radial-gradient(ellipse at center, #aa0000 0%, #660000 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa0000', endColorstr='#660000', GradientType=1 );
-    border-color: #5388fe; }
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa0000', endColorstr='#660000', GradientType=1 ); }
   .section-member form, .section-forgotpwd form {
     padding: 0 50px;
     height: 100%;
@@ -1415,6 +1414,11 @@ input,
 
 .submit__input {
   padding: 0.8rem 4rem; }
+
+.section__form-update article {
+  -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2); }
 
 .section__post {
   position: relative; }
