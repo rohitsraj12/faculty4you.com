@@ -13,7 +13,6 @@
     require("../include/header.inc.php");
     require("../include/update_student.inc.php");
  
-    require("../include/banner.inc.php");
     $student_name = $_SESSION['user_name'];
 
     $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
@@ -36,7 +35,7 @@
     <main class="wrap-container profile">
         <section class="section-profile-update">
             <div class="section-header u-center-text" >
-                <heeader class="text-primary-h-3 text-secondary"> 
+                <heeader class="text-primary-h-3"> 
                     Update profile
                 </header>
                 
@@ -172,9 +171,11 @@
                                         <input type="text" name="pincode" class="form-control pincode" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
                                     </div>
                                 </div>
-                            </div>
-                            <input type="submit" value="Submit" class="w-100 button-primary text-center" style="font-size:1.7rem" name="update">
+                            </div>  
                         </article>
+                            <button type="submit" class="button-primary">Submit</button>
+                      
+                        
                     </form>
                 </section>
             </div>
