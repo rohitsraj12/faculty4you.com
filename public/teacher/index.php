@@ -35,8 +35,8 @@
                         <div class="row">
                             <div class="col-sm-3 mt-5">
                                 <ul class="px-4 tab row">
-                                    <li class="study-type pl-2 col-6 col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">online tuition</button></li>
-                                    <li class="study-type  col-6 col-sm-12  pl-2" data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition - <?php echo $user_row['city_name'];?></button></li>
+                                    <li class="study-type col-6 col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">online tuition</button></li>
+                                    <li class="study-type  col-6 col-sm-12 " data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition - <?php echo $user_row['city_name'];?></button></li>
                                 </ul>
                             </div>
                             <div class="col-sm-9">
