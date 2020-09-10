@@ -7,7 +7,7 @@
       @include shadow-text(0, 0, 4px, 1);
       text-align: center;
       // background-color: #d29900;
-      @include bg-1;
+      @include post-head-3;
       height: 120px;
       width: 100%;
       @include radius-direction(10px, 10px, 0, 0);
