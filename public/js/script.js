@@ -97,4 +97,8 @@ $(document).ready(function () {
     $(".student-details").slideUp();
     $(this).closest(".student-post").find(".student-details").slideToggle();
   });
+
+  $("").click(function () {
+    $("container").toggleClass("right-panel-active");
+  });
 });
