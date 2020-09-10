@@ -1650,7 +1650,8 @@ input,
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cacaca', GradientType=1 ); }
 
 .search-section {
-  padding: 2rem 0; }
+  padding: 4rem 0;
+  background-color: #cacaca; }
 
 .search__form input {
   width: 85%;
