@@ -35,7 +35,7 @@
                 <section class="col-sm-3">
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
-                            Follow                        
+                            Follow us                        
                         </header>
                         <div class="social-media">
                             <ul class="">
