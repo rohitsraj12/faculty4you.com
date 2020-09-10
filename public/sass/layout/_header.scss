@@ -45,14 +45,27 @@
   }
 
   &-top {
+
+    .wrap-container {
+      display: flex;
+      justify-content: flex-end;
+       flex-direction: row;
+    }
     ul {
+      background-color: #e7e7e7;
       @media (min-width: 583px) {
-        padding: 0.4rem 0;
-        // width: 200px;
+        padding: 0.4rem 1.5rem;
+        min-width: 230px;
         display: flex;
         justify-content: flex-end;
         flex-direction: row;
+        @include radius-direction(0, 0, 1rem, 1rem);
+        border-right: 1px solid #cacaca;
+        border-bottom: 1px solid #cacaca;
+        border-left: 1px solid #cacaca;
+        @include shadow-custom(0, 0, 2px, 0.4);
         // flex-wrap: wrap;
+        
       }
     }
 
