@@ -93,7 +93,7 @@
                         <header class="p-4 h3 article-profile__header text-light m-0">
                             About me
                         </header>
-                        <div class="article-body p-4 text-dark  border">
+                        <div class="article-body p-4 text-dark">
                         <p>
                         <?php
                             echo $row['teacher_about_me']; 
@@ -105,7 +105,7 @@
                         <header class="p-4 h3 article-profile__header text-light  m-0">
                             Personal detail
                         </header>
-                        <div class="article-body p-4 bg-light border">
+                        <div class="article-body p-4 bg-light">
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Name</li>
