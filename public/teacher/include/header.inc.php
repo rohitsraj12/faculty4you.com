@@ -44,21 +44,23 @@
                 <header>
                     <div class="header-brand-section">
                         <div class="header-top">
-                            <ul class="wrap-container">
-                                <?php
-                                    foreach($social_media_share as $share_name => $share_url){
-                                ?>
-                                <li class="social__list"><a class="social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
-                                <?php
-                                }
-                                ?>  
-                                    <li class="header-profile">
-                                    <i class="fa fa-user" aria-hidden="true"></i>                        
-                                    <?php 
-                                        echo $teacher_name;
+                            <div class="wrap-container">
+                                <ul class="">
+                                    <?php
+                                        foreach($social_media_share as $share_name => $share_url){
                                     ?>
-                                    </li>
-                            </ul>
+                                    <li class="social__list"><a class="social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
+                                    <?php
+                                    }
+                                    ?>  
+                                        <li class="header-profile">
+                                        <i class="fa fa-user" aria-hidden="true"></i>                        
+                                        <?php 
+                                            echo $teacher_name;
+                                        ?>
+                                        </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="wrap-container">
                             <div class="header-brand">
