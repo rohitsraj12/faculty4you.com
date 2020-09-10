@@ -97,7 +97,7 @@
                                                         }else{
                                                             // echo "become a member";
                                                             ?>
-                                                            <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
+                                                            <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
                                                             <!-- <small>you need to become a member to see the details</small> -->
                                                             <?php
                                                         }
@@ -230,7 +230,7 @@
                                                         }else{
                                                             // echo "become a member";
                                                             ?>
-                                                            <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
+                                                            <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
                                                             <!-- <small>you need to become a member to see the details</small> -->
                                                             <?php
                                                         }
