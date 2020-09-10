@@ -40,7 +40,9 @@
                 <header>
                     <div class="header-brand-section">
                     <div class="header-top">
-                            <ul class="wrap-container">
+                        <div class="wrap-container">
+
+                            <ul>
                             <?php
                                 foreach($social_media_share as $share_name => $share_url){
                                     ?>
@@ -56,6 +58,7 @@
                                     </li>
                             </ul>
                         </div>
+                    </div>
                         <div class="wrap-container">
                             <div class="header-brand">
                                 <a href="<?php base_url();?>student/index.php">
