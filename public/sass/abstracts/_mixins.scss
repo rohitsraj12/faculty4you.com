@@ -11,6 +11,12 @@
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
+@mixin shadow-custom($x, $y, $b, $alpha) {
+  -webkit-box-shadow: $x $y $b rgba(0, 0, 0, $alpha);
+  -moz-box-shadow: $x $y $b rgba(0, 0, 0, $alpha);
+  box-shadow: $x $y $b rgba(0, 0, 0, $alpha);
+}
+
 // shadow box
 @mixin shadow-text($x, $y, $b, $alpha) {
   -webkit-text-shadow: $x $y $b rgba(0, 0, 0, $alpha);
