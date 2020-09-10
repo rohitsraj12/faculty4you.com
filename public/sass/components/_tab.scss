@@ -23,7 +23,7 @@
   width: 100%;
   border: none;
   display: block;
-  background: $color-gray-light-1;
+  // background: $color-gray-light-1;
   color: $color-btn-1;
   font-size: 1.6rem;
   font-weight: 400;
@@ -57,8 +57,10 @@
 }
 
 .tab button.active {
-  background: $color-gray-light-2;
-  color: rgba($color-btn-1, 1);
+  // background: $color-gray-light-2;
+  // color: rgba($color-btn-1, 1);
+  @include post-head-3;
+  color: $color-white;
   font-weight: 500;
 
   @media (min-width: 583px) {
