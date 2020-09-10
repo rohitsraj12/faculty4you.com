@@ -6,7 +6,6 @@
     border-bottom: 1px solid #cacaca;
     border-left: 1px solid #cacaca;
     @include shadow;
-    @include post-body-4;
 
     .student-details {
       display: none;
