@@ -9,7 +9,7 @@
 
 
 
-    $page_title = "home page";
+    $page_title = "search result";
     $banner_image_url = "search";
     require_once("../../private/config/db_connect.php");
     include("../../private/config/config.php");
@@ -35,7 +35,7 @@
     <main>
     <section class="section-search-result wrap-container">
                     <div class="section-header u-center-text">
-                        <heeader class="text-primary-h"> 
+                        <heeader class="text-primary-h-3"> 
                             Search result
                         </header>
                     </div>
@@ -51,7 +51,7 @@
                     $query_results = mysqli_num_rows($result);
 
                 ?>
-                    <div class="search__form mb-5 bg-light border p-5">
+                    <!-- <div class="search__form mb-5 bg-light border p-5">
                         <form action="" method="post">
                             <div class="row">
                                 <div class="col-sm-6">
@@ -81,9 +81,8 @@
                                 
                                 </div>
                             </div>
-                            <!-- </div> -->
                         </form>
-                    </div>
+                    </div> -->
                     
                     <!-- <div class="search-result-num" >
                         <p>
@@ -178,13 +177,13 @@
                                     while($row = mysqli_fetch_assoc($result)){
 
                                 ?>
-                                <article class="student-post mb-5 px-5 py-3 border bg-light" >
-                                    <header class="border-bottom">
-                                        <h1 class="h1 py-3 text-dark font-weight-normal">
+                                <article class="student-post mt-5 post-sections" >
+                                    <header class="post-header">
+                                        <h1 class="">
                                             <?php echo $row["post_title"];?>
                                         </h1>
                                     </header>
-                                    <div class="body mb-4">
+                                    <div class="post-body">
                                         <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
                                             <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                             <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
@@ -195,7 +194,7 @@
                                         <?php echo $row["post_detail"];?>
                                     </p>
                                     </div>
-                                    <footer class="pb-3">
+                                    <footer class="post-footer">
                                                 <?php 
                                                     // echo $member;
                                                     if($member == "active"){
@@ -205,7 +204,7 @@
                                                     }else{
                                                         // echo "become a member";
                                                         ?>
-                                                        <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
+                                                        <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
                                                         <!-- <small>you need to become a member to see the details</small> -->
                                                         <?php
                                                     }
@@ -310,13 +309,13 @@
                                         while($row = mysqli_fetch_assoc($result)){
 
                                     ?>
-                                    <article class="student-post mb-5 px-5 py-3 border bg-light" >
-                                        <header class="border-bottom">
-                                            <h1 class="h1 py-3 text-dark font-weight-normal">
+                                    <article class="student-post mt-5 post-sections" >
+                                        <header class="post-header">
+                                            <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
-                                        <div class="body mb-4">
+                                        <div class="post-body">
                                             <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                 <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                 <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
@@ -327,7 +326,7 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="pb-3">
+                                        <footer class="post-footer">
                                                 <?php 
                                                     // echo $member;
                                                     if($member == "active"){
@@ -337,7 +336,7 @@
                                                     }else{
                                                         // echo "become a member";
                                                         ?>
-                                                        <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
+                                                        <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
                                                         <!-- <small>you need to become a member to see the details</small> -->
                                                         <?php
                                                     }
@@ -442,13 +441,13 @@
                                         while($row = mysqli_fetch_assoc($result)){
 
                                     ?>
-                                    <article class="mb-5 px-5 py-3 border bg-light" >
-                                        <header class="border-bottom">
-                                            <h1 class="h1 py-3 text-dark font-weight-normal">
+                                    <article class="student-post mt-5 post-sections" >
+                                        <header class="post-header">
+                                            <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
-                                        <div class="body mb-4">
+                                        <div class="post-body">
                                             <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                 <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                 <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
@@ -459,7 +458,7 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="pb-3">
+                                        <footer class="post-footer">
                                                 <?php 
                                                     // echo $member;
                                                     if($member == "active"){
@@ -469,7 +468,7 @@
                                                     }else{
                                                         // echo "become a member";
                                                         ?>
-                                                        <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button> </br>
+                                                        <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
                                                         <!-- <small>you need to become a member to see the details</small> -->
                                                         <?php
                                                     }
