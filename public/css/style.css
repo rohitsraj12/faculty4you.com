@@ -1779,12 +1779,29 @@ input,
   padding-top: 0.5rem;
   text-align: right; }
 
-@media (min-width: 583px) {
-  .header-top ul {
-    padding: 0.4rem 0;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row; } }
+.header-top .wrap-container {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row; }
+
+.header-top ul {
+  background-color: #e7e7e7; }
+  @media (min-width: 583px) {
+    .header-top ul {
+      padding: 0.4rem 1.5rem;
+      min-width: 230px;
+      display: flex;
+      justify-content: flex-end;
+      flex-direction: row;
+      -webkit-border-radius: 0 0 1rem 1rem;
+      -moz-border-radius: 0 0 1rem 1rem;
+      border-radius: 0 0 1rem 1rem;
+      border-right: 1px solid #cacaca;
+      border-bottom: 1px solid #cacaca;
+      border-left: 1px solid #cacaca;
+      -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.4); } }
 
 .header-top .social__list {
   margin-left: 1.5rem;
