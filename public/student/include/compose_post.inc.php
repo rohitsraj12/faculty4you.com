@@ -37,6 +37,8 @@ if(isset($_POST['submit-post'])){
 
     $result = mysqli_query($conn, $sql);
 
+    $message = "Congratulations! You have successfully posted your requirement.";
+
     // header("Location: ../post/index.php?register=success");
 
 
