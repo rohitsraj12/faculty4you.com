@@ -30,7 +30,23 @@
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
+    
+    
+    if(!empty($message)){
+        
 ?>
+<div class="alert alert-success m-0" role="alert">
+    <div class="wrap-container h3 py-4">
+        <?php echo $message;?>
+    </div>
+</div>
+
+<?php
+    }
+
+?>
+
+
 <div class="body-container">
 
     <main class="wrap-container profile">
@@ -168,12 +184,10 @@
                                 Professional information
                             </header>
                             <div class="py-4 px-5 text-dark bg-light border mb-5">
-                            <fieldset class="form-group">
-                                <div class="row">
-                                    <div class="col-sm-3"> 
+                            <div class="form-group form-row my-3">
+                                    <div class="col-md-6"> 
                                         <label class="label col-form-label col-sm-3 pt-0">Category</label>
-                                    </div>
-                                    <div class="col-sm-5">
+                                    
                                         <select id="state" name="category" class="form-control category">
                                             <option value="nooption">Select category</option>
                                             <?php 
@@ -186,8 +200,7 @@
                                             <?php }?>
                                         </select>
                                     </div>
-                                </div>
-                            </fieldset>
+                            </div>
                         
                                 <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
