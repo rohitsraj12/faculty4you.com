@@ -27,6 +27,17 @@
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+
+    if(!empty($message)){
+?>
+<div class="alert alert-success m-0" role="alert">
+    <div class="wrap-container h3 py-4">
+        <?php echo $message;?>
+    </div>
+</div>
+
+<?php
+    }
 ?>
 
 
