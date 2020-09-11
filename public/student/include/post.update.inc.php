@@ -14,6 +14,7 @@
         $result = mysqli_query($conn, $query);
 
         
-        header('location:'.$base_url.'index.php');
+        header('location:'.$base_url.'index.php?message=$message');
+        
     
     }
