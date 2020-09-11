@@ -148,4 +148,5 @@ input,
 
 .section__form-update article{
   @include shadow;
+  @include radius-direction(1rem, 1rem, 0, 0);
 }
