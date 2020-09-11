@@ -13,7 +13,7 @@ session_start();
     require("../include/post.update.inc.php");
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
-    require("../include/banner.inc.php");
+    // require("../include/banner.inc.php");
 
     
     $id =  $_GET['id'];
