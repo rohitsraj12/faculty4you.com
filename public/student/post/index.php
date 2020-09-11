@@ -33,8 +33,33 @@
 
 
     include('../include/compose_post.inc.php');
-                               
+    
+    if(!empty($_GET['message'])){
+        // $message = $_GET['message'];
+        $message = "Congratulations! You have successfully updated your post.";
     ?>
+        <div class="alert alert-success m-0" role="alert">
+            <div class="wrap-container h3 py-4">
+                <?php echo $message;?>
+            </div>
+        </div>
+    
+    <?php
+    
+    } else if(!empty($message)){
+    ?>
+    
+        <div class="alert alert-success m-0" role="alert">
+            <div class="wrap-container h3 py-4">
+                <?php echo $message;?>
+            </div>
+        </div>
+
+    <?php
+    }                          
+    ?>
+
+
        
     <div class="body-container">
         <main class="post__page">
