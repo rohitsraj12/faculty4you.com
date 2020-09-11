@@ -67,8 +67,11 @@ if(isset($_POST['update'])){
     
                 $result = mysqli_query($conn, $query);
                 
-//    header("location: index.php");
-//    exit();
+                // header("location: ../profile/index.php");
+                //header("location: ../registration.php");
+                // exit();
+
+                $message = "Congratulations! You have successfully updated your profile detail.";
            }
     // 
     
