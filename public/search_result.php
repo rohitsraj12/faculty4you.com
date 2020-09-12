@@ -28,49 +28,46 @@
                 if(isset($_POST["submit-search"])){
                     // security
                     $search = mysqli_real_escape_string($conn, $_POST["search"]);
+                    $city = mysqli_real_escape_string($conn, $_POST["city"]);
+
 
                     $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%' ";
                     $result = mysqli_query($conn, $sql);
                     $query_results = mysqli_num_rows($result);
 
                 ?>
-                    <div class="search__form mb-5 bg-light border p-5">
+                    <!-- <div class="search__form mb-5 bg-light border p-5">
                         <form action="" method="post">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <input type="search" class="form-control" name="search" id="inputAddress" placeholder="">
-                                <small class="msg">Enter your subject / pincode / study type</small>
-                            </div>
-                            <div class="col-sm-3">
-                                <select id="inputState" name="city" class="form-control">
-                                    <option selected>Choose...</option>
-                                    <?php 
-                                        // #task city data fetch
-                                        $city_query = "SELECT * FROM cities";
-                                        $result = mysqli_query($conn, $city_query);
-                                        while( $row = mysqli_fetch_assoc($result)){
-                                        
-                                    ?>
-                                    <option value="<?php echo $row['city_id'];?>"><?php echo $row['city_name'];?></option>
-                                    <?php
-                                    }
-                                    ?>
-                                </select>  
-                                <small class="msg">Select city name</small>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="search" class="form-control" name="search" id="inputAddress" placeholder="">
+                                    <small class="msg">Enter your subject / pincode / study type</small>
+                                </div>
+                                <div class="col-sm-3">
+                                    <select id="inputState" name="city" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <?php 
+                                            // #task city data fetch
+                                            $city_query = "SELECT * FROM cities";
+                                            $result = mysqli_query($conn, $city_query);
+                                            while( $row = mysqli_fetch_assoc($result)){
+                                            
+                                        ?>
+                                        <option value="<?php echo $row['city_id'];?>"><?php echo $row['city_name'];?></option>
+                                        <?php
+                                        }
+                                        ?>
+                                    </select>  
+                                    <small class="msg">Select city name</small>
 
+                                </div>
+                                <div class="col-sm-3">
+                                    <input class="btn btn-primary w-100 py-2" style="font-size: 1.4rem" name="submit-search" type="submit" value="search">
+                                
+                                </div>
                             </div>
-                            <div class="col-sm-3">
-                                <input class="btn btn-primary w-100 py-2" style="font-size: 1.4rem" name="submit-search" type="submit" value="search">
-                            
-                            </div>
-                        </div>
-                            
-                            
-                            <!-- </div> -->
-                            
-                            
                         </form>
-                    </div>
+                    </div> -->
                     
                     <!-- <div class="search-result-num" >
                         <p>
@@ -139,6 +136,8 @@
                                     $search = mysqli_real_escape_string($conn, $_POST["search"]);
 
                                     $city = mysqli_real_escape_string($conn, $_POST["city"]);
+
+                                    echo $city;
                                     
                                     $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, cities.* 
                                     FROM posts
@@ -150,7 +149,7 @@
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
                                         ON study_categories.category_id = posts.category_id
-                                    WHERE (posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') AND (posts.post_title LIKE '%$search%') AND (std.city_id LIKE '%$city%')
+                                    WHERE ((posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') OR (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%'))
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
                                     $query_results = mysqli_num_rows($result);
@@ -164,13 +163,13 @@
                                         while($row = mysqli_fetch_assoc($result)){
 
                                     ?>
-                                    <article class="mb-5 px-5 py-3 border bg-light" >
-                                        <header class="border-bottom">
-                                            <h1 class="h1 py-3 text-dark font-weight-normal">
+                                    <article class="mt-3 post-sections" >
+                                        <header class="post-header">
+                                            <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
-                                        <div class="body mb-4">
+                                        <div class="post-body">
                                             <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                 <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                 <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
@@ -181,8 +180,8 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="pb-3">
-                                            <a href="<?php base_url();?>teacher/registration.php" style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Sign up</a>
+                                        <footer class="post-footer">
+                                            <a href="<?php base_url();?>teacher/registration.php" style="font-size: 1.6rem" class="active-member-btn btn btn-link">Sign up</a>
                                             <!-- <a href="<?php base_url();?>teacher/login.php">log in</a> -->
                                         </footer>
                                     </article>
@@ -212,7 +211,7 @@
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
                                         ON study_categories.category_id = posts.category_id
-                                    WHERE posts.study_type_id = 1 AND (posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') AND (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%')
+                                    WHERE posts.study_type_id = 1 AND ((posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') OR (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%'))
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
                                     $query_results = mysqli_num_rows($result);
@@ -226,13 +225,13 @@
                                         while($row = mysqli_fetch_assoc($result)){
 
                                     ?>
-                                    <article class="mb-5 px-5 py-3 border bg-light" >
-                                        <header class="border-bottom">
-                                            <h1 class="h1 py-3 text-dark font-weight-normal">
+                                    <article class="mt-3 post-sections" >
+                                        <header class="post-header">
+                                            <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
-                                        <div class="body mb-4">
+                                        <div class="post-body mb-4">
                                             <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                 <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                 <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
@@ -243,8 +242,8 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="pb-3">
-                                            <a href="<?php base_url();?>teacher/registration.php" style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Sign up</a>
+                                        <footer class="post-footer">
+                                            <a href="<?php base_url();?>teacher/registration.php" style="font-size: 1.6rem" class="active-member-btn btn btn-link">Sign up</a>
                                             <!-- <a href="<?php base_url();?>teacher/login.php">log in</a> -->
                                         </footer>
                                     </article>
@@ -260,9 +259,6 @@
                              -->
                              <div class="search-result-nu" >
                                 <?php 
-                                    $search = mysqli_real_escape_string($conn, $_POST["search"]);
-
-                                    $city = mysqli_real_escape_string($conn, $_POST["city"]);
                                     
                                     $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, cities.* 
                                     FROM posts
@@ -274,7 +270,7 @@
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
                                         ON study_categories.category_id = posts.category_id
-                                    WHERE (posts.study_type_id = 2) AND (posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') AND (posts.post_title LIKE '%$search%') AND (std.city_id LIKE '%$city%')
+                                    WHERE posts.study_type_id = 2 AND ((posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') OR (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%'))
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
                                     $query_results = mysqli_num_rows($result);
