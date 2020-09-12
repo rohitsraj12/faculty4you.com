@@ -49,10 +49,15 @@ strong {
 .body-container {
   @include bg-1;
   @media (min-width: 583px) {
-    // padding: 10rem 0;
+    padding: 5rem 0 10rem;
   }
+
   @media (max-width: 582px) {
     // padding: 5rem 0;
+  }
+
+  &:has(> .page-home) {
+    padding-top: 0;
   }
 }
 
