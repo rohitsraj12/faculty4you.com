@@ -6,6 +6,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 2rem;
+
   @media (max-width: 582px) {
     padding: 5rem 0 4rem;
     display: flex;
@@ -30,6 +31,7 @@
   outline: none;
   cursor: pointer;
   transition: 0.3s;
+  @include shadow;
 
   @media (min-width: 583px) {
     text-align: left;
