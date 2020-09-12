@@ -70,6 +70,16 @@
 
 // background
 @mixin bg-1 {
+  background: rgba(255,255,185,1);
+background: -moz-linear-gradient(top, rgba(255,255,185,1) 0%, rgba(255,255,229,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,185,1)), color-stop(100%, rgba(255,255,229,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,185,1) 0%, rgba(255,255,229,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,185,1) 0%, rgba(255,255,229,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,185,1) 0%, rgba(255,255,229,1) 100%);
+background: linear-gradient(to bottom, rgba(255,255,185,1) 0%, rgba(255,255,229,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffe5', GradientType=0 );
+ }
+@mixin bg-2{
   background: #fcfcfc;
   background: -moz-radial-gradient(
     center,
@@ -116,6 +126,7 @@
     #cacaca 100%
   );
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#cacaca', GradientType=1 );
+
 }
 
 @mixin bgheader {
