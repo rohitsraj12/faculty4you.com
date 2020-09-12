@@ -1,6 +1,7 @@
 .section {
   &-teacher {
-    background-color: #f8f8f8;
+    @include bg-1;
+    // background-color: #f8f8f8;
     // background-image: url("../img/banner/teacher.svg");
     // background-size: 300px 300px;
     // background-repeat: no-repeat;
