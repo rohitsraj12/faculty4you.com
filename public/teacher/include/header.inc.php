@@ -46,6 +46,8 @@
                         <div class="header-top">
                             <div class="wrap-container">
                                 <ul class="">
+                                
+                                <li class="social__list pt-2">Share</li>
                                     <?php
                                         foreach($social_media_share as $share_name => $share_url){
                                     ?>
