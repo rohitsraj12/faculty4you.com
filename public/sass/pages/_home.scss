@@ -122,19 +122,19 @@
     // border-bottom: 1px solid #cacaca;
     // background-color: #e9e9e9;
     @media(min-width: 769px){
-      width: 60%;
+      // width: 60%;
     }
 
     .wrap-search-home {
       // border-bottom: 2px solid rgba(204, 67, 161, 1);
       // @include post-head-5;
-      padding-bottom: 3rem;
+      padding: 3rem 0;
     }
 
     .search {
       &-tab {
         ul {
-          width: 50%;
+          width: 40%;
           margin: 0 auto;
           display: flex;
           flex-direction: row;
@@ -143,17 +143,17 @@
 
           li {
             width: 50%;
-            padding: 2rem 0;
+            padding: 1rem 0;
             // border-top: 2px solid rgba(204, 67, 161, 1);
             text-align: center;
             font-size: 2rem;
-            // color: $color-white;
             background-color: #e4e4e4;
           }
 
           .not-active {
             // @include post-head-5;
-            background-color: #d1d1d1;
+            color: $color-white;
+            background-color: $color-primary;
           }
         }
 
