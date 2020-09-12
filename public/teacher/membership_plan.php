@@ -45,6 +45,7 @@
 
             <section class="wrap-container">
                 <div class="row">
+                <!-- offset-sm-1 -->
                     <div class="col-sm-4">
                         <article class="member-block member-silver">
                             <header class="member__header">
