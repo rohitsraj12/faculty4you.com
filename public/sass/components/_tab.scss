@@ -41,14 +41,17 @@
 }
 
 .tab button:hover {
-  color: rgba($color-btn-1, 1);
+  // color: rgba($color-btn-1, 1);
+  background: $color-primary-button-hover;
+  color: $color-white;
+  //
 
   @media (min-width: 583px) {
-    border-left: 2px solid $color-btn-1;
+    // border-left: 2px solid $color-btn-1;
   }
 
   @media (max-width: 582px) {
-    border-bottom: 2px solid $color-btn-1;
+    // border-bottom: 2px solid $color-btn-1;
   }
 }
 
@@ -59,15 +62,17 @@
 .tab button.active {
   // background: $color-gray-light-2;
   // color: rgba($color-btn-1, 1);
-  @include post-head-3;
+  // @include post-head-3;
+  background: $color-primary-button-hover;
+
   color: $color-white;
   font-weight: 500;
 
   @media (min-width: 583px) {
-    border-left: 2px solid $color-btn-1;
+    // border-left: 2px solid $color-btn-1;
   }
 
   @media (max-width: 582px) {
-    border-bottom: 2px solid $color-btn-1;
+    // border-bottom: 2px solid $color-btn-1;
   }
 }
