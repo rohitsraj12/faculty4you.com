@@ -1,10 +1,12 @@
 .body {
   &-banner {
     width: 100%;
+    padding: 5rem 0;
     // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23d6d6d6' fill-opacity='0.38'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
     position: relative;
     // height: 40vh;
-    background-color: #e9ecef;
+    // background-color: #e9ecef;
+    @include bg-1;
 
     @media only screen and (orientation: portrait) {
       // height: 100vh;
@@ -15,12 +17,12 @@
     }
 
     @media (max-width: 582px) {
-      height: 100vh;
+      // height: 100vh;
     }
     .banner {
       &-content {
         width: 60%;
-        height: 40vh;
+        // height: 40vh;
         margin: 0 0 0 5%;
         padding-top: 2rem;
         display: flex;
@@ -31,12 +33,12 @@
 
         @media (min-width: 769px) {
           width: 60%;
-          height: 60vh;
+          // height: 60vh;
           margin: 0 0 0 5%;
         }
         @media (max-width: 768px) {
           width: 90%;
-          height: 60vh;
+          // height: 60vh;
           margin: 0 auto;
         }
 
@@ -126,14 +128,14 @@
   position: relative;
 
   @media only screen and (orientation: portrait) {
-    height: 100vh;
+    // height: 100vh;
   }
 
   @media only screen and (orientation: landscape) {
     height: 450px;
   }
   @media (max-width: 583px) {
-    height: 40vh;
+    // height: 40vh;
   }
 
   &::after {
@@ -154,7 +156,7 @@
   .banner {
     &-content {
       width: 50%;
-      height: 100vh;
+      // height: 100vh;
       padding-top: 15rem;
 
       &::before {
