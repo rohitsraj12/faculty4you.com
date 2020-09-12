@@ -95,7 +95,7 @@
                         <header class="article-profile__header p-4 h3 bg-dark text-light  m-0">
                             Personal detail
                         </header>
-                        <div class="article-body p-4 bg-light border">
+                        <div class="article-body p-4 border">
                         
                         <div class="article-info">
                                 <ul class="row">
