@@ -49,7 +49,7 @@ strong {
 .body-container {
   @include bg-1;
   @media (min-width: 583px) {
-    padding: 10rem 0;
+    // padding: 10rem 0;
 
   }
   @media (max-width: 582px) {
