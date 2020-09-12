@@ -121,7 +121,8 @@
     padding: 2rem 0;
     // border-bottom: 1px solid #cacaca;
     // background-color: #e9e9e9;
-    @media(min-width: 769px){
+    z-index: 10;
+    @media (min-width: 769px) {
       // width: 60%;
     }
 
