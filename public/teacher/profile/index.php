@@ -105,7 +105,7 @@
                         <header class="p-4 h3 article-profile__header text-light  m-0">
                             Personal detail
                         </header>
-                        <div class="article-body p-4 bg-light">
+                        <div class="article-body p-4">
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Name</li>
