@@ -27,7 +27,7 @@
                                 Search for  students
                             </li>
                             <li  class="form-tab not-active" data-form="teacher-form">
-                                Search for triners
+                                Search for trainers
                             </li>
                         </ul>
                     </div>
@@ -44,7 +44,7 @@
                                         <select id="inputState" name="city" class="form-control">
                                             <option selected>Choose...</option>
                                             <?php 
-                                                // #task city data fetch
+                                            
                                                 $city_query = "SELECT * FROM cities";
                                                 $result = mysqli_query($conn, $city_query);
                                                 while( $row = mysqli_fetch_assoc($result)){
@@ -75,7 +75,6 @@
                                         <select id="inputState" name="city" class="form-control">
                                             <option selected>Choose...</option>
                                             <?php 
-                                                // #task city data fetch
                                                 $city_query = "SELECT * FROM cities";
                                                 $result = mysqli_query($conn, $city_query);
                                                 while( $row = mysqli_fetch_assoc($result)){
@@ -98,6 +97,9 @@
                     </div>
                 </div>
             </section>
+            <div class="banner-image">
+                <img src="<?php base_url();?>img/banner/banner-lady.png" class="banner__image" alt="<?php echo $page_title;?>">
+            </div>
 </div>
 <!-- end banner wrap -->
 </div>
