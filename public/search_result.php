@@ -284,13 +284,13 @@
                                         while($row = mysqli_fetch_assoc($result)){
 
                                     ?>
-                                    <article class="mb-5 px-5 py-3 border bg-light" >
-                                        <header class="border-bottom">
-                                            <h1 class="h1 py-3 text-dark font-weight-normal">
+                                    <article class="mt-3 post-sections" >
+                                        <header class="post-header">
+                                            <h1 class="">
                                                 <?php echo $row["post_title"];?>
                                             </h1>
                                         </header>
-                                        <div class="body mb-4">
+                                        <div class="post-body mb-4">
                                             <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                 <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                 <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
@@ -301,8 +301,8 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="pb-3">
-                                            <a href="<?php base_url();?>teacher/registration.php" style="font-size: 1.6rem" class="py-2 px-4 btn btn-primary">Sign up</a>
+                                        <footer class="post-footer pb-3">
+                                            <a href="<?php base_url();?>teacher/registration.php" style="font-size: 1.6rem" class="active-member-btn btn btn-link">Sign up</a>
                                             <!-- <a href="<?php base_url();?>teacher/login.php">log in</a> -->
                                         </footer>
                                     </article>
