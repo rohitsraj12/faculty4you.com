@@ -135,8 +135,8 @@ function trainerValidation() {
 function studentValidation() {
   //first name
   if (name[0].value == "") {
-    // errMsg(name[0], "first name");
-    alert("name");
+    errMsg(name[0], "first name");
+    // alert("name");
     return false;
   }
 
@@ -249,53 +249,57 @@ function errIcon(input) {
 }
 // registration validation
 function registration() {
-  var regName = document.getElementById("user");
-  var regEmail = document.getElementById("email");
-  var tel = document.getElementById("telephone");
-  var regPassword = document.getElementById("password");
-  var repass = document.getElementById("re-password");
-  var input = document.getElementsByTagName("input");
+  var regName = document.getElementByclass("reg_user");
+  var regTel = document.getElementByclass("reg_tel");
+  var regEmail = document.getElementByclass("reg_email");
+  var regPassword = document.getElementByclass("reg_password");
+  var regRepass = document.getElementByclass("reg_repass");
+  // var input = document.getElementsByTagName("input");
 
-  if (
-    input[0].value == "" ||
-    input[1].value == "" ||
-    input[2].value == "" ||
-    input[3].value == "" ||
-    input[4].value == ""
-  ) {
-    errIcon(input[0]);
-    errIcon(input[1]);
-    errIcon(input[2]);
-    errIcon(input[3]);
-    errIcon(input[4]);
+  if (regName[0].value = "" || 
+  regTel[0].value = "" || 
+  regEmail[0].value = "" ||
+  regPassword[0].value = "" ||
+  regRepass[0].value = ""
+) {
+    errIcon(regName[0]);
+    errIcon(regTel[0]);
+    errIcon(regEmail[0]);
+    errIcon(regPassword[0]);
+    errIcon(regRepass[0]);
     return false;
   }
 
-  if (!telExp.test(input[1].value)) {
-    errIcon(input[1]);
+  if(!textOnlyExp.test(regName[0].value)){
+    errIcon(regName[0]);
+    return false;
+  }
+  if (!telExp.test(regTel[0].value)) {
+    errIcon(regTel[0]);
     return false;
   }
 
-  if (!emailExp.test(input[2].value)) {
-    errIcon(input[2]);
+  if (!emailExp.test(regEmail[0].value)) {
+    errIcon(regEmail[0]);
     return false;
   }
 
   //password
 
-  // if(regPassword.value.length <= 6){
-  //     errIcon(regPassword);
-  //     return false;
+  if(regPassword[0].value.length <= 6){
+      errIcon(regPassword[0]);
+      return false;
 
-  // }else if(regPassword.value.length >= 15){
-  //     errIcon(regPassword);
-  //     return false;
-  // }else if(regPassword.value !== repass.value){
-  //     errIcon(repass);
-  //     return false;
+  }else if(regPassword[0].value.length >= 15){
+      errIcon(regPassword[0]);
+      return false;
+  }
+  if(regPassword[0].value !== regRepass[0].value){
+      errIcon(regRepass[0]);
+      return false;
   // }else{
   //     return true;
-  // }
+  }
   else {
     return true;
   }
