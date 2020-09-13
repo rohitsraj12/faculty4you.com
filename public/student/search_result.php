@@ -29,7 +29,7 @@
     <main>
     <section class="section-search-result wrap-container">
                     <div class="section-header u-center-text">
-                        <heeader class="text-primary-h"> 
+                        <heeader class="text-primary-h-3"> 
                             Search result
                         </header>
                     </div>
