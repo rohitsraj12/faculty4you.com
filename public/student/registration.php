@@ -83,19 +83,23 @@
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input type="text" name="user_name" id="user_name" placeholder="user name" />
+                            <input type="text" name="user_name" class="reg_user" placeholder="user name" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="email" type="email" id="email" placeholder="email" />
+                            <input type="tel" name="telephone" class="reg_tel" placeholder="phone number"> 
+                            <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input name="email" type="email" class="reg_email" placeholder="email" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="password" type="password" id="password" placeholder="password" />
+                            <input name="password" type="password" class="reg_password" placeholder="password" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="re_password" type="password" id="re-password" placeholder="repeat password">
+                            <input name="re_password" type="password" class="reg_repass" placeholder="repeat password">
                             <button  name="submit-register" >Sign Up</button>
                         </form>
                     </div>
