@@ -125,7 +125,7 @@
                             
                         </div>
                         <div class="overlay-panel overlay-left">
-                        <h1>Hello, Trainers!</h1>
+                        <h1>Hello, Tutor!</h1>
                             <p class="">If you are new to <strong>Faculty for you</strong>.</p>
                             <button class="ghost" id="signUp">Sign Up</button>
                         
