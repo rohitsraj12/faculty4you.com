@@ -8,16 +8,16 @@
     // background-color: #e9ecef;
     @include bg-1;
 
-    @media only screen and (orientation: portrait) {
-      // height: 100vh;
+    @media (max-width: 582px) and (orientation: portrait) {
+      height: 100vh;
     }
 
     @media only screen and (orientation: landscape) {
-      min-height: 450px;
+      // min-height: 450px;
     }
 
     @media (max-width: 582px) {
-      // height: 100vh;
+      height: 100vh;
     }
     .banner {
       &-content {
@@ -33,7 +33,7 @@
 
         @media (min-width: 769px) {
           width: 60%;
-          // height: 60vh;
+          height: 60vh;
           margin: 0 0 0 5%;
         }
         @media (max-width: 768px) {
@@ -103,20 +103,23 @@
         z-index: 2;
         text-align: right;
         @media (min-width: 583px) {
-          width: auto;
-          max-height: 450px;
-          // right: 5%;
+          padding-top: 6rem;
+          // width: auto;
+          max-height: 650px;
+          right: 0;
           // bottom: 10%;
           top: 0;
+          bottom: 0;
         }
 
         @media (max-width: 582px) {
           // width: 70%;
           // left: 15%;
           // bottom: 40%;
+          display: none;
         }
         img {
-          height: 40rem;
+          height: 59rem;
           width: auto;
         }
       }
