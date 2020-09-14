@@ -1,8 +1,8 @@
-
-.section-member, .section-forgotpwd {
+.section-member,
+.section-forgotpwd {
   width: 100%;
-  height: 70vh;
-  margin: -20px 0 50px;
+  height: 81vh;
+  margin: 20px 0 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,21 +11,22 @@
   &::after {
     content: "";
     width: 100%;
-    height: 70vh;
-    background-image: url("../img/login/login.svg");
+    height: 81vh;
+    background-image: url("../img/login/login_2.png");
     background-repeat: no-repeat;
     background-position: left top;
-    background-size: 500px 300px;
-    opacity: 0.6;
+    background-size: 540px 540px;
+    // opacity: 0.6;
     position: absolute;
-    top: 100px;
-    left: 5%;
+    top: 25%;
+    left: 3%;
   }
 
   h1 {
     margin: 0;
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
+    padding-bottom: 10px;
   }
 
   h2 {
@@ -40,7 +41,7 @@
     font-weight: 100;
     line-height: 20px;
     letter-spacing: 0.5px;
-   }
+  }
 
   span {
     font-size: 12px;
@@ -48,7 +49,7 @@
 
   a {
     margin: 15px 0;
-    color: #333;
+    // color: #333;
     font-size: 14px;
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
@@ -77,18 +78,50 @@
   button.ghost {
     border-color: #ffffff;
     background-color: transparent;
+    display: inline-block;
+    margin-top: 20px;
   }
 
- 
   .form-container button {
-
-    background: rgba(170,0,0,1);
-    background: -moz-radial-gradient(center, ellipse cover, rgba(170,0,0,1) 0%, rgba(102,0,0,1) 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(170,0,0,1)), color-stop(100%, rgba(102,0,0,1)));
-    background: -webkit-radial-gradient(center, ellipse cover, rgba(170,0,0,1) 0%, rgba(102,0,0,1) 100%);
-    background: -o-radial-gradient(center, ellipse cover, rgba(170,0,0,1) 0%, rgba(102,0,0,1) 100%);
-    background: -ms-radial-gradient(center, ellipse cover, rgba(170,0,0,1) 0%, rgba(102,0,0,1) 100%);
-    background: radial-gradient(ellipse at center, rgba(170,0,0,1) 0%, rgba(102,0,0,1) 100%);
+    background: rgba(170, 0, 0, 1);
+    background: -moz-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(170, 0, 0, 1) 0%,
+      rgba(102, 0, 0, 1) 100%
+    );
+    background: -webkit-gradient(
+      radial,
+      center center,
+      0px,
+      center center,
+      100%,
+      color-stop(0%, rgba(170, 0, 0, 1)),
+      color-stop(100%, rgba(102, 0, 0, 1))
+    );
+    background: -webkit-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(170, 0, 0, 1) 0%,
+      rgba(102, 0, 0, 1) 100%
+    );
+    background: -o-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(170, 0, 0, 1) 0%,
+      rgba(102, 0, 0, 1) 100%
+    );
+    background: -ms-radial-gradient(
+      center,
+      ellipse cover,
+      rgba(170, 0, 0, 1) 0%,
+      rgba(102, 0, 0, 1) 100%
+    );
+    background: radial-gradient(
+      ellipse at center,
+      rgba(170, 0, 0, 1) 0%,
+      rgba(102, 0, 0, 1) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa0000', endColorstr='#660000', GradientType=1 );
   }
   form {
@@ -100,7 +133,6 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-
   }
 
   input {
@@ -109,6 +141,8 @@
     width: 100%;
     border: transparent;
     background-color: #eee;
+    top: 100px;
+    margin-left: 38%;
   }
 
   .container {
@@ -120,10 +154,8 @@
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     position: relative;
     overflow: hidden;
-   top: 100px;
+    top: 100px;
   }
-
-  
 
   .form-container {
     transition: all 0.6s ease-in-out;
@@ -137,7 +169,6 @@
     width: 50%;
     z-index: 2;
   }
-
 
   .container.right-panel-active .sign-in-container {
     transform: translateX(100%);
@@ -181,8 +212,7 @@
     transition: transform 0.6s ease-in-out;
     z-index: 100;
 
-    &::after{
-
+    &::after {
     }
   }
 
@@ -197,15 +227,39 @@
 	background-repeat: no-repeat;
     background-size: cover; */
 
-   
-background: rgba(102,0,0,1);
-background: -moz-linear-gradient(top, rgba(102,0,0,1) 0%, rgba(170,0,0,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,0,0,1)), color-stop(100%, rgba(170,0,0,1)));
-background: -webkit-linear-gradient(top, rgba(102,0,0,1) 0%, rgba(170,0,0,1) 100%);
-background: -o-linear-gradient(top, rgba(102,0,0,1) 0%, rgba(170,0,0,1) 100%);
-background: -ms-linear-gradient(top, rgba(102,0,0,1) 0%, rgba(170,0,0,1) 100%);
-background: linear-gradient(to bottom, rgba(102,0,0,1) 0%, rgba(170,0,0,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660000', endColorstr='#aa0000', GradientType=0 );
+    background: rgba(102, 0, 0, 1);
+    background: -moz-linear-gradient(
+      top,
+      rgba(102, 0, 0, 1) 0%,
+      rgba(170, 0, 0, 1) 100%
+    );
+    background: -webkit-gradient(
+      left top,
+      left bottom,
+      color-stop(0%, rgba(102, 0, 0, 1)),
+      color-stop(100%, rgba(170, 0, 0, 1))
+    );
+    background: -webkit-linear-gradient(
+      top,
+      rgba(102, 0, 0, 1) 0%,
+      rgba(170, 0, 0, 1) 100%
+    );
+    background: -o-linear-gradient(
+      top,
+      rgba(102, 0, 0, 1) 0%,
+      rgba(170, 0, 0, 1) 100%
+    );
+    background: -ms-linear-gradient(
+      top,
+      rgba(102, 0, 0, 1) 0%,
+      rgba(170, 0, 0, 1) 100%
+    );
+    background: linear-gradient(
+      to bottom,
+      rgba(102, 0, 0, 1) 0%,
+      rgba(170, 0, 0, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660000', endColorstr='#aa0000', GradientType=0 );
     background-position: 0 0;
     color: #ffffff;
     position: relative;
@@ -234,31 +288,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660000', end
     transform: translateX(0);
     transition: transform 0.6s ease-in-out;
 
-    h1{
-    position: relative;
-    padding: 0 3rem 20rem;
-  
-      &::after{
+    h1 {
+      position: relative;
+      padding: 0 3rem 20rem;
+
+      &::after {
         content: "";
         margin: 0 auto;
         width: 100%;
-        height: 20rem;
-        background-image: url("../img/login/login.svg");
-        background-position: 3rem center;
+        height: 18rem;
+        background-image: url("../img/login/login_1.png");
+        background-position: 1rem center;
         background-repeat: no-repeat;
-        background-size: 150px 150px;
+        background-size: 200px 140px;
         position: absolute;
         bottom: 0;
         left: 0;
       }
     }
-    p{
+    p {
       color: $color-white;
     }
-  
   }
-
-
 
   .overlay-left {
     transform: translateX(-20%);
@@ -310,7 +361,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660000', end
   }
 }
 
-
 // password
 .section-forgotpwd {
   .container {
@@ -322,7 +372,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660000', end
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
     overflow: hidden;
     z-index: 90;
-  
   }
   .success_message {
     padding: 1.5rem 0;
@@ -332,40 +381,49 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#660000', end
     position: absolute;
     top: 0;
 
-  p{
-    font:{
-      family: $font-primary;
-      size: 1.6rem;
+    p {
+      font: {
+        family: $font-primary;
+        size: 1.6rem;
+      }
+      color: $color-white;
     }
-    color: $color-white;
-    
   }
-  }
-  .password-container{
+  .password-container {
     width: 80%;
     left: 10%;
     z-index: 9;
-    input{
+    input {
       margin-bottom: 35px;
     }
   }
 }
 
-.social-container p{
+.social-container p {
   padding: 2rem 0 1rem;
   text-align: left;
-
 }
 
 //reset
 
-.section-setpwd{
-  h1{
+.section-setpwd {
+  h1 {
     padding: 4rem;
   }
 }
 
 //teacher login
-.sign-up-input input, .sign-in-input input{
+.sign-up-input input,
+.sign-in-input input {
   font-size: 1.5rem !important;
+}
+.forgot_password {
+  color: $color-primary;
+  font-weight: 600;
+}
+
+.forgot_password:hover {
+  color: $color-primary;
+  opacity: 0.7;
+  text-decoration: none;
 }
