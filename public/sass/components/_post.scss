@@ -43,8 +43,8 @@
   }
 
   &-header {
-    background: $color-primary-button-hover;
-    // @include post-head-3;
+    // background: $color-primary-button-hover;
+    @include post-title;
     @extend .container-header;
     padding: 1rem 2rem;
 
@@ -107,10 +107,11 @@
       padding-bottom: 1rem;
       border-bottom: 1px dotted $color-primary;
       margin-bottom: 2rem;
-      color: #222;
+      color: $color-primary-text;
 
       i {
-        color: #888;
+        color: #555;
+        padding-right: 0.5rem;
       }
     }
   }
@@ -123,4 +124,14 @@
 }
 .container-bg {
   @include bg-1;
+}
+.active-member-btn {
+  color: $color-primary;
+  @inlcude hover-transition(400ms);
+  text-transform: capitalize;
+  font-size: 1.7rem;
+}
+
+.active-member-btn:hover {
+  opacity: 0.7;
 }
