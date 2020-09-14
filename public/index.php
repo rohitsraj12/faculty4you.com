@@ -15,11 +15,11 @@
                     <section class="section-student">
                         <div class="section-header u-center-text">
                             <heeader class="text-primary-h-3"> 
-                                How <strong class="highlight-primary">Faculty for you</strong> works for students
+                                How <strong class="highlight-primary">Faculty for you</strong> works for <strong class="highlight-primary">Students</strong>
                             </header>
                             <div class="sub-heading wrap-container">
                                 <h6 class="text-sub-primary">
-                                    Register <strong class="f-link">facultyforyou.com</strong> and connect with top <strong>academic</strong> / <strong>non-academic trainers</strong> on the platform.
+                                    Register <strong class="f-link">facultyforyou.com</strong> and connect with top <strong>academic</strong> / <strong>non-academic tutors</strong> on the platform.
                                 </h6>
                             </div>
                             
@@ -33,7 +33,7 @@
                             <article class="article-block">
                                 <figure class="student-section__figure">
                                     <span>step 1</span>
-                                    <img src="<?php base_url();?>img/member/register.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/01.png" alt="">
 
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -48,7 +48,7 @@
                             <article class="article-block" >
                                 <figure class="student-section__figure">
                                     <span>step 2</span>
-                                    <img src="<?php base_url();?>img/member/post-requirement.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/02.jpg" alt="">
 
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -56,14 +56,14 @@
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                        Sign in; create your profile and post ypur requirement/s.
+                                        Sign in; create your profile and post your requirement/s.
                                     </p>
                                 </div>
                             </article>
                             <article class="article-block">
                                 <figure class="student-section__figure">
                                 <span>step 3</span>
-                                    <img src="<?php base_url();?>img/member/schedule.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/03.png" alt="">
 
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -71,7 +71,7 @@
                                 </header>
                                 <div class="article-body student-body">
                                     <p>
-                                        You can choose the top trainers of your requirement/s from <strong class="f-link">Faculty for you</strong>.
+                                        You can choose the top tutors of your requirement/s from <strong class="f-link">Faculty for you</strong>.
                                     </p>
                                 </div>
                             </article>
@@ -86,7 +86,7 @@
                         
                         <div class="section-header u-center-text"  >
                             <heeader class="text-primary-h-3"> 
-                                How <strong class="highlight-primary">Faculty for you</strong> works for <strong class="highlight-primary">Trainer</strong>
+                                How <strong class="highlight-primary">Faculty for you</strong> works for <strong class="highlight-primary">Tutors</strong>
                             </header>
                             <div class="sub-heading wrap-container">
                                 <h6 class="text-sub-primary">
@@ -105,7 +105,7 @@
                             <article class="article-block">
                                 <figure class="student-section__figure">
                                 <span>step 1</span>
-                                    <img src="<?php base_url();?>img/member/register.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/t1.png" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <!-- <h4 class="text-secondary-h">Register</h4> -->
@@ -119,7 +119,7 @@
                             <article class="article-block" >
                                 <figure class="student-section__figure">
                                 <span>step 2</span>
-                                    <img src="<?php base_url();?>img/member/member.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/t2.jpg" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <!-- <h4 class="text-secondary-h">Activate membership</h4> -->
@@ -133,7 +133,7 @@
                             <article class="article-block" >
                                 <figure class="student-section__figure">
                                 <span>step 3</span>
-                                    <img src="<?php base_url();?>img/member/find-student.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/t3.png" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <!-- <h4 class="text-secondary-h">Find students</h4> -->
@@ -147,7 +147,7 @@
                             <article class="article-block">
                                 <figure class="student-section__figure">
                                 <span>step 4</span>
-                                    <img src="<?php base_url();?>img/member/schedule.svg" alt="">
+                                    <img src="<?php base_url();?>img/member/t4.jpg" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <!-- <h4 class="text-secondary-h">Schedule lesson</h4> -->
@@ -168,7 +168,7 @@
                     <section class="section-data py-5 text-light">
                         <div class="wrap-container row text-center py-5">
                             <article class="col-sm-4 py-5"  >
-                                <p class="text-white pb-3" style = "font-size : 2rem">Registered students</p>
+                                <p class="text-white pb-3" style = "font-size : 2rem">Registered Students</p>
                                 <p class="h1 text-white" style="font-size: 4.8rem">
                                     <?php
                                         $query = "SELECT * FROM std";
@@ -180,7 +180,7 @@
                                 </p>
                             </article>
                             <article class="col-sm-4 py-5"  >
-                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Registered trainers</p>
+                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Registered Tutors</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
                                         <?php
@@ -192,7 +192,7 @@
                                 </p>
                             </article>
                             <article class="col-sm-4 py-5"  >
-                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's posts</p>
+                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's Posts</p>
                             <p class="h1 text-white" style="font-size: 4.8rem">
 
                                         <?php
@@ -280,7 +280,7 @@
                         </div> -->
                     </section>
 
-                    <section class="section-partner">
+                    <!-- <section class="section-partner">
                         
                         <div class="section-header u-center-text" >
                             <heeader class="text-primary-h-3"> 
@@ -314,7 +314,7 @@
                                
                             </article>
                         </section>
-                    </section>
+                    </section> -->
                 </main>
                 <!-- end page home -->
             </div>
