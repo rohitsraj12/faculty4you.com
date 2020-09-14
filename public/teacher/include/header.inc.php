@@ -47,7 +47,7 @@
                             <div class="wrap-container">
                                 <ul class="">
                                 
-                                <li class="social__list pt-2">Share</li>
+                                <li class="social__list pt-2">Share : </li>
                                     <?php
                                         foreach($social_media_share as $share_name => $share_url){
                                     ?>
@@ -82,7 +82,7 @@
                                 <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">Profile</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                             </ul>
-                            <div class="nav-social-media">
+                            <!-- <div class="nav-social-media">
                                         <ul>
                                             <li class="nav-social__list text-light">Follow us : </li>
                                         <?php
@@ -93,7 +93,7 @@
                                         }
                                         ?>
                                     </ul>
-                            </div>
+                            </div> -->
                         </nav>
                     </div>
                    
