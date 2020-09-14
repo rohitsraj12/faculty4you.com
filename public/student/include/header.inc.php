@@ -68,7 +68,11 @@
                                     </a>
                                 </div>
                                 <!-- end header brand -->
-                                
+                                <div class="section__header-search">
+                                    <?php
+                                        include('include/search_engine.php');
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
