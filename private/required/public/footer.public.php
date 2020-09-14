@@ -7,9 +7,9 @@
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             
-                            faculty4you
+                            facultyforyou
                         </header>
-                        <p class="text-light h4">we provide top <strong>trainers</strong> for <strong>academic/non-academic</strong> and <strong>online/offline</strong> activities. <strong>Faculty for you</strong>  is the best platform which helps you in reaching your destination.</p>
+                        <p class="text-light h4">We provide top <strong>tutors</strong> for <strong>academic/non-academic</strong> and <strong>online/offline</strong> activities. <strong>Faculty for you</strong>  is the best platform which helps you in reaching your destination.</p>
                     </article>
                 </section>
                 <section class="col-sm-5">
@@ -28,8 +28,8 @@
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/login.php">student login</a></li>
                             </ul>
                             <ul class="col-sm-4">
-                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/registration.php">teacher registration</a></li>
-                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/login.php">teacher login</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/registration.php">tutor registration</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/login.php">tutor login</a></li>
                             </ul>
                         </div>
                      
