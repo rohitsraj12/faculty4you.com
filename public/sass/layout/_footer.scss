@@ -1,6 +1,7 @@
 .body {
   &-footer {
     padding-top: 15rem;
+    margin-top: -94px;
     clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
     background-color: $color-primary-bg-3;
 
@@ -42,18 +43,16 @@
   }
 }
 
-.social-media{
+.social-media {
   ul {
-    li{
+    li {
       margin-right: 2rem;
       display: inline;
-     
-      
-      img{
+
+      img {
         height: 2rem;
         width: 2rem;
       }
     }
-   
   }
 }
