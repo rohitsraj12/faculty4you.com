@@ -98,6 +98,18 @@
 label,
 .label {
   font-size: 1.5rem;
+  color: #111;
+}
+
+li {
+  color: #111;
+  font-size: 1.7rem;
+  line-height: 26px;
+}
+address {
+  color: #111;
+  font-size: 1.7rem;
+  line-height: 26px;
 }
 
 input,
@@ -114,14 +126,14 @@ input,
   color: $color-gray-dark-1;
 }
 
-.wrap-form{
+.wrap-form {
   position: relative;
-  label{
+  label {
     padding-left: 0.5rem;
   }
 }
 
-.error-msg{
+.error-msg {
   // display: none;
   color: #ff7575;
   font-size: 1.6rem;
@@ -129,12 +141,12 @@ input,
   right: 1rem;
   top: 0;
 }
-.error-icon{
+.error-icon {
   display: none;
   width: 100%;
   height: 1px;
   position: relative;
-  i{
+  i {
     position: absolute;
     top: 2.5rem;
     color: red;
@@ -146,7 +158,11 @@ input,
   padding: 0.8rem 4rem;
 }
 
-.section__form-update article{
+.section__form-update article {
   @include shadow;
   @include radius-direction(1rem, 1rem, 0, 0);
+}
+
+label {
+  text-transform: capitalize;
 }
