@@ -37,18 +37,34 @@
         <div class="container pt-5">
             <form action="include/log_in.inc.php" method="post" onsubmit="return validation()" class="w-50 m-auto bg-light border p-5">
             
-                <div class="form-group">
-                    <label for="user_name">Email address</label>
-                    <input type="text" id="user_name"  placeholder="User name / Email" name="email" />
+                <div class="form-group row">
+                    <div class="col-4">
+                        <label for="user_name">Email address</label>
+                    </div>
+                    <div class="col-8">
+                        <input type="text" id="user_name" class="w-100"  placeholder="User name / Email" name="email" />
+                    </div>
                     <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                 </div>
 
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Password" name="password"/>
+                <div class="form-group row">
+                
+                    <div class="col-4">
+                        <label for="password">Password</label>
+                    </div>
+                    
+                    <div class="col-8">
+                        <input type="password" id="password" class="w-100" placeholder="Password" name="password"/>
+                    </div>
+
                 </div>
                 
-                <button type="submit" class="btn btn-primary" name="submit_login">Login</button>
+                <div class="row">
+                    <div class="offset-md-6 col-6">
+                        <button type="submit" class="btn btn-primary w-100 " name="submit_login">Login</button>
+                    </div>
+                </div>
+                
             </form>
         </div>
     </div>
