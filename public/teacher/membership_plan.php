@@ -50,9 +50,10 @@
                         <article class="member-block member-silver">
                             <header class="member__header">
                                 <h1>Faculty for you</h1>
-                                <strong>Silver Membership</strong>
-                                
-                                <p>Rs <em>500</em></p>
+                                <div class="wrap-price">
+                                    <strong>Silver Membership</strong>
+                                    <p>Rs <em>500</em></p>
+                                </div>
                             </header>
                             <div class="member-body">
 
@@ -71,9 +72,10 @@
                         <article class="member-block member-gold">
                             <header class="member__header">
                             <h1>Faculty for you</h1>
-                                <strong>Gold Membership</strong>
-                                
-                                <p>Rs <em>100</em></p>
+                                <div class="wrap-price">
+                                    <strong>Gold Membership</strong>
+                                    <p>Rs <em>1000</em></p>
+                                </div>
                                 </header>
                             <div class="member-body">
                                 <ul>
@@ -92,9 +94,10 @@
                             <header class="member__header">
                             
                             <h1>Faculty for you</h1>
+                            <div class="wrap-price">
                                 <strong>Platinum Membership</strong>
-                               
                                 <p>Rs <em>1500</em></p>
+                            </div>
                                 </header>
                             <div class="member-body">
                                 <ul>
