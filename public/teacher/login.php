@@ -38,7 +38,7 @@
                 <header class="wrap-container">
                     <div class="brand">
                         <a href="<?php base_url();?>index.php">
-                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
+                            <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
                         </a>
                     </div>
                     <div class="nav-social-media">
@@ -77,29 +77,28 @@
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
-                        <input type="text" name="user_name" id="user_name" placeholder="user name" />
+                        <input type="text" name="user_name" class="reg" placeholder="user name" />
+                        <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
+                        <input type="tel" name="telephone" class="reg" placeholder="phone number">
+                        <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
+                        <input name="email" type="email" class="reg" placeholder="email" />
+                            <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
+                        <input name="password" type="password" class="reg regPwd" placeholder="password" />
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
-                        <input name="email" type="email" id="email" placeholder="email" />
-                          <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input type="tel" name="telephone" id="telephone" placeholder="phone number">
-                          <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input type="text">
-                        <input name="password" type="password" id="password" placeholder="password" />
-                          <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input name="re_password" type="password" id="re-password" placeholder="repeat password">
+                        <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
                         <button  name="submit-register" >Sign Up</button>
                     </form>
                 </div>
                 <div class="form-container sign-in-container sign-in-input">
-                    <form action="include/login.teacher.inc.php" method="post" onsubmit="return login()">
+                    <form action="include/login.teacher.inc.php" method="post" onsubmit="return logIn()">
                         <h1>Welcome back</h1>
                         <div class="social-container">
                             <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -107,10 +106,16 @@
                             <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                         </div>
                         <!-- <span>or use your account</span> -->
-                        <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
-                        <input type="password" placeholder="Password" id="password" name="password"/>
+                        <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
+                        <input type="text" class="login"  placeholder="User name / Email"  name="email" />
+                        <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        </span>
+                        <input type="password" placeholder="Password" class="login" name="password"/>
                         <a href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
-                        <button name="login-submit">Sign In</button>
+                        <button name="login-submit">log In</button>
                     </form>
                 </div>
                 <div class="overlay-container">
@@ -121,7 +126,7 @@
                             <button class="ghost" id="signIn">Sign In</button>
                         </div>
                         <div class="overlay-panel overlay-right">
-                            <h1>Hello, Trainers!</h1>
+                            <h1>Hello, Tutor!</h1>
                             <p  class="text-light">If you are new to <strong>Faculty for you</strong>.</p>
                             <button class="ghost" id="signUp">Sign Up</button>
                         </div>
@@ -137,7 +142,7 @@
     <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="<?php base_url();?>js/script.js"></script>
-    <script src="<?php base_url();?>js/validation.js"></script>
+    <script src="<?php base_url();?>js/regVal.js"></script>
     
     <script>
         AOS.init();
