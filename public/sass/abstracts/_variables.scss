@@ -19,7 +19,7 @@ $color-gray-light-1: rgb(247, 247, 247);
 $color-gray-light-2: rgb(231, 231, 231);
 
 //button
-$color-primary-button:  linear-gradient(#aa0000, #660000);
+$color-primary-button: linear-gradient(#aa0000, #660000);
 $color-primary-button-hover: linear-gradient(#660000, #aa0000);
 $color-primary-button-border: #550000;
 
@@ -28,12 +28,12 @@ $color-primary-link-hover: #aa0000;
 
 //text color
 $color-primary-header: #222222;
-$color-primary-text: #333333;
+$color-primary-text: #111;
 
 // font variable
 $font-primary: "Lato", sans-serif;
 $font-header-1: "Lato", sans-serif;
-$font-header-2: "Lato", sans-serif; ;
+$font-header-2: "Lato", sans-serif;
 
 //background color
 $color-primary-bg-1: #cecdcd;
