@@ -70,7 +70,11 @@
                                 <!-- end header brand -->
                                 <div class="section__header-search">
                                     <?php
+                                    if($page_title == "home page"){
                                         include('include/search_engine.php');
+                                    } else {
+                                        include('../include/search_engine.php');
+                                    }
                                     ?>
                                 </div>
                             </div>
