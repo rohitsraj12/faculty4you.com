@@ -10,8 +10,9 @@
     // border-top: 2px solid #e3e3e3;
     // border-bottom: 2px solid #e3e3e3;
     @include bg-1;
+    border-bottom: 2px solid $color-primary;
 
-    .section-header{
+    .section-header {
       padding-bottom: 3rem;
     }
     @media (min-width: 583px) {
@@ -26,7 +27,7 @@
         @media (min-width: 583px) {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: space-around;
           flex-wrap: wrap;
         }
         article {
@@ -64,7 +65,7 @@
           //   }
           // }
 
-          &:nth-child(3){
+          &:nth-child(3) {
             figure {
               &::before {
                 @media (min-width: 583px) {
@@ -83,6 +84,8 @@
         }
 
         figure {
+          max-width: 100%;
+          text-align: center;
           @media (min-width: 583px) {
             max-width: 100%;
             margin: 0 auto 4rem;
@@ -93,7 +96,6 @@
             @extend .text-secondary-h;
             text-transform: capitalize;
             @media (min-width: 583px) {
-
               position: absolute;
               bottom: -10rem;
               left: 41%;
@@ -134,7 +136,7 @@
         }
 
         img {
-          width: 100%;
+          width: 100px;
 
           @media (min-width: 582px) {
             height: 10rem;
@@ -152,7 +154,6 @@
       &-block {
         @media (min-width: 583px) {
           width: 33%;
-
         }
 
         @media (max-width: 582px) {
@@ -183,7 +184,7 @@
 }
 .student-info {
   font-size: 1.4rem;
-        li{
-          padding-bottom: 1rem;
-        }
+  li {
+    padding-bottom: 1rem;
+  }
 }
