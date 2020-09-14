@@ -25,13 +25,15 @@
   border: none;
   display: block;
   // background: $color-gray-light-1;
-  color: $color-btn-1;
+  // color: $color-btn-1;
   font-size: 1.6rem;
   font-weight: 400;
   outline: none;
   cursor: pointer;
   transition: 0.3s;
   @include shadow;
+  @include bg-1;
+  text-transform: capitalize;
 
   @media (min-width: 583px) {
     text-align: left;
@@ -44,9 +46,9 @@
 
 .tab button:hover {
   // color: rgba($color-btn-1, 1);
-  background: $color-primary-button-hover;
+  // background: $color-primary-button-hover;
   color: $color-white;
-  //
+  @include post-title;
 
   @media (min-width: 583px) {
     // border-left: 2px solid $color-btn-1;
