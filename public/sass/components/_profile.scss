@@ -7,7 +7,8 @@
       text-align: center;
       // background-color: #d29900;
       // @include bg-1;
-      background: $color-primary-button-hover;
+      // background: $color-primary-button-hover;
+      @include post-title;
 
       height: 120px;
       width: 100%;
@@ -87,5 +88,6 @@
   // @include post-head;
   @extend .container-header;
   // background-color: $color-primary;
-  background: $color-primary-button-hover;
+  // background: $color-primary-button-hover;
+  @include post-title;
 }
