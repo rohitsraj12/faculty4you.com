@@ -19,7 +19,7 @@
 
 .header {
   &-brand {
-    padding: 0 0 1rem ;
+    padding: 0 0 1rem;
     img {
       height: 7rem;
     }
@@ -43,7 +43,7 @@
     padding-top: 0.5rem;
     margin-left: 4rem;
     text-align: right;
-      text-transform: capitalize;
+    text-transform: capitalize;
 
     .fa-user {
       margin-right: 1rem;
@@ -51,17 +51,19 @@
   }
 
   &-top {
-
     .wrap-container {
       display: flex;
       justify-content: flex-end;
-       flex-direction: row;
+      flex-direction: row;
     }
     ul {
       margin: 0;
-      padding: 0 2rem ;
+      padding: 0 2rem;
       height: 43px;
-      background-color: #e7e7e7;
+      // background-color: #e7e7e7;
+      background-color: #f5f5f5;
+      // @include bg-1;
+      @include shadow;
       @media (min-width: 583px) {
         padding: 0.4rem 1.5rem;
         min-width: 130px;
@@ -74,7 +76,6 @@
         border-left: 1px solid #cacaca;
         @include shadow-custom(0, 0, 2px, 0.4);
         // flex-wrap: wrap;
-        
       }
     }
 
@@ -83,7 +84,7 @@
         margin-left: 1.5rem;
         padding-top: 0.2rem;
 
-        &:first-child{
+        &:first-child {
           margin-left: 0;
         }
       }
@@ -128,7 +129,7 @@
     background: $color-primary-button;
     border-top: 1px solid $color-black;
     border-bottom: 1px solid $color-black;
-    & > .wrap-container{
+    & > .wrap-container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -299,16 +300,48 @@
 }
 .nav-social-media {
   @extend .social-media;
-  ul{
-  & :first-child{
-    font-size: 1.5rem;
-   
-  }
-  .log{
-    line-height: 4rem;
-    font-size: 2rem;
-    color: $color-black;
-  }
+  ul {
+    &:first-child {
+      font-size: 1.5rem;
+    }
+    .log {
+      line-height: 4rem;
+      font-size: 2rem;
+      color: $color-black;
+    }
 
-}
+    .main__header {
+      .wrap-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+  }
+  .section__header-search {
+    margin-bottom: 1rem;
+    .header {
+      &-search {
+        position: relative;
+      }
+      &-search__form {
+        width: 100%;
+      }
+
+      &-search__input {
+        width: 300px;
+        padding: 0.4rem;
+      }
+
+      &-search__button {
+        position: absolute;
+        top: 6px;
+        right: 8px;
+        color: $color-primary;
+        font-size: 1.7rem;
+        border: none;
+      }
+    }
+  }
 }
