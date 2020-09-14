@@ -15,7 +15,7 @@
   }
   &__header {
     @include insetShadow;
-    padding: 5rem 0;
+    padding: 5rem 0 0;
     @include radius-direction(10px, 10px, 0, 0);
     color: $color-black;
     @include shadow-text(0, 0, 6px, 0.5);
@@ -25,10 +25,17 @@
       font-weight: 300;
     }
 
+    .wrap-price{ 
+      margin-top: 3rem;
+      padding: 2rem 0;
+      background-color: $color-primary;
+      color: $color-white;
+    }
+
     strong {
       display: inline-block;
       font-size: 2.5rem;
-      line-height: 4.5rem;
+      line-height: 2.5rem;
       padding: 1.6rem 0 1rem;
     }
 
@@ -38,10 +45,11 @@
       font-weight: 300;
     }
     p {
-      padding-top: 3rem;
+      padding-top: 2rem;
+      color: $color-white;
     }
     em {
-      color: $color-primary;
+      // color: $color-primary;
       font-style: normal;
       font-size: 4rem;
       font-weight: 700;
