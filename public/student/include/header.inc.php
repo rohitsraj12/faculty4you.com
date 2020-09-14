@@ -39,34 +39,37 @@
                
                 <header>
                     <div class="header-brand-section">
-                    <div class="header-top">
-                        <div class="wrap-container">
+                        <div class="header-top">
+                            <div class="wrap-container">
 
-                            <ul>
-                            <?php
-                                foreach($social_media_share as $share_name => $share_url){
+                                <ul>
+                                <li class="social__list pt-2">Share:</li>
+                                <?php
+                                    foreach($social_media_share as $share_name => $share_url){
+                                        ?>
+                                        <li class="social__list"><a class="social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
+                                        <?php
+                                    }
+                                    ?>  
+                                    <li class="header-profile">
+                                        <i class="fa fa-user" aria-hidden="true"></i>                        
+                                        <?php 
+                                        echo $student_name;
                                     ?>
-                                    <li class="social__list"><a class="social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
-                                    <?php
-                                }
-                                ?>  
-                                <li class="header-profile">
-                                    <i class="fa fa-user" aria-hidden="true"></i>                        
-                                    <?php 
-                                    echo $student_name;
-                                ?>
-                                    </li>
-                            </ul>
-                        </div>
-                    </div>
-                        <div class="wrap-container">
-                            <div class="header-brand">
-                                <a href="<?php base_url();?>student/index.php">
-                                    <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty4you">
-                                </a>
+                                        </li>
+                                </ul>
                             </div>
-                            <!-- end header brand -->
-                            
+                        </div>
+                        <div class="main__header">
+                            <div class="wrap-container">
+                                <div class="header-brand">
+                                    <a href="<?php base_url();?>student/index.php">
+                                        <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
+                                    </a>
+                                </div>
+                                <!-- end header brand -->
+                                
+                            </div>
                         </div>
                     </div>
                     <div class="header__nav">
@@ -79,7 +82,7 @@
                         </ul>
                         <div class="nav-social-media">
                                         <ul>
-                                            <li class="nav-social__list text-light">Follow us : </li>
+                                            <li class="nav-social__list text-light">Follow us: </li>
                                         <?php
                                         foreach($social_media_follow as $follow_name => $follow_url){
                                         ?>
