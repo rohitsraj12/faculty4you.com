@@ -74,17 +74,17 @@ $(document).ready(function () {
   //tab search
   // console.log("hi");
 
-  $(".form-tab").click(function () {
-    console.log("hi");
-    var selectAtt = $(this).attr("data-form");
+  // $(".form-tab").click(function () {
+  //   console.log("hi");
+  //   var selectAtt = $(this).attr("data-form");
 
-    $(".form-tab").addClass("not-active");
-    $(this).removeClass("not-active");
+  //   $(".form-tab").addClass("not-active");
+  //   $(this).removeClass("not-active");
 
-    // $(".search-form").removeClass(".hide");
-    $(".search-form").hide();
-    $("." + selectAtt).fadeIn();
-  });
+  //   // $(".search-form").removeClass(".hide");
+  //   $(".search-form").hide();
+  //   $("." + selectAtt).fadeIn();
+  // });
 
   // FAQ
   $(".faq__header").click(function () {
@@ -98,7 +98,7 @@ $(document).ready(function () {
     $(this).closest(".student-post").find(".student-details").slideToggle();
   });
 
-  $("").click(function () {
-    $("container").toggleClass("right-panel-active");
-  });
+  // $("").click(function () {
+  //   $("container").toggleClass("right-panel-active");
+  // });
 });

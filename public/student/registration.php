@@ -56,7 +56,7 @@
 
                 <div class="container" id="container">
                     <div class="form-container sign-up-container">
-                    <form action="include/login.student.inc.php" method="post"  onsubmit="return login()">
+                    <form action="include/login.student.inc.php" method="post"  onsubmit="return logIn()">
                             <h1>Welcome back</h1>
                             <div class="social-container">
                                 <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -64,8 +64,14 @@
                                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                             </div>
                             <!-- <span>or use your account</span> -->
-                            <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
-                            <input type="password" id="password" placeholder="Password"  name="password"/>
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input type="text" class="login"  placeholder="User name / Email"  name="email" />
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input type="password" class="login" placeholder="Password"  name="password"/>
                             <a class="forgot_password"  href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
                             <button name="login-submit">Login</button>
                         </form>
@@ -83,19 +89,23 @@
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input type="text" name="user_name" id="user_name" placeholder="user name" />
+                            <input type="text" name="user_name" class="reg" placeholder="user name" />
+                            <span class="error-icon">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input type="tel" name="telephone" class="reg" placeholder="phone number"> 
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="email" type="email" id="email" placeholder="email" />
+                            <input name="email" type="email" class="reg" placeholder="email" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="password" type="password" id="password" placeholder="password" />
+                            <input name="password" type="password" class="reg regPwd" placeholder="password" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="re_password" type="password" id="re-password" placeholder="repeat password">
+                            <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
                             <button  name="submit-register" >Sign Up</button>
                         </form>
                     </div>
@@ -121,7 +131,7 @@
     <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="<?php base_url();?>js/script.js"></script>
-    <script src="<?php base_url();?>js/validation.js"></script>
+    <script src="<?php base_url();?>js/regVal.js"></script>
     
     <script>
         AOS.init();

@@ -242,31 +242,33 @@ function studentPost() {
 }
 
 // function for login registration error message
-function errIcon(input) {
-  // input.previousElementSibling.style.display = "block";
-  // console.log(i);
-  input.style.border = "1px solid #ff7575";
-}
 // registration validation
 function registration() {
+  
   var regName = document.getElementByclass("reg_user");
   var regTel = document.getElementByclass("reg_tel");
   var regEmail = document.getElementByclass("reg_email");
   var regPassword = document.getElementByclass("reg_password");
   var regRepass = document.getElementByclass("reg_repass");
   // var input = document.getElementsByTagName("input");
-
-  if (regName[0].value = "" || 
-  regTel[0].value = "" || 
-  regEmail[0].value = "" ||
-  regPassword[0].value = "" ||
-  regRepass[0].value = ""
+  function errIcon(input) {
+    // input.previousElementSibling.style.display = "block";
+    // console.log(i);
+    input.style.border = "1px solid #ff7575";
+  }
+  
+  if(regName[0].value == "" || 
+  regTel[0].value == "" || 
+  regEmail[0].value == "" ||
+  regPassword[0].value == "" ||
+  regRepass[0].value == ""
 ) {
     errIcon(regName[0]);
     errIcon(regTel[0]);
     errIcon(regEmail[0]);
     errIcon(regPassword[0]);
     errIcon(regRepass[0]);
+    alert("hi");
     return false;
   }
 

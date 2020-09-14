@@ -67,7 +67,7 @@
                         <div class="wrap-container">
                             <div class="header-brand">
                                 <a href="<?php base_url();?>teacher/index.php">
-                                    <img src="<?php base_url();?>img/brand/header-logo.png" alt="faculty 4 you">
+                                    <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
                                 </a>
                             </div>
                             <!-- end header brand -->
