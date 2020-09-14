@@ -88,10 +88,10 @@
                                         <small class="msg">Select city name</small>
 
                                     </div>
-                                    <div class="col-sm-4">
+                                    <div class="col-sm-12 text-center">
                                         <input class="button-primary py-2" style="font-size: 2rem" name="submit-search" type="submit" value="Search">
                                     </div>
-                                        </div>
+                                </div>
                             </form>
                         </div>
                     </div>
