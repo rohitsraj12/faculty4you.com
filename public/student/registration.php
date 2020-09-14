@@ -27,7 +27,7 @@
                 <header class="wrap-container">
                     <div class="brand">
                         <a href="<?php base_url();?>index.php">
-                            <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
+                        <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty 4 you">
                         </a>
                     </div>
                     <div class="nav-social-media">
@@ -66,7 +66,7 @@
                             <!-- <span>or use your account</span> -->
                             <input type="text" id="user_name"  placeholder="User name / Email"  name="email" />
                             <input type="password" id="password" placeholder="Password"  name="password"/>
-                            <a href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
+                            <a class="forgot_password"  href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
                             <button name="login-submit">Login</button>
                         </form>
                     </div>
@@ -83,23 +83,19 @@
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input type="text" name="user_name" class="reg_user" placeholder="user name" />
+                            <input type="text" name="user_name" id="user_name" placeholder="user name" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input type="tel" name="telephone" class="reg_tel" placeholder="phone number"> 
-                            <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                            </span>
-                            <input name="email" type="email" class="reg_email" placeholder="email" />
+                            <input name="email" type="email" id="email" placeholder="email" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="password" type="password" class="reg_password" placeholder="password" />
+                            <input name="password" type="password" id="password" placeholder="password" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input name="re_password" type="password" class="reg_repass" placeholder="repeat password">
+                            <input name="re_password" type="password" id="re-password" placeholder="repeat password">
                             <button  name="submit-register" >Sign Up</button>
                         </form>
                     </div>
