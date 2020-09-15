@@ -125,7 +125,9 @@
     @media (min-width: 769px) {
       width: 60%;
     }
-
+    @media (max-width: 582px) {
+      padding-top: 27rem;
+    }
     .wrap-search-home {
       // border-bottom: 2px solid rgba(204, 67, 161, 1);
       // @include post-head-5;
@@ -133,6 +135,18 @@
 
       @media (max-width: 582px) {
         padding-top: 8rem;
+      }
+    }
+
+    input {
+      @media (max-width: 582px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .col-sm-4 {
+      @media (max-width: 582px) {
+        margin-bottom: 20px;
       }
     }
 
