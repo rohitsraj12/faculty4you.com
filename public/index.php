@@ -210,7 +210,7 @@
                          
                         <div class="section-header u-center-text" >
                             <heeader class="text-primary-h-3"> 
-                                Student comumnity feed back
+                                Student community feed back
                             </header>
                         </div>
                         <blockquote class="section-body wrap-container owl-carousel owl-theme">
