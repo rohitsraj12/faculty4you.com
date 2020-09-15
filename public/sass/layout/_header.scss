@@ -20,6 +20,9 @@
 .header {
   &-brand {
     padding: 0 0 1rem;
+    @media(max-width: 582px){
+      padding-top: 1rem;
+    }
     img {
       height: 7rem;
     }
@@ -55,6 +58,9 @@
       display: flex;
       justify-content: flex-end;
       flex-direction: row;
+      @media(max-width: 582px){
+        display: none;
+      }
     }
     ul {
       margin: 0;
@@ -243,8 +249,8 @@
     // justify-content: center;
     // align-items: center;
     // padding-right: 1rem;
-    position: absolute;
-    top: 4rem;
+    position: fixed;
+    top: 2rem;
     right: 4%;
     z-index: 999;
   }
