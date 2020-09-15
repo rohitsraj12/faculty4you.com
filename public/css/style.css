@@ -372,7 +372,7 @@ label {
     background-size: 540px 540px;
     position: absolute;
     top: 25%;
-    left: 3%; }
+    left: 0%; }
   .section-member h1,
   .section-forgotpwd h1 {
     margin: 0;
@@ -1206,10 +1206,10 @@ label {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 ); }
   @media (max-width: 582px) and (orientation: portrait) {
     .body-banner {
-      height: 100vh; } }
+      padding-bottom: 40px; } }
   @media (max-width: 582px) {
     .body-banner {
-      height: 100vh; } }
+      padding-bottom: 40px; } }
   .body-banner .banner-content {
     width: 60%;
     margin: 0 0 0 5%;
@@ -1427,9 +1427,9 @@ label {
   top: 2rem; }
   @media (max-width: 582px) {
     .tab {
-      padding: 5rem 0 4rem;
+      width: 100%;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: space-between; } }
 
 .tab button {
@@ -2025,16 +2025,22 @@ label {
   justify-content: space-between;
   align-items: flex-end; }
 
-.nav-social-media .section__header-search {
+.main__header .wrap-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end; }
+
+.section__header-search {
   margin-bottom: 1rem; }
-  .nav-social-media .section__header-search .header-search {
+  .section__header-search .header-search {
     position: relative; }
-  .nav-social-media .section__header-search .header-search__form {
+  .section__header-search .header-search__form {
     width: 100%; }
-  .nav-social-media .section__header-search .header-search__input {
+  .section__header-search .header-search__input {
     width: 300px;
     padding: 0.4rem; }
-  .nav-social-media .section__header-search .header-search__button {
+  .section__header-search .header-search__button {
     position: absolute;
     top: 6px;
     right: 8px;
@@ -2165,11 +2171,20 @@ label {
   @media (min-width: 769px) {
     .section-search-home {
       width: 60%; } }
+  @media (max-width: 582px) {
+    .section-search-home {
+      padding-top: 27rem; } }
   .section-search-home .wrap-search-home {
     padding: 3rem 0; }
     @media (max-width: 582px) {
       .section-search-home .wrap-search-home {
         padding-top: 8rem; } }
+  @media (max-width: 582px) {
+    .section-search-home input {
+      margin-bottom: 20px; } }
+  @media (max-width: 582px) {
+    .section-search-home .col-sm-4 {
+      margin-bottom: 20px; } }
   .section-search-home .search-tab ul {
     margin: 0 auto;
     display: flex;
