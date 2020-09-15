@@ -17,9 +17,9 @@
         
 
     <?php
-         if(isset($_REQUEST['submit_testimonial'])){
+         if(isset($_REQUEST['submit_member'])){
             //checking  for empty field
-            if(($_REQUEST['testimonial'] == "")){
+            if(($_REQUEST['expDate'] == "" || $_REQUEST['membership_type'] == "" || $_REQUEST['number'] == "")){
     ?>
         <div class="alert alert-danger" role="alert">
             <?php  echo "Fill all fields..";?>
@@ -29,11 +29,17 @@
                 
                 $id = $_GET['id'];
 
-                $quote = $_REQUEST['testimonial'];
-                $status = "1";
+                $date = date("Y/m/d");
+                $exp = $_REQUEST['expDate'];
+                $type = $_REQUEST["membership_type"];
+                $token = $_REQUEST['number'];
     
-                $query = "INSERT INTO testimonials (student_id, testimonial_quote, testimonial_status)
-                          VALUES('$id', '$quote', '$status')";
+                $query = "UPDATE teachers SET 
+                  membership_expiry_date = '$exp', 
+                  membership_starting_date = '$date',
+                  membership_type = '$type', 
+                  member_token = '$token'
+                WHERE teacher_id = $id";
                           
                 $result = mysqli_query($conn, $query); 
                 // test if there was a query error
@@ -77,9 +83,23 @@
                         <label for="answer">Member Expire Date</label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="date" name="date">
+                        <input type="date" name="expDate">
                     </div>
-                </div>   
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-3">
+
+                    <label for="answer">Membership type</label>
+                    </div>
+                    <div class="col-sm-6">
+                     <select name="membership_type" id="">
+                     <option value="nooption">Select Membership</option>
+                     <option value="1">Silver Membership</option>
+                     <option value="2">Gold Membership</option>
+                     <option value="3">platinum Membership</option>
+                     </select>
+                    </div>
+                </div>      
                 <div class="form-group row">
                     <div class="col-sm-3">
 
@@ -90,7 +110,7 @@
                     <input type="number" name="number">
                     </div>
                 </div>   
-                <input class="btn btn-primary" type="submit" name="submit_testimonial" value="Set Membership">
+                <input class="btn btn-primary" type="submit" name="submit_member" value="Set Membership">
             </form>
         </section>
         <section class="section-bottom">
