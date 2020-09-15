@@ -114,7 +114,7 @@
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
                         <input type="password" placeholder="Password" class="login" name="password"/>
-                        <a href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
+                        <a class="forgot_password" href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
                         <button name="login-submit">log In</button>
                     </form>
                 </div>
