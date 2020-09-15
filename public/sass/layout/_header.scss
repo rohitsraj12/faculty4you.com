@@ -20,7 +20,7 @@
 .header {
   &-brand {
     padding: 0 0 1rem;
-    @media(max-width: 582px){
+    @media (max-width: 582px) {
       padding-top: 1rem;
     }
     img {
@@ -58,7 +58,7 @@
       display: flex;
       justify-content: flex-end;
       flex-direction: row;
-      @media(max-width: 582px){
+      @media (max-width: 582px) {
         display: none;
       }
     }
@@ -329,10 +329,12 @@
 
 .main__header {
   .wrap-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    @media (min-width: 583px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
   }
 }
 
@@ -349,6 +351,10 @@
     &-search__input {
       width: 300px;
       padding: 0.4rem;
+
+      @media (max-width: 582px) {
+        width: 100%;
+      }
     }
 
     &-search__button {
