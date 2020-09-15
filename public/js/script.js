@@ -15,6 +15,9 @@ $(document).ready(function () {
       1200: {
         items: 3,
       },
+      1024: {
+        items: 2,
+      },
       582: {
         items: 2,
       },
