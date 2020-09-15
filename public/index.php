@@ -48,7 +48,7 @@
                             <article class="article-block" >
                                 <figure class="student-section__figure">
                                     <span>step 2</span>
-                                    <img src="<?php base_url();?>img/member/02.jpg" alt="">
+                                    <img src="<?php base_url();?>img/member/02.png" alt="">
 
                                 </figure>
                                 <header class="article-header student-section__header">
@@ -119,7 +119,7 @@
                             <article class="article-block" >
                                 <figure class="student-section__figure">
                                 <span>step 2</span>
-                                    <img src="<?php base_url();?>img/member/t2.jpg" alt="">
+                                    <img src="<?php base_url();?>img/member/t2.png" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <!-- <h4 class="text-secondary-h">Activate membership</h4> -->
@@ -147,7 +147,7 @@
                             <article class="article-block">
                                 <figure class="student-section__figure">
                                 <span>step 4</span>
-                                    <img src="<?php base_url();?>img/member/t4.jpg" alt="">
+                                    <img src="<?php base_url();?>img/member/t4.png" alt="">
                                 </figure>
                                 <header class="article-header student-section__header">
                                     <!-- <h4 class="text-secondary-h">Schedule lesson</h4> -->
