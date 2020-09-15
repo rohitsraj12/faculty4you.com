@@ -74,27 +74,20 @@
                                 </p>
 
                                 <?php
-                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $id AND membership_expiry_date <= CURDATE()";
+                                //  AND membership_expiry_date <= '2020-09-17'
+                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $id ";
                                     $member_result = mysqli_query($conn, $member_query);
+                                    $member_row = mysqli_fetch_assoc($member_result);
 
-
-                                    // startDate >= CURDATE() and
-                                    // endDate <= CURDATE()
-
-
-                                    // $member = $row['member_token'];
-                                    // $startDate = $row['membership_starting_date'];
-                                    // $expDate = $row['membership_expiry_date'];
-                                    // $date = date("Y/m/d");
-                                    // $example = "2020-09-16";
-                                    // $member == 0
-                                    // strtotime($expDate))
-                                    if(!$member_result){
-                                        echo "<span class='member-active'>Member</span>";
-                                    } else {
+                                    $start = $member_row['membership_starting_date'];
+                                    $exp = $member_row['membership_expiry_date'];
+                                    $date = date("Y - m - d");
+                                    
+                                    if($exp <= $date){
                                         echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+                                    } else {
+                                        echo "<span class='member-active'>Member</span>";
                                     }
-                                    // echo $expDate . " " . $date ;
                                 ?>
                                 <p class="">
                                     <?php echo $row['teacher_email'];?>
