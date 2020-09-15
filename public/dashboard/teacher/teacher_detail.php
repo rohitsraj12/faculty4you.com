@@ -77,7 +77,7 @@
                                     
                                     $member = $row['teacher_membership_status'];
                                     if(!$member == "active"){
-                                        echo "<a href='#' class='member-nonactive'>Member</a>";
+                                        echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                                     } else {
                                         echo "<span class='member-active'>Member</span>";
                                     }
