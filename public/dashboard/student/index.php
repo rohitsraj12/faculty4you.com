@@ -18,7 +18,7 @@ $active = "student";
         <div class="page-header">
             <div class="container">
                 <header class="header-text-1"  class="py-3">
-                    TRAINEE RECORDS
+                    STUDENT RECORDS
                 </header>
             </div>
         </div>
