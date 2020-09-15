@@ -33,13 +33,10 @@
                 $exp = $_REQUEST['expDate'];
                 $type = $_REQUEST["membership_type"];
                 $token = $_REQUEST['number'];
+                $status = "1";
     
-                $query = "UPDATE teachers SET 
-                  membership_expiry_date = '$exp', 
-                  membership_starting_date = '$date',
-                  membership_type = '$type', 
-                  member_token = '$token'
-                WHERE teacher_id = $id";
+                $query = "INSERT INTO memberships (`teacher_id`, `membership_type`, `member_token`, `membership_starting_date`, `membership_expiry_date`, `membership_status`) 
+                  VALUES ('$id', '$type', '$token', '$date', '$exp', '$status')";
                           
                 $result = mysqli_query($conn, $query); 
                 // test if there was a query error
