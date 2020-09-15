@@ -29,6 +29,10 @@ if(isset($_POST['submit-register'])){
     $home_tution = "";
     $sub_id = "";
     $category_id = "";
+    $start_date = "";
+    $end_date = "";
+    $membership_type = "";
+    $member_token = "";
     
     // if empty field condition
     if(empty($user_name) || empty($email) || empty($password) || empty($re_password) || empty($phone)){
@@ -85,8 +89,8 @@ if(isset($_POST['submit-register'])){
                 exit();
             } else {
                 $first_name = "";
-                $sql = "INSERT INTO teachers (teacher_first_name, teacher_last_name, teacher_user_name, gender_id, teacher_email, teacher_password, teacher_phone, teacher_address, city_id, state_id, teacher_photo, teacher_membership_status, teacher_experience, teacher_about_me, teacher_online_one_to_one, teacher_online_group, teacher_home_tuition, subject_id, category_id) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+                $sql = "INSERT INTO teachers (teacher_first_name, teacher_last_name, teacher_user_name, gender_id, teacher_email, teacher_password, teacher_phone, teacher_address, city_id, state_id, teacher_photo, teacher_membership_status, teacher_experience, teacher_about_me, teacher_online_one_to_one, teacher_online_group, teacher_home_tuition, subject_id, category_id,  membership_starting_date, membership_expiry_date, membership_type, member_token) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
                 $stmt = mysqli_stmt_init($conn);
 
                 if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -98,7 +102,7 @@ if(isset($_POST['submit-register'])){
                     // secure password
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-                    mysqli_stmt_bind_param($stmt, "sssissssiissisiiiii", $first_name, $last_name, $user_name, $gender, $email, $hashed_password, $phone, $address, $city, $state, $image, $membership, $teaching_exp, $about, $online_one, $online_group, $home_tution, $sub_id, $category_id);
+                    mysqli_stmt_bind_param($stmt, "sssissssiissisiiiiissii", $first_name, $last_name, $user_name, $gender, $email, $hashed_password, $phone, $address, $city, $state, $image, $membership, $teaching_exp, $about, $online_one, $online_group, $home_tution, $sub_id, $category_id, $start_date, $end_date, $membership_type, $member_token);
                     mysqli_stmt_execute($stmt);
                     
                     header("Location: ../login.php?register=success");
