@@ -36,9 +36,9 @@
                 </div>    
                 <section class="row">
                     <div class="col-sm-3">
-                        <ul class="px-4 tab">
-                            <li class="study-type pl-2 col-6 col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">academic</button></li>
-                            <li class="study-type  col-6 col-sm-12  pl-2" data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">non-academic</button></li>
+                        <ul class="px-4 tab row">
+                            <li class="study-type pl-2 col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">academic</button></li>
+                            <li class="study-type col-sm-12  pl-2" data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">non-academic</button></li>
                         </ul>
                     </div>
                     <div class="col-sm-9">
@@ -62,7 +62,7 @@
 
                                  ?>
 
-                                 <article class="mb-5 border post-sections">
+                                <article class="mb-5 border student-post post-sections">
                                      <header class="post-header">
                                      <h1 class="pb-3">
                                         <?php
@@ -88,7 +88,7 @@
                                      </div>
                                      <div class="col-sm-10">
                                        
-                                       <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
+                                       <ul class="d-flex flex-row flex-wrap bd-highlight py-4 h4 font-weight-normal text-secondary">
                                             <li class="mr-5"><i class="fa fa-book mr-2" aria-hidden="true"></i><?php echo $row["sub_name"];?> trainer</li>
                                             <li class="mr-5"><i class="fa fa-paw mr-2" aria-hidden="true"></i><?php echo $row["teacher_experience"] . ' years of experience';?></li>
                                             <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
@@ -102,12 +102,12 @@
                                             ?>
                                             </p>
                                      </div>
-                                   <footer class="post-footer show__detail">
+                                   <footer class="post-footer">
                                         <span class="active-member-btn" style="font-size: 1.6rem">Contact details</span>
                                    </footer>
                                 
 
-                                   <section class="teacher-details">
+                                   <section class="student-details">
                                         <article>
                                             <header>
 
@@ -175,7 +175,7 @@
                                      </div>
                                      <div class="col-sm-9">
                                        
-                                        <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
+                                        <ul class="d-flex flex-row flex-wrap bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                 <li class="mr-5"><i class="fa fa-book mr-2" aria-hidden="true"></i><?php echo $row["sub_name"];?> trainer</li>
                                                 <li class="mr-5"><i class="fa fa-paw mr-2" aria-hidden="true"></i><?php echo $row["teacher_experience"] . ' years of experience';?></li>
                                                 <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
