@@ -1,8 +1,11 @@
 .body {
   &-footer {
+    padding-top: 6rem;
+    @media(min-width: 583px){
     padding-top: 15rem;
     margin-top: -94px;
     clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+    }
     background-color: $color-primary-bg-3;
 
     .footer-base {
