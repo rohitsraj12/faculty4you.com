@@ -80,7 +80,7 @@
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </span>
                         <input type="password" class="login" placeholder="Password"  name="password"/>
-                        <a href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
+                        <a  class="forgot_password" href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
                         <button name="login-submit">Login</button>
                     </form>
                 </div>
