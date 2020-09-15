@@ -16,6 +16,27 @@
   text-decoration: none;
   list-style: none; }
 
+body::-webkit-scrollbar {
+  width: 10px;
+  /* width of the entire scrollbar */ }
+
+body::-webkit-scrollbar-track {
+  background: #ffe6a8;
+  background: -moz-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffe6a8), color-stop(100%, #fdf6e7));
+  background: -webkit-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+  background: -o-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+  background: -ms-linear-gradient(top, #ffe6a8 0%, #fdf6e7 100%);
+  background: linear-gradient(to bottom, #ffe6a8 0%, #fdf6e7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe6a8', endColorstr='#fdf6e7', GradientType=0 ); }
+
+body::-webkit-scrollbar-thumb {
+  background-color: #aa0000;
+  border-radius: 20px;
+  /* roundness of the scroll thumb */
+  border: 1px solid #ff8f8f;
+  /* creates padding around scroll thumb */ }
+
 a:hover {
   text-decoration: none;
   color: rgba(170, 0, 0, 0.8); }
@@ -57,11 +78,17 @@ strong {
   @media (min-width: 583px) {
     .body-container {
       padding: 5rem 0 20rem; } }
+  @media (max-width: 582px) {
+    .body-container {
+      padding: 5rem 0; } }
   .body-container:has(> .page-home) {
     padding-top: 0; }
 
 .section-header {
   padding-bottom: 6rem; }
+  @media (max-width: 582px) {
+    .section-header {
+      padding-bottom: 0; } }
 
 .sub-heading {
   margin: 0 auto;
@@ -2039,11 +2066,12 @@ label {
   justify-content: space-between;
   align-items: flex-end; }
 
-.main__header .wrap-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-end; }
+@media (min-width: 583px) {
+  .main__header .wrap-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end; } }
 
 .section__header-search {
   margin-bottom: 1rem; }
@@ -2054,6 +2082,9 @@ label {
   .section__header-search .header-search__input {
     width: 300px;
     padding: 0.4rem; }
+    @media (max-width: 582px) {
+      .section__header-search .header-search__input {
+        width: 100%; } }
   .section__header-search .header-search__button {
     position: absolute;
     top: 6px;
