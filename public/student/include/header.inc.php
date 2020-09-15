@@ -88,7 +88,7 @@
                             <li class="nav__list"><a href="<?php base_url();?>student/profile/index.php" class="nav__link">Profile</a></li>
                             <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                         </ul>
-                        <div class="nav-social-media">
+                        <!-- <div class="nav-social-media">
                                         <ul>
                                             <li class="nav-social__list text-light">Follow us: </li>
                                         <?php
@@ -99,7 +99,7 @@
                                         }
                                         ?>
                                     </ul>
-                            </div>
+                            </div> -->
                         </nav>
                     </div>
                     <!-- end header nav -->
