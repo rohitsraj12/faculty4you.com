@@ -74,20 +74,27 @@
                                 </p>
 
                                 <?php
-                                    
-                                    $member = $row['member_token'];
-                                    $startDate = $row['membership_starting_date'];
-                                    $expDate = $row['membership_expiry_date'];
-                                    $date = date("Y/m/d");
-                                    $example = "2020-09-16";
+                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $id AND membership_expiry_date <= CURDATE()";
+                                    $member_result = mysqli_query($conn, $member_query);
+
+
+                                    // startDate >= CURDATE() and
+                                    // endDate <= CURDATE()
+
+
+                                    // $member = $row['member_token'];
+                                    // $startDate = $row['membership_starting_date'];
+                                    // $expDate = $row['membership_expiry_date'];
+                                    // $date = date("Y/m/d");
+                                    // $example = "2020-09-16";
                                     // $member == 0
                                     // strtotime($expDate))
-                                    if($date <= $expDate){
+                                    if(!$member_result){
                                         echo "<span class='member-active'>Member</span>";
-                                    } else  if($date >= $expDate){
+                                    } else {
                                         echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                                     }
-                                    echo $expDate . " " . $date ;
+                                    // echo $expDate . " " . $date ;
                                 ?>
                                 <p class="">
                                     <?php echo $row['teacher_email'];?>
@@ -108,6 +115,7 @@
                                         <div class="col-3">
                                             Username
                                         </div>
+                                     
                                         <div class="col-9">
                                             <?php echo $row['teacher_user_name'];?>
                                         </div>
