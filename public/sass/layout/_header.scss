@@ -319,29 +319,39 @@
       }
     }
   }
-  .section__header-search {
-    margin-bottom: 1rem;
-    .header {
-      &-search {
-        position: relative;
-      }
-      &-search__form {
-        width: 100%;
-      }
+}
 
-      &-search__input {
-        width: 300px;
-        padding: 0.4rem;
-      }
+.main__header {
+  .wrap-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
 
-      &-search__button {
-        position: absolute;
-        top: 6px;
-        right: 8px;
-        color: $color-primary;
-        font-size: 1.7rem;
-        border: none;
-      }
+.section__header-search {
+  margin-bottom: 1rem;
+  .header {
+    &-search {
+      position: relative;
+    }
+    &-search__form {
+      width: 100%;
+    }
+
+    &-search__input {
+      width: 300px;
+      padding: 0.4rem;
+    }
+
+    &-search__button {
+      position: absolute;
+      top: 6px;
+      right: 8px;
+      color: $color-primary;
+      font-size: 1.7rem;
+      border: none;
     }
   }
 }
