@@ -6,6 +6,7 @@
     }
 
     $active = "testimonial";
+    $sub = "student_testimonial";
 
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");

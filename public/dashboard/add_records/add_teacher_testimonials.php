@@ -1,11 +1,11 @@
-<?php 
+    <?php 
     session_start();
     //back function false
     if(!isset($_SESSION['user_name'])){
         header('location: ../index.php');
     }
 
-    $active = "teacher";
+    $active = "student";
 
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");
@@ -17,9 +17,9 @@
         
 
     <?php
-         if(isset($_REQUEST['submit_member'])){
+         if(isset($_REQUEST['submit_testimonial'])){
             //checking  for empty field
-            if(($_REQUEST['expDate'] == "" || $_REQUEST['membership_type'] == "" || $_REQUEST['number'] == "")){
+            if(($_REQUEST['testimonial'] == "")){
     ?>
         <div class="alert alert-danger" role="alert">
             <?php  echo "Fill all fields..";?>
@@ -29,17 +29,11 @@
                 
                 $id = $_GET['id'];
 
-                $date = date("Y/m/d");
-                $exp = $_REQUEST['expDate'];
-                $type = $_REQUEST["membership_type"];
-                $token = $_REQUEST['number'];
+                $quote = $_REQUEST['testimonial'];
+                $status = "1";
     
-                $query = "UPDATE teachers SET 
-                  membership_expiry_date = '$exp', 
-                  membership_starting_date = '$date',
-                  membership_type = '$type', 
-                  member_token = '$token'
-                WHERE teacher_id = $id";
+                $query = "INSERT INTO teacher_testimonials (teacher_id, testimonial_quote, testimonial_status)
+                          VALUES('$id', '$quote', '$status')";
                           
                 $result = mysqli_query($conn, $query); 
                 // test if there was a query error
@@ -63,7 +57,7 @@
         <div class="page-header">
             <div class="container">
                 <header class="header-text-1" class="py-3">
-                    Add Membership
+                    Create new Testimonial
                 </header>
             </div>
         </div>
@@ -78,49 +72,21 @@
                     
                <form action="" method="POST" onsubmit="return validation()">
                 
-                <div class="form-group row">
-                    <div class="col-sm-3">
-                        <label for="answer">Member Expire Date</label>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="date" name="expDate">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-3">
-
-                    <label for="answer">Membership type</label>
-                    </div>
-                    <div class="col-sm-6">
-                     <select name="membership_type" id="">
-                     <option value="nooption">Select Membership</option>
-                     <option value="1">Silver Membership</option>
-                     <option value="2">Gold Membership</option>
-                     <option value="3">platinum Membership</option>
-                     </select>
-                    </div>
-                </div>      
-                <div class="form-group row">
-                    <div class="col-sm-3">
-
-                    <label for="answer">Number of token</label>
-                    </div>
-                    <div class="col-sm-6">
-                        
-                    <input type="number" name="number">
-                    </div>
+                <div class="form-group">
+                    <label for="answer">Testimonial</label>
+                    <textarea class="form-control testimonial__textarea" id="answer" name="testimonial" rows="3"></textarea>
                 </div>   
-                <input class="btn btn-primary" type="submit" name="submit_member" value="Set Membership">
+                <input class="btn btn-primary" type="submit" name="submit_testimonial" value="Submit new Testimonial">
             </form>
         </section>
         <section class="section-bottom">
             <header class="text-center border-bottom mb-5">
-                        Member Details
+                        Testimonial by
             </header>
                     <ul>
                         <li class="row mb-2">     
                             <div class="col-2">
-                                Name of tutor
+                                Name of trainee
                             </div>
                             <div class="col-9">
                             <?php echo $row['teacher_first_name']. " " . $row['teacher_last_name']; ?>

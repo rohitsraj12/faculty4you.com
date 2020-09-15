@@ -217,7 +217,7 @@
                         <?php
                             $testimonial_query = "SELECT testimonials.*, std.* FROM testimonials 
                             LEFT JOIN std
-                                ON std.student_id = testimonials.student_id LIMIT 4";
+                                ON std.teacher_id = testimonials.student_id LIMIT 4";
                             $testimonial_result = mysqli_query($conn, $testimonial_query);
 
                             while($row = mysqli_fetch_assoc($testimonial_result)){
@@ -279,6 +279,80 @@
                             </svg>
                         </div> -->
                     </section>
+                    <section class="section-testimonial">
+                         
+                         <div class="section-header u-center-text" >
+                             <heeader class="text-primary-h-3"> 
+                                 Student community feed back
+                             </header>
+                         </div>
+                         <blockquote class="section-body wrap-container owl-carousel owl-theme">
+                         <?php
+                             $testimonial_query = "SELECT teacher_testimonials.*, teachers.* FROM teacher_testimonials 
+                             LEFT JOIN teachers
+                                 ON teachers.teacher_id = teacher_testimonials.teacher_id LIMIT 4";
+                             $testimonial_result = mysqli_query($conn, $testimonial_query);
+ 
+                             while($row = mysqli_fetch_assoc($testimonial_result)){
+                                
+                         ?>
+                         <article class="article-block" >
+                             <div class="testimonial-client-detail">
+                                 <p>
+                                     "
+                                     <?php echo $row['testimonial_quote'];?>
+                                     "
+                                 </p>
+                             </div>        
+                             <footer class="article-footer">
+                                 <figure>
+                                     <?php 
+ 
+                                         if($row['teacher_photo'] == ""){
+                                     ?>
+                                             <img class="member__img" style="max-height: 200px; border-radius= 50%;" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                     <?php
+                                         } else {
+                                     ?>
+                                             <img class="member__img" style="max-height: 200px; border-radius= 50%;" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                                     <?php
+                                         }
+                                     ?>
+                                 </figure>
+                                 <ul>
+                                     <li class="testimonial-client-name"><cite><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'];?></cite></li>
+                                     <li class="testimonial-client-place">
+                                         <?php
+                                     $city = $row['city_id'];
+                                     $state = $row['state_id'];
+                                 if($city == true){
+                                     $sql = "SELECT cities.*, states.* FROM cities 
+                                     LEFT JOIN states
+                                 ON states.state_id = cities.state_id
+                                      WHERE city_id = '$city'";
+                                     $result = mysqli_query($conn, $sql);
+                                     $rows = mysqli_fetch_assoc($result);
+                                     echo $rows['city_name'] . ' - ' . $rows['state_name'];;
+ 
+                                 };  
+                                 ?>  
+ 
+                                     </li>
+                                 </ul>
+                             </footer>
+                         </article>
+                         <?php
+                         }
+                         ?>
+                         
+                         </blockquote>
+                         <!-- <div class="svg">
+                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                                 <path fill="#0099ff" fill-opacity="1" d="M0,64L48,74.7C96,85,192,107,288,106.7C384,107,480,85,576,96C672,107,768,149,864,186.7C960,224,1056,256,1152,229.3C1248,203,1344,117,1392,74.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+                             </svg>
+                         </div> -->
+                     </section>
+ 
 
                     <!-- <section class="section-partner">
                         

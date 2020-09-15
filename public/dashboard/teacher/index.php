@@ -31,7 +31,7 @@ $active = "teacher";
                             <th scope="col">Name</th>
                             <th scope="col">Email</th>
                             <th scope="col">Phone</th>
-                            <th scope="col">Location</th>
+                            <th scope="col">Add testimonial</th>
                             <th scope="col">More Details</th>
                             </tr>
                         </thead>
@@ -58,7 +58,7 @@ $active = "teacher";
                                 <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                 <td><?php echo $row['teacher_email'];?></td>
                                 <td>+91 <?php echo $row['teacher_phone'];?></td>
-                                <td><?php echo $row['city_name'] . " ," . $row['state_name'] ;?></td>
+                                <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>">Add testimonial</a></td>
                                 <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
                             </tr>
                             <?php 
