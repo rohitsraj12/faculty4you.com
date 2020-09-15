@@ -79,13 +79,15 @@
                                     $startDate = $row['membership_starting_date'];
                                     $expDate = $row['membership_expiry_date'];
                                     $date = date("Y/m/d");
+                                    $example = "2020-09-16";
                                     // $member == 0
                                     // strtotime($expDate))
-                                    if($date >= $expDate  ){
+                                    if($date <= $expDate){
                                         echo "<span class='member-active'>Member</span>";
-                                    } else {
+                                    } else  if($date >= $expDate){
                                         echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                                     }
+                                    echo $expDate . " " . $date ;
                                 ?>
                                 <p class="">
                                     <?php echo $row['teacher_email'];?>
