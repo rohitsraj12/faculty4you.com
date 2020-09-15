@@ -730,10 +730,11 @@ label {
     @media (max-width: 582px) {
       .section-student .section-body figure::after {
         content: "";
+        display: none;
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        border: 0.3rem solid #5388fe;
+        border: 0.3rem solid #ff736d;
         background-color: #ffffff;
         position: absolute;
         top: 0rem;
@@ -771,6 +772,12 @@ label {
   font-size: 1.4rem; }
   .student-info li {
     padding-bottom: 1rem; }
+
+.post-footer {
+  width: 100%; }
+
+.student-details {
+  width: 100%; }
 
 .section-teacher {
   background: #ffffb9;
@@ -1427,10 +1434,11 @@ label {
   top: 2rem; }
   @media (max-width: 582px) {
     .tab {
-      width: 100%;
+      padding: 5rem 0 4rem;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between; } }
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2rem; } }
 
 .tab button {
   padding: 18px 16px;
@@ -1793,6 +1801,9 @@ label {
 
 .header-brand {
   padding: 0 0 1rem; }
+  @media (max-width: 582px) {
+    .header-brand {
+      padding-top: 1rem; } }
   .header-brand img {
     height: 7rem; }
   .header-brand-section {
@@ -1816,6 +1827,9 @@ label {
   display: flex;
   justify-content: flex-end;
   flex-direction: row; }
+  @media (max-width: 582px) {
+    .header-top .wrap-container {
+      display: none; } }
 
 .header-top ul {
   margin: 0;
@@ -1972,8 +1986,8 @@ label {
       height: 5rem;
       border-radius: 50%;
       padding-top: 1.2rem;
-      position: absolute;
-      top: 4rem;
+      position: fixed;
+      top: 2rem;
       right: 4%;
       z-index: 999; } }
   @media (min-width: 582px) {
@@ -2049,10 +2063,13 @@ label {
     border: none; }
 
 .body-footer {
-  padding-top: 15rem;
-  margin-top: -94px;
-  clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%);
+  padding-top: 6rem;
   background-color: #aa0000; }
+  @media (min-width: 583px) {
+    .body-footer {
+      padding-top: 15rem;
+      margin-top: -94px;
+      clip-path: polygon(0 20%, 100% 0%, 100% 100%, 0% 100%); } }
   .body-footer .footer-base {
     margin-top: 5rem;
     background-color: #550000; }
