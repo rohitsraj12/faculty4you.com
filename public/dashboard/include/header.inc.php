@@ -100,11 +100,20 @@
                             <ul>
                                 <li class="side-nav__list"><a class="side-nav__link <?php if($active == "home"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> Dashboard </a></li>
                                 <!-- <li class="side-nav__list"><a class="side-nav__link <?php if($active == "page content"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> page content </a></li> -->
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> Trainers </a></li>
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> Trainees </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> Tutors </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> Students </a></li>
                             </ul>
                             <ul> 
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "testimonial"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/"> Testimonial </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link side-nav-toggle <?php if($active == "testimonial"){ echo "active";}?>" href="#"> Testimonial <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="side-sub-nav">
+                                        <li>
+                                            <a class="side-sub-nav__link <?php if($active == "testimonial" && $sub == "tutor_testimonial"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/testimonial/teacher_testimonial.php">Tutors</a> 
+                                        </li>
+                                        <li>
+                                            <a class="side-sub-nav__link  <?php if($active == "testimonial" && $sub == "student_testimonial"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/student_testimonial.php">Students</a> 
+                                        </li>
+                                    </ul>
+                                </li>
 
                                 <li class="side-nav__list">
                                     <a class="side-nav__link side-nav-toggle <?php if($active == "faq"){ echo "active";}?>" href="#" > FAQs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
