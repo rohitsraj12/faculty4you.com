@@ -122,10 +122,11 @@
 
             @media (max-width: 582px) {
               content: "";
+              display: none;
               width: 2rem;
               height: 2rem;
               border-radius: 50%;
-              border: 0.3rem solid $color-btn-1;
+              border: 0.3rem solid $color-link-1;
               background-color: $color-white;
               position: absolute;
               top: 0rem;
@@ -187,4 +188,11 @@
   li {
     padding-bottom: 1rem;
   }
+}
+
+.post-footer {
+  width: 100%;
+}
+.student-details {
+  width: 100%;
 }
