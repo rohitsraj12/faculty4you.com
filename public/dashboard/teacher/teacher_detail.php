@@ -75,11 +75,16 @@
 
                                 <?php
                                     
-                                    $member = $row['teacher_membership_status'];
-                                    if(!$member == "active"){
-                                        echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
-                                    } else {
+                                    $member = $row['member_token'];
+                                    $startDate = $row['membership_starting_date'];
+                                    $expDate = $row['membership_expiry_date'];
+                                    $date = date("Y/m/d");
+                                    // $member == 0
+                                    // strtotime($expDate))
+                                    if($date >= $expDate  ){
                                         echo "<span class='member-active'>Member</span>";
+                                    } else {
+                                        echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                                     }
                                 ?>
                                 <p class="">
