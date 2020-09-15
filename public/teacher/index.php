@@ -17,6 +17,8 @@
     $user_result = mysqli_query($conn, $user_query);
     $user_row = mysqli_fetch_assoc($user_result);
 
+    $teacher_id = $user_row['teacher_id'];
+
     $page_title = "profile";
     include_once("../../private/config/config.php");
     include("../../private/required/public/components/social_media.php");
@@ -89,8 +91,17 @@
                                                 </div>
                                                 <footer class=" post-footer">
                                                     <?php 
+                                                        $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id";
+                                                        $member_result = mysqli_query($conn, $member_query);
+                                                        $member_row = mysqli_fetch_assoc($member_result);
+                    
+                                                        $start = $member_row['membership_starting_date'];
+                                                        $exp = $member_row['membership_expiry_date'];
+                                                        $date = date("Y - m - d");
+
+                                                        $token = $member_row['member_token'];
                                                         // echo $member;
-                                                        if($member == "active"){
+                                                        if($token > 0){
                                                     ?>
                                                             <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
                                                     <?php
@@ -107,7 +118,7 @@
                                                 <section class="student-details">
 
                                                     <?php
-                                                        if($member == "active"){
+                                                        if($token > 0){
                                                     ?>
                                                         <article>
                                                             <header>
