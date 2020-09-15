@@ -9,7 +9,8 @@
     @include bg-1;
 
     @media (max-width: 582px) and (orientation: portrait) {
-      height: 100vh;
+      // min-height: 100vh;
+      padding-bottom: 40px;
     }
 
     @media only screen and (orientation: landscape) {
@@ -17,7 +18,8 @@
     }
 
     @media (max-width: 582px) {
-      height: 100vh;
+      padding-bottom: 40px;
+      // height: 100vh;
     }
     .banner {
       &-content {
