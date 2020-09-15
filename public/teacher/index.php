@@ -35,8 +35,8 @@
                         <div class="row">
                             <div class="col-sm-3 mt-5">
                                 <ul class="px-4 tab row">
-                                    <li class="study-type col-6 col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">online tuition</button></li>
-                                    <li class="study-type  col-6 col-sm-12 " data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition - <?php echo $user_row['city_name'];?></button></li>
+                                    <li class="study-type col-sm-12" data-study-type="study-type-1"><button class="tablinks active" data-study-type="study-type-1">online tuition</button></li>
+                                    <li class="study-type col-sm-12 " data-study-type="study-type-2"><button class="tablinks" data-study-type="study-type-2">home tuition - <?php echo $user_row['city_name'];?></button></li>
                                 </ul>
                             </div>
                             <div class="col-sm-9">
@@ -76,7 +76,7 @@
                                                     </h1>
                                                 </header>
                                                 <div class="post-body">
-                                                    <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal">
+                                                    <ul class="d-flex flex-row flex-wrap bd-highlight py-4 h4 font-weight-normal">
                                                         <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                         <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
                                                         <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
@@ -209,7 +209,7 @@
                                                     </h1>
                                                 </header>
                                                 <div class="post-body">
-                                                    <ul class="d-flex flex-row bd-highlight py-4 h4 font-weight-normal text-secondary">
+                                                    <ul class="d-flex flex-row flex-wrap bd-highlight py-4 h4 font-weight-normal text-secondary">
                                                         <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                         <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
                                                         <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
