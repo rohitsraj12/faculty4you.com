@@ -77,12 +77,14 @@
                     </div>
                   
                     <div class="header__nav">
-                        <nav class="wrap-container">
+                        <div class="wrap-container">
+                        <nav>
                             <ul>
                                 <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link nav-active">Home</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">Profile</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                             </ul>
+                        </nav>
                             <div class="nav-social-media">
                                 <ul>
                                         <li class="nav-social__list text-light">Follow us : </li>
@@ -95,7 +97,7 @@
                                     ?>
                                 </ul>
                             </div>
-                        </nav>
+                        </div>
                     </div>
                    
                     <!-- end header nav -->
