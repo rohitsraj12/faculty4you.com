@@ -36,13 +36,12 @@
                     <nav class="header__nav">
                         <ul>
                             <li class="nav__list"> 
-                                <form action="POST" class="header-search">
+                                <form action="<?php base_url();?>dashboard/search_details.php" method="POST" class="header-search">
                                     <div class="">
-                                        
-                                        <input type="search" placeholder="search" class="search__input">
-                                        <a href="" class="header-search-btn" >
+                                        <input type="search" placeholder="search"  name="search" class="search__input">
+                                        <button href="" class="header-search-btn" name="submit-search">
                                             <i class="fa fa-search pr-3" aria-hidden="true"></i>
-                                        </a>
+                                        </button>
                                     </div>
                                 </form>
                                 
@@ -101,7 +100,19 @@
                             <ul>
                                 <li class="side-nav__list"><a class="side-nav__link <?php if($active == "home"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> Dashboard </a></li>
                                 <!-- <li class="side-nav__list"><a class="side-nav__link <?php if($active == "page content"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> page content </a></li> -->
-                                <li class="side-nav__list"><a class="side-nav__link <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> Tutors </a></li>
+                                <li class="side-nav__list"><a class="side-nav__link  side-nav-toggle <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> Tutors <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                    <ul class="side-sub-nav">
+                                        <li>
+                                            <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "activeMember"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/teacher/active_member.php">Active Members</a> 
+                                        </li> 
+                                        <li>
+                                            <a class="side-sub-nav__link <?php if($active == "teacher"){ echo "active expired";}?>" href="<?php base_url();?>dashboard/teacher/expired.php">Expired Members</a> 
+                                        </li>
+                                        <li>
+                                            <a class="side-sub-nav__link <?php if($active == "teacher"){ echo "active registered";}?>" href="<?php base_url();?>dashboard/teacher/registered_member.php">Registered Members</a> 
+                                        </li>
+                                    </ul>
+                                </li>
                                 <li class="side-nav__list"><a class="side-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> Students </a></li>
                             </ul>
                             <ul> 
@@ -132,10 +143,16 @@
                                     <a class="side-nav__link side-nav-toggle <?php if($active == "add record"){ echo "active";}?>" href="<?php base_url();?>dashboard/testimonial/">Add records <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="side-sub-nav">
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "add record" && $sub == "add location"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_location.php">Add locations</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "add record" && $sub == "add location"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_location.php">Add Locations</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add new subjects</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add Sew Subjects</a> 
+                                        </li>
+                                        <li>
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add sub category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject_category.php">Add new Subject Category</a> 
+                                        </li>
+                                        <li>
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add study category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_study_category.php">Add new Study Category</a> 
                                         </li>
                                     </ul>
                                 </li>
