@@ -39,7 +39,7 @@
                                 <form action="<?php base_url();?>dashboard/search_details.php" method="POST" class="header-search">
                                     <div class="">
                                         <input type="search" placeholder="search"  name="search" class="search__input">
-                                        <button href="" class="header-search-btn" name="submit-search">
+                                        <button class="header-search-btn" name="submit-search">
                                             <i class="fa fa-search pr-3" aria-hidden="true"></i>
                                         </button>
                                     </div>
