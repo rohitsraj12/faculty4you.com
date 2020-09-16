@@ -94,7 +94,7 @@ a:hover {
 
 .header-search {
   position: relative;
-}
+} 
 .search__input {
   height: 36px;
   width: 100%;
@@ -102,12 +102,17 @@ a:hover {
   padding-left: 45px;
   line-height: 22px;
   border: none;
-  color: #858585;
+  /* color: #858585; */
   font-size: 17px;
   font-weight: 300;
   letter-spacing: 0.6px;
 }
+.search__input:focus {
+  border-color: #e7e7e7;
+}
 .header-search-btn {
+  border: none;
+  background-color: transparent;
   position: absolute;
   top: 5px;
   left: 12px;
@@ -119,6 +124,10 @@ a:hover {
   color: #dadada;
   border: none;
   background-color: transparent;
+}
+
+.header-search-btn > .fa-search {
+  /* background-color: #ffffff; */
 }
 
 .sub__nav {
