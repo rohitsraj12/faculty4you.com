@@ -131,7 +131,7 @@
                                                         $token_left = $token;
                                                         $token = $token - 1;
 
-                                                        if($token > 0){
+                                                        if($token > -1){
                                                     ?>
                                                      <section class="student-details">
                                                         <article>
