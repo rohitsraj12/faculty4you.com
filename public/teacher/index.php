@@ -117,6 +117,19 @@
 
                                                 <section class="student-details">
 
+                                                <?php
+                                                    if(isset($_POST["token_update"])){
+                                                        $update_token = $token - 1;
+
+                                                        $update_query = "UPDATE memberships SET 
+                                                            member_token = '$update_token'
+                                                            WHERE membership_id = $teacher_id";
+
+                                                        $update_member = mysqli_query($conn, $update_query);
+                                                    }
+
+                                                ?>
+
                                                     <?php
                                                         if($token > 0){
                                                     ?>
@@ -142,6 +155,10 @@
                                                                     </figure>
                                                                 </div>
                                                                 <div class="col-sm-9">
+                                                                            <form action="" method="POST">
+
+                                                                                <button type="submit" name="token_update" onclick="confirm('do ypu wantr to process')">show details</button>
+                                                                            </form>
                                                                     <ul class="student-info">
                                                                         <li>
                                                                             <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
