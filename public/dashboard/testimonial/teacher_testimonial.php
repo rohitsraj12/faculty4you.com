@@ -28,8 +28,7 @@
                 <?php
                     $sql = "SELECT teacher_testimonials.*, teachers.* FROM teacher_testimonials 
                     LEFT JOIN teachers
-                        ON teachers.teacher_id = teacher_testimonials.teacher_id
-                    ORDER BY testimonial_id DESC";
+                        ON teachers.teacher_id = teacher_testimonials.teacher_id";
                 
                     $result = mysqli_query($conn, $sql);
                     // $query_results = mysqli_num_rows($result);
