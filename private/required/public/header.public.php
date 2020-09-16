@@ -91,17 +91,30 @@ data-layout="button_count">dsadasd
                     </div>
                     </div>                 
                     <div  class="header__nav">
-                        <nav class="wrap-container">
-                            <ul>
-                                <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Tutor registration</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Tutor login</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
-                            </ul>
-                        </nav>
-                        
-
+                        <div class="wrap-container">
+                            <nav>
+                                <ul>
+                                    <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
+                                    <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Tutor registration</a></li>
+                                    <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Tutor login</a></li>
+                                    <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
+                                    <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
+                                </ul>
+                            </nav>
+                            
+                            <div class="nav-social-media">
+                                    <ul>
+                                        <li class="nav-social__list text-light">Follow us: </li>
+                                    <?php
+                                    foreach($social_media_follow as $follow_name => $follow_url){
+                                    ?>
+                                    <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                                    <?php
+                                    }
+                                    ?>
+                                    </ul>
+                                </div>
+                             </div>
                     </div>
                    
                     <!-- end header nav -->
