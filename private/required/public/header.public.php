@@ -8,6 +8,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?= $page_title;?> | faculty4you.com</title>
+        <!-- meta for facebook -->
+        <meta property="og:url"           content="<?php base_url()?>" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="<?= $page_title;?> | faculty4you.com" />
+        <meta property="og:description"   content="We provide top tutors for academic/non-academic and online/offline activities. Faculty for you is the best platform which helps you in reaching your destination." />
+        <meta property="og:image"         content="<?php base_url()?>img/brand/faculty_for_you_brand.png" />
+
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- stylesheet -->
@@ -66,7 +73,20 @@
                         </div>
                         <!-- end header brand -->
                         <div class="header-right">
-                            
+                        <div id="fb-root"></div>
+                        
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+                        <div class="fb-share-button" 
+data-href="<?php base_url();?>" 
+data-layout="button_count">dsadasd
+</div>
                         </div>
                     </div>
                     </div>                 
