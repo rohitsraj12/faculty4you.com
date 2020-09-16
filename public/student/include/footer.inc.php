@@ -7,7 +7,7 @@
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             
-                            faculty4you
+                            facultyforyou
                         </header>
                         <p class="text-light h4">we provide top trainers for academic/non-academic and online/offline activities. Faculty for you is the best platform which helps you in reaching your destination.</p>
                     </article>

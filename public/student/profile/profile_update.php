@@ -59,7 +59,7 @@
                             <header class="article-profile__header p-4 h3 bg-dark text-light m-0">
                                 Primary information
                             </header>
-                            <div class="py-4 px-5 text-dark bg-light border">
+                            <div class="py-4 px-5 text-dark bg-white border">
                         
                                 <div class="form-row mb-4 mt-4">
                                     <div class="form-group col-md-6">
@@ -124,7 +124,7 @@
                             <header class="article-profile__header p-4 h3 bg-dark text-light m-0">
                                 Contact details
                             </header>
-                            <div class="py-4 px-5 text-dark bg-light border mb-5">
+                            <div class="py-4 px-5 text-dark bg-white border mb-5">
                                 <!-- contact info -->
                                 <div class="form-row mb-4">
                                     <div class="form-group col-md-6">

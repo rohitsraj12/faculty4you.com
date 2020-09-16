@@ -127,7 +127,7 @@
                                     Compose new post
                                 </header>
                                 
-                                <form action="" method="post" class="bg-light border py-5 px-5" onsubmit="return studentPost()">
+                                <form action="" method="post" class="bg-white border py-5 px-5" onsubmit="return studentPost()">
                                     <div class="form-group wrap-form">
                                         <label for="title">Title</label>
                                         <span class="error-msg"></span>
@@ -196,7 +196,7 @@
                                  
                                     <div class="">
                                         <input type="submit" class="button-primary" name="submit-post" value="Submit">
-                                        <input type="reset"  style="font-size: 1.6rem;" class="btn btn-lg  btn btn-outline-secondary" value="Reset">
+                                        <!-- <input type="reset"  style="font-size: 1.6rem;" class="btn btn-lg  btn btn-outline-secondary" value="Reset"> -->
 
                                     </div>
                                     

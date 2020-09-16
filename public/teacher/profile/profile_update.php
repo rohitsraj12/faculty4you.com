@@ -65,7 +65,7 @@
                             <header class="p-4 h3 article-profile__header text-light m-0">
                                 Personal information
                             </header>
-                            <div class="py-4 px-5 text-dark bg-light border">
+                            <div class="py-4 px-5 text-dark bg-white border">
                         
                                 <div class="form-row mb-4 mt-4">
                                     <div class="form-group wrap-form col-md-6">
@@ -183,7 +183,7 @@
                             <header class="p-4 h3 article-profile__header text-light m-0">
                                 Professional information
                             </header>
-                            <div class="py-4 px-5 text-dark bg-light border mb-5">
+                            <div class="py-4 px-5 text-dark bg-white border mb-5">
                             <div class="form-group form-row my-3">
                                     <div class="col-md-6"> 
                                         <label class="label col-form-label col-sm-3 pt-0">Category</label>
