@@ -115,7 +115,7 @@
                                                     ?>
                                                 </footer>
 
-                                                <section class="student-details">
+                                               
 
                                                 <?php
                                                     if(isset($_POST["token_update"])){
@@ -133,6 +133,7 @@
                                                     <?php
                                                         if($token > 0){
                                                     ?>
+                                                     <section class="student-details">
                                                         <article>
                                                             <header>
 
@@ -175,16 +176,17 @@
                                                                                                             
                                                             
                                                         </article>
-                                                    <?php
-                                                        }else{
-                                                    ?>
-                                                        <article class="">
-                                                        <p>You need to become a member to see the details of students. To become a member please <a href="<?php echo base_url();?>teacher/membership_plan.php">Click here</a></p>
-                                                        </article>
-                                                    <?php    
-                                                        }
-                                                    ?>
                                                 </section>
+                                                    <?php
+                                                        }
+                                                       // else{
+                                                    ?>
+                                                        <!-- <article class="">
+                                                        <p>You need to become a member to see the details of students. To become a member please <a href="<?php echo base_url();?>teacher/membership_plan.php">Click here</a></p>
+                                                        </article> -->
+                                                    <?php    
+                                                       // }
+                                                    ?>
                                             </article>
 
                                             <?php 
