@@ -87,13 +87,24 @@ include("include/header.inc.php");
 
                             $start = $member_row['membership_starting_date'];
                             $exp = $member_row['membership_expiry_date'];
-                            $date = date("Y - m - d");
-                            
-                            if($exp <= $date){
+                            $date = date("Y-m-d");
+
+                            $today = strtotime($date);
+                            $expDate = strtotime($exp);
+
+                            if($expDate <= $today){
+                                // echo "expired";
                                 echo "<a href='add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                             } else {
+                                // echo "active";
                                 echo "<span class='member-active'>Member</span>";
                             }
+                            
+                            // if($exp <= $date){
+                            //     echo "<a href='add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+                            // } else {
+                            //     echo "<span class='member-active'>Member</span>";
+                            // }
                         ?>
                         <p class="">
                             <?php echo $row['teacher_email'];?>
