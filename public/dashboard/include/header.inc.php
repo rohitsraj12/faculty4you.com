@@ -100,16 +100,16 @@
                             <ul>
                                 <li class="side-nav__list"><a class="side-nav__link <?php if($active == "home"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> Dashboard </a></li>
                                 <!-- <li class="side-nav__list"><a class="side-nav__link <?php if($active == "page content"){ echo "active";}?>" href="<?php base_url();?>dashboard/"> page content </a></li> -->
-                                <li class="side-nav__list"><a class="side-nav__link  side-nav-toggle <?php if($active == "teacher"){ echo "active";}?>" href="<?php base_url();?>dashboard/teacher/"> Tutors <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <li class="side-nav__list"><a class="side-nav__link  side-nav-toggle <?php if($active == "teacher"){ echo "active";}?>" href="#"> Tutors <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="side-sub-nav">
                                         <li>
                                             <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "activeMember"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/teacher/active_member.php">Active Members</a> 
                                         </li> 
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "teacher"){ echo "active expired";}?>" href="<?php base_url();?>dashboard/teacher/expired.php">Expired Members</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "expired"){ echo "active expired";}?>" href="<?php base_url();?>dashboard/teacher/expired.php">Expired Members</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "teacher"){ echo "active registered";}?>" href="<?php base_url();?>dashboard/teacher/registered_member.php">Registered Members</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "registered"){ echo "active registered";}?>" href="<?php base_url();?>dashboard/teacher/registered_member.php">Registered Members</a> 
                                         </li>
                                     </ul>
                                 </li>
