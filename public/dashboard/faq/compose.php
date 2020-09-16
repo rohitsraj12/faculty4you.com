@@ -69,7 +69,14 @@ $sub = "faq_compose";
                         Select category
                     </div>
                     <div class="col-9">
-                        <div class="form-check">
+
+                    <select name="category" id="">
+                        <option value="nooption">Select category</option>
+                        <option value="general">General category question</option>
+                        <option value="student">Tutor category question</option>
+                        <option value="teacher">Student category question</option>
+                    </select>
+                        <!-- <div class="form-check">
                             <input class="form-check-input category" type="radio" name="category" id="general" value="general">
                             <label class="form-check-label" for="general">
                                 General category question
@@ -86,7 +93,7 @@ $sub = "faq_compose";
                             <label class="form-check-label" for="teacher">
                                 Trainer category question
                             </label>
-                        </div>
+                        </div> -->
                     </div>
                     
                 </div> 
