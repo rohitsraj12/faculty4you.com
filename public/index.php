@@ -166,6 +166,9 @@
                    
 
                     <section class="section-data py-5 text-light">
+                    <header class="h1 text-center py-5">
+                        The <strong>Students</strong> and <strong>Tutors</strong> registered in our Platform all over  India..
+                    </header>
                         <div class="wrap-container row text-center py-5">
                             <article class="col-sm-4 py-5"  >
                                 <p class="text-white pb-3" style = "font-size : 2rem">Registered Students</p>
@@ -192,8 +195,8 @@
                                 </p>
                             </article>
                             <article class="col-sm-4 py-5"  >
-                            <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's Posts</p>
-                            <p class="h1 text-white" style="font-size: 4.8rem">
+                                <p class="h2 text-white pb-3" style = "font-size : 2rem">Student's Posts</p>
+                                <p class="h1 text-white" style="font-size: 4.8rem">
 
                                         <?php
                                             $query = "SELECT * FROM posts";
