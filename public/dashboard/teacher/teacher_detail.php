@@ -11,7 +11,6 @@
     include("../include/header.inc.php");
 
     $id = $_GET['id'];
-
     $sql = "SELECT teachers.*, cities.*, states.*, gender.*, subjects.* FROM teachers 
     LEFT JOIN cities
         ON cities.city_id = teachers.city_id
@@ -75,7 +74,7 @@
 
                                 <?php
                                 //  AND membership_expiry_date <= '2020-09-17'
-                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $id ";
+                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $id";
                                     $member_result = mysqli_query($conn, $member_query);
                                     $member_row = mysqli_fetch_assoc($member_result);
 
