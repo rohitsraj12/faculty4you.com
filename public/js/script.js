@@ -1,7 +1,8 @@
 $(document).ready(function () {
   $(".hamberger").click(function () {
     $(this).toggleClass("is__active");
-    $(".header__nav ul").slideToggle(400);
+    $(".header__nav").slideToggle(400);
+    $(".header-top .wrap-container").slideToggle(600);
   });
 
   // testimonial-slider
