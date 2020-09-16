@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="wrap-container">
-                            <div class="header-brand">
+                            <div class="header-brand">  
                                 <a href="<?php base_url();?>teacher/index.php">
                                     <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
                                 </a>
@@ -84,16 +84,16 @@
                                 <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                             </ul>
                             <div class="nav-social-media">
-                                        <ul>
-                                            <li class="nav-social__list text-light">Follow us : </li>
-                                        <?php
-                                        foreach($social_media_follow as $follow_name => $follow_url){
-                                        ?>
-                                        <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
-                                        <?php
-                                        }
-                                        ?>
-                                    </ul>
+                                <ul>
+                                        <li class="nav-social__list text-light">Follow us : </li>
+                                    <?php
+                                    foreach($social_media_follow as $follow_name => $follow_url){
+                                    ?>
+                                    <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                                    <?php
+                                    }
+                                    ?>
+                                </ul>
                             </div>
                         </nav>
                     </div>
