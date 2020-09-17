@@ -1257,7 +1257,8 @@ label {
   background: -o-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
   background: -ms-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
   background: linear-gradient(to bottom, #ffffb9 0%, #ffffcf 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 ); }
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 );
+  border-bottom: 2px solid #aa0000; }
   @media (max-width: 582px) and (orientation: portrait) {
     .body-banner {
       padding-bottom: 40px; } }
