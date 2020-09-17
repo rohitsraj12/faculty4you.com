@@ -113,17 +113,17 @@
                     ?>
                 <section class="row section__post">
                     <div class="col-sm-3">
-                        <div class="tab" >
-                            <button class="tablinks active" data-post="all">All results</button>
+                        <ul class="tab" >
+                            <li><button class="tablinks active" data-post="all">All results</button></li>
                             <?php
                                 while($row = mysqli_fetch_assoc($type_result)){
                             ?>
-                                    <button class="tablinks" data-post="<?php echo $row['study_type_id'];?>"><?php echo $row['study_type_name'];?></button>
+                                    <li><button class="tablinks" data-post="<?php echo $row['study_type_id'];?>"><?php echo $row['study_type_name'];?></button></li>
                             <?php
                                 }
                             ?>
                             <!-- <button class="tablinks" data-post="<?php //echo $type_row['study_type_id']?>">Online learning</button> -->
-                        </div>
+                        </ul>
                     </div>
                     <div class="col-sm-9">
                         <section class="all post__cat" id="viewPost">
