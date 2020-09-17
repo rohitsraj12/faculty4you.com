@@ -78,13 +78,13 @@ $sub = "activeMember";
 
                                     $token = $member_row['member_token'];
                                     
-                                    if($member_row){
+                                    if($token == 0){
                                         echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                                     }
                                     
-                                    if($exp <= $date) {
-                                        echo "<span class='member-active'>Member</span>";
-                                    }
+                                    // if($exp <= $date) {
+                                    //     echo "<span class='member-active'>Member</span>";
+                                    // }
                                 ?></td>
                                 <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php //echo $row['teacher_id'];?>">Add testimonial</a></td>
                                 <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php //echo $row['teacher_id'];?>">more details</a></td>
@@ -111,7 +111,7 @@ $sub = "activeMember";
                                         $exp = $member_row['membership_expiry_date'];
                                         $date = date("Y - m - d");
 
-                                        // $token = $member_row['member_token'];
+                                        $token = $member_row['member_token'];
                                         
                                         if($exp >= $date) {
                                             echo "<span class='member-active'>Member</span>";
