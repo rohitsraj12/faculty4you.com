@@ -40,31 +40,24 @@ $sub = "registered";
                         </thead>
                         <tbody>
                             <?php
-                                $sql = "SELECT * FROM teachers";
+                                $sql = "SELECT * FROM teachers WHERE teacher_id  NOT IN (
+                                    SELECT teacher_id 
+                                    FROM memberships
+                                )";
                                 $result = mysqli_query($conn, $sql);
-
-                                $member_query = "SELECT * FROM memberships";
-                                $member_result = mysqli_query($conn, $member_query);
-                                $member_row = mysqli_fetch_assoc($member_result);
+                                // $row = mysqli_fetch_assoc($result);
 
 
-                                $member_id = $member_row['teacher_id'];
-                                // $start = $member_row['membership_starting_date'];
-                                // $exp = $member_row['membership_expiry_date'];
-                                // $date = date("Y - m - d");
+                                // $t_id = $row['teacher_id'];
 
-                                // $token = $member_row['member_token'];
+                                // $sql = "SELECT * FROM teachers WHERE teacher_id = $t_id";
+                                // $result = mysqli_query($conn, $sql);
 
-                                
-
-                        // $query_results = mysqli_num_rows($result);
-
-                        // echo $query_results;
-
-                                while($row = mysqli_fetch_assoc($result)){
+                                while($row = mysqli_fetch_array($result)){
+                                    
                             ?>
-                            <tr>
                                 <th scope="row"><?php echo $row['teacher_id'];?></th>
+                                
                                 <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                 <td><?php echo $row['teacher_email'];?></td>
                                 <td>
@@ -76,7 +69,7 @@ $sub = "registered";
                                         $id = $row['teacher_id'];
 
 
-                                        if($id && $member_id ){
+                                        if($id){
                                             // echo "non member";
                                             echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                                            
