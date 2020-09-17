@@ -39,19 +39,19 @@ $sub = "expired";
                         </thead>
                         <tbody>
                             <?php
-                                $sql = "SELECT memberships.*, teachers.* FROM memberships
-                                LEFT JOIN teachers
-                                    ON teachers.teacher_id = memberships.teacher_id
-                                WHERE member_token = 0";
+                                // $sql = "SELECT memberships.*, teachers.* FROM memberships
+                                // LEFT JOIN teachers
+                                //     ON teachers.teacher_id = memberships.teacher_id
+                                // WHERE member_token = 0";
                             
-                                $result = mysqli_query($conn, $sql);
+                                // $result = mysqli_query($conn, $sql);
 
                                 $date = date("Y - m - d");
                                 
                                 $sql = "SELECT memberships.*, teachers.* FROM memberships
                                 LEFT JOIN teachers
                                     ON teachers.teacher_id = memberships.teacher_id
-                                WHERE member_token > 0";
+                                WHERE member_token > 0 && membership_expiry_date > '$date'";
                                 $results = mysqli_query($conn, $sql);
                                 
 
@@ -67,25 +67,24 @@ $sub = "expired";
                                 <td><?php echo $row['membership_expiry_date'];?></td>
                                 <td><?php 
 
-                                    $id = $row['teacher_id'];
-                                    $member_query = "SELECT * FROM memberships";
-                                    $member_result = mysqli_query($conn, $member_query);
-                                    $member_row = mysqli_fetch_assoc($member_result);
+                                    // $id = $row['teacher_id'];
+                                    // $member_query = "SELECT * FROM memberships";
+                                    // $member_result = mysqli_query($conn, $member_query);
+                                    // $member_row = mysqli_fetch_assoc($member_result);
+
 
                                     // $start = $member_row['membership_starting_date'];
-                                    $exp = $member_row['membership_expiry_date'];
-                                    $date = date("Y - m - d");
+                                    // $exp = $member_row['membership_expiry_date'];
+                                    // $date = date("Y-m-d");
+                                    
+                                    // $today = strtotime($date);
+                                    // $expDate = strtotime($exp);
 
-                                    $token = $member_row['member_token'];
-                                    
-                                    // if($member_row){
-                                    //     echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
-                                    // }
-                                    
-                                    if(!$exp <= $date) {
+                                    // if($expDate <= $today){
+                                        
                                         echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
 
-                                    }
+                                    // }
                                 ?></td>
                                 <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php //echo $row['teacher_id'];?>">Add testimonial</a></td>
                                 <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
