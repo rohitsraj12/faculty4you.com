@@ -112,8 +112,17 @@
       width: 6rem;
       height: 6rem;
       margin-right: 2rem;
-      border: 2px dotted $color-link-1;
+      // border: 2px dotted $color-link-1;
       border-radius: 50%;
+      text-align: center;
+
+      img{
+        height: 5.6rem;
+        width: 5.6rem;
+        @include radius-all(50%);
+        padding-top: 2px;
+
+      }
     }
 
     footer {
