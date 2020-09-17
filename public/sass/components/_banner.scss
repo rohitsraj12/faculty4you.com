@@ -7,6 +7,7 @@
     // height: 40vh;
     // background-color: #e9ecef;
     @include bg-1;
+    border-bottom: 2px solid $color-primary;
 
     @media (max-width: 582px) and (orientation: portrait) {
       // min-height: 100vh;
