@@ -95,7 +95,7 @@
         // flex-wrap: wrap;
       }
     }
-
+    
     .social {
       &__list {
         margin-left: 1.5rem;
@@ -172,9 +172,9 @@
 
     nav {
       @media(max-width: 582px){
-        margin-bottom: 20px;
-        padding-bottom: 2rem;
-        border-bottom: 2px solid $color-primary;
+        // margin-bottom: 20px;
+        padding-bottom: 1rem;
+        // border-bottom: 2px solid $color-primary;
       }
     }
 
@@ -346,9 +346,21 @@
 }
 .nav-social-media {
   @extend .social-media;
-  ul {
+  @media(max-width: 582px){
+    background-color: $color-primary;
+    padding: 1.5rem 0;
+    margin: 0 2%;
+  }
+  ul li{
     &:first-child {
       font-size: 1.5rem;
+      @media(max-width: 582px){
+        display: block;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid $color-primary-button-border;
+        text-align: center;
+      }
     }
     .log {
       line-height: 4rem;
