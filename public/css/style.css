@@ -803,7 +803,6 @@ label {
     .section-student .article-block:not(last-child) {
       padding: 4rem 0;
       margin-bottom: 2rem;
-      background-color: #f9f9f9;
       border-top: 3px solid #ff736d; } }
   .section-student .article-header {
     padding-bottom: 2rem;
@@ -939,7 +938,6 @@ label {
       .section-teacher .article-block:not(last-child) {
         padding: 4rem 0;
         margin-bottom: 2rem;
-        background-color: #f9f9f9;
         border-top: 3px solid #ff736d; } }
   .section-teacher .article-header {
     padding-bottom: 2rem;
@@ -1033,8 +1031,15 @@ label {
     width: 6rem;
     height: 6rem;
     margin-right: 2rem;
-    border: 2px dotted #ff736d;
-    border-radius: 50%; }
+    border-radius: 50%;
+    text-align: center; }
+    .section-testimonial figure img {
+      height: 5.6rem;
+      width: 5.6rem;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+      padding-top: 2px; }
   @media (min-width: 583px) {
     .section-testimonial footer {
       display: flex; } }
@@ -1958,9 +1963,7 @@ label {
       justify-content: space-between; } }
   @media (max-width: 582px) {
     .header__nav nav {
-      margin-bottom: 20px;
-      padding-bottom: 2rem;
-      border-bottom: 2px solid #aa0000; } }
+      padding-bottom: 1rem; } }
   @media (min-width: 583px) {
     .header__nav ul {
       padding: 0.2rem 0 0.1rem;
@@ -2090,15 +2093,28 @@ label {
   position: absolute;
   top: 0; }
 
-.nav-social-media ul:first-child {
-  font-size: 1.5rem; }
+@media (max-width: 582px) {
+  .nav-social-media {
+    background-color: #aa0000;
+    padding: 1.5rem 0;
+    margin: 0 2%; } }
 
-.nav-social-media ul .log {
+.nav-social-media ul li:first-child {
+  font-size: 1.5rem; }
+  @media (max-width: 582px) {
+    .nav-social-media ul li:first-child {
+      display: block;
+      padding-bottom: 5px;
+      margin-bottom: 5px;
+      border-bottom: 1px solid #550000;
+      text-align: center; } }
+
+.nav-social-media ul li .log {
   line-height: 4rem;
   font-size: 2rem;
   color: #222222; }
 
-.nav-social-media ul .main__header .wrap-container {
+.nav-social-media ul li .main__header .wrap-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
