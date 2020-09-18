@@ -28,8 +28,7 @@
                 <?php
                     $sql = "SELECT testimonials.*, std.* FROM testimonials 
                     LEFT JOIN std
-                        ON std.student_id = testimonials.student_id
-                    ORDER BY testimonial_id DESC";
+                        ON std.student_id = testimonials.student_id";
                 
                     $result = mysqli_query($conn, $sql);
                     // $query_results = mysqli_num_rows($result);
