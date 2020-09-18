@@ -34,6 +34,9 @@
     font-family: "Montserrat", sans-serif;
   }
 
+  .section-member {
+    @include bg-1;
+  }
   .section-member p {
     margin: 20px 0 30px;
     font-family: "Montserrat", sans-serif;
@@ -369,9 +372,9 @@
   @include shadow;
   header {
     height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    // display: flex;
+    // flex-direction: row;
+    // justify-content: space-between;
     align-items: center;
 
     .brand {
