@@ -144,3 +144,12 @@
     }
   }
 }
+.section__post {
+  .tab{
+    @media (max-width: 582px){
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
