@@ -21,7 +21,6 @@
                                 <h6 class="text-sub-primary">
                                     Register <strong class="f-link">facultyforyou.com</strong> and connect with top <strong>academic</strong> / <strong>non-academic tutors</strong> on the platform.
                                 </h6>
-                            </div>
                             
                         </div>
                         <section class="section-body wrap-container">
@@ -209,7 +208,7 @@
                         </div>
                     </section>
 
-                    <section class="section-testimonial">
+                    <section class="section-testimonial top-testimonial">
                          
                          <div class="section-header u-center-text" >
                              <heeader class="text-primary-h-3"> 
