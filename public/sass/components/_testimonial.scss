@@ -133,6 +133,7 @@
         padding: 0.5rem;
       }
     }
+ 
   }
 }
 
@@ -142,4 +143,9 @@
       padding-bottom: 0.2rem;
     }
   }
+}
+
+.top-testimonial{
+  border-bottom: 2px solid $color-primary;
+  // background-color: black;
 }
