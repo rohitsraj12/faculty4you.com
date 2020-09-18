@@ -106,10 +106,10 @@
                                             <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "activeMember"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/teacher/active_member.php">Active Members</a> 
                                         </li> 
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "expired"){ echo "active expired";}?>" href="<?php base_url();?>dashboard/teacher/expired.php">Expired Members</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "expired"){ echo "active  sub_active";}?>" href="<?php base_url();?>dashboard/teacher/expired.php">Expired Members</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "registered"){ echo "active registered";}?>" href="<?php base_url();?>dashboard/teacher/registered_member.php">Registered Members</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "teacher" && $sub == "registered"){ echo "active  sub_active";}?>" href="<?php base_url();?>dashboard/teacher/registered_member.php">Registered Members</a> 
                                         </li>
                                     </ul>
                                 </li>
