@@ -36,45 +36,6 @@
                     $query_results = mysqli_num_rows($result);
 
                 ?>
-                    <!-- <div class="search__form mb-5 bg-light border p-5">
-                        <form action="" method="post">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <input type="search" class="form-control" name="search" id="inputAddress" placeholder="">
-                                    <small class="msg">Enter your subject / pincode / study type</small>
-                                </div>
-                                <div class="col-sm-3">
-                                    <select id="inputState" name="city" class="form-control">
-                                        <option selected>Choose...</option>
-                                        <?php 
-                                            // #task city data fetch
-                                            $city_query = "SELECT * FROM cities";
-                                            $result = mysqli_query($conn, $city_query);
-                                            while( $row = mysqli_fetch_assoc($result)){
-                                            
-                                        ?>
-                                        <option value="<?php echo $row['city_id'];?>"><?php echo $row['city_name'];?></option>
-                                        <?php
-                                        }
-                                        ?>
-                                    </select>  
-                                    <small class="msg">Select city name</small>
-
-                                </div>
-                                <div class="col-sm-3">
-                                    <input class="btn btn-primary w-100 py-2" style="font-size: 1.4rem" name="submit-search" type="submit" value="search">
-                                
-                                </div>
-                            </div>
-                        </form>
-                    </div> -->
-                    
-                    <!-- <div class="search-result-num" >
-                        <p>
-                                <?php //echo $query_results; ?> results are matching
-                        </p>
-
-                    </div> -->
                     <section class="section-body"> 
 
                     
@@ -114,11 +75,11 @@
                 <section class="row section__post">
                     <div class="col-sm-3">
                         <ul class="tab" >
-                            <li><button class="tablinks active" data-post="all">All results</button></li>
+                            <li class="study-type col-sm-12"><button class="tablinks active" data-post="all">All results</button></li>
                             <?php
                                 while($row = mysqli_fetch_assoc($type_result)){
                             ?>
-                                    <li><button class="tablinks" data-post="<?php echo $row['study_type_id'];?>"><?php echo $row['study_type_name'];?></button></li>
+                                    <li class="study-type col-sm-12"><button class="tablinks" data-post="<?php echo $row['study_type_id'];?>"><?php echo $row['study_type_name'];?></button></li>
                             <?php
                                 }
                             ?>
@@ -137,7 +98,7 @@
 
                                     $city = mysqli_real_escape_string($conn, $_POST["city"]);
 
-                                    echo $city;
+                                    // echo $city;
                                     
                                     $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, cities.* 
                                     FROM posts
