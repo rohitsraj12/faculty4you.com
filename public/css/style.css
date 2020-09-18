@@ -77,7 +77,7 @@ strong {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 ); }
   @media (min-width: 583px) {
     .body-container {
-      padding: 5rem 0 20rem; } }
+      padding: 5rem 0 0; } }
   @media (max-width: 582px) {
     .body-container {
       padding: 5rem 0; } }
@@ -410,6 +410,16 @@ label {
   .section-forgotpwd h2 {
     text-align: center;
     font-family: "Montserrat", sans-serif; }
+  .section-member .section-member,
+  .section-forgotpwd .section-member {
+    background: #ffffb9;
+    background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffb9), color-stop(100%, #ffffcf));
+    background: -webkit-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: -o-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: -ms-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: linear-gradient(to bottom, #ffffb9 0%, #ffffcf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 ); }
   .section-member .section-member p,
   .section-forgotpwd .section-member p {
     margin: 20px 0 30px;
@@ -653,9 +663,6 @@ label {
   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2); }
   .member-body-header header {
     height: 100px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center; }
     .member-body-header header .brand img {
       height: 80px; }
@@ -1049,6 +1056,9 @@ label {
 .testimonial-client-name {
   padding-bottom: 0.2rem; }
 
+.top-testimonial {
+  border-bottom: 2px solid #aa0000; }
+
 .section-partner {
   padding: 10rem 0 10rem; }
   .section-partner .section-body {
@@ -1250,6 +1260,12 @@ label {
   @media (max-width: 582px) {
     .article-search-footer {
       text-align: center; } }
+
+@media (max-width: 582px) {
+  .section__post .tab {
+    display: flex;
+    flex-direction: column;
+    width: 100%; } }
 
 .body-banner {
   width: 100%;
@@ -1520,6 +1536,9 @@ label {
       text-align: left; } }
   @media (max-width: 582px) {
     .tab button {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
       text-align: center; } }
 
 .tab button:hover {
@@ -2094,6 +2113,10 @@ label {
   top: 0; }
 
 @media (max-width: 582px) {
+  .top-social-media {
+    display: none; } }
+
+@media (max-width: 582px) {
   .nav-social-media {
     background-color: #aa0000;
     padding: 1.5rem 0;
@@ -2146,6 +2169,12 @@ label {
     color: #aa0000;
     font-size: 1.7rem;
     border: none; }
+
+.member-body-header {
+  padding-top: 1rem; }
+  @media (min-width: 583px) {
+    .member-body-header .login {
+      display: none; } }
 
 .body-footer {
   padding-top: 6rem;
