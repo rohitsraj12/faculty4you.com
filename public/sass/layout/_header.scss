@@ -344,6 +344,12 @@
   position: absolute;
   top: 0;
 }
+
+.top-social-media {
+  @media (max-width: 582px){
+    display: none;
+  }
+}
 .nav-social-media {
   @extend .social-media;
   @media(max-width: 582px){
@@ -351,6 +357,7 @@
     padding: 1.5rem 0;
     margin: 0 2%;
   }
+ 
   ul li{
     &:first-child {
       font-size: 1.5rem;
@@ -418,4 +425,13 @@
       border: none;
     }
   }
+}
+
+.member-body-header{
+  padding-top: 1rem;
+   .login{
+      @media (min-width: 583px){
+        display: none;
+      }
+    }
 }
