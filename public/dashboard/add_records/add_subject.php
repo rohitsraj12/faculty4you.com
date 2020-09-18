@@ -119,8 +119,8 @@ $sub = "add subject";
                     </form>
                 </section>
 
-                <section class="section-faq col-sm-12  align-self-start">
-                <table class="bg-light table">
+                <section class="section-faq col-sm-12">
+                    <table class="bg-light table">
                         <thead class="thead-light">
                             <tr>
                             <th scope="col">Id</th>
