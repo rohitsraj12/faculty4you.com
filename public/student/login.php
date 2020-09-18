@@ -23,109 +23,142 @@
 <body>
 
     <div class="body-wrap">
-        
-      
-        <div class="body-container">
+         
             <div class="member-body-header">
-                <header class="wrap-container">
-                    <div class="brand">
-                        <a href="<?php base_url();?>index.php">
-                            <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
-                        </a>
+                <div id="hamberger" class="hamberger">
+                    <span class="hamberger__line"></span>
+                    <span class="hamberger__line"></span>
+                    <span class="hamberger__line"></span>
+                </div>
+                    <!-- end hamberger -->
+                <header class="header-main">
+                    <div class="header-brand-section">
+
+                        <div class="wrap-container">
+                                <div class="brand">
+                                <a href="<?php base_url();?>index.php">
+                                    <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
+                                </a>
+                            </div> 
+                            <div class="top-social-media nav-social-media">
+                                <ul>
+                                        <li class="nav-social__list log">Follow us : </li>
+                                    <?php
+                                    foreach($social_media_follow as $follow_name => $follow_url){
+                                    ?>
+                                    <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                                    <?php
+                                    }
+                                    ?>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div class="nav-social-media">
-                        <ul>
-                                <li class="nav-social__list log">Follow us : </li>
-                            <?php
-                            foreach($social_media_follow as $follow_name => $follow_url){
-                            ?>
-                            <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
-                            <?php
-                            }
-                            ?>
-                        </ul>
-                    </div>
-                    <!-- <nav class="header__nav">
+                    
+                    
+                    
+                </header> 
+                <div  class="login header__nav">
+                    <div class="wrap-container">
+                        <nav>
                             <ul>
-                                <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">become teacher</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link button-primary">trainer login</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Tutor registration</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Tutor login</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
                             </ul>
-                        </nav> -->
-                        <!-- end header nav -->
-                </header>
-            </div>
-
-        <div class="section-member wrap-container">
-
-            <div class="container" id="container">
-                <div class="form-container sign-up-container">
-                    <form  action="include/registration.student.inc.php" method="post" onsubmit="return registration()">
-                        <h1>Create your account</h1>
-                        <div class="social-container">
-                            <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
-                        </div>
-                        <!-- <span>or use your email for registration</span> -->
-                        <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input type="text" name="user_name" class="reg" placeholder="user name" />
-                        <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input type="tel" name="telephone" class="reg" placeholder="phone number"> 
-                        <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input name="email" type="email" class="reg" placeholder="email" />
-                        <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input name="password" type="password" class="reg regPwd" placeholder="password" />
-                        <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
-                        <button  name="submit-register" >Sign Up</button>
-                    </form>
-                </div>
-                <div class="form-container sign-in-container">
-                    <form action="include/login.student.inc.php" method="post"  onsubmit="return logIn()">
-                        <h1>Welcome back</h1>
-                        <div class="social-container">
-                            <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-                            <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
-                        </div>
-                        <!-- <span>or use your account</span> -->
-                        <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input type="text" class="login"  placeholder="User name / Email"  name="email" />
-                        <span class="error-icon">
-                            <i class="fa fa-info-circle" aria-hidden="true"></i>
-                        </span>
-                        <input type="password" class="login" placeholder="Password"  name="password"/>
-                        <a class="forgot_password" href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
-                        <button name="login-submit">Login</button>
-                    </form>
-                </div>
-                <div class="overlay-container">
-                    <div class="overlay">
-                        <div class="overlay-panel overlay-left">
-                            <h1>Hello, Student!</h1>
-                            <p class="text-light">If you are already a member</p>
-                            <button class="ghost" id="signIn">Login</button>
-                        </div>
-                        <div class="overlay-panel overlay-right">
-                            <h1>Hello, student!</h1>
-                            <p class="text-light">If you are new to <strong>faculty for you</strong></p>
-                            <button class="ghost" id="signUp">Sign Up</button>
-                        </div>
+                        </nav>
+                        <div class="nav-social-media">
+                                        <ul>
+                                            <li class="nav-social__list text-light">Follow us: </li>
+                                        <?php
+                                        foreach($social_media_follow as $follow_name => $follow_url){
+                                        ?>
+                                        <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        </ul>
+                                    </div>
+                                </div>
                     </div>
                 </div>
             </div>
+           
+        <div class="body-container">
+            <div class="section-member wrap-container">
+
+                <div class="container" id="container">
+                    <div class="form-container sign-up-container">
+                        <form  action="include/registration.student.inc.php" method="post" onsubmit="return registration()">
+                            <h1>Create your account</h1>
+                            <div class="social-container">
+                                <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+                            </div>
+                            <!-- <span>or use your email for registration</span> -->
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input type="text" name="user_name" class="reg" placeholder="user name" />
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input type="tel" name="telephone" class="reg" placeholder="phone number"> 
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input name="email" type="email" class="reg" placeholder="email" />
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input name="password" type="password" class="reg regPwd" placeholder="password" />
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
+                            <button  name="submit-register" >Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="form-container sign-in-container">
+                        <form action="include/login.student.inc.php" method="post"  onsubmit="return logIn()">
+                            <h1>Welcome back</h1>
+                            <div class="social-container">
+                                <!-- <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
+                            </div>
+                            <!-- <span>or use your account</span> -->
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input type="text" class="login"  placeholder="User name / Email"  name="email" />
+                            <span class="error-icon">
+                                <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            </span>
+                            <input type="password" class="login" placeholder="Password"  name="password"/>
+                            <a class="forgot_password" href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
+                            <button name="login-submit">Login</button>
+                        </form>
+                    </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h1>Hello, Student!</h1>
+                                <p class="text-light">If you are already a member</p>
+                                <button class="ghost" id="signIn">Login</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h1>Hello, student!</h1>
+                                <p class="text-light">If you are new to <strong>faculty for you</strong></p>
+                                <button class="ghost" id="signUp">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
     </div>
