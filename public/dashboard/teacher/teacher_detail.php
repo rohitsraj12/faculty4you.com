@@ -6,6 +6,7 @@
     }
 
     $active = "teacher";
+    $sub = 'teacher';
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");
     include("../include/header.inc.php");
@@ -74,15 +75,18 @@
 
                                 <?php
                                 //  AND membership_expiry_date <= '2020-09-17'
-                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $id";
+                                    $member_query = "SELECT * FROM memberships WHERE membership_expiry_date > CURRENT_DATE() AND teacher_id = $id";
                                     $member_result = mysqli_query($conn, $member_query);
                                     $member_row = mysqli_fetch_assoc($member_result);
 
-                                    $start = $member_row['membership_starting_date'];
-                                    $exp = $member_row['membership_expiry_date'];
-                                    $date = date("Y - m - d");
+                                    // $start = $member_row['membership_starting_date'];
+                                    // $exp = $member_row['membership_expiry_date'];
+                                    // $date = date("Y - m - d");
                                     
-                                    if($exp <= $date){
+
+                                    $token = $member_row['member_token'];
+                                    
+                                    if($token == 0){
                                         echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
                                     } else {
                                         echo "<span class='member-active'>Member</span>";
