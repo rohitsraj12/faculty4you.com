@@ -64,7 +64,7 @@ strong {
 .body-container {
   @include bg-1;
   @media (min-width: 583px) {
-    padding: 5rem 0 20rem;
+    padding: 5rem 0 0;
   }
 
   @media (max-width: 582px) {
