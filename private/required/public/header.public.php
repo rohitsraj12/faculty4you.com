@@ -49,46 +49,46 @@
                 <header class="header-main">
                 
                     <div class="header-brand-section">
-                    <div class="header-top">
+                        <div class="header-top">
+                            <div class="wrap-container">
+
+                                <ul>
+                                <li class="social__list pt-2">Share:</li>
+
+                                        <?php
+                                        foreach($social_media_share as $share_name => $share_url){
+                                        ?>
+                                        <li class="social__list"><a class="social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
+                                        <?php
+                                        }
+                                        ?>
+                                </ul>
+                            </div>
+                        </div>
                         <div class="wrap-container">
+                            <div class="header-brand">
+                                <a href="<?php base_url();?>index.php">
+                                    <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty 4 you">
+                                </a>
+                            </div>
+                            <!-- end header brand -->
+                            <div class="header-right">
+                            <!-- <div id="fb-root"></div>
 
-                            <ul>
-                            <li class="social__list pt-2">Share:</li>
+                            <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                            fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));</script>
 
-                                    <?php
-                                    foreach($social_media_share as $share_name => $share_url){
-                                    ?>
-                                    <li class="social__list"><a class="social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
-                                    <?php
-                                    }
-                                    ?>
-                            </ul>
+                                                    <div class="fb-share-button" 
+                            data-href="<?php base_url();?>" 
+                            data-layout="button_count">dsadasd
+                            </div> -->
+                            </div>
                         </div>
-                    </div>
-                    <div class="wrap-container">
-                        <div class="header-brand">
-                            <a href="<?php base_url();?>index.php">
-                                <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty 4 you">
-                            </a>
-                        </div>
-                        <!-- end header brand -->
-                        <div class="header-right">
-                        <!-- <div id="fb-root"></div>
-
-<script>(function(d, s, id) {
-var js, fjs = d.getElementsByTagName(s)[0];
-if (d.getElementById(id)) return;
-js = d.createElement(s); js.id = id;
-js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
-                        <div class="fb-share-button" 
-data-href="<?php base_url();?>" 
-data-layout="button_count">dsadasd
-</div> -->
-                        </div>
-                    </div>
                     </div>                 
                     <div  class="header__nav">
                         <div class="wrap-container">
