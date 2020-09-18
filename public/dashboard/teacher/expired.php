@@ -51,7 +51,7 @@ $sub = "expired";
                                 $sql = "SELECT memberships.*, teachers.* FROM memberships
                                 LEFT JOIN teachers
                                     ON teachers.teacher_id = memberships.teacher_id
-                                WHERE member_token > 0 && membership_expiry_date > '$date'";
+                                WHERE membership_expiry_date < CURRENT_DATE()";
                                 $results = mysqli_query($conn, $sql);
                                 
 
@@ -79,6 +79,8 @@ $sub = "expired";
                                     
                                     // $today = strtotime($date);
                                     // $expDate = strtotime($exp);
+                                    // $newDate = date("d-m-Y", strtotime($originalDate));
+                                    // echo $today;
 
                                     // if($expDate <= $today){
                                         
