@@ -144,6 +144,46 @@
                 </section>
 
             </div>
+
+            <div class="row">
+                <section class="section_faq">
+                    
+                <table class="bg-light table">
+                        <thead class="thead-light">
+                            <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">city Name</th>
+                            <th scope="col">State Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
+                                $study_query = "SELECT cities.*, states.* FROM cities
+                                    LEFT JOIN states
+                                        ON states.state_id = cities.state_id
+                                        ORDER BY city_name ASC";
+                                $result = mysqli_query($conn, $study_query);
+
+                        // $query_results = mysqli_num_rows($result);
+
+                        // echo $query_results;
+
+                                while($row = mysqli_fetch_assoc($result)){
+                            ?>
+                            <tr>
+                                <th scope="row"><?php echo $row['city_id'];?></th>
+                                <td><?php echo $row['city_name']?></td>
+                                <td><?php echo $row['state_name'];?></td>
+                                </tr>
+                            <?php 
+                            }
+                            ?>
+                            <?php
+                                ?>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
         </div>
     </div>
 
