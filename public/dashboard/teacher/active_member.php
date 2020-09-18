@@ -32,26 +32,29 @@ $sub = "activeMember";
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Membership Expire Date</th>
-                            <th scope="col">Member expire date</th>
-                            <th scope="col">Add testimonial</th>
+                            <th scope="col">Token number left</th>
+                            <th scope="col">Activate member</th>
+                            <!-- <th scope="col">Add testimonial</th> -->
                             <th scope="col">More Details</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-                                $sql = "SELECT memberships.*, teachers.* FROM memberships
-                                LEFT JOIN teachers
-                                    ON teachers.teacher_id = memberships.teacher_id
-                                WHERE member_token = 0";
+                                // $sql = "SELECT memberships.*, teachers.* FROM memberships
+                                // LEFT JOIN teachers
+                                //     ON teachers.teacher_id = memberships.teacher_id
+                                // WHERE member_token = 0";
                             
-                                $result = mysqli_query($conn, $sql);
+                                // $result = mysqli_query($conn, $sql);
 
-                                $date = date("Y - m - d");
+                                // $date = date("Y - m - d");
                                 
                                 $sql = "SELECT memberships.*, teachers.* FROM memberships
                                 LEFT JOIN teachers
                                     ON teachers.teacher_id = memberships.teacher_id
-                                WHERE membership_expiry_date > '$date' AND member_token > 0";
+                                WHERE membership_expiry_date > CURRENT_DATE()
+                                ORDER BY member_token ASC
+                                ";
                                 $results = mysqli_query($conn, $sql);
                                 
 
@@ -59,35 +62,36 @@ $sub = "activeMember";
 
                         // echo $query_results;
 
-                                while($row = mysqli_fetch_assoc($result)){
+                                while($row = mysqli_fetch_assoc($results)){
                             ?>
                             <tr>
                                 <th scope="row"><?php echo $row['teacher_id'];?></th>
                                 <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                 <td><?php echo $row['membership_expiry_date'];?></td>
+                                <td><?php echo $row['member_token'];?></td>
                                 <td><?php 
 
-                                    $id = $row['teacher_id'];
-                                    $member_query = "SELECT * FROM memberships WHERE member_token = 0";
-                                    $member_result = mysqli_query($conn, $member_query);
-                                    $member_row = mysqli_fetch_assoc($member_result);
+                                    // $id = $row['teacher_id'];
+                                    // $member_query = "SELECT * FROM memberships WHERE member_token = 0";
+                                    // $member_result = mysqli_query($conn, $member_query);
+                                    // $member_row = mysqli_fetch_assoc($member_result);
 
-                                    // $start = $member_row['membership_starting_date'];
-                                    $exp = $member_row['membership_expiry_date'];
-                                    $date = date("Y - m - d");
+                                    // // $start = $member_row['membership_starting_date'];
+                                    // $exp = $row['membership_expiry_date'];
+                                    // $date = date("Y - m - d");
 
-                                    $token = $member_row['member_token'];
+                                    $token = $row['member_token'];
                                     
                                     if($token == 0){
                                         echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+
+                                        // if()
+                                    } else{
+                                        echo "<span class='member-active'>Member</span>";
                                     }
-                                    
-                                    // if($exp <= $date) {
-                                    //     echo "<span class='member-active'>Member</span>";
-                                    // }
                                 ?></td>
-                                <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php //echo $row['teacher_id'];?>">Add testimonial</a></td>
-                                <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php //echo $row['teacher_id'];?>">more details</a></td>
+                                <!-- <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>">Add testimonial</a></td> -->
+                                <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
                             </tr>
                             <?php 
                             }
@@ -98,7 +102,7 @@ $sub = "activeMember";
                                 ?>
                                 <tr>
                                     <th scope="row"><?php echo $row['teacher_id'];?></th>
-                                    <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
+                                    <td class="text-left"><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                     <td><?php echo $row['membership_expiry_date'];?></td>
                                     <td><?php 
 
