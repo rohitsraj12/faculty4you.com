@@ -110,7 +110,7 @@
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
                                         ON study_categories.category_id = posts.category_id
-                                    WHERE ((posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') OR (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%'))
+                                    WHERE (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') OR (posts.post_title LIKE '%$search%')
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
                                     $query_results = mysqli_num_rows($result);
@@ -172,7 +172,7 @@
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
                                         ON study_categories.category_id = posts.category_id
-                                    WHERE posts.study_type_id = 1 AND ((posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') OR (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%'))
+                                    WHERE posts.study_type_id = 1 AND posts.post_title LIKE '%$search%'
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
                                     $query_results = mysqli_num_rows($result);
@@ -231,7 +231,7 @@
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
                                         ON study_categories.category_id = posts.category_id
-                                    WHERE posts.study_type_id = 2 AND ((posts.post_title LIKE '%$search%' AND std.city_id LIKE '%$city%') OR (posts.post_title LIKE '%$search%') OR (std.city_id LIKE '%$city%'))
+                                    WHERE posts.study_type_id = 2 AND (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%')
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
                                     $query_results = mysqli_num_rows($result);
