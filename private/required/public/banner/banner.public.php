@@ -50,7 +50,7 @@
                                                 while( $row = mysqli_fetch_assoc($result)){
                                                 
                                             ?>
-                                            <option value="<?php echo $row['city_id'];?>"><?php echo $row['city_name'];?></option>
+                                            <option value="<?php echo $row['city_name'];?>"><?php echo $row['city_name'];?></option>
                                             <?php
                                             }
                                             ?>
