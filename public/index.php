@@ -165,7 +165,7 @@
                    
 
                     <section class="section-data py-5 text-light">
-                    <header class="h1 text-center py-5">
+                    <header class="text-center py-5">
                         The <strong>Students</strong> and <strong>Tutors</strong> registered in our Platform all over  India..
                     </header>
                         <div class="wrap-container row text-center py-5">
