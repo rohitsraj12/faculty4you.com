@@ -27,8 +27,7 @@
 
  <div class="body-container">
     <main>
-    <main>
-    <section class="section-search-result wrap-container">
+        <section class="section-search-result wrap-container">
                     <div class="section-header u-center-text">
                         <heeader class="text-primary-h-3"> 
                             Search result
@@ -479,7 +478,6 @@
             <?php
             }
             ?>
-    </main>
     </main>
 </div>
 
