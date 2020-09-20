@@ -102,18 +102,28 @@ $(document).ready(function () {
     $(this).closest(".student-post").find(".student-details").slideToggle();
   });
 
-  // $("").click(function () {
-  //   $("container").toggleClass("right-panel-active");
-  // });
+  // buy button function
+
+  var input = $(".agree__input");
+  $(input).click(function () {
+    $(this).not("checked").prop("checked", true);
+
+    if (input.checked) {
+      alert("hi");
+    }
+    // if (input.checked == true) {
+    //   alert("false");
+    // }
+  });
 
   // script for facebook share
-  (function (d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, "script", "facebook-jssdk");
+  // (function (d, s, id) {
+  //   var js,
+  //     fjs = d.getElementsByTagName(s)[0];
+  //   if (d.getElementById(id)) return;
+  //   js = d.createElement(s);
+  //   js.id = id;
+  //   js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+  //   fjs.parentNode.insertBefore(js, fjs);
+  // })(document, "script", "facebook-jssdk");
 });
