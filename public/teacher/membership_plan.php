@@ -72,33 +72,13 @@
                                 </ul>
                                 
                                 <div class="confirm-agreement text-center mt-5">
-                                    <input class="agree__input mr-2" type="checkbox" id="silver"> <label for="silver">agree</label> <a data-toggle="modal" data-target="#silver" class="" href="#">terms and conditions</a>
+                                    <input class="agree__input mr-2" type="checkbox" id="silverMembership"> <label for="silverMembership">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
                                 </div>
                             </div>
                             <footer class="member__footer">
-                                <a  href="#" class="button-primary buy__button">BUY NOW</a>
+                                <a href="#" class="button-primary buy__button" disabled>BUY NOW</a>
                             </footer>
                         </article>
-                        
-                        <div class="modal fade" id="silver" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Silver Membership Terms and Condition</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="payment_method.php" type="button" class="btn btn-primary">Continue</a>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-sm-4">
                         <article class="member-block member-gold">
@@ -128,33 +108,13 @@
                                 
                                 
                                 <div class="confirm-agreement text-center mt-5">
-                                <input class="agree__input mr-2" type="checkbox" id="gold"> <label for="gold">agree</label> <a data-toggle="modal" data-target="#silver" class="" href="#">terms and conditions</a>
+                                <input class="agree__input mr-2" type="checkbox" id="gold"> <label for="gold">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
                                 </div>
                             </div>
                             <footer class="member__footer">
                                 <a href="#" class="button-primary buy__button">BUY NOW</a>
                             </footer>
                         </article>
-                        
-                        <div class="modal fade" id="gold" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Gold Membership Terms and Condition</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="payment_method.php" type="button" class="btn btn-primary">Continue</a>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-sm-4">
                         <article class="member-block member-platinum">
@@ -185,39 +145,23 @@
                                 
                                 
                                 <div class="confirm-agreement text-center mt-5">
-                                    <input class="agree__input mr-2" type="checkbox" id="platinum"> <label class="label" for="platinum">agree</label> <a data-toggle="modal" data-target="#silver" class="" href="#">terms and conditions</a>
+                                    <input class="agree__input mr-2" type="checkbox" id="platinum"> <label class="label" for="platinum">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
                                 </div>
                             </div>
                             <footer class="member__footer">
                                 <a  href="#"  class="button-primary buy__button">BUY NOW</a>
                             </footer>
-                        </article>
-                        
-                        <div class="modal fade" id="platinum" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Platinum Membership Terms and Condition</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    ...
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <a href="payment_method.php" type="button" class="btn btn-primary">Continue</a>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
+
                         </article>
                     </div>
                 </div>
             </section>
         </section>
 
+        <?php
+            include("../../private/required/public/components/agreement.php");
+
+        ?>
     </main>
 </div>
 
