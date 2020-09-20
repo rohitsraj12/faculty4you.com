@@ -211,5 +211,10 @@
   }
   &-data {
     background-color: $color-primary;
+
+    header {
+      font-size: 30px;
+      color: #ffffff;
+    }
   }
 }
