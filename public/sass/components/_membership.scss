@@ -25,7 +25,7 @@
       font-weight: 300;
     }
 
-    .wrap-price{ 
+    .wrap-price {
       margin-top: 3rem;
       padding: 2rem 0;
       background-color: $color-primary;
@@ -84,15 +84,37 @@
         padding-right: 0.5rem;
       }
     }
+    p {
+      margin: 1.5rem;
+      padding-bottom: 1rem;
+      text-align: left;
+      border-bottom: 1px solid #ebebeb;
+    }
     ul {
+      padding: 0 3rem;
       li {
-        line-height: 4rem;
+        text-align: left;
+        line-height: 3rem;
+        list-style: square;
+        padding-bottom: 2rem;
         font: {
           family: $font-primary;
-          size: 1.8rem;
+          size: 1.7rem;
           weight: 500;
         }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
       }
+    }
+
+    .confirm-agreement {
+      font-size: 1.7rem;
+    }
+
+    a {
+      font-size: 1.7rem;
     }
   }
 
