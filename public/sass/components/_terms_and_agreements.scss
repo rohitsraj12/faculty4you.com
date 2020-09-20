@@ -1,9 +1,12 @@
-.section {
-    &__agreement{
-        ul{
-            li{
-                list-style-type: square;
-            }
+
+.modal-body{
+    // @include bg-1;
+    ul{
+        padding: 0 2.5rem;
+        li{
+            list-style-type: square;
+            padding-bottom: 8px;
         }
     }
-}
+   
+} 
