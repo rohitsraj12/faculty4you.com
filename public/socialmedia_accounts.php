@@ -16,7 +16,8 @@ $page_title = "social media";
             <?php
                 foreach($social_media as $name => $url){
             ?>
-                <td ><a href="<?php echo $url; ?>" target="_blank"alt="<?php echo $name;?>"></a></td>
+                <td ><a href="<?php echo $url; ?>" target="_blank" >
+                <img src="<?php echo $name;?>" alt=""></a></td>
             <?php
                 }
             ?>
