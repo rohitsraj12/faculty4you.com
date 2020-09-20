@@ -103,17 +103,21 @@ $(document).ready(function () {
   });
 
   // buy button function
-
-  var input = $(".agree__input");
-  $(input).click(function () {
-    $(this).not("checked").prop("checked", true);
-
-    if (input.checked) {
-      alert("hi");
+  //Add a JQuery click event handler onto our checkbox.
+  $(".agree__input").click(function () {
+    //If the checkbox is checked.
+    if ($(this).is(":checked")) {
+      //Enable the submit button.
+      $(this)
+        .closest(".member-block")
+        .find(".buy__button")
+        .attr("href", "payment_method.php");
+      // alert("hi");
+    } else {
+      //If it is not checked, disable the button.
+      // $(".buy__button").attr("disabled", true);
+      $(this).closest(".member-block").find(".buy__button").attr("href", "#");
     }
-    // if (input.checked == true) {
-    //   alert("false");
-    // }
   });
 
   // script for facebook share
