@@ -1,0 +1,15 @@
+.social-media{
+    &-header{
+        font-size: 2rem;
+    }
+    &-data {
+        padding: 2rem;
+    }
+    // &__link{
+    //     padding: 2rem;
+    // }
+    &__image{
+        width: 3rem;
+        height: 3rem;
+    }
+}
