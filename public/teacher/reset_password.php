@@ -2,6 +2,7 @@
 <?php
     include_once("../../private/config/config.php");
     require_once('../../private/config/db_connect.php');
+    include("../../private/required/public/components/social_media.php");
 ?>
 
 <!DOCTYPE html>
@@ -10,6 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset password</title>
+    <link rel="icon" href="<?php base_url();?>img/brand/factulyforyou_fevicon.png" type="image/gif" sizes="32x32">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -25,17 +27,29 @@
      </div>
                 <!-- end hamberger -->
             <header class="wrap-container">
-                <div class="brand">
-                    <a href="<?php base_url();?>index.php">
-                        <img src="<?php base_url();?>img/brand/header-logo.png" alt="">
-                    </a>
+                
+                <div class="header-brand-section">
+
+                    <div class="wrap-container">
+                        <div class="brand">
+                            <a href="<?php base_url();?>index.php">
+                                <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
+                            </a>
+                        </div> 
+                        <div class="top-social-media nav-social-media">
+                            <ul>
+                                    <li class="nav-social__list log">Follow us : </li>
+                                <?php
+                                foreach($social_media_follow as $follow_name => $follow_url){
+                                ?>
+                                <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                                <?php
+                                }
+                                ?>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <nav class="header__nav">
-                        <ul>
-                        <li class="nav__list">Not a member? <a class="nav__link" href="<?php base_url();?>teacher/registration.php">Sign up now</a></li>
-                        </ul>
-                    </nav>
-                    <!-- end header nav -->
             </header>
         </div>
 
