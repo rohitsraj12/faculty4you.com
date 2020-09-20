@@ -13,5 +13,17 @@ $social_media_follow = [
     "twitter.svg" => "www.twitter.com"
 ];
 
+$social_media = [
+    "facebook.svg" => "https://www.facebook.com/aswik.aswik.50",
+    "instagram.svg" => "https://www.instagram.com/facultyforyou.com1/",
+    "twitter.svg" => "https://twitter.com/facultyforyou1?s=03",
+    "linkedin.svg" => "https://www.linkedin.com/in/faculty-foryou-b0289a1b5",
+    "reddit.svg" => "https://www.reddit.com/u/facultyforyou?utm_medium=android_app&utm_source=share",
+    "roposo.svg" => "https://www.roposo.com/profile/facultyforyou/0a3ff917-22e0-41d1-85ee-9375e571226e",
+    "mxtakatak.svg" => "https://usr.mxtakatak.com/vQZT/22de9d16",
+    "sharechat.svg" => "https://b.sharechat.com/rkfMBIXiq9",
+    "snapchat.svg" => "https://www.snapchat.com/add/facultyforyou",
+    
+]
 ?>
 
