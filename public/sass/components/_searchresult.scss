@@ -9,7 +9,7 @@
       }
 
       .post-cat {
-        &:not(:first-child){
+        &:not(:first-child) {
           display: none;
         }
       }
@@ -145,11 +145,15 @@
   }
 }
 .section__post {
-  .tab{
-    @media (max-width: 582px){
+  .tab {
+    @media (max-width: 582px) {
       display: flex;
       flex-direction: column;
       width: 100%;
     }
   }
+}
+
+.post__cat:not(.all) {
+  display: none;
 }
