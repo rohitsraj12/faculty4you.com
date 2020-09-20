@@ -1,7 +1,7 @@
 
                         
 <div class="modal fade section__agreement" id="agreement" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Terms and Condition</h5>
@@ -24,7 +24,10 @@
                 </p>
                 <ul>
                     <li>
-                        The website <strong>facultyforyou.com</strong> has been established to allow Students to connect with Tutors as well as Tutors to connect with Students on its platform.
+                        The website <strong class='f-link'>facultyforyou.com</strong> has been established to allow Students to connect with Tutors as well as Tutors to connect with Students on its platform.
+                    </li>
+                    <li>
+                        There is no registration fee for students and tutors to join as a member at facultyforyou.com. Tutors must purchase active membership packages to view contact details of students as well as to view tutor contact details by students all over India.
                     </li>
                 </ul>
             </article>
