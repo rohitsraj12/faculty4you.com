@@ -1,5 +1,10 @@
 
 
+        <?php
+            include("../private/required/public/components/agreement.php");
+
+        ?>
+
 <div class="body-footer" >    
     <footer class="wrap-container text-light pt-5">
         <div class="row">
@@ -59,7 +64,7 @@
     <div class="footer-base p-3">
         <ul class="wrap-container">
             <li class="footer-base__list">copyright <i class="fa fa-copyright" aria-hidden="true"></i> 2014-2020 <a class="footer-base__link" href="<?php echo base_url();?>">facultyforyou.com</a> </li>
-            <li class="footer-base__list"><a class="footer-base__link" href="#">terms and conditions</a></li>
+            <li class="footer-base__list"><a class="footer-base__link" href="#" data-toggle="modal" data-target="#agreement">terms and conditions</a></li>
             <li class="footer-base__list">Developed by <a class="footer-base__link" href="https://github.com/rohitsraj12" target="_blank">rohit</a></li>
         </ul>
     </div>
