@@ -1,0 +1,7 @@
+.payment-body {
+  @include bg-1;
+  @include shadow;
+  //   border: 2px solid red;
+  margin-top: 4rem;
+  padding: 4rem;
+}
