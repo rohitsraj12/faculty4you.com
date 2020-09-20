@@ -1907,6 +1907,16 @@ label {
   margin-top: 4rem;
   padding: 4rem; }
 
+.social-media-header {
+  font-size: 2rem; }
+
+.social-media-data {
+  padding: 2rem; }
+
+.social-media__image {
+  width: 3rem;
+  height: 3rem; }
+
 .body-header {
   background: #ffffb9;
   background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
