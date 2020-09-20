@@ -13,7 +13,7 @@ if(isset($_POST['reset-request-submit'])){
 
     $user_email = $_POST['email'];
 
-    echo $user_email;
+    // echo $user_email;
 
     $sql = "DELETE FROM `pwd_reset` WHERE pwd_reset_email = ?";
     $stmt = mysqli_stmt_init($conn);
@@ -43,8 +43,8 @@ if(isset($_POST['reset-request-submit'])){
 
     // sending email
     $to = $user_email;
-    $subject = "reset your password for facultyforyou.com";
-    $message = "<p>we received a password request. The link to reset your password make this request, you can ignore this email</p>";
+    $subject = "Reset your password for facultyforyou.com";
+    $message = "<p>We received a password request. The link to reset your password make this request, you can ignore this email</p>";
     $message .= "<p>Here is your password reset link: </br>";
     $message .= "<a href='". $url ."'>". $url ."</a> </p>";
     
