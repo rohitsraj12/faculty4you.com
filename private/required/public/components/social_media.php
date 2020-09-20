@@ -1,16 +1,17 @@
 <?php
 // share sociual media links header section
 $social_media_share = [
-    "facebook.svg" => "www.facebook.com",
-    "instagram.svg" => "www.instagram.com",
+    "facebook.svg" => "https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ffacultyforyou.com%2F&amp;src=sdkpreparse",
+    "instagram.svg" => "http://instagram.com",
     "twitter.svg" => "https://twitter.com/intent/tweet?text=Are%20you%20looking%20to%20become%20tutor.%20Register%20in%20http://facultyforyou.com"
 ];
 
 // follow social media links navigation section and footer section
 $social_media_follow = [
-    "facebook.svg" => "www.facebook.com",
-    "instagram.svg" => "www.instagram.com",
-    "twitter.svg" => "www.twitter.com"
+    "facebook.svg" => "https://www.facebook.com/aswik.aswik.50",
+    "instagram.svg" => "https://www.instagram.com/facultyforyou.com1/",
+    "twitter.svg" => "https://twitter.com/facultyforyou1?s=03",
+    // "linkedin.svg" => "https://www.linkedin.com/in/faculty-foryou-b0289a1b5"
 ];
 
 $social_media = [
