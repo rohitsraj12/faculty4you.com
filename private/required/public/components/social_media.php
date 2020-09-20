@@ -24,6 +24,6 @@ $social_media = [
     "sharechat.svg" => "https://b.sharechat.com/rkfMBIXiq9",
     "snapchat.svg" => "https://www.snapchat.com/add/facultyforyou",
     
-]
+];
 ?>
 
