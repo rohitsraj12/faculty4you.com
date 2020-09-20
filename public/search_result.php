@@ -5,7 +5,7 @@
     // if(!isset($_SESSION['user_name'])){
     //     header('location: login.php');
     // }
-    $page_title = "home page";
+    $page_title = "Search result";
     require_once("../private/config/db_connect.php");
     include("../private/config/config.php");
 
@@ -231,7 +231,7 @@
                                         ON study_types.study_type_id = posts.study_type_id
                                     JOIN study_categories
                                         ON study_categories.category_id = posts.category_id
-                                    WHERE posts.study_type_id = 2 AND (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%')
+                                    WHERE (posts.study_type_id = 2) AND (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (posts.post_title LIKE '%$search%') AND (cities.city_name LIKE '%$city%')
                                     ORDER BY post_date DESC";
                                     $result = mysqli_query($conn, $sql);
                                     $query_results = mysqli_num_rows($result);
