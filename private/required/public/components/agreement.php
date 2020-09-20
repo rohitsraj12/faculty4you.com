@@ -27,7 +27,7 @@
                         The website <strong class='f-link'>facultyforyou.com</strong> has been established to allow Students to connect with Tutors as well as Tutors to connect with Students on its platform.
                     </li>
                     <li>
-                        There is no registration fee for students and tutors to join as a member at facultyforyou.com. Tutors must purchase active membership packages to view contact details of students as well as to view tutor contact details by students all over India.
+                        There is no registration fee for students and tutors to join as a member at <strong class="f-link">facultyforyou.com</strong>. Tutors must purchase active membership packages to view contact details of students as well as to view tutor contact details by students all over India.
                     </li>
                 </ul>
             </article>
