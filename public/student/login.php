@@ -138,7 +138,7 @@
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input type="password" class="login" placeholder="Password"  name="password"/>
+                            <input type="password" class="loginpass" placeholder="Password"  name="password"/>
                             <a class="forgot_password" href="<?php base_url();?>student/reset_password.php">Forgot your password?</a>
                             <button name="login-submit">Login</button>
                         </form>
