@@ -88,6 +88,7 @@
                                 <fieldset class="form-group mb-4">
                                     <div class="row">
                                         <label class="label col-form-label col-sm-2 pt-0">Gender</label>
+                
                                         <div class="col-sm-8 row">
 
                                         <!-- 
@@ -95,6 +96,7 @@
                                             #task fetch from database
                                          -->
                                             <div class="form-check col-sm-2">
+                                                <span class="error-msg"></span>
                                                 <input class="form-check-input gender" name="gender" type="radio" value="1" id="male">
                                             
                                                 <label class="form-check-label" for="male">
@@ -186,9 +188,9 @@
                             <div class="py-4 px-5 text-dark bg-white border mb-5">
                             <div class="form-group form-row my-3">
                                     <div class="col-md-6"> 
-                                        <label class="label col-form-label col-sm-3 pt-0">Category</label>
-                                    
-                                        <select id="state" name="category" class="form-control category">
+                                        <label for="category" class="label col-form-label col-sm-3 pt-0">Category</label>
+                                        <span class="error-msg"></span>
+                                        <select id="category" name="category" class="form-control category">
                                             <option value="nooption">Select category</option>
                                             <?php 
                                                 $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
