@@ -1,13 +1,12 @@
 var emailExp = /^([a-zA-Z0-9\.-]+)([@])([a-zA-z0-9-]+.)([a-z]{2,8})(.[a-z]{2,8})?$/;
 var telExp = /^([0-9]{10})$/;
-  
-var reg = document.getElementsByClassName("reg");
-var regPwd = document.getElementsByClassName("regPwd");
-var login = document.getElementsByClassName("login");
+ // var span = document.getElementsByClassName("error-icon");
+var errorIcon = '<i class="fa fa-info-circle" aria-hidden="true"></i>';
 
 // message error function for validation
 function errIcon(input) {
   input.style.border = "1px solid #ff7575";
+  input.previousElementSibling.style.display = "block";
 }
 
 /***************************
@@ -16,6 +15,9 @@ function errIcon(input) {
  * 
 *************************** */
 function registration(){
+  var reg = document.getElementsByClassName("reg");
+  var regPwd = document.getElementsByClassName("regPwd");
+  
     if(reg[0].value == "" || reg[1].value == "" || reg[2].value == "" ||  reg[3].value == "" || reg[4].value == "") {
       errIcon(reg[0]);
       errIcon(reg[1]);
@@ -104,10 +106,15 @@ function registration(){
 *************************** */
 
 function logIn(){
-
-    if(login[0].value == "" || login[1].value == ""){
+  var login = document.getElementsByClassName("login");
+  var logpwd = document.getElementsByClassName("loginpass");
+  
+    if(login[0].value == ""){
       errIcon(login[0]);
-      errIcon(login[1]);
+     return false;
+    }
+    if(logpwd[0].value == ""){
+      errIcon(logpwd[1]);
       return false;
     }else{
         return true;
