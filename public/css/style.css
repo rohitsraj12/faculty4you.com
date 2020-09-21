@@ -1285,7 +1285,6 @@ label {
 
 .body-banner {
   width: 100%;
-  padding: 5rem 0;
   position: relative;
   background: #ffffb9;
   background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
@@ -1296,6 +1295,9 @@ label {
   background: linear-gradient(to bottom, #ffffb9 0%, #ffffcf 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 );
   border-bottom: 2px solid #aa0000; }
+  @media (min-width: 583px) {
+    .body-banner {
+      padding: 0rem 0; } }
   @media (max-width: 582px) and (orientation: portrait) {
     .body-banner {
       padding-bottom: 40px; } }
@@ -1304,8 +1306,8 @@ label {
       padding-bottom: 40px; } }
   .body-banner .banner-content {
     width: 60%;
-    margin: 0 0 0 5%;
-    padding-top: 2rem;
+    margin: 0 0 0 2%;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1367,7 +1369,6 @@ label {
         padding-top: 6rem;
         max-height: 650px;
         right: 0;
-        top: 0;
         bottom: 0; } }
     @media (max-width: 582px) {
       .body-banner .banner-image {
@@ -2392,7 +2393,8 @@ label {
       padding: 1rem 0;
       text-align: center;
       font-size: 2rem;
-      background-color: #e4e4e4; }
+      background-color: #e4e4e4;
+      cursor: pointer; }
       .section-search-home .search-tab ul li:first-child {
         -webkit-border-radius: 10px 0 0 10px;
         -moz-border-radius: 10px 0 0 10px;
