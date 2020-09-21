@@ -171,6 +171,7 @@
             text-align: center;
             font-size: 2rem;
             background-color: #e4e4e4;
+            cursor: pointer;
             &:first-child {
               @include radius-direction(10px, 0, 0, 10px);
             }
