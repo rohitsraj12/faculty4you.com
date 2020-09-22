@@ -24,18 +24,16 @@
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
     // include("../../private/required/public/components/search.php");
-        
 
-    if(isset($_POST["token_update"])){
-        $update_token = $_POST['token'];
-
-        $update_query = "UPDATE memberships SET 
-            member_token = '$update_token'
-            WHERE membership_id = $teacher_id" ;
-
-        $update_member = mysqli_query($conn, $update_query);
-    }
+    if(!empty($_GET['id'])){
+        $id = $_GET['id'];
+        $student_query = "SELECT * FROM std WHERE student_id = '$id'";
+        $student_result = mysqli_query($conn, $student_query);
+        $student_row = mysqli_fetch_assoc($student_result);
+        // echo $student_row['student_first_name'];
+    }        
 ?>
+
             <div class="body-container">
                 <main>
                     <section class="wrap-container">
@@ -122,11 +120,6 @@
                                                         }
                                                     ?>
                                                 </footer>
-
-                                               
-
-                                               
-
                                                     <?php
                                                         $token_left = $token;
                                                         $token = $token - 1;
@@ -156,10 +149,10 @@
                                                                     </figure>
                                                                 </div>
                                                                 <div class="col-sm-9">
-                                                                            <form action="" method="POST">
-                                                                                <input type="hidden" value="<?php echo $token;?>" name="token">
-                                                                                <button type="submit" name="token_update" onclick="confirm('do ypu wantr to process')">show details</button>
-                                                                            </form>
+                                                                           <button class="button-primary" data-toggle="modal" data-target="#approval" type="submit" name="token_update">show details</button>
+                                                                           <?php
+include("../../private/required/public/components/approval.php");
+?>
                                                                     <ul class="student-info">
                                                                         <li>
                                                                             <?php
@@ -184,13 +177,7 @@
                                                 </section>
                                                     <?php
                                                         }
-                                                       // else{
-                                                    ?>
-                                                        <!-- <article class="">
-                                                        <p>You need to become a member to see the details of students. To become a member please <a href="<?php echo base_url();?>teacher/membership_plan.php">Click here</a></p>
-                                                        </article> -->
-                                                    <?php    
-                                                       // }
+                                                    
                                                     ?>
                                             </article>
 
@@ -260,7 +247,7 @@
                                                         // echo $member;
                                                         if($member == "active"){
                                                     ?>
-                                                            <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
+                                                            <button class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</button>
                                                     <?php
                                                         }else{
                                                             // echo "become a member";
@@ -271,11 +258,13 @@
                                                         }
                                                     ?>
                                                 </footer>
+                                                <?php
+                                                        $token_left = $token;
+                                                        $token = $token - 1;
 
-                                                <section class="student-details">
-                                                    <?php
-                                                        if($member == "active"){
+                                                        if($token > -1){
                                                     ?>
+                                                     <section class="student-details">
                                                         <article>
                                                             <header>
 
@@ -298,7 +287,16 @@
                                                                     </figure>
                                                                 </div>
                                                                 <div class="col-sm-9">
+                                                                            <form action="" method="POST">
+                                                                                <input type="hidden" value="<?php echo $token;?>" name="token">
+                                                                                <button class="button-primary" data-toggle="modal" data-target="#approval" type="submit" name="token_update" onclick="confirm('do you want to process')">show details</button>
+                                                                            </form>
                                                                     <ul class="student-info">
+                                                                        <li>
+                                                                            <?php
+                                                                                echo "You have " . $token_left ." token left in your membership.";
+                                                                            ?>
+                                                                        </li>
                                                                         <li>
                                                                             <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["student_first_name"] ." " . $row["student_last_name"];?>    
                                                                         </li>
@@ -314,22 +312,16 @@
                                                                                                             
                                                             
                                                         </article>
-                                                    <?php
-                                                        }else{
-                                                    ?>
-                                                        <article class="">
-                                                           <p>You need to become a member to see the details of students. To become a member please <a href="<?php echo base_url();?>teacher/membership_plan.php">Click here</a></p>
-                                                        </article>
-                                                    <?php    
-                                                        }
-                                                    ?>
                                                 </section>
-                                            </article>
+                                                <?php
+                                                }
+                                                ?>
+                                    </article>
 
                                     <?php 
                                     }
                                     } else {
-                                        // echo "there are no result";
+                                        
                                         ?> 
                                         
                                         <div class="search-result-num" >
