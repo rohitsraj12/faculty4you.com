@@ -95,13 +95,17 @@
     }
 
     article {
-      border: 3px solid $color-primary;
+      height: 30rem;
+      border: 1px solid $color-gray-dark-1;
       border-top: 5px solid $color-primary;
       padding: 3rem 2rem;
       background-color: $color-white;
       @include insetShadow;
       @include bg-1;
       margin: 0 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       @media (min-width: 583px) {
         // width: 100%;
