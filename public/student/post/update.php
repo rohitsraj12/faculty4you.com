@@ -27,7 +27,7 @@ session_start();
     <header class="text-primary-h-3 pb-5 text-center">
        Update post
     </header>
-    <form action="" method="post" onsubmit="return studentPost()">
+    <form action="" method="post" class="bg-white p-5" onsubmit="return studentPost()">
        
         <div class="form-group mb-5 mt-4 wrap-form">
             <label for="title">Title</label>
@@ -97,10 +97,10 @@ session_start();
                 <input type="submit" class="button-primary" name="post_update" value="submit">
 
             </div>
-            <div class="">
+            <!-- <div class="">
                 <input type="reset" class="button-secondary" value="reset">
 
-            </div>
+            </div> -->
 
 
         </div>
