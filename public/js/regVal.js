@@ -114,7 +114,7 @@ function logIn(){
      return false;
     }
     if(logpwd[0].value == ""){
-      errIcon(logpwd[1]);
+      errIcon(logpwd[0]);
       return false;
     }else{
         return true;
