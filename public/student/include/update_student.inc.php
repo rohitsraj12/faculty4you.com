@@ -63,8 +63,9 @@ if(isset($_POST['update'])){
 
             $_result = mysqli_query($conn, $query);
 
-        // header('location:index.php');
+        // header('location: index.php');
         $message = "Congratulations! You have successfully updated your profile detail.";
+        
 
     }
 
