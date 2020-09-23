@@ -32,7 +32,7 @@ $sub = "add subject";
             } else {
                 $subject = $_REQUEST['subject'];
                 $category = $_REQUEST['sub-cat'];
-                $std = $_REQUEST['std-cat'];
+                $std = $_REQUEST['study-cat'];
 
                 
     
@@ -96,7 +96,7 @@ $sub = "add subject";
                         </div>
                         <div class="form-group  col-sm-4">
                             <label for="q">Select study category</label>
-                            <select name="std-cat" class="form-control sub-cat">
+                            <select name="study-cat" class="form-control study-cat">
                                 <option value="nooption">Select study category</option>
                                 <?php 
                                     $query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
