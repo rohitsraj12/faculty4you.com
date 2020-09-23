@@ -108,10 +108,11 @@ $(document).ready(function () {
     //If the checkbox is checked.
     if ($(this).is(":checked")) {
       //Enable the submit button.
+      var membership_id = $(this).attr("id");
       $(this)
         .closest(".member-block")
         .find(".buy__button")
-        .attr("href", "payment_method.php");
+        .attr("href", "payment_method.php?membership_type=" + membership_id);
       // alert("hi");
     } else {
       //If it is not checked, disable the button.
