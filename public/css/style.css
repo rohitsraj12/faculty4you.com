@@ -1031,7 +1031,8 @@ label {
   .section-testimonial p {
     margin-bottom: 3rem; }
   .section-testimonial article {
-    border: 1px solid #fffbc1;
+    height: 30rem;
+    border: 1px solid #646464;
     border-top: 5px solid #aa0000;
     padding: 3rem 2rem;
     background-color: #ffffff;
@@ -1046,7 +1047,10 @@ label {
     background: -ms-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
     background: linear-gradient(to bottom, #ffffb9 0%, #ffffcf 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 );
-    margin: 0 5px; }
+    margin: 0 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
   .section-testimonial figure {
     width: 6rem;
     height: 6rem;
