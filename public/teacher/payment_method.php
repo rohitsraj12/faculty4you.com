@@ -24,6 +24,67 @@
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
     // include("../../private/required/public/components/search.php");
+
+    if(isset($_POST['submit'])){
+        $membership_type = $_GET['membership_type'];
+        $transaction_type = $_POST['type'];
+        $transaction_id = $_POST['num'];
+
+        $admin_email = "admin@facultyforyou.com";
+
+        $teacher_name = $user_row['teacher_first_name'] . " " . $user_row['teacher_last_name'];
+        $teacher_email = $user_row['teacher_email'];
+        $teacher_phone = $user_row['teacher_phone'];
+
+
+        
+
+
+          //send email to admin
+          $to = $admin_email;
+          $subject = "New " . $membership_type . " membership application";
+          $message = "<p>Dear,</p></br>";
+          $message .= "<p>teacher Name: " . $teacher_name . ".</p></br>";
+          $message .= "<p>teacher email id: " . $teacher_email . ".</p></br>";
+          $message .= "<p>teacher phone Number: " . $teacher_phone . ".</p></br>";
+          $message .= "<p>transaction mode: " . $transaction_type . ".</p></br>";
+          $message .= "<p>transaction Id: " . $transaction_id . ".</p></br>";
+          $message .= "<p>Thank you.,</p>";
+          $message .= "<p>" . $teacher_name . "</p>";
+          
+          $headers = "From:  " . $teacher_name . " <" . $teacher_email . ">\r\n";
+          $headers .= "Replay-To: " . $teacher_email . "\r\n";
+          $headers .= "Content-type: text/html\r\n";
+      
+          mail($to, $subject, $message, $headers);
+
+         //send email to teacher
+         $to = $teacher_email;
+         $subject = "hi " . $teacher_name . ", thanks for becoming " . $membership_type . " member of facultyforyou.com";
+         $message = "<p>Dear " . $teacher_name . ",</p></br>";
+         $message .= "<p>Thank you for buying " . $membership_type . " membership. Your membership will activate within 24 hours. We are sure that you have chosen a surefire way to get yourself succeed.</p></br>";
+         $message .= "<p>Thank you,</p>";
+         $message .= "<p>Facultyforyou.com</p>";
+         $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
+         
+         $headers = "From: facultyforyou.com <" . $admin_email . ">\r\n";
+         $headers .= "Replay-To: " . $admin_email . "\r\n";
+         $headers .= "Content-type: text/html\r\n";
+     
+         mail($to, $subject, $message, $headers);
+?>
+            <div class="alert alert-success m-0" role="alert">
+                <div class="wrap-container h3 py-4">
+                    <p>   
+                        Thank you for buying <?php echo $membership_type?> membership. Your membership will activate within 24 hours. We are sure that you have chosen a surefire way to get yourself succeed.
+                    </p>
+                    <p>
+                    Thank you,
+                    </p>
+                </div>
+            </div>
+ <?php           
+    }
 ?>
 
 
@@ -70,15 +131,16 @@
                                                 </header>
                                                 <form method="POST" action="" class=" border bg-white p-5">
                                                     <div class="form-group">
-                                                        <label for="exampleInputEmail1">Google pay phone Number</label>
-                                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                                        <label for="transaction_number">Google pay UPI Transaction Id</label>
+                                                        <input type="text" class="form-control"  id="transaction_number" name="num" placeholder="Please eneter transaction number">
+                                                        <input type="hidden" class="form-control" value="google pay" name="type">
                                                         <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                                                     </div>
                                                     <!-- <div class="form-group">
                                                         <label for="exampleInputPassword1">Payment Details</label>
                                                         <input type="password" class="form-control" id="exampleInputPassword1">
                                                     </div> -->
-                                                    <button type="submit" class="button-primary">Submit</button>
+                                                    <button type="submit" class="button-primary" name="submit">Submit</button>
                                                 </form>
                                             </div>
                                         </div>
@@ -107,15 +169,16 @@
                                                 </header>
                                                 <form method="POST" action="" class=" border bg-white p-5">
                                                     <div class="form-group">
-                                                        <label for="exampleInputEmail1">Payment Transaction Id</label>
-                                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+                                                        <label for="transaction_id">Payment Transaction Id</label>
+                                                        <input type="text" class="form-control" id="transaction_id"  name="num"  placeholder="Please eneter transaction Id">
+                                                        <input type="hidden" class="form-control" value="phonePe"  name="type">
+
                                                     </div>
                                                     <!-- <div class="form-group">
                                                         <label for="exampleInputPassword1">Payment Details</label>
                                                         <input type="password" class="form-control" id="exampleInputPassword1">
                                                     </div> -->
-                                                    <button type="submit" class="button-primary">Submit</button>
+                                                    <button type="submit" class="button-primary" name="submit">Submit</button>
                                                 </form>
                                             </div>
                                         </div>
