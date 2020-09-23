@@ -12,6 +12,30 @@ $sub = "registered";
     require("../../../private/config/db_connect.php");
     include("../include/header.inc.php");
 
+
+    if(isset($_POST['email'])){
+        $email = $_POST['email'];
+        // $email = "rohitwebco@gmail.com";
+        $teacher_name = $_POST['name'];
+
+        $admin_email = "admin@facultyforyou.com";
+
+        //send email to teacher
+        $to = $email;
+        $subject = "hi " . $teacher_name . ", new tuition posted in facultyforyou.com";
+        $message = "<p>Dear " . $teacher_name . ",</p></br>";
+        $message .= "<p>A new tuition was posted on this platform which is related to your subject and nearby you.</p></br>";
+        $message .= "<p>Thank you,</p>";
+        $message .= "<p>Facultyforyou.com</p>";
+        $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
+        
+        $headers = "From: facultyforyou.com <" . $admin_email . ">\r\n";
+        $headers .= "Replay-To: " . $admin_email . "\r\n";
+        $headers .= "Content-type: text/html\r\n";
+    
+        mail($to, $subject, $message, $headers);
+    }
+
 ?>
 
 
@@ -32,8 +56,8 @@ $sub = "registered";
                             <tr>
                             <th scope="col">Id</th>
                             <th scope="col">Name</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Member expire date</th>
+                            <th scope="col">Remind </th>
+                            <th scope="col">membership active</th>
                             <th scope="col"></th>
                             <th scope="col">More Details</th>
                             </tr>
@@ -59,7 +83,14 @@ $sub = "registered";
                                 <th scope="row"><?php echo $row['teacher_id'];?></th>
                                 
                                 <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
-                                <td><?php echo $row['teacher_email'];?></td>
+                                <td>
+                                    <form action="" method="POST">
+                                        <input type="hidden" name="name" value="<?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ; ?>">
+                                        <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
+                                        <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
+                                        <button class="member-nonactive" name="email">reminder email</button>
+                                    </form>
+                                </td>
                                 <td>
 
                                 <?php 
