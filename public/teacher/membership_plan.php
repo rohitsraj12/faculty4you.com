@@ -72,7 +72,7 @@
                                 </ul>
                                 
                                 <div class="confirm-agreement text-center mt-5">
-                                    <input class="agree__input mr-2" type="checkbox" id="silverMembership"> <label for="silverMembership">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
+                                    <input class="agree__input mr-2" type="checkbox" id="silver"> <label for="silver">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
                                 </div>
                             </div>
                             <footer class="member__footer">
