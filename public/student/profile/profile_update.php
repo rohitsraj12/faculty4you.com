@@ -184,7 +184,7 @@
                                 </div>
                             </div>  
                         </article>
-                            <button type="submit" class="button-primary">Submit</button>
+                            <button type="submit" class="button-primary" name="update">Submit</button>
                       
                         
                     </form>
