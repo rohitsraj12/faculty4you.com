@@ -18,13 +18,14 @@ $teacher_id = $user_row['teacher_id'];
     if(isset($_POST["token_update"])){
         $update_token = $_POST['token'];
         $student = $_POST['student'];
+        $post = $_POST['post'];
 
         $update_query = "UPDATE memberships SET 
             member_token = '$update_token'
             WHERE membership_id = $teacher_id" ;
 
         $update_member = mysqli_query($conn, $update_query);
-        header("location:../index.php?id=" . $student);
+        header("location:../student_detail.php?id=" . $post);
     }
     ?>
     
