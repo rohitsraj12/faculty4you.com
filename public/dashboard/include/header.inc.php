@@ -131,10 +131,10 @@
                                     <a class="side-nav__link side-nav-toggle <?php if($active == "faq"){ echo "active";}?>" href="#" > FAQs <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="side-sub-nav">
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "faq" && $sub == "faq_view"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/faq/">View faqs</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "faq" && $sub == "faq_view"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/faq/">View FAQs</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">Compose new faq</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "faq" && $sub == "faq_compose"){ echo "active";}?>" href="<?php base_url();?>dashboard/faq/compose.php">Compose New FAQ</a> 
                                         </li>
                                     </ul>
                                 </li>
@@ -146,13 +146,13 @@
                                             <a class="side-sub-nav__link <?php if($active == "add record" && $sub == "add location"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_location.php">Add Locations</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add Sew Subjects</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add New Subjects</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add sub category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject_category.php">Add new Subject Category</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add sub category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject_category.php">Add New Subject Category</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add study category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_study_category.php">Add new Study Category</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add study category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_study_category.php">Add New Study Category</a> 
                                         </li>
                                     </ul>
                                 </li>
