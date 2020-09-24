@@ -142,7 +142,9 @@
                                                                                     <form action="<?php base_url();?>teacher/include/tokens.php" method="POST">  
                                                                                             <input type="hidden" value="<?php echo $token;?>" name="token">
                                                                                             <input type="hidden" value="<?php echo $row['student_id'];?>" name="student" >
-                                                                                            <input type="hidden" value="<?php echo $row['student_id'];?>" name="student" >
+                                                                                            <input type="hidden" value="<?php echo $row['student_first_name'] . ' ' . $row['student_last_name'];?>" name="student_name" >
+                                                                                            <input type="hidden" value="<?php echo $row['student_phone'];?>" name="student_phone" >
+                                                                                            <input type="hidden" value="<?php echo $row['student_email'];?>" name="student_email" >
                                                                                             <input type="hidden" value="<?php echo $row['post_id'];?>" name="post" >
                                                                                             <button class="button-primary" data-toggle="modal" data-target="#approval" type="submit" name="token_update">Student detail</button>                                                                
                                                                                     </form>
