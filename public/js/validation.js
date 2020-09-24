@@ -2,6 +2,7 @@ var emailExp = /^([a-zA-Z0-9\.-]+)([@])([a-zA-z0-9-]+.)([a-z]{2,8})(.[a-z]{2,8})
 var telExp = /^([0-9]{10})$/;
 var textOnlyExp = /^([a-zA-Z]+)$/;
 var pincode = /^([0-9]{6})$/;
+var tranG = /^([0-9]{12})$/;
 // var numExp = /^([0-9]{2})$/;
 
 
@@ -284,6 +285,64 @@ function errMsg(input, errorMsg) {
     errMsg(postDetail[0], "atleast 20 letters");
     return false;
   } else {
+    return true;
+  }
+}
+// transaction validation
+function transactionTypeOne(){
+  var transactionId = document.getElementsByClassName("transaction_id");
+  var phone = document.getElementsByClassName("phone");
+
+// function for error message
+function errMsg(input, errorMsg) {
+  input.previousElementSibling.innerText = "Please " + errorMsg;
+  input.style.borderColor = "#ff7575";
+}
+
+  if(transactionId[0].value === "" || phone[0].value === ""){
+    errMsg(transactionId[0], "enter valid transaction id");
+    errMsg(phone[0], "enter phone number");
+    return false;
+  }
+  
+  if(transactionId[0].value === ""){
+    errMsg(transactionId[0], "enter valid transaction id");
+    return false;
+  }
+  
+  if(!tranG.test(transactionId[0].value)){
+    errMsg(transactionId[0], "enter valid transaction id");
+    return false;
+  }
+  
+  if(phone[0].value === ""){
+    errMsg(phone[0], "enter phone number");
+    return false;
+  }
+  if(!telExp.test(phone[0].value)){
+    errMsg(phone[0], "enter valid phone number");
+    return false;
+  }else{
+    return true;
+  }
+
+}
+
+// phone pe transaction validation
+function transactionTypeTwo(){
+  var transactionId = document.getElementsByClassName("phonepe_transaction_id");
+  // function for error message
+  function errMsg(input, errorMsg) {
+    input.previousElementSibling.innerText = "Please " + errorMsg;
+    input.style.borderColor = "#ff7575";
+  }
+  
+  if(transactionId[0].value === ""){
+    errMsg(transactionId[0], "enter valid transaction id");
+    // alert("hi");
+
+    return false;
+  }else {
     return true;
   }
 }
