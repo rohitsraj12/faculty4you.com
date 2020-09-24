@@ -51,7 +51,7 @@
           $message .= "<tr><td>teacher email id: </td><td>" . $teacher_email . "</td></tr>";
           $message .= "<tr><td>teacher phone Number: </td><td>" . $teacher_phone . "</td></tr>";
           $message .= "<tr><td>transaction mode: </td><td><b>" . $transaction_type . "</b></td></tr>";
-          $message .= "<tr><td>google pay transaction phone number: </td><td><b>" . $transaction_type . "</b></td></tr>";
+          $message .= "<tr><td>google pay transaction phone number: </td><td><b>" . $gpay_transaction_phone_number . "</b></td></tr>";
           $message .= "<tr><td>transaction Id: </td><td><b>" . $transaction_id . "</b></td></tr>";
           $message .= "</table>";
           $message .= "<p>Thank you.,</p>";
