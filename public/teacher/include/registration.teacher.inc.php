@@ -108,11 +108,11 @@ if(isset($_POST['submit-register'])){
                     $message .= "<p>Welcome to <a href='http://facultyforyou.com/'>facultyforyou.com.</p></br>";
                     $message .= "<p>A special thanks to you as you now became a new member on most honored and credible learning network in India. We will provide you the students and hope we will help you in growing your tutoring business.</p></br>";
                     $message .= "<p>Thank you.,</p>";
-                    $message .= "<p>Facultyforyou.com</p>";
+                    $message .= "<p>admin</p>";
                     $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
                     
-                    $headers = "From: facultyforyou.com <nathanisrinivasvictory@gmail.com>\r\n";
-                    $headers .= "Replay-To: rohitsraj12@gmail.com\r\n";
+                    $headers = "From: facultyforyou.com <admin@facultyforyou.com>\r\n";
+                    $headers .= "Reply-To: admin@facultyforyou.com\r\n";
                     $headers .= "Content-type: text/html\r\n";
                 
                     mail($to, $subject, $message, $headers);
