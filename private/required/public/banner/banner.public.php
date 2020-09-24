@@ -34,7 +34,7 @@
                     <div class="search-tab-detail wrap-container">
                         
                         <div class="search-form student-form">
-                            <form action="<?php base_url();?>search_result.php" method="POST" class="form">
+                            <form action="<?php base_url();?>search_result_student_posts.php" method="POST" class="form">
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <input type="search" class="form-control" name="search" id="inputAddress" placeholder="Search: subject (academic) / activity (non-academic)">
@@ -65,7 +65,7 @@
                             </form>
                         </div>
                         <div class="search-form teacher-form hide">
-                            <form action="<?php base_url();?>search_result.php" method="POST" class="form">
+                            <form action="<?php base_url();?>search_result_teachers.php" method="POST" class="form">
                                 <div class="row">
                                     <div class="col-sm-8">
                                         <input type="search" class="search__input form-control" name="search" id="inputAddress" placeholder="Search: subject (academic) / activity (non-academic)">
@@ -89,7 +89,7 @@
 
                                     </div>
                                     <div class="col-sm-12 text-center">
-                                        <input class="button-primary py-2" style="font-size: 2rem" name="submit-search" type="submit" value="Search">
+                                        <input class="button-primary py-2" style="font-size: 2rem" name="search-teacher" type="submit" value="Search">
                                     </div>
                                 </div>
                             </form>
