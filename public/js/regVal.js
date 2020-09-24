@@ -104,13 +104,18 @@ function registration(){
  *   login validation
  * 
 *************************** */
-
 function logIn(){
-  var login = document.getElementsByClassName("login");
+  var logIn = document.getElementsByClassName("user_name");
   var logpwd = document.getElementsByClassName("loginpass");
   
-    if(login[0].value == ""){
-      errIcon(login[0]);
+  if(logIn[0].value == "" || logpwd[0].value == ""){
+    errIcon(logIn[0]);
+    errIcon(logpwd[0]);
+    return false;
+  }
+  
+    if(logIn[0].value == ""){
+      errIcon(logIn[0]);
      return false;
     }
     if(logpwd[0].value == ""){
