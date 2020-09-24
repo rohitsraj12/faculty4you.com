@@ -134,7 +134,7 @@
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
-                            <input type="text" class="login"  placeholder="User name / Email"  name="email" />
+                            <input type="text" class="user_name"  placeholder="User name / Email"  name="email" />
                             <span class="error-icon">
                                 <i class="fa fa-info-circle" aria-hidden="true"></i>
                             </span>
