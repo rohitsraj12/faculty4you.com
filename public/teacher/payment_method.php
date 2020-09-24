@@ -53,7 +53,7 @@
           $message .= "<p>" . $teacher_name . "</p>";
           
           $headers = "From:  " . $teacher_name . " <" . $teacher_email . ">\r\n";
-          $headers .= "Replay-To: " . $teacher_email . "\r\n";
+          $headers .= "Reply-To: " . $teacher_email . "\r\n";
           $headers .= "Content-type: text/html\r\n";
       
           mail($to, $subject, $message, $headers);
@@ -68,7 +68,7 @@
          $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
          
          $headers = "From: facultyforyou.com <" . $admin_email . ">\r\n";
-         $headers .= "Replay-To: " . $admin_email . "\r\n";
+         $headers .= "Reply-To: " . $admin_email . "\r\n";
          $headers .= "Content-type: text/html\r\n";
      
          mail($to, $subject, $message, $headers);
