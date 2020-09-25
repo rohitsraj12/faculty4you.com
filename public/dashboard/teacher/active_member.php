@@ -53,7 +53,7 @@ $sub = "activeMember";
                                 LEFT JOIN teachers
                                     ON teachers.teacher_id = memberships.teacher_id
                                 WHERE membership_expiry_date > CURRENT_DATE()
-                                ORDER BY member_token ASC
+                                ORDER BY member_token ASC 
                                 ";
                                 $results = mysqli_query($conn, $sql);
                                 
@@ -63,6 +63,14 @@ $sub = "activeMember";
                         // echo $query_results;
 
                                 while($row = mysqli_fetch_assoc($results)){
+                                    // $id =  $row['teacher_id'];
+                                    // $teacher_query = "SELECT * FROM teachers 
+                                    //     WHERE teacher_id = '$id' 
+                                    //     ORDER BY teacher_id DESC 
+                                    //     LIMIT 1";
+                                    // $teacher_result = mysqli_query($conn, $teacher_query);
+                                    // $teacher_row = mysqli_fetch_assoc($teacher_result);
+                                    
                             ?>
                             <tr>
                                 <th scope="row"><?php echo $row['teacher_id'];?></th>
