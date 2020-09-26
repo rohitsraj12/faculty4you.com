@@ -19,6 +19,7 @@ $teacher_email = $user_row['teacher_email'];
 $teacher_phone = $user_row['teacher_phone'];
 
     if(isset($_POST["token_update"])){
+        $membership_id = $_POST['membership_id'];
         $update_token = $_POST['token'];
         $student = $_POST['student'];
         $student_name = $_POST['student_name'];
@@ -27,10 +28,9 @@ $teacher_phone = $user_row['teacher_phone'];
         $post = $_POST['post'];
         $admin_email = "admin@facultyforyou.com";
 
-
         $update_query = "UPDATE memberships SET 
             member_token = '$update_token'
-            WHERE membership_id = $teacher_id" ;
+            WHERE membership_id = '$membership_id'" ;
 
         $update_member = mysqli_query($conn, $update_query);
 
