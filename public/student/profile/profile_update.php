@@ -166,14 +166,8 @@
                                         <span class="error-msg"></span>
                                         <select id="state" name="state" class="form-control state">
                                             <option value="nooption">Select state</option>
-                                            <?php 
-                                                $state_query = "SELECT * FROM states ORDER BY state_name ASC";
-                                                $state_result = mysqli_query($conn, $state_query);
-
-                                                while($row = mysqli_fetch_assoc($state_result)){
-                                            ?>
-                                            <option value="<?php echo $row["state_id"];?>"><?php echo $row["state_name"];?></option>
-                                            <?php }?>
+                                           
+                                           
                                         </select>
                                     </div>
                                     <div class="form-group mb-4 col-md-2">
@@ -195,5 +189,7 @@
 </div>
 
 <?php 
+    include("../../../private/required/public/components/agreement.php");
+
     require("../include/footer.inc.php");
 ?>
