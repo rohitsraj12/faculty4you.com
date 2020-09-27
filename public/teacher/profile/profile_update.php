@@ -187,31 +187,41 @@
                             </header>
                             <div class="py-4 px-5 text-dark bg-white border mb-5">
                             <div class="form-group form-row my-3">
-                                    <div class="col-md-6"> 
-                                        <label for="category" class="label col-form-label col-sm-3 pt-0">Category</label>
-                                        <span class="error-msg"></span>
-                                        <select id="category" name="category" class="form-control category">
-                                            <option value="nooption">Select category</option>
-                                            <?php 
-                                                $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
-                                                $cat_result = mysqli_query($conn, $cat_query);
+                                <div class="col-md-6"> 
+                                    <label for="category" class="label col-form-label col-sm-3 pt-0 w-100">Study Category</label>
+                                    <span class="error-msg"></span>
+                                    <select id="category" name="category" class="form-control category">
+                                        <option value="nooption">Select category</option>
+                                        <?php 
+                                            $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
+                                            $cat_result = mysqli_query($conn, $cat_query);
 
-                                                while($row = mysqli_fetch_assoc($cat_result)){
-                                            ?>
-                                            <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
-                                            <?php }?>
-                                        </select>
-                                    </div>
+                                            while($row = mysqli_fetch_assoc($cat_result)){
+                                        ?>
+                                        <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
+                                        <?php }?>
+                                    </select>
+                                </div>
+                                <div class="col-md-6"> 
+                                    <label for="category" class="label col-form-label col-sm-3 pt-0">Subject Category</label>
+                                    <span class="error-msg"></span>
+                                    <select id="category" name="subject_category" class="form-control category">
+                                        <option value="nooption">Select category</option>
+                                        <?php 
+                                            $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
+                                            $cat_result = mysqli_query($conn, $cat_query);
+
+                                            while($row = mysqli_fetch_assoc($cat_result)){
+                                        ?>
+                                        <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
+                                        <?php }?>
+                                    </select>
+                                </div>
                             </div>
                         
                                 <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
-                                        <label for="teaching_exp">Teaching experience</label>
-                                        <span class="error-msg"></span>
-                                        <input type="text" name="exp" class="form-control experience" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="sub_id">Academic subjects</label>
+                                        <label for="sub_id">Subject</label>
                                         <span class="error-msg"></span>
                                         <select id="state" name="subject" class="form-control subject">
                                             <option selected value="nooption">Choose your subject</option>
@@ -224,6 +234,11 @@
                                             <option value="<?php echo $row["subject_id"];?>"><?php echo $row["sub_name"];?></option>
                                             <?php }?>
                                         </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="teaching_exp">Teaching experience</label>
+                                        <span class="error-msg"></span>
+                                        <input type="text" name="exp" class="form-control experience" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
                                     </div>
                                 </div>
                                 <!-- <fieldset class="form-group">
@@ -275,6 +290,7 @@
 
 
  <?php
+   include("../../../private/required/public/components/agreement.php");
     require("../include/footer.inc.php");
 ?>
 
