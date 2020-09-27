@@ -461,9 +461,42 @@ a:hover {
   font-size: 16px;
 }
 
-.tab-detail{
+.tab-detail {
   display: none;
 }
-.active-tab-detail{
-display: block;
+.active-tab-detail {
+  display: block;
+}
+
+.header-tab-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.header-tab__button {
+  background-color: #c4183c;
+  color: #fff;
+  padding: 10px 20px;
+  border: 1px solid #c4183c;
+  text-transform: capitalize;
+}
+
+.header-tab__button:first-child {
+  border-radius: 5px 0 0 5px;
+  margin-right: 1px;
+}
+
+.header-tab__button:last-child {
+  border-radius: 0 5px 5px 0;
+  margin-left: 1px;
+}
+
+.header-tab__button:hover,
+.active-tab {
+  background-color: #e7e7e7;
+  color: #c4183c;
+  border: 1px solid #c4183c;
 }
