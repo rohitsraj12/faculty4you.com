@@ -54,48 +54,27 @@ session_start();
                 </select>
             </div>
             <div class="col-sm-4">
-                <label for="category" class="label col-form-label col-sm-3 pt-0">Study Category</label>
+                <label for="study_category" class="label col-form-label pt-0">Study Category</label>
                 <span class="error-msg"></span>
-                <select id="category" name="cat" class="form-control category">
+                <select id="study_category" name="cat" class="form-control study-category">
                     <option value="nooption">Select category</option>
-                    <?php 
-                        $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
-                        $cat_result = mysqli_query($conn, $cat_query);
-
-                        while($row = mysqli_fetch_assoc($cat_result)){
-                    ?>
-                    <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
-                    <?php }?>
+                    
                 </select>
             </div>
             <div class="col-sm-4">
-                <label for="sub">Subject Category</label>
+                <label for="subject_category">Subject Category</label>
                 <span class="error-msg"></span>
-                <select id="sub" name="subject_category" class="form-control subject">
+                <select id="subject_category" name="subject_category" class="form-control subject_category">
                     <option selected value="nooption">Choose your subject</option>
-                    <?php 
-                        $city_query = "SELECT * FROM subjects_categories ORDER BY sub_cat_name ASC";
-                        $city_result = mysqli_query($conn, $city_query);
-
-                        while($row = mysqli_fetch_assoc($city_result)){
-                    ?>
-                    <option value="<?php echo $row["sub_cat_id"];?>"><?php echo $row["sub_cat_name"];?></option>
-                    <?php }?>
+                    
                 </select>
             </div>
             <div class="col-sm-4">
-                <label for="sub">Subject</label>
+                <label for="subject">Subject</label>
                 <span class="error-msg"></span>
-                <select id="sub" name="subject" class="form-control subject">
+                <select id="subject" name="subject" class="form-control subject">
                     <option selected value="nooption">Choose your subject</option>
-                    <?php 
-                        $city_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
-                        $city_result = mysqli_query($conn, $city_query);
-
-                        while($row = mysqli_fetch_assoc($city_result)){
-                    ?>
-                    <option value="<?php echo $row["subject_id"];?>"><?php echo $row["sub_name"];?></option>
-                    <?php }?>
+                   
                 </select>
             </div>
         </div>
