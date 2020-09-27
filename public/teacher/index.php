@@ -67,7 +67,7 @@
                                                                     ON study_categories.category_id = posts.category_id
                                                                 JOIN subjects
                                                                     ON subjects.subject_id = posts.subject_id
-                                                                WHERE (posts.study_type_id = 1) AND (posts.subject_id = $subject)
+                                                                WHERE (posts.study_type_id = 1) AND (posts.subject_id = $subject) AND (posts.post_state = 1)
                                                                 ORDER BY post_id DESC ";
                                                             $home_result = mysqli_query($conn, $home_sql);
                                                             $query_results = mysqli_num_rows($home_result);
