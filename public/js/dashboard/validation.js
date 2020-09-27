@@ -51,10 +51,13 @@ function cityValidation() {
   if (city[0].value == "") {
     alert("enter your city");
     return false;
-  } else if (!textOnlyExp.test(city[0].value)) {
-    alert("enter only text");
-    return false;
   }
+
+  // if (!textOnlyExp.test(city[0].value)) {
+  //   alert("enter only text");
+  //   return false;
+  // }
+
   if (state[0].value == "nooption") {
     alert("select a state");
     return false;
@@ -67,10 +70,13 @@ function stateValidation() {
   if (newstate[0].value == "") {
     alert("enter your state");
     return false;
-  } else if (!textOnlyExp.test(newstate[0].value)) {
-    alert("only text input");
-    return false;
-  } else {
+  }
+
+  // if (!textOnlyExp.test(newstate[0].value)) {
+  //   alert("only text input");
+  //   return false;
+  // }
+  else {
     return true;
   }
 }
