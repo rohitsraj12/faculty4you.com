@@ -331,5 +331,6 @@
             </div>
 
 <?php 
+  include("../../private/required/public/components/agreement.php");
      require("include/footer.inc.php");    
 ?>
