@@ -172,9 +172,10 @@ $(document).ready(function () {
       success: function (data) {
         if (type == "subjectName") {
           $(".subject").html(data);
-          // console.log(data);
+          console.log(data);
         } else {
           $(".subject_category").append(data);
+          console.log(data);
         }
       },
     });
@@ -183,8 +184,8 @@ $(document).ready(function () {
   loadSubject();
 
   $("#subject_category").change(function () {
-    var state = $("#subject_category").val();
+    var subjectCategory = $("#subject_category").val();
 
-    loadSubject("subjectName", state);
+    loadSubject("subjectName", subjectCategory);
   });
 });
