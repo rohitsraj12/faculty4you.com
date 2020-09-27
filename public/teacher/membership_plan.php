@@ -157,15 +157,13 @@
                 </div>
             </section>
         </section>
-
-        <?php
-            include("../../private/required/public/components/agreement.php");
-
-        ?>
     </main>
 </div>
 
+
 <?php
+    include("../../private/required/public/components/agreement.php");
+
     include("include/footer.inc.php");
 
 ?>  
