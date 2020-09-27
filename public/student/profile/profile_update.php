@@ -9,6 +9,7 @@
     
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
+    require("../../../private/query/place.php");
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
     require("../include/update_student.inc.php");
@@ -146,31 +147,26 @@
                                 <div class="form-row mb-4">
                                     
                                     
-                                    <div class="form-group mb-4 col-md-6">
-                                        <label for="city">City</label>
+                                <div class="form-group mb-4 col-md-4">
+                                        <label for="state">State</label>
                                         <span class="error-msg"></span>
-                                        <select id="state" name="city" class="form-control city">
-                                            <option value="nooption">Select city</option>
-                                            <?php 
-                                                $city_query = "SELECT * FROM cities ORDER BY city_name ASC";
-                                                $city_result = mysqli_query($conn, $city_query);
-
-                                                while($row = mysqli_fetch_assoc($city_result)){
-                                            ?>
-                                            <option value="<?php echo $row["city_id"];?>"><?php echo $row["city_name"];?></option>
-                                            <?php }?>
+                                        <select id="state" name="state" id="state" class="form-control state">
+                                            <option value="nooption">Select state</option>
+                                           
+                                                
+                                           
                                         </select>
                                     </div>
                                     <div class="form-group mb-4 col-md-4">
-                                        <label for="state">State</label>
+                                        <label for="city">City</label>
                                         <span class="error-msg"></span>
-                                        <select id="state" name="state" class="form-control state">
-                                            <option value="nooption">Select state</option>
-                                           
-                                           
+                                        <select id="state" name="city" id="city" class="form-control city">
+                                            
+                                         
+                                            
                                         </select>
                                     </div>
-                                    <div class="form-group mb-4 col-md-2">
+                                    <div class="form-group mb-4 col-md-4">
                                         <label for="pincode">Pincode</label>
                                         <span class="error-msg"></span>
                                         <input type="text" name="pincode" class="form-control pincode" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
