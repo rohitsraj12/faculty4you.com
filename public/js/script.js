@@ -131,4 +131,60 @@ $(document).ready(function () {
   //   js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
   //   fjs.parentNode.insertBefore(js, fjs);
   // })(document, "script", "facebook-jssdk");
+
+  // ajax city state
+  function loadData(type, col_id) {
+    $.ajax({
+      url: "../../../private/ajax/load_location.php",
+      type: "POST",
+      data: {
+        type: type,
+        id: col_id,
+      },
+      success: function (data) {
+        if (type == "cityName") {
+          $(".city").html(data);
+          // console.log(data);
+        } else {
+          $(".state").append(data);
+        }
+      },
+    });
+  }
+  // console.log(loadData());
+  loadData();
+
+  $("#state").change(function () {
+    var state = $("#state").val();
+
+    loadData("cityName", state);
+  });
+
+  // ajax study category -> subject category -> subject
+  function loadSubject(type, col_id) {
+    $.ajax({
+      url: "../../../private/ajax/load_subject.php",
+      type: "POST",
+      data: {
+        type: type,
+        id: col_id,
+      },
+      success: function (data) {
+        if (type == "subjectName") {
+          $(".subject").html(data);
+          // console.log(data);
+        } else {
+          $(".subject_category").append(data);
+        }
+      },
+    });
+  }
+  // console.log(loadData());
+  loadSubject();
+
+  $("#subject_category").change(function () {
+    var state = $("#subject_category").val();
+
+    loadSubject("subjectName", state);
+  });
 });
