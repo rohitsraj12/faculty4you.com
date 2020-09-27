@@ -54,13 +54,12 @@
                         </div>
                     </article>
                 </section>
-
         </div>
     </footer>
     <div class="footer-base  p-3">
         <ul class="wrap-container">
             <li class="footer-base__list">copyright 2014-2020 <a class="footer-base__link" href="<?php echo base_url();?>">facultyforyou.com</a> </li>
-            <li class="footer-base__list"><a class="footer-base__link" href="#" data-toggle="modal" data-target="#agreement" >terms and conditions</a></li>
+            <li class="footer-base__list"><a class="footer-base__link" href="#"data-toggle="modal" data-target="#agreement" >terms and conditions</a></li>
             <li class="footer-base__list">Developed by <a class="footer-base__link" href="#"></a></li>
         </ul>
     </div>
@@ -73,6 +72,7 @@
             <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
             <script src="<?php base_url();?>js/owl.carousel.js"></script>
             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
            
             <script src="<?php base_url();?>js/validation.js"></script>
             <script src="<?php base_url();?>js/script.js"></script>
