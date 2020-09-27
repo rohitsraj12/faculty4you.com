@@ -50,7 +50,7 @@
                 <div class="container">
                     
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <article class="member-left">
                                 <figure>
                                     <?php 
@@ -97,7 +97,7 @@
                                 </p>
                             </article>
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-md-8">
                             <article class="member-right">
                                     <header class="header-text-3">
                                         Profile detail
