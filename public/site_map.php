@@ -46,5 +46,7 @@
 
 
 <?php
+  include("../private/required/public/components/agreement.php");
+
     include_once("../private/required/public/footer.public.php");
 ?>
