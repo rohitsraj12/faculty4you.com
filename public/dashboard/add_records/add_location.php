@@ -96,7 +96,7 @@
                     <header class="text-center border-bottom mb-5">
                         <h5>Add new city to data-base</h5>
                     </header>
-                    <form action="" method="POST" onsubmit="return cityValidation()">
+                    <form action="" method="POST" onsubmit="return cityValidations()">
                         <div class="form-group">
                             <label for="q">Add new city</label>
                             <input type="text" class="form-control city__input" name="city" id="q">
@@ -131,7 +131,7 @@
                     <header class="text-center border-bottom mb-5">
                         <h5>Add new state to data-base</h5>
                     </header>
-                    <form action="" method="POST" onsubmit="return stateValidation()">
+                    <form action="" method="POST" onsubmit="return stateValidations()">
                         <div class="form-group">
                             <label for="q">Add new state</label>
                             <input type="text" class="form-control new-state" name="state" id="q">
