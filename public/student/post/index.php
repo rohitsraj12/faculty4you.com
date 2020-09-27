@@ -87,7 +87,7 @@
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
                                                 ON study_categories.category_id = posts.category_id
-                                            WHERE student_id = $student_id
+                                            WHERE student_id = $student_id AND post_state = 1
                                             ORDER BY post_id DESC";
 
                                 $result = mysqli_query($conn, $query);
@@ -114,6 +114,7 @@
                                         </div>
                                         <footer class="post-footer pb-3">
                                             <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary">Edit post</a>
+                                            <a href="<?php base_url();?>student/include/delete_post.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary">Delete post</a>
                                         </footer>
                                     </article>
                                         
