@@ -170,11 +170,14 @@ $(document).ready(function () {
         id: col_id,
       },
       success: function (data) {
-        if (type == "subjectName") {
+        if (type == "subject") {
           $(".subject").html(data);
           console.log(data);
+        } else if (type == "subjectCat") {
+          $(".subject_category").html(data);
+          console.log(data);
         } else {
-          $(".subject_category").append(data);
+          $(".study-category").append(data);
           console.log(data);
         }
       },
@@ -183,9 +186,17 @@ $(document).ready(function () {
   // console.log(loadData());
   loadSubject();
 
+  $("#study_category").change(function () {
+    var studyCategory = $("#study_category").val();
+
+    // loadSubject("subject", subjectCategory);
+    loadSubject("subjectCat", studyCategory);
+  });
+
   $("#subject_category").change(function () {
     var subjectCategory = $("#subject_category").val();
 
-    loadSubject("subjectName", subjectCategory);
+    loadSubject("subject", subjectCategory);
+    // loadSubject("subjectCat", studyCategory);
   });
 });
