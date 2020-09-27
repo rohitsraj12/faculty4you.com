@@ -144,16 +144,15 @@
                 </section>
 
             </div>
-
             <div class="row">
-                <section class="section_faq">
-                    
-                <table class="bg-light table">
+                <section class="section_faq"> 
+                     <table class="bg-light table">
                         <thead class="thead-light">
                             <tr>
                             <th scope="col">Id</th>
                             <th scope="col">city Name</th>
                             <th scope="col">State Name</th>
+                            <th scope="col">Edit</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -174,6 +173,7 @@
                                 <th scope="row"><?php echo $row['city_id'];?></th>
                                 <td><?php echo $row['city_name']?></td>
                                 <td><?php echo $row['state_name'];?></td>
+                                <td><a href="<?php base_url()?>dashboard/edit_records/edit_location.php?id=<?php echo $row['state_id']?>">Edit</a><?php ?></td>
                                 </tr>
                             <?php 
                             }
