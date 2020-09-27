@@ -8,14 +8,14 @@ $social_media_share = [
 
 // follow social media links navigation section and footer section
 $social_media_follow = [
-    "facebook.svg" => "https://www.facebook.com/aswik.aswik.50",
+    "facebook.svg" => "https://www.facebook.com/facultyforyou/",
     "instagram.svg" => "https://www.instagram.com/facultyforyou.com1/",
     "twitter.svg" => "https://twitter.com/facultyforyou1?s=03",
     // "linkedin.svg" => "https://www.linkedin.com/in/faculty-foryou-b0289a1b5"
 ];
 
 $social_media = [
-    "facebook.svg" => "https://www.facebook.com/aswik.aswik.50",
+    "facebook.svg" => "https://www.facebook.com/facultyforyou/",
     "instagram.svg" => "https://www.instagram.com/facultyforyou.com1/",
     "twitter.svg" => "https://twitter.com/facultyforyou1?s=03",
     "linkedin.svg" => "https://www.linkedin.com/in/faculty-foryou-b0289a1b5",
