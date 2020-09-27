@@ -1,7 +1,6 @@
 <?php
 require_once("../config/db_connect.php");
 
-
     if($_POST['type'] == ""){
 
         $sql = "SELECT * FROM subjects_categories";
@@ -21,7 +20,7 @@ require_once("../config/db_connect.php");
         $output = "";
         while($row = mysqli_fetch_assoc($result)){
             echo $row['subject_name'];
-            $output .= '<option value="'. $row["subject_id"] . '">' . $row['subject_name'] . '</option>';
+            $output .= '<option value="'. $row["subject_id"] . '">' . $row['sub_name'] . '</option>';
         }
     }
     echo $output;
