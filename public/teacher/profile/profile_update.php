@@ -142,35 +142,20 @@
                                 
                                 <div class="form-row mb-4">
                                     
-                                    
-                                    <div class="form-group col-md-6">
-                                        <label for="city">City</label>
-                                        <span class="error-msg"></span>
-                                        <select id="state" name="city" class="form-control city">
-                                            <option selected value="nooption">Choose city</option>
-                                            <?php 
-                                                $city_query = "SELECT * FROM cities ORDER BY city_name ASC";
-                                                $city_result = mysqli_query($conn, $city_query);
-
-                                                while($row = mysqli_fetch_assoc($city_result)){
-                                            ?>
-                                            <option value="<?php echo $row["city_id"];?>"><?php echo $row["city_name"];?></option>
-                                            <?php }?>
-                                        </select>
-                                    </div>
                                     <div class="form-group col-md-4">
                                         <label for="state">State</label>
                                         <span class="error-msg"></span>
                                         <select id="state" name="state" class="form-control state">
                                             <option value="nooption" selected>Choose state</option>
-                                            <?php 
-                                                $state_query = "SELECT * FROM states ORDER BY state_name ASC";
-                                                $state_result = mysqli_query($conn, $state_query);
-
-                                                while($row = mysqli_fetch_assoc($state_result)){
-                                            ?>
-                                            <option value="<?php echo $row["state_id"];?>"><?php echo $row["state_name"];?></option>
-                                            <?php }?>
+                                            
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group col-md-4">
+                                        <label for="city">City</label>
+                                        <span class="error-msg"></span>
+                                        <select id="state" name="city" class="form-control city">
+                                           
                                         </select>
                                     </div>
                                     <!-- <div class="form-group col-md-2">
@@ -188,7 +173,7 @@
                             <div class="py-4 px-5 text-dark bg-white border mb-5">
                             <div class="form-group form-row my-3">
                                 <div class="col-md-6"> 
-                                    <label for="category" class="label col-form-label col-sm-3 pt-0 w-100">Study Category</label>
+                                    <label for="category" class="label col-form-label pt-0 w-100">Study Category</label>
                                     <span class="error-msg"></span>
                                     <select id="category" name="category" class="form-control category">
                                         <option value="nooption">Select category</option>
@@ -203,36 +188,21 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6"> 
-                                    <label for="category" class="label col-form-label col-sm-3 pt-0">Subject Category</label>
+                                    <label for="subject_category" class="label col-form-label pt-0">Subject Category</label>
                                     <span class="error-msg"></span>
-                                    <select id="category" name="subject_category" class="form-control category">
+                                    <select id="subject_category" name="subject_category" class="form-control category">
                                         <option value="nooption">Select category</option>
-                                        <?php 
-                                            $cat_query = "SELECT * FROM study_categories ORDER BY study_cat_type ASC";
-                                            $cat_result = mysqli_query($conn, $cat_query);
-
-                                            while($row = mysqli_fetch_assoc($cat_result)){
-                                        ?>
-                                        <option value="<?php echo $row["category_id"];?>"><?php echo $row["study_cat_type"];?></option>
-                                        <?php }?>
+                                       
                                     </select>
                                 </div>
                             </div>
                         
                                 <div class="form-row pt-3 mb-3">
                                     <div class="form-group col-md-6">
-                                        <label for="sub_id">Subject</label>
+                                        <label for="subject">Subject</label>
                                         <span class="error-msg"></span>
-                                        <select id="state" name="subject" class="form-control subject">
-                                            <option selected value="nooption">Choose your subject</option>
-                                            <?php 
-                                                $city_query = "SELECT * FROM subjects ORDER BY sub_name ASC";
-                                                $city_result = mysqli_query($conn, $city_query);
-
-                                                while($row = mysqli_fetch_assoc($city_result)){
-                                            ?>
-                                            <option value="<?php echo $row["subject_id"];?>"><?php echo $row["sub_name"];?></option>
-                                            <?php }?>
+                                        <select id="subject" name="subject" class="form-control subject">
+                                           
                                         </select>
                                     </div>
                                     <div class="form-group col-md-6">
