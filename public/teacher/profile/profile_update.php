@@ -190,7 +190,7 @@
                                 <div class="col-md-6"> 
                                     <label for="subject_category" class="label col-form-label pt-0">Subject Category</label>
                                     <span class="error-msg"></span>
-                                    <select id="subject_category" name="subject_category" class="form-control category">
+                                    <select id="subject_category" name="subject_category" class="form-control subject_category">
                                         <option value="nooption">Select category</option>
                                        
                                     </select>
