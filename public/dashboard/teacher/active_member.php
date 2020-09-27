@@ -23,6 +23,17 @@ $sub = "activeMember";
                     </header>
                 </div>
             </div>
+        <!-- end page header -->
+            <div class="header-tab wrap-container">
+                <ul class="">
+                    <li class="header-tab__button active-tab" data-header-tab="tab-1">tab-1</li>
+                    <li class="header-tab__button" data-header-tab="tab-2">tab-2</li>
+                    <li class="header-tab__button" data-header-tab="tab-3">tab-3</li>
+                </ul>
+                <div class="tab-1 tab-detail active-tab-detail">abcd</div>
+                <div class="tab-2 tab-detail">efgh</div>
+                <div class="tab-3 tab-detail">ijkl</div>
+            </div>
             <section class="section-record">
                 <div class="container">
                     <div class="wrap-table">
