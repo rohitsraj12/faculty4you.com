@@ -460,3 +460,10 @@ a:hover {
   background-color: #fff;
   font-size: 16px;
 }
+
+.tab-detail{
+  display: none;
+}
+.active-tab-detail{
+display: block;
+}
