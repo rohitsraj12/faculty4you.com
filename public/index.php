@@ -398,6 +398,8 @@
 
 
 <?php
+    include("../private/required/public/components/agreement.php");
+
     include("../private/required/public/footer.public.php");
 
 ?>
