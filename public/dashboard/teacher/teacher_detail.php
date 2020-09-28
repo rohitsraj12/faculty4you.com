@@ -184,6 +184,9 @@
                                         <?php echo $row['teacher_about_me'];?>
                                         </div>
                                     </li>
+                                    <li class="row border-top pt-4">
+                                        <a href="../add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>" class='member-nonactive'>Add Testimonial</a>
+                                    </li>
                                 </ul>
                             </article>
                             
