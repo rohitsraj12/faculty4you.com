@@ -12,8 +12,10 @@
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
     // include_once'../include/banner.inc.php';
-    include("../include/update.techer.profile.inc.php");
+    // include("../include/update.techer.profile.inc.php");
 
+
+    
         
     $sql = "SELECT teachers.*, cities.*, states.*, subjects.*, gender.* FROM teachers 
     JOIN cities
@@ -32,12 +34,18 @@
 
     
     
-    if(!empty($message)){
+    if(!empty($_GET['message'])){
+        $message = "Congratulations! You have successfully updated your profile detail.";
         
 ?>
 <div class="alert alert-success m-0" role="alert">
     <div class="wrap-container h3 py-4">
-        <?php echo $message;?>
+
+        <?php 
+        
+        echo $message;
+            // header('location: index.php');
+        ?>
     </div>
 </div>
 
@@ -60,7 +68,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
+                    <form action="../include/update.techer.profile.inc.php" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
                         <article class="mb-5" >
                             <header class="p-4 h3 article-profile__header text-light m-0">
                                 Personal information
@@ -71,7 +79,7 @@
                                     <div class="form-group wrap-form col-md-6">
                                         <label for="first_name">First name</label> 
                                         <span class="error-msg"></span>
-                                        <input type="text" name="first_name" class="form-control name" id="first_name" >
+                                        <input type="text" name="first_name" class="form-control name" id="first_name" placeholder="<?php //echo $row['teacher_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
@@ -152,7 +160,7 @@
                                     </div>
                                     
                                     <div class="form-group col-md-4">
-                                        <label for="city">City</label>
+                                        <label for="city">City/Town</label>
                                         <span class="error-msg"></span>
                                         <select id="state" name="city" class="form-control city">
                                            
