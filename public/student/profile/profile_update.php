@@ -12,7 +12,7 @@
     require("../../../private/query/place.php");
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
-    require("../include/update_student.inc.php");
+    // require("../include/update_student.inc.php");
  
     $student_name = $_SESSION['user_name'];
 
@@ -55,7 +55,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return studentValidation()">
+                    <form action="../include/update_student.inc.php" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return studentValidation()">
                         <article class="mb-5" >
                             <header class="article-profile__header p-4 h3 bg-dark text-light m-0">
                                 Primary information
@@ -158,7 +158,7 @@
                                         </select>
                                     </div>
                                     <div class="form-group mb-4 col-md-4">
-                                        <label for="city">City</label>
+                                        <label for="city">City/Town</label>
                                         <span class="error-msg"></span>
                                         <select id="state" name="city" id="city" class="form-control city">
                                             
