@@ -91,6 +91,10 @@
                     </div>
                 </section>
             </section>
+            
+            <section class="section__teacher-slider">
+                
+                </section>
         </main>
     </div>
             <!-- end body container -->
