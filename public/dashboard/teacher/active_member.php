@@ -6,8 +6,9 @@
     }
 
     
-$active = "teacher";
-$sub = "activeMember";
+    $active = "teacher";
+    $sub = "activeMember";
+    
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");
     include("../include/header.inc.php");
