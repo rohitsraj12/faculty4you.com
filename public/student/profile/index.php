@@ -29,9 +29,26 @@
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
 
-    // echo $row['student_email'];
+    if(!empty($_GET['message'])){
+        $message = "Congratulations! You have successfully updated your profile detail.";
+        
+?>
+<div class="alert alert-success m-0" role="alert">
+    <div class="wrap-container h3 py-4">
+
+        <?php 
+        
+        echo $message;
+            // header('location: index.php');
+        ?>
+    </div>
+</div>
+
+<?php
+    }
 
 ?>
+
 <div class="body-container">
 
     <main class="wrap-container profile">
