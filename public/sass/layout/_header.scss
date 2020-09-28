@@ -19,15 +19,25 @@
 
 .header {
   &-brand {
-    position: relative;
     padding: 0 0 1rem;
+    @media (min-width: 583px){
+      height: 8rem;
+      position: relative;
+    }
     @media (max-width: 582px) {
       padding-top: 1rem;
     }
     img {
-      position: absolute;
-      top: -30px;
-      height: 10rem;
+      @media (min-width: 583px){
+        height: 10rem;
+        position: absolute;
+        top: -3rem;
+      }
+      @media(max-width: 582px){
+        height: 8rem;
+        
+      }
+     
     }
     &-section {
       padding: 0;
