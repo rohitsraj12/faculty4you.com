@@ -19,12 +19,15 @@
 
 .header {
   &-brand {
+    position: relative;
     padding: 0 0 1rem;
     @media (max-width: 582px) {
       padding-top: 1rem;
     }
     img {
-      height: 7rem;
+      position: absolute;
+      top: -30px;
+      height: 10rem;
     }
     &-section {
       padding: 0;
@@ -64,7 +67,7 @@
         position: absolute;
         top: 10px;
         // left: 25%;
-        
+
         // @include radius-direction(0, 0, 1rem, 1rem);
         // border-right: 1px solid #cacaca;
         // border-bottom: 1px solid #cacaca;
@@ -95,7 +98,7 @@
         // flex-wrap: wrap;
       }
     }
-    
+
     .social {
       &__list {
         margin-left: 1.5rem;
@@ -147,7 +150,7 @@
     border-top: 1px solid $color-black;
     border-bottom: 1px solid $color-black;
 
-    @media(max-width: 582px){
+    @media (max-width: 582px) {
       display: none;
       width: 100%;
       height: 100vh;
@@ -163,7 +166,7 @@
       z-index: 101;
     }
     & > .wrap-container {
-      @media(min-width: 583px){
+      @media (min-width: 583px) {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -171,7 +174,7 @@
     }
 
     nav {
-      @media(max-width: 582px){
+      @media (max-width: 582px) {
         // margin-bottom: 20px;
         padding-bottom: 1rem;
         // border-bottom: 2px solid $color-primary;
@@ -188,7 +191,6 @@
       }
 
       @media (max-width: 582px) {
-        
       }
     }
   }
@@ -208,28 +210,25 @@
 .nav {
   &__link {
     @include shadow-text(0, 0, 2px, 0.5);
-   
-    @media(min-width: 583px){
+
+    @media (min-width: 583px) {
       @include post-head;
       display: inline-block;
       @include hover-transition(500ms);
       padding: 0.2rem 2rem;
-
     }
 
-    @media(max-width: 582px){
+    @media (max-width: 582px) {
       background-color: $color-primary;
       padding: 0.5rem 2rem;
-
     }
-    
+
     &:hover {
-      @media(min-width: 583px){
-
-      @include post-head-hover;
-      @include hover-transition(500ms);
+      @media (min-width: 583px) {
+        @include post-head-hover;
+        @include hover-transition(500ms);
+      }
     }
-  }
 
     @media (max-width: 582px) {
       display: block;
@@ -252,9 +251,9 @@
 }
 
 .nav-active {
-  @media(min-width: 583px){
+  @media (min-width: 583px) {
     @include post-head-hover;
-}
+  }
 }
 
 .hamberger {
@@ -346,22 +345,22 @@
 }
 
 .top-social-media {
-  @media (max-width: 582px){
+  @media (max-width: 582px) {
     display: none;
   }
 }
 .nav-social-media {
   @extend .social-media;
-  @media(max-width: 582px){
+  @media (max-width: 582px) {
     background-color: $color-primary;
     padding: 1.5rem 0;
     margin: 0 2%;
   }
- 
-  ul li{
+
+  ul li {
     &:first-child {
       font-size: 1.5rem;
-      @media(max-width: 582px){
+      @media (max-width: 582px) {
         display: block;
         padding-bottom: 5px;
         margin-bottom: 5px;
@@ -427,11 +426,11 @@
   }
 }
 
-.member-body-header{
+.member-body-header {
   padding-top: 1rem;
-   .login{
-      @media (min-width: 583px){
-        display: none;
-      }
+  .login {
+    @media (min-width: 583px) {
+      display: none;
     }
+  }
 }
