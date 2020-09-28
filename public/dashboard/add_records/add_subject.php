@@ -132,9 +132,11 @@ $sub = "add subject";
                         </thead>
                         <tbody>
                             <?php
-                                $study_query = "SELECT subjects.*, subjects_categories.* FROM subjects
+                                $study_query = "SELECT subjects.*, subjects_categories.*, study_categories.* FROM subjects
                                     LEFT JOIN subjects_categories
                                         ON subjects_categories.sub_cat_id = subjects.sub_cat_id
+                                    LEFT JOIN study_categories
+                                        ON study_categories.category_id = subjects.study_cat_id
                                         ORDER BY subjects.sub_name ASC";
                                 $result = mysqli_query($conn, $study_query);
 
@@ -148,7 +150,7 @@ $sub = "add subject";
                                 <th scope="row"><?php echo $row['subject_id'];?></th>
                                 <td><?php echo $row['sub_name']?></td>
                                 <td><?php echo $row['sub_cat_name'];?></td>
-                                <td><?php echo $row['study_cat_id'];?></td>
+                                <td><?php echo $row['study_cat_type'];?></td>
                                 <td><a href="<?php base_url()?>dashboard/edit_records/edit_subject.php?id=<?php echo $row['subject_id']?>">Edit</a><?php ?></td>
                             </tr>
                             <?php 
