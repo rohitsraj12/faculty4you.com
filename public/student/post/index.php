@@ -112,9 +112,9 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="post-footer pb-3">
+                                        <footer class="post-footer pb-3 ">
                                             <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary">Edit post</a>
-                                            <a href="<?php base_url();?>student/include/delete_post.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary">Delete post</a>
+                                            <a href="<?php base_url();?>student/include/delete_post.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary ml-5">Delete post</a>
                                         </footer>
                                     </article>
                                         
@@ -198,6 +198,7 @@
                         </section>             
                     </div>
                 </section>
+                <!-- end section post -->
             </section>
         </main>
 
