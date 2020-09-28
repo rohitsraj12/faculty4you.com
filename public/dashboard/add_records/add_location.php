@@ -176,7 +176,7 @@
                                         <th scope="row"><?php echo $row['city_id'];?></th>
                                         <td><?php echo $row['city_name']?></td>
                                         <td><?php echo $row['state_name'];?></td>
-                                        <td><a href="<?php base_url()?>dashboard/edit_records/edit_location_city.php?id=<?php echo $row['state_id']?>">Edit</a><?php ?></td>
+                                        <td><a href="<?php base_url()?>dashboard/edit_records/edit_location_city.php?id=<?php echo $row['city_id']?>">Edit</a><?php ?></td>
                                         </tr>
                                     <?php 
                                     }
@@ -200,10 +200,7 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        $study_query = "SELECT cities.*, states.* FROM cities
-                                            LEFT JOIN states
-                                                ON states.state_id = cities.state_id
-                                                ORDER BY city_name ASC";
+                                        $study_query = "SELECT * FROM states ORDER BY state_name ASC";
                                         $result = mysqli_query($conn, $study_query);
 
                                 // $query_results = mysqli_num_rows($result);
