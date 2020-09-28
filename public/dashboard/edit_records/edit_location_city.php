@@ -46,7 +46,7 @@
             ?>
                 <div class="alert alert-primary" role="alert">
                     <?php  echo "successfully Inserted " . $city .".!";
-                    
+                    header('location:../add_records/add_location.php');
                     exit();
                     ?>
 
