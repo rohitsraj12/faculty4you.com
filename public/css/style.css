@@ -1940,12 +1940,15 @@ label {
   width: 100%; }
 
 .header-brand {
+  position: relative;
   padding: 0 0 1rem; }
   @media (max-width: 582px) {
     .header-brand {
       padding-top: 1rem; } }
   .header-brand img {
-    height: 7rem; }
+    position: absolute;
+    top: 0;
+    height: 10rem; }
   .header-brand-section {
     padding: 0; }
     .header-brand-section > .wrap-container {
