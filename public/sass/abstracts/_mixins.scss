@@ -24,6 +24,20 @@
   text-shadow: $x $y $b rgba(0, 0, 0, $alpha);
 }
 
+// border radius
+@mixin radius-all($all) {
+  -webkit-border-radius: $all;
+  -moz-border-radius: $all;
+  border-radius: $all;
+}
+
+@mixin radius-direction($top-left, $top-right, $bottom-right, $bottom-left) {
+  -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
+  -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+
+
 @mixin gradient {
   background: #8aafff;
   background: -moz-linear-gradient(left, #8aafff 0%, #8aafff 41%, #5388fe 100%);
@@ -528,19 +542,6 @@
   -ms-transition: all $ms ease-in;
   -o-transition: all $ms ease-in;
   transition: all $ms ease-in;
-}
-
-// border radius
-@mixin radius-all($all) {
-  -webkit-border-radius: $all;
-  -moz-border-radius: $all;
-  border-radius: $all;
-}
-
-@mixin radius-direction($top-left, $top-right, $bottom-right, $bottom-left) {
-  -webkit-border-radius: $top-left $top-right $bottom-right $bottom-left;
-  -moz-border-radius: $top-left $top-right $bottom-right $bottom-left;
-  border-radius: $top-left $top-right $bottom-right $bottom-left;
 }
 
 @mixin post-body-1 {
