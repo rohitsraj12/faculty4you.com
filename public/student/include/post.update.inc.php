@@ -14,7 +14,7 @@
         study_type_id = '$study_type',
         study_cat_id = '$study_category',
         category_id = '$subject_category',
-        subject_id = $subject WHERE post_id = $id"; 
+        subject_id = '$subject' WHERE post_id = $id"; 
         $result = mysqli_query($conn, $query);
 
         
