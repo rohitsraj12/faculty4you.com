@@ -126,7 +126,7 @@
                                                         
                                                     
                                                             // fetching file from private
-                                                            include("../private/required/public/student/teacher_detail.php");  
+                                                            include("../private/required/public/student_search.php");  
                                                     
                                                             }
                                                         ?>
@@ -166,8 +166,8 @@
                                                         <?php 
                                                             while($row = mysqli_fetch_assoc($result)){
 
-                                                            // fetching file from private
-                                                        include("../private/required/public/student/teacher_detail.php");  
+                                                            // fetching file from private 
+                                                            include("../private/required/public/student_search.php");  
                                                     
                                                             }
                                                         ?>
