@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     <div class="col-sm-9">
-                        <section  class="view__post post__cat" id="viewPost">
+                        <section  class="all view__post post__cat" id="viewPost">
                             
                             <header class="text-primary-h-3 text-center pb-5 mb-5" >
                                 View my past posts
@@ -117,9 +117,9 @@
                                             <?php echo $row["post_detail"];?>
                                         </p>
                                         </div>
-                                        <footer class="post-footer pb-3 ">
-                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary">Edit post</a>
-                                            <a href="<?php base_url();?>student/include/delete_post.php?id=<?php echo $row['post_id'];?>"class="text-link-1 text-primary ml-5">Delete post</a>
+                                        <footer class="post-footer pb-5 ">
+                                            <a href="<?php base_url();?>student/post/update.php?id=<?php echo $row['post_id'];?>"class="button__link-primary">Edit post</a>
+                                            <a href="<?php base_url();?>student/include/delete_post.php?id=<?php echo $row['post_id'];?>"class="button__link-primary ml-5">Delete post</a>
                                         </footer>
                                     </article>
                                         
