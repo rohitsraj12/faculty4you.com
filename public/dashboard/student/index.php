@@ -7,6 +7,7 @@
 
 
 $active = "student";
+$sub = "studentDetail";
 
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");
