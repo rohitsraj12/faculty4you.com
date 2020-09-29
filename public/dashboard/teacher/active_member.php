@@ -58,7 +58,7 @@
                                         $sql = "SELECT memberships.*, teachers.* FROM memberships
                                         LEFT JOIN teachers
                                             ON teachers.teacher_id = memberships.teacher_id
-                                        WHERE membership_expiry_date > CURRENT_DATE() AND memberships.teacher_id = (SELECT teacher_id FROM memberships ORDER BY teacher_id ASC LIMIT 1)
+                                        WHERE membership_expiry_date > CURRENT_DATE() AND memberships.member_token = 0 AND memberships.teacher_id = (SELECT teacher_id FROM memberships ORDER BY teacher_id ASC LIMIT 1)
                                         ORDER BY member_token ASC 
                                         ";
                                         $results = mysqli_query($conn, $sql);
