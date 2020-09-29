@@ -56,7 +56,7 @@ session_start();
             <div class="col-sm-4">
                 <label for="study_category" class="label col-form-label pt-0">Study Category</label>
                 <span class="error-msg"></span>
-                <select id="study_category" name="cat" class="form-control study-category">
+                <select id="study_category" name="study_category" class="form-control study-category">
                     <option value="nooption">Select category</option>
                     
                 </select>
