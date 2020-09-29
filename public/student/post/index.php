@@ -81,8 +81,12 @@
                             <?php 
 
                                 $student_id = $row['student_id'];
-                                $query = "SELECT posts.*, study_types.study_type_name, study_categories.study_cat_type 
+                                $query = "SELECT posts.*, subjects_categories.sub_cat_name, subjects.sub_name, study_types.study_type_name, study_categories.study_cat_type 
                                             FROM posts
+                                            JOIN subjects_categories
+                                                ON subjects_categories.sub_cat_id = posts.category_id
+                                            JOIN subjects
+                                                ON subjects.subject_id = posts.subject_id
                                             JOIN study_types
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
@@ -106,7 +110,8 @@
                                                 <li class="mr-5"><i class="fa fa-calendar mr-2" aria-hidden="true"></i><?php echo $row["post_date"];?></li>
                                                 <li class="mr-5"><i class="fa fa-graduation-cap mr-2" aria-hidden="true"></i><?php echo $row["study_type_name"];?></li>
                                                 <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
-                                                <!-- <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php// echo $row["city_name"];?></li> -->
+                                                <li class="mr-5"><i class="fa fa-hand-o-right mr-2" aria-hidden="true"></i><?php echo $row["sub_cat_name"];?></li>
+                                                <li class="mr-5"><i class="fa fa-book mr-2" aria-hidden="true"></i><?php echo $row["sub_name"];?></li>
                                             </ul>
                                         <p class="text-dark">
                                             <?php echo $row["post_detail"];?>
@@ -156,7 +161,7 @@
                                         <div class="col-sm-6 wrap-form"> 
                                             <label for="study_category" >Study Category</label>
                                             <span class="error-msg"></span>
-                                            <select id="study_category" name="category" class="form-control study-category">
+                                            <select id="study_category" name="study_category" class="form-control study-category">
                                                 <option value="nooption">Select category</option>
                                                 
                                             </select>
