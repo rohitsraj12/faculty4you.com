@@ -66,7 +66,7 @@
                             </div>
                         </div>
                         <div class="wrap-container">
-                            <div class="header-brand">
+                            <div class="header-brand header-brand-private">
                                 <a href="<?php base_url();?>index.php">
                                     <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty 4 you">
                                 </a>
