@@ -135,7 +135,7 @@ $(document).ready(function () {
   // ajax city state
   function loadData(type, col_id) {
     $.ajax({
-      url: "../../../private/ajax/load_location.php",
+      url: "../../aj/load_location.php",
       type: "POST",
       data: {
         type: type,
@@ -144,7 +144,7 @@ $(document).ready(function () {
       success: function (data) {
         if (type == "cityName") {
           $(".city").html(data);
-          // console.log(data);
+          console.log(data);
         } else {
           $(".state").append(data);
         }
@@ -163,7 +163,7 @@ $(document).ready(function () {
   // ajax study category -> subject category -> subject
   function loadSubject(type, col_id) {
     $.ajax({
-      url: "../../../private/ajax/load_subject.php",
+      url: "../../aj/load_subject.php",
       type: "POST",
       data: {
         type: type,
@@ -175,7 +175,7 @@ $(document).ready(function () {
           console.log(data);
         } else if (type == "subjectCat") {
           $(".subject_category").html(data);
-          console.log(data);
+          // console.log(data);
         } else {
           $(".study-category").append(data);
           console.log(data);
