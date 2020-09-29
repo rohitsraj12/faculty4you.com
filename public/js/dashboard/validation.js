@@ -14,6 +14,10 @@ function validation() {
     alert("not less than 30 letters");
 
     return false;
+  } else if (testimonial[0].value.length > 160) {
+    alert("not more than 160 letters");
+
+    return false;
   } else {
     return true;
   }
