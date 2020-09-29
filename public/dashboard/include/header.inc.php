@@ -113,10 +113,13 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="side-nav__list"><a class="side-nav__link side-nav-toggle <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/"> Students  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                <li class="side-nav__list"><a class="side-nav__link side-nav-toggle <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student"> Students  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                     <ul class="side-sub-nav">
                                         <li>
-                                            <a class="side-sub-nav__link <?php if($active == "student"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/student_post.php">Students posts</a> 
+                                            <a class="side-sub-nav__link <?php if($active == "student" &&  $sub == "studentDetail"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/index.php">Student details</a> 
+                                        </li>
+                                        <li>
+                                            <a class="side-sub-nav__link <?php if($active == "student" &&  $sub == "studentPost"){ echo "active";}?>" href="<?php base_url();?>dashboard/student/student_post.php">Students posts</a> 
                                         </li>
                                     </ul>
                                 </li>
