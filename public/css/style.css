@@ -340,11 +340,13 @@ label {
 
 .button-secondary {
   border-radius: 1rem;
-  padding: 1rem 2rem;
-  background-color: #5388fe;
+  padding: 0.8rem 4rem;
+  background-color: #646464;
   display: inline-block;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.7rem;
   font-weight: 500; }
 
 .button-special {
@@ -356,16 +358,7 @@ label {
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  transition: transform 300ms ease-in;
-  background: #8aafff;
-  background: -moz-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #5388fe), color-stop(41%, #8aafff), color-stop(100%, #5388fe));
-  background: -webkit-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-  background: -o-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-  background: -ms-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-  background: linear-gradient(to right, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5388fe', endColorstr='#5388fe', GradientType=1 );
-  border-color: #5388fe; }
+  transition: transform 300ms ease-in; }
   .button-special:hover {
     color: #ffffff;
     background: #8aafff; }
@@ -377,6 +370,11 @@ label {
   display: inline-block;
   font-size: 1.7rem;
   font-weight: 500; }
+
+.button__link-primary {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #aa0000; }
 
 .section-member,
 .section-forgotpwd {
@@ -1000,29 +998,8 @@ label {
     z-index: -2; }
   .section-testimonial blockquote::after {
     content: ""; }
-    @media (min-width: 1024px) {
-      .section-testimonial blockquote::after {
-        background-image: url("../img/member/feedback.svg");
-        background-repeat: no-repeat;
-        background-position: left top;
-        background-size: 500px 300px;
-        opacity: 0.5;
-        top: -40%;
-        left: -1%;
-        width: 100%;
-        height: 300px;
-        position: absolute;
-        z-index: -10; } }
   .section-testimonial blockquote::before {
-    content: "";
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    background-color: #ffdb51;
-    position: absolute;
-    right: -3%;
-    bottom: -50px;
-    z-index: -4; }
+    content: ""; }
     @media (max-width: 582px) {
       .section-testimonial blockquote::before {
         left: 27%;
@@ -1031,21 +1008,15 @@ label {
     margin-bottom: 3rem; }
   .section-testimonial article {
     height: 30rem;
-    border: 1px solid #ffc785;
-    border-top: 5px solid #aa0000;
+    border: 5px solid #aa0000;
     padding: 3rem 2rem;
     background-color: #ffffff;
     -webkit-box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
     box-shadow: inset 0px 0px 20px 2px rgba(0, 0, 0, 0.1);
-    background: #ffffb9;
-    background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffb9), color-stop(100%, #ffffcf));
-    background: -webkit-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
-    background: -o-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
-    background: -ms-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
-    background: linear-gradient(to bottom, #ffffb9 0%, #ffffcf 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 );
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    border-radius: 3rem;
     margin: 0 5px;
     display: flex;
     flex-direction: column;
@@ -2251,6 +2222,16 @@ label {
   @media (min-width: 583px) {
     .member-body-header .login {
       display: none; } }
+
+@media (min-width: 583px) {
+  .header-brand-private {
+    height: 6.5rem; } }
+
+@media (min-width: 583px) {
+  .header-brand-private img {
+    height: 8rem;
+    position: absolute;
+    top: -3rem; } }
 
 .body-footer {
   padding-top: 6rem;
