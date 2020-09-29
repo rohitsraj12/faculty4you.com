@@ -23,11 +23,13 @@
 
   &-secondary {
     border-radius: 1rem;
-    padding: 1rem 2rem;
-    background-color: $color-btn-1;
+    padding: 0.8rem 4rem;
+    background-color: $color-gray-dark-1;
     display: inline-block;
     color: $color-white;
-    font-size: 1.5rem;
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 1.7rem;
     font-weight: 500;
   }
 
@@ -42,41 +44,41 @@
     text-transform: uppercase;
     transition: transform 300ms ease-in;
 
-    background: #8aafff;
-    background: -moz-linear-gradient(
-      left,
-      #5388fe 0%,
-      #8aafff 41%,
-      #5388fe 100%
-    );
-    background: -webkit-gradient(
-      left top,
-      right top,
-      color-stop(0%, #5388fe),
-      color-stop(41%, #8aafff),
-      color-stop(100%, #5388fe)
-    );
-    background: -webkit-linear-gradient(
-      left,
-      #5388fe 0%,
-      #8aafff 41%,
-      #5388fe 100%
-    );
-    background: -o-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-    background: -ms-linear-gradient(
-      left,
-      #5388fe 0%,
-      #8aafff 41%,
-      #5388fe 100%
-    );
-    background: linear-gradient(
-      to right,
-      #5388fe 0%,
-      #8aafff 41%,
-      #5388fe 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5388fe', endColorstr='#5388fe', GradientType=1 );
-    border-color: #5388fe;
+    // background: #8aafff;
+    // background: -moz-linear-gradient(
+    //   left,
+    //   #5388fe 0%,
+    //   #8aafff 41%,
+    //   #5388fe 100%
+    // );
+    // background: -webkit-gradient(
+    //   left top,
+    //   right top,
+    //   color-stop(0%, #5388fe),
+    //   color-stop(41%, #8aafff),
+    //   color-stop(100%, #5388fe)
+    // );
+    // background: -webkit-linear-gradient(
+    //   left,
+    //   #5388fe 0%,
+    //   #8aafff 41%,
+    //   #5388fe 100%
+    // );
+    // background: -o-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
+    // background: -ms-linear-gradient(
+    //   left,
+    //   #5388fe 0%,
+    //   #8aafff 41%,
+    //   #5388fe 100%
+    // );
+    // background: linear-gradient(
+    //   to right,
+    //   #5388fe 0%,
+    //   #8aafff 41%,
+    //   #5388fe 100%
+    // );
+    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5388fe', endColorstr='#5388fe', GradientType=1 );
+    // border-color: #5388fe;
 
     &:hover {
       color: $color-white;
@@ -91,5 +93,13 @@
     display: inline-block;
     font-size: 1.7rem;
     font-weight: 500;
+  }
+
+  &__link {
+    &-primary {
+      font-size: 1.7rem;
+    font-weight: 500;
+    color: $color-primary;
+    }
   }
 }
