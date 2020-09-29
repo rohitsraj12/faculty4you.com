@@ -1866,6 +1866,10 @@ label {
   padding: 1rem 0;
   background-color: #e7e7e7; }
 
+@media (max-width: 582px) {
+  .plan-types {
+    margin-bottom: 4rem; } }
+
 .payment-body {
   background: #ffffb9;
   background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
