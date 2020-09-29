@@ -10,9 +10,9 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../../../private/query/place.php");
+    require("../include/update_student.inc.php");
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
-    // require("../include/update_student.inc.php");
  
     $student_name = $_SESSION['user_name'];
 
@@ -55,7 +55,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="../include/update_student.inc.php" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return studentValidation()">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return studentValidation()">
                         <article class="mb-5" >
                             <header class="article-profile__header p-4 h3 bg-dark text-light m-0">
                                 Primary information
