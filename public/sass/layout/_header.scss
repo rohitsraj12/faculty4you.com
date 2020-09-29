@@ -53,6 +53,7 @@
         }
       }
     }
+  
   }
 
   &-profile {
@@ -442,5 +443,20 @@
     @media (min-width: 583px) {
       display: none;
     }
+  }
+}
+
+// home page header
+.header-brand-private {
+    @media (min-width: 583px){
+      height: 6.5rem;
+    }
+  img {
+    @media (min-width: 583px){
+      height: 8rem;
+      position: absolute;
+      top: -3rem;
+    }
+   
   }
 }
