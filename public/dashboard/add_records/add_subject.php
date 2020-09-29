@@ -113,7 +113,7 @@ $sub = "add subject";
                             </select>
                         </div> 
                         
-                        <div class="form-group text-right col-sm-2 pt-4">
+                        <div class="form-group text-center col-sm-12 pt-4">
                             <input class="btn btn-primary mt-2" type="submit" name="submit_subject" value="Submit">
                         </div>
                     </form>
