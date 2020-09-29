@@ -255,7 +255,7 @@ function errMsg(input, errorMsg) {
   if (title[0].value == "") {
     errMsg(title[0], "title");
     return false;
-  } else if (title[0].value.length > 30) {
+  } else if (title[0].value.length > 60) {
     errMsg(title[0], "less than 30 ltrs");
     return false;
   }
