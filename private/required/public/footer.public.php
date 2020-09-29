@@ -8,7 +8,7 @@
 <div class="body-footer" >    
     <footer class="wrap-container text-light pt-5">
         <div class="row">
-                <section class="col-sm-4">
+                <section class="col-sm-4 mb-4">
                     <article>
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             
