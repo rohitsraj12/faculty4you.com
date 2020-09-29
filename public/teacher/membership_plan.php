@@ -46,7 +46,7 @@
             <section class="wrap-container">
                 <div class="row">
                 <!-- offset-sm-1 -->
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 plan-types">
                         <article class="member-block member-silver">
                             <header class="member__header">
                                 <h1>Faculty for you</h1>
@@ -80,7 +80,7 @@
                             </footer>
                         </article>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 plan-types">
                         <article class="member-block member-gold">
                             <header class="member__header">
                             <h1>Faculty for you</h1>
@@ -116,7 +116,7 @@
                             </footer>
                         </article>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 plan-types">
                         <article class="member-block member-platinum">
                             <header class="member__header">
                             
