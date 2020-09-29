@@ -27,6 +27,8 @@
         <link rel="stylesheet" href="<?php base_url();?>css/owl.carousel.css">
         <link rel="stylesheet" href="<?php base_url();?>css/owl.theme.default.css">
         <link rel="stylesheet" href="<?php base_url();?>css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 7]>
