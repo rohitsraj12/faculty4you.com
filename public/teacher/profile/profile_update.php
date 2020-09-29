@@ -8,11 +8,11 @@
     
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
+    include("../include/update.techer.profile.inc.php");
 
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
     // include_once'../include/banner.inc.php';
-    // include("../include/update.techer.profile.inc.php");
 
 
     
@@ -68,7 +68,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="../include/update.techer.profile.inc.php" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
                         <article class="mb-5" >
                             <header class="p-4 h3 article-profile__header text-light m-0">
                                 Personal information
