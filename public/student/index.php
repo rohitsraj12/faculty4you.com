@@ -59,16 +59,22 @@
                         <section class="wrap-study-type study-type-1">
 
                             <?php
-                             $category_query = "SELECT teachers.*, cities.*, subjects.*, study_categories.* 
+                             $category_query = "SELECT teachers.*, cities.*, subjects.*, study_categories.* , memberships.*, posts.* 
                              FROM teachers
                                 JOIN cities
                                     ON cities.city_id = teachers.city_id
                                 JOIN subjects
                                     ON subjects.subject_id = teachers.subject_id
                                 JOIN study_categories
-                                    ON study_categories.category_id = teachers.category_id
-
-                             WHERE teachers.category_id = 1";
+                                    ON study_categories.category_id = teachers.category_id 
+                                JOIN memberships
+                                    ON memberships.teacher_id = teachers.teacher_id  
+                                JOIN posts
+                                    ON posts.subject_id = teachers.subject_id 
+                             WHERE teachers.category_id = 1 
+                                AND ((memberships.member_token > 0 AND membership_expiry_date < CURRENT_DATE())
+                                    OR (memberships.member_token > 0 OR membership_expiry_date < CURRENT_DATE())) 
+                                AND (posts.student_id = '$student_id' AND posts.subject_id = teachers.subject_id)";
 
                              $category_result = mysqli_query($conn, $category_query);
                              while($row = mysqli_fetch_assoc($category_result)){
@@ -84,19 +90,20 @@
                         <section class="wrap-study-type study-type-2">
                             <?php
                              $category_query = "SELECT teachers.*, cities.*, subjects.*, study_categories.* , memberships.*, posts.* 
-                             FROM teachers
-                                JOIN cities
-                                    ON cities.city_id = teachers.city_id
-                                JOIN subjects
-                                    ON subjects.subject_id = teachers.subject_id
-                                JOIN study_categories
-                                    ON study_categories.category_id = teachers.category_id 
-                                JOIN memberships
-                                    ON memberships.teacher_id = teachers.teacher_id  
-                                JOIN posts
-                                    ON posts.subject_id = teachers.subject_id 
+                                FROM teachers
+                                    JOIN cities
+                                        ON cities.city_id = teachers.city_id
+                                    JOIN subjects
+                                        ON subjects.subject_id = teachers.subject_id
+                                    JOIN study_categories
+                                        ON study_categories.category_id = teachers.category_id 
+                                    JOIN memberships
+                                        ON memberships.teacher_id = teachers.teacher_id  
+                                    JOIN posts
+                                        ON posts.subject_id = teachers.subject_id 
 
-                             WHERE teachers.category_id = 2 AND memberships.member_token > 0 AND posts.student_id = '$student_id' AND posts.subject_id = teachers.subject_id";
+                                WHERE teachers.category_id = 2 AND memberships.member_token > 0 AND posts.student_id = '$student_id' AND posts.subject_id = teachers.subject_id";
+                             
                              $category_result = mysqli_query($conn, $category_query);
                                 while($row = mysqli_fetch_assoc($category_result)){
                                   // fetching teacher detail from private
@@ -118,18 +125,26 @@
                                  Non active member tutors
                              </header>
                          </div>
+                         <?php
+                             $teacher_query = "SELECT teachers.*, memberships.*, posts.* FROM teachers 
+                             JOIN memberships
+                                 ON memberships.teacher_id = teachers.teacher_id  
+                             JOIN posts
+                                 ON posts.subject_id = teachers.subject_id 
+                             WHERE (memberships.member_token = 0 
+                                     AND membership_expiry_date < CURRENT_DATE()) 
+                                 AND (posts.student_id = '$student_id' 
+                                     AND posts.subject_id = teachers.subject_id)";
+
+                         $teacher_result = mysqli_query($conn, $teacher_query);
+                         $teacher_row = mysqli_num_rows($teacher_result);
+
+                         echo "<div class='wrap-container'><p>There are ". $teacher_row . " of non active members are there.</p></div>";
+                         
+                         ?>
                          <blockquote class="section-body wrap-container owl-carousel owl-theme">
                             <?php
-                                $teacher_query = "SELECT teachers.*, memberships.*, posts.* FROM teachers 
-                                JOIN memberships
-                                    ON memberships.teacher_id = teachers.teacher_id  
-                                JOIN posts
-                                    ON posts.subject_id = teachers.subject_id 
-                                WHERE memberships.member_token > 0 AND posts.student_id = '$student_id' AND posts.subject_id = teachers.subject_id";
-                                $teacher_result = mysqli_query($conn, $teacher_query);
-                                $teacher_row = mysqli_num_rows($teacher_result);
-    
-                                echo $teacher_row;
+                               
                                 while($row = mysqli_fetch_assoc($teacher_result)){
                                     ?>
 
