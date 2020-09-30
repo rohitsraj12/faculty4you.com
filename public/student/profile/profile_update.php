@@ -5,11 +5,9 @@
         header('location: ../login.php');
     } 
     $page_title = "profile update";
-    $banner_image = "post.svg";
     
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
-    require("../../../private/query/place.php");
     require("../include/update_student.inc.php");
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
