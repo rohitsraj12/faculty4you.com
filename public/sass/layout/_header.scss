@@ -434,12 +434,15 @@
   }
 }
 
-.member-body-header {
-  padding-top: 1rem;
+.body-header {
+  // padding-top: 1rem;
   .login {
     @media (min-width: 583px) {
       display: none;
     }
+  }
+  .brand{
+    height: 7rem;
   }
 }
 
