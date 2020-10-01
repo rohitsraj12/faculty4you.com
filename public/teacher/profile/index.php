@@ -151,7 +151,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li  class="col-sm-2">Phone</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">:
+                                    <li class="col-sm-10 h4 font-weight-normal">: +91
                                         <?php 
                                             echo $row['teacher_phone'];
                                         ?>
@@ -172,19 +172,11 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Address</li>
-                                    <li class="col-sm-10 h4 font-weight-normal">:
-                                        <address>
-                                            <ul>
-                                                <li>
-                                                    <?php echo $row['teacher_address'];?>,
-                                                </li>
-                                                <li>
-                                                    <?php echo $row['city_name'];?>,
-                                                </li>
-                                                <li>
-                                                    <?php echo $row['state_name'];?>
-                                                </li>
-                                            </ul>
+                                    <li class="col-sm-10 h4 font-weight-normal">
+                                        <address>:
+                                            <?php echo $row['teacher_address'];?>, </br>
+                                              <?php echo $row['city_name'];?>, </br>
+                                              <?php echo $row['state_name'];?>
                                         </address>
                                     </li>
                                 </ul>
@@ -200,13 +192,13 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Experience</li>
-                                    <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['teacher_experience']?> years of experince</li>
+                                    <li class="col-sm-10 h4 font-weight-normal">: <?php echo $row['teacher_experience']?> years of experince</li>
                                 </ul>
                             </div>
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-2">Subject</li>
-                                        <li class="col-sm-10 h4 font-weight-normal"><?php echo $row['sub_name']?></li>
+                                        <li class="col-sm-10 h4 font-weight-normal">: <?php echo $row['sub_name']?></li>
                                    
                                 </ul>
                             </div>
