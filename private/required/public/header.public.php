@@ -29,9 +29,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link rel="stylesheet" href="css/owl.carousel.css">
-        <link rel="stylesheet" href="css/owl.theme.default.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="<?php base_url()?>css/owl.carousel.css">
+        <link rel="stylesheet" href="<?php base_url()?>css/owl.theme.default.css">
+        <link rel="stylesheet" href="<?php base_url()?>css/style.css">
     </head>
     <body>
         <!--[if lt IE 7]>
