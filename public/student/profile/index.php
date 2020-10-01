@@ -117,7 +117,7 @@
                         <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">User name</li>
-                                    <li class="col-sm-9 h4 font-weight-normal">
+                                    <li class="col-sm-9 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['student_user_name'];
                                         ?>
@@ -127,7 +127,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">Name</li>
-                                    <li class="col-sm-9 h4 font-weight-normal">
+                                    <li class="col-sm-9 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['student_first_name'] . " " . $row['student_last_name'];
                                         ?>
@@ -137,7 +137,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">Date of birth</li>
-                                    <li class="col-sm-9 h4 font-weight-normal">
+                                    <li class="col-sm-9 h4 font-weight-normal">:
                                         <?php 
                                             $date = date_create($row['student_date_of_birth']);
                                         
@@ -149,7 +149,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">Gender</li>
-                                    <li class="col-sm-9 h4 font-weight-normal">
+                                    <li class="col-sm-9 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['gender_type'];
                                         ?>
@@ -167,7 +167,7 @@
                         <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">Phone</li>
-                                    <li class="col-sm-9  h4 font-weight-normal">
+                                    <li class="col-sm-9  h4 font-weight-normal">:
                                     <?php echo '+91 ' .  $row['student_phone']?>
                                     </li>
                                 </ul>
@@ -176,7 +176,7 @@
                             <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">Email</li>
-                                    <li class="col-sm-9 h4 font-weight-normal">
+                                    <li class="col-sm-9 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['student_email'];
                                         ?>
@@ -208,7 +208,7 @@
                                 <ul class="row">
                                     <li class="col-sm-3">Address</li>
                                     
-                                    <li class="col-sm-9  h4 font-weight-normal">
+                                    <li class="col-sm-9 h4 font-weight-normal">:
                                         <?php 
                                             echo $row['student_address'];
                                         ?>, </br></br>
