@@ -39,7 +39,7 @@ session_start();
             <div class="col-sm-4">
                 <label for="study_type">Study type</label>
                 <span class="error-msg"></span>
-                <select name="std" id="study_type" class="form-control type">
+                <select name="study_type" id="study_type" class="form-control type">
                     <option value="nooption">Select study type</option>
                     <?php 
                         $study_type = "SELECT * FROM study_types" ;
@@ -82,7 +82,7 @@ session_start();
         <div class="form-group wrap-form mb-5">
             <label for="about">Post details</label>
             <span class="error-msg"></span>
-            <textarea name="detail"  value="<?php echo $row['post_title'];?>"  class="form-control detail" rows="10" id="about" placeholder="Briefly describe"></textarea>
+            <textarea name="detail" value="<?php echo $row['post_title'];?>"  class="form-control detail" rows="10" id="about" placeholder="Briefly describe"></textarea>
             
         </div>
        
