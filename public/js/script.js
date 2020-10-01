@@ -29,6 +29,29 @@ $(document).ready(function () {
     },
   });
 
+  // teacher-slider
+  $(".section__teacher-slider .owl-carousel").owlCarousel({
+    loop: true,
+    margin: 10,
+    nav: false,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsive: {
+      1200: {
+        items: 4,
+      },
+      1024: {
+        items: 2,
+      },
+      582: {
+        items: 2,
+      },
+
+      0: {
+        items: 1,
+      },
+    },
+  });
   /*******************************
 
       tabs
