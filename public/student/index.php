@@ -118,68 +118,59 @@
             </section>
             
             <section class="section__teacher-slider">
-            <section class="section-testimonial top-testimonial">
                          
-                         <div class="section-header u-center-text" >
-                             <heeader class="text-primary-h-3"> 
-                                 Non active member tutors
-                             </header>
-                         </div>
-                         <?php
-                             $teacher_query = "SELECT teachers.*, memberships.*, posts.* FROM teachers 
-                             JOIN memberships
-                                 ON memberships.teacher_id = teachers.teacher_id  
-                             JOIN posts
-                                 ON posts.subject_id = teachers.subject_id 
-                             WHERE (memberships.member_token = 0 
-                                     AND membership_expiry_date < CURRENT_DATE()) 
-                                 AND (posts.student_id = '$student_id' 
-                                     AND posts.subject_id = teachers.subject_id)";
+                <div class="section-header u-center-text" >
+                    <heeader class="text-primary-h-3"> 
+                        Non active member tutors
+                    </header>
+                </div>
+                    <?php
+                        $teacher_query = "SELECT teachers.*, memberships.*, posts.* FROM teachers 
+                        JOIN memberships
+                            ON memberships.teacher_id = teachers.teacher_id  
+                        JOIN posts
+                            ON posts.subject_id = teachers.subject_id 
+                        WHERE (memberships.member_token > 0 
+                                AND membership_expiry_date < CURRENT_DATE()) 
+                            AND (posts.student_id = '$student_id' 
+                                AND posts.subject_id = teachers.subject_id)";
 
-                         $teacher_result = mysqli_query($conn, $teacher_query);
-                         $teacher_row = mysqli_num_rows($teacher_result);
+                        $teacher_result = mysqli_query($conn, $teacher_query);
+                        $teacher_row = mysqli_num_rows($teacher_result);
 
-                         echo "<div class='wrap-container'><p>There are ". $teacher_row . " of non active members are there.</p></div>";
-                         
-                         ?>
-                         <blockquote class="section-body wrap-container owl-carousel owl-theme">
-                            <?php
-                               
-                                while($row = mysqli_fetch_assoc($teacher_result)){
+                        echo "<div class='wrap-container'><p>There are ". $teacher_row . " of non active members are there.</p></div>";
+                    
+                    ?>
+                <div class="section-body  wrap-container owl-carousel owl-theme">
+                    <?php
+                    
+                        while($row = mysqli_fetch_assoc($teacher_result)){
+                            ?>
+
+                            <article class="article-block text-center">
+                                <figure>
+                                    <?php 
+        
+                                        if($row['teacher_photo'] == ""){
                                     ?>
-
-                                    <article class="article-block" >
-                                        <figure>
-                                            <?php 
-                
-                                                if($row['teacher_photo'] == ""){
-                                            ?>
-                                                    <img class="member__img" style="max-height: 200px; border-radius= 50%;" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
-                                            <?php
-                                                } else {
-                                            ?>
-                                                    <img class="member__img" style="max-height: 200px; border-radius= 50%;" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
-                                            <?php
-                                                }
-                                            ?>
-                                        </figure>
-                                        <header>
+                                            <img class="member__img" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                                    <?php
+                                        } else {
+                                    ?>
+                                            <img class="member__img"  src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                                    <?php
+                                        }
+                                    ?>
+                                </figure>
+                                <header>
+                                    <?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?>
+                                </header>
+                                <div class="testimonial-client-detail">
+                                    <p>
+                                    <ul>
                                         
-                                        </header>
-                                        <div class="testimonial-client-detail">
-                                            <p>
-                                                <?php echo $row['teacher_first_name'];?>
-                                                <?php echo $row['subject_id'];?>
-                                            </p>
-                                        </div>        
-                                        <footer class="article-footer">
-                                            <figure>
-                                                
-                                            </figure>
-                                            <ul>
-                                                <li class="testimonial-client-name"><cite><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'];?></cite></li>
-                                                <li class="testimonial-client-place">
-                                                    <?php
+                                        <li class="testimonial-client-place">
+                                            <?php
                                                 $city = $row['city_id'];
                                                 $state = $row['state_id'];
                                             if($city == true){
@@ -192,24 +183,22 @@
                                                 echo $rows['city_name'] . ' - ' . $rows['state_name'];;
             
                                             };  
-                                            ?>  
-            
-                                                </li>
-                                            </ul>
-                                        </footer>
-                                    </article>
-                                    
-                                    <?php
-                                }
-                            ?>
-                         
-                         </blockquote>
-                         <!-- <div class="svg">
-                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                                 <path fill="#0099ff" fill-opacity="1" d="M0,64L48,74.7C96,85,192,107,288,106.7C384,107,480,85,576,96C672,107,768,149,864,186.7C960,224,1056,256,1152,229.3C1248,203,1344,117,1392,74.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                             </svg>
-                         </div> -->
-                    </section>
+                                    ?>  
+    
+                                        </li>
+                                    </ul>
+                                    </p>
+                                </div>        
+                                <footer class="article-footer text-center">
+                                    <a class="button__link-primary" href="">Contact tutor</a>
+                                </footer>
+                            </article>
+                            
+                            <?php
+                        }
+                    ?>
+                
+                </div>
             </section>
         </main>
     </div>
