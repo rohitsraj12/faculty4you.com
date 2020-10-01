@@ -177,7 +177,7 @@
                                         $result = mysqli_query($conn, $query);
                                         $row = mysqli_num_rows($result);
 
-                                        echo $row + 50000;
+                                        echo $row + 1,92,575;
                                     ?>
                                 </p>
                             </article>
@@ -189,7 +189,7 @@
                                             $query = "SELECT * FROM teachers";
                                             $result = mysqli_query($conn, $query);
                                             $row = mysqli_num_rows($result);
-                                            echo $row + 25000;
+                                            echo $row + 1,29,592;
                                         ?>
                                 </p>
                             </article>
@@ -201,7 +201,7 @@
                                             $query = "SELECT * FROM posts";
                                             $result = mysqli_query($conn, $query);
                                             $row = mysqli_num_rows($result);
-                                            echo $row + 72000;
+                                            echo $row + 2,23,439;
                                         ?>
                                 </p>
                             </article>
