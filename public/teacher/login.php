@@ -88,7 +88,7 @@
                     </div>
                    
             </div>
-            <div class="login-container body-container">
+            <div class="teacher-login-container body-container">
                     <?php
                         if(!empty($_GET['register'])){
                         $message = "Congratulations, Your account has been successfully created. Login now and create your profile";
