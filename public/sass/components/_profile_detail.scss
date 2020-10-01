@@ -1,0 +1,28 @@
+// slider section in student index
+.section {
+  &__teacher-slider {
+    margin-top: 10rem;
+    //   @include bg-1;
+
+    .article-block {
+      padding: 4rem 0;
+      background-color: $color-white;
+      border: 4px solid $color-primary;
+      @include radius-all(3rem);
+    }
+
+    figure {
+      width: 100px;
+      margin: 0 auto;
+      .member__img {
+        width: 100%;
+      }
+    }
+
+    header {
+      padding: 2rem 0 0;
+      font-size: 2rem;
+      color: $color-primary;
+    }
+  }
+}
