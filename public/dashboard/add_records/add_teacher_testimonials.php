@@ -32,7 +32,7 @@
                 $quote = $_REQUEST['testimonial'];
                 $status = "1";
     
-                $query = "INSERT INTO teacher_testimonials (teacher_id, testimonial_quote, testimonial_status)
+                $query = "INSERT INTO teacher_testimonials (`teacher_id`, `testimonial_quote`, `testimonial_status`)
                           VALUES('$id', '$quote', '$status')";
                           
                 $result = mysqli_query($conn, $query); 
