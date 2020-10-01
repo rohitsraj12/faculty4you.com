@@ -482,6 +482,7 @@ a:hover {
   padding: 10px 20px;
   border: 1px solid #c4183c;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 .header-tab__button:first-child {
