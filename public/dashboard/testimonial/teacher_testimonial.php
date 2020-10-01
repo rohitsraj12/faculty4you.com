@@ -58,7 +58,7 @@
                             ?>
                             </figure>
                             <header class="member__header header-text-2">
-                               <?php echo $row['teacher_first_name']; ?>
+                               <?php echo $row['teacher_first_name'] . ' ' . $row['teacher_last_name']; ?>
                             </header>
                             
                             <p class="sub-header-text-1 pt-2">
