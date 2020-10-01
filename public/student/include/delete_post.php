@@ -8,3 +8,5 @@ $deactivate_post = "0";
 
 $query = "UPDATE `posts` SET `post_state` = '$deactivate_post' WHERE `post_id` = '$id'";
 $result = mysqli_query($conn, $query);
+
+header('location:../post/index.php?delete=successfully_post_deleted');
