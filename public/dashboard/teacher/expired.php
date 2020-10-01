@@ -53,11 +53,11 @@ $sub = "expired";
                     <table class="bg-light table">
                         <thead class="thead-light">
                             <tr>
-                            <th scope="col">Id</th>
                             <th scope="col">Name</th>
                             <th scope="col">Membership Expire Date</th>
                             <th scope="col">Renew membership</th>
                             <th scope="col">E-mail reminder</th>
+                            <th scope="col">Add testimonial</th>
                             <th scope="col">More Details</th>
                             </tr>
                         </thead>
@@ -86,7 +86,6 @@ $sub = "expired";
                                 while($row = mysqli_fetch_assoc($results)){
                             ?>
                             <tr>
-                                <th scope="row"><?php echo $row['teacher_id'];?></th>
                                 <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                 <td><?php echo $row['membership_expiry_date'];?></td>
                                 <td><?php 
@@ -121,6 +120,7 @@ $sub = "expired";
                                             <button class="member-nonactive" name="email">reminder email</button>
                                         </form>
                                     </td>
+                            <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>">add testimonial</a></td>
                             <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
                             </tr>
                             <?php 
