@@ -89,6 +89,24 @@
                 </div>
         </div>
             <div class="body-container">
+                
+        <?php
+            if(!empty($_GET['register'])){
+                $message = "Congratulations, Your account has been successfully created. Login now and create your profile";
+                ?>
+                    <div class="alert alert-success m-0" role="alert">
+                        <div class="wrap-container h3 py-4">
+                            <?php echo $message; ?>
+                        </div>
+                    </div>
+                <?php
+            }
+        ?>
+            <div class="alert alert-success m-0" role="alert">
+                        <div class="wrap-container h3 py-4">
+                            <?php //echo $message; ?>dfsdfsf
+                        </div>
+                    </div>
 
                 <div class="section-member wrap-container">
 
