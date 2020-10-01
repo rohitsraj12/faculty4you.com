@@ -451,3 +451,13 @@
   opacity: 0.7;
   text-decoration: none;
 }
+.login-container.body-container {
+  padding-top: 10px;
+  position: relative;
+}
+.alert {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  // z-index: 99999;
+}
