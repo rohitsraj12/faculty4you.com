@@ -34,65 +34,82 @@
                         <!-- end hamberger -->
                     <header class="header-main">
                         <div class="header-brand-section">
+                            <div class="header-top">
+                                <div class="wrap-container">
 
-                            <div class="wrap-container">
-                                <div class="brand">
-                                    <a href="<?php base_url();?>index.php">
-                                        <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
-                                    </a>
-                                </div> 
-                                <div class="top-social-media nav-social-media">
                                     <ul>
-                                            <li class="nav-social__list log">Share : </li>
-                                        <?php
-                                        foreach($social_media_share as $share_name => $share_url){
-                                        ?>
-                                        <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
-                                        <?php
-                                        }
-                                        ?>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        
-                        
-                    </header> 
-                    <div  class="header__nav">
-                        <div class="wrap-container">
-                            <nav>
-                                <ul>
-                                    <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
-                                    <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Tutor registration</a></li>
-                                    <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Tutor login</a></li>
-                                    <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
-                                    <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
-                                </ul>
-                            </nav>
-                            <div class="nav-social-media">
-                                            <ul>
-                                                <li class="nav-social__list text-light">Follow us: </li>
+                                    <li class="social__list pt-2">Share:</li>
+
                                             <?php
-                                            foreach($social_media_follow as $follow_name => $follow_url){
+                                            foreach($social_media_share as $share_name => $share_url){
                                             ?>
-                                            <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                                            <li class="social__list"><a class="social__link" href="<?php echo $share_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $share_name ;?>" alt="<?php echo $share_name ?>"></a></li>
                                             <?php
                                             }
                                             ?>
-                                            </ul>
-                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="wrap-container">
+                                <div class="header-brand header-brand-private">
+                                    <a href="<?php base_url();?>index.php">
+                                        <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty 4 you">
+                                    </a>
+                                </div>
+                                <!-- end header brand -->
+                                <div class="header-right">
+                                <!-- <div id="fb-root"></div>
+
+                                <script>(function(d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0];
+                                if (d.getElementById(id)) return;
+                                js = d.createElement(s); js.id = id;
+                                js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+                                fjs.parentNode.insertBefore(js, fjs);
+                                }(document, 'script', 'facebook-jssdk'));</script>
+
+                                                        <div class="fb-share-button" 
+                                data-href="<?php base_url();?>" 
+                                data-layout="button_count">dsadasd
+                                </div> -->
+                                </div>
+                            </div>
+                        </div> 
+                     
+                        <div  class="header__nav">
+                            <div class="wrap-container">
+                                <nav>
+                                    <ul>
+                                        <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
+                                        <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Tutor registration</a></li>
+                                        <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Tutor login</a></li>
+                                        <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
+                                        <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
+                                    </ul>
+                                </nav>
+                                
+                                <div class="nav-social-media">
+                                        <ul>
+                                            <li class="nav-social__list text-light">Follow us: </li>
+                                        <?php
+                                        foreach($social_media_follow as $follow_name => $follow_url){
+                                        ?>
+                                        <li class="nav-social__list"><a class="nav-social__link" href="<?php echo $follow_url ;?>" target="_blank"><img src="<?php echo base_url() . 'img/social_media/' . $follow_name ;?>" alt="<?php echo $follow_name ?>"></a></li>
+                                        <?php
+                                        }
+                                        ?>
+                                        </ul>
                                     </div>
+                                </div>
                         </div>
-                    </div>
-                   
+                    </header>
             </div>
            
-        <div class="login-container body-container">
+        <div class="student-login-container body-container">
             <div class="section-member wrap-container">
-            <?php
+                <?php
                         if(!empty($_GET['register'])){
-                        $message = "Congratulations, Your account has been successfully created. Login now and create your profile";
+                        $message = "Congratulations, Your account has been successfully created. Login now and create your profile and post your requirement/s";
                         ?>
                             <div class="alert alert-success m-0" role="alert">
                                 <div class="wrap-container h3 py-4">
