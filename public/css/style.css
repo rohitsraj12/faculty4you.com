@@ -714,6 +714,15 @@ label {
   opacity: 0.7;
   text-decoration: none; }
 
+.login-container.body-container {
+  padding-top: 10px;
+  position: relative; }
+
+.alert {
+  width: 100%;
+  position: absolute;
+  top: 0; }
+
 .section-student {
   background: #ffffb9;
   background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
