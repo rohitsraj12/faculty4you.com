@@ -56,7 +56,17 @@
         </div>
 
     <?php
-    }                          
+    } else if(!empty($_GET['delete'])){
+        $message = "Congratulations! You have successfully deleted your post.";
+
+        ?>
+        <div class="alert alert-success m-0" role="alert">
+            <div class="wrap-container h3 py-4">
+                <?php echo $message;?>
+            </div>
+        </div>
+        <?php
+    }                           
     ?>
 
 
