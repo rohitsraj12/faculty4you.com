@@ -133,7 +133,7 @@ $(document).ready(function(){
     });
     $(".city_list").on('click', 'li', function(){
         // alert('hi');
-        $(this).closest('.city_name').val($(this).text());
+        $('.city_name').val($(this).text());
         $('.city_list').slideUp();
        
     })
