@@ -19,7 +19,7 @@
 
     $teacher_id = $user_row['teacher_id'];
 
-    $page_title = "profile";
+    $page_title = "home page";
     include_once("../../private/config/config.php");
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
