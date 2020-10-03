@@ -76,9 +76,40 @@
            
             <script src="<?php base_url();?>js/validation.js"></script>
             <script src="<?php base_url();?>js/script.js"></script>
+            <script src="<?php base_url();?>js/ajx.js"></script>
 
-            <script>
-                AOS.init();
-              </script>
+
+            <!-- <script>
+                // AOS.init();
+                $(document).ready(function(){
+                    var baseURL = "http://localhost/Projects/faculty4you.com/public/";
+                    
+                    // ajax search subjects
+                    $(".search_subject").keyup(function () {
+                        var query = $(this).val();
+                        // alert(query);
+                        if (query != "") {
+                        $.ajax({
+                            url:  baseURL + "aj/load_data.php",
+                            method: "POST",
+                            data: { subject: query },
+                            success: function (data) {
+                            $(".subject-list").slideDown();
+                            $(".subject-list").html(data);
+                            },
+                        });
+                        } else {
+                        $(".subject-list").slideUp();
+                        $(".subject-list").html();
+                        }
+                    });
+                    $(".subject-list").on("click", "li", function () {
+                        // alert('hi');
+                        $(".search_subject").val($(this).text());
+                        $(".subject-list").slideUp();
+                    });
+
+                })
+              </script> -->
     </body>
 </html>
