@@ -1,14 +1,5 @@
 .section {
   &-student {
-    // background-color: #f8f8f8;
-    // background-image: url("../img/banner/teacher.svg");
-    // background-size: 300px 300px;
-    // background-repeat: no-repeat;
-    // background-position: left center;
-    // clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
-    // z-index: -100;
-    // border-top: 2px solid #e3e3e3;
-    // border-bottom: 2px solid #e3e3e3;
     @include bg-1;
     border-bottom: 2px solid $color-primary;
 
@@ -31,39 +22,6 @@
           flex-wrap: wrap;
         }
         article {
-          // &:first-child {
-          //   figure {
-          //     &::before {
-          //       @media (min-width: 583px) {
-          //         content: "";
-          //         width: 100%;
-          //         height: 2px;
-          //         background-color: $color-gray-light-2;
-          //         position: absolute;
-          //         bottom: -4.25rem;
-          //         left: 48%;
-          //         z-index: 1;
-          //       }
-          //     }
-          //   }
-          // }
-
-          // &:last-child {
-          //   figure {
-          //     &::before {
-          //       @media (min-width: 583px) {
-          //         content: "";
-          //         width: 50%;
-          //         height: 2px;
-          //         background-color: $color-gray-light-2;
-          //         position: absolute;
-          //         bottom: -4.25rem;
-          //         left: 0;
-          //         z-index: 1;
-          //       }
-          //     }
-          //   }
-          // }
 
           &:nth-child(3) {
             figure {
@@ -122,9 +80,9 @@
 
             @media (max-width: 582px) {
               content: "";
-              display: none;
               width: 2rem;
               height: 2rem;
+              display: none;
               border-radius: 50%;
               border: 0.3rem solid $color-link-1;
               background-color: $color-white;
@@ -161,7 +119,6 @@
           &:not(last-child) {
             padding: 4rem 0;
             margin-bottom: 2rem;
-            // background-color: #f9f9f9;
             border-top: 3px solid $color-link-1;
           }
         }
