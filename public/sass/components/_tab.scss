@@ -8,25 +8,20 @@
   top: 2rem;
 
   @media (max-width: 582px) {
+    margin-bottom: 2rem;
     padding: 5rem 0 4rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-bottom: 2rem;
   }
 }
 
-// .post-tab{
-//   padding-top: 11rem;
-// }
 
 .tab button {
   padding: 18px 16px;
   width: 100%;
   border: none;
   display: block;
-  // background: $color-gray-light-1;
-  // color: $color-btn-1;
   font-size: 1.6rem;
   font-weight: 400;
   outline: none;
@@ -49,17 +44,13 @@
 }
 
 .tab button:hover {
-  // color: rgba($color-btn-1, 1);
-  // background: $color-primary-button-hover;
   color: $color-white;
   @include post-title;
 
   @media (min-width: 583px) {
-    // border-left: 2px solid $color-btn-1;
   }
 
   @media (max-width: 582px) {
-    // border-bottom: 2px solid $color-btn-1;
   }
 }
 
@@ -68,19 +59,9 @@
 }
 
 .tab button.active {
-  // background: $color-gray-light-2;
-  // color: rgba($color-btn-1, 1);
-  // @include post-head-3;
   background: $color-primary-button-hover;
 
   color: $color-white;
   font-weight: 500;
 
-  @media (min-width: 583px) {
-    // border-left: 2px solid $color-btn-1;
-  }
-
-  @media (max-width: 582px) {
-    // border-bottom: 2px solid $color-btn-1;
-  }
 }
