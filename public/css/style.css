@@ -1766,6 +1766,31 @@ label {
 .search__button i {
   padding-right: 1.5rem; }
 
+.form-field {
+  position: relative; }
+
+.subject-list,
+.city_list {
+  position: absolute;
+  top: 35px;
+  width: 100%;
+  z-index: 99900; }
+
+.subject-list li,
+.city_list li {
+  background-color: #fff;
+  padding: 5px;
+  border-right: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8; }
+
+.subject-list li,
+.city_list li {
+  border-bottom: 1px solid #d8d8d8; }
+
+.subject-list li:hover,
+.city_list li:hover {
+  background-color: #e8e8e8; }
+
 .section-membership {
   padding: 4rem 0; }
 
@@ -2401,7 +2426,7 @@ label {
       width: 60%; } }
   @media (max-width: 582px) {
     .section-search-home {
-      padding-top: 27rem; } }
+      padding-top: 40rem; } }
   .section-search-home .wrap-search-home {
     padding: 3rem 0; }
     @media (max-width: 582px) {
