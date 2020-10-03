@@ -1,6 +1,7 @@
 <?php 
 
     $teacher_name = $_SESSION['user_name'];
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -67,17 +68,33 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="wrap-container">
-                            <div class="header-brand">  
-                                <a href="<?php base_url();?>teacher/index.php">
-                                    <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
-                                </a>
+                        <div class="main__header">
+                            <div class="wrap-container">
+                                <div class="header-brand">  
+                                    <a href="<?php base_url();?>teacher/index.php">
+                                        <img src="<?php base_url();?>img/brand/faculty_for_you_brand.png" alt="faculty for you">
+                                    </a>
+                                </div>
+                                <!-- end header brand -->
+                            
+                                <div class="section__header-search">
+                                        <?php
+
+                                            $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id";
+                                            $member_result = mysqli_query($conn, $member_query);
+                                            $mem_row = mysqli_fetch_assoc($member_result);
+                                            $token = $mem_row['member_token'];
+                                                // echo $token;
+                                            if($token > 0){
+                                                include('include/search_engine.php');
+                                               
+                                            }
+
+                                        ?>
+                                    </div>
                             </div>
-                            <!-- end header brand -->
-                          
                         </div>
                     </div>
-                  
                     <div class="header__nav">
                         <div class="wrap-container">
                         <nav>
@@ -85,6 +102,8 @@
                                 <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link nav-active">Home</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">Profile</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
+                            
+                  
                             </ul>
                         </nav>
                             <div class="nav-social-media">
