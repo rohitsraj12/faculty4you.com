@@ -10,7 +10,7 @@ function validation() {
   if (testimonial[0].value == "") {
     alert("please enter testimonial data");
     return false;
-  } else if (testimonial[0].value.length < 30) {
+  } else if (testimonial[0].value.length < 60) {
     alert("not less than 30 letters");
 
     return false;
