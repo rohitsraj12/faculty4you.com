@@ -57,7 +57,7 @@
                                             ?>
                                         </select>   -->
                                         <input type="city" class="form-control city_name" name="search" id="searchInput" placeholder="city name">
-                                        <small class="msg">Select city name</small>
+                                        <small class="msg">Enter city name</small>
                                         <div class="city_list" id="city_list"></div>
                                     </div>
                                     <div class="col-sm-12 text-center">
