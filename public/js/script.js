@@ -1,3 +1,6 @@
+// var baseURL = "http://localhost/Projects/faculty4you.com/public/";
+var baseURL = "http://facultyforyou.com/";
+
 $(document).ready(function () {
   $(".hamberger").click(function () {
     $(this).toggleClass("is__active");
@@ -158,7 +161,7 @@ $(document).ready(function () {
   // ajax city state selecter
   function loadData(type, col_id) {
     $.ajax({
-      url: "../../aj/load_location.php",
+      url: baseURL + "aj/load_location.php",
       type: "POST",
       data: {
         type: type,
@@ -186,7 +189,7 @@ $(document).ready(function () {
   // ajax study category -> subject category -> subject
   function loadSubject(type, col_id) {
     $.ajax({
-      url: "../../aj/load_subject.php",
+      url: baseURL + "aj/load_subject.php",
       type: "POST",
       data: {
         type: type,
@@ -195,13 +198,13 @@ $(document).ready(function () {
       success: function (data) {
         if (type == "subject") {
           $(".subject").html(data);
-          console.log(data);
+          // console.log(data);
         } else if (type == "subjectCat") {
           $(".subject_category").html(data);
           // console.log(data);
         } else {
           $(".study-category").append(data);
-          console.log(data);
+          // console.log(data);
         }
       },
     });
@@ -221,32 +224,5 @@ $(document).ready(function () {
 
     loadSubject("subject", subjectCategory);
     // loadSubject("subjectCat", studyCategory);
-  });
-
-  $(".city_name").keyup(function () {
-    var query = $(this).val();
-    // alert(query);
-    if (query != "") {
-      $.ajax({
-        url: "../../aj/load_data.php",
-        method: "POST",
-        data: { city: query },
-        success: function (data) {
-          $(".city_list").slideDown();
-          $(".city_list").html(data);
-        },
-      });
-    } else {
-      $(".city_list").slideUp();
-      $(".city_list").html();
-    }
-  });
-  $(".city_list").on("click", "li", function () {
-    var i = $(this).attr("data-city-id");
-    $(".city_name").val($(this).text());
-    $(".hidden_filed").attr({
-      value: i,
-    });
-    $(".city_list").slideUp();
   });
 });
