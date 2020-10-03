@@ -13,7 +13,6 @@
   }
   &__button {
     @extend .button-primary;
-    // width: 10%;
     i {
       padding-right: 1.5rem;
     }
@@ -28,19 +27,13 @@
 .city_list {
   position: absolute;
   top: 35px;
-  //   background-color: red;
   width: 100%;
   z-index: 99900;
-  //   border-right: 2px solid rgb(158, 158, 248);
-  //   border-bottom: 2px solid rgb(158, 158, 248);
-  //   border-left: 2px solid rgb(158, 158, 248);
-  //   @include shadow;
 }
 
 .subject-list li,
 .city_list li {
   background-color: #fff;
-  //   @include bg-1;
 
   padding: 5px;
   border-right: 1px solid rgb(216, 216, 216);
