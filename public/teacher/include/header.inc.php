@@ -78,20 +78,17 @@
                                 <!-- end header brand -->
                             
                                 <div class="section__header-search">
-                                        <?php
-
-                                            $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id";
-                                            $member_result = mysqli_query($conn, $member_query);
-                                            $mem_row = mysqli_fetch_assoc($member_result);
-                                            $token = $mem_row['member_token'];
-                                                // echo $token;
-                                            if($token > 0){
-                                                include('include/search_engine.php');
-                                               
-                                            }
-
-                                        ?>
-                                    </div>
+                                    <?php
+                                        $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id";
+                                        $member_result = mysqli_query($conn, $member_query);
+                                        $mem_row = mysqli_fetch_assoc($member_result);
+                                        $token = $mem_row['member_token'];
+                                            // echo $token;
+                                        if($token > 0){
+                                            include('include/search_engine.php');
+                                        }
+                                    ?>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -120,9 +117,7 @@
                             </div>
                         </div>
                     </div>
-                   
                     <!-- end header nav -->
                 </header>
-              
             </div>
             <!-- end body header -->
