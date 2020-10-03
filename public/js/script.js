@@ -102,7 +102,7 @@ $(document).ready(function () {
   // console.log("hi");
 
   $(".form-tab").click(function () {
-    console.log("hi");
+    // console.log("hi");
     var selectAtt = $(this).attr("data-form");
 
     $(".form-tab").addClass("not-active");
@@ -155,7 +155,7 @@ $(document).ready(function () {
   //   fjs.parentNode.insertBefore(js, fjs);
   // })(document, "script", "facebook-jssdk");
 
-  // ajax city state
+  // ajax city state selecter
   function loadData(type, col_id) {
     $.ajax({
       url: "../../aj/load_location.php",
@@ -221,5 +221,32 @@ $(document).ready(function () {
 
     loadSubject("subject", subjectCategory);
     // loadSubject("subjectCat", studyCategory);
+  });
+
+  $(".city_name").keyup(function () {
+    var query = $(this).val();
+    // alert(query);
+    if (query != "") {
+      $.ajax({
+        url: "../../aj/load_data.php",
+        method: "POST",
+        data: { city: query },
+        success: function (data) {
+          $(".city_list").slideDown();
+          $(".city_list").html(data);
+        },
+      });
+    } else {
+      $(".city_list").slideUp();
+      $(".city_list").html();
+    }
+  });
+  $(".city_list").on("click", "li", function () {
+    var i = $(this).attr("data-city-id");
+    $(".city_name").val($(this).text());
+    $(".hidden_filed").attr({
+      value: i,
+    });
+    $(".city_list").slideUp();
   });
 });
