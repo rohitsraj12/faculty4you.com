@@ -36,12 +36,13 @@
                         <div class="search-form student-form">
                             <form action="<?php base_url();?>search_result_student_posts.php" method="POST" class="form">
                                 <div class="row">
-                                    <div class="col-sm-8">
-                                        <input type="search" class="form-control" name="search" id="inputAddress" placeholder="Search: subject (academic) / activity (non-academic)">
+                                    <div class="col-sm-8 form-field">
+                                        <input type="search" class="form-control search_subject" name="search" id="searchInput" placeholder="Search: subject (academic) / activity (non-academic)">
                                         <!-- <small class="msg">Enter your subject / pincode / study type</small> -->
+                                        <div class="subject-list" id="subjectList"></div>
                                     </div>
-                                    <div class="col-sm-4">
-                                        <select id="inputState" name="city" class="form-control">
+                                    <div class="col-sm-4 form-field">
+                                        <!-- <select id="inputState" name="city" class="form-control">
                                             <option selected>Choose...</option>
                                             <?php 
                                             
@@ -54,9 +55,10 @@
                                             <?php
                                             }
                                             ?>
-                                        </select>  
+                                        </select>   -->
+                                        <input type="city" class="form-control city_name" name="search" id="searchInput" placeholder="city name">
                                         <small class="msg">Select city name</small>
-
+                                        <div class="city_list" id="city_list"></div>
                                     </div>
                                     <div class="col-sm-12 text-center">
                                         <input class="button-primary py-2" style="font-size: 2rem" name="submit-search" type="submit" value="Search">
@@ -67,27 +69,12 @@
                         <div class="search-form teacher-form hide">
                             <form action="<?php base_url();?>search_result_teachers.php" method="POST" class="form">
                                 <div class="row">
-                                    <div class="col-sm-8">
-                                        <input type="search" class="search__input form-control" name="search" id="inputAddress" placeholder="Search: subject (academic) / activity (non-academic)">
-                                        <!-- <small class="msg">Enter your subject / pincode / study type</small> -->
+                                    <div class="col-sm-12 mb-5">
+                                        <input type="search" class=" search_subject form-control" name="search" id="teacherSearchSubject" placeholder="Search: subject (academic) / activity (non-academic)">
+                                        <div class="subject-list" id="subjectList"></div>
+                                        
                                     </div>
-                                    <div class="col-sm-4">
-                                        <select id="inputState" name="city" class="form-control">
-                                            <option selected>Choose...</option>
-                                            <?php 
-                                                $city_query = "SELECT * FROM cities";
-                                                $result = mysqli_query($conn, $city_query);
-                                                while( $row = mysqli_fetch_assoc($result)){
-                                                
-                                            ?>
-                                            <option value="<?php echo $row['city_id'];?>"><?php echo $row['city_name'];?></option>
-                                            <?php
-                                            }
-                                            ?>
-                                        </select>  
-                                        <small class="msg">Select city name</small>
-
-                                    </div>
+                                    
                                     <div class="col-sm-12 text-center">
                                         <input class="button-primary py-2" style="font-size: 2rem" name="search-teacher" type="submit" value="Search">
                                     </div>
