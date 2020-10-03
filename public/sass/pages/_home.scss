@@ -1,11 +1,9 @@
 .body {
   &-banner {
     width: 100%;
-    // height: 80vh;
     position: relative;
 
     @media (max-width: 582px) {
-      // height: 100vh;
     }
 
     &::after {
@@ -29,7 +27,6 @@
 .banner {
   &-content {
     width: 60%;
-    // height: 100vh;
     margin: 0 auto;
     padding-top: 2rem;
 
@@ -72,7 +69,6 @@
       }
       h2 {
         @media (max-width: 582px) {
-          // display: none;
         }
       }
     }
@@ -90,9 +86,6 @@
         bottom: 10%;
       }
     }
-  }
-  &-wrap {
-    // position: relative;
   }
 
   &-image {
@@ -117,10 +110,7 @@
 //search form section
 .section {
   &-search-home {
-    // @include bg-1;
     padding: 2rem 0;
-    // border-bottom: 1px solid #cacaca;
-    // background-color: #e9e9e9;
     z-index: 10;
     @media (min-width: 769px) {
       width: 60%;
@@ -129,8 +119,6 @@
       padding-top: 40rem;
     }
     .wrap-search-home {
-      // border-bottom: 2px solid rgba(204, 67, 161, 1);
-      // @include post-head-5;
       padding: 3rem 0;
 
       @media (max-width: 582px) {
@@ -153,12 +141,10 @@
     .search {
       &-tab {
         ul {
-          // width: 40%;
           margin: 0 auto;
           display: flex;
           flex-direction: row;
           justify-content: space-around;
-          // border: 1px solid #cccccc;
 
           @media (min-width: 583px) {
             width: 60%;
@@ -167,7 +153,6 @@
           li {
             width: 50%;
             padding: 1rem 0;
-            // border-top: 2px solid rgba(204, 67, 161, 1);
             text-align: center;
             font-size: 2rem;
             background-color: #e4e4e4;
@@ -181,7 +166,6 @@
           }
 
           .not-active {
-            // @include post-head-5;
             color: $color-white;
             background-color: $color-primary;
           }
@@ -201,11 +185,6 @@
 
 // student section
 .section {
-  &-header {
-  }
-
-  &-body {
-  }
 
   &-footer {
     padding-top: 5rem;
