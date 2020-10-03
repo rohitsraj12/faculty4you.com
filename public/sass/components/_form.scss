@@ -2,48 +2,48 @@
     banner search form
 */
 
-.banner {
-  &__form {
-    padding-top: 5rem;
-    padding-bottom: 2rem;
-    position: relative;
+// .banner {
+//   &__form {
+//     padding-top: 5rem;
+//     padding-bottom: 2rem;
+//     position: relative;
 
-    @media (min-width: 583px) {
-      width: 70%;
-    }
+//     @media (min-width: 583px) {
+//       width: 70%;
+//     }
 
-    @media (max-width: 582px) {
-      width: 100%;
-      margin: 0 auto;
-    }
-  }
+//     @media (max-width: 582px) {
+//       width: 100%;
+//       margin: 0 auto;
+//     }
+//   }
 
-  &-search {
-    width: 100%;
-    padding: 1rem 3.5rem 1rem 1rem;
-    border-radius: 0.4rem;
-    border: 0.2rem solid $color-primary-1;
-    font: {
-      size: 1.7rem;
-      weight: 400;
-    }
-    color: $color-primary-text;
-    letter-spacing: 1px;
-  }
+//   &-search {
+//     width: 100%;
+//     padding: 1rem 3.5rem 1rem 1rem;
+//     border-radius: 0.4rem;
+//     border: 0.2rem solid $color-primary-1;
+//     font: {
+//       size: 1.7rem;
+//       weight: 400;
+//     }
+//     color: $color-primary-text;
+//     letter-spacing: 1px;
+//   }
 
-  &__button {
-    border: none;
-    background-color: transparent;
-    position: absolute;
-    right: 1.4rem;
-    bottom: 2.9rem;
+//   &__button {
+//     background-color: transparent;
+//     border: none;
+//     position: absolute;
+//     right: 1.4rem;
+//     bottom: 2.9rem;
 
-    font: {
-      size: 2rem;
-    }
-    color: $color-btn-1;
-  }
-}
+//     font: {
+//       size: 20rem;
+//     }
+//     color: $color-btn-1;
+//   }
+// }
 
 .section {
   &-profile-update {
@@ -134,24 +134,23 @@ input,
 }
 
 .error-msg {
-  // display: none;
-  color: #ff7575;
   font-size: 1.6rem;
+  color: #ff7575;
   position: absolute;
-  right: 1rem;
   top: 0;
+  right: 1rem;
 }
 .error-icon {
-  display: none;
   width: 100%;
   height: 1px;
+  display: none;
   position: relative;
   i {
+    font-size: 1.7rem;
+    color: red;
     position: absolute;
     top: 2.5rem;
-    color: red;
     right: 2rem;
-    font-size: 1.7rem;
   }
 }
 .submit__input {
