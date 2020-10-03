@@ -158,11 +158,15 @@
                                     <div class="form-group mb-4 col-md-4">
                                         <label for="city">City/Town</label>
                                         <span class="error-msg"></span>
-                                        <select id="state" name="city" id="city" class="form-control city">
-                                            
-                                         
-                                            
-                                        </select>
+                                        <!-- <select id="state" name="city" id="city" class="form-control city">
+                                        </select> -->
+                                        <div class="form-field">
+                                            <input type="text" name="" id="city" value="" class="form-control city_name">
+                                            <input type="hidden" name="city" value="0" class="hidden_filed">
+                                            <div class="city_list" id="city_list"></div>
+                                        </div>
+                                        
+
                                     </div>
                                     <div class="form-group mb-4 col-md-4">
                                         <label for="pincode">Pincode</label>
