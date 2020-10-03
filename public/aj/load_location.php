@@ -11,6 +11,7 @@
     //     die("database connection failed: ");
     // }
 // 
+
     if($_POST['type'] == ""){
         // $sate_id = $_POST['state'];
         // $sql = "SELECT * FROM cities WHERE state_id = '$sate_id' ORDER BY city_id ASC";
@@ -33,4 +34,5 @@
             $output .= '<option value="'. $row["city_id"] . '">' . $row['city_name'] . '</option>';
         }
     }
+    
     echo $output;
