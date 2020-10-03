@@ -1,17 +1,14 @@
 .section {
   &-profile {
     figure {
+      height: 120px;
+      width: 100%;
       padding-top: 3rem;
       margin-bottom: 6rem;
       @include shadow-text(0, 0, 4px, 1);
       text-align: center;
-      // background-color: #d29900;
-      // @include bg-1;
-      // background: $color-primary-button-hover;
       @include post-title;
 
-      height: 120px;
-      width: 100%;
       @include radius-direction(10px, 10px, 0, 0);
     }
 
@@ -35,7 +32,6 @@
         margin-bottom: 1.5rem;
         padding-bottom: 2rem;
         @include radius-all(1rem);
-        // background-color: $color-gray-light-1;
         @include shadow;
         @include bg-1;
 
@@ -85,9 +81,6 @@
 }
 
 .article-profile__header {
-  // @include post-head;
   @extend .container-header;
-  // background-color: $color-primary;
-  // background: $color-primary-button-hover;
   @include post-title;
 }
