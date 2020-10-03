@@ -13,7 +13,7 @@ body::-webkit-scrollbar {
 }
 body::-webkit-scrollbar-track {
   // background: $color-primary; /* color of the tracking area */
-  @include post-body-6;
+  @include body-scroll;
   // background-color: #fff;
 }
 body::-webkit-scrollbar-thumb {
@@ -63,19 +63,15 @@ strong {
 
 .body-container {
   @include bg-1;
+  // &:has(> .page-home) {
+  //   padding-top: 0;
+  // }
   @media (min-width: 583px) {
     padding: 5rem 0 15rem;
   }
 
   @media (max-width: 582px) {
     padding: 5rem 0;
-  }
-
-  &:has(> .page-home) {
-    padding-top: 0;
-
-    // & > .section__teacher {
-    // }
   }
 }
 
@@ -108,7 +104,6 @@ strong {
 }
 
 .container-header {
-  // @include post-head;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   @include post-border;
@@ -124,7 +119,6 @@ strong {
 
 .container-header-2 {
   padding: 1rem 2rem;
-  // @include post-head-2;
   @extend .container-header-1;
 
   h1 {
