@@ -1,85 +1,44 @@
 .button {
   &-primary {
     padding: 0.8rem 4rem;
-    // background-color: $color-btn-1;
     border-radius: 0.6rem;
-    display: inline-block;
-    color: $color-white;
-    font-family: $font-primary;
-    font-size: 1.7rem;
-    font-weight: 400;
-    border: 1px solid $color-primary-button-border;
-    font-size: 18px;
     background: $color-primary-button;
+    display: inline-block;
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-white;
+    border: 1px solid $color-primary-button-border;
+    font-size: 1.8rem;
     text-transform: capitalize;
 
     &:hover {
-      // background-color: rgba($color-btn-1, 0.9);
       color: $color-white;
-
       background: $color-primary-button-hover;
     }
   }
 
   &-secondary {
-    border-radius: 1rem;
+    @include radius-all(1rem);
     padding: 0.8rem 4rem;
+   
     background-color: $color-gray-dark-1;
     display: inline-block;
-    color: $color-white;
     font-family: $font-primary;
-    font-weight: 400;
     font-size: 1.7rem;
     font-weight: 500;
+    color: $color-white;
   }
 
   &-special {
     padding: 12px 45px;
-    border-radius: 20px;
+       @include radius-all(2rem);
+    font-family: $font-primary;
     color: #ffffff;
     font-size: 12px;
-    font-family: $font-primary;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
     transition: transform 300ms ease-in;
-
-    // background: #8aafff;
-    // background: -moz-linear-gradient(
-    //   left,
-    //   #5388fe 0%,
-    //   #8aafff 41%,
-    //   #5388fe 100%
-    // );
-    // background: -webkit-gradient(
-    //   left top,
-    //   right top,
-    //   color-stop(0%, #5388fe),
-    //   color-stop(41%, #8aafff),
-    //   color-stop(100%, #5388fe)
-    // );
-    // background: -webkit-linear-gradient(
-    //   left,
-    //   #5388fe 0%,
-    //   #8aafff 41%,
-    //   #5388fe 100%
-    // );
-    // background: -o-linear-gradient(left, #5388fe 0%, #8aafff 41%, #5388fe 100%);
-    // background: -ms-linear-gradient(
-    //   left,
-    //   #5388fe 0%,
-    //   #8aafff 41%,
-    //   #5388fe 100%
-    // );
-    // background: linear-gradient(
-    //   to right,
-    //   #5388fe 0%,
-    //   #8aafff 41%,
-    //   #5388fe 100%
-    // );
-    // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5388fe', endColorstr='#5388fe', GradientType=1 );
-    // border-color: #5388fe;
-
     &:hover {
       color: $color-white;
       background: #8aafff;
@@ -89,15 +48,15 @@
   &-text-1 {
     padding: 0 3px;
     border-bottom: 1px solid $color-btn-1;
-    color: $color-btn-1;
     display: inline-block;
     font-size: 1.7rem;
     font-weight: 500;
+    color: $color-btn-1;
   }
 
   &__link {
     &-primary {
-      font-size: 1.7rem;
+    font-size: 1.7rem;
     font-weight: 500;
     color: $color-primary;
     }
