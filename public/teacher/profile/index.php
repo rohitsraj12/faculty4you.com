@@ -10,7 +10,7 @@
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     include("../../../private/required/public/components/social_media.php");
-    require("../include/header.inc.php");
+   
     // include_once'../include/banner.inc.php';
 
     $teacher_name = $_SESSION['user_name'];
@@ -28,7 +28,8 @@
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
-
+    $teacher_id = $row['teacher_id'];
+    require("../include/header.inc.php");
     if(!empty($_GET['message'])){
         $message = "Congratulations! You have successfully updated your profile detail.";
         
