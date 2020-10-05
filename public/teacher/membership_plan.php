@@ -9,15 +9,13 @@
 
 
 
-    $page_title = "home page";
+    $page_title = "Membership plan";
     $banner_image_url = "search";
     require_once("../../private/config/db_connect.php");
     include("../../private/config/config.php");
-
     include("../../private/required/public/components/social_media.php");
     include("include/header.inc.php");
     
-       // include_once'include/search-banner.inc.php';
        $user_name = $_SESSION['user_name'];
        $user_query = "SELECT teachers.*, cities.* 
            FROM teachers 
