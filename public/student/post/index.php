@@ -1,35 +1,18 @@
 <?php
 
     session_start();
-    //back function false
     if(!isset($_SESSION['user_name'])){
         header('location: ../login.php');
     } 
 
-    $page_title = "post";
+    $page_title = "View post";
     
-    $banner_image = "post.svg";
-    
-    require("../../../private/config/db_connect.php");
-    require("../../../private/config/config.php");
-    include("../../../private/required/public/components/social_media.php");
-    require("../include/header.inc.php");
-    
-        // require("../include/banner.inc.php");
-        
+    require_once("../../../private/config/db_connect.php");
+    require_once("../../../private/config/config.php");
+    include_once("../../../private/required/public/components/social_media.php");
+    require_once("../include/header.inc.php");        
 
-    $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
-    JOIN cities
-        ON cities.city_id = std.city_id
-    JOIN states
-        ON states.state_id = std.state_id
-    JOIN gender
-        ON gender.gender_id = std.gender_id
-     WHERE student_user_name = '$student_name'";
-    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
-
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
+    
 
 
     include('../include/compose_post.inc.php');
