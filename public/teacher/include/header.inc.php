@@ -1,6 +1,6 @@
 <?php 
 
-    $teacher_name = $_SESSION['user_name'];
+    // $teacher_name = $_SESSION['user_name'];
 
     
     $user_name = $_SESSION['user_name'];
@@ -74,7 +74,7 @@
                                         <li class="header-profile">
                                         <i class="fa fa-user" aria-hidden="true"></i>                        
                                         <?php 
-                                            echo $teacher_name;
+                                            echo $user_name;
                                         ?>
                                         </li>
                                 </ul>
@@ -97,8 +97,13 @@
                                         $token = $mem_row['member_token'];
                                             // echo $token;
                                         if($token > 0){
+                                        if($page_title == "Profile view"){
+                                            include('../include/search_engine.php');
+                                            // echo "profile";
+                                        }else{
+                                            // echo "home page";
                                             include('include/search_engine.php');
-                                        }
+                                        }}
                                     ?>
                                 </div>
                             </div>
