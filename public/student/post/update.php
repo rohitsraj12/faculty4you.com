@@ -4,16 +4,13 @@ session_start();
     if(!isset($_SESSION['user_name'])){
         header('location: ../login.php');
     } 
-    $page_title = "Update my Post";
-    
-    $banner_image = "post.svg";
+    $page_title = "Update post";
     
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
     require("../include/post.update.inc.php");
     include("../../../private/required/public/components/social_media.php");
     require("../include/header.inc.php");
-    // require("../include/banner.inc.php");
 
     
     $id =  $_GET['id'];
