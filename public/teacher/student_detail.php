@@ -8,16 +8,6 @@
         header('location: login.php');
     }
 
-    $user_name = $_SESSION['user_name'];
-    $user_query = "SELECT teachers.*, cities.* 
-        FROM teachers 
-        JOIN cities
-            ON cities.city_id = teachers.city_id
-        WHERE teacher_user_name = '$user_name'";
-    $user_result = mysqli_query($conn, $user_query);
-    $user_row = mysqli_fetch_assoc($user_result);
-
-    $teacher_id = $user_row['teacher_id'];
     $teacher_subject = $user_row['subject_id'];
     echo $teacher_subject;
 
@@ -25,6 +15,7 @@
     include_once("../../private/config/config.php");
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
+    
 ?>
 
 <div class="body-container">
