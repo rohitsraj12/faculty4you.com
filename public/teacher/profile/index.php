@@ -203,6 +203,13 @@
                                    
                                 </ul>
                             </div>
+                            <div class="article-info">
+                                <ul class="row">
+                                    <li class="col-sm-2">Charges</li>
+                                        <li class="col-sm-10 h4 font-weight-normal">: Rs <?php echo $row['teaching_charge'];?> / hour</li>
+                                   
+                                </ul>
+                            </div>
                             
                             <!-- <div class="article-info">
                                 <ul class="row">
