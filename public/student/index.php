@@ -190,7 +190,7 @@
                                     </p>
                                 </div>        
                                 <footer class="article-footer text-center">
-                                    <a class="button__link-primary" href="">Contact tutor</a>
+                                    <a class="button__link-primary" href="<?php base_url();?>student\include\email\to_non_active_member.php?non-active_member_id=<?php echo $row['teacher_id']?>">Contact tutor</a>
                                 </footer>
                             </article>
                             
