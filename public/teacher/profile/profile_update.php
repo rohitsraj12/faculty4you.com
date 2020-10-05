@@ -4,7 +4,7 @@
     if(!isset($_SESSION['user_name'])){
         header('location: ../login.php');
     } 
-    $page_title = "profile update";
+    $page_title = "Profile update";
     
     require_once("../../../private/config/db_connect.php");
     require_once("../../../private/config/config.php");
