@@ -4,7 +4,7 @@
     if(!isset($_SESSION['user_name'])){
         header('location: ../login.php');
     } 
-    $page_title = "profile";
+    $page_title = "View profile";
     $banner_image = "profile.svg";
 
     require_once("../../../private/config/db_connect.php");
