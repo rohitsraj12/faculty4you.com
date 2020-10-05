@@ -59,7 +59,8 @@
   }
 
   &-footer {
-    padding: 1rem 2rem 2rem;}
+    padding: 1rem 2rem 2rem;
+  }
 }
 .container-bg {
   @include bg-1;
@@ -69,6 +70,7 @@
   @include hover-transition(400ms);
   text-transform: capitalize;
   font-size: 1.7rem;
+  cursor: pointer;
 }
 
 .active-member-btn:hover {
