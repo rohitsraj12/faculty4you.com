@@ -2,6 +2,18 @@
 
     $teacher_name = $_SESSION['user_name'];
 
+    
+    $user_name = $_SESSION['user_name'];
+    $user_query = "SELECT teachers.*, cities.* 
+        FROM teachers 
+        JOIN cities
+            ON cities.city_id = teachers.city_id
+        WHERE teacher_user_name = '$user_name'";
+    $user_result = mysqli_query($conn, $user_query);
+    $user_row = mysqli_fetch_assoc($user_result);
+
+    $teacher_id = $user_row['teacher_id'];
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
