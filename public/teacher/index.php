@@ -19,10 +19,9 @@
 
     $teacher_id = $user_row['teacher_id'];
 
-    $page_title = "home page";
+    $page_title = "Home page";
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
-    // include("../../private/required/public/components/search.php");
 
     if(!empty($_GET['id'])){
         $id = $_GET['id'];
