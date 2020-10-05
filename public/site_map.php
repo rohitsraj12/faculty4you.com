@@ -1,5 +1,5 @@
 <?php
-    $page_title = "sitemap";
+    $page_title = "Sitemap";
     require("../private/config/config.php");
     require_once("../private/config/db_connect.php");
     include_once("../private/required/public/header.public.php");
