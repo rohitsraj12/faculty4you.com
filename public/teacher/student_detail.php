@@ -8,14 +8,14 @@
         header('location: login.php');
     }
 
-    $teacher_subject = $user_row['subject_id'];
-    echo $teacher_subject;
 
     $page_title = "Student's post details";
     include_once("../../private/config/config.php");
     include("../../private/required/public/components/social_media.php");
-    include_once('include/header.inc.php');
+    include('include/header.inc.php');
     
+    $teacher_subject = $user_row['subject_id'];
+    // echo $teacher_subject;
 ?>
 
 <div class="body-container">
@@ -31,7 +31,6 @@
 <?php
     if(isset($_POST['search_student_profile'])){
         $user_name = $_POST['user_name_search'];
-
 
 
         $home_sql = "SELECT posts.*, subjects.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
