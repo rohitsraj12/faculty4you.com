@@ -1,5 +1,5 @@
 <?php
-$page_title = "social media";
+$page_title = "Social media";
  require_once("../private/config/db_connect.php");
  require("../private/config/config.php");
  include("../private/required/public/components/social_media.php");
