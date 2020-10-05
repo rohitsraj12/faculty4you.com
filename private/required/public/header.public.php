@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?= $page_title;?> | faculty4you.com</title>
+        <title><?= $page_title;?> | faculty4you.com | Academic - Non academic | Online - Offline Training</title>
         <!-- meta for facebook -->
         <meta property="og:url"           content="<?php base_url()?>" />
         <meta property="og:type"          content="website" />
