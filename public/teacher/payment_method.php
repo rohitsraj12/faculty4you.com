@@ -8,16 +8,6 @@
         header('location: login.php');
     }
 
-    $user_name = $_SESSION['user_name'];
-    $user_query = "SELECT teachers.*, cities.* 
-        FROM teachers 
-        JOIN cities
-            ON cities.city_id = teachers.city_id
-        WHERE teacher_user_name = '$user_name'";
-    $user_result = mysqli_query($conn, $user_query);
-    $user_row = mysqli_fetch_assoc($user_result);
-
-    $teacher_id = $user_row['teacher_id'];
 
     $page_title = "profile";
     include_once("../../private/config/config.php");
@@ -26,8 +16,8 @@
     // include("../../private/required/public/components/search.php");
 
     // trnsaction email
-    include("include/transaction.gpay.php");
-    include("include/transaction.phonepe.php");
+    include("include/email/transaction.gpay.php");
+    include("include/email/transaction.phonepe.php");
 ?>
 
 
@@ -166,7 +156,7 @@
 
 
 <?php
-  include("../../../private/required/public/components/agreement.php");
+  include("../../private/required/public/components/agreement.php");
 
     include("include/footer.inc.php");
 
