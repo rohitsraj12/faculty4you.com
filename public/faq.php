@@ -1,9 +1,9 @@
 <?php
-    $page_title = "faq";
+    $page_title = "Faq";
     require("../private/config/config.php");
     require_once("../private/config/db_connect.php");
+    include("../private/required/public/components/social_media.php");
     include_once("../private/required/public/header.public.php");
-    // include("../private/required/public/banner/banner.public.php");
 
 ?>
 
@@ -27,13 +27,13 @@
             <div class="col-sm-9">
                 <section class="general section-faq">
                 <div class="section-faq-body wrap-container"> 
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
+                        <article class="mb-4 border post-sections">
+                            <header class="text-light border-bottom faq__header post-header">
                                 some question
                                 <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </header>
-                            <footer class="faq__footer h3 text-dark">
+                            <footer class="faq__footer post-body h3 text-dark">
                                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
                             </footer>
                         </article>
