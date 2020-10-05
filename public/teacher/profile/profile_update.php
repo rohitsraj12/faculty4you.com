@@ -7,16 +7,13 @@
     $page_title = "profile update";
     
     require_once("../../../private/config/db_connect.php");
-    require("../../../private/config/config.php");
+    require_once("../../../private/config/config.php");
     include("../include/update.techer.profile.inc.php");
-
     include("../../../private/required/public/components/social_media.php");
-    // require("../include/header.inc.php");
-    // include_once'../include/banner.inc.php';
+
+    require("../include/header.inc.php");
 
     $teacher_name = $_SESSION['user_name'];
-
-    
         
     $sql = "SELECT teachers.*, cities.*, states.*, subjects.*, gender.* FROM teachers 
     JOIN cities
@@ -35,7 +32,6 @@
 
     
     $teacher_id = $row['teacher_id'];
-    require("../include/header.inc.php");
     
     if(!empty($_GET['message'])){
         $message = "Congratulations! You have successfully updated your profile detail.";
@@ -189,7 +185,7 @@
                             </header>
                             <div class="py-4 px-5 text-dark bg-white border mb-5">
                             <div class="form-group form-row my-3">
-                                <div class="col-md-6"> 
+                                <div class="col-md-4"> 
                                     <label for="study_category" class="label col-form-label pt-0 w-100">Study Category</label>
                                     <span class="error-msg"></span>
                                     <select id="study_category" name="category" class="form-control study-category">
@@ -197,7 +193,7 @@
                                        
                                     </select>
                                 </div>
-                                <div class="col-md-6"> 
+                                <div class="col-md-4"> 
                                     <label for="subject_category" class="label col-form-label pt-0">Subject Category</label>
                                     <span class="error-msg"></span>
                                     <select id="subject_category" name="subject_category" class="form-control subject_category">
@@ -205,51 +201,30 @@
                                        
                                     </select>
                                 </div>
-                            </div>
-                        
-                                <div class="form-row pt-3 mb-3">
-                                    <div class="form-group col-md-6">
+                                <div class="form-group col-md-4">
                                         <label for="subject">Subject</label>
                                         <span class="error-msg"></span>
                                         <select id="subject" name="subject" class="form-control subject">
                                            
                                         </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
+                                </div>
+                            </div>
+                        
+                                <div class="form-row pt-3 mb-3">
+                                   
+                                    <div class="form-group col-md-4">
                                         <label for="teaching_exp">Teaching experience</label>
                                         <span class="error-msg"></span>
                                         <input type="text" name="exp" class="form-control experience" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
+                                    </div> 
+                                    <div class="form-group col-md-4">
+                                        <label for="teaching_charge">Teaching charges/hour</label>
+                                        <span class="error-msg"></span>
+                                        <input type="text" name="charges" class="form-control teaching-charges" id="teaching_charge" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?>charges per hour">
                                     </div>
                                 </div>
-                                <!-- <fieldset class="form-group">
-                                    <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0">teaching type</label>
-                                        
-                                        <div class="col-sm-10">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="1" id="online_one" name="single">
-                                            
-                                                <label class="form-check-label" for="online_one">
-                                                    online one to one tuition
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="1" id="online_group" name="group">
-                                            
-                                                <label class="form-check-label" for="online_group">
-                                                    online group tuition
-                                                </label>
-                                            </div>
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="1" id="home_tution" name="home">
-                                            
-                                                <label class="form-check-label" for="home_tution">
-                                                    home tuition
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset> -->
+                                   
+
                                 <div class="form-group">
                                     <label for="about">About me</label>
                                     <span class="error-msg"></span>
