@@ -21,15 +21,10 @@
     $teacher_subject = $user_row['subject_id'];
     echo $teacher_subject;
 
-    $page_title = "student's post details";
+    $page_title = "Student's post details";
     include_once("../../private/config/config.php");
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
-    // include("../../private/required/public/components/search.php");
-
-    
-
-    
 ?>
 
 <div class="body-container">
