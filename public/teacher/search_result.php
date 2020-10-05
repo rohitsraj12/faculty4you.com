@@ -6,15 +6,13 @@
         header('location: login.php');
     }
 
-    $page_title = "search result";
-    $banner_image_url = "search";
+    $page_title = "Search result";
     require_once("../../private/config/db_connect.php");
     include("../../private/config/config.php");
 
     include("../../private/required/public/components/social_media.php");
     include("include/header.inc.php");
     
-       // include_once'include/search-banner.inc.php';
        $user_name = $_SESSION['user_name'];
        $user_query = "SELECT teachers.*, cities.* 
            FROM teachers 
@@ -39,7 +37,6 @@
             $result = mysqli_query($conn, $query);
 
             while($rows = mysqli_fetch_assoc($result)){
-            //    echo $rows['membership_id'];
                echo "hi";
             }
             echo "hello";
