@@ -3,7 +3,7 @@
     require("../private/config/config.php");
     include("../private/required/public/components/social_media.php");
 
-    $page_title = "home page";
+    $page_title = "Home page";
     include("../private/required/public/header.public.php");
     include("../private/required/public/banner/banner.public.php");
 ?>
