@@ -33,8 +33,6 @@ $sub = "add subject category";
                 $id = $_GET['id'];
                 $subject = $_REQUEST['subject'];
                 $study_cat = $_REQUEST['study-cat'];
-
-                
     
                 $query = "UPDATE `subjects_categories` SET `sub_cat_name` = '$subject', category_id = '$study_cat' 
                 WHERE sub_cat_id = '$id'";
