@@ -5,7 +5,7 @@
         header('location: ../login.php');
     } 
 
-    $page_title = "profile view";
+    $page_title = "Profile view";
 
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
