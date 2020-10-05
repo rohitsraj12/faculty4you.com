@@ -36,7 +36,7 @@ $sub = "add subject category";
 
                 
     
-                $query = "UPDATE `subjects_categories` SET `sub_cat_name` = '$subject' 
+                $query = "UPDATE `subjects_categories` SET `sub_cat_name` = '$subject', category_id = '$study_cat' 
                 WHERE sub_cat_id = '$id'";
                           
                 $result = mysqli_query($conn, $query); 
