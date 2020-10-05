@@ -1,5 +1,18 @@
 <?php 
     $student_name = $_SESSION['user_name'];
+
+    $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
+    JOIN cities
+        ON cities.city_id = std.city_id
+    JOIN states
+        ON states.state_id = std.state_id
+    JOIN gender
+        ON gender.gender_id = std.gender_id
+     WHERE student_user_name = '$student_name'";
+    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +23,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?= $page_title;?> | faculty4you.com</title>
+        <title><?= $page_title;?> | faculty4you.com | Academic - Non academic | Online - Offline Training</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- stylesheet -->
