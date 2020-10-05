@@ -41,6 +41,7 @@ if(isset($_POST['submit_phonepe'])){
          $message = "<p>Dear " . $teacher_name . ",</p></br>";
          $message .= "<p>Thank you for buying " . $membership_type . " membership. Your membership will activate within 24 hours. We are sure that you have chosen a surefire way to get yourself succeed.</p></br>";
          $message .= "<p>Thank you,</p>";
+         $message .= "<p>Admin</p>";
          $message .= "<p>Facultyforyou.com</p>";
          $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
          
