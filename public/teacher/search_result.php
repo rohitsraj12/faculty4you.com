@@ -12,17 +12,8 @@
 
     include("../../private/required/public/components/social_media.php");
     include("include/header.inc.php");
-    
-       $user_name = $_SESSION['user_name'];
-       $user_query = "SELECT teachers.*, cities.* 
-           FROM teachers 
-           JOIN cities
-               ON cities.city_id = teachers.city_id
-           WHERE teacher_user_name = '$user_name'";
-       $user_result = mysqli_query($conn, $user_query);
-       $user_row = mysqli_fetch_assoc($user_result);
-
-       $member = $user_row['teacher_membership_status'];
+   
+    $member = $user_row['teacher_membership_status'];
 
 ?>
 <div class="body-container">
@@ -37,6 +28,7 @@
             $result = mysqli_query($conn, $query);
 
             while($rows = mysqli_fetch_assoc($result)){
+            //    echo $rows['membership_id'];
                echo "hi";
             }
             echo "hello";
