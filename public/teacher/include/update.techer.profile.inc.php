@@ -24,6 +24,7 @@ if(isset($_POST['update'])){
     // $group = $_POST['group'];
     // $home = $_POST['home'];
     $about = $_POST['about_me'];
+    $charges = $_POST['charges'];
         
            //testing 
            //    echo  $product_name;
@@ -63,6 +64,7 @@ if(isset($_POST['update'])){
                 category_id = '$cat',
                 teacher_experience = '$exp',
                 teacher_about_me = '$about', 
+                teaching_charge = '$charges',
                 teacher_photo = '$url'  WHERE teacher_id=$id"; 
     
                 $result = mysqli_query($conn, $query);
