@@ -11,7 +11,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title><?= $page_title;?> | faculty4you.com</title>
+        <title><?= $page_title;?> | faculty4you.com | Academic - Non academic | Online - Offline Training</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- stylesheet -->
