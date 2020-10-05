@@ -66,6 +66,9 @@
                         <li>
                             <i class="fa fa-envelope pr-2" aria-hidden="true"></i><a href="mailto:<?php echo $row['teacher_email'];?>"><?php echo $row["teacher_email"];?></a>
                         </li>
+                        <li>
+                            <a href="<?php base_url()?>student/include/email/to_active_member.php?active_member_id=<?php echo $row['teacher_id']?>" class="button-primary">contact <?php echo $row["teacher_first_name"] ." " . $row["teacher_last_name"];?></a>
+                        </li>
                     </ul>
                 </div>
             </div>            
