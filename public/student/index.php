@@ -4,41 +4,15 @@
     if(!isset($_SESSION['user_name'])){
         header('location: login.php');
     } 
-    $page_title = "home page";
-    $banner_image = "post.svg";
+    $page_title = "Home page";
 
-    include_once("../../private/config/db_connect.php");
-    include_once("../../private/config/config.php");
+    require_once("../../private/config/db_connect.php");
+    require_once("../../private/config/config.php");
 
     include("../../private/required/public/components/social_media.php");
     require("include/header.inc.php");
-    // include("../../private/required/public/components/search.php");
-    
-    $student_name = $_SESSION['user_name'];
-
-        
-    $sql = "SELECT * FROM std 
-     WHERE student_user_name = '$student_name'";
-    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
-
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_assoc($result);
 
     $student_id = $row['student_id'];
-
-   
-    
-        
-//    $id =  $post_row['subject_id'];
-//         $teacher_query = "SELECT teachers.*, memberships.* FROM teachers 
-//         JOIN memberships
-//             ON memberships.teacher_id = teachers.teacher_id 
-//         WHERE memberships.member_token > 0 AND subject_id = $id";
-//         $teacher_result = mysqli_query($conn, $teacher_query);
-
-//         while($row = mysqli_fetch_assoc($teacher_result)){
-//            echo $row['teacher_first_name'] . "<br/>";
-//         }
     ?>
     <div class="body-container">
         <main>
