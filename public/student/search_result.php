@@ -5,7 +5,7 @@
         header('location: ../login.php');
     } 
     
-    $page_title = "search result";
+    $page_title = "Search result";
     require_once("../../private/config/db_connect.php");
     include("../../private/required/public/components/social_media.php");
 
@@ -17,7 +17,6 @@
         
     $sql = "SELECT * FROM std 
      WHERE student_user_name = '$student_name'";
-    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
@@ -39,32 +38,21 @@
                 if(isset($_POST["submit-search"])){
                     // security
                     $search = mysqli_real_escape_string($conn, $_POST["search"]);
-                    echo $search;
+                    //echo $search;
 
                     $sql = "SELECT * FROM subjects WHERE sub_name LIKE '$search'";
-                    // $sql = "SELECT teachers.*, cities.*, subjects.*, study_categories.* 
-                    // FROM teachers
-                    // JOIN cities
-                    //     ON cities.city_id = teachers.city_id
-                    // JOIN subjects
-                    //     ON subjects.subject_id = teachers.subject_id
-                    // JOIN study_categories
-                    //     ON study_categories.category_id = teachers.category_id
-                    //     WHERE subjects.sub_name = '$search'";
                 
                     $result = mysqli_query($conn, $sql);
                     $query_results = mysqli_num_rows($result);
 
-
-
                 ?>
-                    
+<!--                     
                     <div class="search-result-num" >
                         <p>
-                                <?php echo $query_results; ?> results are matching
+                                <?php //echo $query_results; ?> results are matching
                         </p>
 
-                    </div>
+                    </div> -->
                     <section class="section-body"> 
 
                     
