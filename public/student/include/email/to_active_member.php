@@ -39,7 +39,7 @@
     $subject = "New student has viewd your profile | facultyforyou.com";
     $message = "<p>Dear,". $teacher_name ."</p></br>";
     $message .= "<p>Welcome to facultyforyou.com. A student of the following details has viewed your profile. They will contact you; otherwise you can contact them through sms, call or e-mail within 48 hours. Finalize the tuition contract within this period of time. Respond now before someone else is hired. </p></br>";
-    // $message .= "<h4>Student details</h4>";
+    $message .= "<p>If you are intrested to see student post details, then please login facultyforyou.com and seach student user name in search field.</p>";
     $message .= "<table> <tr><th><h4>Student details</h4></th> <th></th></tr>";
     $message .= "<tr><td>Student user name: </td><td><b>" . $student_user_name . "</b></td></tr>";
     $message .= "<tr><td>Student Name: </td><td>" . $student_name . "</td></tr>";
@@ -57,5 +57,5 @@
 
     mail($to, $subject, $message, $headers);
 
-    header('location:../../index.php?message=successfully_send');
+    header('location:../../teacher_detail.php?id='. $teacher_id);
 ?>
