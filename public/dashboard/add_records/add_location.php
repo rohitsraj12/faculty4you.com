@@ -176,7 +176,7 @@
                                         <th scope="row"><?php echo $row['city_id'];?></th>
                                         <td><?php echo $row['city_name']?></td>
                                         <td><?php echo $row['state_name'];?></td>
-                                        <td><a href="<?php base_url()?>dashboard/edit_records/edit_location_city.php?id=<?php echo $row['city_id']?>">Edit</a><?php ?></td>
+                                        <td><a href="<?php base_url()?>dashboard/edit_records/edit_location_city.php?id=<?php echo $row['city_id']?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><?php ?></td>
                                         </tr>
                                     <?php 
                                     }
@@ -212,7 +212,7 @@
                                     <tr>
                                         <!-- <th scope="row"><?php //echo $row['state_id'];?></th> -->
                                         <td><?php echo $row['state_name'];?></td>
-                                        <td><a href="<?php base_url()?>dashboard/edit_records/edit_location_state.php?id=<?php echo $row['state_id']?>">Edit</a><?php ?></td>
+                                        <td><a href="<?php base_url()?>dashboard/edit_records/edit_location_state.php?id=<?php echo $row['state_id']?>"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a><?php ?></td>
                                         </tr>
                                     <?php 
                                     }
