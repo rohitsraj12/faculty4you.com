@@ -79,9 +79,21 @@
                     ?>  <i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </a>
                                 <ul class="sub__nav">
-                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="">Profile</a></li>
-                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="">Update</a></li>
-                                        <li class="sub__nav-list"> <a class="sub__nav-link" href="<?php base_url();?>logout.php">Logout</a></li>
+                                        <li class="sub__nav-list"> 
+                                            <a class="sub__nav-link" href="">
+                                                Profile
+                                            </a>
+                                        </li>
+                                        <li class="sub__nav-list"> 
+                                            <a class="sub__nav-link" href="">
+                                                Update
+                                            </a>
+                                        </li>
+                                        <li class="sub__nav-list"> 
+                                            <a class="sub__nav-link" href="<?php base_url();?>logout.php">
+                                                Logout
+                                            </a>
+                                        </li>
                                     
                                 </ul>
                             </li>
@@ -158,7 +170,7 @@
                                             <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject.php">Add New Subjects</a> 
                                         </li>
                                         <li>
-                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add sub category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject_category.php">Add New Subject Category</a> 
+                                            <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add subject category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_subject_category.php">Add New Subject Category</a> 
                                         </li>
                                         <li>
                                             <a class="side-sub-nav__link  <?php if($active == "add record" && $sub == "add study category"){ echo "active sub_active";}?>" href="<?php base_url();?>dashboard/add_records/add_study_category.php">Add New Study Category</a> 
