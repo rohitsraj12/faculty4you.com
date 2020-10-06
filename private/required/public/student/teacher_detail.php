@@ -21,6 +21,7 @@
             <li class="mr-5"><i class="fa fa-paw mr-2" aria-hidden="true"></i><?php echo $row["teacher_experience"] . ' years of experience';?></li>
             <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
             <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
+            <li class="mr-5"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $row["teaching_charge"];?></li>
         </ul>
         
         <div class="row">  
@@ -49,7 +50,9 @@
             </div>
         </div>
     <footer class="post-footer">
-        <span class="active-member-btn" style="font-size: 1.6rem">Contact details</span>
+        <!-- <span class="active-member-btn" style="font-size: 1.6rem">Contact details</span> -->
+        <a href="<?php base_url()?>student/include/email/to_active_member.php?active_member_id=<?php echo $row['teacher_id']?>" class="button-primary">contact details</a>
+
     </footer>
     <section class="student-details">
         <article>     
