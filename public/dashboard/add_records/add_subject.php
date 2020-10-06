@@ -148,10 +148,10 @@ $sub = "add subject";
                             ?>
                             <tr>
                                 <th scope="row"><?php echo $row['subject_id'];?></th>
-                                <td><?php echo $row['sub_name']?></td>
+                                <td><?php echo $row['sub_name'];?></td>
                                 <td><?php echo $row['sub_cat_name'];?></td>
                                 <td><?php echo $row['study_cat_type'];?></td>
-                                <td><a href="<?php base_url()?>dashboard/edit_records/edit_subject.php?id=<?php echo $row['subject_id']?>">Edit</a><?php ?></td>
+                                <td><a href="<?php base_url()?>dashboard/edit_records/edit_subject.php?id=<?php echo $row['subject_id'];?>">Edit</a><?php ?></td>
                             </tr>
                             <?php 
                             }
