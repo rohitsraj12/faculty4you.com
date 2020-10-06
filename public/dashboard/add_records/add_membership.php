@@ -6,7 +6,7 @@
     }
 
     $active = "teacher";
-
+    $sub = "registered";
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");
     include("../include/header.inc.php");
