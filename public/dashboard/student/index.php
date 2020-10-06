@@ -61,10 +61,9 @@ $sub = "studentDetail";
                         <tr>
                         <th scope="col">Id</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
                         <th scope="col">Location</th>
                         <th scope="col">Add Testimonial</th>
+                        <th scope="col">Student detail</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -82,10 +81,9 @@ $sub = "studentDetail";
                         <tr>
                             <th scope="row"><?php echo $row['student_id'];?></th>
                             <td><?php echo $row['student_first_name'] . " " . $row['student_last_name'] ;?></td>
-                            <td><?php echo $row['student_email'];?></td>
-                            <td>+91 <?php echo $row['student_phone'];?></td>
                             <td><?php echo $row['city_name'] . " ," . $row['state_name'] ;?></td>
                             <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_testimonial.php?id=<?php echo $row['student_id'];?>">Add testimonial</a></td>
+                            <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/student/student_detail.php?id=<?php echo $row['student_id'];?>">More detail</a></td>
                         </tr>
                         <?php 
                         }
