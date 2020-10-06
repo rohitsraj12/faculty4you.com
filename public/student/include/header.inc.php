@@ -84,7 +84,7 @@
                                 <!-- end header brand -->
                                 <div class="section__header-search">
                                     <?php
-                                    if($page_title == "Home page" || $page_title == "Search result" ){
+                                    if($page_title == "Home page" || $page_title == "Search result" || $page_title == "Teacher details" ){
                                         include('include/search_engine.php');
                                     } else {
                                         include('../include/search_engine.php');
