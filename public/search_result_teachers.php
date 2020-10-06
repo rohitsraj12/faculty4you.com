@@ -28,7 +28,7 @@
                 if(isset($_POST["search-teacher"])){
                     // security
                     $search = mysqli_real_escape_string($conn, $_POST["search"]);
-                    $city = mysqli_real_escape_string($conn, $_POST["city"]);
+                    // $city = mysqli_real_escape_string($conn, $_POST["city"]);
 
                     $sql = "SELECT * FROM subjects WHERE sub_name LIKE '$search'";
                     // $sql = "SELECT teachers.*, cities.*, subjects.*, study_categories.* 
@@ -45,13 +45,13 @@
                     $query_results = mysqli_num_rows($result);
 
                     ?>
-                    <div class="search-result-num" >
+                    <!-- <div class="search-result-num" >
                         <p>
-                            Total <?php echo $query_results; ?> results are matching
+                            Total <?php echo $query_results; ?> results are matching 
                         </p>
 
-                    </div>
-                    <section class="section-body"> 
+                    </div> -->
+                    <!-- <section class="section-body"> 
                         <?php 
 
                             if($query_results > 0){
@@ -73,7 +73,7 @@
                             }
                         
                         ?>
-                    </section>      
+                    </section>       -->
                         </section> 
 
                             <div class="wrap-container">
@@ -108,7 +108,7 @@
                                                                 ON subjects.subject_id = teachers.subject_id
                                                             JOIN study_categories
                                                                 ON study_categories.category_id = teachers.category_id
-                                                            WHERE (study_categories.category_id = 1  AND (subjects.sub_name = '$search' AND cities.city_name = '$city')) OR (study_categories.category_id = 1 AND subjects.sub_name = '$search') OR (study_categories.category_id = 2 AND cities.city_name = '$city') ";
+                                                            WHERE  (study_categories.category_id = 1 AND subjects.sub_name = '$search')";
                                                         
                                                         $result = mysqli_query($conn, $sql);
                                                         $query_results = mysqli_num_rows($result);
@@ -151,7 +151,7 @@
                                                                 ON subjects.subject_id = teachers.subject_id
                                                             JOIN study_categories
                                                                 ON study_categories.category_id = teachers.category_id
-                                                                WHERE (study_categories.category_id = 2  AND (subjects.sub_name = '$search' AND cities.city_name = '$city')) OR (study_categories.category_id = 2 AND subjects.sub_name = '$search')  OR (study_categories.category_id = 2 AND cities.city_name = '$city')";
+                                                                WHERE (study_categories.category_id = 2 AND subjects.sub_name = '$search')";
                                                         
                                                         $result = mysqli_query($conn, $sql);
                                                         $query_results = mysqli_num_rows($result);
