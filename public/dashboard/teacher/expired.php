@@ -75,7 +75,7 @@ $sub = "expired";
                                 $sql = "SELECT memberships.*, teachers.* FROM memberships
                                 LEFT JOIN teachers
                                     ON teachers.teacher_id = memberships.teacher_id
-                                WHERE membership_expiry_date < CURRENT_DATE()";
+                                WHERE membership_expiry_date < CURRENT_DATE() AND member_token = 0";
                                 $results = mysqli_query($conn, $sql);
                                 
 
@@ -107,21 +107,21 @@ $sub = "expired";
 
                                     // if($expDate <= $today){
                                         
-                                        echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+                                        echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
 
                                     // }
                                 ?>
                                 </td>
-                                    <td>
-                                        <form action="" method="POST">
-                                            <input type="hidden" name="name" value="<?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ; ?>">
-                                            <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
-                                            <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
-                                            <button class="member-nonactive" name="email">reminder email</button>
-                                        </form>
-                                    </td>
-                            <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>">add testimonial</a></td>
-                            <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
+                                <td>
+                                    <form action="" method="POST">
+                                        <input type="hidden" name="name" value="<?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ; ?>">
+                                        <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
+                                        <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
+                                        <button class="member-nonactive" name="email">reminder email</button>
+                                    </form>
+                                </td>
+                                <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>">add testimonial</a></td>
+                                <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
                             </tr>
                             <?php 
                             }
