@@ -58,7 +58,7 @@
                                         $sql = "SELECT memberships.*, teachers.* FROM memberships
                                         LEFT JOIN teachers
                                             ON teachers.teacher_id = memberships.teacher_id
-                                        WHERE membership_expiry_date > CURRENT_DATE() AND memberships.member_token = 0 AND memberships.teacher_id = (SELECT teacher_id FROM memberships ORDER BY teacher_id ASC LIMIT 1)
+                                        WHERE membership_expiry_date > CURRENT_DATE() AND memberships.member_token = 0
                                         ORDER BY member_token ASC 
                                         ";
                                         $results = mysqli_query($conn, $sql);
@@ -76,7 +76,7 @@
                                             $token = $row['member_token'];
                                             
                                             if($token == 0){
-                                                echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+                                                echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
 
                                                 // if()
                                             } else{
@@ -106,7 +106,7 @@
 
                                                 // $start = $member_row['membership_starting_date'];
                                                 $exp = $member_row['membership_expiry_date'];
-                                                $date = date("Y - m - d");
+                                                $date = date("Y - M - d");
 
                                                 $token = $member_row['member_token'];
                                                 
@@ -114,7 +114,7 @@
                                                     echo "<span class='member-active'>Member</span>";
                                                 }
                                             ?></td>
-                                            <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php //echo $row['teacher_id'];?>">Add testimonial</a></td>
+                                            <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/edit_records/update_teacher_testimonials.php?id=<?php //echo $row['teacher_id'];?>">Add testimonial</a></td>
                                             <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
                                         </tr>
                                         <?php 
