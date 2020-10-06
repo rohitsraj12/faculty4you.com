@@ -34,6 +34,11 @@ $teacher_phone = $user_row['teacher_phone'];
 
         $update_member = mysqli_query($conn, $update_query);
 
+        $block_post_query = "UPDATE posts SET 
+            block_date = DATE_ADD(now(), INTERVAL 48 HOUR)
+            WHERE post_id = '$post'";
+        $block_post_result= mysqli_query($conn, $block_post_query);
+
         // send email to teacher
         $to = $teacher_email;
         $subject = "You have selected " . $student_name . " profile | facultyforyou.com";
