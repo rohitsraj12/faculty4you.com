@@ -9,7 +9,8 @@
             </button>
         </div>
         <div class="modal-body">
-            <article class=" px-5">
+        <section>
+         <article class=" px-5">
                 <header class="my-5 text-center">
                     <h2>
                         FACULTY FOR YOU TERMS & CONDITIONS
@@ -104,11 +105,60 @@
                     </li>
                     <li>
                     The foregoing are subject to the Republic of India and the courts in Bangalore, India shall have the exclusive jurisdiction on any dispute that may arise out of the use of this site. Please proceed only if you accept all the conditions enumerated herein above, out of your free will and consent.
-
-
                     </li>
                 </ul>
             </article>
+        </section>
+        <section>
+            <article class="px-5">
+                <header class="my-5 text-center">
+                        <h2>
+                            ABOUT MEMBERSHIP PACKAGES:
+                        </h2>
+                </header>
+                <p>
+                    Kindly clarify your doubts before you make a payment to upgrade to any of our premium membership plans or buy tokens. Once a payment is made, it cannot be refunded.
+                </p>
+                <h4>
+                    By purchasing of Silver membership:
+                </h4>
+                    <ul>
+                        <li>
+                             You can see the contact details of five students related to the subject/activity that you have registered within 30 days.
+                        </li>
+                        <li>
+                            Students from all over India looking for tuition related to your subject/activity can see the details and contact you through message, call, e-mail up to 30 days from the day of activation of your membership.
+                        </li>
+                    </ul>
+                <h4> By purchasing of Gold membership:</h4>
+                    <ul>
+                        <li>
+                            You can see the contact details of eleven students related to the subject/activity that you have registered within 60 days.
+                        </li>
+                        <li>
+                            Students from all over India looking for tuition related to your subject/activity can see the details and contact you through message, call, e-mail up to 60 days from the day of activation of your membership.
+                        </li>
+                    </ul>
+                <h4> 
+                    By purchasing of Platinum membership:
+                </h4>
+                    <ul>
+                        <li>
+                            You can see the contact details of eighteen students related to the subject/activity that you have registered within 90 days.
+                        </li>
+                        <li>
+                            Students from all over India looking for tuition related to your subject/activity can see the details and contact you through message, call, e-mail up to 90 days from the day of activation of your membership.
+                        </li>
+                    </ul>
+                    <p>
+                        If you do not utilize your tokens during your membership period, the tokens will expire automatically.
+                    </p>
+                    <p>
+                        If we do not provide you with notified students, your active membership will continue until we provide you with notified students.
+                    </p>
+            </article>
+        </section>   
+           
         </div>
         <div class="modal-footer">
             <button type="button" class="button-primary" data-dismiss="modal">Close</button>
