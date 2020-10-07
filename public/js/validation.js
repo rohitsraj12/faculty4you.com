@@ -20,7 +20,7 @@ var pin = document.getElementsByClassName("pincode"); //160
 var teachingExp = document.getElementsByClassName("experience"); //193
 var subject = document.getElementsByClassName("subject"); //198
 var about = document.getElementsByClassName("about"); //242
-var category = document.getElementsByClassName("study_category");
+var category = document.getElementsByClassName("study-category");
 var type = document.getElementsByClassName("type");
 var title = document.getElementsByClassName("title");
 var postDetail = document.getElementsByClassName("detail");
@@ -121,10 +121,10 @@ function errMsg(input, errorMsg) {
   // }
 
   //teaching charges
-  // if(teachingCharges[0].value == ""){
-  //   errMsg(teachingCharges[0], "teaching charges");
-  //   return false;
-  // }
+  if(teachingCharges[0].value == ""){
+    errMsg(teachingCharges[0], "teaching charges");
+    return false;
+  }
 
 
   //academic subject
