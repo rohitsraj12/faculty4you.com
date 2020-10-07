@@ -24,7 +24,7 @@ if(isset($_POST['update'])){
     // $group = $_POST['group'];
     // $home = $_POST['home'];
     $about = $_POST['about_me'];
-    $charges = $_POST['charges'];
+    $charges = $_POST['charges']. " " . $_POST['per_time'];
         
            //testing 
            //    echo  $product_name;
