@@ -17,7 +17,7 @@
                         <header class="h2 border-bottom border-white-50 mb-5 pb-4">
                             Quick links
                         </header>
-                        <div class="row">
+                        <div class="row fooetr-list">
                             <ul class="col-sm-4">
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/index.php"> home</a></li>
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>faq.php"> faq</a></li>
