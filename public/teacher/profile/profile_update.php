@@ -218,9 +218,20 @@
                                         <input type="text" name="exp" class="form-control experience" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
                                     </div> 
                                     <div class="form-group col-md-4">
-                                        <label for="teaching_charge">Teaching charges/hour</label>
+                                        <label for="teaching_charge">Teaching charges</label>
                                         <span class="error-msg"></span>
-                                        <input type="text" name="charges" class="form-control teaching-charges" id="teaching_charge" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?>charges per hour">
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <input type="text" name="charges" class="form-control teaching-charges" id="teaching_charge" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?>charges">
+                                            </div>
+                                            <div class="col-6">
+                                                <select name="per_time" id="" class="form-control">
+                                                    <option value="per hour">Per hour</option>
+                                                    <option value="per month">Per month</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                       
                                     </div>
                                 </div>
                                    
