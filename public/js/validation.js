@@ -14,16 +14,17 @@ var image = document.getElementsByClassName("image");
 var gender = document.getElementsByClassName("gender"); //79
 var email = document.getElementsByClassName("email"); //115
 var phone = document.getElementsByClassName("phone"); //119
-var city = document.getElementsByClassName("city"); //133
+var city = document.getElementsByClassName("city_name"); //133
 var state = document.getElementsByClassName("state"); //147
 var pin = document.getElementsByClassName("pincode"); //160
 var teachingExp = document.getElementsByClassName("experience"); //193
 var subject = document.getElementsByClassName("subject"); //198
 var about = document.getElementsByClassName("about"); //242
-var category = document.getElementsByClassName("category");
+var category = document.getElementsByClassName("study_category");
 var type = document.getElementsByClassName("type");
 var title = document.getElementsByClassName("title");
 var postDetail = document.getElementsByClassName("detail");
+var teachingCharges = document.getElementsByClassName("teaching-charge");
 
 // function for error message
 function errMsg(input, errorMsg) {
@@ -72,7 +73,9 @@ function errMsg(input, errorMsg) {
   if (email[0].value == "") {
     errMsg(email[0], "email id");
     return false;
-  } else if (!emailExp.test(email[0].value)) {
+  } 
+  
+  if (!emailExp.test(email[0].value)) {
     errMsg(email[0], "valid email id");
     return false;
   }
@@ -81,7 +84,9 @@ function errMsg(input, errorMsg) {
   if (phone[0].value == "") {
     errMsg(phone[0], "telephone number");
     return false;
-  } else if (!telExp.test(phone[0].value)) {
+  } 
+  
+  if (!telExp.test(phone[0].value)) {
     errMsg(phone[0], "valid phone number.");
     return false;
   }
@@ -105,7 +110,6 @@ function errMsg(input, errorMsg) {
   }
 
   //teaching experience
-
   if (teachingExp[0].value == "") {
     errMsg(teachingExp[0], "teaching experience");
     return false;
@@ -116,15 +120,20 @@ function errMsg(input, errorMsg) {
   //     return false;
   // }
 
-  //academic subject
+  //teaching charges
+  // if(teachingCharges[0].value == ""){
+  //   errMsg(teachingCharges[0], "teaching charges");
+  //   return false;
+  // }
 
+
+  //academic subject
   if (subject[0].value == "nooption") {
     errMsg(subject[0], "subject");
     return false;
   }
 
   //about me
-
   if (about[0].value == "") {
     errMsg(about[0], "something about you");
     return false;
