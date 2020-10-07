@@ -107,6 +107,7 @@
                         <!-- <span>or use your account</span> -->
                         <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            
                         </span>
                         <input type="text" class="user_name"  placeholder="User name / Email"  name="email" />
                         <span class="error-icon">
@@ -128,6 +129,7 @@
                         <!-- <span>or use your email for registration</span> -->
                           <span class="error-icon">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
+                            <label class="">Please enter value</label>
                         </span>
                         <input type="text" name="user_name" class="reg" placeholder="user name" />
                           <span class="error-icon">
