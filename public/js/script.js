@@ -1,5 +1,5 @@
-var baseURL = "http://localhost/Projects/faculty4you.com/public/";
-// var baseURL = "http://facultyforyou.com/";
+// var baseURL = "http://localhost/Projects/faculty4you.com/public/";
+var baseURL = "http://facultyforyou.com/";
 
 $(document).ready(function () {
   $(".hamberger").click(function () {
