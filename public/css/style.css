@@ -2223,6 +2223,13 @@ label {
       color: #f7f7f7;
       display: inline-block;
       border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
+  @media (max-width: 582px) {
+    .body-footer p {
+      line-height: 2.5rem;
+      margin-bottom: 3rem; } }
+  @media (max-width: 582px) {
+    .body-footer .footer-list {
+      margin-bottom: 3rem; } }
 
 .social-media ul li, .nav-social-media ul li {
   margin-right: 2rem;
