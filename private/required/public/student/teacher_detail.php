@@ -21,7 +21,16 @@
             <li class="mr-5"><i class="fa fa-paw mr-2" aria-hidden="true"></i><?php echo $row["teacher_experience"] . ' years of experience';?></li>
             <li class="mr-5"><i class="fa fa-university mr-2" aria-hidden="true"></i><?php echo $row["study_cat_type"];?></li>
             <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
-            <li class="mr-5"><i class="fa fa-inr" aria-hidden="true"></i><?php echo $row["teaching_charge"];?></li>
+            <li class="mr-5">
+                <i class="fa fa-inr" aria-hidden="true"></i> 
+                <?php
+                    if($row['teaching_charge']){
+                        echo $row['teaching_charge'];
+                    } else {
+                        echo "Not disclosed";
+                    }
+                ?>
+            </li>
         </ul>
         
         <div class="row">  
