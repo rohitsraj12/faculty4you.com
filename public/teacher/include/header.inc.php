@@ -97,13 +97,12 @@
                                         $token = $mem_row['member_token'];
                                             // echo $token;
                                         if($token > 0){
-                                        if($page_title == "Profile view"){
-                                            include('../include/search_engine.php');
-                                            // echo "profile";
-                                        }else{
-                                            // echo "home page";
-                                            include('include/search_engine.php');
-                                        }}
+                                            if($page_title == "Profile view" || $page_title == "Profile update"){
+                                                include('../include/search_engine.php');
+                                            }else{
+                                                include('include/search_engine.php');
+                                            }
+                                        }
                                     ?>
                                 </div>
                             </div>
