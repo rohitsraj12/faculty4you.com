@@ -9,12 +9,10 @@
     }
 
 
-    $page_title = "profile";
+    $page_title = "Payment";
     include_once("../../private/config/config.php");
     include("../../private/required/public/components/social_media.php");
     include_once('include/header.inc.php');
-    // include("../../private/required/public/components/search.php");
-
     // trnsaction email
     include("include/email/transaction.gpay.php");
     include("include/email/transaction.phonepe.php");
