@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log in - teacher</title>
+    <title>Log in - teacher | faculty4you.com | Academic - Non academic | Online - Offline Training</title>
     <link rel="icon" href="<?php base_url();?>img/brand/factulyforyou_fevicon.png" type="image/gif" sizes="32x32">
     <link
         href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -117,22 +117,27 @@
                                 <!-- <span>or use your email for registration</span> -->
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="text" name="user_name" class="reg" placeholder="user name" />
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="tel" name="telephone" class="reg" placeholder="phone number">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <label class="error-message">Please enter value</label>
                                 </span>
                                 <input name="email" type="email" class="reg" placeholder="email" />
-                                    <span class="error-icon">
+                                <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <label class="error-message">Please enter value</label>
                                 </span>
                                 <input name="password" type="password" class="reg regPwd" placeholder="password" />
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <label class="error-message">Please enter value</label>
                                 </span>
                                 <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
                                 <button  name="submit-register" >Sign Up</button>
@@ -149,10 +154,12 @@
                                 <!-- <span>or use your account</span> -->
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="text" class="user_name"  placeholder="User name / Email"  name="email" />
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
+                                    <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="password" placeholder="Password" class="loginpass" name="password"/>
                                 <a class="forgot_password" href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
