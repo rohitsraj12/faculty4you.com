@@ -9,6 +9,9 @@ function errIcon(input) {
   input.previousElementSibling.style.display = "block";
 }
 
+
+// var reg = document.getElementsByClassName("reg");
+// reg[0].previousElementSibling.style.display="block";
 /***************************
  * 
  *    registration validation
@@ -18,7 +21,7 @@ function registration(){
   var reg = document.getElementsByClassName("reg");
   var regPwd = document.getElementsByClassName("regPwd");
   
-    if(reg[0].value == "" || reg[1].value == "" || reg[2].value == "" ||  reg[3].value == "" || reg[4].value == "") {
+    if(reg[0].value == "" && reg[1].value == "" && reg[2].value == "" &&  reg[3].value == "" && reg[4].value == "") {
       errIcon(reg[0]);
       errIcon(reg[1]);
       errIcon(reg[2]);
@@ -29,7 +32,7 @@ function registration(){
 
     
     if(reg[0].value == ""){
-      errIcon(reg[0]);
+      errIcon(reg[0]); 
       return false;
   }
     
@@ -83,7 +86,7 @@ function registration(){
 
     if(reg[4].value == ""){
       errIcon(reg[4]);
-        return false;
+      return false;
     }
 
     if(regPwd[0].value !== regPwd[1].value){
@@ -108,7 +111,7 @@ function logIn(){
   var logIn = document.getElementsByClassName("user_name");
   var logpwd = document.getElementsByClassName("loginpass");
   
-  if(logIn[0].value == "" || logpwd[0].value == ""){
+  if(logIn[0].value == "" && logpwd[0].value == ""){
     errIcon(logIn[0]);
     errIcon(logpwd[0]);
     return false;
