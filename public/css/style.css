@@ -481,7 +481,7 @@ label {
   .section-member input,
   .section-forgotpwd input {
     width: 100%;
-    margin: 8px 0;
+    margin-bottom: 2rem;
     padding: 12px 15px;
     background-color: #eee;
     border: transparent;
@@ -500,7 +500,7 @@ label {
         width: 768px;
         left: 17%;
         max-width: 100%;
-        min-height: 480px; } }
+        min-height: 600px; } }
     @media (max-width: 582px) {
       .section-member .container,
       .section-forgotpwd .container {
@@ -1434,6 +1434,9 @@ input,
   position: absolute;
   top: 0;
   right: 1rem; }
+
+.error-message {
+  color: #ff7575; }
 
 .error-icon {
   width: 100%;
