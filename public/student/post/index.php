@@ -74,7 +74,7 @@
                             <?php 
 
                                 $student_id = $row['student_id'];
-                                $query = "SELECT posts.*, subjects_categories.sub_cat_name, subjects.sub_name, study_types.study_type_name, study_categories.study_cat_type 
+                                $query = "SELECT posts.*, subjects_categories.*, subjects.*, study_types.*, study_categories.* 
                                             FROM posts
                                             JOIN subjects_categories
                                                 ON subjects_categories.sub_cat_id = posts.category_id
