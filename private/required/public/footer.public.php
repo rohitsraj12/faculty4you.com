@@ -4,7 +4,6 @@
             include("../private/required/public/components/agreement.php");
 
         ?>
-<div class="wrap-container">
     <div class="body-footer" >    
         <footer class="wrap-container text-light pt-5">
             <div class="row">
@@ -69,10 +68,7 @@
             </ul>
         </div>
     </div>
-</div>
             <!-- end body footer -->
-        </div>
-        <!-- end body wrap -->
 
         <!-- script -->
             <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
@@ -83,62 +79,60 @@
             
             <script>
                 // AOS.init();
+                $(document).ready(function(){
+                // ajax search subjects
+                    $(".search_subject").keyup(function () {
+                        var query = $(this).val();
+                        // alert(query);
+                        if (query != "") {
+                        $.ajax({
+                            url: "aj/load_data.php",
+                            method: "POST",
+                            data: { subject: query },
+                            success: function (data) {
+                            $(".subject-list").slideDown();
+                            $(".subject-list").html(data);
+                            },
+                        });
+                        } else {
+                        $(".subject-list").slideUp();
+                        $(".subject-list").html();
+                        }
+                    });
+                    $(".subject-list").on('click', 'li', function(){
+                        // alert('hi');
+                        $('.search_subject').val($(this).text());
+                        $('.subject-list').slideUp();
+                    
+                    })
 
-                
-$(document).ready(function(){
- // ajax search subjects
-    $(".search_subject").keyup(function () {
-        var query = $(this).val();
-        // alert(query);
-        if (query != "") {
-        $.ajax({
-            url: "aj/load_data.php",
-            method: "POST",
-            data: { subject: query },
-            success: function (data) {
-            $(".subject-list").slideDown();
-            $(".subject-list").html(data);
-            },
-        });
-        } else {
-        $(".subject-list").slideUp();
-        $(".subject-list").html();
-        }
-    });
-    $(".subject-list").on('click', 'li', function(){
-        // alert('hi');
-        $('.search_subject').val($(this).text());
-        $('.subject-list').slideUp();
-       
-    })
-
-    
- // ajax search subjects
-    $(".city_name").keyup(function () {
-        var query = $(this).val();
-        // alert(query);
-        if (query != "") {
-        $.ajax({
-            url: "aj/load_data.php",
-            method: "POST",
-            data: { city: query },
-            success: function (data) {
-            $(".city_list").slideDown();
-            $(".city_list").html(data);
-            },
-        });
-        } else {
-        $(".city_list").slideUp();
-        $(".city_list").html();
-        }
-    });
-    $(".city_list").on('click', 'li', function(){
-        // alert('hi');
-        $('.city_name').val($(this).text());
-        $('.city_list').slideUp();
-       
-    })
-})
+                    
+                // ajax search subjects
+                    $(".city_name").keyup(function () {
+                        var query = $(this).val();
+                        // alert(query);
+                        if (query != "") {
+                        $.ajax({
+                            url: "aj/load_data.php",
+                            method: "POST",
+                            data: { city: query },
+                            success: function (data) {
+                            $(".city_list").slideDown();
+                            $(".city_list").html(data);
+                            },
+                        });
+                        } else {
+                        $(".city_list").slideUp();
+                        $(".city_list").html();
+                        }
+                    });
+                    $(".city_list").on('click', 'li', function(){
+                        // alert('hi');
+                        $('.city_name').val($(this).text());
+                        $('.city_list').slideUp();
+                    
+                    })
+                })
               </script>
     </body>
 </html>
