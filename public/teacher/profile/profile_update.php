@@ -217,11 +217,25 @@
                                         <span class="error-msg"></span>
                                         <input type="text" name="exp" class="form-control experience" id="teaching_exp" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?> Years of experience">
                                     </div> 
+                                    
                                     <div class="form-group col-md-4">
-                                        <label for="teaching_charge">Teaching charges/hour</label>
-                                        <span class="error-msg"></span>
-                                        <input type="text" name="charges" class="form-control teaching-charges" id="teaching_charge" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?>charges per hour">
+                                        <label for="teaching_charge">Teaching charges</label>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <span class="error-msg"></span>
+                                                <input type="text" name="charges" class="form-control teaching-charges" id="teaching_charge" value="<?php //echo $row['teacher_experience']?>" placeholder="<?php //echo $row['teacher_experience']?>charges">
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <span class="error-msg"></span>
+                                                <select name="per_time" id="" class="form-control charges-time">
+                                                    <option value="nooption">Select</option>
+                                                    <option value="per hour">Per Hour</option>
+                                                    <option value="per month">Per Month</option>
+                                                </select>
+                                            </div>
+                                        </div>
                                     </div>
+                                    
                                 </div>
                                    
 
