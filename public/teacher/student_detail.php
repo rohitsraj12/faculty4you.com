@@ -30,7 +30,7 @@
         
 <?php
     if(isset($_POST['search_student_profile'])){
-        $user_name = $_POST['user_name_search'];
+        $user_name = mysqli_real_escape_string($conn, $_POST['user_name_search']);
 
 
         $home_sql = "SELECT posts.*, subjects.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
