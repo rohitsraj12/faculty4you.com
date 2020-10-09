@@ -100,10 +100,12 @@
 
 
 
-                                                        $sql = "SELECT teachers.*, cities.*, subjects.*, study_categories.* 
+                                                        $sql = "SELECT teachers.*, cities.*, subjects_categories.*, subjects.*, study_categories.* 
                                                             FROM teachers
                                                             JOIN cities
                                                                 ON cities.city_id = teachers.city_id
+                                                            JOIN subjects_categories
+                                                                ON subjects_categories.sub_cat_id = teachers.category_id
                                                             JOIN subjects
                                                                 ON subjects.subject_id = teachers.subject_id
                                                             JOIN study_categories
@@ -143,10 +145,12 @@
                                                         
                                                         // $search = "maths";
 
-                                                        $sql = "SELECT teachers.*, cities.*, subjects.*, study_categories.* 
+                                                        $sql = "SELECT teachers.*, cities.*, subjects_categories.*,  subjects.*, study_categories.* 
                                                             FROM teachers
                                                             JOIN cities
                                                                 ON cities.city_id = teachers.city_id
+                                                            JOIN subjects_categories
+                                                                ON subjects_categories.sub_cat_id = teachers.category_id
                                                             JOIN subjects
                                                                 ON subjects.subject_id = teachers.subject_id
                                                             JOIN study_categories
