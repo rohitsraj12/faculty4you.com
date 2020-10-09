@@ -95,7 +95,7 @@
                          
                 <div class="section-header u-center-text" >
                     <heeader class="text-primary-h-3"> 
-                        Non active member tutors
+                        You may also Choose
                     </header>
                 </div>
                     <?php
