@@ -35,6 +35,7 @@ $sub = "studentPost";
                 <ul class="header-tab-wrap">
                     <li class="header-tab__button active-tab" data-header-tab="tab-1">De-activated posts</li>
                     <li class="header-tab__button" data-header-tab="tab-2">Active Posts</li>
+                    <li class="header-tab__button" data-header-tab="tab-3">Applied post</li>
                 </ul>
                 <div class="tab-1 tab-detail active-tab-detail">
                     <div class="container">
@@ -88,10 +89,10 @@ $sub = "studentPost";
                 <div class="tab-2 tab-detail">
                     <div class="container">
                         <header class="header-text-3">
-                                active post
-                            </header>
+                            active post
+                        </header>
                     </div>
-                <section class="section-faq">
+                    <section class="section-faq">
                     
                         <?php
                         
@@ -109,6 +110,40 @@ $sub = "studentPost";
                                     <footer class="faq__footer h3 text-dark">
                                         <p>
                                         <?php echo $row['post_detail'];?>
+                                        </p>
+                                    </footer>
+                                </article>
+
+                        <?php
+                            }
+
+                        ?>
+                    </section>
+                </div>
+                <div class="tab-3 tab-detail">
+                    <div class="container">
+                        <header class="header-text-3">
+                            teacher viewed post
+                        </header>
+                    </div>
+                    <section class="section-faq">
+                    
+                        <?php
+                        
+                        $post_query = "SELECT * FROM posts WHERE post_state = 1 AND block_date BETWEEN now() AND DATE_ADD(now(), INTERVAL 48 HOUR) ORDER BY block_date ASC";
+                        $post_result = mysqli_query($conn, $post_query);
+
+                            while($row = mysqli_fetch_assoc($post_result)){ 
+                        ?>
+                                <article class="mb-4 border">
+                                    <header class="bg-light text-dark border-bottom faq__header">
+                                        <?php echo $row['post_title'] . " [" . $row['block_date'] . "]";?>
+                                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </header>
+                                    <footer class="faq__footer h3 text-dark">
+                                        <p>
+                                            <?php echo $row['post_detail'];?>
                                         </p>
                                     </footer>
                                 </article>
