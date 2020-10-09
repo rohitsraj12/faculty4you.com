@@ -27,42 +27,10 @@
             <?php
                 // student post search results
                 if(isset($_POST["submit-search"])){
-                    // security
                     $search = mysqli_real_escape_string($conn, $_POST["search"]);
                     $city = mysqli_real_escape_string($conn, $_POST["city"]);
 
-                    $sql = "SELECT * FROM posts WHERE post_title LIKE '%$search%' ";
-                    $result = mysqli_query($conn, $sql);
-                    $query_results = mysqli_num_rows($result);
-
                     ?>
-
-                    <!-- <section class="section-body">                     
-                        <?php 
-
-                            if($query_results > 0){
-                                while($row = mysqli_fetch_assoc($result)){
-
-                                    ?>      
-                                
-                                    <?php
-
-                                }
-                            } else {
-                                // echo "there are no result";
-                                ?> 
-                                
-                                <div class="search-result-num" >
-                                    <p>
-                                        there are no result
-                                    </p>
-                                </div>
-
-                                <?php
-                            }
-                        
-                            ?>
-                    </section>       -->
                         <div class="wrap-container">
                             <?php
                                 $study_type_sql = "SELECT * FROM study_types ORDER BY study_type_id ASC";
@@ -79,24 +47,19 @@
                                         <?php
                                             }
                                         ?>
-                                        <!-- <button class="tablinks" data-post="<?php //echo $type_row['study_type_id']?>">Online learning</button> -->
                                     </ul>
                                 </div>
                                 <div class="col-sm-9">
                                     <section class="all post__cat" id="viewPost">
-                                        <!--     <header class="text-primary-h text-center pb-5 mb-5" >
-                                            search posts
-                                        </header>
-                                        -->
                                             <div class="search-result-nu" >
                                             <?php 
-                                                $search = mysqli_real_escape_string($conn, $_POST["search"]);
+                                                // $search = mysqli_real_escape_string($conn, $_POST["search"]);
 
-                                                $city = mysqli_real_escape_string($conn, $_POST["city"]);
+                                                // $city = mysqli_real_escape_string($conn, $_POST["city"]);
 
                                                 // echo $city;
                                                 
-                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, cities.* 
+                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
                                                 JOIN std
                                                     ON std.student_id = posts.student_id
@@ -106,6 +69,10 @@
                                                     ON study_types.study_type_id = posts.study_type_id
                                                 JOIN study_categories
                                                     ON study_categories.category_id = posts.category_id
+                                                JOIN subjects_categories
+                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                JOIN subjects
+                                                    ON subjects.subject_id = posts.subject_id
                                                 WHERE (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') OR (posts.post_title LIKE '%$search%')
                                                 ORDER BY post_date DESC";
                                                 $result = mysqli_query($conn, $sql);
@@ -134,7 +101,7 @@
 
                                                 $city = mysqli_real_escape_string($conn, $_POST["city"]);
                                                 
-                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, cities.* 
+                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
                                                 JOIN std
                                                     ON std.student_id = posts.student_id
@@ -144,6 +111,10 @@
                                                     ON study_types.study_type_id = posts.study_type_id
                                                 JOIN study_categories
                                                     ON study_categories.category_id = posts.category_id
+                                                JOIN subjects_categories
+                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                JOIN subjects
+                                                    ON subjects.subject_id = posts.subject_id
                                                 WHERE posts.study_type_id = 1 AND posts.post_title LIKE '%$search%'
                                                 ORDER BY post_date DESC";
                                                 $result = mysqli_query($conn, $sql);
@@ -169,7 +140,7 @@
                                         <div class="search-result-nu" >
                                             <?php 
                                                 
-                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, cities.* 
+                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
                                                 JOIN std
                                                     ON std.student_id = posts.student_id
@@ -179,6 +150,10 @@
                                                     ON study_types.study_type_id = posts.study_type_id
                                                 JOIN study_categories
                                                     ON study_categories.category_id = posts.category_id
+                                                JOIN subjects_categories
+                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                JOIN subjects
+                                                    ON subjects.subject_id = posts.subject_id
                                                 WHERE (posts.study_type_id = 2) AND (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (posts.post_title LIKE '%$search%')
                                                 ORDER BY post_date DESC";
                                                 $result = mysqli_query($conn, $sql);
@@ -196,7 +171,43 @@
                                                 
                                                     }
                                                 ?>
-                                    </section>             
+                                    </section>
+                                    <section  class="3 post__cat" id="composePost">
+                                        <div class="search-result-nu" >
+                                            <?php 
+                                                
+                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
+                                                FROM posts
+                                                JOIN std
+                                                    ON std.student_id = posts.student_id
+                                                    JOIN cities
+                                                    ON cities.city_id = std.city_id
+                                                JOIN study_types
+                                                    ON study_types.study_type_id = posts.study_type_id
+                                                JOIN study_categories
+                                                    ON study_categories.category_id = posts.category_id
+                                                JOIN subjects_categories
+                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                JOIN subjects
+                                                    ON subjects.subject_id = posts.subject_id
+                                                WHERE (posts.study_type_id = 3) AND (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (posts.post_title LIKE '%$search%')
+                                                ORDER BY post_date DESC";
+                                                $result = mysqli_query($conn, $sql);
+                                                $query_results = mysqli_num_rows($result);
+                                            ?>
+                                            <p>
+                                                    <?php echo $query_results; ?> results are matching
+                                            </p>
+                                        </div>
+                                                <?php 
+                                                    
+                                                    while($row = mysqli_fetch_assoc($result)){
+
+                                                        include("../private/required/public/teacher_search.php");
+                                                
+                                                    }
+                                                ?>
+                                    </section>                
                                 </div>
                             </section>
                         </div>
@@ -210,6 +221,6 @@
 <?php
   include("../private/required/public/components/agreement.php");
 
-    include("../private/required/public/footer.public.php");
+include("../private/required/public/footer.public.php");
 
 ?>
