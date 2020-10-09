@@ -80,7 +80,7 @@ if(isset($_POST['submit-register'])){
             if($resultcheck > 0 ){
                 
                 // redirect to register and empty field
-                header("Location: ../login.php?error=usertaken$mail=".$email);
+                header("Location: ../registration.php?error=usertaken$mail=".$email);
                 //stop scripting
                 exit();
             } else {
