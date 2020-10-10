@@ -73,7 +73,7 @@
                                                     ON subjects_categories.sub_cat_id = posts.category_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
-                                                WHERE (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') OR (posts.post_title LIKE '%$search%')
+                                                WHERE (subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') OR (subjects.sub_name LIKE '%$search%')
                                                 ORDER BY post_date DESC";
                                                 $result = mysqli_query($conn, $sql);
                                                 $query_results = mysqli_num_rows($result);
@@ -115,7 +115,7 @@
                                                     ON subjects_categories.sub_cat_id = posts.category_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
-                                                WHERE posts.study_type_id = 1 AND posts.post_title LIKE '%$search%'
+                                                WHERE posts.study_type_id = 1 AND subjects.sub_name LIKE '%$search%'
                                                 ORDER BY post_date DESC";
                                                 $result = mysqli_query($conn, $sql);
                                                 $query_results = mysqli_num_rows($result);
@@ -154,7 +154,7 @@
                                                     ON subjects_categories.sub_cat_id = posts.category_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
-                                                WHERE (posts.study_type_id = 2) AND (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (posts.post_title LIKE '%$search%')
+                                                WHERE (posts.study_type_id = 2) AND (subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (subjects.sub_name LIKE '%$search%')
                                                 ORDER BY post_date DESC";
                                                 $result = mysqli_query($conn, $sql);
                                                 $query_results = mysqli_num_rows($result);
@@ -190,7 +190,7 @@
                                                     ON subjects_categories.sub_cat_id = posts.category_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
-                                                WHERE (posts.study_type_id = 3) AND (posts.post_title LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (posts.post_title LIKE '%$search%')
+                                                WHERE (posts.study_type_id = 3) AND (subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (subjects.sub_name LIKE '%$search%')
                                                 ORDER BY post_date DESC";
                                                 $result = mysqli_query($conn, $sql);
                                                 $query_results = mysqli_num_rows($result);

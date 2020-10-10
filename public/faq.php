@@ -26,134 +26,72 @@
             
             <div class="col-sm-9">
                 <section class="general section-faq">
-                <div class="section-faq-body wrap-container"> 
+                <div class="section-faq-body wrap-container">
+                    <?php
+                        $general_query = "SELECT * FROM faqs WHERE faq_category = 'general'";
+                        $general_result = mysqli_query($conn, $general_query);
+
+                        while($rows = mysqli_fetch_assoc($general_result)){
+                    ?>
                         <article class="mb-4 border post-sections">
                             <header class="text-light border-bottom faq__header post-header">
-                                some question
+                                <?php echo $rows['faq_question'];?>
                                 <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </header>
                             <footer class="faq__footer post-body h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                                <p><?php echo $rows['faq_answer'];?></p>
                             </footer>
                         </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
+                    <?php
+                        }
+                    ?>   
                     </div>
                 </section>
                 <section class="student section-faq">
-                <div class="section-faq-body wrap-container"> 
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
+                    <div class="section-faq-body wrap-container"> 
+                    <?php
+                        $general_query = "SELECT * FROM faqs WHERE faq_category = 'student'";
+                        $general_result = mysqli_query($conn, $general_query);
+
+                        while($rows = mysqli_fetch_assoc($general_result)){
+                    ?>
+                        <article class="mb-4 border post-sections">
+                            <header class="text-light border-bottom faq__header post-header">
+                                <?php echo $rows['faq_question'];?>
                                 <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            <footer class="faq__footer post-body h3 text-dark">
+                                <p><?php echo $rows['faq_answer'];?></p>
                             </footer>
                         </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article> <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
+                    <?php
+                        }
+                    ?>   
                     </div>
                 </section>
                 <section class="teacher section-faq">
                     <div class="section-faq-body wrap-container"> 
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
+                    <?php
+                        $general_query = "SELECT * FROM faqs WHERE faq_category = 'teacher'";
+                        $general_result = mysqli_query($conn, $general_query);
+
+                        while($rows = mysqli_fetch_assoc($general_result)){
+                    ?>
+                        <article class="mb-4 border post-sections">
+                            <header class="text-light border-bottom faq__header post-header">
+                                <?php echo $rows['faq_question'];?>
                                 <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
                                 </span>
                             </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
+                            <footer class="faq__footer post-body h3 text-dark">
+                                <p><?php echo $rows['faq_answer'];?></p>
                             </footer>
                         </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
-                        <article class="mb-4 border">
-                            <header class="bg-light text-dark border-bottom faq__header">
-                                some question
-                                <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
-                                </span>
-                            </header>
-                            <footer class="faq__footer h3 text-dark">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, culpa. Non saepe ducimus dolore sint dolorem officiis in dolores voluptatum.</p>
-                            </footer>
-                        </article>
+                    <?php
+                        }
+                    ?>   
                     </div>
                 </section>
             </div>

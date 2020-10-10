@@ -2,10 +2,10 @@
 <div class="modal fade section__agreement" id="agreement" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
-        <div class="modal-header px-5 pt-4">
-            <h5 class="modal-title h1" id="exampleModalLabel">Terms and Condition</h5>
+        <div class="modal-header post-header px-4">
+            <h5 class="modal-title  text-light h2" id="exampleModalLabel">Terms and Condition</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+            <span class="h1 text-white" aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body">

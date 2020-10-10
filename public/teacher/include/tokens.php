@@ -26,6 +26,7 @@ $teacher_phone = $user_row['teacher_phone'];
         $student_phone = $_POST['student_phone'];
         $student_email = $_POST['student_email'];
         $post = $_POST['post'];
+        $post_status = 2;
         $admin_email = "admin@facultyforyou.com";
 
         $update_query = "UPDATE memberships SET 
@@ -35,6 +36,7 @@ $teacher_phone = $user_row['teacher_phone'];
         $update_member = mysqli_query($conn, $update_query);
 
         $block_post_query = "UPDATE posts SET 
+            post_status = $post_status,
             block_date = DATE_ADD(now(), INTERVAL 48 HOUR)
             WHERE post_id = '$post'";
         $block_post_result= mysqli_query($conn, $block_post_query);

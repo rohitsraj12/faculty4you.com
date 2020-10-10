@@ -34,8 +34,9 @@ $sub = "studentPost";
             <div class="header-tab wrap-container">
                 <ul class="header-tab-wrap">
                     <li class="header-tab__button active-tab" data-header-tab="tab-1">De-activated posts</li>
-                    <li class="header-tab__button" data-header-tab="tab-2">Active Posts</li>
+                    <li class="header-tab__button" data-header-tab="tab-2">Active posts</li>
                     <li class="header-tab__button" data-header-tab="tab-3">Applied post</li>
+                    <li class="header-tab__button" data-header-tab="tab-4">Expired post</li>
                 </ul>
                 <div class="tab-1 tab-detail active-tab-detail">
                     <div class="container">
@@ -145,6 +146,60 @@ $sub = "studentPost";
                                         <p>
                                             <?php echo $row['post_detail'];?>
                                         </p>
+                                    </footer>
+                                </article>
+
+                        <?php
+                            }
+
+                        ?>
+                    </section>
+                </div>
+                <div class="tab-4 tab-detail">
+                    <div class="container">
+                        <header class="header-text-3">
+                            expired posts
+                        </header>
+                    </div>
+                    <section class="section-faq">
+                    
+                        <?php
+                        
+                        $post_query = "SELECT posts.*, std.* FROM posts 
+                            JOIN std
+                                ON std.student_id = posts.student_id
+                        WHERE post_state = 2 ORDER BY block_date ASC";
+                        $post_result = mysqli_query($conn, $post_query);
+
+                            while($row = mysqli_fetch_assoc($post_result)){ 
+                        ?>
+                                <article class="mb-4 border">
+                                    <header class="bg-light text-dark border-bottom faq__header">
+                                        <?php echo $row['post_title'] . " [" . $row['block_date'] . "]";?>
+                                        <span class="toggle__btn"><i class="fa fa-angle-down" aria-hidden="true"></i>
+                                        </span>
+                                    </header>
+                                    <footer class="faq__footer h3 text-dark">
+                                        <ul class="row border-botton pb-3">
+                                            <li class="col-2">
+                                                <?php echo $row['student_first_name'];?>
+                                            </li>
+                                            <li class="col-4">
+                                            <?php echo $row['student_email'];?> 
+
+                                            </li>
+                                            <li class="col-4">
+                                                +91<?php echo $row['student_phone'];?>
+                                            </li>
+                                            <li class="col-2">
+                                            <a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/student/student_detail.php?id=<?php echo $row['student_id'];?>">More detail</a>
+                                            </li>
+                                        </ul>
+                                        <p>
+                                            <?php echo $row['post_detail'];?>
+                                        </p>
+                                        <button class="btn btn-success">activate post</button>
+                                        <button class="btn btn-danger">deactivate post</button>
                                     </footer>
                                 </article>
 
