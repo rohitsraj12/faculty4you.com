@@ -20,7 +20,7 @@
   &-secondary {
     @include radius-all(1rem);
     padding: 0.8rem 4rem;
-   
+
     background-color: $color-gray-dark-1;
     display: inline-block;
     font-family: $font-primary;
@@ -31,7 +31,7 @@
 
   &-special {
     padding: 12px 45px;
-       @include radius-all(2rem);
+    @include radius-all(2rem);
     font-family: $font-primary;
     color: #ffffff;
     font-size: 12px;
@@ -56,9 +56,9 @@
 
   &__link {
     &-primary {
-    font-size: 1.7rem;
-    font-weight: 500;
-    color: $color-primary;
+      font-size: 1.7rem;
+      font-weight: 500;
+      color: $color-primary;
     }
   }
 }
