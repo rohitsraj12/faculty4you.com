@@ -1,7 +1,7 @@
 .body-header {
   @include bg-1;
   width: 100%;
-  @media (min-width: 583px){
+  @media (min-width: 583px) {
     height: 145px;
   }
 
@@ -412,7 +412,7 @@
       display: none;
     }
   }
-  .brand{
+  .brand {
     height: 7rem;
   }
 }
