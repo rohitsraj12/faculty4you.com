@@ -122,22 +122,22 @@
                                 <input type="text" name="user_name" class="reg" placeholder="user name" />
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                    <label class="error-message">Please enter value</label>
+                                    <label class="error-message" id="valid-number">Please enter value</label>
                                 </span>
                                 <input type="tel" name="telephone" class="reg" placeholder="phone number">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                    <label class="error-message">Please enter value</label>
+                                    <label class="error-message" id="valid-email">Please enter value</label>
                                 </span>
                                 <input name="email" type="email" class="reg" placeholder="email" />
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                    <label class="error-message">Please enter value</label>
+                                    <label class="error-message" id="valid-password">Please enter value</label>
                                 </span>
                                 <input name="password" type="password" class="reg regPwd" placeholder="password" />
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
-                                    <label class="error-message">Please enter value</label>
+                                    <label class="error-message" id="wrong-password">Please enter value</label>
                                 </span>
                                 <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
                                 <button  name="submit-register" >Sign Up</button>
