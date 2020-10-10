@@ -115,31 +115,45 @@
                                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                                 </div>
                                 <!-- <span>or use your email for registration</span> -->
+                                <div class="reg_row">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="text" name="user_name" class="reg" placeholder="user name" />
+                                </div>
+                                <div class="reg_row">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="tel" name="telephone" class="reg" placeholder="phone number">
+                        <small for="" class="form-note">eg: 9898989898</small>
+                                
+                            </div>
+                                <div class="reg_row">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input name="email" type="email" class="reg" placeholder="email" />
+                                </div>
+                                <div class="reg_row">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input name="password" type="password" class="reg regPwd" placeholder="password" />
+                        <small for="" class="form-note">Password length should be between 7 - 15 </small>
+                                
+                            </div>
+                                <div class="reg_row">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
+                                </div>
                                 <button  name="submit-register" >Sign Up</button>
                             </form>
                         </div>
@@ -152,16 +166,20 @@
                                     <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a> -->
                                 </div>
                                 <!-- <span>or use your account</span> -->
+                                <div class="login_row">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="text" class="user_name"  placeholder="User name / Email"  name="email" />
+                                </div>
+                                <div class="login_row">
                                 <span class="error-icon">
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="password" placeholder="Password" class="loginpass" name="password"/>
+                                </div>
                                 <a class="forgot_password" href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
                                 <button name="login-submit">log In</button>
                             </form>
