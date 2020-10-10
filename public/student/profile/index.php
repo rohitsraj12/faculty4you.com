@@ -30,7 +30,7 @@
     $row = mysqli_fetch_assoc($result);
 
     if(!empty($_GET['message'])){
-        $message = "Congratulations! You have successfully updated your profile detail.";
+        $message = "Congratulations! You have successfully updated your profile detail. Now post your requirement/s.";
         
 ?>
 <div class="alert alert-success m-0" role="alert">
