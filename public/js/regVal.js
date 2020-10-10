@@ -20,8 +20,10 @@ function errIcon(input) {
 function registration(){
   var reg = document.getElementsByClassName("reg");
   var regPwd = document.getElementsByClassName("regPwd");
-  
-    if(reg[0].value == "" && reg[1].value == "" && reg[2].value == "" &&  reg[3].value == "" && reg[4].value == "") {
+
+
+
+  if(reg[0].value == "" && reg[1].value == "" && reg[2].value == "" &&  reg[3].value == "" && reg[4].value == "") {
       errIcon(reg[0]);
       errIcon(reg[1]);
       errIcon(reg[2]);
@@ -46,9 +48,9 @@ function registration(){
       errIcon(reg[1]);
       return false;
     }
-
     if (!telExp.test(reg[1].value)) {
       errIcon(reg[1]);
+      document.getElementById("valid-number").innerHTML= "Please enter 10 digits"; 
       return false;
     }
 
@@ -60,6 +62,7 @@ function registration(){
 
     if (!emailExp.test(reg[2].value)) {
       errIcon(reg[2]);
+      document.getElementById("valid-email").innerHTML= "Please enter valid email"; 
       return false;
     }
   
@@ -77,10 +80,12 @@ function registration(){
 
     if(reg[3].value.length <= 6){
         errIcon(reg[3]);
+        document.getElementById("valid-password").innerHTML= "Please enter more than 6 characters"; 
         return false;
   
     } else if(reg[3].value.length >= 15){
         errIcon(reg[3]);
+        document.getElementById("valid-password").innerHTML= "Please enter less than 15 characters"; 
         return false;
     }
 
@@ -92,6 +97,7 @@ function registration(){
     if(regPwd[0].value !== regPwd[1].value){
         errIcon(regPwd[0]);
         errIcon(regPwd[1]);
+        document.getElementById("wrong-password").innerHTML= "Please enter correct password"; 
         return false;
     }
   
