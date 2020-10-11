@@ -151,7 +151,7 @@
                                     <i class="fa fa-info-circle" aria-hidden="true"></i>
                                     <label class="error-message" id="valid-email">Please enter value</label>
                                 </span>
-                                <input name="email" type="email" class="reg" placeholder="email" />
+                                <input name="email" type="text" class="reg" placeholder="email" />
                                 </div>
                                 <div class="reg_row w-100">
                                 <span class="error-icon">
