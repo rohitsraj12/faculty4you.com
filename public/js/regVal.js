@@ -1,6 +1,7 @@
 var emailExp = /^([a-zA-Z0-9\.-]+)([@])([a-zA-z0-9-]+.)([a-z]{2,8})(.[a-z]{2,8})?$/;
 var telExp = /^([0-9]{10})$/;
- // var span = document.getElementsByClassName("error-icon");
+var textOnlyExp = /^([a-zA-Z]+)$/;
+// var span = document.getElementsByClassName("error-icon");
 var errorIcon = '<i class="fa fa-info-circle" aria-hidden="true"></i>';
 
 // message error function for validation
@@ -50,7 +51,7 @@ function registration(){
     }
     if (!telExp.test(reg[1].value)) {
       errIcon(reg[1]);
-      document.getElementById("valid-number").innerHTML= "Please enter 10 digits"; 
+      document.getElementById("valid-number").innerHTML= "Please enter valid phone number"; 
       return false;
     }
 
