@@ -730,7 +730,8 @@ label {
 .error-message {
   color: #ff4153;
   position: absolute;
-  top: -2rem; }
+  top: -2rem;
+  width: 100%; }
 
 .error-icon {
   width: 100%;
