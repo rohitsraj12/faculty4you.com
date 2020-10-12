@@ -107,7 +107,7 @@ $sub = "expired";
 
                                     // if($expDate <= $today){
                                         
-                                        echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+                                        echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Renew Member</a>";
 
                                     // }
                                 ?>
