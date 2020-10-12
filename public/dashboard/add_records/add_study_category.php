@@ -71,7 +71,7 @@ $sub = "add study category";
                     <form action="" method="POST" class="row" onsubmit="return subject_validation()">
                         <div class="form-group col-sm-12">
                             <label for="q">Add Study Category</label>
-                            <input type="text" class="form-control subject" name="subject" id="q" placeholder="Science / Information technology">
+                            <input type="text" class="form-control subject" name="subject" id="q" placeholder="academic / non academic">
                             <!-- <small id="emailHelp" class="form-text text-muted">Add new subject name here.</small> -->
                         </div>
                         
@@ -102,9 +102,9 @@ $sub = "add study category";
                                 while($row = mysqli_fetch_assoc($result)){
                             ?>
                             <tr>
-                                <th scope="row"><?php echo $row['category_id'];?></th>
+                                <th scope="row"><?php echo $row['study_cat_id'];?></th>
                                 <td><?php echo $row['study_cat_type'];?></td>
-                                <td><a href="<?php base_url()?>dashboard/edit_records/edit_subject_category.php?id=<?php echo $row['category_id']?>">Edit</a><?php ?></td>
+                                <td><a href="<?php base_url()?>dashboard/edit_records/edit_study_category.php?id=<?php echo $row['study_cat_id']?>">Edit</a><?php ?></td>
                             </tr>
                             <?php 
                             }
