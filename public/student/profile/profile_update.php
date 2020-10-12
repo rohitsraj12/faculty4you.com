@@ -14,19 +14,26 @@
  
     $student_name = $_SESSION['user_name'];
 
-    $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
+    $sql = "SELECT students.*, cities.*, states.*, gender.* FROM students 
     JOIN cities
-        ON cities.city_id = std.city_id
+        ON cities.city_id = students.city_id
     JOIN states
-        ON states.state_id = std.state_id
+        ON states.state_id = students.state_id
     JOIN gender
-        ON gender.gender_id = std.gender_id
+        ON gender.gender_id = students.gender_id
      WHERE student_user_name = '$student_name'";
-    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+    // $sql = "SELECT * FROM students WHERE student_user_name = '$student_name'";
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+    
+    $email = $row['student_email'];
+    $phone = $row['student_phone'];
+    $address = $row['student_address'];
+    $pin_code = $row['city_pincode'];
 
+    // echo "hi " . $pin_code;
+    
     if(!empty($message)){
 ?>
 <div class="alert alert-success m-0" role="alert">
@@ -64,12 +71,12 @@
                                     <div class="form-group col-md-6">
                                     <label for="first_name">First name</label>
                                     <span class="error-msg"></span>
-                                    <input type="text" name="fname" class="form-control name" id="first_name" placeholder="<?php //echo $row['student_first_name'];?>">
+                                    <input type="text" name="fname" class="form-control name" id="first_name" value="<?php echo $row['student_first_name'];?>" placeholder="Enter your first name">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
                                     <span class="error-msg"></span>
-                                    <input type="text" name="lname" class="form-control name" id="last_name" placeholder="<?php //echo $row['student_last_name'];?>">
+                                    <input type="text" name="lname" class="form-control name" id="last_name"  value="<?php echo $row['student_last_name'];?>" placeholder="Enter your last name">
                                     </div>
                                 </div>
 
@@ -129,17 +136,17 @@
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
                                     <span class="error-msg"></span>
-                                    <input type="email" name="email" class="form-control email" id="email" value="<?php echo $row['student_email'];?>" placeholder="<?php echo $row['student_email'];?>">
+                                    <input type="text" name="email" class="form-control email" id="email" value="<?php echo $email;?>" placeholder="<?php echo $row['student_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">Telephone</label>
                                     <span class="error-msg"></span>
-                                    <input type="tel" name="phone" class="form-control phone" id="phone" value="<?php echo $row['student_phone'];?>" placeholder="<?php echo $row['student_phone'];?>">
+                                    <input type="tel" name="phone" class="form-control phone" id="phone" value="<?php echo $phone?>" placeholder="<?php echo $row['student_phone'];?>">
                                     </div>
                                 </div>
                                 <div class="form-group mb-4">
                                     <label for="address">Address</label>
-                                    <input type="text" name="address" class="form-control" value="<?php echo $row['student_address'];?>" id="address" placeholder="<?php echo $row['student_address'];?>">
+                                    <input type="text" name="address" class="form-control" value="<?php echo $address;?>" id="address" placeholder="<?php echo $row['student_address'];?>">
                                 </div>
                                 
                                 <div class="form-row mb-4">
@@ -171,14 +178,12 @@
                                     <div class="form-group mb-4 col-md-4">
                                         <label for="pincode">Pincode</label>
                                         <span class="error-msg"></span>
-                                        <input type="text" name="pincode" class="form-control pincode" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
+                                        <input type="text" name="pincode" class="form-control pincode" id="pincode" value="<?php echo $pin_code;?>" placeholder="<?php echo $pin_code;?>">
                                     </div>
                                 </div>
                             </div>  
                         </article>
                             <button type="submit" class="button-primary" name="update">Submit</button>
-                      
-                        
                     </form>
                 </section>
             </div>
@@ -191,3 +196,4 @@
 
     require("../include/footer.inc.php");
 ?>
+
