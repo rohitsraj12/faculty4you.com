@@ -49,7 +49,7 @@ if(isset($_POST['update'])){
             move_uploaded_file($filetemp, $destination_file);
    
 
-            $query = "UPDATE std SET student_first_name = '$first_name',
+            $query = "UPDATE students SET student_first_name = '$first_name',
             student_last_name = '$last_name',
             gender_id = $gender, 
             student_date_of_birth = '$dob',
@@ -58,7 +58,7 @@ if(isset($_POST['update'])){
             student_address = '$address', 
             city_id = '$city', 
             state_id = '$state', 
-            student_city_pincode = '$pincode', 
+            city_pincode = '$pincode', 
             student_photo = '$url' WHERE student_id=$id"; 
 
             $_result = mysqli_query($conn, $query);
