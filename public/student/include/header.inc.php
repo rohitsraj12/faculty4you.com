@@ -1,18 +1,15 @@
 <?php 
+    // $user_name = $_SESSION['user_name'];
     $student_name = $_SESSION['user_name'];
+    
 
-    $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
-    JOIN cities
-        ON cities.city_id = std.city_id
-    JOIN states
-        ON states.state_id = std.state_id
-    JOIN gender
-        ON gender.gender_id = std.gender_id
-     WHERE student_user_name = '$student_name'";
-    // $sql = "SELECT * FROM std WHERE student_user_name = '$student_name'";
+    $sql = "SELECT * FROM students WHERE student_user_name = '$student_name'";
+    // $sql = "SELECT * FROM students WHERE student_user_name = '$student_name'";
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+
+    $student_id = $row['student_id'];
 ?>
 
 <!DOCTYPE html>
@@ -65,7 +62,7 @@
                                         <?php
                                     }
                                     ?>  
-                                    <li class="header-profile">
+                                    <li class="header-profile" title="user name">
                                         <i class="fa fa-user" aria-hidden="true"></i>                        
                                         <?php 
 
@@ -132,9 +129,9 @@
                         <div  class="wrap-container">
                         <nav>
                             <ul>
-                                <li class="nav__list"><a href="<?php base_url();?>student/index.php" class="nav__link">Home</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>student/post/index.php" class="nav__link">Post</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>student/profile/index.php" class="nav__link">Profile</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/index.php" class="nav__link  <?php if($page_title == "Home page" || $page_title == "Search result" || $page_title == "Teacher details"){ echo " nav-active";}?> ">Home</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/post/index.php" class="nav__link <?php if($page_title == "View post" || $page_title == "Update post" ){ echo " nav-active";}?> ">Post</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>student/profile/index.php" class="nav__link <?php if($page_title == "View profile"|| $page_title == "Profile update" ){ echo " nav-active";}?> ">Profile</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                             </ul>
                         </nav> 
