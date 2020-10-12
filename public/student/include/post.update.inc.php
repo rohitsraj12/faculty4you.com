@@ -13,13 +13,13 @@
         `post_detail` = '$detail',
         `study_type_id` = '$study_type',
         `study_cat_id` = '$study_category',
-        `category_id` = '$subject_category',
+        `sub_cat_id` = '$subject_category',
         `subject_id` = '$subject' WHERE `post_id` = '$id'"; 
 
         $result = mysqli_query($conn, $query);
 
         
-        // header('location:'.$base_url.'index.php?message=success');
+        header('location:'.$base_url.'index.php?message=success');
         
     
     }
