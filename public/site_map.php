@@ -1,7 +1,8 @@
 <?php
     $page_title = "Sitemap";
-    require("../private/config/config.php");
     require_once("../private/config/db_connect.php");
+    require("../private/config/config.php");
+    include("../private/required/public/components/social_media.php");
     include_once("../private/required/public/header.public.php");
 
 ?>
@@ -43,7 +44,6 @@
         </section>
     </main>
 </div>
-
 
 <?php
   include("../private/required/public/components/agreement.php");
