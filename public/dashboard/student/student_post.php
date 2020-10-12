@@ -48,10 +48,10 @@ $sub = "studentPost";
                     
                         <?php
                         
-                        $post_query = "SELECT posts.*, subjects.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+                        $post_query = "SELECT posts.*, subjects.*, students.*, cities.*, states.*, study_types.*, study_categories.*
                         FROM posts
-                            JOIN std
-                                ON std.student_id = posts.student_id
+                            JOIN students
+                                ON students.student_id = posts.student_id
                             JOIN cities
                                 ON cities.city_id = posts.city_id
                             JOIN states
@@ -59,7 +59,7 @@ $sub = "studentPost";
                             JOIN study_types
                                 ON study_types.study_type_id = posts.study_type_id
                             JOIN study_categories
-                                ON study_categories.category_id = posts.category_id
+                                ON study_categories.study_cat_id = posts.study_cat_id
                             JOIN subjects
                                 ON subjects.subject_id = posts.subject_id
                         WHERE post_state = 0 ORDER BY post_id ASC";
@@ -131,7 +131,7 @@ $sub = "studentPost";
                     
                         <?php
                         
-                        $post_query = "SELECT * FROM posts WHERE post_state = 1 AND block_date BETWEEN now() AND DATE_ADD(now(), INTERVAL 48 HOUR) ORDER BY block_date ASC";
+                        $post_query = "SELECT * FROM posts WHERE post_state = 2 AND block_date BETWEEN now() AND DATE_ADD(now(), INTERVAL 48 HOUR) ORDER BY block_date ASC";
                         $post_result = mysqli_query($conn, $post_query);
 
                             while($row = mysqli_fetch_assoc($post_result)){ 
@@ -165,10 +165,10 @@ $sub = "studentPost";
                     
                         <?php
                         
-                        $post_query = "SELECT posts.*, std.* FROM posts 
-                            JOIN std
-                                ON std.student_id = posts.student_id
-                        WHERE post_state = 2 ORDER BY block_date ASC";
+                        $post_query = "SELECT posts.*, students.* FROM posts 
+                            JOIN students
+                                ON students.student_id = posts.student_id
+                        WHERE post_state = 2 AND block_date < now() ORDER BY block_date ASC";
                         $post_result = mysqli_query($conn, $post_query);
 
                             while($row = mysqli_fetch_assoc($post_result)){ 
@@ -198,8 +198,9 @@ $sub = "studentPost";
                                         <p>
                                             <?php echo $row['post_detail'];?>
                                         </p>
-                                        <button class="btn btn-success">activate post</button>
-                                        <button class="btn btn-danger">deactivate post</button>
+                                            <button data-id="<?php echo $row['post_id']?>" class="btn btn-success activete_post">activate post</button>
+                                            <button data-id="<?php echo $row['post_id']?>" class="btn btn-danger deactivete_post">deactivate post</button>
+                                  
                                     </footer>
                                 </article>
 
