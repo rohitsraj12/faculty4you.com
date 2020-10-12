@@ -33,10 +33,10 @@
         $user_name = mysqli_real_escape_string($conn, $_POST['user_name_search']);
 
 
-        $home_sql = "SELECT posts.*, subjects.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+        $home_sql = "SELECT posts.*, subjects.*, students.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
             FROM posts
-                JOIN std
-                    ON std.student_id = posts.student_id
+                JOIN students
+                    ON students.student_id = posts.student_id
                 JOIN cities
                     ON cities.city_id = posts.city_id
                 JOIN states
@@ -47,7 +47,7 @@
                     ON study_categories.category_id = posts.category_id
                 JOIN subjects
                     ON subjects.subject_id = posts.subject_id
-                WHERE std.student_user_name = '$user_name' AND posts.subject_id = '$teacher_subject'";
+                WHERE students.student_user_name = '$user_name' AND posts.subject_id = '$teacher_subject'";
             $home_result = mysqli_query($conn, $home_sql);
             $row = mysqli_fetch_assoc($home_result);
             $student_id = $row['student_id'];
@@ -59,13 +59,13 @@
                 <section class="col-md-4">
                     <article class="article-profil" >
                     <?php
-                          $student_query = "SELECT std.*, gender.*, cities.*, states.* FROM std 
+                          $student_query = "SELECT students.*, gender.*, cities.*, states.* FROM students 
                           LEFT JOIN cities
-                          ON cities.city_id = std.city_id
+                          ON cities.city_id = students.city_id
                       LEFT JOIN states
-                          ON states.state_id = std.state_id
+                          ON states.state_id = students.state_id
                       LEFT JOIN gender
-                          ON gender.gender_id = std.gender_id
+                          ON gender.gender_id = students.gender_id
                           WHERE student_id = '$student_id'";
                           $student_result = mysqli_query($conn, $student_query);
                           $student_row = mysqli_fetch_assoc($student_result);
@@ -135,44 +135,43 @@
                     </article>
                 </section>
             </div>
-<?php
-    } else if($_GET['id']){
-// if(!empty($_GET['id'])){
-    $id = $_GET['id'];
-    // $postid = $_GET['id'];
-    $home_sql = "SELECT posts.*, subjects.*, std.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
-    FROM posts
-        JOIN std
-            ON std.student_id = posts.student_id
-        JOIN cities
-            ON cities.city_id = posts.city_id
-        JOIN states
-            ON states.state_id = posts.state_id
-        JOIN study_types
-            ON study_types.study_type_id = posts.study_type_id
-        JOIN study_categories
-            ON study_categories.category_id = posts.category_id
-        JOIN subjects
-            ON subjects.subject_id = posts.subject_id
-        WHERE post_id = $id";
-    $home_result = mysqli_query($conn, $home_sql);
-    $row = mysqli_fetch_assoc($home_result);
-    $student_id = $row['student_id'];
-    // echo $student_row['student_first_name'];
-// }
-?>
-
+            <?php
+                } else if($_GET['id']){
+            // if(!empty($_GET['id'])){
+                $id = $_GET['id'];
+                // $postid = $_GET['id'];
+                $home_sql = "SELECT posts.*, subjects.*, students.*, cities.*, states.state_name, study_types.study_type_name, study_categories.study_cat_type 
+                FROM posts
+                    JOIN students
+                        ON students.student_id = posts.student_id
+                    JOIN cities
+                        ON cities.city_id = posts.city_id
+                    JOIN states
+                        ON states.state_id = posts.state_id
+                    JOIN study_types
+                        ON study_types.study_type_id = posts.study_type_id
+                    JOIN study_categories
+                        ON study_categories.study_cat_id = posts.study_cat_id
+                    JOIN subjects
+                        ON subjects.subject_id = posts.subject_id
+                    WHERE post_id = $id";
+                $home_result = mysqli_query($conn, $home_sql);
+                $row = mysqli_fetch_assoc($home_result);
+                $student_id = $row['student_id'];
+                // echo $student_row['student_first_name'];
+            // }
+            ?>
             <div class="section-body row">
                 <section class="col-md-4">
                     <article class="article-profil" >
                     <?php
-                          $student_query = "SELECT std.*, gender.*, cities.*, states.* FROM std 
+                          $student_query = "SELECT students.*, gender.*, cities.*, states.* FROM students 
                           LEFT JOIN cities
-                          ON cities.city_id = std.city_id
+                          ON cities.city_id = students.city_id
                       LEFT JOIN states
-                          ON states.state_id = std.state_id
+                          ON states.state_id = students.state_id
                       LEFT JOIN gender
-                          ON gender.gender_id = std.gender_id
+                          ON gender.gender_id = students.gender_id
                           WHERE student_id = '$student_id'";
                           $student_result = mysqli_query($conn, $student_query);
                           $student_row = mysqli_fetch_assoc($student_result);
