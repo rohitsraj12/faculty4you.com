@@ -32,7 +32,7 @@
                         <p> 
                             <?php
 
-                                    $query = "SELECT * FROM std";
+                                    $query = "SELECT * FROM students";
                                     $result = mysqli_query($conn, $query);
                                     $row = mysqli_num_rows($result);
 
