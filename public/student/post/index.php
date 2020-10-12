@@ -77,13 +77,13 @@
                                 $query = "SELECT posts.*, subjects_categories.*, subjects.*, study_types.*, study_categories.* 
                                             FROM posts
                                             JOIN subjects_categories
-                                                ON subjects_categories.sub_cat_id = posts.category_id
+                                                ON subjects_categories.sub_cat_id = posts.sub_cat_id
                                             JOIN subjects
                                                 ON subjects.subject_id = posts.subject_id
                                             JOIN study_types
                                                 ON study_types.study_type_id = posts.study_type_id
                                             JOIN study_categories
-                                                ON study_categories.category_id = posts.category_id
+                                                ON study_categories.study_cat_id = posts.study_cat_id
                                             WHERE student_id = $student_id AND post_state = 1
                                             ORDER BY post_id DESC";
 
