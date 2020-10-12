@@ -29,7 +29,7 @@ session_start();
         <div class="form-group mb-5 mt-4 wrap-form">
             <label for="title">Title</label>
             <span class="error-msg"></span>
-            <input name="title" class="form-control title" type="text" id="title" placeholder="<?php //echo $row['post_title'];?>">
+            <input name="title" class="form-control title" type="text" id="title" value="<?php echo $row['post_title'];?>" placeholder="<?php echo $row['post_title'];?>">
         </div>
 
         <div class="form-group row mb-5">
@@ -104,3 +104,4 @@ session_start();
 
     require("../include/footer.inc.php");
 ?>
+
