@@ -105,7 +105,7 @@ $sub = "add subject";
                                     while($row = mysqli_fetch_assoc($result)){;
                                 ?>
 
-                                <option value="<?php echo $row['category_id'];?>"><?php echo $row['study_cat_type'];?></option>
+                                <option value="<?php echo $row['study_cat_id'];?>"><?php echo $row['study_cat_type'];?></option>
 
                                 <?php
                                 }
@@ -136,7 +136,7 @@ $sub = "add subject";
                                     LEFT JOIN subjects_categories
                                         ON subjects_categories.sub_cat_id = subjects.sub_cat_id
                                     LEFT JOIN study_categories
-                                        ON study_categories.category_id = subjects.study_cat_id
+                                        ON study_categories.study_cat_id = subjects.study_cat_id
                                         ORDER BY subjects.sub_name ASC";
                                 $result = mysqli_query($conn, $study_query);
 
