@@ -36,7 +36,7 @@ $sub = "add subject category";
                 
     
                 $query = "UPDATE `study_categories` SET `study_cat_type` = '$subject' 
-                WHERE category_id = '$id'";
+                WHERE study_cat_id = '$id'";
                           
                 $result = mysqli_query($conn, $query); 
                 // test if there was a query error
@@ -103,7 +103,7 @@ $sub = "add subject category";
                                 while($row = mysqli_fetch_assoc($result)){
                             ?>
                             <tr>
-                                <th scope="row"><?php echo $row['category_id'];?></th>
+                                <th scope="row"><?php echo $row['study_cat_id'];?></th>
                                 <td><?php echo $row['study_cat_type'];?></td>
                                 <!-- <td><a href="<?php base_url()?>dashboard/edit_records/edit_subject.php?id=<?php echo $row['sub_cat_id']?>">Edit</a><?php ?></td> -->
                             </tr>
