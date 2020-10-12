@@ -76,7 +76,7 @@
                                             $token = $row['member_token'];
                                             
                                             if($token == 0){
-                                                echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+                                                echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Renew Member</a>";
 
                                                 // if()
                                             } else{
@@ -194,7 +194,7 @@
                                             $token = $row['member_token'];
                                             
                                             if($token > 0){
-                                                echo "<a href='../add_records/add_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Member</a>";
+                                                echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Renew Member</a>";
 
                                                 // if()
                                             } else{
