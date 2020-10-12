@@ -5,14 +5,27 @@
         header('location: login.php');
     } 
     $page_title = "Home page";
+    $student_name = $_SESSION['user_name'];
 
     require_once("../../private/config/db_connect.php");
     require_once("../../private/config/config.php");
 
     include("../../private/required/public/components/social_media.php");
-    require("include/header.inc.php");
+    $sql = "SELECT students.*, cities.*, states.*, gender.* FROM students 
+    JOIN cities
+        ON cities.city_id = students.city_id
+    JOIN states
+        ON states.state_id = students.state_id
+    JOIN gender
+        ON gender.gender_id = students.gender_id
+     WHERE student_user_name = '$student_name'";
+    // $sql = "SELECT * FROM students WHERE student_user_name = '$student_name'";
 
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
     $student_id = $row['student_id'];
+
+    require("include/header.inc.php");
     ?>
     <div class="body-container">
         <main>
@@ -40,12 +53,12 @@
                                 JOIN subjects
                                     ON subjects.subject_id = teachers.subject_id
                                 JOIN study_categories
-                                    ON study_categories.category_id = teachers.category_id 
+                                    ON study_categories.study_cat_id = teachers.study_cat_id 
                                 JOIN memberships
                                     ON memberships.teacher_id = teachers.teacher_id  
                                 JOIN posts
                                     ON posts.subject_id = teachers.subject_id 
-                             WHERE teachers.category_id = 1 
+                             WHERE teachers.study_cat_id = 1 
                                 AND ((memberships.member_token > 0 AND membership_expiry_date < CURRENT_DATE())
                                     OR (memberships.member_token > 0 OR membership_expiry_date < CURRENT_DATE())) 
                                 AND (posts.student_id = '$student_id' AND posts.subject_id = teachers.subject_id)";
@@ -70,21 +83,19 @@
                                     JOIN subjects
                                         ON subjects.subject_id = teachers.subject_id
                                     JOIN study_categories
-                                        ON study_categories.category_id = teachers.category_id 
+                                        ON study_categories.study_cat_id = teachers.study_cat_id 
                                     JOIN memberships
                                         ON memberships.teacher_id = teachers.teacher_id  
                                     JOIN posts
                                         ON posts.subject_id = teachers.subject_id 
 
-                                WHERE teachers.category_id = 2 AND memberships.member_token > 0 AND posts.student_id = '$student_id' AND posts.subject_id = teachers.subject_id";
+                                WHERE teachers.study_cat_id = 2 AND memberships.member_token > 0 AND posts.student_id = '$student_id' AND posts.subject_id = teachers.subject_id";
                              
                              $category_result = mysqli_query($conn, $category_query);
                                 while($row = mysqli_fetch_assoc($category_result)){
                                   // fetching teacher detail from private
                                   include("../../private/required/public/student/teacher_detail.php");  
-                                      
                                 }
-                                
                             ?>
                         </section>
                     </div>
@@ -104,8 +115,8 @@
                             ON memberships.teacher_id = teachers.teacher_id  
                         JOIN posts
                             ON posts.subject_id = teachers.subject_id 
-                        WHERE (memberships.member_token > 0 
-                                AND membership_expiry_date < CURRENT_DATE()) 
+                        WHERE (memberships.member_token = 0 
+                                OR membership_expiry_date < CURRENT_DATE()) 
                             AND (posts.student_id = '$student_id' 
                                 AND posts.subject_id = teachers.subject_id)";
 
