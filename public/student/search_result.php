@@ -15,7 +15,7 @@
     $student_name = $_SESSION['user_name'];
 
         
-    $sql = "SELECT * FROM std 
+    $sql = "SELECT * FROM students 
      WHERE student_user_name = '$student_name'";
 
     $result = mysqli_query($conn, $sql);
@@ -114,9 +114,8 @@
                                             JOIN subjects
                                                 ON subjects.subject_id = teachers.subject_id
                                             JOIN study_categories
-                                                ON study_categories.category_id = teachers.category_id
-                                            WHERE study_categories.category_id = 1  AND subjects.sub_name = '$search'";
-                                        
+                                                ON study_categories.study_cat_id = teachers.study_cat_id
+                                            WHERE study_categories.study_cat_id = 1 AND subjects.sub_name = '$search'";
                                         $result = mysqli_query($conn, $sql);
                                         $query_results = mysqli_num_rows($result);
 
@@ -157,8 +156,8 @@
                                             JOIN subjects
                                                 ON subjects.subject_id = teachers.subject_id
                                             JOIN study_categories
-                                                ON study_categories.category_id = teachers.category_id
-                                            WHERE study_categories.category_id = 2 AND subjects.sub_name = '$search'";
+                                                ON study_categories.study_cat_id = teachers.study_cat_id
+                                            WHERE study_categories.study_cat_id = 2 AND subjects.sub_name = '$search'";
                                         
                                         $result = mysqli_query($conn, $sql);
                                         $query_results = mysqli_num_rows($result);
