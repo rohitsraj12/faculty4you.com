@@ -71,8 +71,8 @@
                         <div class="wrap-container">
                             <nav>
                                 <ul>
-                                    <li class="nav__list"><a href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
-                                    <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Tutor registration</a></li>
+                                    <li class="nav__list"><a href="<?php base_url();?>" class="nav__link">Home</a></li>
+                                    <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link nav-active">Tutor registration</a></li>
                                     <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Tutor login</a></li>
                                     <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
                                     <li class="nav__list"><a href="<?php base_url();?>student/login.php" class="nav__link">Student login</a></li>
