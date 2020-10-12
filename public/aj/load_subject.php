@@ -19,11 +19,11 @@
         $output = "";
         while($row = mysqli_fetch_assoc($result)){
             // echo "hi <br/>";
-            $output .= '<option value="'. $row["category_id"] . '">' . $row['study_cat_type'] . '</option>';
+            $output .= '<option value="'. $row["study_cat_id"] . '">' . $row['study_cat_type'] . '</option>';
         }
     } else if($_POST['type'] == "subjectCat") {
         $id = $_POST['id'];
-        $sql = "SELECT * FROM subjects_categories WHERE category_id = '$id' ORDER BY sub_cat_name ASC";
+        $sql = "SELECT * FROM subjects_categories WHERE study_cat_id = '$id' ORDER BY sub_cat_name ASC";
         // $sql = "SELECT * FROM subjects WHERE sub_cat_id = '$id'";
         $result = mysqli_query($conn, $sql);
 
