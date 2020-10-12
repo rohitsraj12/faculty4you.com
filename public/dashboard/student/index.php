@@ -68,11 +68,11 @@ $sub = "studentDetail";
                     </thead>
                     <tbody>
                         <?php
-                            $sql = "SELECT std.*, cities.*, states.* FROM std 
+                            $sql = "SELECT students.*, cities.*, states.* FROM students 
                             LEFT JOIN cities
-                                ON cities.city_id = std.city_id
+                                ON cities.city_id = students.city_id
                             LEFT JOIN states
-                                ON states.state_id = std.state_id
+                                ON states.state_id = students.state_id
                             ORDER BY student_id ASC";
                         
                             $result = mysqli_query($conn, $sql);
