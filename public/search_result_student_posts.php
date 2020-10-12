@@ -59,18 +59,18 @@
 
                                                 // echo $city;
                                                 
-                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, subjects_categories.*, subjects.*, cities.* 
+                                                $sql = "SELECT posts.*, students.*, study_types.*, study_categories.*, subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
-                                                JOIN std
-                                                    ON std.student_id = posts.student_id
+                                                JOIN students
+                                                    ON students.student_id = posts.student_id
                                                     JOIN cities
-                                                    ON cities.city_id = std.city_id
+                                                    ON cities.city_id = students.city_id
                                                 JOIN study_types
                                                     ON study_types.study_type_id = posts.study_type_id
                                                 JOIN study_categories
-                                                    ON study_categories.category_id = posts.category_id
+                                                    ON study_categories.study_cat_id = posts.study_cat_id
                                                 JOIN subjects_categories
-                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                    ON subjects_categories.sub_cat_id = posts.sub_cat_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
                                                 WHERE (subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') OR (subjects.sub_name LIKE '%$search%')
@@ -91,28 +91,25 @@
                                                 ?>
                                     </section>
                                     <section class="1 post__cat" id="viewPost">
-                                        <!--     <header class="text-primary-h text-center pb-5 mb-5" >
-                                            search posts
-                                        </header>
-                                        -->
+                                        
                                             <div class="search-result-nu" >
                                             <?php 
                                                 $search = mysqli_real_escape_string($conn, $_POST["search"]);
 
                                                 $city = mysqli_real_escape_string($conn, $_POST["city"]);
                                                 
-                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*, subjects_categories.*, subjects.*, cities.* 
+                                                $sql = "SELECT posts.*, students.*, study_types.*, study_categories.*, subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
-                                                JOIN std
-                                                    ON std.student_id = posts.student_id
+                                                JOIN students
+                                                    ON students.student_id = posts.student_id
                                                     JOIN cities
-                                                    ON cities.city_id = std.city_id
+                                                    ON cities.city_id = students.city_id
                                                 JOIN study_types
                                                     ON study_types.study_type_id = posts.study_type_id
                                                 JOIN study_categories
-                                                    ON study_categories.category_id = posts.category_id
+                                                    ON study_categories.study_cat_id = posts.study_cat_id
                                                 JOIN subjects_categories
-                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                    ON subjects_categories.sub_cat_id = posts.sub_cat_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
                                                 WHERE posts.study_type_id = 1 AND subjects.sub_name LIKE '%$search%'
@@ -140,18 +137,18 @@
                                         <div class="search-result-nu" >
                                             <?php 
                                                 
-                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
+                                                $sql = "SELECT posts.*, students.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
-                                                JOIN std
-                                                    ON std.student_id = posts.student_id
+                                                JOIN students
+                                                    ON students.student_id = posts.student_id
                                                     JOIN cities
-                                                    ON cities.city_id = std.city_id
+                                                    ON cities.city_id = students.city_id
                                                 JOIN study_types
                                                     ON study_types.study_type_id = posts.study_type_id
                                                 JOIN study_categories
-                                                    ON study_categories.category_id = posts.category_id
+                                                    ON study_categories.study_cat_id = posts.study_cat_id
                                                 JOIN subjects_categories
-                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                    ON subjects_categories.sub_cat_id = posts.sub_cat_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
                                                 WHERE (posts.study_type_id = 2) AND (subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (subjects.sub_name LIKE '%$search%')
@@ -176,18 +173,18 @@
                                         <div class="search-result-nu" >
                                             <?php 
                                                 
-                                                $sql = "SELECT posts.*, std.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
+                                                $sql = "SELECT posts.*, students.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
-                                                JOIN std
-                                                    ON std.student_id = posts.student_id
+                                                JOIN students
+                                                    ON students.student_id = posts.student_id
                                                     JOIN cities
-                                                    ON cities.city_id = std.city_id
+                                                    ON cities.city_id = students.city_id
                                                 JOIN study_types
                                                     ON study_types.study_type_id = posts.study_type_id
                                                 JOIN study_categories
-                                                    ON study_categories.category_id = posts.category_id
+                                                    ON study_categories.study_cat_id = posts.study_cat_id
                                                 JOIN subjects_categories
-                                                    ON subjects_categories.sub_cat_id = posts.category_id
+                                                    ON subjects_categories.sub_cat_id = posts.sub_cat_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
                                                 WHERE (posts.study_type_id = 3) AND (subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') AND (subjects.sub_name LIKE '%$search%')
