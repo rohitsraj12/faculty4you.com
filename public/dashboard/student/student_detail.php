@@ -12,13 +12,13 @@
     include("../include/header.inc.php");
 
     $id = $_GET['id'];
-    $sql = "SELECT std.*, cities.*, states.*, gender.* FROM std 
+    $sql = "SELECT students.*, cities.*, states.*, gender.* FROM students 
     LEFT JOIN cities
-        ON cities.city_id = std.city_id
+        ON cities.city_id = students.city_id
     LEFT JOIN states
-        ON states.state_id = std.state_id
+        ON states.state_id = students.state_id
     LEFT JOIN gender
-        ON gender.gender_id = std.gender_id
+        ON gender.gender_id = students.gender_id
     WHERE student_id = '$id'";
     // $sql = "SELECT * FROM teachers WHERE teacher_user_name = '$teacher_name'";
 
