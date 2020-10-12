@@ -12,8 +12,6 @@
     $user_result = mysqli_query($conn, $user_query);
     $user_row = mysqli_fetch_assoc($user_result);
 
-    $teacher_id = $user_row['teacher_id'];
-
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -71,7 +69,7 @@
                                     <?php
                                     }
                                     ?>  
-                                        <li class="header-profile">
+                                        <li class="header-profile" title="user name">
                                         <i class="fa fa-user" aria-hidden="true"></i>                        
                                         <?php 
 
@@ -93,7 +91,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                                                                <a href="<?php base_url();?>teacher/profile/profile_update.php?id=<?php echo $user_row['teacher_id'];?>" type="button" class="button-primary">create profile</a>
+                                                                <a href="<?php base_url();?>teacher/profile/profile_update.php?id=<?php echo $teacher_id;?>" type="button" class="button-primary">create profile</a>
                                                             </div>
                                                             </div>
                                                         </div>
@@ -121,6 +119,7 @@
                             
                                 <div class="section__header-search">
                                     <?php
+                                        if(!empty($teacher_name)){
                                         $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id";
                                         $member_result = mysqli_query($conn, $member_query);
                                         $mem_row = mysqli_fetch_assoc($member_result);
@@ -133,6 +132,7 @@
                                                 include('include/search_engine.php');
                                             }
                                         }
+                                    }
                                     ?>
                                 </div>
                             </div>
@@ -142,8 +142,8 @@
                         <div class="wrap-container">
                         <nav>
                             <ul>
-                                <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link nav-active">Home</a></li>
-                                <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link">Profile</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link <?php if($page_title == "Home page" || $page_title == "Membership plan" || $page_title == "Payment" || $page_title == "Student's post details"){ echo " nav-active";}?>">Home</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link <?php if($page_title == "Profile view" || $page_title == "Profile update"){ echo "nav-active";}?>">Profile</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                             
                   
