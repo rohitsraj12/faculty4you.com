@@ -173,7 +173,7 @@
                                 <p class="text-white pb-3" style = "font-size : 2rem">Registered Students</p>
                                 <p class="h1 text-white" style="font-size: 4.8rem">
                                     <?php
-                                        $query = "SELECT * FROM std";
+                                        $query = "SELECT * FROM students";
                                         $result = mysqli_query($conn, $query);
                                         $row = mysqli_num_rows($result);
 
@@ -290,12 +290,12 @@
                         </div>
                         <blockquote class="section-body wrap-container owl-carousel owl-theme">
                         <?php
-                            $std_testimonial_query = "SELECT testimonials.*, std.* FROM testimonials 
-                            LEFT JOIN std
-                                ON std.student_id = testimonials.student_id LIMIT 4";
-                            $std_testimonial_result = mysqli_query($conn, $std_testimonial_query);
+                            $students_testimonial_query = "SELECT testimonials.*, students.* FROM testimonials 
+                            LEFT JOIN students
+                                ON students.student_id = testimonials.student_id LIMIT 4";
+                            $students_testimonial_result = mysqli_query($conn, $students_testimonial_query);
 
-                            while($row = mysqli_fetch_assoc($std_testimonial_result)){
+                            while($row = mysqli_fetch_assoc($students_testimonial_result)){
                                
                         ?>
                         <article class="article-block" >
