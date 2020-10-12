@@ -8,9 +8,9 @@
     include_once("../../../../private/config/config.php");
 
     $student_name = $_SESSION['user_name'];
-    $student_query = "SELECT std.*, cities.* FROM std
+    $student_query = "SELECT students.*, cities.* FROM students
             LEFT JOIN cities
-                ON cities.city_id = std.city_id 
+                ON cities.city_id = students.city_id 
     WHERE student_user_name = '$student_name'";
     $student_result = mysqli_query($conn, $student_query);
     $student_row = mysqli_fetch_assoc($student_result);
