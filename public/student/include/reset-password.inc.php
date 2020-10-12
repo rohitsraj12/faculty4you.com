@@ -44,7 +44,7 @@ if(isset($_POST['reset_password_submit'])){
             } else if ($token_check === true) {
                 $token_email = $row["pws_reset_email"];
 
-                $sql = "SELECT * FROM std WHERE student_email = ?"; 
+                $sql = "SELECT * FROM students WHERE student_email = ?"; 
                 $stmt = mysqli_stmt_init($conn);
 
                 if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -59,7 +59,7 @@ if(isset($_POST['reset_password_submit'])){
                         echo "there was an error.";
                         exit();
                     } else {
-                        $sql = "UPDATE std SET student_password =? WHERE student_email = ?";
+                        $sql = "UPDATE students SET student_password =? WHERE student_email = ?";
                         $stmt = mysqli_stmt_init($conn);
 
                         if(!mysqli_stmt_prepare($stmt, $sql)){
