@@ -9,53 +9,51 @@
     $sub = "registered";
     require("../../../private/config/config.php");
     require("../../../private/config/db_connect.php");
+    
+    if(isset($_REQUEST['submit_member'])){
+        //checking  for empty field
+        if(($_REQUEST['expDate'] == "" || $_REQUEST['membership_type'] == "" || $_REQUEST['number'] == "")){
+        ?>
+            <div class="alert alert-danger" role="alert">
+                <?php  echo "Fill all fields..";?>
+            </div>
+        <?php 
+        } else {
+            
+            $id = $_GET['id'];
+
+            $date = date("Y/m/d");
+            $exp = $_REQUEST['expDate'];
+            $type = $_REQUEST["membership_type"];
+            $token = $_REQUEST['number'];
+            $status = "1";
+
+            $query = "INSERT INTO memberships (`teacher_id`, `membership_type`, `member_token`, `membership_starting_date`, `membership_expiry_date`, `membership_status`) 
+              VALUES ('$id', '$type', '$token', '$date', '$exp', '$status')";
+                      
+            $result = mysqli_query($conn, $query); 
+            // test if there was a query error
+            if($result) {
+
+        ?>
+            <div class="alert alert-primary" role="alert">
+                <?php  
+                //echo "successfully activated membership.!";
+                
+                    header('location: ../teacher/teacher_detail.php?id=' . $id);
+                ?>
+            </div>
+        <?php 
+            }else{
+                die("Database query failed " . mysqli_connect_error($conn));
+            }
+        }
+    }
     include("../include/header.inc.php");
 
 ?>
     
     <div class="body-container-right"> 
-        
-
-    <?php
-         if(isset($_REQUEST['submit_member'])){
-            //checking  for empty field
-            if(($_REQUEST['expDate'] == "" || $_REQUEST['membership_type'] == "" || $_REQUEST['number'] == "")){
-    ?>
-        <div class="alert alert-danger" role="alert">
-            <?php  echo "Fill all fields..";?>
-        </div>
-    <?php 
-            } else {
-                
-                $id = $_GET['id'];
-
-                $date = date("Y/m/d");
-                $exp = $_REQUEST['expDate'];
-                $type = $_REQUEST["membership_type"];
-                $token = $_REQUEST['number'];
-                $status = "1";
-    
-                $query = "INSERT INTO memberships (`teacher_id`, `membership_type`, `member_token`, `membership_starting_date`, `membership_expiry_date`, `membership_status`) 
-                  VALUES ('$id', '$type', '$token', '$date', '$exp', '$status')";
-                          
-                $result = mysqli_query($conn, $query); 
-                // test if there was a query error
-                if($result) {
-
-            ?>
-                <div class="alert alert-primary" role="alert">
-                    <?php  echo "successfully Inserted testimonial.!";
-                    
-                        // header('Location: ../testimonial/index.php');
-                    ?>
-                </div>
-            <?php 
-                }else{
-                    die("Database query failed " . mysqli_connect_error($conn));
-                }
-            }
-        }            
-    ?>
         <div class="wrap-container">
         <div class="page-header">
             <div class="container">
