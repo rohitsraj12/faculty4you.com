@@ -8,7 +8,7 @@
     include_once("../../../../private/config/config.php");
 
     $student_name = $_SESSION['user_name'];
-    $student_query = "SELECT * FROM std 
+    $student_query = "SELECT * FROM students 
     WHERE student_user_name = '$student_name'";
     $student_result = mysqli_query($conn, $student_query);
     $student_row = mysqli_fetch_assoc($student_result);
