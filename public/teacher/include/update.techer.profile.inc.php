@@ -15,14 +15,12 @@ if(isset($_POST['update'])){
     $address = $_POST['address'];
     $city = $_POST['city'];
     $state = $_POST['state'];
-    // $pincode = $_POST['pincode'];
+    $pincode = $_POST['pincode'];
     $cat = $_POST['category'];
     $exp = $_POST['exp'];
     $sub = $_POST['subject'];
+    $sub_cat = $_POST['subject_category'];
     $files = $_FILES['file'];
-    // $single = $_POST['single'];
-    // $group = $_POST['group'];
-    // $home = $_POST['home'];
     $about = $_POST['about_me'];
     $charges = $_POST['charges']. " " . $_POST['per_time'];
         
@@ -60,8 +58,10 @@ if(isset($_POST['update'])){
                 teacher_address = '$address',
                 city_id = $city,
                 state_id = $state,
+                city_pincode = $pincode,
+                study_cat_id = '$cat',
+                sub_cat_id = '$sub_cat',
                 subject_id = $sub,
-                category_id = '$cat',
                 teacher_experience = '$exp',
                 teacher_about_me = '$about', 
                 teaching_charge = '$charges',
