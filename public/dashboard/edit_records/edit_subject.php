@@ -112,7 +112,7 @@ $sub = "add subject";
                                     while($row = mysqli_fetch_assoc($result)){;
                                 ?>
 
-                                <option value="<?php echo $row['category_id'];?>"><?php echo $row['study_cat_type'];?></option>
+                                <option value="<?php echo $row['study_cat_id'];?>"><?php echo $row['study_cat_type'];?></option>
 
                                 <?php
                                 }
