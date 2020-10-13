@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  var baseURL = "http://localhost/Projects/faculty4you.com/public/";
-  // var baseURL = "http://facultyforyou.com/";
+  // var baseURL = "http://localhost/Projects/faculty4you.com/public/";
+  var baseURL = "http://facultyforyou.com/";
 
   // load subjects on search field
   $(".search_subject").keyup(function () {
@@ -8,7 +8,7 @@ $(document).ready(function () {
     // alert(query);
     if (query != "") {
       $.ajax({
-        url: baseURL + "aj/load_data.php",
+        url:  baseURL + "aj/load_data.php",
         method: "POST",
         data: { subject: query },
         success: function (data) {
