@@ -732,7 +732,8 @@ label {
   color: #ff4153;
   position: absolute;
   top: -2rem;
-  width: 100%; }
+  display: block;
+  right: 2px; }
 
 .error-icon {
   width: 100%;
