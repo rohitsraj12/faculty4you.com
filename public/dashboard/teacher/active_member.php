@@ -156,9 +156,8 @@
                                         $sql = "SELECT memberships.*, teachers.* FROM memberships
                                         LEFT JOIN teachers
                                             ON teachers.teacher_id = memberships.teacher_id
-                                        WHERE membership_expiry_date < CURRENT_DATE() AND memberships.member_token > 0
-                                        ORDER BY member_token ASC 
-                                        ";
+                                        WHERE membership_expiry_date < CURRENT_DATE() AND memberships.member_token = 0
+                                        ORDER BY member_token ASC";
                                         $results = mysqli_query($conn, $sql);
 
                                 // $query_results = mysqli_num_rows($result);
