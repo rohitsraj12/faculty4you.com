@@ -44,7 +44,7 @@
                 JOIN study_types
                     ON study_types.study_type_id = posts.study_type_id
                 JOIN study_categories
-                    ON study_categories.category_id = posts.category_id
+                    ON study_categories.study_cat_id = posts.study_cat_id
                 JOIN subjects
                     ON subjects.subject_id = posts.subject_id
                 WHERE students.student_user_name = '$user_name' AND posts.subject_id = '$teacher_subject'";
