@@ -457,7 +457,9 @@
   color: $color-primary-error;
   position: absolute;
   top: -2rem;
-  width: 100%;
+  // width: 100%;
+  display: block;
+  right: 2px;
 }
 .error-icon {
   width: 100%;
