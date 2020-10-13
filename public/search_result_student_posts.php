@@ -11,11 +11,8 @@
 
     include("../private/required/public/components/social_media.php");
     include("../private/required/public/header.public.php");
-    // include("../private/required/public/banner/banner.public.php");
 ?>
-
 <div class="body-container">
-
     <main>
         <section class="section-search-result wrap-container">
             <div class="section-header u-center-text">
@@ -23,13 +20,11 @@
                     Search result
                 </header>
             </div>
-
             <?php
                 // student post search results
                 if(isset($_POST["submit-search"])){
                     $search = mysqli_real_escape_string($conn, $_POST["search"]);
                     $city = mysqli_real_escape_string($conn, $_POST["city"]);
-
                     ?>
                         <div class="wrap-container">
                             <?php
@@ -51,14 +46,11 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <section class="all post__cat" id="viewPost">
-                                            <div class="search-result-nu" >
+                                        <div class="search-result-nu" >
                                             <?php 
                                                 // $search = mysqli_real_escape_string($conn, $_POST["search"]);
-
                                                 // $city = mysqli_real_escape_string($conn, $_POST["city"]);
-
                                                 // echo $city;
-                                                
                                                 $sql = "SELECT posts.*, students.*, study_types.*, study_categories.*, subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
                                                 JOIN students
@@ -79,20 +71,17 @@
                                                 $query_results = mysqli_num_rows($result);
                                             ?>
                                             <p>
-                                                    <?php echo $query_results; ?> results are matching
+                                                <?php echo $query_results; ?> results are matching
                                             </p>
                                         </div>
-                                                <?php 
-                                                    
-                                                    while($row = mysqli_fetch_assoc($result)){
-
-                                                        include("../private/required/public/teacher_search.php");
-                                                    }
-                                                ?>
+                                            <?php 
+                                                while($row = mysqli_fetch_assoc($result)){
+                                                    include("../private/required/public/teacher_search.php");
+                                                }
+                                            ?>
                                     </section>
                                     <section class="1 post__cat" id="viewPost">
-                                        
-                                            <div class="search-result-nu" >
+                                        <div class="search-result-nu" >
                                             <?php 
                                                 $search = mysqli_real_escape_string($conn, $_POST["search"]);
 
@@ -118,25 +107,18 @@
                                                 $query_results = mysqli_num_rows($result);
                                             ?>
                                             <p>
-                                                    <?php echo $query_results; ?> results are matching
+                                                <?php echo $query_results; ?> results are matching
                                             </p>
                                         </div>
-                                                <?php 
-                                                    
-                                                    while($row = mysqli_fetch_assoc($result)){
-                                                        include("../private/required/public/teacher_search.php");
-                                                
-                                                    }
-                                                ?>
+                                        <?php                                                    
+                                            while($row = mysqli_fetch_assoc($result)){
+                                                include("../private/required/public/teacher_search.php");
+                                            }
+                                        ?>
                                     </section>
                                     <section  class="2 post__cat" id="composePost">
-                                                                <!--     <header class="text-primary-h text-center pb-5 mb-5" >
-                                            search posts
-                                        </header>
-                                        -->
                                         <div class="search-result-nu" >
-                                            <?php 
-                                                
+                                            <?php                                                 
                                                 $sql = "SELECT posts.*, students.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
                                                 JOIN students
@@ -160,19 +142,15 @@
                                                     <?php echo $query_results; ?> results are matching
                                             </p>
                                         </div>
-                                                <?php 
-                                                    
-                                                    while($row = mysqli_fetch_assoc($result)){
-
-                                                        include("../private/required/public/teacher_search.php");
-                                                
-                                                    }
-                                                ?>
+                                            <?php      
+                                                while($row = mysqli_fetch_assoc($result)){
+                                                    include("../private/required/public/teacher_search.php");
+                                                }
+                                            ?>
                                     </section>
                                     <section  class="3 post__cat" id="composePost">
                                         <div class="search-result-nu" >
                                             <?php 
-                                                
                                                 $sql = "SELECT posts.*, students.*, study_types.*, study_categories.*,  subjects_categories.*, subjects.*, cities.* 
                                                 FROM posts
                                                 JOIN students
@@ -193,17 +171,14 @@
                                                 $query_results = mysqli_num_rows($result);
                                             ?>
                                             <p>
-                                                    <?php echo $query_results; ?> results are matching
+                                                <?php echo $query_results; ?> results are matching
                                             </p>
                                         </div>
-                                                <?php 
-                                                    
-                                                    while($row = mysqli_fetch_assoc($result)){
-
-                                                        include("../private/required/public/teacher_search.php");
-                                                
-                                                    }
-                                                ?>
+                                            <?php 
+                                                while($row = mysqli_fetch_assoc($result)){
+                                                    include("../private/required/public/teacher_search.php");
+                                                }
+                                            ?>
                                     </section>                
                                 </div>
                             </section>
@@ -216,8 +191,6 @@
 </div>
 
 <?php
-  include("../private/required/public/components/agreement.php");
-
-include("../private/required/public/footer.public.php");
-
+    include("../private/required/public/components/agreement.php");
+    include("../private/required/public/footer.public.php");
 ?>
