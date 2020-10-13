@@ -86,7 +86,10 @@
                         $('#myModal').modal('show');
                     //     sessionStorage.setItem('#myModal','true');     
                     // }
+
+                    
                 });
               </script>
     </body>
 </html>
+
