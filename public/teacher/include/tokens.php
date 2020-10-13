@@ -26,7 +26,7 @@ $teacher_phone = $user_row['teacher_phone'];
         $student_phone = $_POST['student_phone'];
         $student_email = $_POST['student_email'];
         $post = $_POST['post'];
-        $post_status = 1;
+        $post_status = 2;
         $admin_email = "admin@facultyforyou.com";
 
         $update_query = "UPDATE memberships SET 
