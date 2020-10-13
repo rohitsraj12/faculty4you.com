@@ -5,10 +5,6 @@
     if(!isset($_SESSION['user_name'])){
         header('location: login.php');
     }
-    
-
-
-
     $page_title = "Membership plan";
     $banner_image_url = "search";
     require_once("../../private/config/db_connect.php");
@@ -29,9 +25,7 @@
 
 ?>
 <div class="body-container">
-
     <main>
-       
         <section class="section-membership">
             <div class="wrap-container">
                 <div class="section-header u-center-text">
@@ -40,10 +34,8 @@
                     </header>
                 </div>
             </div>
-
             <section class="wrap-container">
                 <div class="row">
-                <!-- offset-sm-1 -->
                     <div class="col-sm-4 plan-types">
                         <article class="member-block member-silver">
                             <header class="member__header">
@@ -58,17 +50,13 @@
                                     By purchasing of this membership:
                                 </p>
                                 <ul>
-                                <!-- <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>500</li> -->
-                                    <!-- <li>5 students</li>
-                                    <li>30 days validity</li> -->
                                     <li>
                                         You can see the contact details of five students related to the subject/activity that you have registered within 30 days
                                     </li>
                                     <li>
                                         Students from all over India looking for tuition related to your subject/activity can see the details and contact you through message, call, e-mail up to 30 days from the day of activation of your membership.
                                     </li>
-                                </ul>
-                                
+                                </ul>   
                                 <div class="confirm-agreement text-center mt-5">
                                     <input class="agree__input mr-2" type="checkbox" id="silver"> <label for="silver">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
                                 </div>
@@ -81,21 +69,17 @@
                     <div class="col-sm-4 plan-types">
                         <article class="member-block member-gold">
                             <header class="member__header">
-                            <h1>Faculty for you</h1>
+                                <h1>Faculty for you</h1>
                                 <div class="wrap-price">
                                     <strong>Gold Membership</strong>
                                     <p>Rs <em>1000</em></p>
                                 </div>
-                                </header>
-                            <div class="member-body">
-                                
+                            </header>
+                            <div class="member-body">    
                                 <p>
                                     By purchasing of this membership:
                                 </p>
                                 <ul>
-                                    <!-- <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1000</li> -->
-                                    <!-- <li>12 students</li>
-                                    <li>60 days validity</li> -->
                                     <li>
                                         You can see the contact details of eleven students related to the subject/activity that you have registered within 60 days.
                                     </li>
@@ -106,7 +90,7 @@
                                 
                                 
                                 <div class="confirm-agreement text-center mt-5">
-                                <input class="agree__input mr-2" type="checkbox" id="gold"> <label for="gold">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
+                                    <input class="agree__input mr-2" type="checkbox" id="gold"> <label for="gold">agree</label> <a data-toggle="modal" data-target="#agreement" class="" href="#">terms and conditions</a>
                                 </div>
                             </div>
                             <footer class="member__footer">
@@ -117,22 +101,17 @@
                     <div class="col-sm-4 plan-types">
                         <article class="member-block member-platinum">
                             <header class="member__header">
-                            
-                            <h1>Faculty for you</h1>
-                            <div class="wrap-price">
-                                <strong>Platinum Membership</strong>
-                                <p>Rs <em>1500</em></p>
-                            </div>
-                                </header>
-                            <div class="member-body">
-                                
+                                <h1>Faculty for you</h1>
+                                <div class="wrap-price">
+                                    <strong>Platinum Membership</strong>
+                                    <p>Rs <em>1500</em></p>
+                                </div>
+                            </header>
+                            <div class="member-body">                                
                                 <p>
                                     By purchasing of this membership:
                                 </p>
                                 <ul>
-                                    <!-- <li class="member-body__list"><i class="fa fa-inr" aria-hidden="true"></i>1500</li>                                   -->
-                                    <!-- <li>20 students</li>
-                                    <li>90 days validity</li> -->
                                     <li>
                                         You can see the contact details of eighteen students related to the subject/activity that you have registered within 90 days.
                                     </li>
@@ -149,7 +128,6 @@
                             <footer class="member__footer">
                                 <a  href="#"  class="button-primary buy__button">BUY NOW</a>
                             </footer>
-
                         </article>
                     </div>
                 </div>
@@ -157,11 +135,8 @@
         </section>
     </main>
 </div>
-
-
 <?php
     include("../../private/required/public/components/agreement.php");
-
     include("include/footer.inc.php");
 
 ?>  
