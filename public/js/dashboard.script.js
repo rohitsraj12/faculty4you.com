@@ -1,5 +1,7 @@
 $(document).ready(function () {
   var baseURL = "http://localhost/Projects/faculty4you.com/public/";
+// var baseURL = "http://facultyforyou.com/";
+
   
   $(".side-nav-toggle").click(function (e) {
     e.preventDefault();
