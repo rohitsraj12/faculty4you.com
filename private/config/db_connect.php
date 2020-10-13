@@ -3,7 +3,8 @@
     $db_host = "localhost";
     $db_user = "root";
     $db_pass = "";
-    $db_name = "faculty_for_you";
+    // $db_name = "faculty_for_you";
+    $db_name = "faculqbl_faculty_for_you";
 
     $conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 
