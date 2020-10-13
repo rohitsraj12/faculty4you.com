@@ -1,5 +1,5 @@
-var baseURL = "http://localhost/Projects/faculty4you.com/public/";
-// var baseURL = "http://facultyforyou.com/";
+// var baseURL = "http://localhost/Projects/faculty4you.com/public/";
+var baseURL = "http://facultyforyou.com/";
 
 $(document).ready(function () {
   $(".hamberger").click(function () {
@@ -147,16 +147,6 @@ $(document).ready(function () {
     }
   });
 
-  // script for facebook share
-  // (function (d, s, id) {
-  //   var js,
-  //     fjs = d.getElementsByTagName(s)[0];
-  //   if (d.getElementById(id)) return;
-  //   js = d.createElement(s);
-  //   js.id = id;
-  //   js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-  //   fjs.parentNode.insertBefore(js, fjs);
-  // })(document, "script", "facebook-jssdk");
 
   // ajax city state selecter
   function loadData(type, col_id) {
@@ -198,13 +188,13 @@ $(document).ready(function () {
       success: function (data) {
         if (type == "subject") {
           $(".subject").html(data);
-          // console.log(data);
+          console.log(data);
         } else if (type == "subjectCat") {
           $(".subject_category").html(data);
-          // console.log(data);
+          console.log(data);
         } else {
           $(".study-category").append(data);
-          // console.log(data);
+          console.log(data);
         }
       },
     });
