@@ -16,7 +16,6 @@ $page_title = "Social media";
             <table>
                 <thead>
                 <tr>
-                    <!-- <th>social media name</th> -->
                     <th class="social-media-header">social media links</th>
 
                 </tr>
@@ -26,14 +25,12 @@ $page_title = "Social media";
                         foreach($social_media as $name => $url){
                     ?>
                     <tr>
-                    <!-- <td>facebook</td> -->
                         <td class="social-media-data">
                         <a class="social-media__link" href="<?php echo $url; ?>" target="_blank" >
-                    
                         <img class="social-media__image" src="<?php echo base_url();?>img/social_media/<?php echo $name;?>" alt="<?php echo $name; ?>">
                         </a>
                         </td>
-                        </tr>
+                    </tr>
                     <?php
                         }
                     ?>
@@ -43,7 +40,6 @@ $page_title = "Social media";
     </main>
 </div>
 <?php
-  include("../private/required/public/components/agreement.php");
-
-include("../private/required/public/footer.public.php");
+    include("../private/required/public/components/agreement.php");
+    include("../private/required/public/footer.public.php");
 ?>
