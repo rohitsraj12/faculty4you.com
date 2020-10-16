@@ -1,23 +1,17 @@
-<?php 
-    
+<?php  
     session_start();
     //back function false
     if(!isset($_SESSION['user_name'])){
         header('location: login.php');
     }
-
     $page_title = "Search result";
     require_once("../../private/config/db_connect.php");
     include("../../private/config/config.php");
-
     include("../../private/required/public/components/social_media.php");
-    include("include/header.inc.php");
-   
+    include("include/header.inc.php"); 
     $member = $user_row['teacher_membership_status'];
-
 ?>
 <div class="body-container">
-
     <main>
         <?php
             $query = "SELECT * FROM teachers 
