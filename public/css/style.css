@@ -554,16 +554,17 @@ label {
   100% {
     opacity: 1;
     z-index: 5; } }
-  .section-member .overlay-container,
-  .section-forgotpwd .overlay-container {
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    overflow: hidden;
-    transition: transform 0.6s ease-in-out;
-    z-index: 100; }
+  @media (min-width: 583px) {
+    .section-member .overlay-container,
+    .section-forgotpwd .overlay-container {
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      overflow: hidden;
+      transition: transform 0.6s ease-in-out;
+      z-index: 100; } }
   .section-member .container.right-panel-active .overlay-container,
   .section-forgotpwd .container.right-panel-active .overlay-container {
     transform: translateX(-100%); }
