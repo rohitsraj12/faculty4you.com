@@ -18,18 +18,15 @@
 <body>
 
     <div class="body-wrap">
-        
-    <div class="member-body-header">
-    <div id="hamberger" class="hamberger">
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-                    <span class="hamberger__line"></span>
-     </div>
-                <!-- end hamberger -->
+        <div class="member-body-header">
+            <div id="hamberger" class="hamberger">
+                <span class="hamberger__line"></span>
+                <span class="hamberger__line"></span>
+                <span class="hamberger__line"></span>
+            </div>
+            <!-- end hamberger -->
             <header class="wrap-container">
-                
                 <div class="header-brand-section">
-
                     <div class="wrap-container">
                         <div class="brand">
                             <a href="<?php base_url();?>index.php">
@@ -38,7 +35,7 @@
                         </div> 
                         <div class="top-social-media nav-social-media">
                             <ul>
-                                    <li class="nav-social__list log">Follow us : </li>
+                                <li class="nav-social__list log">Follow us : </li>
                                 <?php
                                 foreach($social_media_follow as $follow_name => $follow_url){
                                 ?>
@@ -52,73 +49,42 @@
                 </div>
             </header>
         </div>
-
         <div class="body-container">
-        <div class="section-forgotpwd wrap-container">
-
-            <div class="container" id="container">
-                <div class="form-container password-container">
-                    <?php
-                        if(isset($_GET['reset'])){
-                            if($_GET['reset'] == "success"){
-                            ?>
-                            <div  class="success_message" role="alert">
-                            <p>please check your email....</p>
-                            </div>
-                            <?php
+            <div class="section-forgotpwd wrap-container">
+                <div class="container" id="container">
+                    <div class="form-container password-container">
+                        <?php
+                            if(isset($_GET['reset'])){
+                                if($_GET['reset'] == "success"){
+                                ?>
+                                <div  class="success_message" role="alert">
+                                <p>please check your email....</p>
+                                </div>
+                                <?php
+                                }
                             }
-                        }
-                    
-                    ?>
-                    <form action="include/reset-request.inc.php" method="post" >
-                        <h1>Forgot password</h1>
-                        <div class="social-container">
-                            
-                            <p>
-                            Enter the email address you used when you joined and we’ll send you instructions to reset your password. For security reasons, we do NOT store your password. So rest assured that we will never send your password via email.
-                            </p>
-                        </div>
-                        <!-- <span>or use your account</span> -->
-
-                        <input type="text" id="user_name"  placeholder="Email"  name="email" />
-                        <button name="reset-request-submit">Send reset instructions</button>
-                    </form>
-                </div>
-                <!-- <div class="overlay-container">
-                    <div class="overlay">
-                        <div class="overlay-panel overlay-right">
+                        ?>
+                        <form action="include/reset-request.inc.php" method="post" >
                             <h1>Forgot password</h1>
-                            <p>Enter your personal details and start journey with us</p>
-                            <button class="ghost" id="signUp">Sign Up</button>
-                        </div>
+                            <div class="social-container">
+                                <p>
+                                Enter the email address you used when you joined and we’ll send you instructions to reset your password. For security reasons, we do NOT store your password. So rest assured that we will never send your password via email.
+                                </p>
+                            </div>
+                            <input type="text" id="user_name"  placeholder="Email"  name="email" />
+                            <button name="reset-request-submit">Send reset instructions</button>
+                        </form>
                     </div>
-                </div> -->
-            </div>
+                </div>
             </div>
         </div>
-    </div>
-    
-
-    
+    </div>    
     <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="<?php base_url();?>js/script.js"></script>
     
     <script>
         AOS.init();
-        </script>
-    <script>
-    // const signUpButton = document.getElementById('signUp');
-    // const signInButton = document.getElementById('signIn');
-    // const container = document.getElementById('container');
-
-    // signUpButton.addEventListener('click', () => {
-    //     container.classList.add("right-panel-active");
-    // });
-
-    // signInButton.addEventListener('click', () => {
-    //     container.classList.remove("right-panel-active");
-    // });
     </script>
 </body>
 </html>
