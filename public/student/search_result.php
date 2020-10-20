@@ -14,12 +14,20 @@
     include("include/header.inc.php");
     $student_name = $_SESSION['user_name'];
 
-        
-    $sql = "SELECT * FROM students 
+    
+    $sql = "SELECT students.*, cities.*, states.*, gender.* FROM students 
+    LEFT JOIN cities
+        ON cities.city_id = students.city_id
+    LEFT JOIN states
+        ON states.state_id = students.state_id
+    LEFT JOIN gender
+        ON gender.gender_id = students.gender_id
      WHERE student_user_name = '$student_name'";
+    // $sql = "SELECT * FROM students WHERE student_user_name = '$student_name'";
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+    $student_first_name = $row['student_first_name'];
  
  ?>
  
@@ -193,7 +201,31 @@
             ?>
     </main>
 </div>
-
+<?php 
+        if(empty($student_first_name) && $page_title == "Search result"){                                                
+            ?>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header post-header">
+                            <h5 class="modal-title text-light h2">Welcome to facultyforyou.com</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="h1 text-white" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="text-left py-5 post-body">
+                            <p>Create your profile and post your requirement/s to see the details of Tutors on your requirement</p>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                            <a href="<?php base_url();?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" type="button" class="button-primary">create profile</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <?php
+        }
+    ?>
 <?php
   include("../../private/required/public/components/agreement.php");
 
