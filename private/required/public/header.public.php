@@ -95,6 +95,7 @@
                             <nav>
                                 <ul>
                                     <li class="nav__list"><a <?php if($page_title == "Home page"){ echo " nav-active";}?> href="<?php base_url();?>" class="nav__link nav-active">Home</a></li>
+                                    <li class="nav__list"><a <?php if($page_title == "Posts"){ echo " nav-active";}?> href="<?php base_url();?>posts.php" class="nav__link">Posts</a></li>
                                     <li class="nav__list"><a href="<?php base_url();?>teacher/registration.php" class="nav__link">Tutor registration</a></li>
                                     <li class="nav__list"><a href="<?php base_url();?>teacher/login.php" class="nav__link">Tutor login</a></li>
                                     <li class="nav__list"><a href="<?php base_url();?>student/registration.php" class="nav__link">Student registration</a></li>
