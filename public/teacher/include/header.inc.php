@@ -23,7 +23,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title><?= $page_title;?> | faculty4you.com | Academic - Non academic | Online - Offline Training</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, shrink-to-fit=no">
         <!-- stylesheet -->
         <link rel="icon" href="<?php base_url();?>img/brand/factulyforyou_fevicon.png" type="image/gif" sizes="32x32">
         <link
@@ -71,38 +71,8 @@
                                     ?>  
                                         <li class="header-profile" title="user name">
                                         <i class="fa fa-user" aria-hidden="true"></i>                        
-                                        <?php 
-
-                                            if(empty($user_row['teacher_first_name']) && ($page_title == "Home page" || $page_title == "Profile view")){
-                                                
-                                                ?>
-
-                                                    <div class="modal" id="myModal">
-                                                        <div class="modal-dialog">
-                                                            <div class="modal-content">
-                                                            <div class="modal-header post-header">
-                                                                <h5 class="modal-title text-light h2">Welcome to facultyforyou.com</h5>
-                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                <span class="h1 text-white" aria-hidden="true">&times;</span>
-                                                                </button>
-                                                            </div>
-                                                            <div class="text-left py-5 post-body">
-                                                                <p>Create your profile to see the posts created by students on your expert knowledge</p>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                                                                <a href="<?php base_url();?>teacher/profile/profile_update.php?id=<?php echo $teacher_id;?>" type="button" class="button-primary">create profile</a>
-                                                            </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                <?php
-                                                
-                                            } else {
-                                                    
-                                                echo $user_name;
-                                            }
+                                        <?php    
+                                            echo $user_name;
                                         ?>
                                         </li>
                                 </ul>
