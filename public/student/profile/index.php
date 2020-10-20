@@ -5,7 +5,6 @@
         header('location: ../login.php');
     } 
     $page_title = "View profile";
-    $banner_image = "profile.svg";
 
     require_once("../../../private/config/db_connect.php");
     require("../../../private/config/config.php");
@@ -28,6 +27,7 @@
 
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
+    $student_first_name = $row['student_first_name'];
 
     if(!empty($_GET['message'])){
         $message = "Congratulations! You have successfully updated your profile detail. Now post your requirement/s.";
@@ -244,6 +244,34 @@
         </section>
     </main>
 </div>
+
+<?php 
+        if(empty($student_first_name) && $page_title == "View profile"){                                                
+            ?>
+                <div class="modal" id="myModal">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header post-header">
+                            <h5 class="modal-title text-light h2">Welcome to facultyforyou.com</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span class="h1 text-white" aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="text-left py-5 post-body">
+                            <p>Create your profile and post your requirement/s to see the details of Tutors on your requirement</p>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                            <a href="<?php base_url();?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" type="button" class="button-primary">create profile</a>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            <?php
+        }
+    ?>
+
+
 <?php
     include("../../../private/required/public/components/agreement.php");
 
