@@ -211,7 +211,10 @@
                                 <div class="testimonial-client-detail">
                                     <p>
                                         "
-                                        <?php echo $row['testimonial_quote'];?>
+                                        <?php
+                                            $limit_testimonial = $row['testimonial_quote'];
+                                            echo substr($limit_testimonial,0,230) . "..";
+                                        ?>
                                         "
                                     </p>
                                 </div>        
@@ -277,7 +280,10 @@
                             <div class="testimonial-client-detail">
                                 <p>
                                     "
-                                    <?php echo $row['testimonial_quote'];?>
+                                    <?php 
+                                        $limit_testimonial = $row['testimonial_quote'];
+                                        echo substr($limit_testimonial,0,230) . "..";
+                                    ?>
                                     "
                                 </p>
                             </div>        
