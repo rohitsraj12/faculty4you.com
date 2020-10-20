@@ -65,8 +65,8 @@
                                                     ON subjects_categories.sub_cat_id = posts.sub_cat_id
                                                 JOIN subjects
                                                     ON subjects.subject_id = posts.subject_id
-                                                WHERE (subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') OR (subjects.sub_name LIKE '%$search%')
-                                                ORDER BY post_date DESC";
+                                                WHERE ((subjects.sub_name LIKE '%$search%' AND cities.city_name LIKE '%$city%') OR (subjects.sub_name LIKE '%$search%')) OR subjects.sub_name = ''
+                                                ORDER BY post_id DESC";
                                                 $result = mysqli_query($conn, $sql);
                                                 $query_results = mysqli_num_rows($result);
                                             ?>
