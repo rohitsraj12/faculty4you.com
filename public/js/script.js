@@ -101,8 +101,16 @@ $(document).ready(function () {
     console.log(selectAtt);
   });
 
+  $(".tab button").click(function (event){
+    event.preventDefault();
+    var selectAtt = $(this).attr("data-testimonial");
+
+    $(".tab button").removeClass(".active");
+    $(this).addClass(".active");
+
+  })
+
   //tab search
-  // console.log("hi");
 
   $(".form-tab").click(function () {
     // console.log("hi");
