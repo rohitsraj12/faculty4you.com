@@ -246,9 +246,9 @@
 </div>
 
 <?php 
-        if(empty($student_first_name) && $page_title == "View profile"){                                                
+        //if(empty($student_first_name) && $page_title == "View profile"){                                                
             ?>
-                <div class="modal" id="myModal">
+                <!-- <div class="modal" id="myModal">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                         <div class="modal-header post-header">
@@ -261,14 +261,14 @@
                             <p>Create your profile and post your requirement/s to see the details of Tutors on your requirement</p>
                         </div>
                         <div class="modal-footer">
-                            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                           
                             <a href="<?php base_url();?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" type="button" class="button-primary">create profile</a>
                         </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             <?php
-        }
+        //}
     ?>
 
 
