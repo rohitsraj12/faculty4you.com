@@ -67,7 +67,6 @@
             <!-- end body footer -->
         </div>
         <!-- end body wrap -->
-
         <!-- script -->
             <script src="<?php base_url();?>js/jquery-3.5.1.js"></script>
             <script src="<?php base_url();?>js/owl.carousel.js"></script>
