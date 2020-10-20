@@ -16,10 +16,6 @@
                 </header>
             </div>
                 <div class="wrap-container">
-                    <?php
-                        $study_type_sql = "SELECT * FROM study_types ORDER BY study_type_id ASC";
-                        $type_result = mysqli_query($conn, $study_type_sql);                 
-                    ?>
                     <section class="row section__post">
                         <div class="col-sm-12">
                             <section class="all post__cat" id="viewPost">
@@ -43,12 +39,13 @@
                                         $result = mysqli_query($conn, $sql);
                                         $query_results = mysqli_num_rows($result);
                                     ?>
-                                    <p>
+                                    <!-- <p>
                                         <?php echo $query_results; ?> results are matching
-                                    </p>
+                                    </p> -->
                                 </div>
                                     <?php 
                                         while($row = mysqli_fetch_assoc($result)){
+                                            // echo $row['post_id'];
                                             include("../private/required/public/teacher_search.php");
                                         }
                                     ?>
