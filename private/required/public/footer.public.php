@@ -24,6 +24,7 @@
                             <div class="row footer-list">
                                 <ul class="col-sm-4">
                                     <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>index.php"> home</a></li>
+                                    <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>testimonials.php"> testimonials</a></li>
                                     <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>faq.php"> faq</a></li>
                                     <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>site_map.php"> site map</a></li>
                                 </ul>
