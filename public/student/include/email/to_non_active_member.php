@@ -37,11 +37,11 @@
     $teacher_phone = $teacher_row['teacher_phone'];
 
 
-    //send email to active member teacher
+    //send email to non-active member teacher
     $to = $teacher_email;
     $subject = "New student has viewd your profile | facultyforyou.com";
     $message = "<p>Dear,". $teacher_name ."</p></br>";
-    $message .= "<p>Welcome to facultyforyou.com. A student of the following details has viewed your profile. Respond now before someone else is hired. </p></br>";
+    $message .= "<p>Welcome to facultyforyou.com. A student of the following details has viewed your profile. Activate your membership with any one of our packages to contact the student. When you purchase an active membership; a search bar appears on your home page. Type the following user name in the search bar and view the contact details of the student. Respond now before someone else is hired. </p></br>";
     // $message .= "<p>If you are intrested to see student post details, then please login facultyforyou.com and seach student user name in search field.</p>";
     $message .= "<table> <tr><th><h4>Student details</h4></th> <th></th></tr>";
     $message .= "<tr><td>Student user name: </td><td><b>" . $student_user_name . "</b></td></tr>";
