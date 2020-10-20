@@ -1,6 +1,6 @@
 $(document).ready(function () {
-  // var baseURL = "http://localhost/Projects/faculty4you.com/public/";
-  var baseURL = "http://facultyforyou.com/";
+  var baseURL = "http://localhost/Projects/faculty4you.com/public/";
+  // var baseURL = "http://facultyforyou.com/";
 
   // load subjects on search field
   $(".search_subject").keyup(function () {
