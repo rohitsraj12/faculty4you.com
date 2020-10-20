@@ -65,7 +65,7 @@
             <?php 
                 $id = $_GET['id'];
 
-                $sql = "SELECT * FROM std WHERE student_id = $id";
+                $sql = "SELECT * FROM students WHERE student_id = $id";
                 $result = mysqli_query($conn, $sql);
                 $row = mysqli_fetch_assoc($result);
             ?>
