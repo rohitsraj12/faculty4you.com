@@ -36,33 +36,33 @@
         echo $student_row['student_first_name'];
     }        
 
-    if(empty($teacher_first_name) && ($page_title == "Home page")){
+    // if(empty($teacher_first_name) && ($page_title == "Home page")){
                                                 
-        ?>
+    //     ?>
 
-            <div class="modal" id="myModal">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header post-header">
-                        <h5 class="modal-title text-light h2">Welcome to facultyforyou.com</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span class="h1 text-white" aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="text-left py-5 post-body">
-                        <p>Create your profile to see the posts created by students on your expert knowledge</p>
-                    </div>
-                    <div class="modal-footer">
-                        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
-                        <a href="<?php base_url();?>teacher/profile/profile_update.php?id=<?php echo $teacher_id;?>" type="button" class="button-primary">create profile</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
+    //         <div class="modal" id="myModal">
+    //             <div class="modal-dialog">
+    //                 <div class="modal-content">
+    //                 <div class="modal-header post-header">
+    //                     <h5 class="modal-title text-light h2">Welcome to facultyforyou.com</h5>
+    //                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    //                     <span class="h1 text-white" aria-hidden="true">&times;</span>
+    //                     </button>
+    //                 </div>
+    //                 <div class="text-left py-5 post-body">
+    //                     <p>Create your profile to see the posts created by students on your expert knowledge</p>
+    //                 </div>
+    //                 <div class="modal-footer">
+    //                     <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+    //                     <a href="<?php base_url();?>teacher/profile/profile_update.php?id=<?php echo $teacher_id;?>" type="button" class="button-primary">create profile</a>
+    //                 </div>
+    //                 </div>
+    //             </div>
+    //         </div>
 
-        <?php
+    //     <?php
         
-    }
+    // }
 
 ?>
     <div class="body-container">
