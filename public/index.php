@@ -7,8 +7,6 @@
     include("../private/required/public/header.public.php");
     include("../private/required/public/banner/banner.public.php");
 ?>
-            
-
             <div class="body-container">
                 <main class="page-home">
                     <section class="section-student">
