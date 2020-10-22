@@ -30,10 +30,10 @@
                             Tutors' testimonials
                         </header>
                         <?php
-                        $tutor_sql = "SELECT teacher_testimonials.*, teachers.* FROM teachers
-                            JOIN teacher_testimonials
-                                ON teacher_testimonials.teacher_id = teachers.teacher_id
-                            ORDER BY teacher_id DESC";
+                        $tutor_sql = "SELECT teacher_testimonials.*, teachers.* FROM teacher_testimonials
+                            JOIN teachers
+                                ON teachers.teacher_id = teacher_testimonials.teacher_id
+                            ORDER BY testimonial_id DESC";
 
                         $tutor_result = mysqli_query($conn, $tutor_sql);
                         while($row = mysqli_fetch_assoc($tutor_result)){
@@ -93,10 +93,10 @@
                             Students' testimonials   
                         </header>
                    <?php
-                    $sql = "SELECT testimonials.*, students.*, FROM students
-                        JOIN testimonials 
-                            ON testimonials.student_id = students.student_id
-                        ORDER BY student_id DESC";
+                    $sql = "SELECT testimonials.*, students.*, FROM testimonials
+                        JOIN students
+                            ON students.student_id = testimonials.student_id
+                        ORDER BY testimonial_id DESC";
                         $testimonial_result = mysqli_query($conn, $sql);
 
                         while($row = mysqli_fetch_assoc($testimonial_result)){
