@@ -37,9 +37,9 @@ if(isset($_POST['submit_phonepe'])){
 
          //send email to teacher
          $to = $teacher_email;
-         $subject = "hi " . $teacher_name . ", thanks for becoming " . $membership_type . " member of facultyforyou.com";
+         $subject = "hi " . $teacher_name . ", thanks for buying " . $membership_type . " member of facultyforyou.com";
          $message = "<p>Dear " . $teacher_name . ",</p></br>";
-         $message .= "<p>Thank you for buying " . $membership_type . " membership. Your membership will activate within 24 hours. We are sure that you have chosen a surefire way to get yourself succeed.</p></br>";
+         $message .= "<p>Thank you for buying " . $membership_type . " membership. Your membership will activate after the verification of your payment details by faculty for you team within 24 hours.</p></br>";
          $message .= "<p>Thank you,</p>";
          $message .= "<p>Admin</p>";
          $message .= "<p>Facultyforyou.com</p>";
