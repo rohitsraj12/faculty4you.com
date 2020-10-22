@@ -50,7 +50,38 @@
 
             ?>
                 <div class="alert alert-primary" role="alert">
-                    <?php  echo "successfully activated membership.!";
+                    <?php
+                    $teacher_query = "SELECT * FROM teachers WHERE teacher_id = '$id'";
+                    $teacher_result = mysqli_query($conn, $teacher_query);
+                    $teacher_row = mysqli_fetch_assoc($teacher_result);
+                    $teacher_user_name =  $teacher_row['teacher_user_name'];
+                    $teacher_name = $teacher_row['teacher_first_name'] . " " . $teacher_row['teacher_last_name'];
+                    $teacher_email = $teacher_row['teacher_email'];
+                     //send email to teacher
+                    $to = $teacher_email;
+                    $subject = "hi " . $teacher_name . ", your " . $type . " membership has been activated | facultyforyou.com";
+                    $message = "<p>Dear " . $teacher_name . ",</p></br>";
+                    $message .= "<p>Your " . $type . " membership has been successes fully activated.  Now you became active member in facultyfroyou.com. Your active membership details, tokens and expiry date are shown below. We are sure that you have chosen a surefire way to get yourself succeed.</p></br>";
+                    
+                    $message .= "<table> <tr><th></th> <th>Details</th></tr>";
+                    $message .= "<tr><td>User name: </td><td>" . $teacher_user_name . "</td></tr>";
+                    $message .= "<tr><td>Membership type: </td><td>" . $type . "</td></tr>";
+                    $message .= "<tr><td>No. of tokens received: </td><td>" . $token . "</td></tr>";
+                    $message .= "<tr><td>Membership expires at: </td><td>" . $exp . "</td></tr>";
+                    $message .= "</table>";
+
+                    $message .= "<p>Thank you,</p>";
+                    $message .= "<p>Facultyforyou.com</p>";
+                    $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
+                    
+                    $headers = "From: facultyforyou.com <" . $admin_email . ">\r\n";
+                    $headers .= "Reply-To: " . $admin_email . "\r\n";
+                    $headers .= "Content-type: text/html\r\n";
+                
+                    mail($to, $subject, $message, $headers);
+
+
+                    echo "successfully activated membership.!";
                     
                         // header('Location: ../testimonial/index.php');
                     ?>
