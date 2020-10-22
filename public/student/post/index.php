@@ -28,7 +28,7 @@
     $student_first_name = $row['student_first_name'];
     $student_first_name = $row['student_user_name'];
 
-    echo $student_first_name;
+    // echo $student_first_name;
     require_once("../include/header.inc.php");        
 
     include('../include/compose_post.inc.php');
