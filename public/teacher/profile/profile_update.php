@@ -33,7 +33,7 @@
     $teacher_id = $row['teacher_id'];
 
     if(!empty($_GET['message'])){
-        $message = "Congratulations! You have successfully updated your profile detail.";
+        $message = "Congratulations! You have successfully updated your profile.";
         
 ?>
 <div class="alert alert-success m-0" role="alert">
