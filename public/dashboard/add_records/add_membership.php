@@ -19,7 +19,7 @@
             </div>
         <?php 
         } else {
-            //recieving teacher id
+            //recieving teacher id from first time tutor make payment
             $id = $_GET['id'];
 
             $date = date("Y/m/d");
