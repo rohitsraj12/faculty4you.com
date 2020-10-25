@@ -151,7 +151,7 @@ var image = document.getElementsByClassName("image");
 var gender = document.getElementsByClassName("gender"); //79
 var email = document.getElementsByClassName("email"); //115
 var phone = document.getElementsByClassName("phone"); //119
-var city = document.getElementsByClassName("city"); //133
+var city = document.getElementsByClassName("city_name"); //133
 var state = document.getElementsByClassName("state"); //147
 var pin = document.getElementsByClassName("pincode"); //160
 // var teachingExp = document.getElementsByClassName("experience"); //193
@@ -222,7 +222,7 @@ function errMsg(input, errorMsg) {
   }
 
   //city
-  if (city[0].value == "nooption") {
+  if (city[0].value == "0") {
     errMsg(city[0], "city");
     return false;
   }
