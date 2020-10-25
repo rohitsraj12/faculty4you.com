@@ -168,8 +168,9 @@
                                         <!-- <select id="state" name="city" id="city" class="form-control city">
                                         </select> -->
                                         <div class="form-field">
-                                            <input type="text" name="" id="city" value="" class="form-control city_name">
-                                            <input type="hidden" name="city" value="0" class="hidden_filed">
+                                            <span class="error-msg"></span>
+                                            <input type="hidden" name="city" value="0" class="hidden_filed city_name">
+                                            <input type="text" name="" id="city" value="" class="form-control">
                                             <div class="city_list" id="city_list"></div>
                                         </div>
                                         
