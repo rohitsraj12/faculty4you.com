@@ -33,7 +33,7 @@
 
     require("../include/header.inc.php");
     if(!empty($_GET['message'])){
-        $message = "Congratulations! You have successfully updated your profile detail.";
+        $message = "Congratulations You have successfully updated your profile.";
         
 ?>
 
