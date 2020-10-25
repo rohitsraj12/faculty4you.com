@@ -150,6 +150,7 @@
                                         <label for="state">State</label>
                                         <span class="error-msg"></span>
                                         <select id="state" name="state" class="form-control state">
+                                            <option value="nooption">Select category</option>
                                             <option value="<?php echo $row['state_id'];?>" selected><?php echo $row['state_name'];?></option>
                                             
                                         </select>
