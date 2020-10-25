@@ -220,18 +220,19 @@ function errMsg(input, errorMsg) {
     errMsg(phone[0], "valid phone number.");
     return false;
   }
-
-  //city
-  if (city[0].value == "0") {
-    errMsg(city[0], "city");
-    return false;
-  }
-
+  
   //state
   if (state[0].value == "nooption") {
     errMsg(state[0], "state");
     return false;
   }
+
+  //city
+  if (city[1].value == "") {
+    errMsg(city[1], "city");
+    return false;
+  }
+
 
   //pincode
   if ((pin[0], value == "")) {
