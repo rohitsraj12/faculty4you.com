@@ -8,6 +8,17 @@ $(document).ready(function () {
     $(".header-top .wrap-container").slideToggle(600);
   });
 
+  $(".nav__link").click(function(){
+    // var has = $('.nav__list').children('.sub-nav');
+    // if(has){
+    //   event.preventDefault();
+    //   alert(33);
+
+    // }
+    $(".sub-nav").slideUp();
+    $(this).parent().find(".sub-nav").slideDown();
+  })
+
   // testimonial-slider
   $(".section-testimonial .owl-carousel").owlCarousel({
     loop: true,
