@@ -125,51 +125,37 @@
                                                             $date = date("Y - m - d");
 
                                                             $token = $member_row['member_token'];
+
                                                             if($token > 0){
-                                                        ?>
-                                                            <button class="button-primary">Contact details</button>
-                                                        <?php
+                                                            // echo $token;
+                                                                $token_left = $token;
+                                                                $token = $token - 1;
+
+                                                                if($token > -1){
+                                                                    //echo "<p>You have " . $token_left ." token left in your membership.</p>";
+                                                                    ?>
+                                                                    <form action="<?php base_url();?>teacher/include/tokens.php" method="POST">
+                                                                        <input type="hidden" value="<?php echo $member_row['membership_id'];?>" name="membership_id">
+                                                                        <input type="hidden" value="<?php echo $token;?>" name="token">
+                                                                        <input type="hidden" value="<?php echo $row['student_id'];?>" name="student" >
+                                                                        <input type="hidden" value="<?php echo $row['student_first_name'] . ' ' . $row['student_last_name'];?>" name="student_name" >
+                                                                        <input type="hidden" value="<?php echo $row['student_phone'];?>" name="student_phone" >
+                                                                        <input type="hidden" value="<?php echo $row['student_email'];?>" name="student_email" >
+                                                                        <input type="hidden" value="<?php echo $row['post_id'];?>" name="post" >
+                                                                        <button class="button-primary" type="submit" name="token_update">Student detail</button>                                                                
+                                                                    </form>
+                                                                                    
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+                                                                <?php
                                                             }else{
-                                                        ?>
-                                                        <a href="membership_plan.php" class=" button-primary">Contact details</a>
-                                                        <?php
+                                                                ?>
+                                                                    <a href="membership_plan.php" class=" button-primary">Contact details</a>
+                                                                <?php
                                                             }
                                                         ?>
                                                     </footer>
-                                                        <?php
-                                                            $token_left = $token;
-                                                            $token = $token - 1;
-
-                                                            if($token > -1){
-                                                        ?>
-                                                            <section class="student-details">
-                                                                <article>
-                                                                    <header>
-                                                                    </header>
-                                                                    <div class="row">
-                                                                        <div class="col-sm-12">
-                                                                            <p>
-                                                                                <?php
-                                                                                    echo "You have " . $token_left ." token left in your membership.";
-                                                                                ?>
-                                                                            </p>
-                                                                            <form action="<?php base_url();?>teacher/include/tokens.php" method="POST">
-                                                                                <input type="hidden" value="<?php echo $member_row['membership_id'];?>" name="membership_id">
-                                                                                <input type="hidden" value="<?php echo $token;?>" name="token">
-                                                                                <input type="hidden" value="<?php echo $row['student_id'];?>" name="student" >
-                                                                                <input type="hidden" value="<?php echo $row['student_first_name'] . ' ' . $row['student_last_name'];?>" name="student_name" >
-                                                                                <input type="hidden" value="<?php echo $row['student_phone'];?>" name="student_phone" >
-                                                                                <input type="hidden" value="<?php echo $row['student_email'];?>" name="student_email" >
-                                                                                <input type="hidden" value="<?php echo $row['post_id'];?>" name="post" >
-                                                                                <button class="button-primary" type="submit" name="token_update">Student detail</button>                                                                
-                                                                            </form>
-                                                                        </div>
-                                                                    </div>
-                                                                </article>
-                                                            </section>
-                                                        <?php
-                                                        }
-                                                        ?>
                                                 </article>
                                         <?php 
                                             }
@@ -232,44 +218,27 @@
                                                     <?php echo $row["post_detail"];?>
                                                 </p>
                                             </div>
+                                            
                                             <footer class=" post-footer">
-                                                <?php 
-                                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id";
-                                                    $member_result = mysqli_query($conn, $member_query);
-                                                    $member_row = mysqli_fetch_assoc($member_result);
-                
-                                                    $start = $member_row['membership_starting_date'];
-                                                    $exp = $member_row['membership_expiry_date'];
-                                                    $date = date("Y - m - d");
+                                                        <?php 
+                                                            $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id";
+                                                            $member_result = mysqli_query($conn, $member_query);
+                                                            $member_row = mysqli_fetch_assoc($member_result);
+                        
+                                                            $start = $member_row['membership_starting_date'];
+                                                            $exp = $member_row['membership_expiry_date'];
+                                                            $date = date("Y - m - d");
 
-                                                    $token = $member_row['member_token'];
-                                                    if($token > 0){
-                                                ?>
-                                                    <button class="button-primary">Contact details</button>
-                                                <?php
-                                                    }else{
-                                                ?>
-                                                    <a href="membership_plan.php" class="button-primary">Contact details</a>
-                                                <?php
-                                                    }
-                                                ?>
-                                            </footer>
-                                                <?php
-                                                    $token_left = $token;
-                                                    $token = $token - 1;
-                                                    if($token > -1){
-                                                ?>
-                                                    <section class="student-details">
-                                                        <article>
-                                                            <header>
-                                                            </header>
-                                                            <div class="row">            
-                                                                <div class="col-sm-12">
-                                                                    <p>
-                                                                        <?php
-                                                                            echo "You have " . $token_left ." token left in your membership.";
-                                                                        ?>
-                                                                    </p>
+                                                            $token = $member_row['member_token'];
+
+                                                            if($token > 0){
+                                                            // echo $token;
+                                                                $token_left = $token;
+                                                                $token = $token - 1;
+
+                                                                if($token > -1){
+                                                                    //echo "<p>You have " . $token_left ." token left in your membership.</p>";
+                                                                    ?>
                                                                     <form action="<?php base_url();?>teacher/include/tokens.php" method="POST">
                                                                         <input type="hidden" value="<?php echo $member_row['membership_id'];?>" name="membership_id">
                                                                         <input type="hidden" value="<?php echo $token;?>" name="token">
@@ -280,16 +249,25 @@
                                                                         <input type="hidden" value="<?php echo $row['post_id'];?>" name="post" >
                                                                         <button class="button-primary" type="submit" name="token_update">Student detail</button>                                                                
                                                                     </form>
-                                                                </div>
-                                                            </div>
-                                                        </article>
-                                                    </section>
+                                                                                    
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+                                                                <?php
+                                                            }else{
+                                                                ?>
+                                                                    <a href="membership_plan.php" class=" button-primary">Contact details</a>
+                                                                <?php
+                                                            }
+                                                        ?>
+                                                    </footer>
+                                            </footer>
                                                         <?php
                                                         }
                                                         ?>
                                         </article>
-                                                <?php 
-                                            }
+                                         <?php 
+                                            
                                         } else{
                                             ?>
                                             <div class="search-result-num" >
@@ -360,56 +338,38 @@
                                                             $date = date("Y - m - d");
 
                                                             $token = $member_row['member_token'];
+
                                                             if($token > 0){
-                                                        ?>
-                                                                <button class="button-primary">Contact details</button>
-                                                        <?php
+                                                            // echo $token;
+                                                                $token_left = $token;
+                                                                $token = $token - 1;
+
+                                                                if($token > -1){
+                                                                    //echo "<p>You have " . $token_left ." token left in your membership.</p>";
+                                                                    ?>
+                                                                    <form action="<?php base_url();?>teacher/include/tokens.php" method="POST">
+                                                                        <input type="hidden" value="<?php echo $member_row['membership_id'];?>" name="membership_id">
+                                                                        <input type="hidden" value="<?php echo $token;?>" name="token">
+                                                                        <input type="hidden" value="<?php echo $row['student_id'];?>" name="student" >
+                                                                        <input type="hidden" value="<?php echo $row['student_first_name'] . ' ' . $row['student_last_name'];?>" name="student_name" >
+                                                                        <input type="hidden" value="<?php echo $row['student_phone'];?>" name="student_phone" >
+                                                                        <input type="hidden" value="<?php echo $row['student_email'];?>" name="student_email" >
+                                                                        <input type="hidden" value="<?php echo $row['post_id'];?>" name="post" >
+                                                                        <button class="button-primary" type="submit" name="token_update">Student detail</button>                                                                
+                                                                    </form>
+                                                                                    
+                                                                    <?php
+                                                                    }
+                                                                    ?>
+                                                                <?php
                                                             }else{
-                                                                // echo "become a member";
                                                                 ?>
-                                                                <a href="membership_plan.php" class="button-primary">Contact details</a>
-                                                                <!-- <small>you need to become a member to see the details</small> -->
+                                                                    <a href="membership_plan.php" class=" button-primary">Contact details</a>
                                                                 <?php
                                                             }
                                                         ?>
                                                     </footer>
-                                                        <?php
-                                                            $token_left = $token;
-                                                            $token = $token - 1;
-
-                                                            if($token > -1){
-                                                                ?>
-                                                                <section class="student-details">
-                                                                    <article>
-                                                                        <header>
-
-                                                                        </header>
-
-                                                                        <div class="row">
-                                                                                    
-                                                                            <div class="col-sm-12">
-                                                                                <p>
-                                                                                    <?php
-                                                                                        echo "You have " . $token_left ." token left in your membership.";
-                                                                                    ?>
-                                                                                </p>
-                                                                                <form action="<?php base_url();?>teacher/include/tokens.php" method="POST">
-                                                                                    <input type="hidden" value="<?php echo $member_row['membership_id'];?>" name="membership_id">
-                                                                                    <input type="hidden" value="<?php echo $token;?>" name="token">
-                                                                                    <input type="hidden" value="<?php echo $row['student_id'];?>" name="student" >
-                                                                                    <input type="hidden" value="<?php echo $row['student_first_name'] . ' ' . $row['student_last_name'];?>" name="student_name" >
-                                                                                    <input type="hidden" value="<?php echo $row['student_phone'];?>" name="student_phone" >
-                                                                                    <input type="hidden" value="<?php echo $row['student_email'];?>" name="student_email" >
-                                                                                    <input type="hidden" value="<?php echo $row['post_id'];?>" name="post" >
-                                                                                    <button class="button-primary" type="submit" name="token_update">Student detail</button>                                                                
-                                                                                </form>
-                                                                            </div>
-                                                                        </div>
-                                                                    </article>
-                                                                </section>
-                                                                <?php
-                                                            }
-                                                            ?>
+                                                       
                                                     </article>
                                                 <?php 
                                             }
