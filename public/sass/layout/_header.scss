@@ -164,18 +164,18 @@
       @media (max-width: 582px) {
         padding-bottom: 1rem;
       }
-    }
 
-    ul {
-      @media (min-width: 583px) {
-        margin: 0;
-        padding: 0.2rem 0 0.1rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
+      & > ul {
+        @media (min-width: 583px) {
+          margin: 0;
+          padding: 0.2rem 0 0.1rem;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
 
-      @media (max-width: 582px) {
+        @media (max-width: 582px) {
+        }
       }
     }
   }
@@ -427,6 +427,48 @@
       height: 8rem;
       position: absolute;
       top: -3rem;
+    }
+  }
+}
+
+// sub nav
+.nav__list {
+  position: relative;
+
+  @media (max-width: 582px) {
+    width: 95%;
+  }
+
+  .sub-nav {
+    display: none;
+    @media (min-width: 583px) {
+      position: absolute;
+      top: 33px;
+      width: 174px;
+      z-index: 1000;
+      background-color: $color-primary;
+      padding: 2px;
+    }
+
+    &__link {
+      display: block;
+      @media (min-width: 583px) {
+        @include post-head;
+        padding: 0.1rem 1rem;
+        margin: 1px 0;
+      }
+
+      @media (max-width: 582px) {
+        background-color: $color-primary;
+        margin: 0.2rem 1rem 0;
+      }
+
+      &:hover {
+        @media (min-width: 583px) {
+          @include post-head-hover;
+          @include hover-transition(500ms);
+        }
+      }
     }
   }
 }
