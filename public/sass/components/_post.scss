@@ -56,6 +56,15 @@
         padding-right: 0.5rem;
       }
     }
+
+    figure {
+      text-align: center;
+    }
+
+    img {
+      height: 80px;
+      min-width: 80px;
+    }
   }
 
   &-footer {
