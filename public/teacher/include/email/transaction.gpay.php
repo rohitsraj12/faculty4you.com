@@ -52,7 +52,7 @@ if(isset($_POST['submit_googlepay'])){
             <div class="alert alert-success m-0" role="alert">
                 <div class="wrap-container h3 py-4">
                     <p>   
-                        Thank you for buying <?php echo $membership_type?> membership. Your membership will activate within 24 hours. We are sure that you have chosen a surefire way to get yourself succeed.
+                        Thankyou for buying <?php echo $membership_type?> membership. Your membership will activate after the verification of your payment details by faculty for you team within 24 hours.
                     </p>
                     <p>
                     Thank you,
