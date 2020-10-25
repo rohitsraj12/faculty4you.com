@@ -115,11 +115,11 @@
                                                 $token = $member_row['member_token'];
                                                 if($token > 0){
                                             ?>
-                                                <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
+                                                <button class="button-primary">Contact details</button>
                                             <?php
                                                 }else{
                                             ?>
-                                            <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
+                                            <a href="membership_plan.php" class=" button-primary">Contact details</a>
                                             <?php
                                                 }
                                             ?>
@@ -233,11 +233,11 @@
                                         $token = $member_row['member_token'];
                                         if($token > 0){
                                     ?>
-                                        <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
+                                        <button class="button-primary">Contact details</button>
                                     <?php
                                         }else{
                                     ?>
-                                        <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
+                                        <a href="membership_plan.php" class="button-primary">Contact details</a>
                                     <?php
                                         }
                                     ?>
@@ -350,12 +350,12 @@
                                                 $token = $member_row['member_token'];
                                                 if($token > 0){
                                             ?>
-                                                    <button class="active-member-btn btn btn-link" style="font-size: 1.6rem">Contact details</button>
+                                                    <button class="button-primary">Contact details</button>
                                             <?php
                                                 }else{
                                                     // echo "become a member";
                                                     ?>
-                                                    <a href="membership_plan.php" class="active-member-btn btn btn-link"  style="font-size: 1.6rem">Contact details</a>
+                                                    <a href="membership_plan.php" class="button-primary">Contact details</a>
                                                     <!-- <small>you need to become a member to see the details</small> -->
                                                     <?php
                                                 }
