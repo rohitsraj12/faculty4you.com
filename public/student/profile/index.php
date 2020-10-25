@@ -30,7 +30,7 @@
     $student_first_name = $row['student_first_name'];
 
     if(!empty($_GET['message'])){
-        $message = "Congratulations! You have successfully updated your profile detail. Now post your requirement/s.";
+        $message = "Congratulations you have successfully updated your profile. Now post your requirement/s.";
         
 ?>
 <div class="alert alert-success m-0" role="alert">
