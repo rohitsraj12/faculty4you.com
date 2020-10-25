@@ -155,11 +155,8 @@
                                 <div class="form-group mb-4 col-md-4">
                                         <label for="state">State</label>
                                         <span class="error-msg"></span>
-                                        <select id="state" name="state" id="state" class="form-control state">
-                                            <option value="nooption">Select state</option>
-                                           
-                                                
-                                           
+                                        <select id="state" name="state" class="form-control state">
+                                            <option value="nooption">Select state</option>               
                                         </select>
                                     </div>
                                     <div class="form-group mb-4 col-md-4">
@@ -168,9 +165,9 @@
                                         <!-- <select id="state" name="city" id="city" class="form-control city">
                                         </select> -->
                                         <div class="form-field">
-                                            <span class="error-msg"></span>
                                             <input type="hidden" name="city" value="0" class="hidden_filed city_name">
-                                            <input type="text" name="" id="city" value="" class="form-control">
+                                            <span class="error-msg"></span>
+                                            <input type="text" name="" id="city" value="" class="form-control city_name">
                                             <div class="city_list" id="city_list"></div>
                                         </div>
                                         
