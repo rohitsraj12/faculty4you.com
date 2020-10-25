@@ -25,29 +25,31 @@
                 <li class="mr-5"><i class="fa fa-map-marker mr-2" aria-hidden="true"></i><?php echo $row["city_name"];?></li>
             </ul>
         </div>
-        <div class="row px-4">
-            <div class="col-sm-4">
-                <figure class="pt-2">
+        <div class="col-sm-12">
+            <div class="row">
+                <div class="col-sm-2">
+                    <figure class="pt-2 text-center">
+                        <?php
+                                if($row['teacher_photo'] == ""){
+                        ?>
+                                <img class="img-fluid img-rounded" src="<?php base_url();?>img/teacher/profile_pic/male_profile.svg" alt="">
+                        <?php
+                            } else {
+                        ?>
+                                <img class="img-fluid img-rounded" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                        <?php
+                            }
+                        ?>
+                    </figure>
+                </div>
+                <div class="col-sm-10">
+                    
+                    <p>
                     <?php
-                            if($row['teacher_photo'] == ""){
+                        echo $row['teacher_about_me'];
                     ?>
-                            <img class="img-fluid img-rounded" style="max-height: 400px" src="<?php base_url();?>img/teacher/profile_pic/male_profile.svg" alt="">
-                    <?php
-                        } else {
-                    ?>
-                            <img class="img-fluid img-rounded" style="max-height: 400px" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
-                    <?php
-                        }
-                    ?>
-                </figure>
-            </div>
-            <div class="col-sm-8">
-                
-            <p>
-            <?php
-                echo $row['teacher_about_me'];
-            ?>
-            </p>
+                    </p>
+                </div>
             </div>
         </div>
     </div>
