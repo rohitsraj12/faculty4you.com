@@ -49,3 +49,9 @@
 .city_list li:hover {
   background-color: #e8e8e8;
 }
+
+.search_input_select {
+  li {
+    cursor: pointer;
+  }
+}
