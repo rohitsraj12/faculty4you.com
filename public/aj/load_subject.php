@@ -17,7 +17,9 @@
         // $sql = "SELECT * FROM subjects WHERE sub_cat_id = '$id'";
         $result = mysqli_query($conn, $sql);
 
-        $output = "";
+        // $output = "";
+        $output = "<option value='nooption'>Select Subject Category</option>'";
+
         while($row = mysqli_fetch_assoc($result)){
             // echo $row['sub_cat_id'];
             $output .= '<option value="'. $row["sub_cat_id"] . '">' . $row['sub_cat_name'] . '</option>';
@@ -28,7 +30,9 @@
         // $sql = "SELECT * FROM cities";
         $result = mysqli_query($conn, $sql);
 
-        $output = "";
+        // $output = "";
+        $output = "<option value='nooption'>Select Subject</option>'";
+
         while($row = mysqli_fetch_assoc($result)){
             // echo $row['subject_name'];
             $output .= '<option value="'. $row["subject_id"] . '">' . $row['sub_name'] . '</option>';
