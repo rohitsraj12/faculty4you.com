@@ -25,7 +25,7 @@
     $row = mysqli_fetch_assoc($result);
     $student_id = $row['student_id'];
     $student_first_name = $row['student_user_name'];
-    echo $student_first_name;
+    // echo $student_first_name;
     require("include/header.inc.php");
     ?>
     <div class="body-container">
