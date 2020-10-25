@@ -61,7 +61,7 @@
                                         <div class="city_list" id="city_list"></div>
                                     </div>
                                     <div class="col-sm-12 text-center">
-                                        <input class="button-primary py-2" style="font-size: 2rem" name="submit-search" type="submit" value="Search">
+                                        <input class="button-primary" name="submit-search" type="submit" value="Search">
                                     </div>
                                 </div>
                             </form>
@@ -76,7 +76,7 @@
                                     </div>
                                     
                                     <div class="col-sm-12 text-center">
-                                        <input class="button-primary py-2" style="font-size: 2rem" name="search-teacher" type="submit" value="Search">
+                                        <input class="button-primary" name="search-teacher" type="submit" value="Search">
                                     </div>
                                 </div>
                             </form>
