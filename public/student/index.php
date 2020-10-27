@@ -26,7 +26,7 @@
     $student_id = $row['student_id'];
     $student_first_name = $row['student_first_name'];
     $city = $row['city_id'];
-    // echo $student_first_name;
+    echo $student_id;
     require("include/header.inc.php");
     ?>
     <div class="body-container">
@@ -50,7 +50,8 @@
                                 </div>
                                 <div class="col-sm-9">
                                     <header class="text-primary-h-3 mt-5">
-                                        <p>Create your profile and post your requirements to show tutor details on your requirements. <a href="<?php base_url() ;?>student/profile/profile_update.php">create update</a></p>
+                                        <p>Create your profile and post your requirements to show tutor details on your requirements. 
+                                        <!-- <a href="<?php base_url() ;?>student/profile/profile_update.php?id=<?php echo $student_id?>">create update</a></p> -->
                                     </header>
                                 </div>
                                 
