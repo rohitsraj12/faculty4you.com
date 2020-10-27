@@ -2,6 +2,8 @@ var baseURL = "http://localhost/Projects/faculty4you.com/public/";
 // var baseURL = "http://facultyforyou.com/";
 
 $(document).ready(function () {
+
+  // navigation 
   $(".hamberger").click(function () {
     $(this).toggleClass("is__active");
     $(".header__nav").slideToggle(400);
@@ -9,14 +11,12 @@ $(document).ready(function () {
   });
 
   $(".nav__link").click(function(){
-    // var has = $('.nav__list').children('.sub-nav');
-    // if(has){
-    //   event.preventDefault();
-    //   alert(33);
-
-    // }
     $(".sub-nav").slideUp();
     $(this).parent().find(".sub-nav").slideDown();
+  })
+
+  $(".sub-nav").mouseleave(function(){
+    $(".sub-nav").slideUp();
   })
 
   // testimonial-slider
@@ -66,6 +66,14 @@ $(document).ready(function () {
       },
     },
   });
+  
+  // show token details in teachers section
+  $(".show__token").click(function(){
+    $(".student-details").slideUp();
+    $(this).parent().parent().find('.student-details').slideDown();
+    // alert(23);
+  });
+  
   /*******************************
 
       tabs
@@ -122,7 +130,6 @@ $(document).ready(function () {
   })
 
   //tab search
-
   $(".form-tab").click(function () {
     // console.log("hi");
     var selectAtt = $(this).attr("data-form");
@@ -207,13 +214,13 @@ $(document).ready(function () {
       success: function (data) {
         if (type == "subject") {
           $(".subject").html(data);
-          console.log(data);
+          // console.log(data);
         } else if (type == "subjectCat") {
           $(".subject_category").html(data);
-          console.log(data);
+          // console.log(data);
         } else {
           $(".study-category").append(data);
-          console.log(data);
+          // console.log(data);
         }
       },
     });
