@@ -159,9 +159,8 @@
                                         <!-- <select id="state" name="city" id="city" class="form-control city">
                                         </select> -->
                                         <div class="form-field">
-                                            <span class="error-msg"></span>
-                                            <input type="text" name="" id="city" class="form-control city_name">
-                                            <input type="hidden" name="city" value="<?php echo $city_id;?>" class="hidden_filed">
+                                            <input type="text" name="" id="city" value="<?php echo $row['city_name'];?>" class="form-control city_name">
+                                            <input type="hidden" name="city" value="<?php echo $row['city_id'];?>" class="hidden_filed">
                                             <div class="city_list" id="city_list"></div>
                                         </div>
                                         
