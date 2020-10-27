@@ -24,7 +24,7 @@ $sub = "expired";
         $to = $email;
         $subject = "Membership renewal reminder | facultyforyou.com";
         $message = "<p>Dear " . $teacher_name . ",</p></br>";
-        $message .= "<p>Your membership has been expired. We hope <a href='http://facultyforyou.com'>facultyforyou.com</a> is the best platform to grow your tutoring business. Once again activate your membership to connect with more students.</p></br>";
+        $message .= "<p>Your membership has been expired. We hope <a href='http://facultyforyou.com'>facultyforyou.com</a> is the best platform to grow your tutoring business. Renew your membership with any one of the plans to connect with more students.</p></br>";
         $message .= "<p>Thank you,</p>";
         $message .= "<p>admin</p>";
         $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
