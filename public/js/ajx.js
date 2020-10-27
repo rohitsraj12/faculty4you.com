@@ -14,6 +14,7 @@ $(document).ready(function () {
         success: function (data) {
           $(".subject-list").slideDown();
           $(".subject-list").html(data);
+          console.log(data);
         },
       });
     } else {
