@@ -31,6 +31,9 @@
     $phone = $row['student_phone'];
     $address = $row['student_address'];
     $pin_code = $row['city_pincode'];
+    $city_name = $row['city_name'];
+    $city_id = $row['city_id'];
+
 
     // echo "hi " . $pin_code;
     
@@ -107,15 +110,15 @@
                                                 $gender_result = mysqli_query($conn, $gender_query);
 
                                                 while($row = mysqli_fetch_assoc($gender_result)){
-                                            ?>
-                                                <div class="form-check col-sm-2">
-                                                    <input class="form-check-input gender" name="gender" type="radio" value="<?php echo $row['gender_id'];?>" id="<?php echo $row['gender_type'];?>">
-                                                
-                                                    <label class="form-check-label" for="<?php echo $row['gender_type'];?>">
-                                                        <?php echo $row['gender_type'];?>
-                                                    </label>
-                                                </div>        
-                                            <?php
+                                                    ?>
+                                                        <div class="form-check col-sm-2">
+                                                            <input class="form-check-input gender" name="gender" type="radio" value="<?php echo $row['gender_id'];?>" id="<?php echo $row['gender_type'];?>">
+                                                        
+                                                            <label class="form-check-label" for="<?php echo $row['gender_type'];?>">
+                                                                <?php echo $row['gender_type'];?>
+                                                            </label>
+                                                        </div>        
+                                                    <?php
                                                 }
 
                                             ?>
@@ -136,7 +139,7 @@
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
                                     <span class="error-msg"></span>
-                                    <input type="text" name="email" class="form-control email" id="email" value="<?php echo $email;?>" placeholder="<?php echo $row['student_first_name'];?>">
+                                    <input type="text" name="email" class="form-control email" id="email" value="<?php echo $email;?>" placeholder="">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">Telephone</label>
@@ -151,27 +154,29 @@
                                 
                                 <div class="form-row mb-4">
                                     
-                                    
-                                <div class="form-group mb-4 col-md-4">
-                                        <label for="state">State</label>
-                                        <span class="error-msg"></span>
-                                        <select id="state" name="state" class="form-control state">
-                                            <option value="nooption">Select state</option>               
-                                        </select>
-                                    </div>
                                     <div class="form-group mb-4 col-md-4">
                                         <label for="city">City/Town</label>
-                                        <span class="error-msg"></span>
                                         <!-- <select id="state" name="city" id="city" class="form-control city">
                                         </select> -->
                                         <div class="form-field">
-                                            <input type="hidden" name="city" value="0" class="hidden_filed city_name">
                                             <span class="error-msg"></span>
-                                            <input type="text" name="" id="city" value="" class="form-control city_name">
+                                            <input type="text" name="" id="city" class="form-control city_name">
+                                            <input type="hidden" name="city" value="<?php echo $city_id;?>" class="hidden_filed">
                                             <div class="city_list" id="city_list"></div>
                                         </div>
                                         
 
+                                    </div>
+                                    
+                                <div class="form-group mb-4 col-md-4">
+                                        <label for="state">State</label>
+                                        <span class="error-msg"></span>
+                                        <select id="state" name="state" id="state" class="form-control state">
+                                            <option value="nooption">Select state</option>
+                                           
+                                                
+                                           
+                                        </select>
                                     </div>
                                     <div class="form-group mb-4 col-md-4">
                                         <label for="pincode">Pincode</label>
