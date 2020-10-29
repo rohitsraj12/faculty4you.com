@@ -1106,6 +1106,13 @@ label {
 .top-testimonial {
   border-bottom: 2px solid #aa0000; }
 
+.public-testimonial article {
+  height: auto;
+  padding: 0;
+  -webkit-border-radius: 0.4rem;
+  -moz-border-radius: 0.4rem;
+  border-radius: 0.4rem; }
+
 .section-partner {
   padding: 10rem 0 10rem; }
   .section-partner .section-body {
