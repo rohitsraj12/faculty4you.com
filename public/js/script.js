@@ -127,6 +127,9 @@ $(document).ready(function () {
     $(".tab button").removeClass(".active");
     $(this).addClass(".active");
 
+    $(".public-testimonial").hide();
+    $("." + selectAtt).show();
+
   })
 
   //tab search
