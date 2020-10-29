@@ -20,6 +20,8 @@
                         <div class="row fooetr-list">
                             <ul class="col-sm-4">
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>student/index.php"> home</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>testimonials.php"> testimonials</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>contact_us.php"> contact us</a></li>
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>faq.php"> faq</a></li>
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>site_map.php"> site map</a></li>
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>logout.php"> logout</a></li>
