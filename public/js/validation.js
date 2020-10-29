@@ -222,7 +222,7 @@ function errMsg(input, errorMsg) {
   }
   
   //city
-  if (city[1].value == "0") {
+  if (city[1].value == "") {
   alert("hi");
     // errMsg(city[1], "city");
     return false;
