@@ -221,17 +221,19 @@ function errMsg(input, errorMsg) {
     return false;
   }
   
+  //city
+  if (city[1].value == "0") {
+  alert("hi");
+    // errMsg(city[1], "city");
+    return false;
+  }
+
   //state
   if (state[0].value == "nooption") {
     errMsg(state[0], "state");
     return false;
   }
 
-  //city
-  if (city[1].value == "") {
-    errMsg(city[1], "city");
-    return false;
-  }
 
 
   //pincode
