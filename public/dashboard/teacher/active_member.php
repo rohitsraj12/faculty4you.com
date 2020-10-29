@@ -13,6 +13,27 @@
     require("../../../private/config/db_connect.php");
     include("../include/header.inc.php");
 
+    if(isset($_POST['email'])){
+        $email = $_POST['email'];
+        $teacher_name = $_POST['name'];
+        $admin_email = "admin@facultyforyou.com";
+
+        //send email to teacher
+        $to = $email;
+        $subject = "Membership renewal reminder | facultyforyou.com";
+        $message = "<p>Dear " . $teacher_name . ",</p></br>";
+        $message .= "<p>Your tokens have been completed. We hope <a href='http://facultyforyou.com'>facultyforyou.com</a> is the best platform to grow your tutoring business. Renew your membership with any one of the plans to connect with more students.</p></br>";
+        $message .= "<p>Thank you,</p>";
+        $message .= "<p>admin</p>";
+        $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
+        
+        $headers = "From: facultyforyou.com <" . $admin_email . ">\r\n";
+        $headers .= "Reply-To: " . $admin_email . "\r\n";
+        $headers .= "Content-type: text/html\r\n";
+    
+        mail($to, $subject, $message, $headers);
+    }
+
 ?>
 
 <div class="body-container-right"> 
@@ -45,10 +66,10 @@
                                     <tr>
                                     <th scope="col">Id</th>
                                     <th scope="col">Name</th>
-                                    <th scope="col">Membership Expire Date</th>
-                                    <th scope="col">Token number left</th>
-                                    <th scope="col">Activate member</th>
-                                    <!-- <th scope="col">Add testimonial</th> -->
+                                    <th scope="col">Expire Date</th>
+                                    <th scope="col">Tokens</th>
+                                    <th scope="col">Renew</th>
+                                    <th scope="col">Email reminder</th>
                                     <th scope="col">More Details</th>
                                     </tr>
                                 </thead>
@@ -70,20 +91,24 @@
                                         <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                         <td><?php echo $row['membership_expiry_date'];?></td>
                                         <td><?php echo $row['member_token'];?></td>
-                                        <td><?php 
-
-                                           
-                                            $token = $row['member_token'];
-                                            
-                                            if($token == 0){
-                                                echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Renew Member</a>";
-
-                                                // if()
-                                            } else{
-                                                echo "<span class='member-active'>Member</span>";
-                                            }
-                                        ?></td>
-                                        <!-- <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>">Add testimonial</a></td> -->
+                                        <td>
+                                            <?php 
+                                                $token = $row['member_token'];
+                                                if($token == 0){
+                                                    echo "<a href='../edit_records/update_membership.php?id=". $row['teacher_id'] . "' class='member-nonactive'>Renew Member</a>";
+                                                } else{
+                                                    echo "<span class='member-active'>Member</span>";
+                                                }
+                                            ?>
+                                        </td>
+                                        <td class="text-center">
+                                            <form action="" method="POST">
+                                                <input type="hidden" name="name" value="<?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ; ?>">
+                                                <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
+                                                <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
+                                                <button class="member-nonactive" name="email">reminder email</button>
+                                            </form>
+                                        </td>
                                         <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/teacher/teacher_detail.php?id=<?php echo $row['teacher_id'];?>">more details</a></td>
                                     </tr>
                                     <?php 
