@@ -108,3 +108,11 @@
 .top-testimonial {
   border-bottom: 2px solid $color-primary;
 }
+.public-testimonial{
+  article {
+   height: auto;
+    padding: 0;
+    @include radius-all(0.4rem);
+
+  }
+}
