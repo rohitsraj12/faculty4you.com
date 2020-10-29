@@ -94,6 +94,7 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    <li class="nav__list"><a <?php if($page_title == "Contact Us"){ echo "nav-active";}?> href="<?php base_url();?>contact_us.php" class="nav__link">Contact us</a></li>
                             </ul>
                         </nav>
                         <div class="nav-social-media">
