@@ -4,6 +4,35 @@
     require_once("../private/config/db_connect.php");
     include("../private/required/public/components/social_media.php");
     include_once("../private/required/public/header.public.php");
+
+    if(isset($_POST['email'])){
+        // message from
+        $user_name = $_POST['name'];
+        $user_email = $_POST['email'];
+        $user_phone = $_POST['phone'];
+        $user_type = $_POST['type'];
+        $user_message = $_POST['message'];
+        
+        // message to
+        $email = $_POST['email'];
+        $admin_email = "admin@facultyforyou.com";
+
+        //send email to teacher
+        $to = $email;
+        $subject = "Message from public contact form | facultyforyou.com";
+        $message = "<p>Message from public contact form</p></br>";
+        $message .= "<p> I am a ". $user_type ."</p></br>";
+        $message .= "<p>". $user_message ."</p></br>";
+        $message .= "<p>Thank you,</p>";
+        $message .= "<p>". $user_name ."</p>";
+        $message .= "<p>" . $user_email . " | " . $user_phone . "</p>";
+        
+        $headers = "From:" . $user_name . " <" . $user_email . ">\r\n";
+        $headers .= "Reply-To: " . $user_email . "\r\n";
+        $headers .= "Content-type: text/html\r\n";
+    
+        mail($to, $subject, $message, $headers);
+    }
 ?>
 <div class="body-container">
     <main class="wrap-container">      
@@ -32,12 +61,12 @@
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Please enter your email address">
+                                <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp"  placeholder="Please enter your email address">
                                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                             </div>
                             <div class="form-group col-sm-6">
                                 <label for="exampleInputEmail1">I am a</label>
-                                <select class="form-control">
+                                <select name="type" class="form-control">
                                     <option value="nooption">Select type</option>
                                     <option vlaue="tutor">Tutor</option>
                                     <option value="student">Student</option>
@@ -52,7 +81,7 @@
                                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                             </div>
                             <div class="col-sm-12">
-                                <button  type="submit" class="button-primary" name="update" >Submit</button> 
+                                <button  type="submit" class="button-primary" name="email" >Submit</button> 
                             </div>
                         </div>
                     </article>
