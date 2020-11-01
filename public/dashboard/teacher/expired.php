@@ -13,7 +13,7 @@ $sub = "expired";
     include("../include/header.inc.php");
 
 
-    if(isset($_POST['email'])){
+    if(isset($_POST['reminder_email'])){
         $email = $_POST['email'];
         // $email = "rohitwebco@gmail.com";
         $teacher_name = $_POST['name'];
@@ -117,7 +117,7 @@ $sub = "expired";
                                         <input type="hidden" name="name" value="<?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ; ?>">
                                         <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
                                         <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
-                                        <button class="member-nonactive" name="email">reminder email</button>
+                                        <button class="member-nonactive" name="reminder_email">reminder email</button>
                                     </form>
                                 </td>
                                 <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>">add testimonial</a></td>
