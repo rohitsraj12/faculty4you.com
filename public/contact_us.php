@@ -32,8 +32,23 @@
         $headers .= "Content-type: text/html\r\n";
     
         mail($to, $subject, $message, $headers);
+        
+        header("location:" . base_url() . "contact_us.php?message=success");
+    }
+
+
+    if(!empty($_GET['message'])){
+?>
+<div class="alert alert-success m-0" role="alert">
+                <div class="wrap-container h3 py-4">
+                    Your message has sent successfully. Thank you!
+                </div>
+            </div>
+<?php
     }
 ?>
+
+
 <div class="body-container">
     <main class="wrap-container">      
         <div class="section-header u-center-text">
