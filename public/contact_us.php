@@ -5,7 +5,7 @@
     include("../private/required/public/components/social_media.php");
     include_once("../private/required/public/header.public.php");
 
-    if(isset($_POST['email'])){
+    if(isset($_POST['submit_email'])){
         // message from
         $user_name = $_POST['name'];
         $user_email = $_POST['email'];
@@ -81,7 +81,7 @@
                                 <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
                             </div>
                             <div class="col-sm-12">
-                                <button  type="submit" class="button-primary" name="email" >Submit</button> 
+                                <button  type="submit" class="button-primary" name="submit_email" >Submit</button> 
                             </div>
                         </div>
                     </article>
