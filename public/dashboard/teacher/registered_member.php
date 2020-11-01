@@ -15,7 +15,7 @@ $sub = "registered";
 
 
     // sending reminder email to tutor to get membership 
-    if(isset($_POST['remindre_email'])){
+    if(isset($_POST['reminder_email'])){
         $email = $_POST['email'];
         $teacher_name = $_POST['name'];
         $admin_email = "admin@facultyforyou.com";
