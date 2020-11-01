@@ -15,7 +15,7 @@ $sub = "registered";
 
 
     // sending reminder email to tutor to get membership 
-    if(isset($_POST['email'])){
+    if(isset($_POST['remindre_email'])){
         $email = $_POST['email'];
         $teacher_name = $_POST['name'];
         $admin_email = "admin@facultyforyou.com";
@@ -120,7 +120,7 @@ $sub = "registered";
                                                 <input type="hidden" name="name" value="<?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ; ?>">
                                                 <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
                                                 <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
-                                                <button class="member-nonactive" name="email">Reminder Email</button>
+                                                <button class="member-nonactive" name="reminder_email">Reminder Email</button>
                                             </form>
                                         </td>
                                         <td>
