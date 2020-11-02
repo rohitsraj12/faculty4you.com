@@ -108,20 +108,20 @@
                                     <li class="nav__list"><a href="#" class="nav__link">Tutor</a>
                                         <ul class="sub-nav">
                                             <li class="sub-nav__list">
-                                                <a class="sub-nav__link" href="<?php base_url();?>teacher/registration.php">Tutor registration</a>
+                                                <a  class="sub-nav__link"  href="<?php base_url();?>teacher/login.php">Tutor login</a>
                                             </li>
                                             <li class="sub-nav__list">
-                                                <a  class="sub-nav__link"  href="<?php base_url();?>teacher/login.php">Tutor login</a>
+                                                <a class="sub-nav__link" href="<?php base_url();?>teacher/registration.php">Tutor registration</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="nav__list"><a href="#" class="nav__link">Student</a>
                                         <ul class="sub-nav">
                                             <li class="sub-nav__list">
-                                                <a class="sub-nav__link" href="<?php base_url();?>student/registration.php">Student registration</a>
+                                                 <a  class="sub-nav__link"  href="<?php base_url();?>student/login.php">Student login</a>
                                             </li>
                                             <li class="sub-nav__list">
-                                                <a  class="sub-nav__link"  href="<?php base_url();?>student/login.php">Student login</a>
+                                                <a class="sub-nav__link" href="<?php base_url();?>student/registration.php">Student registration</a>
                                             </li>
                                         </ul>
                                     </li>
