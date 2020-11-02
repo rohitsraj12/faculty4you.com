@@ -241,5 +241,8 @@
             container.classList.remove("right-panel-active");
         });
     </script>
+     <?php
+    include("../private/required/public/footer.public.php");
+    ?>
 </body>
 </html>
