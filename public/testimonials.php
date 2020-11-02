@@ -44,7 +44,7 @@
                                 
         
                                     <div class="row px-4">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
                                             <figure class="pt-2">
                                                 <?php
                                                         if($row['teacher_photo'] == ""){
@@ -59,7 +59,7 @@
                                                 ?>
                                             </figure>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-9">
                                             
                                         <p>
                                         <?php
@@ -96,7 +96,7 @@
                                 <div class="post-body py-5">
                                   
                                     <div class="row">
-                                        <div class="col-sm-4">
+                                        <div class="col-sm-3">
                                             <figure class="pt-2">
                                                 <?php
                                                         if($row['student_photo'] == ""){
@@ -111,7 +111,7 @@
                                                 ?>
                                             </figure>
                                         </div>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-9">
                                             
                                         <p>
                                         <?php
