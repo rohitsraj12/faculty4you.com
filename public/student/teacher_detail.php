@@ -39,7 +39,7 @@
         <?php
             $teacher_id = $_GET['id'];
             // echo $teacher_id;
-            $teacher_query = "SELECT teachers.*, cities.*, states.*, gender.*, subjects.* 
+            $teacher_query = "SELECT teachers.*, cities.*, states.*, gender.*, subjects.*, memberships.* 
             FROM teachers 
             JOIN gender
                 ON gender.gender_id = teachers.gender_id
@@ -49,7 +49,9 @@
                 ON states.state_id = teachers.state_id
             JOIN subjects
                 ON subjects.subject_id = teachers.subject_id
-            WHERE teacher_id = '$teacher_id'";
+            JOIN memberships
+                ON memberships.teacher_id = teachers.teacher_id
+            WHERE teacher_id = '$teacher_id' &&  memberships.membership_expiry_date > CURRENT_DATE()";
             $teacher_result = mysqli_query($conn, $teacher_query);
             $row = mysqli_fetch_assoc($teacher_result);
         ?>
@@ -84,20 +86,52 @@
                         </header>
                         <footer class="px-5">
                             <ul>
-                                <li class="text-dark h3 py-1 font-weight-normal">
-                                <i class="h5 fa fa-envelope-o pr-3" aria-hidden="true"></i>
                                 
-                            <?php 
-                                echo $row['teacher_email'];
+                        <?php
+                            // $teacher_id = $row['teacher_id'];
+
+                            $check_query = "SELECT memberships.*, teachers.* FROM memberships
+                            LEFT JOIN teachers
+                                ON teachers.teacher_id = memberships.teacher_id
+                            WHERE membership_expiry_date > CURRENT_DATE() && teacher_id = 1";
+                            $check_result = mysqli_query($conn, $check_query);
+                                
+                            $check_row = mysqli_fetch_assoc($check_result);
+
+                            // $start = $member_row['membership_starting_date'];
+                            // $exp = $member_row['membership_expiry_date'];
+                            // $date = date("Y - m - d");
+
+                            $token = $check_row['member_token'];
+                            // echo $token;
+
+                            if($check_result){
+                                echo $token;
                             ?>
+                                <li class="text-dark h3 py-1 font-weight-normal">
+                                    <i class="h5 fa fa-envelope-o pr-3" aria-hidden="true"></i>
+                                
+                                    <?php 
+                                        echo $row['teacher_email'];
+                                    ?>
+
                                 </li>
                                 <li  class="text-dark h4 py-1 font-weight-normal">
-                                <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i>
-                                +91 
-                            <?php 
-                                 echo $row['teacher_phone']; 
-                            ?>
+                                    <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i> +91 
+                                    <?php 
+                                        echo $row['teacher_phone']; 
+                                    ?>
                                 </li>
+                            <?php
+
+                            } else {
+                                ?>
+                                <a class="btn btn-primary" href="">hi</a>
+                                <?php
+                            }
+                        ?>
+
+                                
 
                                 <li class="text-dark h4 py-1 font-weight-normal">
 
