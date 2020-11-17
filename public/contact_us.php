@@ -14,11 +14,11 @@
         $user_message = $_POST['message'];
         
         // message to
-        $email = $_POST['email'];
-        $admin_email = "admin@facultyforyou.com";
+        // $email = $_POST['email'];
+        // $admin_email = "admin@facultyforyou.com";
 
         //send email to teacher
-        $to = $email;
+        $to = "admin@facultyforyou.com";
         $subject = "Message from public contact form | facultyforyou.com";
         $message = "<p>Message from public contact form</p></br>";
         $message .= "<p> I am a ". $user_type ."</p></br>";
@@ -32,14 +32,10 @@
         $headers .= "Content-type: text/html\r\n";
     
         mail($to, $subject, $message, $headers);
-        
-        header("location:" . base_url() . "contact_us.php?message=success");
-    }
 
-
-    if(!empty($_GET['message'])){
-?>
-<div class="alert alert-success m-0" role="alert">
+        // header("location: " . base_url() . "contact_us.php?message=success");
+        ?>
+            <div class="alert alert-success m-0" role="alert">
                 <div class="wrap-container h3 py-4">
                     Your message has sent successfully. Thank you!
                 </div>
@@ -58,7 +54,7 @@
         </div>
         <div class="row">
             <div class="col-sm-8 section__form-update">  
-                <form action="">
+                <form action="" method="post">
                     <article>
                         <header class="p-4 h3 article-profile__header text-light m-0">
                             Query form
