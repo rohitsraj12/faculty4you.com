@@ -69,6 +69,7 @@
                 
                 <div class="col-sm-12">
                     <ul class="student-info">
+
                         <li>
                             <i class="fa fa-user pr-2" aria-hidden="true"></i><?php echo $row["teacher_first_name"] ." " . $row["teacher_last_name"];?>    
                         </li>
