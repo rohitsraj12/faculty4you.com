@@ -5,6 +5,13 @@
     include("../private/required/public/components/social_media.php");
     include_once("../private/required/public/header.public.php");
 
+
+    $query = "SELECT * FROM subjects WHERE sub_cat_id = 8";
+    $result = mysqli_query($conn, $query);
+
+    while($row = mysqli_fetch_assoc($result)){
+        echo $row['sub_name'] . "</br>";
+    }
 ?>
 
 <div class="body-container">
