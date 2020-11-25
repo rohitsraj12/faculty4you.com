@@ -8,14 +8,14 @@ if(isset($_POST['login-submit'])){
 
     if(empty($mail_user_name) || empty($password)){
 
-        header("Location: ../login.php?error=please%20enter%20user%20name%20and%20password");
+        header("Location: ../login.php?error=Please%20enter%20user%20name%20and%20password");
         exit();
     } else {
         $sql = "SELECT * FROM teachers WHERE teacher_user_name=? OR teacher_email=?";
         $stmt = mysqli_stmt_init($conn);
 
         if(!mysqli_stmt_prepare($stmt, $sql)){
-            header("Location: ../login.php?error=not%20matching");
+            header("Location: ../login.php?error=Please%20enter%20valid%20username%20and%20password.");
             exit();
         } else {
 
@@ -41,12 +41,12 @@ if(isset($_POST['login-submit'])){
                     exit();
                 } else {
                     
-                    header("Location: ../login.php?error=wrong%20Password");
+                    header("Location: ../login.php?error=Login%20failed..%20Wrong%20Password");
                     exit();
                 }
 
             } else {
-                header("Location: ../login.php?error=no%20user%20found");
+                header("Location: ../login.php?error=There%20is%20no%20user%20found%20in%20record.");
                 exit();
             }
         }
