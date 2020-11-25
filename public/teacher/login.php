@@ -243,7 +243,7 @@
     });
     </script>
     <?php
-    include("../private/required/public/footer.public.php");
+    // include("../private/required/public/footer.public.php");
     ?>
 </body>
 </html>
