@@ -15,7 +15,7 @@ if(isset($_POST['login-submit'])){
         $stmt = mysqli_stmt_init($conn);
 
         if(!mysqli_stmt_prepare($stmt, $sql)){
-            header("Location: ../login.php?error=sqlerror");
+            header("Location: ../login.php?error=Please%20enter%20valid%20username%20and%20password.");
             exit();
         } else {
 
@@ -29,7 +29,7 @@ if(isset($_POST['login-submit'])){
 
                 if($password_check == false) {
                     
-                    header("Location: ../login.php?error=wrongPassword");
+                    header("Location: ../login.php?error=Login%20failed..%20Wrong%20Password");
                     exit();
                 } else if($password_check == true){
                     session_start();
@@ -41,12 +41,12 @@ if(isset($_POST['login-submit'])){
                     exit();
                 } else {
                     
-                    header("Location: ../login.php?error=wrongPassword");
+                    header("Location: ../login.php?error=Login%20failed..%20Wrong%20Password");
                     exit();
                 }
 
             } else {
-                header("Location: ../login.php?error=nouser");
+                header("Location: ../login.php?error=There%20is%20no%20user%20found%20in%20record.");
                 exit();
             }
         }
