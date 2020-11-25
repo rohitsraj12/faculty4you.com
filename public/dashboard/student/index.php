@@ -13,29 +13,6 @@
     require("../../../private/config/db_connect.php");
     include("../include/header.inc.php");
 
-    // sending reminder email to students, update profile details
-    if(isset($_POST['update_profile_detail'])){
-        $email = $_POST['email'];
-        $student_name = $_POST['name'];
-        $admin_email = "admin@facultyforyou.com";
-
-        //send email to students for updation of their profile details
-        $to = $email;
-        $subject = "hello, Your profile need to be update | facultyforyou.com";
-        $message = "<p>Dear " . $student_name . ",</p></br>";
-        $message .= "<p>Welcome to facultyforyou.com. A special thanks to you as you now became a new student on the most honored and credible learning network in India. Please login and create your profile; Post your requirement/s to see the details of tutors on your requirement.</p></br>";
-        $message .= "<p>Thank you,</p>";
-        $message .= "<p>admin</p>";
-        $message .= "<div><img width='250px' src='http://facultyforyou.com/img/brand/faculty_for_you_brand.png'></div>";
-        
-        // from faculty details
-        $headers = "From: facultyforyou.com <" . $admin_email . ">\r\n";
-        $headers .= "Reply-To: " . $admin_email . "\r\n";
-        $headers .= "Content-type: text/html\r\n";
-    
-        mail($to, $subject, $message, $headers);
-    }
-
 ?>
     <div class="body-container-right"> 
     <div class="wrap-container">
@@ -49,11 +26,11 @@
         <!-- end page header -->
         <div class="header-tab wrap-container">
                 <ul class="header-tab-wrap">
-                    <li class="header-tab__button active-tab" data-header-tab="tab-1">activated profiles</li>
-                    <li class="header-tab__button" data-header-tab="tab-2">not activated profile</li>
+                    <li class="header-tab__button" data-header-tab="tab-1">activated profiles</li>
+                    <li class="header-tab__button active-tab" data-header-tab="tab-2">not activated profile</li>
                 </ul>
                 <!-- activated profile -->
-                <div class="tab-1 tab-detail active-tab-detail">
+                <div class="tab-1 tab-detail ">
                     <section class="section-record">
                         <div class="container">
                             <header class="header-text-3">
@@ -106,7 +83,7 @@
 
                     </section>
                 </div>
-                <div class="tab-2 tab-detail">
+                <div class="tab-2 tab-detail active-tab-detail">
                     <section class="section-record">
                         <div class="container">
                             <header class="header-text-3">
@@ -145,7 +122,7 @@
                                                         <td><?php echo $row['student_first_name'];?></td>
                                                         <td><?php echo $row['student_email'] ;?></td>
                                                         <td>
-                                                            <form action="" method="POST">
+                                                            <form action="email/reminder_email.php" method="POST">
                                                                 <input type="hidden" name="name" value="<?php echo $row['student_user_name'] ; ?>">
                                                                 <input type="hidden" name="id" value="<?php echo $row['student_id']; ?>">
                                                                 <input type="hidden" name="email" value="<?php echo $row['student_email']; ?>">
