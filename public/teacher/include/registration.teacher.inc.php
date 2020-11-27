@@ -66,7 +66,7 @@ if(isset($_POST['submit-register'])){
         if(!mysqli_stmt_prepare($stmt, $sql)){
             
             // redirect to register and empty field
-            header("location: ../login.php?error=sqlerror");
+            header("location: ../registration.php?error=sqlerror");
             //stop scripting
             exit();
         } else {
