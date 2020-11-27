@@ -226,9 +226,7 @@
                         </div>
                     </article>
                 </section>
-            <?php 
-                
-            ?>
+          
             </div>
         </section>
     </main>
