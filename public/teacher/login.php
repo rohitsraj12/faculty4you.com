@@ -198,6 +198,9 @@
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="password" placeholder="Password" class="loginpass" name="password"/>
+                                <div class="show-password">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
                             </div>
                             <a class="forgot_password" href="<?php base_url();?>teacher/reset_password.php">Forgot your password?</a>
                             <button name="login-submit">log In</button>
@@ -225,7 +228,21 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="<?php base_url();?>js/script.js"></script>
     <script src="<?php base_url();?>js/regVal.js"></script>
-    
+    <script>
+        $(".show-password > .fa-eye").click(function(){
+            $(".loginpass").attr("type", "text");
+            $(this).removeClass("fa-eye");
+            $(this).addClass("fa-eye-slash");
+
+        });
+
+        $(".show-password > .fa-eye-slash").click(function(){
+            $(".loginpass").attr("type", "password");
+            $(this).removeClass("fa-eye-slash");
+            $(this).addClass("fa-eye");
+
+        });
+    </script>
     <script>
         AOS.init();
         </script>
