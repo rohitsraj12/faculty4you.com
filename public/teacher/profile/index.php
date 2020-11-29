@@ -185,6 +185,10 @@
                                 </ul>
                             </div>
                         </div>
+                           
+                        <footer class="ml-4">
+                            <a class="button-primary" href="teacher_personal_detail.php">Edit</a>
+                        </footer>
                     </article>
                     <article class="article-profil">
                         <header class="h3 p-4 article-profile__header text-light  m-0">
@@ -232,6 +236,9 @@
                                 </ul>
                             </div> -->
                         </div>
+                        <footer class="ml-4">
+                            <a class="button-primary" href="teacher_profesional_detail.php">Edit</a>
+                        </footer>
                     </article>
                 </section>
             <?php 
