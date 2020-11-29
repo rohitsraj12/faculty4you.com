@@ -115,7 +115,19 @@
                             </div>
                     </div>
         </header>
+    </div>
+    <?php
+      if(!empty($_GET['error'])){
+        $message = $_GET['error'];
+    ?>
+    <div class="alert alert-danger m-0" role="alert">
+        <div class="wrap-container h3 py-4">
+            <?php echo $message; ?>
         </div>
+    </div>
+    <?php
+    }
+?>
            <div class="body-container">
                 <div class="section-member wrap-container">
 
