@@ -75,6 +75,7 @@
                             <?php
                             }
                             ?>
+                            <a href="update_student_image.php?id=<?php echo $row['student_id'];?>"class="d-block" data-toggle="modal" data-target="#exampleModal">Update Image</a>
                         </figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
@@ -156,15 +157,17 @@
                                     </li>
                                 </ul>
                             </div>
-                            
-                                     </div>
+                           
+                            <a href="personal_info.php" class="button-primary">Update</a>
+                        </div>
                     </article>
                     <article class="article-profil" >
                         <header class="article-profile__header p-4 h3 bg-dark text-light  m-0">
                             Contact detail
+
                         </header>
                         <div class="article-body p-4">
-                        <div class="article-info">
+                            <div class="article-info">
                                 <ul class="row">
                                     <li class="col-sm-3">Phone</li>
                                     <li class="col-sm-9  h4 font-weight-normal">:
@@ -183,26 +186,6 @@
                                     </li>
                                 </ul>
                             </div>
-                            <!-- <div class="article-info">
-                                <ul class="row">
-                                    <li class="col-sm-3">parent name</li>
-                                    <li class="col-sm-9 h4 font-weight-normal">
-                                        <?php 
-                                            echo $row['student_parent_name'];
-                                        ?>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="article-info">
-                                <ul class="row">
-                                    <li class="col-sm-3">parent phone</li>
-                                    <li class="col-sm-9 h4 font-weight-normal">
-                                        <?php 
-                                            echo $row['student_parent_phone'];
-                                        ?>
-                                    </li>
-                                </ul>
-                            </div> -->
 
                             <div class="article-info">
                                 <ul class="row">
@@ -225,18 +208,8 @@
                                     </li>
                                 </ul>
                             </div>
-  
-                          
-                            <!-- <div class="article-info">
-                                <ul class="row">
-                                    <li class="col-sm-4">tuition type</li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                            </div> -->
                             
-                           
+                           <a href="contact_info.php" class="button-primary">Update</a>
                         </div>
                     </article>
                 </section>
@@ -245,7 +218,34 @@
     </main>
 </div>
 
-
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+       <form action="update_student_image.php" method="post"  enctype="multipart/form-data">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload your image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mb-4">
+            <label for="photo">Upload image</label>
+            <span class="error-msg"></span>
+            <input type="file" name="file" class="form-control-file image pt-0" id="photo"  value="" placeholder="<?php echo $row['student_photo'];?>">
+            <input type="hidden" name="id" value="<?php echo $row['student_id'];?>">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" name="submit_image" class="btn btn-primary">Save image</button>
+      </div>
+    </div>
+    </form>
+ </div>
+ 
+</div>
 
 <?php
     include("../../../private/required/public/components/agreement.php");
