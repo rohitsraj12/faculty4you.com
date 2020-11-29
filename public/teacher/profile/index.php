@@ -74,6 +74,9 @@
                         <?php
                             }
                         ?>
+                        
+                        <a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">Update Image</a>
+                       
                         </figure>
                         <header class=" u-center-text">
                             <h1 class="text-dark py-5">
@@ -100,7 +103,7 @@
                                 </li>
 
                                 <li class="text-center">
-                                    <a href="<?php base_url();?>teacher/profile/profile_update.php?id=<?php echo $row['teacher_id'];?>" class="h4 button-primary">Edit profile</a>
+                                    <!-- <a href="<?php base_url();?>teacher/profile/profile_update.php?id=<?php //echo $row['teacher_id'];?>" class="h4 button-primary">Edit profile</a> -->
                                 </li>
                             </ul>
                         </footer>
@@ -187,7 +190,7 @@
                         </div>
                            
                         <footer class="ml-4">
-                            <a class="button-primary" href="teacher_personal_detail.php">Edit</a>
+                            <a class="button-primary" href="teacher_personal_detail.php?id=<?php echo $row['teacher_id'];?>">Update</a>
                         </footer>
                     </article>
                     <article class="article-profil">
@@ -237,7 +240,7 @@
                             </div> -->
                         </div>
                         <footer class="ml-4">
-                            <a class="button-primary" href="teacher_profesional_detail.php">Edit</a>
+                            <a class="button-primary" href="teacher_profesional_detail.php">Update</a>
                         </footer>
                     </article>
                 </section>
@@ -248,6 +251,36 @@
         </section>
     </main>
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+       <form action="update_teacher_image.php" method="post"  enctype="multipart/form-data">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Upload your image</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group mb-4">
+            <label for="photo">Upload image</label>
+            <span class="error-msg"></span>
+            <input type="file" name="file" class="form-control-file image pt-0" id="photo"  value="">
+            <input type="hidden" name="id" value="<?php echo $row['teacher_id'];?>">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" name="submit_image" class="btn btn-primary">Save image</button>
+      </div>
+    </div>
+    </form>
+ </div>
+ 
+</div>
+
 <?php
   include("../../../private/required/public/components/agreement.php");
     require("../include/footer.inc.php");
