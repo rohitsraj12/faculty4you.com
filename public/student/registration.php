@@ -179,6 +179,7 @@
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="text" name="user_name" class="reg" placeholder="user name" />
+                                <small for="" class="form-note">You shouldn't use space.</small>
                                 </div>
                                 <div class="reg_row w-100">
                                 <span class="error-icon">
