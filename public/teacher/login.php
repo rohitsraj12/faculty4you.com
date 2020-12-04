@@ -148,6 +148,7 @@
                                     <label class="error-message">Please enter value</label>
                                 </span>
                                 <input type="text" name="user_name" class="reg" placeholder="user name" />
+                                <small for="" class="form-note">You shouldn't use space.</small>
                                 </div>
                                 <div class="reg_row">
                                 <span class="error-icon">
@@ -229,18 +230,18 @@
     <script src="<?php base_url();?>js/script.js"></script>
     <script src="<?php base_url();?>js/regVal.js"></script>
     <script>
-        $(".show-password > .fa-eye").click(function(){
-            $(".loginpass").attr("type", "text");
-            $(this).removeClass("fa-eye");
-            $(this).addClass("fa-eye-slash");
+          $(".show-password > .fa").click(function(){
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $(".loginpass");
 
-        });
-
-        $(".show-password > .fa-eye-slash").click(function(){
-            $(".loginpass").attr("type", "password");
-            $(this).removeClass("fa-eye-slash");
-            $(this).addClass("fa-eye");
-
+            if(input.attr("type")=="password"){
+                input.attr("type", "text");
+              
+            }else {
+                input.attr("type", "password");
+                
+            }
+           
         });
     </script>
     <script>
