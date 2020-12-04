@@ -782,6 +782,11 @@ label {
     left: 1rem;
     font-style: italic; }
 
+.show-password {
+  position: absolute;
+  top: 17px;
+  right: 17px; }
+
 .section-student {
   background: #ffffb9;
   background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
