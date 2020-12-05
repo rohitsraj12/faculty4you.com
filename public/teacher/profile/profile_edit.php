@@ -58,16 +58,11 @@
                     My profile Update
                 </header>
             </div>
-            <div class="section-body row">
-                
+            <div class="section-body row">               
                 <section class="section-update-form">
                     <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
                         <article class="mb-5" >
-                            <!-- <header class="p-4 h3 article-profile__header text-light m-0">
-                                Personal information
-                            </header> -->
                             <div class="py-4 px-5 text-dark bg-white border">
-                        
                                 <div class="form-row mb-4 mt-4">
                                     <div class="form-group wrap-form col-md-6">
                                         <label for="first_name">First name</label> 
@@ -75,12 +70,11 @@
                                         <input type="text" name="first_name" class="form-control name" id="first_name" placeholder="<?php //echo $row['teacher_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
-                                    <label for="last_name">Last name</label>
-                                    <span class="error-msg"></span>
-                                    <input type="text" name="last_name" class="form-control name" id="last_name" >
+                                        <label for="last_name">Last name</label>
+                                        <span class="error-msg"></span>
+                                        <input type="text" name="last_name" class="form-control name" id="last_name" >
                                     </div>
                                 </div>
-
                                 <div class="form-group mb-4">
                                     <label for="photo">Upload image</label>
                                     <span class="error-msg"></span>
@@ -88,23 +82,15 @@
                                 </div>
                                 <fieldset class="form-group mb-4">
                                     <div class="row">
-                                        <label class="label col-form-label col-sm-2 pt-0">Gender</label>
-                
+                                        <label class="label col-form-label col-sm-2 pt-0">Gender</label>                
                                         <div class="col-sm-8 row">
-
-                                        <!-- 
-
-                                            #task fetch from database
-                                        -->
                                             <div class="form-check col-sm-2">
                                                 <span class="error-msg"></span>
                                                 <input class="form-check-input gender" name="gender" type="radio" value="1" id="male">
-                                            
                                                 <label class="form-check-label" for="male">
                                                     male
                                                 </label>
                                             </div>
-
                                             <div class="form-check col-sm-2">
                                                 <input class="form-check-input gender" name="gender" type="radio" value="2" id="female">
                                             
@@ -114,16 +100,13 @@
                                             </div>
                                             <div class="form-check col-sm-2">
                                                 <input class="form-check-input gender" name="gender" type="radio" value="3" id="other">
-                                            
                                                 <label class="form-check-label" for="other">
                                                     other
                                                 </label>
-                                            </div>
-                                        
+                                            </div>                                        
                                         </div>
                                     </div>
-                                </fieldset>
-                        
+                                </fieldset>                        
                                 <div class="form-row mb-4">
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
@@ -154,60 +137,43 @@
                                     
                                     <div class="form-group col-md-4">
                                         <label for="city">City/Town</label>
-                                        <span class="error-msg"></span>
-                                        <!-- <select id="state" name="city" class="form-control city">
-                                        
-                                        </select> -->
-                                        
+                                        <span class="error-msg"></span>     
                                         <div class="form-field">
                                             <input type="text" name="" id="city" value="" class="form-control city_name">
                                             <input type="hidden" name="city" value="0" class="hidden_filed">
                                             <div class="city_list" id="city_list"></div>
                                         </div>
                                     </div>
-                                    <!-- <div class="form-group col-md-2">
-                                        <label for="pincode">Pincode</label>
-                                        <input type="text" name="pincode" class="form-control" id="pincode" value="<?php echo $row['student_city_pincode'];?>" placeholder="<?php echo $row['student_city_pincode'];?>">
-                                    </div> -->
                                 </div>
                                                 
                             </div>
-                        </article>
-
-                        
+                        </article>                        
                         <article >
-                            <!-- <header class="p-4 h3 article-profile__header text-light m-0">
-                                Professional information
-                            </header> -->
                             <div class="py-4 px-5 text-dark bg-white border mb-5">
-                            <div class="form-group form-row my-3">
-                                <div class="col-md-4"> 
-                                    <label for="study_category" class="label col-form-label pt-0 w-100">Study Category</label>
-                                    <span class="error-msg"></span>
-                                    <select id="study_category" name="category" class="form-control study-category">
-                                        <option value="nooption">Select category</option>
-                                    
-                                    </select>
-                                </div>
-                                <div class="col-md-4"> 
-                                    <label for="subject_category" class="label col-form-label pt-0">Subject Category</label>
-                                    <span class="error-msg"></span>
-                                    <select id="subject_category" name="subject_category" class="form-control subject_category">
-                                        <!-- <option value="nooption">Select category</option> -->
-                                    
-                                    </select>
-                                </div>
-                                <div class="form-group col-md-4">
-                                        <label for="subject">Subject</label>
+                                <div class="form-group form-row my-3">
+                                    <div class="col-md-4"> 
+                                        <label for="study_category" class="label col-form-label pt-0 w-100">Study Category</label>
                                         <span class="error-msg"></span>
-                                        <select id="subject" name="subject" class="form-control subject">
+                                        <select id="study_category" name="category" class="form-control study-category">
+                                            <option value="nooption">Select category</option>
                                         
                                         </select>
-                                </div>
-                            </div>
-                        
-                                <div class="form-row pt-3 mb-3">
-                                
+                                    </div>
+                                    <div class="col-md-4"> 
+                                        <label for="subject_category" class="label col-form-label pt-0">Subject Category</label>
+                                        <span class="error-msg"></span>
+                                        <select id="subject_category" name="subject_category" class="form-control subject_category">
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                            <label for="subject">Subject</label>
+                                            <span class="error-msg"></span>
+                                            <select id="subject" name="subject" class="form-control subject">
+                                            
+                                            </select>
+                                    </div>
+                                </div>                        
+                                <div class="form-row pt-3 mb-3">                                
                                     <div class="form-group col-md-4">
                                         <label for="teaching_exp">Teaching experience</label>
                                         <span class="error-msg"></span>
@@ -230,22 +196,17 @@
                                     
                                     </div>
                                 </div>
-                                
-
                                 <div class="form-group">
                                     <label for="about">About me</label>
                                     <span class="error-msg"></span>
                                     <textarea name="about_me" class="form-control about" id="about" value="<?php //echo $row["teacher_about_me"];?>" placeholder="<?php //echo $row["teacher_about_me"];?>"></textarea>
                                     
                                 </div>
-
                             </div>
                         </article>
-                            <button  type="submit" class="button-primary" name="update" >Submit</button> 
-                    
+                            <button  type="submit" class="button-primary" name="update" >Submit</button>
                     </form>
                 </section>
-          
             </div>
         </section>
     </main>
