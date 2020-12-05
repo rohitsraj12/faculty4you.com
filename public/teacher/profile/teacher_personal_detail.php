@@ -76,12 +76,12 @@
                                     <div class="form-group wrap-form col-md-6">
                                         <label for="first_name">First name</label> 
                                         <span class="error-msg"></span>
-                                        <input type="text" name="first_name" class="form-control name" id="first_name" value="<?php echo $row['teacher_first_name'];?>" placeholder="<?php echo $row['teacher_first_name'];?>">
+                                        <input type="text" name="first_name" class="form-control name" id="first_name" value="<?php //echo $row['teacher_first_name'];?>" placeholder="<?php echo $row['teacher_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="last_name">Last name</label>
                                     <span class="error-msg"></span>
-                                    <input type="text" name="last_name" class="form-control name" id="last_name"  value="<?php echo $row['teacher_last_name'];?>" placeholder="<?php echo $row['teacher_last_name'];?>">
+                                    <input type="text" name="last_name" class="form-control name" id="last_name"  value="<?php //echo $row['teacher_last_name'];?>" placeholder="<?php echo $row['teacher_last_name'];?>">
                                     </div>
                                 </div>
                                 <fieldset class="form-group mb-4">
@@ -125,17 +125,17 @@
                                     <div class="form-group col-md-6">
                                     <label for="email">Email</label>
                                     <span class="error-msg"></span>
-                                    <input type="email" name="email" class="form-control email" id="email" value="<?php echo $row['teacher_email']; ?>" placeholder="<?php echo $row['teacher_email']; ?>">
+                                    <input type="email" name="email" class="form-control email" id="email" value="<?php //echo $row['teacher_email']; ?>" placeholder="<?php echo $row['teacher_email']; ?>">
                                     </div>
                                     <div class="form-group col-md-6">
                                     <label for="phone">Telephone</label>
                                     <span class="error-msg"></span>
-                                    <input type="text" name="phone" class="form-control phone" id="phone" value="<?php echo $row['teacher_phone']; ?>" placeholder="<?php echo $row['teacher_phone']; ?>">
+                                    <input type="text" name="phone" class="form-control phone" id="phone" value="<?php //echo $row['teacher_phone']; ?>" placeholder="<?php echo $row['teacher_phone']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group mb-4">
                                     <label for="address">Address</label>
-                                    <input type="text" name="address" class="form-control" id="address" value="<?php echo $row['teacher_address']; ?>" placeholder="<?php echo $row['teacher_address']; ?>">
+                                    <input type="text" name="address" class="form-control" id="address" value="<?php //echo $row['teacher_address']; ?>" placeholder="<?php echo $row['teacher_address']; ?>">
                                 </div>
                                 
                                 <div class="form-row mb-4">
@@ -145,7 +145,7 @@
                                         <span class="error-msg"></span>
                                         <select id="state" name="state" class="form-control state">
                                             <option value="nooption">Select category</option>
-                                            <option value="<?php echo $row['state_id'];?>" selected><?php echo $row['state_name'];?></option>
+                                            <option value="<?php //echo $row['state_id'];?>" selected><?php echo $row['state_name'];?></option>
                                             
                                         </select>
                                     </div>
@@ -165,7 +165,7 @@
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="pincode">Pincode</label>
-                                        <input type="text" name="pincode" class="form-control" id="pincode" value="<?php echo $row['city_pincode'];?>" placeholder="<?php echo $row['city_pincode'];?>">
+                                        <input type="text" name="pincode" class="form-control" id="pincode" value="<?php //echo $row['city_pincode'];?>" placeholder="<?php echo $row['city_pincode'];?>">
                                     </div>
                      
                                 </div>
