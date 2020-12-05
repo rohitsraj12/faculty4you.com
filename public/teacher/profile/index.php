@@ -244,9 +244,6 @@
                         </footer>
                     </article>
                 </section>
-            <?php 
-                
-            ?>
             </div>
         </section>
     </main>
@@ -254,30 +251,30 @@
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+    <div class="modal-dialog">
        <form action="update_teacher_image.php" method="post"  enctype="multipart/form-data">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Upload your image</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group mb-4">
-            <label for="photo">Upload image</label>
-            <span class="error-msg"></span>
-            <input type="file" name="file" class="form-control-file image pt-0" id="photo"  value="">
-            <input type="hidden" name="id" value="<?php echo $row['teacher_id'];?>">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="submit" name="submit_image" class="btn btn-primary">Save image</button>
-      </div>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Upload your image</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group mb-4">
+                        <label for="photo">Upload image</label>
+                        <span class="error-msg"></span>
+                        <input type="file" name="file" class="form-control-file image pt-0" id="photo"  value="">
+                        <input type="hidden" name="id" value="<?php echo $row['teacher_id'];?>">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" name="submit_image" class="btn btn-primary">Save image</button>
+                </div>
+            </div>
+        </form>
     </div>
-    </form>
- </div>
  
 </div>
 
