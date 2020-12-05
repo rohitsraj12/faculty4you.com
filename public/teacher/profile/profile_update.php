@@ -59,8 +59,7 @@
             <div class="section-header u-center-text" >
                 <heeader class="text-primary-h-3"> 
                     Update profile
-                </header>
-                
+                </header>    
             </div>
 
             <div class="section-body">
@@ -70,8 +69,7 @@
                             <header class="p-4 h3 article-profile__header text-light m-0">
                                 Personal information
                             </header>
-                            <div class="py-4 px-5 text-dark bg-white border">
-                        
+                            <div class="py-4 px-5 text-dark bg-white border">                        
                                 <div class="form-row mb-4 mt-4">
                                     <div class="form-group wrap-form col-md-6">
                                         <label for="first_name">First name</label> 
@@ -79,12 +77,11 @@
                                         <input type="text" name="first_name" class="form-control name" id="first_name" value="<?php echo $row['teacher_first_name'];?>" placeholder="<?php echo $row['teacher_first_name'];?>">
                                     </div>
                                     <div class="form-group col-md-6">
-                                    <label for="last_name">Last name</label>
-                                    <span class="error-msg"></span>
-                                    <input type="text" name="last_name" class="form-control name" id="last_name"  value="<?php echo $row['teacher_last_name'];?>" placeholder="<?php echo $row['teacher_last_name'];?>">
+                                        <label for="last_name">Last name</label>
+                                        <span class="error-msg"></span>
+                                        <input type="text" name="last_name" class="form-control name" id="last_name"  value="<?php echo $row['teacher_last_name'];?>" placeholder="<?php echo $row['teacher_last_name'];?>">
                                     </div>
                                 </div>
-
                                 <div class="form-group mb-4">
                                     <label for="photo">Upload image</label>
                                     <span class="error-msg"></span>
@@ -94,13 +91,7 @@
                                     <div class="row">
                                         <label class="label col-form-label col-sm-2 pt-0">Gender</label>
                 
-                                        <div class="col-sm-8 row">
-
-                                        <!-- 
-
-                                            #task fetch from database
-                                         -->
-                                            <div class="form-check col-sm-2">
+                                        <div class="form-check col-sm-2">
                                                 <span class="error-msg"></span>
                                                 <input class="form-check-input gender" name="gender" type="radio" value="1" id="male">
                                             
@@ -129,14 +120,14 @@
                                 </fieldset>
                                 <div class="form-row mb-4">
                                     <div class="form-group col-md-6">
-                                    <label for="email">Email</label>
-                                    <span class="error-msg"></span>
-                                    <input type="email" name="email" class="form-control email" id="email" value="<?php echo $row['teacher_email']; ?>" placeholder="<?php echo $row['teacher_email']; ?>">
+                                        <label for="email">Email</label>
+                                        <span class="error-msg"></span>
+                                        <input type="email" name="email" class="form-control email" id="email" value="<?php echo $row['teacher_email']; ?>" placeholder="<?php echo $row['teacher_email']; ?>">
                                     </div>
                                     <div class="form-group col-md-6">
-                                    <label for="phone">Telephone</label>
-                                    <span class="error-msg"></span>
-                                    <input type="text" name="phone" class="form-control phone" id="phone" value="<?php echo $row['teacher_phone']; ?>" placeholder="<?php echo $row['teacher_phone']; ?>">
+                                        <label for="phone">Telephone</label>
+                                        <span class="error-msg"></span>
+                                        <input type="text" name="phone" class="form-control phone" id="phone" value="<?php echo $row['teacher_phone']; ?>" placeholder="<?php echo $row['teacher_phone']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group mb-4">
@@ -159,10 +150,7 @@
                                     <div class="form-group col-md-4">
                                         <label for="city">City/Town</label>
                                         <span class="error-msg"></span>
-                                        <!-- <select id="state" name="city" class="form-control city">
-                                           
-                                        </select> -->
-                                        
+                            
                                         <div class="form-field">
                                             <input type="text" name="" id="city" value="<?php echo $row['city_name'];?>" class="form-control city_name">
                                             <input type="hidden" name="city" value="<?php echo $row['city_id'];?>" class="hidden_filed">
@@ -194,9 +182,7 @@
                                 <div class="col-md-4"> 
                                     <label for="subject_category" class="label col-form-label pt-0">Subject Category</label>
                                     <span class="error-msg"></span>
-                                    <select id="subject_category" name="subject_category" class="form-control subject_category">
-                                        <!-- <option value="nooption">Select category</option> -->
-                                       
+                                    <select id="subject_category" name="subject_category" class="form-control subject_category">  
                                     </select>
                                 </div>
                                 <div class="form-group col-md-4">
