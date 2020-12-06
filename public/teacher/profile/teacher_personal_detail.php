@@ -32,6 +32,44 @@
     $row = mysqli_fetch_assoc($result);
     $teacher_id = $row['teacher_id'];
 
+    if(isset($_POST['update'])){
+        
+        $id = $_GET['id'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $gender = $_POST['gender'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
+        $city = $_POST['city'];
+        $state = $_POST['state'];
+        $pincode = $_POST['pincode'];
+       
+              
+        $query = "UPDATE teachers SET teacher_first_name = '$first_name',
+        teacher_last_name = '$last_name',
+        gender_id = $gender,
+        teacher_phone = '$phone',
+        teacher_address = '$address',
+        city_id = $city,
+        state_id = $state,
+        city_pincode = $pincode  WHERE teacher_id=$id"; 
+
+        $result = mysqli_query($conn, $query);
+
+    echo "<script type='text/javascript'> document.location = 'index.php?message=success'; </script>";
+
+        
+        // header("location: index.php?message=success");
+        // header("location: ../registration.php");
+        // exit();
+
+        // $message = "Congratulations! You have successfully updated your profile detail.";
+    
+// 
+        
+    
+    }
+
     if(!empty($_GET['message'])){
         $message = "Congratulations! You have successfully updated your profile.";
         
@@ -65,7 +103,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="teacher_personal_detail.inc.php" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
                         <article class="mb-5" >
                             <header class="p-4 h3 article-profile__header text-light m-0">
                                 Personal information
@@ -122,11 +160,11 @@
                                     </div>
                                 </fieldset>
                                 <div class="form-row mb-4">
-                                    <div class="form-group col-md-6">
+                                    <!-- <div class="form-group col-md-6">
                                     <label for="email">Email</label>
                                     <span class="error-msg"></span>
                                     <input type="email" name="email" class="form-control email" id="email" value="<?php //echo $row['teacher_email']; ?>" placeholder="<?php echo $row['teacher_email']; ?>">
-                                    </div>
+                                    </div> -->
                                     <div class="form-group col-md-6">
                                     <label for="phone">Telephone</label>
                                     <span class="error-msg"></span>
