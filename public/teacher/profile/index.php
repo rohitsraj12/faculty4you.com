@@ -240,7 +240,7 @@
                             </div> -->
                         </div>
                         <footer class="ml-4">
-                            <a class="button-primary" href="teacher_profesional_detail.php">Update</a>
+                            <a class="button-primary" href="teacher_profesional_detail.php?id=<?php echo $row['teacher_id'];?>">Update</a>
                         </footer>
                     </article>
                 </section>
