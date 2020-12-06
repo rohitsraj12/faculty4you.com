@@ -32,6 +32,34 @@
     $row = mysqli_fetch_assoc($result);
     $teacher_id = $row['teacher_id'];
 
+    if(isset($_POST['update'])){
+    
+        $id = $_GET['id'];
+        $cat = $_POST['category'];
+        $exp = $_POST['exp'];
+        $sub = $_POST['subject'];
+        $sub_cat = $_POST['subject_category'];
+        $about = $_POST['about_me'];
+        $charges = $_POST['charges']. " " . $_POST['per_time'];
+        
+        $query = "UPDATE teachers SET study_cat_id = '$cat',
+        sub_cat_id = '$sub_cat',
+        subject_id = $sub,
+        teacher_experience = '$exp',
+        teacher_about_me = '$about', 
+        teaching_charge = '$charges'  WHERE teacher_id=$id"; 
+    
+        $result = mysqli_query($conn, $query);
+        echo "<script type='text/javascript'> document.location = 'index.php?message=success'; </script>";
+        
+        // header("location:index.php?message=success");
+        // header("location: ../registration.php");
+        // exit();
+    
+                // $message = "Congratulations! You have successfully updated your profile detail.";
+           }
+
+
     if(!empty($_GET['message'])){
         $message = "Congratulations! You have successfully updated your profile.";
         
@@ -65,7 +93,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="teacher_professional_detail.inc" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return trainerValidation()">
                         
                         <article>
                             <header class="p-4 h3 article-profile__header text-light m-0">
@@ -130,7 +158,7 @@
                                     <textarea name="about_me" class="form-control about" id="about" value="<?php //echo $row["teacher_about_me"];?>" placeholder="<?php //echo $row["teacher_about_me"];?>"></textarea>
                                     
                                 </div>
-                                <input type="hidden" name="id" value="<?php echo $teacher_id;?>">
+                                <!-- <input type="hidden" name="id" value="<?php echo $teacher_id;?>"> -->
                             </div>
 
                         </article>
