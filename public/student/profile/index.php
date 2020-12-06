@@ -101,7 +101,7 @@
                                 </li>
 
                                 <li class="text-center">
-                                    <a href="<?php base_url();?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" class="h4 button-primary">Edit profile</a>
+                                    <!-- <a href="<?php base_url();?>student/profile/profile_update.php?id=<?php echo $row['student_id'];?>" class="h4 button-primary">Edit profile</a> -->
                                 </li>
                             </ul>
                         </footer>
@@ -158,7 +158,7 @@
                                 </ul>
                             </div>
                            
-                            <a href="personal_info.php" class="button-primary">Update</a>
+                            <a href="personal_info.php?id=<?php echo $row['student_id']?>" class="button-primary">Update</a>
                         </div>
                     </article>
                     <article class="article-profil" >
@@ -209,7 +209,7 @@
                                 </ul>
                             </div>
                             
-                           <a href="contact_info.php" class="button-primary">Update</a>
+                           <a href="contact_info.php?id=<?php echo $row['student_id']?>" class="button-primary">Update</a>
                         </div>
                     </article>
                 </section>
