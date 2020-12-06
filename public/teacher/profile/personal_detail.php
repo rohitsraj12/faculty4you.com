@@ -28,6 +28,46 @@
     $teacher_id = $row['teacher_id'];
     $teacher_first_name = $row['teacher_first_name'];
 
+
+    if(isset($_POST['update'])){
+        
+        $id = $_GET['id'];
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $gender = $_POST['gender'];
+        $phone = $_POST['phone'];
+        $address = $_POST['address'];
+        $city = $_POST['city'];
+        $state = $_POST['state'];
+        $pincode = $_POST['pincode'];
+       
+              
+                    $query = "UPDATE teachers SET teacher_first_name = '$first_name',
+                    teacher_last_name = '$last_name',
+                    gender_id = $gender,
+                    teacher_phone = '$phone',
+                    teacher_address = '$address',
+                    city_id = $city,
+                    state_id = $state,
+                    city_pincode = $pincode  WHERE teacher_id=$id"; 
+        
+                    $result = mysqli_query($conn, $query);
+    
+                // echo "<script type='text/javascript'> document.location = 'index.php?message=success'; </script>";
+    
+                    
+                    // header("location: index.php?message=success");
+                    // header("location: ../registration.php");
+                    // exit();
+    
+                    // $message = "Congratulations! You have successfully updated your profile detail.";
+               
+        // 
+        
+    
+    }
+
+
     require("../include/header.inc.php");
    
 ?>
@@ -100,11 +140,11 @@
                                         <input type="text" name="last_name" class="form-control name" id="last_name"  value="<?php echo $row['teacher_last_name'];?>" placeholder="<?php echo $row['teacher_last_name'];?>">
                                     </div>
                                 </div>
-                                <div class="form-group mb-4">
+                                <!-- <div class="form-group mb-4">
                                     <label for="photo">Upload image</label>
                                     <span class="error-msg"></span>
                                     <input type="file" name="file" class="form-control-file pt-0" id="photo"  value="<?php echo $row['teacher_photo'];?>" placeholder="<?php //echo $row['teacher_photo'];?>">
-                                </div>
+                                </div> -->
                                 <fieldset class="form-group mb-4">
                                     <div class="row">
                                         <label class="label col-form-label col-sm-2 pt-0">Gender</label>
@@ -138,11 +178,11 @@
                                     </div>
                                 </fieldset>
                                 <div class="form-row mb-4">
-                                    <div class="form-group col-md-6">
+                                    <!-- <div class="form-group col-md-6">
                                         <label for="email">Email</label>
                                         <span class="error-msg"></span>
                                         <input type="email" name="email" class="form-control email" id="email" value="<?php echo $row['teacher_email']; ?>" placeholder="<?php echo $row['teacher_email']; ?>">
-                                    </div>
+                                    </div> -->
                                     <div class="form-group col-md-6">
                                         <label for="phone">Telephone</label>
                                         <span class="error-msg"></span>
