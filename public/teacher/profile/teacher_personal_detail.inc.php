@@ -34,8 +34,11 @@ if(isset($_POST['update'])){
                 city_pincode = $pincode  WHERE teacher_id=$id"; 
     
                 $result = mysqli_query($conn, $query);
+
+            echo "<script type='text/javascript'> document.location = 'index.php?message=success'; </script>";
+
                 
-                header("location: index.php?message=success");
+                // header("location: index.php?message=success");
                 // header("location: ../registration.php");
                 // exit();
 
