@@ -26,7 +26,7 @@
     $student_id = $row['student_id'];
     $student_first_name = $row['student_first_name'];
     $city = $row['city_id'];
-    echo $student_id;
+    // echo $student_id;
     require("include/header.inc.php");
     ?>
     <div class="body-container">
