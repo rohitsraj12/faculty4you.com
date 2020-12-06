@@ -24,7 +24,8 @@ if(isset($_POST['update_contact_info'])){
 
             $_result = mysqli_query($conn, $query);
 
-            header("location: index.php?message=success");
+            echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
+
 
       
 
