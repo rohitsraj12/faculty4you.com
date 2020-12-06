@@ -35,6 +35,33 @@
     $city_name = $row['city_name'];
     $city_id = $row['city_id'];
 
+    if(isset($_POST['update_contact_info'])){
+        $id = $_GET['id'];
+        // $email =  $_POST['email'];
+        $phone =  $_POST['phone'];
+        $address =  $_POST['address'];
+        $city =  $_POST['city'];    
+        $state =  $_POST['state'];
+        $pincode =  $_POST['pincode'];
+    
+        
+        //  accesing file details
+               $query = "UPDATE students SET 
+                -- student_email = '$email', 
+                student_phone = '$phone', 
+                student_address = '$address', 
+                city_id = '$city', 
+                state_id = '$state', 
+                city_pincode = '$pincode'
+                WHERE student_id=$id"; 
+    
+                $_result = mysqli_query($conn, $query);
+    
+                echo "<script type='text/javascript'> document.location = 'index.php'; </script>";
+    
+          
+    
+    }
 
     // if(isset($_POST['update_contact_info'])){
     //     $email =  $_POST['email'];
@@ -88,7 +115,7 @@
 
             <div class="section-body">
                 <section class="section-update-form">
-                    <form action="update_student_contact_details.php" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return studentValidation()">
+                    <form action="" method="post" class="section__form section__form-update" enctype="multipart/form-data" onsubmit="return studentValidation()">
                         
                     <article >
                             <header class="article-profile__header p-4 h3 bg-dark text-light m-0">
@@ -97,15 +124,15 @@
                             <div class="py-4 px-5 text-dark bg-white border mb-5">
                                 <!-- contact info -->
                                 <div class="form-row mb-4">
+                                    <!-- <div class="form-group col-md-6">
+                                        <label for="email">Email</label>
+                                        <span class="error-msg"></span>
+                                        <input type="text" name="email" class="form-control email" id="email" value="<?php echo $email;?>" placeholder="">
+                                    </div> -->
                                     <div class="form-group col-md-6">
-                                    <label for="email">Email</label>
-                                    <span class="error-msg"></span>
-                                    <input type="text" name="email" class="form-control email" id="email" value="<?php echo $email;?>" placeholder="">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                    <label for="phone">Telephone</label>
-                                    <span class="error-msg"></span>
-                                    <input type="tel" name="phone" class="form-control phone" id="phone" value="<?php echo $phone?>" placeholder="<?php echo $row['student_phone'];?>">
+                                        <label for="phone">Telephone</label>
+                                        <span class="error-msg"></span>
+                                        <input type="tel" name="phone" class="form-control phone" id="phone" value="<?php echo $phone?>" placeholder="<?php echo $row['student_phone'];?>">
                                     </div>
                                 </div>
                                 <div class="form-group mb-4">
