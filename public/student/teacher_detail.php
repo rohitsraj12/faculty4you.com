@@ -84,23 +84,42 @@
                         </header>
                         <footer class="px-5">
                             <ul>
-                                
+                                <?php
+                                    // if token number or membership not exired then show phone number and email
+                                    $member_query = "SELECT * FROM memberships WHERE teacher_id = $teacher_id AND membership_expiry_date > CURRENT_DATE()";
+                                    $memeber_result = mysqli_query($conn, $member_query);
+
+                                    $member_row = mysqli_fetch_assoc($memeber_result);
+
+                                    $num = $member_row['member_token'];
+
+                                    // echo $member_row['membership_expiry_date'];
+
+                                    if($num > 0) {
+                                        ?>
+
+                                            <li class="text-dark h3 py-1 font-weight-normal">
+                                                <i class="h5 fa fa-envelope-o pr-3" aria-hidden="true"></i>
+                                            
+                                                <?php 
+                                                    echo $row['teacher_email'];
+                                                ?>
+                                                
+                                                
+
+                                            </li>
+                                            <li  class="text-dark h4 py-1 font-weight-normal">
+                                                <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i> +91 
+                                                <?php 
+                                                    echo $row['teacher_phone']; 
+                                                ?>
+                                            </li> 
+
+                                        <?php
+                                    }
+                                ?>
                      
-                                <!-- <li class="text-dark h3 py-1 font-weight-normal">
-                                    <i class="h5 fa fa-envelope-o pr-3" aria-hidden="true"></i>
                                 
-                                    <?php 
-                                        echo $row['teacher_email'];
-                                    ?>
-
-                                </li>
-                                <li  class="text-dark h4 py-1 font-weight-normal">
-                                    <i class="h2 fa fa-mobile  pr-3" aria-hidden="true"></i> +91 
-                                    <?php 
-                                        echo $row['teacher_phone']; 
-                                    ?>
-                                </li> -->
-
                                 <li class="text-dark h4 py-1 font-weight-normal">
 
                                     <?php 
