@@ -122,12 +122,15 @@
                                                         <td><?php echo $row['student_first_name'];?></td>
                                                         <td><?php echo $row['student_email'] ;?></td>
                                                         <td>
-                                                            <form action="email/reminder_email.php" method="POST">
-                                                                <input type="hidden" name="name" value="<?php echo $row['student_user_name'] ; ?>">
-                                                                <input type="hidden" name="id" value="<?php echo $row['student_id']; ?>">
-                                                                <input type="hidden" name="email" value="<?php echo $row['student_email']; ?>">
+                                                            <!-- email/reminder_email.php -->
+                                                            <!-- <form action="" method="POST" class="form-submit">
+                                                                <input type="hidden" class="user-name" name="name" value="<?php echo $row['student_user_name'] ; ?>">
+                                                                <input type="hidden" class="id" name="id" value="<?php echo $row['student_id']; ?>">
+                                                                <input type="hidden" class="email" name="email" value="<?php echo $row['student_email']; ?>">
                                                                 <button class="member-nonactive" name="update_profile_detail">Create Profile</button>
-                                                            </form>
+                                                            </form> -->
+                                                            <button class="member-nonactive submit-email" data-id="<?php echo "rohitwebco@gmail.com"//$row['student_email']; ?>" name="update_profile_detail" >Create Profile</button>
+
                                                         </td>
                                                         <!-- <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/add_records/add_testimonial.php?id=<?php echo $row['student_id'];?>">Add testimonial</a></td> -->
                                                         <td class="text-center"><a class="btn btn-link btn-sm" href="<?php base_url()?>dashboard/student/student_detail.php?id=<?php echo $row['student_id'];?>">More detail</a></td>
