@@ -70,7 +70,7 @@ $sub = "registered";
                                         
                                         <td><?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ;?></td>
                                         <td>
-                                            <form action="email/reminder_email.php" method="POST">
+                                            <form action="email/become_member.php" method="POST" class="teacher__form__submit">
                                                 <input type="hidden" name="name" value="<?php echo $row['teacher_first_name'] . " " . $row['teacher_last_name'] ; ?>">
                                                 <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
                                                 <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
@@ -148,7 +148,7 @@ $sub = "registered";
                                             <td><?php echo $row['teacher_user_name'] ;?></td>
                                             <td><?php echo $row['teacher_email'] ;?></td>
                                             <td>
-                                                <form action="email/reminder_email.php" method="POST">
+                                                <form action="email/reminder_email.php" method="POST" class='teacher__ceate__profile'>
                                                     <input type="hidden" name="name" value="<?php echo $row['teacher_user_name'] ; ?>">
                                                     <input type="hidden" name="id" value="<?php echo $row['teacher_id']; ?>">
                                                     <input type="hidden" name="email" value="<?php echo $row['teacher_email']; ?>">
