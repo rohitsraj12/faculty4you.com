@@ -30,6 +30,8 @@
                             <ul class="col-sm-4">
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/profile/index.php"> view my profile</a></li>
                                 <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/profile/profile_update.php"> update profile</a></li>
+                                <li class="pb-2"><a class="text-light h4" href="<?php echo base_url();?>teacher/membership_plan.php"> Become a member</a></li>
+
                             </ul>
                         </div>
                      
