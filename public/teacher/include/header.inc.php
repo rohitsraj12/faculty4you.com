@@ -114,6 +114,7 @@
                             <ul>
                                 <li class="nav__list"><a href="<?php base_url();?>teacher/index.php" class="nav__link <?php if($page_title == "Home page" || $page_title == "Membership plan" || $page_title == "Payment" || $page_title == "Student's post details"){ echo " nav-active";}?>">Home</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>teacher/profile/index.php" class="nav__link <?php if($page_title == "Profile view" || $page_title == "Profile update"){ echo "nav-active";}?>">Profile</a></li>
+                                <li class="nav__list"><a href="<?php base_url();?>teacher/membership_plan.php" class="nav__link <?php if($page_title == "Profile view" || $page_title == "Profile update"){ echo "nav-active" || $page_title == "membership plan" ;}?>">Become a member</a></li>
                                 <li class="nav__list"><a href="<?php base_url();?>logout.php" class="nav__link">Logout</a></li>
                             
                   
