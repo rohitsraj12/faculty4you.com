@@ -62,20 +62,20 @@
                 <section class="col-md-4">
                     <article class="bg-light article-profil">
                         <figure>
-                        <?php 
+                            <?php 
 
-                            if($row['teacher_photo'] == ""){
-                        ?>
-                                <img class="img-fluid" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
-                        <?php
-                            } else {
-                        ?>
-                                <img class="img-fluid" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
-                        <?php
-                            }
-                        ?>
-                        
-                        <a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">Update Image</a>
+                                if($row['teacher_photo'] == ""){
+                            ?>
+                                    <img class="img-fluid" src="<?php echo base_url()?>img/teacher/profile_pic/male_profile.svg" alt="">
+                            <?php
+                                } else {
+                            ?>
+                                    <img class="img-fluid" src="<?php echo base_url() . $row['teacher_photo'];?>" alt="">
+                            <?php
+                                }
+                            ?>
+                            
+                            <a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">Update Image</a>
                        
                         </figure>
                         <header class=" u-center-text">
