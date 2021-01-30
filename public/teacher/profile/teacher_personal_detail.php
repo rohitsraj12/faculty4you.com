@@ -213,8 +213,8 @@
                                                 
                             </div>
                         </article>
-                            
-                        <input  type="submit" class="button-primary" name="update" > 
+                          
+                        <button  type="submit" class="button-primary" name="update" >Submit</button> 
                     
                     </form>
                 </section>
