@@ -75,7 +75,7 @@
                                 }
                             ?>
                             
-                            <a href="" class="d-block" data-toggle="modal" data-target="#exampleModal">Update Image</a>
+                            <a href="" class="d-block" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-camera" aria-hidden="true"></i> <span>Update Image</span></a>
                        
                         </figure>
                         <header class=" u-center-text">
