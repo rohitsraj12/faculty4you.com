@@ -787,6 +787,9 @@ label {
   top: 17px;
   right: 17px; }
 
+.show-password i {
+  font-size: 17px; }
+
 .section-student {
   background: #ffffb9;
   background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
@@ -1185,6 +1188,13 @@ label {
   background: linear-gradient(to bottom, #ffffb9 0%, #ffffcf 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 );
   border: 1px solid #cacaca; }
+  .section-body .article-profil figure a {
+    font-size: 14px;
+    position: absolute;
+    top: 133px;
+    right: 70px;
+    color: #aa0000;
+    text-shadow: none; }
 
 .section-body .article__header {
   padding-bottom: 7.5rem;
@@ -2414,7 +2424,6 @@ label {
   width: 80%; }
 
 .section-search-home {
-  padding: 2rem 0;
   z-index: 10; }
   @media (min-width: 769px) {
     .section-search-home {
@@ -2423,7 +2432,7 @@ label {
     .section-search-home {
       padding-top: 40rem; } }
   .section-search-home .wrap-search-home {
-    padding: 3rem 0; }
+    padding: 1rem 0 3rem; }
     @media (max-width: 582px) {
       .section-search-home .wrap-search-home {
         padding-top: 8rem; } }
