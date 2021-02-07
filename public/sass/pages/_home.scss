@@ -110,7 +110,6 @@
 //search form section
 .section {
   &-search-home {
-    padding: 2rem 0;
     z-index: 10;
     @media (min-width: 769px) {
       width: 60%;
@@ -119,7 +118,7 @@
       padding-top: 40rem;
     }
     .wrap-search-home {
-      padding: 3rem 0;
+      padding: 1rem 0 3rem;
 
       @media (max-width: 582px) {
         padding-top: 8rem;
