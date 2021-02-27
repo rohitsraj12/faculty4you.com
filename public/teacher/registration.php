@@ -191,6 +191,9 @@ if(!empty($_GET['error'])){
                             <label class="error-message" id="valid-password">Please enter value</label>
                         </span>
                         <input name="password" type="password" class="reg regPwd" placeholder="password" />
+                            <div class="show-password">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
                         <small for="" class="form-note">Password length should be between 7 - 15 </small>
 
                         </div>
@@ -200,6 +203,9 @@ if(!empty($_GET['error'])){
                             <label class="error-message" id="wrong-password">Please enter value</label>
                         </span>
                         <input name="re_password" type="password" class="reg regPwd" placeholder="repeat password">
+                            <div class="show-password">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
                         </div>
                         <button name="submit-register" >Sign Up</button>
                     </form>
@@ -246,6 +252,21 @@ if(!empty($_GET['error'])){
         // $(".show-password > .fa-eye-slash").click(function(){
 
         // });
+    </script>
+    <script>
+          $(".show-password > .fa").click(function(){
+            $(this).toggleClass("fa-eye fa-eye-slash");
+            var input = $(".regPwd");
+
+            if(input.attr("type")=="password"){
+                input.attr("type", "text");
+              
+            }else {
+                input.attr("type", "password");
+                
+            }
+           
+        });
     </script>
     <script>
         AOS.init();
