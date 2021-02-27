@@ -1189,12 +1189,29 @@ label {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 );
   border: 1px solid #cacaca; }
   .section-body .article-profil figure a {
+    padding: 5px 10px;
     font-size: 14px;
     position: absolute;
-    top: 133px;
-    right: 70px;
+    top: 125px;
+    right: 60px;
     color: #aa0000;
-    text-shadow: none; }
+    text-shadow: none;
+    background: #ffffb9;
+    background: -moz-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #ffffb9), color-stop(100%, #ffffcf));
+    background: -webkit-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: -o-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: -ms-linear-gradient(top, #ffffb9 0%, #ffffcf 100%);
+    background: linear-gradient(to bottom, #ffffb9 0%, #ffffcf 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffb9', endColorstr='#ffffcf', GradientType=0 );
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.2); }
+    .section-body .article-profil figure a i {
+      padding-right: 5px; }
 
 .section-body .article__header {
   padding-bottom: 7.5rem;
