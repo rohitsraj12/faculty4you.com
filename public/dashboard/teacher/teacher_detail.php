@@ -188,8 +188,10 @@
                                     </li>
                                     <li class="row border-top pt-4">
                                         <a href="../add_records/add_teacher_testimonials.php?id=<?php echo $row['teacher_id'];?>" class='member-nonactive'>Add Testimonial</a>
+                                        <a class="member-nonactive" href=""  class="btn btn-primary" data-toggle="modal" data-target="#delete">Delete profile</a>
                                     </li>
                                 </ul>
+               
                             </article>
                             
                         </div>
@@ -201,6 +203,26 @@
             <section class="section-bottom"></section>
         </div>
     </div>
+
+    <div class="modal" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Delete Profile</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to delete <?php echo $row['teacher_first_name'];?></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <a href="crud/teacher_profile_delete.php?id=<?php echo $row['teacher_id'];?>" type="button" class="btn btn-primary">Delete Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <?php
     include("../include/footer.inc.php");
