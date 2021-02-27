@@ -37,12 +37,20 @@
         border: 1px solid #cacaca;
 
         figure a{ 
+          padding: 5px 10px;
           font-size: 14px;
           position: absolute;
-          top: 133px;
-          right: 70px;
+          top: 125px;
+          right: 60px;
           color: $color-primary;
           text-shadow: none;
+          @include bg-1;
+          @include radius-all(2rem);
+          @include shadow;
+
+          i{
+            padding-right: 5px;
+          }
         }
       }
 
