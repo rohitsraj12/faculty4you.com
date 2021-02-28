@@ -127,7 +127,7 @@
                                                             $date = date("Y - m - d");
 
                                                             $token = $member_row['member_token'];
-
+                                                            // token should be available & before expiry date can access this button
                                                             if($token > 0){
                                                                 ?>
                                                                     <button class="button-primary show__token" type="submit">Student detail</button>                                                                
